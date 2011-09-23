@@ -27,6 +27,16 @@ Una volta registrato il primo passo è quello di creare una pagina personale, cl
 Controllando i lavori in attesa o in fase di scrittura potrai contribuire alla buona riuscita delle guide. Altrimenti potresti proporre un nuovo articolo alla Mailing List per discuterlo con gli altri e, una volta approvato, pubblicarlo.
 
 ==Prerequisiti per la creazione o la modifica di un nuovo articolo==
+Se hai un'idea di una nuova guida o di un tutorial potresti scriverla seguendo i seguenti step:
+# Invia la tua proposta alla Mailing List. In questo modo anche altri utenti potranno commentare la tua proposta.
+# Se la guida viene accettata puoi iniziare a scrivere.
+# Inserisci la tua guida nella pagina del [[CantiereWiki]]. Questo inserimento automaticamente creerà un link alla pagina della tua guida.
+# In questa fase non dovete indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (nota i due punti davanti alla parola 'Categoria')
+# Finchè è in lavorazione indica la categoria attuale di appartenenza della tua guida, come descritto nel [[CantiereWiki]].
+# Attraverso la ML si potrà chiedere aiuto su formattazione, contenuto o correzione delle guide.
+# Una volta terminata aggiungi la tua guida alla tabella RiletturaInCorso, presente nel [[CantiereWiki]]. Ricordati anche di indicare che la guida è 'terminata', nella tabella 'RedazioneInCorso'.
+# Un altro redattore decide di rileggere la guida e lo dichiara nel [[CantiereWiki]]. Sarà lui a pubblicare la guida, togliendo la nota 'InCorso' e inserendola nella categoria definitiva.
 
+==Come scrivere?==
 
 [[Categoria:FedoraOnline]]
