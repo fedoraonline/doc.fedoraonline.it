@@ -17,7 +17,7 @@ Qui puoi trovare le guide che sono attualmente in lavorazione (nuove guide, modi
 Occorre utilizzare il template <tt>AggiungiArticolo</tt> :
  <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
 
-Verificate di aver inserito nella guida in corso la [[:Categoria:InCorso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
+Verificate di aver inserito nella guida in corso la [[:Categoria:Stesura in corso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
 
 {| {{TabellaBase}}
 ! Fonte
