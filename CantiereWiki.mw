@@ -37,6 +37,8 @@ Verifica di aver inserito nella guida in corso la [[:Categoria:Stesura in corso]
 Occorre utilizzare il template <tt>ModificaArticolo</tt> :
  <nowiki>{{ModificaArticolo|articolo=Titolo della guida|autore=NomeWiki|responsabile=NomeWiki|data=data|stato=stato}}</nowiki>
 
+Verifica di aggiungere la : [[:Categoria:Modifica in corso]] senza rimuovere la categoria di appartenenza originaria della guida.
+
 {| {{TabellaBase}}
 ! Articolo
 ! Autore originale
@@ -55,3 +57,20 @@ Occorre utilizzare il template <tt>ModificaArticolo</tt> :
 
 Occorre utilizzare il template <tt>RiletturaArticolo</tt> :
  <nowiki>{{RiletturaArticolo|articolo=Titolo della guida|autore=NomeWiki|Rilettore=NomeWiki|stato=Stato}}</nowiki>
+
+Verifica di aggiungere la : [[:Categoria:Rilettura in corso]] senza rimuovere la categoria di appartenenza originaria della guida.
+
+{| {{TabellaBase}}
+! Articolo
+! Autore
+! Rilettore
+! Data
+! <stato
+{{RiletturaArticolo|fonte=|articolo=Gérer ses courriels en ligne de commande|autore=MatthieuSaulnier|rilettore=JeanRémond|data=12/09/10|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Création_d'un_dépôt_local_de_Fedora|autore=GérardLandron|rilettore=PatriceKadionik|data=20/08/10|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Configuration des télécommandes infrarouge sous Fedora|autore=PhilippeMarcovici|rilettore=?|data=10/07/10|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=Optimisation de l'autonomie de son portable ou de son netbook|autore=PatriceKadionik|rilettore=AlainMonnom|data=25/04/11|stato=Terminato}}
+{{RiletturaArticolo|fonte=-|articolo=Mise en oeuvre de Xenomai pour créer un noyau Temps Réel dur|autore=PatriceKadionik|rilettore=KaanKaanou|data=27/04/11|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Debuter_avec_le_terminal|autore=VivienFrasca|rilettore=KaanKaanou|data=24/08/10|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Screen|autore=EdouardBourguignon|rilettore=KaanKaanou|data=04/09/10|stato=Terminato}}
+|}
