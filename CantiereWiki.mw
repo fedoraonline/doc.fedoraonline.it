@@ -1,0 +1,13 @@
+Qui puoi trovare le guide che sono attualmente in lavorazione (nuove guide, modifiche di guide obsolete, ecc.).
+
+== Leggenda ==
+{| {{TabellaBase}}
+| '''Terminato'''
+| {{StatoTerminato}} | Terminato
+|-
+| '''In corso'''
+| {{StatoInCorso}} | In corso
+|-
+| '''Da fare'''
+| {{StatoDaFare}} | Da fare
+|}
