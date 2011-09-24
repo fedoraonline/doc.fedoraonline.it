@@ -19,7 +19,7 @@ Occorre utilizzare il template <tt>AggiungiArticolo</tt> :
 
 Verificate di aver inserito nella guida in corso la [[:Categoria:InCorso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
 
-{| {{TableCommune}}
+{| {{TabellaBase}}
 ! Fonte
 ! Articolo
 ! Autore
