@@ -50,3 +50,8 @@ Occorre utilizzare il template <tt>ModificaArticolo</tt> :
 {{ModificaArticolo|articolo=Apprendre à rapporter un bogue|auteur=Charles-AntoineCouret|responsabile=Charles-AntoineCouret|data=-|stato=DaFare}}
 {{ModificaArticolo|articolo=Dépôt kde-redhat|auteur=?|responsabile=MohamedElmorabity|data=-|stato=DaFare}}
 |}
+
+== Rilettura in corso ==
+
+Occorre utilizzare il template <tt>RiletturaArticolo</tt> :
+ <nowiki>{{RiletturaArticolo|articolo=Titolo della guida|autore=NomeWiki|Rilettore=NomeWiki|stato=Stato}}</nowiki>
