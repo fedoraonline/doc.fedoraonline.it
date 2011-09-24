@@ -17,7 +17,7 @@ Qui puoi trovare le guide che sono attualmente in lavorazione (nuove guide, modi
 Occorre utilizzare il template <tt>AggiungiArticolo</tt> :
  <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
 
-Verificate di aver inserito nella guida in corso la [[:Categoria:Stesura in corso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
+Verifica di aver inserito nella guida in corso la [[:Categoria:Stesura in corso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
 
 {| {{TabellaBase}}
 ! Fonte
@@ -30,4 +30,23 @@ Verificate di aver inserito nella guida in corso la [[:Categoria:Stesura in cors
 {{AggiungiArticolo|fonte=-|articolo=Les SSD sous fedora|autore=ValentinBrémond|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installation,_configuration_LDAP/SAMBA_sous_F13-14|autore=NicolasLabeau|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Gérer ses courriels en ligne de commande|autore=MatthieuSaulnier|stato=Terminato}}
+|}
+
+== Articoli in corso di aggiornamento ==
+
+Occorre utilizzare il template <tt>ModificaArticolo</tt> :
+ <nowiki>{{ModificaArticolo|articolo=Titolo della guida|autore=NomeWiki|responsabile=NomeWiki|data=data|stato=stato}}</nowiki>
+
+{| {{TabellaBase}}
+! Articolo
+! Autore originale
+! Responsabile della modifica
+! Data
+! Stato
+{{ModificaArticolo|articolo=Wifi-Utilisation_de_NetworkManager|autore=MathiasVédrine|responsabile=MathiasVédrine|data=-|stato=DaFare}}
+{{ModificaArticolo|articolo=TeX Live|auteur=MohamedElmorabity|responsabile=JohanCwiklinski|data=16/05/10|stato=Terminato}}
+{{ModificaArticolo|articolo=Configuration et installation de Compiz|auteur=HaikelGuemar|responsabile=HaikelGuemar|data=01/03/10|stato=Terminato}}
+{{ModificaArticolo|articolo=Weechat, installation, configuration et utilisation|auteur=SylvainBourdouleix|responsabile=JohanCwiklinski|data=13/12/09|stato=InCorso}}
+{{ModificaArticolo|articolo=Apprendre à rapporter un bogue|auteur=Charles-AntoineCouret|responsabile=Charles-AntoineCouret|data=-|stato=DaFare}}
+{{ModificaArticolo|articolo=Dépôt kde-redhat|auteur=?|responsabile=MohamedElmorabity|data=-|stato=DaFare}}
 |}
