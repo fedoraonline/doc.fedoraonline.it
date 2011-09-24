@@ -65,7 +65,7 @@ Verifica di aggiungere la : [[:Categoria:Rilettura in corso]] senza rimuovere la
 ! Autore
 ! Rilettore
 ! Data
-! <stato
+! Stato
 {{RiletturaArticolo|fonte=|articolo=Gérer ses courriels en ligne de commande|autore=MatthieuSaulnier|rilettore=JeanRémond|data=12/09/10|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Création_d'un_dépôt_local_de_Fedora|autore=GérardLandron|rilettore=PatriceKadionik|data=20/08/10|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Configuration des télécommandes infrarouge sous Fedora|autore=PhilippeMarcovici|rilettore=?|data=10/07/10|stato=DaFare}}
