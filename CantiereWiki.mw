@@ -44,11 +44,11 @@ Occorre utilizzare il template <tt>ModificaArticolo</tt> :
 ! Data
 ! Stato
 {{ModificaArticolo|articolo=Wifi-Utilisation_de_NetworkManager|autore=MathiasVédrine|responsabile=MathiasVédrine|data=-|stato=DaFare}}
-{{ModificaArticolo|articolo=TeX Live|auteur=MohamedElmorabity|responsabile=JohanCwiklinski|data=16/05/10|stato=Terminato}}
-{{ModificaArticolo|articolo=Configuration et installation de Compiz|auteur=HaikelGuemar|responsabile=HaikelGuemar|data=01/03/10|stato=Terminato}}
-{{ModificaArticolo|articolo=Weechat, installation, configuration et utilisation|auteur=SylvainBourdouleix|responsabile=JohanCwiklinski|data=13/12/09|stato=InCorso}}
-{{ModificaArticolo|articolo=Apprendre à rapporter un bogue|auteur=Charles-AntoineCouret|responsabile=Charles-AntoineCouret|data=-|stato=DaFare}}
-{{ModificaArticolo|articolo=Dépôt kde-redhat|auteur=?|responsabile=MohamedElmorabity|data=-|stato=DaFare}}
+{{ModificaArticolo|articolo=TeX Live|autore=MohamedElmorabity|responsabile=JohanCwiklinski|data=16/05/10|stato=Terminato}}
+{{ModificaArticolo|articolo=Configuration et installation de Compiz|autore=HaikelGuemar|responsabile=HaikelGuemar|data=01/03/10|stato=Terminato}}
+{{ModificaArticolo|articolo=Weechat, installation, configuration et utilisation|autore=SylvainBourdouleix|responsabile=JohanCwiklinski|data=13/12/09|stato=InCorso}}
+{{ModificaArticolo|articolo=Apprendre à rapporter un bogue|autore=Charles-AntoineCouret|responsabile=Charles-AntoineCouret|data=-|stato=DaFare}}
+{{ModificaArticolo|articolo=Dépôt kde-redhat|autore=?|responsabile=MohamedElmorabity|data=-|stato=DaFare}}
 |}
 
 == Rilettura in corso ==
