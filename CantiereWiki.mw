@@ -11,3 +11,23 @@ Qui puoi trovare le guide che sono attualmente in lavorazione (nuove guide, modi
 | '''Da fare'''
 | {{StatoDaFare}} | Da fare
 |}
+
+== Stesura in corso ==
+
+Occorre utilizzare il template <tt>AggiungiArticolo</tt> :
+ <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
+
+Verificate di aver inserito nella guida in corso la [[:Categoria:InCorso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
+
+{| {{TableCommune}}
+! Fonte
+! Articolo
+! Autore
+! Stato
+{{AggiungiArticolo|fonte=-|articolo=Dovecot|autore=PascalParois|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Postfix|autore=PascalParois|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Serveur de messagerie électronique|autore=PascalParois|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Les SSD sous fedora|autore=ValentinBrémond|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Installation,_configuration_LDAP/SAMBA_sous_F13-14|autore=NicolasLabeau|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Gérer ses courriels en ligne de commande|autore=MatthieuSaulnier|stato=Terminato}}
+|}
