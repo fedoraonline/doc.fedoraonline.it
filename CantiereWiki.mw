@@ -12,7 +12,7 @@ Qui puoi trovare le guide che sono attualmente in lavorazione (nuove guide, modi
 | {{StatoDaFare}} | Da fare
 |}
 
-== Stesura in corso ==
+== Articoli in corso di stesura ==
 
 Occorre utilizzare il template <tt>AggiungiArticolo</tt> :
  <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
