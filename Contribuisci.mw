@@ -42,7 +42,7 @@ Se hai un'idea di una nuova guida o di un tutorial potresti scriverla seguendo i
 ===Creare una nuova pagina===
 Per creare una nuova pagina esistono vari modi:
 * creare un link su una pagina esistente: per farlo devi includere il nome del link tra due parentesi quadre, come in questo <nowiki>[[esempio]]</nowiki>. Verrà creato un link rosso, che ti porterà ad una nuova pagina.
-* scrivere il titolo della nuova pagina direttamente nella barra degli indirizzi del browser. Per esempio potresti sostituire nell'indirizzo di [[http://doc.fedoraonline.it/wiki/Contribuisci]] la parola << Contribuisci >> con il titolo della nuova pagina da creare.
+* scrivere il titolo della nuova pagina direttamente nella barra degli indirizzi del browser. Per esempio potresti sostituire nell'indirizzo di http://doc.fedoraonline.it/wiki/Contribuisci la parola << Contribuisci >> con il titolo della nuova pagina da creare.
 * una buona guida dovrebbe iniziare con una introduzione, nella quale si presenta l'argomento e lo scopo della stessa. A questo scopo comincia con una sezione <nowiki>== Introduzione ==</nowiki>.
 * Le fonti utilizzate vanno inserite in fondo alla pagina, raccogliendole sotto la voce <nowiki>== Bibliografia ==</nowiki>.
 * 
