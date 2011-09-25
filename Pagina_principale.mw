@@ -1,14 +1,4 @@
-<div style="width:32.5%; float:left;margin-right:1%">
-
-<div style="margin-bottom:8px; border:2px solid #dfdfdf; padding:1em; background-color:#fff8dc; -moz-border-radius:15px; -webkit-border-radius:15px;min-height:100px;">
-
-[[Image:Nuvola_apps_edu_languages.svg|40px|left]]
-<big>'''Sei appena arrivato?'''</big>
-
-
-'''[[Aiuto:Benvenuto|Benvenuto]]''', leggi la '''[[Aiuto:Guida essenziale|guida essenziale]]''' e i '''[[Aiuto:Cinque pilastri|cinque pilastri]]'''.
-</div>
-<!-- ------------------------------------------------- -->
+<div style="width:100%; float:left;margin-right:1%">
 
 <div style="margin-bottom:8px; border:2px solid #dfdfdf; padding: 1em; background-color:#bacef8; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
 [[Image:Nuvola_apps_filetypes.svg|40px|left]]
@@ -16,13 +6,19 @@
 
 Esplora le '''[[Aiuto:FAQ|domande frequenti (FAQ)]]'''.
 </div>
+
+</div>
 <!-- ------------------------------------------------- -->
 
-<div style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#eedae3; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[Immagine:Nuvola apps khelpcenter.png|40px|left]]
-<big>'''La ricerca non ha dato esito?''' </big>
+<div style="width:32.5%; float:left;margin-right:1%">
 
-Leggi dove puoi '''[[Aiuto:Dove fare una domanda|fare una domanda]]'''.
+<div style="margin-bottom:8px; border:2px solid #dfdfdf; padding:1em; background-color:#dfdfdf; -moz-border-radius:15px; -webkit-border-radius:15px;min-height:100px;">
+
+[[Image:Nuvola_apps_edu_languages.svg|40px|left]]
+<big>'''Sei appena arrivato?'''</big>
+
+
+'''[[Aiuto:Benvenuto|Benvenuto]]''', leggi la '''[[Aiuto:Guida essenziale|guida essenziale]]''' e i '''[[Aiuto:Cinque pilastri|cinque pilastri]]'''.
 </div>
 
 </div>
@@ -30,30 +26,12 @@ Leggi dove puoi '''[[Aiuto:Dove fare una domanda|fare una domanda]]'''.
 
 <div style="width:32.5%; float:left;margin-right:1%">
 
-<div class="metadata plainlinks" style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#B0FFA0; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
+<div class="metadata plainlinks" style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#d7c5e2; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
 [[File:Crystal Clear app xmag.svg|40px|left]]
 <big>'''Come trovare una voce'''</big>
 
 
 [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext=Ricerca}} '''Cerca'''] per parole-chiave, visita i '''[[Portale:Portali|Portali]]''' o naviga attraverso le '''[[:Categoria:Enciclopedia|Categorie]]'''.
-</div>
-<!-- ------------------------------------------------- -->
-
-<div style="margin-bottom:8px; border:2px solid #dfdfdf; padding: 1em; background-color:#e6e6fa; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[File:Postscript-viewer.svg|40px|left]]
-<big>'''Vuoi approfondire?'''</big>
-
-
-Sfoglia il '''[[Aiuto:Manuale|manuale]]'''.
-</div>
-<!-- ------------------------------------------------- -->
-
-<div class="metadata plainlinks" style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#fcbeeb; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[Image:Lifebelt and man icon.svg|40px|left]]
-<big>'''Non riesci a orientarti?'''</big>
-
-
-Richiedi l''''[[Progetto:Coordinamento/Accoglienza|assegnazione di un tutor]]'''.
 </div>
 
 </div>
@@ -61,30 +39,12 @@ Richiedi l''''[[Progetto:Coordinamento/Accoglienza|assegnazione di un tutor]]'''
 
 <div style="width:32.5%; float:left;">
 
-<div style="margin-bottom:8px; border:2px solid #dfdfdf; padding: 1em; background-color:#daeedc; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[Image:Nuvola apps bookcase.svg|40px|left]]
-<big>'''Come scrivere una voce'''</big>
-
-
-Leggi il '''[[Aiuto:Tutorial|tutorial]]''' o segui il '''[[Aiuto:Tour guidato|tour didattico guidato]]'''.
-</div>
-<!-- ------------------------------------------------- -->
-
 <div style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#f5f4ab; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
 [[Image:Nuvola_apps_edu_miscellaneous.svg|40px|left]]
 <big>'''Cosa vuol dire...?''' </big>
 
 
 Consulta il '''[[Aiuto:Glossario|glossario]]'''.
-</div>
-<!-- ------------------------------------------------- -->
-
-<div style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#d7c5e2; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[Image:Nuvola_apps_chat.png|40px|left]]
-<big>'''Vuoi contattare Wikipedia?'''</big>
-
-
-Visita la pagina dei '''[[Wikipedia:Contatti|Contatti]]'''.
 </div>
 
 </div>
