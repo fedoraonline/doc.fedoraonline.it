@@ -45,6 +45,101 @@ Per creare una nuova pagina esistono vari modi:
 * scrivere il titolo della nuova pagina direttamente nella barra degli indirizzi del browser. Per esempio potresti sostituire nell'indirizzo di http://doc.fedoraonline.it/wiki/Contribuisci la parola << Contribuisci >> con il titolo della nuova pagina da creare.
 * una buona guida dovrebbe iniziare con una introduzione, nella quale si presenta l'argomento e lo scopo della stessa. A questo scopo comincia con una sezione <nowiki>== Introduzione ==</nowiki>.
 * Le fonti utilizzate vanno inserite in fondo alla pagina, raccogliendole sotto la voce <nowiki>== Bibliografia ==</nowiki>.
-* 
+* Nelle sezioni della guida non andare oltre il quarto livello
+* Non abbiamo problemi di spazio, per cui evita abbreviazioni o parole sincopate: non verranno accettati.
+* È buona norma inserire le specifiche tecniche all’inizio della guida, come la versione Fedora utilizzata o qualche specifica hardware.
+* È '''obbligatorio inserire la categoria finale di destinazione''', oltre a quella di appartenenza durante la scrittura (da fare, in corso, terminata), altrimenti la guida non sarà accessibile dalla pagina principale.
+
+===Convenzioni di scrittura===
+La sintassi del wiki è molto semplice ed intuitiva. Puoi approfondire l’argomento, con esempi pratici [[Convenzioni_di_scrittura|qui]].
+
+===Indice===
+Il wiki creerà in automatico un indice in un apposito riquadro posizionato all’inizio dell’articolo, quando sono presenti più di 3 titoli. Se si volesse escludere la creazione di un’indice basterà utilizzare, all’interno della pagina:
+
+ <nowiki>__NOTOC__</nowiki>
+
+Allo stesso modo si può forza la creazione di un indice:
+
+ <nowiki>__TOC__</nowiki>
+
+==I template==
+Sul wiki di Fedora Ondine sono disponibili una serie di template per facilitare la scrittura. Consulta [[:Categoria:Template|l’elenco dei template disponibili]] per maggiori informazioni.
+<br>
+Di seguito qualche esempio sull’utilizzi dei template:
+
+===Autore/i della guida===
+Per identificare l’autore della guida è opportuno inserire il suo nome:
+
+<nowiki>{{Autore|NomeAutore}}</nowiki>
+
+Questo creerà in automatico un link alla pagina personale dell’autore stesso.<br>
+Assicurati che all’inizio della pagina sia presente questo template.
+Esempio:
+{{Autore|NomeAutore}}
+
+===Collaboratori===
+Oltre all’autore si possono inserire anche i collaboratori. La sintassi è simile a quella degli autori:
+
+<nowiki>{{Collaboratori|NomeCollaboratore}}</nowiki>
+
+Esempio:
+{{Collaboratori|NomeCollaboratore}}
+
+===Scrittura in corso===
+Ogni nuova guida in corso di stesura o in corso di modifica deve essere distinta con il template “InCorso”.
+
+Oltre al messaggio per l’utente che legge, verrà creato un link alla pagina personale dell’autore della stesura o modifica.
+
+<nowiki>{{InCorso|autore=NomAuteur}}</nowiki>
+
+Esempio:
+{{InCorso|autore=NomAuteur}}
+
+===Nota===
+Per inserire una nota all’interno di un articolo occorre utilizzare questo template:
+<nowiki>{{nota|titolo=Titolo della nota|contenuto=Testo della nota}}</nowiki>
+
+Esempio:
+{{nota|titolo=Titolo della nota|contenuto=Testo della nota}}
+
+
+===Avviso importante===
+Se si vuole inserire un appunto importante o si vuole attirare l’attenzione del lettore a una specifica particolare, è necessario utilizzare il template "Warning":
+
+<nowiki>{{Warning|Testo dell'avviso}}</nowiki>
+
+La sintassi è molto semplice e non necessita di ulteriori commenti.
+Esempio:
+{{Warning|Testo dell'avviso}}
+
+===Convenzioni di scrittura===
+Per inserire il template per alcune convenzioni di scrittura all’interno dell’articolo, utilizzate:
+
+<nowiki>{{Scrittura|Regole e convenzioni di scrittura}}</nowiki>
+
+Questo template è da posizionare all’interno dell’introduzione per informare il lettore fin da subito della convenzione stessa.
+Esempio:
+{{Scrittura|Regole e convenzioni di scrittura}}
+
+==Impostazione base di un nuovo articolo==
+A meno di esigenze particolari uno schema base per la stesura di un nuovo articolo è il seguente:
+
+ <nowiki>
+{{InCorso|autore=NomeRedattore}}
+{{Autore|NomeAutore}}
+
+== Introduzione ==
+
+== Titolo 1 ==
+Scrivi qui il contenuto dell’articolo.
+
+== Bibliografia ==
+* riferimento 1;
+* riferimento 2.
+
+[[:Categoria:Uno]]
+[[:Categoria:Due]]
+
+[[Categoria:Scrittura in corso]]</nowiki>
 
 [[Categoria:FedoraOnline]]
