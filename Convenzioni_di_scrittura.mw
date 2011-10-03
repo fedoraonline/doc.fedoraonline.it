@@ -1,0 +1,32 @@
+Questa guida ti aiuterà a scrivere correttamente nuovi articoli sul nostro wiki, indicandoti le convenzioni alle quali attenersi.
+
+Dando un primo sguardo alla pagina risaltano, sul bordo superiore dell'area di scrittura, i tasti con i quali avrai molto a che fare e che ti saranno molto utili durante la scrittura(la toolbar). [[File:toolbar.jpg]]
+
+Lo scopo dei tasti è molto intuitiva ma è necessario comunque fornirti una breve spiegazione:
+
+{|border="1" align="center" style="text-align:center;"
+|  [[File:toolbar_bold.jpg]]    ||  grassetto   ||   '''selezioni la frase, premi il pulsante e scrivi in grassetto'''
+|-
+|   [[File:toolbar_italic.jpg]]    ||   corsivo     ||   ''selezioni la frase, premi il pulsante e scrivi in corsivo''
+|-
+|   [[File:toolbar_internal_link.jpeg]]   || link interno ||  premi il pulsante e crei un link alla pagina del wiki che vuoi richiamare come la [[Pagina_principale]]
+|-
+|   [[File:toolbar_external_link.jpeg]]   || link esterno ||  premi il pulsante e crei un link ad una pagina sul web che vuoi richiamare come [http://www.fedoraonline.it fedoraonline] (devi però ricordarti, a parte il suffisso http:// prima del www del sito, di inserire, dopo uno spazio, il nome del link, altrimenti comparirà l'indirizzo in forma di numerazione dei link della pagina, come in questo caso: [http://www.fedoraonline.it]).
+|-
+|   [[File:toolbar_header.jpeg]]   || modifica la formattazione del titolo  ||  
+== selezioni la frase, premi il pulsante e la trasfomi in un titolo (ti inserisce la possibilità di modifica del paragrafo e un "a capo" automatico ) ==
+
+|-
+|   [[File:toolbar_image.jpeg]]   || carica una immagine || selezioni il pulsante ed inserisci il nome dell'immagine in questo formato: <font color=red>File:Esempio.jpg</font>, selezionando poi il link rosso (che evidenzia l'assenza del file), hai la possibilità di caricarla sul server prelevandola dal tuo computer. Per avere una panoramica sul posizionamento e sul formato delle immagini, puoi leggere [http://www.mediawiki.org/wiki/Help:Images questo documento].
+|-
+|   [[File:toolbar_media.jpeg]]   || carica un file in formato media ||  selezioni il pulsante ed inserisci il nome del file media in questo formato: <font color=red>Media:Esempio.ogg</font>, selezionando il link rosso (che evidenzia l'assenza del file), hai la possibilità di caricarlo sul server prelevandola dal tuo computer.
+|-
+|   [[File:toolbar_non_formatted.jpeg]]   || inserisce del testo non formattato || da così "'''''selezioni la frase e premi il pulsante per toglierne la formattazione'''''"
+a così "<nowiki>selezioni la frase e premi il pulsante per toglierne la formattazione</nowiki>"
+|-
+|   [[File:toolbar_signature.jpeg]]    || inserisce la firma ||  selezionando il pulsante inserisci la tua firma in formato  -- username ora, giorno mese anno (UTC).
+|-
+|   [[File:toolbar_horizontal_line.jpeg]]   || inserisce una linea orzzontale ||  se vuoi inserire una linea orizzontale nella riga successiva, premi il pulsante e, come in questo caso, una linea separerà il testo. 
+----
+
+|}
