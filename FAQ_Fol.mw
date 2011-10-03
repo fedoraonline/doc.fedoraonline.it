@@ -1,0 +1,18 @@
+== Perchè dovrei usare Fedora? ==
+Dovresti usare Fedora perchè è la migliore e più aggiornata collezione di software robusti, liberi e open source. L'[https://fedoraproject.org/wiki/It_IT/Overview| Anteprima] spiega nel dettaglio molti dei punti di forza di Fedora.
+
+== Come si accede al cosiddetto "terminale"? ==
+Il terminale è un simulatore di una shell all'interno di un ambiente grafico. Serve per poter dare dei comandi testuali e si accede semplicemente da:<br>
+''Applicazioni --> Strumenti di sistema --> Terminale''
+
+== Come installo nuovi software in Fedora? ==
+Il programma yum ti aiuta a gestire il software sul tuo sistema. yum accede a specifici siti web, chiamati repositori, per scaricare e installare le ultime versioni dei pacchetti software. Inoltre i sistemi Fedora includono un'interfaccia grafica per yum, disponibile alla voce di menu Applicazioni > Aggiungi/Rimuovi Software.<br>
+Nella nostra sezione "Guide" puoi leggere come fare per configurare Yum.
+
+== Fedora può mantenersi aggiornata automaticamente? ==
+Si, sebbene l'aggiornamento automatico non sia la scelta più indicata per ogni tipo di sistema. Puoi impostare le opzioni preferite alla voce di menu ''Applicazioni --> Strumenti di sistema --> Aggiornamenti software''.<br>
+Fedora usa PackageKit per informarti automaticamente quando ci sono aggiornamenti disponibili.
+
+== Perchè Fedora non supporta i formati proprietari come MP3 o MPEG? ==
+I formati MP3 e MPEG sono vincolati da brevetti, e i proprietari di tali brevetti non hanno rilasciato queste tecnologie sotto licenze compatibili con i requisiti di Fedora.<br>
+Fedora include e supporta solamente il software libero ed open source. Le tecnologie coperte da diritti d'autore o vincolate da restrizioni imposte da brevetti non vengono incorporate in Fedora.
