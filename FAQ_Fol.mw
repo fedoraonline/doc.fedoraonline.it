@@ -53,3 +53,5 @@ E' sconsigliato, tranne dopo l'installazione, aggiornare tutto se vengono propos
 
 === Perchè Fedora non mi fa accedere come root al login grafico? ===
 Fedoraproject ha deciso di togliere a partire da Fedora 10 la possibilità di loggarsi come root per una questione di sicurezza del sistema. Eventuali operazioni, per le quali si necessità i permessi di root, si possono fare anche da utente, inserendo la password di root quando richiesta, oppure utilizzando direttamente il terminale.
+
+[[Categoria:FAQ]]
