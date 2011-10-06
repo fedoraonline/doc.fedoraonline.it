@@ -37,7 +37,7 @@ E' il momento di lanciare il server Apache:
  # systemctl start httpd.service
 
 Potrai subito verificare se il server funziona correttamente, inserendo il seguente indirizzo nella barra degli indirizzi del tuo browser:<br>
-[http://localhost/test.php]
+[[http://localhost/test.php]]
 
 === Mysql ===
 Come per Apache è necessario avviare il server Mysql:
@@ -54,7 +54,7 @@ Per poter utilizzare questo tool è necessario impostare una password per l'ammi
 
 Al posto di TUA_PASSWORD devi naturalmente inserire una tua parola chiave a scelta.<br>
 Ora puoi utilizzare phpmyadmin, digitando nella barra degli indirizzi del tuo browser l'indirizzo:<br>
-[http://localhost/phpmyadmin]<br>
+[[http://localhost/phpmyadmin]]
 
 Per accedere dovrai inserire l'utente (=root) e la password che hai scelto un attimo fa.
 Infine, se tutto funziona, puoi fare in modo che i servizi httpd e mysqld vengano avviati in automatico ad ogni avvio della macchina:
@@ -63,3 +63,5 @@ Infine, se tutto funziona, puoi fare in modo che i servizi httpd e mysqld vengan
  # chkconfig httpd on
  # chkconfig --add mysqld
  # chkconfig mysqld on
+
+[[Categoria:Rete_e_Server]]
