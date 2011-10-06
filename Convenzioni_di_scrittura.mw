@@ -1,6 +1,11 @@
 Questa guida ti aiuterà a scrivere correttamente nuovi articoli sul nostro wiki, indicandoti le convenzioni alle quali attenersi.
 
-Dando un primo sguardo alla pagina risaltano, sul bordo superiore dell'area di scrittura, i tasti con i quali avrai molto a che fare e che ti saranno molto utili durante la scrittura(la toolbar). [[File:toolbar.jpg]]
+{{Warning|E' importante mantenere una certa uniformità nella redazione della documentazione del wiki!}}
+
+== Toolbar ==
+Dando un primo sguardo alla pagina risaltano, sul bordo superiore dell'area di scrittura, i tasti con i quali avrai molto a che fare e che ti saranno molto utili durante la scrittura (la toolbar).<br>
+
+[[File:toolbar.jpg|left|toolbar]]<br><br>
 
 Lo scopo dei tasti è molto intuitiva ma è necessario comunque fornirti una breve spiegazione:
 
@@ -14,7 +19,7 @@ Lo scopo dei tasti è molto intuitiva ma è necessario comunque fornirti una bre
 |   [[File:toolbar_external_link.jpeg]]   || link esterno ||  premi il pulsante e crei un link ad una pagina sul web che vuoi richiamare come [http://www.fedoraonline.it fedoraonline] (devi però ricordarti, a parte il suffisso http:// prima del www del sito, di inserire, dopo uno spazio, il nome del link, altrimenti comparirà l'indirizzo in forma di numerazione dei link della pagina, come in questo caso: [http://www.fedoraonline.it]).
 |-
 |   [[File:toolbar_header.jpeg]]   || modifica la formattazione del titolo  ||  
-== selezioni la frase, premi il pulsante e la trasfomi in un titolo (ti inserisce la possibilità di modifica del paragrafo e un "a capo" automatico ) ==
+<span style="font-size: 16px"> '''selezioni la frase, premi il pulsante e la trasfomi in un titolo (ti inserisce la possibilità di modifica del paragrafo e un "a capo" automatico)''' </span>
 
 |-
 |   [[File:toolbar_image.jpeg]]   || carica una immagine || selezioni il pulsante ed inserisci il nome dell'immagine in questo formato: <font color=red>File:Esempio.jpg</font>, selezionando poi il link rosso (che evidenzia l'assenza del file), hai la possibilità di caricarla sul server prelevandola dal tuo computer. Per avere una panoramica sul posizionamento e sul formato delle immagini, puoi leggere [http://www.mediawiki.org/wiki/Help:Images questo documento].
@@ -31,6 +36,60 @@ a così "<nowiki>selezioni la frase e premi il pulsante per toglierne la formatt
 
 |}
 
+== Indice ==
+L'indice (TOC - Table Of Contents) viene creato automaticamente nel momento in cui inserisci nel documento almeno quattro intestazioni. Qualora si creasse la necessità di doverne creare uno con un numero di voci inferiore, devi forzare mediawiki nel generarlo.
+
+[[File:indice.jpg|left|indice]]Ad esempio, qui a sinistra viene parzialmente riportato l'indice di questo articolo che, come vedi, si compone di 11 voci. Nel momento in cui crei una intestazione, in effetti segnali a mediawiki che stai creando un indice.
+
+In automatico questo indice viene inserito in alto a sinistra, ma puoi variare quasi a piacimento la sua posizione. Nel nostro caso è stato posizionato in alto a destra forzando il TOC con questo codice:
+<pre>{| align="right"
+| __TOC__
+|}</pre>
+<br>
+
+Quanto detto fin qui riguarda il TOC creato in automatico, ma nel caso fossero presenti meno di quattro voci, sei costretto a crearlo forzatamente, inserendo una delle seguenti "magic words" (presta attenzione ai due underscore all'inizio ed alla fine della parola):
+<br>
+{|border="1" cellpadding="5" align="left" width="60%" style="text-align:center;"
+|<nowiki> __TOC__</nowiki>||per posizionarlo nello stesso punto dove inserisci il codice
+|-
+|<nowiki>__FORCETOC__</nowiki>||per inserirlo nella posizione standard
+|}
+<br>
+
+Vi è anche la possibilità di nascondere l'indice:
+{|border="1" cellpadding="5" align="left" width="60%" style="text-align:center;"
+|<nowiki> __NOTOC__</nowiki>||nasconde il TOC e non viene più presentato
+|}
+<br><br>
+
+==Sezioni==
+Hai visto sino ad ora che l'indice è il riepilogo delle intestazioni che vengono create e formattate con il tasto  [[File:toolbar_header.jpeg|titolo]], che non fa altro che applicare prima e dopo la parola o la frase selezionata un doppio segno dell'uguale (=), creando una ''intestazione di 2° livello''.
+
+Dovresti cercare di evitare l'utilizzo di una ''intestazione di 1°livello'', in quanto sarebbe uguale al titolo della pagina e creerebbe confusione.
+
+Il segno uguale (=) ha in effetti una doppia funzione, quella di fomattare il testo per renderlo più evidente e quella di fare inserire la parte di testo racchiusa tra essi nell'indice della pagina (vedi quanto detto in precedenza [[Convenzioni_di_scrittura#indice]])
+
+Tu considera solo 4 livelli per le sezioni e sottosezioni, contraddistinte da un numero differente di segni uguale:[[File:sottosezione.jpg|frame|right|]]
+<br>
+<tt><nowiki>==livello 1==</nowiki></tt><br />
+<tt><nowiki>===livello 2===</nowiki></tt><br />
+<tt><nowiki>====livello 3====</nowiki></tt><br />
+<tt><nowiki>=====livello 4=====</nowiki></tt>
+<br><br>
+Il risultato è una pagina avente un indice composto dalle varie intestazioni come puoi vedere nell'immagine a fianco dopo aver creato delle sezioni, delle sotto-sezioni e un ulteriore livello di sezione. 
+<br>
+<br>
+<br>
+{{Warning|Qualsiasi frase all'interno dei simboli <nowiki>= (i segni "uguale") </nowiki>viene considerata una intestazione e automaticamente viene inserita nell'indice!}}
+
+==formattazione==
+==collegamenti==
+==immagini==
+==tabelle==
+==liste==
+==categorie==
+==riferimenti==
+==modifiche==
 
 
 [[Categoria:FedoraOnline]]
