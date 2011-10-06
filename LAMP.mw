@@ -2,7 +2,7 @@
 
 LAMP e' un acronimo che indica la piu' famosa piattaforma per lo sviluppo di applicazioni web e che prende il nome dalle iniziali dei componenti software con cui e' realizzata, ovvero: ('''L'''inux, '''A'''pache, '''M'''ySQL, '''P'''HP).
 
-{{Nota!Tutti i comandi di questa guida devono essere dati con permessi di root}}
+{{nota|titolo=Avviso|contenuto=Tutti i comandi di questa guida devono essere dati con permessi di root}} 
 
  $ su -
  password di root
