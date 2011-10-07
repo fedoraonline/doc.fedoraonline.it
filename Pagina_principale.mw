@@ -55,42 +55,42 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 <div style="text-align:center"><big>'''Primi passi su Fedora''' </big><br>
 [[:Categoria:Sistema | Sistema]] | [[:Categoria:Installazione | Installazione]] | [[:Categoria:Repository|Repository]]</div>
 
-'''Le più gettonate...'''
+<div class="principale">'''Le più gettonate...'''
 * [[Guide d'installation de Fedora en images|Installation de Fedora]]
 * [[Au secours je suis perdu…]]
 * [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
 * [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
 * [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
 * [[PreUpgrade : Passer à la version supérieure de Fedora]]
-</div>
+</div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
 [[Image:Nuvola_apps_filetypes.svg|40px|left]]
 <div style="text-align:center"><big>'''Software''' </big><br>
 [[:Categoria:Grafica | Grafica]] | [[:Categoria:Ufficio | Ufficio]] | [[:Categoria:Multimedia | Multimedia]] | [[:Categoria:Giochi | Giochi]] | [[:Categoria:Internet | Internet]]</div>
 
-'''Le più gettonate...'''
+<div class="principale">'''Le più gettonate...'''
 * [[Guide d'installation de Fedora en images|Installation de Fedora]]
 * [[Au secours je suis perdu…]]
 * [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
 * [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
 * [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
 * [[PreUpgrade : Passer à la version supérieure de Fedora]]
-</div>
+</div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
 [[Image:Nuvola_apps_filetypes.svg|40px|left]]
 <div style="text-align:center"><big>'''Altra documentazione''' </big><br>
 [[:Categoria:Fedoraserver | Fedoraserver]] | [[:Categoria:Fedora Legacy | Fedora Legacy]]</div>
 
-'''Le più gettonate...'''
+<div class="principale">'''Le più gettonate...'''
 * [[Guide d'installation de Fedora en images|Installation de Fedora]]
 * [[Au secours je suis perdu…]]
 * [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
 * [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
 * [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
 * [[PreUpgrade : Passer à la version supérieure de Fedora]]
-</div>
+</div></div>
 
 </div>
 <!-- ------------------------------------------------- -->
@@ -102,41 +102,41 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 <div style="text-align:center"><big>'''Configurazione Hardware''' </big><br>
 [[:Categoria:Hardware | Hardware]]</div>
 
-'''Le più gettonate...'''
+<div class="principale">'''Le più gettonate...'''
 * [[Guide d'installation de Fedora en images|Installation de Fedora]]
 * [[Au secours je suis perdu…]]
 * [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
 * [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
 * [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
 * [[PreUpgrade : Passer à la version supérieure de Fedora]]
-</div>
+</div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
 [[Image:Nuvola_apps_filetypes.svg|40px|left]]
 <div style="text-align:center"><big>'''Per utenti avanzati''' </big><br>
 [[:Categoria:Rete e Server | Rete e Server]] | [[:Categoria:Programmazione e Sviluppo | Programmazione]] | [[:Categoria:Sicurezza | Sicurezza]]</div>
 
-'''Le più gettonate...'''
+<div class="principale">'''Le più gettonate...'''
 * [[Guide d'installation de Fedora en images|Installation de Fedora]]
 * [[Au secours je suis perdu…]]
 * [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
 * [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
 * [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
 * [[PreUpgrade : Passer à la version supérieure de Fedora]]
-</div>
+</div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
 [[Image:infinity.jpg|70px|left]]
 <div style="text-align:center"><big>'''Il mondo Fol e il Fedora Project''' </big><br>
 [[:Categoria:FAQ | FAQ]] | [[:Categoria:FedoraOnline | Fedora Online]] | [[:Categoria:Progetto Fedora | Progetto Fedora]]</div>
 <br>
-'''Le più gettonate...'''
+<div class="principale">'''Le più gettonate...'''
 * [[Guide d'installation de Fedora en images|Installation de Fedora]]
 * [[Au secours je suis perdu…]]
 * [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
 * [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
 * [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
-</div>
+</div></div>
 
 </div>
 <!-- ------------------------------------------------- -->
