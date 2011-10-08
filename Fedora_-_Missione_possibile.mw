@@ -25,3 +25,13 @@ Una delle caratteristiche fondamentali, che ha contribuito al successo del kerne
 {{nota|titolo=Software Open Source|contenuto=E' un software rilasciato con un tipo di licenza per la quale il codice sorgente è lasciato alla disponibilità di eventuali sviluppatori, in modo che con la collaborazione (in genere libera e spontanea) il prodotto finale possa raggiungere una complessità maggiore di quanto potrebbe ottenere un singolo gruppo di programmazione.}}
 
 == Fedora che cos'è? ==
+Fedora è un sistema operativo basato su Linux che presenta gli ultimissimi software liberi ed open source. Prende il suo nome da un cappello degli anni '20, logo molto noto della società che sponsorizza il progetto, ovvero Red Hat.<br>
+L'uso, la modifica e la distribuzione di Fedora è sempre libera per chiunque e per sempre. E' creata da un insieme di persone in tutto il mondo che lavorano come una comunità: il Fedora Project.<br>
+Il progetto Fedora cerca di seguire 2 principi fondamentali:
+* Fedora significa rapido progresso di contenuti liberi e software Open Source
+* Fedora crede nel motto “una volta libero, sempre libero”
+
+Il ciclo di vita di una release di Fedora è di 6 mesi, il che significa che ci sono due rilasci stabili ogni anno e che di conseguenza Fedora è una delle distribuzioni Linux più all'avanguardia. Allo stesso modo, quindi sempre per un anno, una versione ''n'' viene supportata e mantenuta dalla comunità. Dopodichè il mantenimento della release si sposta alla ''n+1''.
+
+Fedora fuziona su tutti i tipi di hardware e può essere utilizzata nei più svariati modi, sia esso Desktop, un Netbook, un Laptop o un Server.<br>
+Infine c'è da sottolineare che Fedora come desktop predefinito utilizza GNOME. (vedi capitolo successivo)
