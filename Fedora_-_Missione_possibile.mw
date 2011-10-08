@@ -50,6 +50,13 @@ L'installazione è stata terminata con successo e al primo login ti trovi davant
 Si nota fin da subito che è un Desktop pulito, privo di icone e menu. Quello che vedi si chiama Gnome-Shell, una scrivania interattiva, e portando il mouse in alto a sinistra noterai subito perchè.<br>
 Toccare l'angolo superiore sinistro equivale al click su "Attività"; le finestre aperte verranno minimizzate e sul Desktop compariranno al centro. A sinistra avrai un menu di avvio veloce, altamente configurabile, a destra ci saranno le aree di lavoro. CLiccando in alto su "Applicazioni potrai vedere e scegliere le applicazioni installate sul tuo sistema, come nell'immagine a sinistra.<br>
 Riportando il mouse nell'angolo superiore sinistro potrai tornare alle finestre aperte o, se non ne avessi, alla schermata iniziale.<br>
-Come per il cosiddetto "hot corner" in alto a sinistra, esiste un altro angolo in basso a destra. Portando il mouse in quella posizione apparirà una barra inferiore di sfondo nero, sulla quale potrai leggere le applicazioni in background, i messaggi di sistema oppure le funzionalità chat.<br>
-Tornando sul pannello superiore noterai delle icone a destra, tra cui il volume, la rete e la gestione della batteria. Segue il tuo nome utente, che con un click apre il seguente menu:
+Come per il cosiddetto "hot corner" in alto a sinistra, esiste un altro angolo in basso a destra. Portando il mouse in quella posizione apparirà una barra inferiore di sfondo nero, sulla quale potrai leggere le applicazioni in background, i messaggi di sistema oppure le funzionalità chat.
+[[Image:gnome_utente.jpg|right|thumb|200px|Il menu utente sembra non avere il pulsante per spegnere la macchina]]
+Tornando sul pannello superiore noterai delle icone a destra, tra cui il volume, la rete e la gestione della batteria. Segue il tuo nome utente, che con un click apre il menu indicato a destra.<br>
+A prima vista sembra non esserci il pulsante per spegnere la macchina, ma premendo il tasto <ALT> noterai che la voce "Sospendi" cambia in "Spegni". In alternativa esiste un'estensione che fa apparire in modo permanente e senza premere il tasto ALT le voci "Iberna" e "Spegni".<br>
+Alcune particolarità nell'utilizzo di Gnome-Shell:
+* '''Tasto "Win":''' Equivale al hot corner in alto a sinistra dello schermo
+* '''ALT+F2:''' si aprirà una linea di comando, inserendo "r" e premendo <Invio> per esempio si riavvia Gnome-Shell
+* '''Ctrl+Alt+Freccia su/giù:''' si passa da un Desktop virtuale (area) all'altro
+All'interno del menu utente troverai un'altra voce importante, le Impostazioni di sistema:
 [[Image:gnome_utente.jpg|right|thumb|200px|Il menu utente sembra non avere il pulsante per spegnere la macchina]]
