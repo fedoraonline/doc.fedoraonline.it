@@ -1,4 +1,5 @@
 == Introduzione ==
+
 * Ti sei deciso di installare Fedora ma non sai come fare?
 * Hai appena installato Fedora e non hai idea come procedere?
 * Hai voglia di provare Fedora ma non sai a cosa andrai incontro?
@@ -25,6 +26,7 @@ Una delle caratteristiche fondamentali, che ha contribuito al successo del kerne
 {{nota|titolo=Software Open Source|contenuto=E' un software rilasciato con un tipo di licenza per la quale il codice sorgente è lasciato alla disponibilità di eventuali sviluppatori, in modo che con la collaborazione (in genere libera e spontanea) il prodotto finale possa raggiungere una complessità maggiore di quanto potrebbe ottenere un singolo gruppo di programmazione.}}
 
 == Fedora che cos'è? ==
+
 Fedora è un sistema operativo basato su Linux che presenta gli ultimissimi software liberi ed open source. Prende il suo nome da un cappello degli anni '20, logo molto noto della società che sponsorizza il progetto, ovvero Red Hat.<br>
 L'uso, la modifica e la distribuzione di Fedora è sempre libera per chiunque e per sempre. E' creata da un insieme di persone in tutto il mondo che lavorano come una comunità: il Fedora Project.<br>
 Il progetto Fedora cerca di seguire 2 principi fondamentali:
@@ -35,3 +37,9 @@ Il ciclo di vita di una release di Fedora è di 6 mesi, il che significa che ci 
 
 Fedora fuziona su tutti i tipi di hardware e può essere utilizzata nei più svariati modi, sia esso Desktop, un Netbook, un Laptop o un Server.<br>
 Infine c'è da sottolineare che Fedora come desktop predefinito utilizza GNOME. (vedi capitolo successivo)
+
+== Il Desktop di default: GNOME ==
+
+{{nota|titolo=Installazione|contenuto=Per una guida di installazione passo passo scegli una delle guide di installazione che trovi nella categoria apposita.}}
+
+Passiamo a cose più concrete, l'installazione è stata terminata con successo e al primo login ti trovi davanti una scrivania nuova: GNOME ('''G'''NU '''N'''etwork '''O'''bject '''M'''odel '''E'''nvironment)
