@@ -11,11 +11,15 @@ Tuttavia un passaggio da altri sistemi operativi a Linux Fedora è più semplice
 Prima di addentrarci in alcuni aspetti fondamentali del tuo nuovo sistema operativo, però, vediamo un po' di storia.
 
 == Linux, un po' di storia ==
+
+=== Il Kernel ===
 Spesso quando si parla di Linux si intende un sistema operativo completo, come nel nostro caso Fedora. Questo, però, non è del tutto esatto, perchè con Linux si intende solamente il kernel del sistema, ovvero la parte che si occupa della gestione del processore, della memoria e delle componenti hardware. Per comunicare con il sistema invece si ha bisogno di un'interfaccia utente, che può essere testuale (una shell) oppure grafica (la cosiddetta GUI – Graphic User Interface).
 
+=== GNU/Linux ===
 Ora, tutte le distribuzioni che troviamo adesso in circolazione e che fanno sì che ci si può avvicinare con meno difficoltà all'ambiente Desktop, devono gran parte del loro successo al progetto GNU, che poi ha trovato in GNU/Linux il binomio perfetto. GNU (che significa “GNU is not Unix” - GNU non è Unix) nasce come sistema operativo completamente libero, utilizzando la licenza GPL (General Public Licence) che sancisce e protegge le libertà fondamentali che permettono l'uso e lo sviluppo collettivo e naturale del software.<br>
 Vengono creati programmi per ogni necessità informatica, ma per diventare un sistema operativo vero e proprio mancava ancora una parte importante, un kernel che potesse gestire la parte “hardware”. Quando nel 1991 Linus Torvalds scrisse il primo kernel e lo rilasciò liberamente era arrivato il momento della nascita di un nuovo sistema operativo, che venne chiamato GNU/Linux; finalmente si era aperta la strada per entrare nel mercato Desktop.
 
+=== Il software libero ===
 Una delle caratteristiche fondamentali, che ha contribuito al successo del kernel Linux e di conseguenza delle applicazioni e del software legato ad esso, è il fatto che viene rilasciato l'intero codice sorgente, in modo che possa essere modificato e sviluppato dalla comunità. A differenza del software proprietario, in cui il codice sorgente rimane blindato e in cui l'utente finale non ha alcun diritto sul software tranne la possibilità di utilizzarlo pagandolo, il software libero stimola la condivisione delle conoscenze; un aspetto importante che ha portato presto al software Open Source.
 
 {{nota|titolo=Software Open Source|contenuto=E' un software rilasciato con un tipo di licenza per la quale il codice sorgente è lasciato alla disponibilità di eventuali sviluppatori, in modo che con la collaborazione (in genere libera e spontanea) il prodotto finale possa raggiungere una complessità maggiore di quanto potrebbe ottenere un singolo gruppo di programmazione.}}
