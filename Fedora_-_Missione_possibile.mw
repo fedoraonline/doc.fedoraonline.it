@@ -95,4 +95,13 @@ Fedora, come già detto prima, utilizza solamente software libero e privo di lic
 Questi repository, che si distinguono in ''free'' e ''non-free'', rappresentano l'unione di alcuni repository già molto forniti precedentemente, motivo per cui dopo questa fusione contengono un'infinità di software.<br>
 Per installarli si può seguire la pagina di [http://rpmfusion.org/Configuration | RPMFusion], ma potete anche consultare la nostra guida dedicata all'installazione dei repository [[RPMFusion|RPMFusion]].
 
+=== Articoli consigliati ===
+Non è possibile inserire tutte le informazioni in un'unica guida, per cui ti consigliamo fortemente, oltre alle guide già citate, di leggere anche gli articoli sulle seguenti tematiche:
+* [[Driver video ATI| Driver video per la scheda grafica ATI]]
+* [[Driver video NVidia| Driver video per la scheda grafica NVidia]]
+* [[Flash Plugin| Installazione del Flash Plugin]]
+* [[Codec Audio Video| Installazione dei codec audio e video (mp3, avi, wma, DivX,...)
+
+{{Nota|titolo=A proposito di schede grafiche|contenuto=Gnome-shell per un corretto funzionamento necessita dei driver grafici. Questo vuol dire che molto probabilmente, se avete delle sched Intel o NVidia, il sistema riconoscerà in autonmia la vostra scheda e caricherà il driver libero necessario. Altrimenti, compreso le schede ATI, dovrai installare prima il driver corretto per la tua scheda grafica.
+
 [[Categoria:Installazione]]
