@@ -67,7 +67,12 @@ Noterai come alcuni aspetti, come Nautilus il file manager, ti saranno familiari
 
 == Strumenti di sistema: primi dubbi ==
 
-=== Installazione delle aplicazioni aggiuntive ===
+=== Installazione delle applicazioni aggiuntive ===
+Fedora, come tutte le distribuzioni Linux, è un vero sistema multi-utente, nel senso che è in grado di gestire un'infinità di utenti indipendentemente, attribuendo al solo amministratore (root) i permessi di installazione di applicativi, di modifiche su file di configurazione ecc.<br>
+Detto questo la rpima differenza rispetto alle macchine con sistemi operativi Microsoft sta proprio in questa distinzione netta tra utente e amministratore, che di fatto su win spesso sono la stessa persona. Non è solo una necessità di un sistema multi-utente, ma chiude le porte a moltissimi malware e cavalli di troia, che non avendo i permessi di root non riescono ad arrecare nessun danno al sistema.
+
+{{Warning|Password di root|E' la chiave per il tuo sistema, conservala bene e non darla mai, per nessun motivo, a terzi. Inoltre non dovresti mai attuare meccanismi che aggirano l'inserimento della password di root!}}
+
 
 
 [[Categoria:Installazione]]
