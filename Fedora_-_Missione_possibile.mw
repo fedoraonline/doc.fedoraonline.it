@@ -103,6 +103,6 @@ Non è possibile inserire tutte le informazioni in un'unica guida, per cui ti co
 * [[Codec Audio Video| Installazione dei codec audio e video (mp3, avi, wma, DivX,...)]]
 
 {{Nota|titolo=A proposito di schede grafiche|contenuto=Gnome-shell per un corretto funzionamento necessita dell'accelerazione grafica. Questo vuol dire che molto probabilmente, se hai delle schede Intel o NVidia, il sistema riconoscerà in autonomia la tua scheda e caricherà il driver libero necessario.<br>Altrimenti, ma sicuramente per le schede ATI, dovrai installare il driver corretto per la tua scheda grafica.<br>
-Per le indicazioni sull'installazione dei driver per le varie schede grafiche consulta la guida adatta in [[Categoria:Schede grafiche | questa categoria]]}}
+Per le indicazioni sull'installazione dei driver per le varie schede grafiche consulta la guida adatta in [Categoria:Schede grafiche | questa categoria]}}
 
 [[Categoria:Installazione]]
