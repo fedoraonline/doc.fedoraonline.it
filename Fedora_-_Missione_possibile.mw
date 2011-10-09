@@ -82,10 +82,16 @@ L'utilizzo di PackageKit è molto intuitivo:
 
 Se fai click su un pacchetto, in basso ti verrà visualizzata una breve descrizione e la sua dimensione. Potrai selezionare o deselezionare il pacchetto mettendo o togliendo il classico "baffo" verde. Questa operazione può essere ripetuta per tutte le applicazione che desideri installare o disinstallare.<br>
 Terminata questa operazione devi solo confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero di pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa.<br>
-Alla fine di tutti i controlli ti verrà chiesta la ''password di root'' e l'operazione comincerà, elencandoti tutte le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica vedrai presto che installare applicazioni nuove con PackageKit è davvero molto facile.
+Alla fine di tutti i controlli ti verrà chiesta la ''password di root'' e l'operazione comincerà, elencandoti tutte le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica vedrai presto che installare applicazioni nuove con PackageKit è davvero molto facile.<br>
+Le applicazioni installate saranno disponibili immediatamente nel menu ''Applicazioni'' che abbiamo visto durante il piccolo excursus su Gnome. Verranno automaticamente inserite nella categoria di competenza, da dove li potrai lanciare con un semplice click.
 
+=== I Repository, ovvero, la banca dati ===
+Tutti i pacchetti RPM disponibili per Fedora sono raccolti in più server, i cosiddetti repository. Sono questi server che Fedora tramite la GUI PackageKit interroga per reperire informazioni su un determinato pacchetto o gruppo di applicazioni, e allo stesso modo verifica se sono disponibili degli aggiornamenti. Infatti, forse lo hai già notato, il sistema è preimpostato per verificare giornalmente la disponibilità di aggiornamenti e di comunicarteli tramite la barra inferiore. Se lo vorrai potrai installarli con un semplice click. Questa impostazione potrà essere modificata da ''Sistema > Preferenze > Aggiornamento Software''.<br>
+Fedora ha già a bordo i repository "ufficiali", ma ne esistono molti altri. Il motivo per cui Fedora fornisce solo i suoi repository è facile intuirlo:<br>
+Fedora, come già detto prima, utilizza solamente software libero e privo di licenza. Motivo per cui molti plugin o applicativi non sono presenti. Ecco il motivo per cui vale la pena installare almeno altri due repository.
 
-
-
+==== RPMFusion ====
+Questi repository, che si distinguono in ''free'' e ''non-free'', rappresentano l'unione di alcuni repository già molto forniti precedentemente, motivo per cui dopo questa fusione contengono un'infinità di software.<br>
+Per installarli si può seguire la pagina di [[http://rpmfusion.org/Configuration| RPMFusion]], ma potete anche consultare la nostra guida dedicata all'installazione dei repository [RPMFusion]].
 
 [[Categoria:Installazione]]
