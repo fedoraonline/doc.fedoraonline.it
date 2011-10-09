@@ -75,7 +75,11 @@ Detto questo la rpima differenza rispetto alle macchine con sistemi operativi Mi
 
 Fedora è un sistema rpm-based, il che vuol dire che per l'installazione di pacchetti software si avvale di formati RPM, che deriva da '''R'''ed Hat '''P'''ackage '''M'''anager.
 [[Image:PackageKit.jpg|right|thumb|300px|PackageKit è il gestore grafico di pacchetti RPM di Fedora]]
-Per gestire il processo di installazione/disinstallazione Fedora si avvale di PackageKit, un tool grafico che potrai trovare in ''Applicazioni > Srumenti di Sistema > Aggiungi/rimuovi software''.
-
+Per gestire il processo di installazione/disinstallazione Fedora si avvale di PackageKit, un tool grafico che potrai trovare in ''Applicazioni > Srumenti di Sistema > Aggiungi/rimuovi software''.<br>
+L'utilizzo di PackageKit è molto intuitivo:
+* A sinistra si può cercare il pacchetto o farsi elencare un gruppo di applicazioni
+* Sulla destra verranno visualizzati i songoli pacchetti del gruppo e il loro stato (installato o no)
+Se fai click su un pacchetto, in basso ti verrà visualizzata una breve descrizione e la sua dimensione. Potrai selezionare o deselezionare il pacchetto mettendo o togliendo il classico "baffo" verde. Questa operazione può essere ripetuta per tutte le applicazione che desideri installare o disinstallare.<br>
+Terminata questa operazione devi solo confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero di pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa. Terminata anche questa fase ti verrà chiesta la ''password di root'' e l'operazione comincerà definitivamente.
 
 [[Categoria:Installazione]]
