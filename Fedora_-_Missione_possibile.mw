@@ -43,7 +43,8 @@ Infine c'è da sottolineare che Fedora come desktop predefinito utilizza GNOME. 
 {{nota|titolo=Installazione|contenuto=Per una guida di installazione passo passo scegli una delle guide di installazione che trovi nella categoria apposita.}}
 
 L'installazione è stata terminata con successo e al primo login ti trovi davanti una scrivania nuova: GNOME ('''G'''NU '''N'''etwork '''O'''bject '''M'''odel '''E'''nvironment). Un Desktop Environment sconosciuto, che già dal primo impatto è molto diverso rispetto alle interfacce grafiche alle quali probabilmente sei abituato.
-[[Image:gnome_base.jpg|center|thumb|400px|Gnome dopo la prima installazione si presenta così]]
+[[Image:gnome_base.jpg|center|thumb|400px|Gnome dopo la prima installazione si presenta così.<br>
+Se così non fosse verifica il corretto funzionamento dei driver grafici, trovi un suggerimento più avanti]]
 
 {{nota|titolo=Desktop Environment|contenuto=Verrà trattato solamente il Desktop di default, ma è importante sapere che si possono usare molti altri DE: KDE, Xfce, Lxde, Fluxbox e molti altri.}}
 [[Image:gnome_app.jpg|left|thumb|400px|Le applicazioni presenti possono essere visualizzati anche per categoria]]
