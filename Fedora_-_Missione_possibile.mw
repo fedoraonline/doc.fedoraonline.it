@@ -103,10 +103,41 @@ Non è possibile inserire tutte le informazioni in un'unica guida, per cui ti co
 * [[Codec Audio Video| Installazione dei codec audio e video (mp3, avi, wma, DivX,...)]]
 * e molto altro...
 
-{{Warning|Prima di seguire le guide citate sopra assicurati di aver installato il repository ''RPMFusion'' descritto sopra!}}
+{{Warning|Prima di seguire le guide appena citate assicurati di aver installato il repository ''RPMFusion'' descritto sopra!}}
 
 {{Nota|titolo=A proposito di schede grafiche|contenuto=Gnome-shell per un corretto funzionamento necessita dell'accelerazione grafica. Questo vuol dire che molto probabilmente, se hai delle schede Intel o NVidia, il sistema riconoscerà in autonomia la tua scheda e caricherà il driver libero necessario.<br>Altrimenti, ma sicuramente per le schede ATI, dovrai installare il driver corretto per la tua scheda grafica.<br>
 Per le indicazioni sull'installazione dei driver per la tua specifica scheda grafica consulta la guida adatta in [http://localhost/mediawiki/index.php/Categoria:Schede_grafiche questa categoria]}}
 
+== Il Terminale ==
+
+Avrai notato che fino ad ora, volutamente, non abbiamo ancora toccato il cosiddetto terminale, un emulatore di shell presente in ''Applicazioni > Strumenti di Sistema > Terminale''.<br>
+E' importante sapere che con il terminale è possibile eseguire qualsiasi operazione, ma per semplicità d'uso all'inizio spesso si privilegia l'ambiente grafico per muoversi e per controllare il sistema. Nelle pagine del wiki, però, troverai spesso dei richiami a output o input in un terminale, motivo per cui è utile confrontarsi fin dall'inizio con questo strumento.<br>
+Una volta aperto, il terminale si presenta così:
+
+ [fol@localhost ~]$
+
+Il terminale indica il nome utente (fol), il nome della macchina (localhost), la posizione in cui ti trovi (~ equivale alla tua home directory) e infine ti dice come sei loggato ($ indica che sei loggato come utente).<br>
+Vediamo qualche esempio:
+
+ # yum install firefox
+
+oppure
+
+$ lspci
+
+* il simbolo '''#''' indica che l'operazione deve essere eseguita come '''root''' (amministratore).
+* il simbolo '''$''' indica che l'operazione deve essere eseguita come '''utente'''.
+
+Per passare, subito dopo l'apertura del temrinale, da utente a root, basterà digitare:
+
+ [fol@localhost ~]$ su -
+ password di root
+ [root@localhost ~]#
+
+{{Warning|Da questo momento hai pieno potere sulla macchina, stai molto attento alle operazioni che fai!<br>
+Una volta finita l'operazione per cui sei diventato root, è buona norma riprendere l'utenza normale. Per farlo ti basterà digitare:
+
+ [root@localhost ~]# exit
+ [fol@localhost ~]$}}
 
 [[Categoria:Installazione]]
