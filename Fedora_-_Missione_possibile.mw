@@ -73,7 +73,9 @@ Detto questo la rpima differenza rispetto alle macchine con sistemi operativi Mi
 
 {{Nota|titolo=Password di root!|contenuto=E' la chiave per il tuo sistema, '''conservala bene''' e non darla mai, per nessun motivo, a terzi. Inoltre non dovresti mai attuare meccanismi che aggirano l'inserimento della password di root!}}
 
-Fedora è un sistema rpm-based, il che vuol dire che per l'installazione di pacchetti software si avvale di formati RPM, che deriva da '''R'''ed Hat '''P'''ackage '''M'''anager. Per gestire il processo di installazione/disinstallazione Fedora si avvale di PackageKit, un tool grafico che potrai trovare in ''Applicazioni > Srumenti di Sistema > Aggiungi/rimuovi software''.
+Fedora è un sistema rpm-based, il che vuol dire che per l'installazione di pacchetti software si avvale di formati RPM, che deriva da '''R'''ed Hat '''P'''ackage '''M'''anager.
+[[Image:PackageKit.jpg|right|thumb|300px|PackageKit è il gestore grafico di pacchetti RPM di Fedora]]
+Per gestire il processo di installazione/disinstallazione Fedora si avvale di PackageKit, un tool grafico che potrai trovare in ''Applicazioni > Srumenti di Sistema > Aggiungi/rimuovi software''.
 
 
 [[Categoria:Installazione]]
