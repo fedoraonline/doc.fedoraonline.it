@@ -79,7 +79,9 @@ Per gestire il processo di installazione/disinstallazione Fedora si avvale di Pa
 L'utilizzo di PackageKit è molto intuitivo:
 * A sinistra si può cercare il pacchetto o farsi elencare un gruppo di applicazioni
 * Sulla destra verranno visualizzati i songoli pacchetti del gruppo e il loro stato (installato o no)
+
 Se fai click su un pacchetto, in basso ti verrà visualizzata una breve descrizione e la sua dimensione. Potrai selezionare o deselezionare il pacchetto mettendo o togliendo il classico "baffo" verde. Questa operazione può essere ripetuta per tutte le applicazione che desideri installare o disinstallare.<br>
-Terminata questa operazione devi solo confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero di pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa. Terminata anche questa fase ti verrà chiesta la ''password di root'' e l'operazione comincerà definitivamente.
+Terminata questa operazione devi solo confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero di pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa.<br>
+Alla fine di tutti i controlli ti verrà chiesta la ''password di root'' e l'operazione comincerà, elencandoti alla fine tutte le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica vedrai presto che installare applicazioni nuove con PackageKit è davvero molto facile.
 
 [[Categoria:Installazione]]
