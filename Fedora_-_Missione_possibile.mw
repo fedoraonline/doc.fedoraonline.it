@@ -58,8 +58,8 @@ Alcune particolarità nell'utilizzo di Gnome-Shell:
 * '''Tasto "Win":''' Equivale al hot corner in alto a sinistra dello schermo
 * '''ALT+F2:''' si aprirà una linea di comando, inserendo "r" e premendo <Invio> per esempio si riavvia Gnome-Shell
 * '''Ctrl+Alt+Freccia su/giù:''' si passa da un Desktop virtuale (area) all'altro
+[[Image:gnome_sistema.jpg|left|thumb|250px|Molte cose si possono configurare direttamente da qui]]
 All'interno del menu utente troverai un'altra voce importante, le Impostazioni di Sistema, dove potrai impostare lo schermo, la rete, il mouse, tastiera, la stampante e molto altro.
-[[Image:gnome_sistema.jpg|right|thumb|250px|Molte cose si possono configurare direttamente da qui]]
 Queste sono, a grandi linee, le cose basilari del Desktop di default. Naturalmente c'è molto altro da sapere su Gnome, dalle personalizzazioni alle estensioni disponibili, ma è possibile anche installare ulteriori pacchetti di amministrazione. Piano piano imparerai a modificare l'aspetto di Gnome lavorando semplicemente sui file CSS e a tal proposito il consiglio è, magari tra un po' di tempo, quello di leggere la [[GNOME:Estensioni e personalizzazioni| guida avanzata sulla configurazione di Gnome]].
 
 Per adesso cerca di esplorare il più possibile il tuo nuovo Desktop, ricordandoti che finchè sei loggato come utente non potrai arrecare danni al sistema. Quando invece ti viene chiesta la password di root devi prestare molta attenzione, perchè ogni cambiamento fatto da amministratore è potenzialmente pericoloso per la stabilità del sistemastesso.
