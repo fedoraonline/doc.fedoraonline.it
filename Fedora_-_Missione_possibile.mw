@@ -92,6 +92,6 @@ Fedora, come già detto prima, utilizza solamente software libero e privo di lic
 
 ==== RPMFusion ====
 Questi repository, che si distinguono in ''free'' e ''non-free'', rappresentano l'unione di alcuni repository già molto forniti precedentemente, motivo per cui dopo questa fusione contengono un'infinità di software.<br>
-Per installarli si può seguire la pagina di [[http://rpmfusion.org/Configuration| RPMFusion]], ma potete anche consultare la nostra guida dedicata all'installazione dei repository [RPMFusion]].
+Per installarli si può seguire la pagina di [http://rpmfusion.org/Configuration| RPMFusion], ma potete anche consultare la nostra guida dedicata all'installazione dei repository [RPMFusion].
 
 [[Categoria:Installazione]]
