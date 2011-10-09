@@ -82,6 +82,10 @@ L'utilizzo di PackageKit è molto intuitivo:
 
 Se fai click su un pacchetto, in basso ti verrà visualizzata una breve descrizione e la sua dimensione. Potrai selezionare o deselezionare il pacchetto mettendo o togliendo il classico "baffo" verde. Questa operazione può essere ripetuta per tutte le applicazione che desideri installare o disinstallare.<br>
 Terminata questa operazione devi solo confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero di pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa.<br>
-Alla fine di tutti i controlli ti verrà chiesta la ''password di root'' e l'operazione comincerà, elencandoti alla fine tutte le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica vedrai presto che installare applicazioni nuove con PackageKit è davvero molto facile.
+Alla fine di tutti i controlli ti verrà chiesta la ''password di root'' e l'operazione comincerà, elencandoti tutte le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica vedrai presto che installare applicazioni nuove con PackageKit è davvero molto facile.
+
+
+
+
 
 [[Categoria:Installazione]]
