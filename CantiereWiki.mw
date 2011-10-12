@@ -24,12 +24,28 @@ Verifica di aver inserito nella guida in corso la [[:Categoria:Stesura in corso]
 ! Articolo
 ! Autore
 ! Stato
-{{AggiungiArticolo|fonte=-|articolo=Dovecot|autore=PascalParois|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Postfix|autore=PascalParois|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Serveur de messagerie électronique|autore=PascalParois|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Les SSD sous fedora|autore=ValentinBrémond|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Installation,_configuration_LDAP/SAMBA_sous_F13-14|autore=NicolasLabeau|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Gérer ses courriels en ligne de commande|autore=MatthieuSaulnier|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Installare Covergloobus|autore=CristianPozzessere|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Configurazione servizi DNS|autore=GiuseppeDelvecchio|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Personalizzazione di Gnome-Shell|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Ekiga|autore=AntonioTrande|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Remote logging via rsyslog|autore=GiuseppeDelvecchio|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Libreoffice|autore=SimoneZaminga|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Conky|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Openbox|autore=CristianPozzessere|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Immagine webcam al rovescio|autore=GiuseppeDelvecchio|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Script per la condivisione Internet|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Configurazione mod evasive su Apache 2.x|autore=GiuseppeDelvecchio|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Boot sequence Fedora|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Google Earth|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Installazione Driver ATI|autore=GiuseppeDelvecchio|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Installazione Driver NVidia|autore=AntonioTrande|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Testing:file kickstart per liveCD creator|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Ramfs e Tmpfs|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Java plugin per Firefox e JDK|autore=AntonioTrande|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Tutti i tag RPM|autore=AntonioTrande|stato=DaFare}}
 |}
 
 == Articoli in corso di aggiornamento ==
