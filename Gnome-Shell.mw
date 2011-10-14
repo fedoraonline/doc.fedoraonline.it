@@ -1,87 +1,45 @@
 == Introduzione ==
 
-
-
 Quello che attualmente vedi come Gnome-shell non è, e non sarà, la versione finale; molte funzioni non sono attive in questo momento e verranno implementate solo strada facendo, il che ha permesso al team di Fedora di compiere un atterraggio morbido, in seguito anche all'esperienza e lo scotto pagato con l'uscita di KDE 4.0 qualche anno fa.<br>
-
 Di conseguenza la configurazione e i consigli che seguono sono da considerare per quello che Gnome è in questo momento.<br>
 
 '''Concetti:''' Gnome-shell è quello che vedi sullo schermo, la shell grafica appunto, attraverso la quale comunichi con l'hardware. Essa richiede, per funzionare correttamente, l'installazione dei driver video ed è scritta in C e Javascript. Se si dovesse presentare qualche problema, Gnome lo comunica all'utente e lancia direttamente la modalità ''fallback'', una sorta di Gnome 2.x, per non dover rinunciare alla grafica.
 
-
-
 === Modalità Fallback ===
-
 La modalità chiamata ''fallback'' è una specie di ancora di salvataggio nel caso Gnome non riesca ad avviare correttamente gnome-shell e deve utilizzare il driver grafico generico. Per chi proviene da Gnome 2.x si trova di fronte a un desktop familiare, il pannello in alto contiene i menu ''Applicazioni'' e ''Risorse'' e quello in basso le aree di lavoro utilizzate.<br>
-
 Per utilizzare Gnome-shell invece hai bisogno dell'accelerazione grafica, controlla per vedere se è attiva o no:
 
-
-
  $ glxinfo | grep direct
-
  direct rendering: Yes
 
-
-
 Se la risposta è un sì, allora il problema non è la scheda grafica, se invece la risposta è ''No'' leggi come installare i driver della tua scheda video in [[:Categoria:Schede_Video| questa categoria]].<br>
-
 Una volta installato il driver corretto vedrai che al prossimo avvio del server X partirà gnome-shell.
 
-
-
 === Considerazioni ===
-
 Vedrai fin da subito che hai di fronte un desktop apparentemente "sconosciuto", nessun legame con Gnome 2.x ed è proprio questo che molti utenti spiazza in un primo momento. L'abitudine e l'essere tradizionalisti in questo caso può giocare dei brutti scherzi, perchè dopo un po' di prove ci si convince che questa shell grafica è molto potente e quando avrà tutte le funzionalità ricorderai Gnome 2.x soltanto con un sorriso sulle labbra, pensando ai "vecchi tempi".<br>
-
 Gnome 3 ti farà anche cambiare abitudini, nel senso che ti porterà ad utilizzare molto di più le aree di lavoro, mentre fino ad ora si lavorava su massimo 2 o forse 3 e si gestiva il tutto con i pulsanti ad icona. L'utilizzo delle aree invece renderà la navigazione più veloce e la lettura più immediata (le finestre potranno rimanere aperte nelle varie aree spostandosi facilmente da un area all'altra con Ctrl+Alt+freccia su o giù).<br>
-
 Gnome-shell è altamente personalizzabile, e lo sarà ancor di più quando sarà a pieno regime, chi conosce le basi dei fogli di stile CSS non troverà nessuna difficoltà. Inoltre nascono molti temi ed estensioni ad hoc.
 
-
-
 === Principali novità ===
-
 ====Hot corner====
-
 Esistono due cosiddetti ''hot corner'', angoli del monitor che al passaggio del mouse eseguono una determinata azione. Il primo, quello più importante, è in alto a sinistra e ti farà apparire una seconda scrivania, se così la possiamo chiamare. Noterai che tutte le finestre aperte verranno ridotte a thumbnail e che a sinistra apparirà una barra di avvio veloce, che potrai personalizzare a seconda delle tue esigenze. A destra ci sono, appena visibili, due aree di lavoro. Apparirà il menu ''Applicazioni'' in cui ti sarà possibile scegliere il programma da avviare.<br>
-
 Il secondo angolo è quello in basso a destra, che farà apparire in trasparenza una barra in basso, dove verranno visualizzati i messaggi di sistema, gli aggiornamenti disponibili ed è la barra dalla quale si può gestire la chat.
 
-
-
 ====Aree di lavoro====
-
 Apparentemente le aree di lavoro sono soltanto due, ma in realtà sono ''n''. Ogni qualvolta apri una nuova area ti verrà aggiunta un'altra vuota, immediatamente utilizzabile. Lo switch da un'area all'altra è molto veloce e permette di tenere molte applicazioni aperte senza dover saltare da una all'altra tramite la riduzione ad icona.
 
-
-
 ====Centro di controllo====
-
 Per chi fino a ieri era gnomista puro questa è davvero una novità, d'ora in poi non solo KDE ma anche Gnome ha un suo centro di controllo, dal quale è possibile impostare lo schermo, tastiera, mouse, rete ecc.<br>
-
 Di contro, siccome si può impostare lo schermo e il monitor da qui, il famoso system-config-display è stato definitivamente mandato in pensione.
 
-
-
 ====Servizi====
-
 Benchè non dipende direttamente con Gnome, un'altra novità inserita su Fedora con la versione 15 è il nuovo gestore di servizi '''systemd''', che di fatto ha sostituito ''system-config-services'', benchè quest'ultimo attualmente è ancora disponibile. Di conseguenza cambia anche il modo di gestione dei servizi stessi. La sintassi è:
-
-
 
  # systemctl start/stop/status/enable/disable nome_servizio.service 
 
-
-
 Quando Gnome sarà completato ci sarà anche la GUI per systemd:
-
-
 
  # systemadm
 
-
-
 ====Spegnimento PC====
-
 Per chi a questo punto vuole fare una pausa e nel menu utente, cliccando sul proprio nome, cerca il tasto "Spegni" avrà un'altra sorpresa: sembra mancare!<br>
