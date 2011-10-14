@@ -31,9 +31,15 @@ Il secondo angolo è quello in basso a destra, che farà apparire in trasparenza
 Apparentemente le aree di lavoro sono soltanto due, ma in realtà sono ''n''. Ogni qualvolta apri una nuova area ti verrà aggiunta un'altra vuota, immediatamente utilizzabile. Lo switch da un'area all'altra è molto veloce e permette di tenere molte applicazioni aperte senza dover saltare da una all'altra tramite la riduzione ad icona.
 
 ====Centro di controllo====
-[[Image:Gnome_sistema.jpg|right|thumb|250px|Il centro di controllo è molto intuitivo]]
 Per chi fino a ieri era gnomista puro questa è davvero una novità, d'ora in poi non solo KDE ma anche Gnome ha un suo centro di controllo, dal quale è possibile impostare lo schermo, tastiera, mouse, rete ecc.<br>
 Di contro, siccome si può impostare lo schermo e il monitor da qui, il famoso system-config-display è stato definitivamente mandato in pensione.
+[[Image:Gnome_utente.jpg|left|thumb|200px|Per far apparire la voce "Spegni" basta premere <ALT>]]
+[[Image:Gnome_sistema.jpg|right|thumb|250px|Il centro di controllo è molto intuitivo]]
+
+====Spegnimento PC====
+Per chi a questo punto vuole fare una pausa e nel menu utente, cliccando sul proprio nome, cerca il tasto "Spegni" avrà un'altra sorpresa: sembra mancare!<br>
+Invece c'è, premendo il tasto <ALT> la voce ''Sospendi'' cambia in ''Spegni''. Cliccando sopra con il mouse appare la finestra di spegnimento/riavvio del PC. Vedrai più avanti che esiste un'estensione che rende definitiva questa opzione.
+
 
 ====Servizi====
 Benchè non dipende direttamente con Gnome, un'altra novità inserita su Fedora con la versione 15 è il nuovo gestore di servizi '''systemd''', che di fatto ha sostituito ''system-config-services'', benchè quest'ultimo attualmente è ancora disponibile. Di conseguenza cambia anche il modo di gestione dei servizi stessi. La sintassi è:
@@ -43,8 +49,3 @@ Benchè non dipende direttamente con Gnome, un'altra novità inserita su Fedora 
 Quando Gnome sarà completato ci sarà anche la GUI per systemd:
 
  # systemadm
-
-====Spegnimento PC====
-[[Image:Gnome_utente.jpg|left|thumb|200px|Per far apparire la voce "Spegni" basta premere <ALT>]]
-Per chi a questo punto vuole fare una pausa e nel menu utente, cliccando sul proprio nome, cerca il tasto "Spegni" avrà un'altra sorpresa: sembra mancare!<br>
-Invece c'è, premendo il tasto <ALT> la voce ''Sospendi'' cambia in ''Spegni''. Cliccando sopra con il mouse appare la finestra di spegnimento/riavvio del PC. Vedrai più avanti che esiste un'estensione che rende definitiva questa opzione.
