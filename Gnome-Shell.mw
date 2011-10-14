@@ -48,3 +48,16 @@ Benchè non dipende direttamente con Gnome, un'altra novità inserita su Fedora 
 Quando Gnome sarà completato ci sarà anche la GUI per systemd:
 
  # systemadm
+
+== Gnome Tweak Tool ==
+
+Un'altra novità che noterai durante la navigazione è la mancanza dei pulsanti massimizza/minimizza e chiudi a icona nella barra superiore delle finestre. E' presente solamente la "X" per chiudere la finestra.<br>
+E' un concetto che risulta difficile da digerire, ma porta l'utente a fare quello che Gnome si pone come obiettivo. Utilizzare le aree di lavoro e le funzionalità che puoi dare a mouse e tastiera per personalizzare il comportamento delle finestre. Questo lo puoi raggiungere facilmente dalle impostazioni di sistema, in cui si possono impostare delle combinazioni di tasti per la personalizzazione, ma ancor di più è utile l'utilizzo di Gnome Tweak Tool, che si installa così:
+
+ # yum install gnome-tweak-tool 
+
+Una volta installato si trova in Applicazioni->Accessori; è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool.
+[[Image:Tweak_Tool.jpg|center|thumb|300px|Gnome Tweak Tool è davvero potente e non dovrebbe mancare sul tuo Desktop.]]
+Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shell, di cui parleremo nel prossimo capitolo.
+
+== Estensioni Gnome-Shell ==
