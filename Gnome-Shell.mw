@@ -6,6 +6,7 @@ Di conseguenza la configurazione e i consigli che seguono sono da considerare pe
 '''Concetti:''' Gnome-shell è quello che vedi sullo schermo, la shell grafica appunto, attraverso la quale comunichi con l'hardware. Essa richiede, per funzionare correttamente, l'installazione dei driver video ed è scritta in C e Javascript. Se si dovesse presentare qualche problema, Gnome lo comunica all'utente e lancia direttamente la modalità ''fallback'', una sorta di Gnome 2.x, per non dover rinunciare alla grafica.
 
 === Modalità Fallback ===
+[[Image:Gnome_fallback.jpg|right|thumb|350px|Fallback: l'ancora di salvataggio se non hai l'accelerazione grafica.]]
 La modalità chiamata ''fallback'' è una specie di ancora di salvataggio nel caso Gnome non riesca ad avviare correttamente gnome-shell e deve utilizzare il driver grafico generico. Per chi proviene da Gnome 2.x si trova di fronte a un desktop familiare, il pannello in alto contiene i menu ''Applicazioni'' e ''Risorse'' e quello in basso le aree di lavoro utilizzate.<br>
 Per utilizzare Gnome-shell invece hai bisogno dell'accelerazione grafica, controlla per vedere se è attiva o no:
 
