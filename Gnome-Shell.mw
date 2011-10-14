@@ -43,3 +43,4 @@ Quando Gnome sarà completato ci sarà anche la GUI per systemd:
 
 ====Spegnimento PC====
 Per chi a questo punto vuole fare una pausa e nel menu utente, cliccando sul proprio nome, cerca il tasto "Spegni" avrà un'altra sorpresa: sembra mancare!<br>
+Invece c'è, premendo il tasto <ALT> la voce ''Sospendi'' cambia in ''Spegni''. Cliccando sopra con il mouse appare la finestra di spegnimento/riavvio del PC. Vedrai più avanti che esiste un'estensione che rende definitiva questa opzione.
