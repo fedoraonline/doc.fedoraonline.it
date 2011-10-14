@@ -23,13 +23,15 @@ Gnome-shell è altamente personalizzabile, e lo sarà ancor di più quando sarà
 
 === Principali novità ===
 ====Hot corner====
-Esistono due cosiddetti ''hot corner'', angoli del monitor che al passaggio del mouse eseguono una determinata azione. Il primo, quello più importante, è in alto a sinistra e ti farà apparire una seconda scrivania, se così la possiamo chiamare. Noterai che tutte le finestre aperte verranno ridotte a thumbnail e che a sinistra apparirà una barra di avvio veloce, che potrai personalizzare a seconda delle tue esigenze. A destra ci sono, appena visibili, due aree di lavoro. Apparirà il menu ''Applicazioni'' in cui ti sarà possibile scegliere il programma da avviare.<br>
+Esistono due cosiddetti ''hot corner'', angoli del monitor che al passaggio del mouse eseguono una determinata azione. Il primo, quello più importante, è in alto a sinistra e ti farà apparire una seconda scrivania, se così la possiamo chiamare. Noterai che tutte le finestre aperte verranno ridotte a thumbnail e che a sinistra apparirà una barra di avvio veloce, che potrai personalizzare a seconda delle tue esigenze. A destra ci sono, appena visibili, due aree di lavoro. Apparirà il menu ''Applicazioni'' in cui ti sarà possibile scegliere il programma da avviare.
+[[Image:Gnome_base.jpg|center|thumb|350px|Gnome-Shell come appare dopo l'installazione del sistema]]
 Il secondo angolo è quello in basso a destra, che farà apparire in trasparenza una barra in basso, dove verranno visualizzati i messaggi di sistema, gli aggiornamenti disponibili ed è la barra dalla quale si può gestire la chat.
 
 ====Aree di lavoro====
 Apparentemente le aree di lavoro sono soltanto due, ma in realtà sono ''n''. Ogni qualvolta apri una nuova area ti verrà aggiunta un'altra vuota, immediatamente utilizzabile. Lo switch da un'area all'altra è molto veloce e permette di tenere molte applicazioni aperte senza dover saltare da una all'altra tramite la riduzione ad icona.
 
 ====Centro di controllo====
+[[Image:Gnome_sistema.jpg|right|thumb|250px|Il centro di controllo è molto intuitivo]]
 Per chi fino a ieri era gnomista puro questa è davvero una novità, d'ora in poi non solo KDE ma anche Gnome ha un suo centro di controllo, dal quale è possibile impostare lo schermo, tastiera, mouse, rete ecc.<br>
 Di contro, siccome si può impostare lo schermo e il monitor da qui, il famoso system-config-display è stato definitivamente mandato in pensione.
 
@@ -43,5 +45,6 @@ Quando Gnome sarà completato ci sarà anche la GUI per systemd:
  # systemadm
 
 ====Spegnimento PC====
+[[Image:Gnome_utente.jpg|left|thumb|200px|Per far apparire la voce "Spegni" basta premere il tasto <ALT>]]
 Per chi a questo punto vuole fare una pausa e nel menu utente, cliccando sul proprio nome, cerca il tasto "Spegni" avrà un'altra sorpresa: sembra mancare!<br>
 Invece c'è, premendo il tasto <ALT> la voce ''Sospendi'' cambia in ''Spegni''. Cliccando sopra con il mouse appare la finestra di spegnimento/riavvio del PC. Vedrai più avanti che esiste un'estensione che rende definitiva questa opzione.
