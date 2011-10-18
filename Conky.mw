@@ -141,6 +141,8 @@ Se non dovesse partire con tale comando all'avvio del sistema o al riavvio di X,
 
 Finito.
 
+[[Image:Fedconky.jpg|center|Un desktop con molti conky a bordo.]]
+
 ==Conky su Openbox==
 
 Se utilizzi Openbox et similia basta modificare il tuo /xtc/xdg/openbox/autostart.sh, inserendo tutti processi che vuoi far partire all'avvio, per esempio:
