@@ -61,3 +61,191 @@ Una volta installato si trova in Applicazioni->Accessori; è uno strumento che n
 Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shell, di cui parleremo nel prossimo capitolo.
 
 == Estensioni Gnome-Shell ==
+
+Tra gli aspetti più innovativi di Gnome rientra sicuramente la facilità di personalizzazione. Le varie sezioni del Desktop, le icone, la barra ecc. si possono modificare semplicemente tramite i fogli di stile (CSS).<br>
+
+Inoltre esistono alcune estensioni, e nel tempo ce ne saranno sempre di più, che rendono il Desktop ancora più immediato nel suo utilizzo. Essi sono gestibili, oltre che da terminale, tramite Gnome-Tweak-Tool, visto in precedenza.
+
+
+
+[Image:...]
+
+Di seguito alcuni approfondimenti su qualche estensione:
+
+
+
+===Alternative-status-menu===
+
+COn questa estensione puoi rendere permanente la visualizzazione della voce "Spegni" nel menu utente, senza dover premere il tasto <ALT> come indicato precedentemente.
+
+
+
+ # yum install gnome-shell-extensions-alternative-status-menu
+
+
+
+===Drive-menu===
+
+Per avere un accesso più veloce a Nautilus e le cartelle nei segnalibri potrebbe essere utile avere un'icona sul pannello superiore che faccia da scorciatoia.
+
+
+
+ # yum install gnome-shell-extensions-drivemenu
+
+
+
+===User-Theme===
+
+In questa fase iniziale di Gnome-Shell non è intenzione del team di Gnome incentivare lo sviluppo di temi alternativi, tuttavia è disponibile un'estensione che già oggi gestisce i temi dell'utente.<br>
+
+Per utilizzarla è necessario aggiungere un'altra estensione, la selezione temi, come indicato di seguito:
+
+
+
+ # yum install gnome-shell-extensions-user-theme  
+
+ # yum install --nogpg http://timlau.fedorapeople.org/files/packages/theme-selector/gnome-shell-extensions-theme-selector-0.9-1.fc15.noarch.rpm
+
+
+
+A questo punto è necessario linkare i temi all'utente, per cui digita, da utente normale:
+
+
+
+ $ theme-selector-setup
+
+ User themes are now linked into /home/nome_utente/.themes
+
+
+
+Riavvia Gnome-Shell:
+
+Premi ALT+F2 e alla richiesta di comando inserisci la lettera "r" seguita da <invio>.<br>
+
+Fatto, ora oltre alle Finestre e Applicazioni avrai la possibilità di selezionare i tuoi temi personali.
+
+
+
+==Altri esempi di personalizzazione==
+
+Come già detto, di personalizzazioni se ne possono fare tantissime e per fortuna ognuno ha le sue preferenze. Quello descritto in seguito è soltanto un esempio per dimostrare cosa si può ottenere con minimi sforzi.<br>
+
+A proposito di tema, visto poco fa: la barra superiore delle finestre nello stesso colore (bianco/grigio) può non piacere, per cui puoi anche colorarla. Inanzitutto è importante sapere che per la gestione di queste impostazioni è responsabile metacity; di conseguenza le modifiche applicate saranno mantenute anche se cambi tema, proprio perchè il file è il seguente e vale per tutti i temi:<br>
+
+''/usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml''
+
+Aprilo e, dopo aver salvato una copia, vai alla sezione che si occupa dei colori della barra:
+
+
+
+ # cp /usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml /usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml.old
+
+ # gedit /usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml
+
+
+
+Nella prima parte troverai le indicazioni per
+
+<nowiki>''-- meaningfull constants --''</nowiki>
+
+
+
+ <!-- meaningfull constants -->
+
+ <constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.6" />
+
+ <constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
+
+ <constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.4" />
+
+ <constant name="C_titlebar_focused_hilight" value="gtk:base[NORMAL]" />
+
+ <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
+
+ <constant name="C_title_focused" value="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/0.1" />
+
+ <constant name="C_title_focused_hilight" value="gtk:base[NORMAL]" />
+
+ <constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.9" />
+
+
+
+Puoi identificare facilmente i valori per il bordo, la barra del titolo e del titolo stesso delle finestre. Puoi impostare quello che più ti piace, come esempio è stato scelto un colore blu, che, se non è attiva la finestra diventi grigio con delle righe orizzontali.<br>
+
+La sezione d'esempio diventerebbe così:
+
+
+
+ <!-- meaningfull constants -->
+
+ <constant name="C_border_focused" value="#000064" />
+
+ <constant name="C_border_unfocused" value="#0052FF" />
+
+ <constant name="C_border_attached_focused" value="#000064" />
+
+ <constant name="C_titlebar_focused_hilight" value="#000064" />
+
+ <constant name="C_titlebar_unfocused" value="#0052FF" />
+
+ <draw_ops name="titlebar_fill_focused_alt">
+
+        <gradient type="vertical" x="0" y="0" width="width" height="height">
+
+                <color value="#6B6EAC"/>
+
+                <color value="#000064"/>
+
+        </gradient>
+
+ </draw_ops>
+
+ <constant name="C_title_focused_hilight" value="gtk:base[NORMAL]" />
+
+ <draw_ops name="titlebar_fill_unfocused">
+
+        <gradient type="vertical" x="0" y="0" width="width" height="height">
+
+                <color value="#7096E3"/>
+
+                <color value="#0052FF"/>
+
+        </gradient>
+
+ </draw_ops>
+
+
+
+Riavviando Gnome-Shell (ALT+F2 > r > Invio) avrai le finestre come indicato nell'immagine successiva.
+
+
+
+Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x:
+
+
+
+ yum localinstall ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.5-1.noarch.rpm --nogpgcheck
+
+
+
+[Image...]
+
+[Image...]
+
+
+
+Utile per comprendere Gnome-Shell è sicuramente una letta alla [[https://fedoraproject.org/wiki/Features/Gnome3/it|documentazione del fedoraproject]], che contiene anche vari link, tra cui quello alla documentazione ufficiale.
+
+
+
+==Riferimenti==
+
+
+
+* [[http://blog.fpmurphy.com/|Blog di Murphy]
+
+* [[http://fedora.rasmil.dk/blog/?p=238|Timlau]]
+
+
+
+[[Categoria:Sistema]]
