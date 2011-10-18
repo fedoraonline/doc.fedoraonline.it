@@ -145,7 +145,7 @@ Riavviando Gnome-Shell (ALT+F2 > r > Invio) avrai le finestre come indicato nell
 
 Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x:
 
- # yum localinstall ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.5-1.noarch.rpm --nogpgcheck
+ # yum localinstall --nogpgcheck [ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.5-1.noarch.rpm copia/incolla l'indirizzo]
 
 [Image...]
 
