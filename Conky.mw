@@ -132,12 +132,12 @@ Dovrebbero partirti tutti i conky che hai creato.
 * Vai in ''Applicazioni di avvio'' e crea un nuovo comando, dandogli il nome che più ti piace. Su Fedora 15 ti basterà premere "ALT+F2" e scrivere ''gnome-session-properties'' per arrivare alle Applicazioni di avvio.<br>
 Una volta creato inserisci il comando per far partire il tutto:
 
- /home/nome_utente/./conky.sh
+ /home/nome_utente/conky.sh
 
 Salva e chiudi.<br>
 Se non dovesse partire con tale comando all'avvio del sistema o al riavvio di X, provate con la '&' finale, quindi:
 
- /home/nome_utente/./conky.sh &
+ /home/nome_utente/conky.sh &
 
 Finito.
 
