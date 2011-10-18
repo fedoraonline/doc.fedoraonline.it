@@ -82,7 +82,7 @@ In questa fase iniziale di Gnome-Shell non è intenzione del team di Gnome incen
 Per utilizzarla è necessario aggiungere un'altra estensione, la selezione temi, come indicato di seguito:
 
  # yum install gnome-shell-extensions-user-theme  
- # yum install --nogpg http://timlau.fedorapeople.org/files/packages/theme-selector/gnome-shell-extensions-theme-selector-0.9-1.fc15.noarch.rpm
+ # yum install --nogpg [http://timlau.fedorapeople.org/files/packages/theme-selector/gnome-shell-extensions-theme-selector-0.9-1.fc15.noarch.rpm| copia/incolla l'indirizzo]
 
 A questo punto è necessario linkare i temi all'utente, per cui digita, da utente normale:
 
