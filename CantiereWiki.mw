@@ -82,13 +82,8 @@ Verifica di aggiungere la : [[:Categoria:Rilettura in corso]] senza rimuovere la
 ! Rilettore
 ! Data
 ! Stato
-{{RiletturaArticolo|fonte=|articolo=Gérer ses courriels en ligne de commande|autore=MatthieuSaulnier|rilettore=JeanRémond|data=12/09/10|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Création_d'un_dépôt_local_de_Fedora|autore=GérardLandron|rilettore=PatriceKadionik|data=20/08/10|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Configuration des télécommandes infrarouge sous Fedora|autore=PhilippeMarcovici|rilettore=?|data=10/07/10|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Optimisation de l'autonomie de son portable ou de son netbook|autore=PatriceKadionik|rilettore=AlainMonnom|data=25/04/11|stato=Terminato}}
-{{RiletturaArticolo|fonte=-|articolo=Mise en oeuvre de Xenomai pour créer un noyau Temps Réel dur|autore=PatriceKadionik|rilettore=KaanKaanou|data=27/04/11|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Debuter_avec_le_terminal|autore=VivienFrasca|rilettore=KaanKaanou|data=24/08/10|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Screen|autore=EdouardBourguignon|rilettore=KaanKaanou|data=04/09/10|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Gnome-Shell e le sue estensioni|autore=RobertMayr|rilettore=?|data=18/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Conky|autore=RobertMayr|rilettore=?|data=18/10/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
