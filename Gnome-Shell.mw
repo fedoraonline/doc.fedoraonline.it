@@ -88,7 +88,7 @@ A questo punto è necessario linkare i temi all'utente, per cui digita, da utent
 
  $ theme-selector-setup
  User themes are now linked into /home/nome_utente/.themes
-[[Image:Gnome_themes.jpg|right|thumb|350px|Fallback: L'estensione per selezionare i tuoi temi personali.]]
+[[Image:Gnome-themes.jpg|right|thumb|350px|Fallback: L'estensione per selezionare i tuoi temi personali.]]
 Riavvia Gnome-Shell:<br>
 Premi ALT+F2 e alla richiesta di comando inserisci la lettera "r" seguita da <invio>.<br>
 Fatto, ora oltre alle Finestre e Applicazioni avrai la possibilità di selezionare i tuoi temi personali.
@@ -142,8 +142,7 @@ La sezione d'esempio diventerebbe così:
 
 Riavviando Gnome-Shell (ALT+F2 > r > Invio) avrai le finestre come indicato nell'immagine successiva.
 
-[[Image:Gnome_barra.jpg|left|thumb|350px|Fallback: L'esempio descritto farebbe apparire le finestre così.]]
-[[Image:Gnome_gnome2.jpg|right|thumb|350px|Fallback: Nostalgia di Gnome 2? No problem.]]
+[[Image:Gnome-barra.jpg|center|thumb|350px|Fallback: L'esempio descritto farebbe apparire le finestre così.]][[Image:Gnome_gnome2.jpg|center|thumb|350px|Fallback: Nostalgia di Gnome 2? No problem.]]
 
 Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x:
 
