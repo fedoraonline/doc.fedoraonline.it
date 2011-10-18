@@ -119,17 +119,17 @@ Ovviamente al prossimo riavvio dovrai ridare questi comandi per farli riapparire
 
 ==Avvio automatico al boot==
 
-# Vai nella tua home e crea un file vuoto di testo che chiamerai conky.sh. Nello script creato metti tutti i comandi per far partire i conky, come l'esempio sopra, salva il file e dai i permessi di esecuzione:
+* Vai nella tua home e crea un file vuoto di testo che chiamerai conky.sh. Nello script creato metti tutti i comandi per far partire i conky, come l'esempio sopra, salva il file e dai i permessi di esecuzione:
 
  $ chmod +x /home/nome_utente/conky.sh
 
-# Controlla se tutto funziona:
+* Controlla se tutto funziona:
 
  $ /home/nome_utente/conky.sh
 
 Dovrebbero partirti tutti i conky che hai creato.
 
-# Vai in ''Applicazioni di avvio'' e crea un nuovo comando, dandogli il nome che più ti piace. Su Fedora 15 ti basterà premere "ALT+F2" e scrivere ''gnome-session-properties'' per arrivare alle Applicazioni di avvio.<br>
+* Vai in ''Applicazioni di avvio'' e crea un nuovo comando, dandogli il nome che più ti piace. Su Fedora 15 ti basterà premere "ALT+F2" e scrivere ''gnome-session-properties'' per arrivare alle Applicazioni di avvio.<br>
 Una volta creato inserisci il comando per far partire il tutto:
 
  /home/nome_utente/./conky.sh
