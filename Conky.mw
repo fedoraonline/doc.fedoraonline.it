@@ -97,7 +97,7 @@ Per creare un monitoraggio conky personalizzato vai nella home e crea un file di
  
  ${cpugraph 32,150} ${diskiograph 32,150}
 
-Dopo averlo salvato chiude e digita nel terminale:
+Dopo averlo salvato chiudi e digita nel terminale:
 
  $ conky
 
