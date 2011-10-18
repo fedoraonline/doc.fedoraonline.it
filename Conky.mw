@@ -135,7 +135,7 @@ Una volta creato inserisci il comando per far partire il tutto:
  /home/nome_utente/conky.sh
 
 Salva e chiudi.<br>
-Se non dovesse partire con tale comando all'avvio del sistema o al riavvio di X, provate con la '&' finale, quindi:
+Se non dovesse partire con tale comando all'avvio del sistema o al riavvio di X, prova con la '&' finale:
 
  /home/nome_utente/conky.sh &
 
