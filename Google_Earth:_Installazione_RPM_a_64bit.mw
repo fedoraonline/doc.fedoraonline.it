@@ -9,10 +9,9 @@ Il pacchetto obbligatrio per Google Earth è:
 
  # yum install redhat-lsb.i686
 
-Dopodichè:<br>
-'''! SOLO per chi avesse installato il driver Nvidia proprietario''', bisogna aggiungere:
-
- # yum install gtk2.i686 mesa-libGL.i686 libSM.i686
+Dopodichè:
+{{Warning|'''SOLO per chi avesse installato il driver Nvidia proprietario''', bisogna aggiungere:
+  # yum install gtk2.i686 mesa-libGL.i686 libSM.i686}}
 
 Installati questi pacchetti puoi installare [http://www.google.co.uk/intl/en_uk/earth/download/ge/agree.html Google Earth]. Potrai scegliere se installare la versione a 32 o a 64 bit, e una volta scaricato il file lo devi installare, spostandoti nella cartella in cui si trova, con:
 
