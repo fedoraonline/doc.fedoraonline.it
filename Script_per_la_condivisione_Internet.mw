@@ -23,7 +23,7 @@ Il client ed il gateway devono avere ciascuno un proprio indirizzo IP nella rete
 Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Share), e' il seguente:
 
  #!/bin/bash
-
+ 
  #*****************************************************************************
  # Internet Connection Share utility
  #*****************************************************************************
@@ -36,25 +36,25 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
  #
  # You must be root to run this script.
  #*****************************************************************************
-
-
+ 
+ 
  # Internet interface
  INET_IFACE="ppp0"
-
+ 
  # Local network and interface
  LAN_IFACE="eth0"
  LAN_IP="192.168.123.1"
  LAN_NET="192.168.123.0/24"
  LAN_NETMASK="255.255.255.0"
  LAN_DHCP_RANGE="192.168.123.2,192.168.123.254"
-
+ 
  # The return value of this script
  RETVAL=0
-
+ 
  exit_if_fail() {
      [ $1 -eq 0 ] || exit $1
  }
-
+ 
  lan_iface_up() {
      print_verbose "Bringing down local interface $LAN_IFACE..."
      ifconfig $LAN_IFACE down
@@ -64,19 +64,19 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
      exit_if_fail $?
      [ -n "$OPT_VERBOSE" ] && ifconfig $LAN_IFACE
  }
-
+ 
  lan_iface_down() {
      print_verbose "Bringing down local interface $LAN_IFACE..."
      ifconfig $LAN_IFACE down
  }
-
+ 
  dnsmasq_start() {
      print_verbose "Starting dnsmasq service..."
      dnsmasq --interface=$LAN_IFACE \
          --dhcp-range=$LAN_IFACE,$LAN_DHCP_RANGE,$LAN_NETMASK,12h
      exit_if_fail $?
  }
-
+ 
  dnsmasq_status() {
    DNSMASQ_PID=`pidof dnsmasq`
    if [ -n "$DNSMASQ_PID" ]; then
@@ -85,22 +85,22 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
      echo "dnsmasq is not running"
    fi
  }
-
+ 
  dnsmasq_stop() {
      print_verbose "Shutting down dnsmasq service..."
      kill `cat /var/run/dnsmasq.pid`
  }
-
+ 
  iptables_setup() {
      print_verbose "Setting iptables rules... "
-
+ 
      # INPUT Chain
      # Accept broadcast from local interface (useful for DHCP)
      iptables -I INPUT -p ALL -i $LAN_IFACE -j ACCEPT \
          -m pkttype --pkt-type broadcast 
      # Rules for the private network (accessing gateway system itself)
      iptables -I INPUT -p ALL -i $LAN_IFACE -s $LAN_NET -d $LAN_IP -j ACCEPT
-
+ 
      # FORWARD Chain
      # Route from local LAN to local LAN
      iptables -I FORWARD -p ALL -o $LAN_IFACE -s $LAN_NET -d $LAN_NET -j ACCEPT
@@ -109,23 +109,23 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
      # Deal with responses from the internet
      iptables -I FORWARD -i $INET_IFACE -o $LAN_IFACE -d $LAN_NET -j ACCEPT \
          -m state --state ESTABLISHED,RELATED 
-
+ 
      # POSTROUTING chain
      iptables -A POSTROUTING -t nat -o $INET_IFACE -j MASQUERADE
-
+ 
      [ -n "$OPT_VERBOSE" ] && iptables_status
  }
-
+ 
  iptables_restore() {
      print_verbose "Restore iptables rules... "
      service iptables restart
      [ -n "$OPT_VERBOSE" ] && iptables_status
  }
-
+ 
  iptables_status() {
      iptables -n -L -v
  }
-
+ 
  ipv4_forward_set() {
    if [ -n "$OPT_VERBOSE" ]; then
       echo -n "Setting kernel parameter: "
@@ -134,17 +134,17 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
      sysctl -n -q -w net.ipv4.ip_forward=$1
    fi
  }
-
+ 
  print_usage() {
    echo \
  "Usage: icshare [-i,--inet-iface interface] [-l,--lan-iface interface] [-v,--verbose] \
  {help|start|stop|status}
-
+ 
  Options:
    -i,--inet-iface    Interface connected to Internet (default ppp0)
    -l,--lan-iface    Local network interface (default eth0)
    -v,--verbose        Print additional output messages
-
+ 
  Commands:
    help        Print this help message
    start        Start the connection sharing
@@ -153,15 +153,15 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
  "
    exit $RETVAL
  }
-
+ 
  print_verbose() {
    [ -n "$OPT_VERBOSE" ] && echo $*
  }
-
+ 
  # Parse options
  args=`getopt -u -o i:l:v -l inet-iface:,lan-iface:,verbose -- $*`
  RETVAL=$? && [ $RETVAL -ne 0 ] && print_usage
-
+ 
  # Sets positional parameters to command?line arguments
  set -- $args
  for arg in $*; do
@@ -179,9 +179,9 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
    esac
    shift
  done
-
+ 
  [ -z "$1" ] && print_usage    # No command found
-
+ 
  case $1 in
    start)
      lan_iface_up
@@ -207,7 +207,7 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
      print_usage
      ;;
  esac
-
+ 
  exit $RETVAL
 
 == Utilizzo==
