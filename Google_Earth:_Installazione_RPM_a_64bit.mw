@@ -1,27 +1,47 @@
-{{InCorso|autore=AndreaMalfatti}}
-
-__TOC__
-
 == Introduzione ==
 
+
+
 Google Earth, famoso programma in grado di virtualizzare immagini del nostro pianeta, da tempo è disponibile a 32 bit, mentre per PC a 64bit fino ad ora esisteva soltanto la compilazione dai file sorgente.<br>
+
 Ora è disponibile un RPM a 64bit, anche se per un corretto funzionamento l'installazione necessità comunque di alcuni pacchetti a 32bit.
 
-==Installazione dipendenze==
 
-Il pacchetto obbligatorio per Google Earth è:
 
- # dnf install redhat-lsb.i686
+==Installazione==
 
-==Installazione pacchetto==
-{{Warning|'''SOLO per chi avesse installato il [[Installazione_Driver_NVidia|driver Nvidia]] proprietario''', bisogna aggiungere:
-  # dnf install gtk2.i686 mesa-libGL.i686 libSM.i686}}
 
-Installati i pacchetti è possibile installare [http://www.google.it/intl/it/earth/download/ge/agree.html Google Earth].<br/>Occorre scegliere tra la versione a 32 bit e quella 64 bit e, una volta scaricato il file è possibile installarlo, spostandosi nella cartella in cui si trova, con:
 
- # dnf install /percorso/al/file/google-earth-stable_current_*.rpm
+Il pacchetto obbligatrio per Google Earth è:
 
-Peccato che Google non abbia pensato di dotare il pacchetto RPM delle informazioni necessarie per risolvere in automatico eventuali dipendenze mancanti.<br>
-A questo proposito, visto che sono stati installati i pacchetti in precedenza, l'installazione dovrebbe avvenire con successo e l'uso di Google Earth compenserà gli sforzi fatti con una nuova veste grafica.
+
+
+ # yum install redhat-lsb.i686
+
+
+
+Dopodichè:
+
+'''! SOLO per chi avesse installato il driver Nvidia proprietario''', bisogna aggiungere:
+
+
+
+ # yum install gtk2.i686 mesa-libGL.i686 libSM.i686
+
+
+
+Installati questi pacchetti puoi installare [http://www.google.co.uk/intl/en_uk/earth/download/ge/agree.html Google Earth]. Potrai scegliere se installare la versione a 32 o a 64 bit, e una volta scaricato il file lo devi installare, spostandoti nella cartella in cui si trova, con:
+
+
+
+ # yum localinstall google-earth-stable_current_*.rpm
+
+
+
+Peccato che Google non ha pensato di dotare il pacchetto RPM delle informazioni necessarie per risolvere in automatico eventuali dipendenze mancanti.<br>
+
+Visto che hai installato i pacchetti prima, l'installazione dovrebbe avvenire con successo e potrai usare Google Earth, che vi compenserà per gli sforzi fatti con una nuova veste grafica.
+
+
 
 [[Categoria:Internet]]
