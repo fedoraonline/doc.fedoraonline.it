@@ -220,12 +220,12 @@ Lo script va eseguito sul gateway come utente root, e ha un piccolo help:
 
  # icshare help
  Usage: icshare [-i,--inet-iface interface] [-l,--lan-iface interface] [-v,--verbose] {help|start|stop|status}
-
+ 
  Options:
    -i,--inet-iface    Interface connected to Internet (default ppp0)
    -l,--lan-iface    Local network interface (default eth0)
    -v,--verbose        Print additional output messages
-
+ 
  Commands:
    help        Print this help message
    start        Start the connection sharing
