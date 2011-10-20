@@ -34,7 +34,7 @@ Il grub ha diversi stage di caricamente che permettono l'avvio del sistema non a
 
 stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48</pre>
 
-==STAGE 1.5===
+==STAGE 1.5==
 Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo del grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5. Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
 
 [code][root@cellopc-mini grub]# ls -l *stage1_5
