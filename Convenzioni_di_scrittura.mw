@@ -95,6 +95,10 @@ Nella [[Convenzioni_di_scrittura#Toolbar | toolbar]] hai già visto come si form
 |align="center" |linea orizzontale
 |
 ----
+|-
+|align="center" |<nowiki>[1 spazio vuoto ad inizio riga]</nowiki>
+|align="center" |stile per i comandi e gli output da terminale
+| # cat /boot/grub/grub.conf (comando dato da root)<br /> $ ls -al (comando dato da utente)
 |}
 
 ==Collegamenti==
