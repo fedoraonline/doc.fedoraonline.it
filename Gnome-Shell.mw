@@ -41,7 +41,7 @@ Per chi a questo punto vuole fare una pausa e nel menu utente, cliccando sul pro
 Invece c'è, premendo il tasto <ALT> la voce ''Sospendi'' cambia in ''Spegni''. Cliccando sopra con il mouse appare la finestra di spegnimento/riavvio del PC. Vedrai più avanti che esiste un'estensione che rende definitiva questa opzione.
 
 ===Servizi===
-Benchè non dipende direttamente con Gnome, un'altra novità inserita su Fedora con la versione 15 è il nuovo gestore di servizi '''systemd''', che di fatto ha sostituito ''system-config-services'', benchè quest'ultimo attualmente è ancora disponibile. Di conseguenza cambia anche il modo di gestione dei servizi stessi. La sintassi è:<br>
+Benchè non dipende direttamente con Gnome, un'altra novità inserita su Fedora con la versione 15 è il nuovo gestore di servizi '''systemd''', che di fatto ha sostituito ''system-config-services'', benchè quest'ultimo attualmente è ancora disponibile. Di conseguenza cambia anche il modo di gestione dei servizi stessi. La sintassi è:
 
  # systemctl start/stop/status/enable/disable nome_servizio.service 
 
