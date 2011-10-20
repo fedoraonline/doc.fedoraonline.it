@@ -1,7 +1,6 @@
 '''INTRODUZIONE'''<br />
-__TOC__
 All'avvio dei sistemi viene eseguita una serie di step per arrivare al caricamento del sistema operativo (Linux o Windows) ed in questa pagina verranno descritti a grandi linee tutti i passaggi svolti nella boot sequence di un sistema Linux.
-
+__TOC__
 ==BIOS e POST==
 Il BIOS è il primo stadio del processo di avvio che viene avviato dall'accensione. Il BIOS, che risiede nella ROM è eseguito da un particolare indirizzo di memoria al quale è inizializzato, dall'accensione, il contatore di programma della CPU. In questa fase viene effettuata l'inizializzazione base dell'hardware POST (power on self test) e passa il controllo del sistema allo stadio successivo fornito dall'utente. Tipicamente vengono caricati in memoria i primi pochi settori del primo dispositivo selezionato trovato (disco fisso, dischetto floppy, CD-ROM, ...) e viene eseguito questo codice iniziale che può essere una qualsiasi tra le cose seguenti.
 * Il codice del bootloader
@@ -16,14 +15,26 @@ In Linux in precedenza veniva utilizzato il Lilo (Linux Loader) che aveva alcune
 * non può eseguire il boot tramite rete
 * non ha un'interfaccia interattiva con cui interagire
 * deve essere reinstallato da capo, ogni volta che viene modificato il file di configurazione.
-Negli anni successivi il grub di Linux, è diventato il bootloader più usato grazie alla sua portabilità verso altri sistemi, ed il Lilo è stato deprecato. Il Grub permette di avere diverse caratteristiche tra cui:<br /><br />    * permette di caricare infinite selezioni differenti<br />    * ha un'interfaccia interattiva funzionale con cui interagire.<br />    * permette il boot da rete, ma anche da altri device come cd-rom, device USB, LVM o ISCSI.<br />    * permette di caricare più sistemi operativi differenti. <br /><br />La sua funzionalità più utile è quella di poter caricare non solo sistemi operativi proprietari, ma anche altri sistemi come Windows. Infatti questo bootloader è stato pensato per diversi sistemi operativi e non solo per Linux.<br />Le device viste dal grub non vengono nominare come in Linux, con la nomenclatura "sd..." ma utilizzano una particolare nomenclatura che può cambiare da sistema a sistema, infatti i nomi vengono associati in base alle informazioni passate dal bios. Non è detto quindi che una device denominata "sda" dal sistema operativo, sia la prima unità che il grub nomina come "hd0". Ogni disco viene nominato "hd..", e il numero parte da zero. il secondo valore passato indica la partizione scritta sul disco. E' possibile passare anche una partizione estesa del disco stesso. Per esempio la prima partizione di un disco è (hd0,0) mentre la prima partizione estesa sarà (hd0,4).<br />Il grub non fa distinzione tra device IDE o SCSI ed utilizza delle nomenclatura anche per floppy (con la sigla "fd") e per cdrom (con la sigla "cd").<br /><strong><span style="font-size: medium;">
-STAGE 1</span></strong><br />
+Negli anni successivi il grub di Linux, è diventato il bootloader più usato grazie alla sua portabilità verso altri sistemi, ed il Lilo è stato deprecato.
+Il Grub permette di avere diverse caratteristiche tra cui:
+* permette di caricare infinite selezioni differenti
+* ha un'interfaccia interattiva funzionale con cui interagire.
+* permette il boot da rete, ma anche da altri device come cd-rom, device USB, LVM o ISCSI.
+* permette di caricare più sistemi operativi differenti. 
+La sua funzionalità più utile è quella di poter caricare non solo sistemi operativi proprietari, ma anche altri sistemi come Windows. 
+Infatti questo bootloader è stato pensato per diversi sistemi operativi e non solo per Linux.
+Le device viste dal grub non vengono nominate come in Linux, con la nomenclatura "sd..." ma utilizzano una particolare nomenclatura che può cambiare da sistema a sistema, infatti i nomi vengono associati in base alle informazioni passate dal bios. 
+Non è detto quindi che una device denominata "sda" dal sistema operativo, sia la prima unità che il grub nomina come "hd0". Ogni disco viene nominato "hd..", e il numero parte da zero mentre il secondo valore passato indica la partizione scritta sul disco. 
+E' possibile passare anche una partizione estesa del disco stesso. Per esempio la prima partizione di un disco è (hd0,0) mentre la prima partizione estesa sarà (hd0,4).
+Il grub non fa distinzione tra device IDE o SCSI ed utilizza delle nomenclatura anche per floppy (con la sigla "fd") e per cdrom (con la sigla "cd").
+==STAGE 1==
 Il grub ha diversi stage di caricamente che permettono l'avvio del sistema non appena il server viene avviato. Quando il BIOS esegue il posto va a leggere sul disco fisso il primo settore chiamato MBR (Master Boot Record), che contiene la tabella delle partizioni nei primi 63 byte, mentre i successivi 446 bytes vengono usati per caricare il primo stage del grub. In questo stage sono contenute le primi frazioni di codice da eseguire per il caricamento del kernel, ma non avendo lo spazio per contenere tutte le informazioni, viene richiamatao lo stage 1.5
 
-[code][root@cellopc-mini grub]# file stage1
+<pre>[root@cellopc-mini grub]# file stage1
 
-stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48[/code]
-<strong><span style="font-size: medium;">STAGE 1.5</span></strong><br />
+stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48</pre>
+
+==STAGE 1.5===
 Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo del grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5. Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
 
 [code][root@cellopc-mini grub]# ls -l *stage1_5
