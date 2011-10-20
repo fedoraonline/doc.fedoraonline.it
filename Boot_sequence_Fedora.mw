@@ -120,8 +120,8 @@ La struttura di initrd è la seguente:
 
  [root@cw-spmi-mgm01 test]# file initrd-2.6.18-92.el5.img
  
- initrd-2.6.18-92.el5.img: gzip compressed data, from Unix, last modified: Sat Feb  6 10:24:19 2010, max compression[/code]
- [code][root@cw-spmi-mgm01 test]# gunzip -c /boot/initrd-2.6.18-92.el5.img | cpio -ivmdq
+ initrd-2.6.18-92.el5.img: gzip compressed data, from Unix, last modified: Sat Feb  6 10:24:19 2010, max compression
+ [root@cw-spmi-mgm01 test]# gunzip -c /boot/initrd-2.6.18-92.el5.img | cpio -ivmdq
  
  [root@cw-spmi-mgm01 test]# tree
  
@@ -195,6 +195,7 @@ La struttura di initramfs è la seguente:
 
 Il tree lo potete verificare direttamente sul vostro PC, qui sarebbe troppo esteso da pubblicare.
 Dopo il caricamento del kernel e dell'initrd/initramfs in memoria verrà lanciato lo script "init" che eseguirà il mount di sysfs, tmpfs, proc e devpts con il caricamento di alcuni moduli per l'attivazione del kernel ed quando avrà montato la root verrà eseguito uno switch tra le due root directory e verrà passato il controllo di tutto al processo /sbin/init (che avrà pid 1).
+
 ==INIT SCRIPTS==
 Il processo "/sbin/init" avrà pid pari ad 1 ed è da considerarsi il padre di tutti i processi che vengono lanciati dal sistema.
 
