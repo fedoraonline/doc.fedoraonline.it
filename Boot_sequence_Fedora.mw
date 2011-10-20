@@ -35,34 +35,26 @@ Il grub ha diversi stage di caricamente che permettono l'avvio del sistema non a
  stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48
 
 ==STAGE 1.5==
-Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo del grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5. Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
+Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo del grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5. 
+Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. 
+Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
+ [root@cellopc-mini grub]# ls -l *stage1_5
 
-[code][root@cellopc-mini grub]# ls -l *stage1_5
+ -rw-r--r--. 1 root root 13056 Nov 19 09:38 e2fs_stage1_5
+ -rw-r--r--. 1 root root 12416 Nov 19 09:38 fat_stage1_5
+ -rw-r--r--. 1 root root 11648 Nov 19 09:38 ffs_stage1_5
+ -rw-r--r--. 1 root root 11672 Nov 19 09:38 iso9660_stage1_5
+ -rw-r--r--. 1 root root 13104 Nov 19 09:38 jfs_stage1_5
+ -rw-r--r--. 1 root root 11824 Nov 19 09:38 minix_stage1_5
+ -rw-r--r--. 1 root root 14072 Nov 19 09:38 reiserfs_stage1_5
+ -rw-r--r--. 1 root root 11924 Nov 19 09:38 ufs2_stage1_5
+ -rw-r--r--. 1 root root 11280 Nov 19 09:38 vstafs_stage1_5
+ -rw-r--r--. 1 root root 13576 Nov 19 09:38 xfs_stage1_5
 
--rw-r--r--. 1 root root 13056 Nov 19 09:38 e2fs_stage1_5
+ [root@cellopc-mini grub]# file e2fs_stage1_5
 
--rw-r--r--. 1 root root 12416 Nov 19 09:38 fat_stage1_5
-
--rw-r--r--. 1 root root 11648 Nov 19 09:38 ffs_stage1_5
-
--rw-r--r--. 1 root root 11672 Nov 19 09:38 iso9660_stage1_5
-
--rw-r--r--. 1 root root 13104 Nov 19 09:38 jfs_stage1_5
-
--rw-r--r--. 1 root root 11824 Nov 19 09:38 minix_stage1_5
-
--rw-r--r--. 1 root root 14072 Nov 19 09:38 reiserfs_stage1_5
-
--rw-r--r--. 1 root root 11924 Nov 19 09:38 ufs2_stage1_5
-
--rw-r--r--. 1 root root 11280 Nov 19 09:38 vstafs_stage1_5
-
--rw-r--r--. 1 root root 13576 Nov 19 09:38 xfs_stage1_5
-
-[root@cellopc-mini grub]# file e2fs_stage1_5
-
-e2fs_stage1_5: GRand Unified Bootloader stage1_5 version 3.2, identifier 0x2, GRUB version 0.97, configuration file /boot/grub/stage2[/code]
-<strong><span style="font-size: medium;">STAGE 2</span></strong><br />
+ e2fs_stage1_5: GRand Unified Bootloader stage1_5 version 3.2, identifier 0x2, GRUB version 0.97, configuration file /boot/grub/stage2
+==STAGE 2==
 Lo stage 2 risiede in una qualsiasi parte del disco, solitamente nella partizione /boot, grande 500 MB. In questa partizione sono contenute tutte le informazioni, i kernel usati e soprattutto la lista dei kernel da utilizzare (file /boot/grub/menu.lst).
 
 [code][root@cellopc-mini grub]# file stage2 
