@@ -69,7 +69,7 @@ Il risultato è una pagina avente un indice composto dalle varie intestazioni do
 {{Warning|Qualsiasi frase all'interno dei simboli <nowiki>= (i segni "uguale") </nowiki>viene considerata una intestazione e automaticamente viene inserita nell'indice!}}
 
 ==Formattazione==
-Nella [[Convenzioni_di_scrittura#Toolbar | toolbar]] hai già visto come si formatta in grassetto, in corsivo, in entrambi oppure con nessuna formattazione perciò crediamo che tu abbia tutti gli strumenti per poter procedere alla scrittura. Per essere solo un po' più precisi e se proprio non vuoi ricorrere al tasto della toolbar, devi sapere che esso non fa altro che aggiungere degli apici (<nowiki>'</nowiki>) all'inizio ed alla fine della parola o frase che vuoi formattare (tranne nel caso di nessuna formattazione dove viene preposto il comando di markup <nowiki><nowiki></nowiki> che viene poi chiuso dopo la parola o frase con il classico <nowiki></nowiki></nowiki> e nel caso della linea orizzontale per la quale il markup prevede i quattro trattini in sequenza <nowiki>----</nowiki>).
+Nella [[Convenzioni_di_scrittura#Toolbar | toolbar]] hai già visto come si formatta in grassetto, in corsivo, in entrambi oppure con nessuna formattazione perciò crediamo che tu abbia tutti gli strumenti per poter procedere alla scrittura. Per essere solo un po' più precisi e se proprio non vuoi ricorrere al tasto della toolbar, devi sapere che esso non fa altro che aggiungere degli apici (<nowiki>'</nowiki>) all'inizio ed alla fine della parola o frase che vuoi formattare (tranne nel caso di nessuna formattazione dove viene preposto il comando di markup <nowiki><nowiki></nowiki> che viene poi chiuso dopo la parola o frase con il classico <nowiki></nowiki></nowiki> e nel caso della linea orizzontale per la quale il markup prevede i quattro trattini in sequenza <nowiki>----</nowiki>). Nella tabella abbiamo aggiunto un markup relativo alla formattazione dei comandi e degli output da terminale quando devi mostrarne i risultati:
 {| align="center" border="1"
 !markup
 !sorgente
@@ -96,8 +96,8 @@ Nella [[Convenzioni_di_scrittura#Toolbar | toolbar]] hai già visto come si form
 |
 ----
 |-
-|align="center" |<nowiki>[1 spazio vuoto ad inizio riga]</nowiki>
-|align="center" |stile per i comandi e gli output da terminale
+|align="center" |<nowiki>uno spazio vuoto ad inizio riga</nowiki>
+|align="center" |<nowiki>[barra spaziatrice]</nowiki>
 | <pre># cat /boot/grub/grub.conf (comando dato da root)
 $ ls -al (comando dato da utente)</pre>
 |}
