@@ -52,14 +52,14 @@ Nel filesystem che verrà montato saranno contenute le immagini del kernel ed in
  -rw-r--r--. 1 root root 13576 Nov 19 09:38 xfs_stage1_5
  
  [root@cellopc-mini grub]# file e2fs_stage1_5
-
+ 
  e2fs_stage1_5: GRand Unified Bootloader stage1_5 version 3.2, identifier 0x2, GRUB version 0.97, configuration file /boot/grub/stage2
 ==STAGE 2==
 Lo stage 2 risiede in una qualsiasi parte del disco, solitamente nella partizione /boot, grande 500 MB. 
 In questa partizione sono contenute tutte le informazioni, i kernel usati e soprattutto la lista dei kernel da utilizzare (file /boot/grub/menu.lst).
 
  [code][root@cellopc-mini grub]# file stage2 
- 
+  
  stage2: GRand Unified Bootloader stage2 version 3.2, installed partition 65535,identifier 0x0,GRUB version 0.97,configuration file (hd0,0)/grub/grub.conf[/code]
 ==FILE MENU.LST==
 Il file menù.lst contiene diverse informazioni principali per il caricamento dei kernel.
@@ -120,7 +120,7 @@ La struttura di initrd è la seguente:
  [code][root@cw-spmi-mgm01 test]# gunzip -c /boot/initrd-2.6.18-92.el5.img | cpio -ivmdq
  
  [root@cw-spmi-mgm01 test]# tree
-
+ 
  .
  |-- bin
  |   |-- dmraid
@@ -231,4 +231,4 @@ Il processo init non farà altro che leggere nel file /etc/inittab il runlevel c
 
 Al termine del lancio di tutti gli script il sistema sarà up and running.
 
-[[Categoria:Scrittura in corso]]
+[[Categoria:Sistema]]
