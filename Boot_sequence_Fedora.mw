@@ -301,3 +301,4 @@ lrwxrwxrwx. 1 root root 11 Oct 22 20:18 /etc/rc5.d/S99rc-local -> ../rc.local[/c
 Al termine del lancio di tutti gli script il sistema sarà up and running.
 
 [[Categoria:Scrittura in corso]]
+{{AggiungiArticolo | articolo=Boot sequence Fedora|autore=GabrieleTrombini|stato=In corso}
