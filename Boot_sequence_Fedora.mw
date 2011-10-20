@@ -62,7 +62,9 @@ In questa partizione sono contenute tutte le informazioni, i kernel usati e sopr
 
  [code][root@cellopc-mini grub]# file stage2 
   
- stage2: GRand Unified Bootloader stage2 version 3.2, installed partition 65535,identifier 0x0,GRUB version 0.97,configuration file (hd0,0)/grub/grub.conf[/code]
+ stage2: GRand Unified Bootloader stage2 version 3.2, installed partition 65535,identifier 0x0,GRUB version 0.97,
+                                                                       configuration file (hd0,0)/grub/grub.conf
+
 ==FILE MENU.LST==
 Il file menù.lst contiene diverse informazioni principali per il caricamento dei kernel.
 
