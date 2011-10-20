@@ -191,7 +191,8 @@ La struttura di initramfs è la seguente:
 
  [root@cellopc-mini boot]# file initramfs-2.6.35.6-48.fc14.i686.img
  
- initramfs-2.6.35.6-48.fc14.i686.img: gzip compressed data, from Unix, last modified: Mon Nov 22 18:45:23 2010, max compression[/code]
+ initramfs-2.6.35.6-48.fc14.i686.img: gzip compressed data, from Unix, last modified: Mon Nov 22 18:45:23 2010, 
+                                                                                                max compression
 
 Il tree lo potete verificare direttamente sul vostro PC, qui sarebbe troppo esteso da pubblicare.
 Dopo il caricamento del kernel e dell'initrd/initramfs in memoria verrà lanciato lo script "init" che eseguirà il mount di sysfs, tmpfs, proc e devpts con il caricamento di alcuni moduli per l'attivazione del kernel ed quando avrà montato la root verrà eseguito uno switch tra le due root directory e verrà passato il controllo di tutto al processo /sbin/init (che avrà pid 1).
