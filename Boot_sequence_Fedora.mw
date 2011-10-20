@@ -30,9 +30,9 @@ Il grub non fa distinzione tra device IDE o SCSI ed utilizza delle nomenclatura 
 ==STAGE 1==
 Il grub ha diversi stage di caricamente che permettono l'avvio del sistema non appena il server viene avviato. Quando il BIOS esegue il posto va a leggere sul disco fisso il primo settore chiamato MBR (Master Boot Record), che contiene la tabella delle partizioni nei primi 63 byte, mentre i successivi 446 bytes vengono usati per caricare il primo stage del grub. In questo stage sono contenute le primi frazioni di codice da eseguire per il caricamento del kernel, ma non avendo lo spazio per contenere tutte le informazioni, viene richiamatao lo stage 1.5
 
-<pre>[root@cellopc-mini grub]# file stage1
+ [root@cellopc-mini grub]# file stage1
 
-stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48</pre>
+ stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48
 
 ==STAGE 1.5==
 Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo del grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5. Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
