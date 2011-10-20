@@ -40,10 +40,10 @@ Per facilitarne la ricerca tutti i nomi dei pacchetti cominciano con ~.
 * Il TAG '''RPMTAG_PROVIDENAME''' contiene l'elenco degli oggetti forniti dal pacchetto;
 * Il TAG '''RPMTAG_REQUIRENAME''' contiene l'elenco degli oggetti necessari al pacchetto per poter essere installato;
 * I TAG '''RPMTAG_CHANGELOGTIME, RPMTAG_CHANGELOGNAME''' e '''RPMTAG_CHANGELOGTEXT''' contengono gli elenchi della data/ora, nome dell'autore e descrizione dei cambiamenti apportati nel tempo al pacchetto;
-* Il TAG RPMTAG_BASENAMES è importantissimo e contiene l'elenco completo dei file e/o directory contenuti nel pacchetto;
-* Il TAG RPMTAG_OPTFLAGS contiene le opzioni di compilazione del pacchetto;
-* I TAG RPMTAG_PREIN, RPMTAG_POSTIN, RPMTAG_PREUN e RPMTAG_POSTUN contengono gli script eseguiti nei vari momenti dell'installazione o rimozione del pacchetto;
-* I TAG RPMTAG_MOREFILE, RPMTAG_MORESIZE e RPMTAG_MORETIME sono privati e contengono il nome completo, la dimensione in byte e la data/ora del pacchetto.
+* Il TAG '''RPMTAG_BASENAMES''' è importantissimo e contiene l'elenco completo dei file e/o directory contenuti nel pacchetto;
+* Il TAG '''RPMTAG_OPTFLAGS''' contiene le opzioni di compilazione del pacchetto;
+* I TAG '''RPMTAG_PREIN, RPMTAG_POSTIN, RPMTAG_PREUN''' e '''RPMTAG_POSTUN''' contengono gli script eseguiti nei vari momenti dell'installazione o rimozione del pacchetto;
+* I TAG '''RPMTAG_MOREFILE, RPMTAG_MORESIZE''' e '''RPMTAG_MORETIME''' sono privati e contengono il nome completo, la dimensione in byte e la data/ora del pacchetto.
 
 Come già detto ci sono moltissimi altri tag di importanza "minore". I tag appena elencati, a parte gli ultimi, sono presenti in tutti i pacchetti, gli altri sono presenti solo quando necessario.<br>
 Ogni sezione si conclude con la riga:
@@ -51,3 +51,8 @@ Ogni sezione si conclude con la riga:
 '''------------------------------ END PACKAGE ------------------------------------'''
 
 == Utilizzo ==
+
+E' difficile dire in due parole come usare questo file. In genere si possono fare ricerche a parola chiave, come il nome di un file, del pacchetto o qualsiasi altro elemento che conosci e che può tornarti utile per identificare quello che cerchi.<br>
+Altre volte invece può capitare di scorrere il file alla ricerca di qualche pepita relativa a programmi che non si conoscono.
+
+Insomma, gli utilizzi sono tantissimi, basta solo scovarli.
