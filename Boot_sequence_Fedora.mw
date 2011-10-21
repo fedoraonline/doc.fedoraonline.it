@@ -60,7 +60,7 @@ Nel filesystem che verrà montato saranno contenute le immagini del kernel ed in
 Lo stage 2 risiede in una qualsiasi parte del disco, solitamente nella partizione /boot, grande 500 MB. 
 In questa partizione sono contenute tutte le informazioni, i kernel usati e soprattutto la lista dei kernel da utilizzare (file /boot/grub/menu.lst).
 
- [code][root@cellopc-mini grub]# file stage2 
+ [root@cellopc-mini grub]# file stage2 
   
  stage2: GRand Unified Bootloader stage2 version 3.2, installed partition 65535,identifier 0x0,GRUB version 0.97,
                                                                        configuration file (hd0,0)/grub/grub.conf
