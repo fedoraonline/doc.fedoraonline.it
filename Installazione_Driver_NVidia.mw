@@ -20,7 +20,7 @@ versioni di kernel e kernel-devel (o kernel-PAE-devel) "collìmino", cioè
 corrispondano perfettamente:
 <pre>$ rpm -qa|grep kernel</pre>
 e
-<pre>$ rpm -q kernel-devel</pre><
+<pre>$ rpm -q kernel-devel</pre>
 Mi raccomando di verificare che la versione di kernel che utilizzerete
 corrisponda alla versione del kernel-devel.
 In base al modello di videocard da voi posseduta che potrete evidenziare con il
@@ -61,8 +61,8 @@ Inserite, quindi, nel "file section" quanto necessario:
 
  Section "Files"
      FontPath        "/usr/share/fonts/default/Type1"
-     '''ModulePath   "/usr/lib/xorg/modules/extensions/nvidia"
-     ModulePath   "/usr/lib/xorg/modules"'''
+     '''ModulePath   "/usr/lib/xorg/modules/extensions/nvidia"'''
+     '''ModulePath   "/usr/lib/xorg/modules"'''
  EndSection
 Salvate il vostro xorg.conf e riavviate il server X con Ctrl+Alt+Backspace.
 Verificate ora se ora tutto è andato come volevate:
