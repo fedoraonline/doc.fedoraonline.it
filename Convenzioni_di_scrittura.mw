@@ -197,7 +197,7 @@ Innanzitutto la tabella inizia sempre con un <nowiki>{|</nowiki> all'inizio di u
 Se volessi mettere dei titoli alla tabella, è necessario che tu inserisca il <nowiki>!</nowiki>, uno per ogni colonna della tabella e sempre seguendo la logica dell'andare a capo ad ogni markup.
 Devi poi segnalare all'interprete che vuoi iniziare una riga e ciò si fa con <nowiki>|-</nowiki> (ricordati che anch'esso deve essere su una nuova riga.
 Infine devi scrivereil contenuto delle celle della tabella e per questo, a capo, devi usare <nowiki>|</nowiki>, per ogni contenuto sulla medesima riga. Se poi devi cominciare una nuova riga riprendi <nowiki>|-</nowiki> e per ogni contenuto <nowiki>|</nowiki>. Devi proseguire così fino alla fine della tabella che dovrà poi essere chiusa con <nowiki>|}</nowiki>
-Facendo l'esempio delle convenzioni che ho usato per questo articolo, la tabella si presenta così:
+Facendo l'esempio delle convenzioni usate per questo articolo, la tabella si presenta così:
 {|align="center" border="1"
 |-
 !descrizione
@@ -235,7 +235,7 @@ Facendo l'esempio delle convenzioni che ho usato per questo articolo, la tabella
 |riga 2 colonna 3
 |}
 |}
-Diciamo pure che questa è l'unica tipologia di tabella da poter utilizzare anche se, in giro per la rete, puoi trovare diversi esempi per qualsiasi tipo di formato, utilizzando anche attributi html o convenzioni css. L'unico attributo di cui potresti aver bisogno nella redazione di documentazione su FedoraOnLine, forse, è "colspan" per unire una o più colonne e "align" per impostare l'allineamento:
+Diciamo pure che questa è l'unica tipologia di tabella da poter utilizzare, anche se in giro per la rete puoi trovare diversi esempi per qualsiasi tipo di formato, utilizzando anche attributi html o convenzioni css. L'unico attributo di cui potresti aver bisogno nella redazione di documentazione su Fedora OnLine, è "colspan" per unire una o più colonne e "align" per impostarne l'allineamento:
 {|align="center" border="1"
 |-
 !descrizione
