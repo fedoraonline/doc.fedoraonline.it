@@ -54,3 +54,5 @@ root@cellopc-mini ~]# mount -t tmpfs -o remount,size=400m tmpfs /mnt/testfs/
 [root@cellopc-mini testfs]# df -k /mnt/testfs
 Filesystem           1K-blocks      Used Available Use% Mounted on
 tmpfs                   409600    204800    204800  50% /mnt/testfs</pre>
+
+[[Categoria:Sistema]]
