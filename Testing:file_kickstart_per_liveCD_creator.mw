@@ -35,7 +35,7 @@ _EOF_
 
 # generazione informazioni sui repositories
 
-yum $EXCLUDE repolist -v | grep "Id-Repo\|Repo-baseurl\|Repo-mirrors\|Repo-metalink:" | sed 's/Repo-metalink:/Repo-metalink\ :/' > $TMP
+yum $EXCLUDE repolist -v|grep "Id-Repo\|Repo-baseurl\|Repo-mirrors\|Repo-metalink:"|sed 's/Repo-metalink:/Repo-metalink\ :/' > $TMP
 REPOLINE=""
 exec < $TMP
 while read LINE
