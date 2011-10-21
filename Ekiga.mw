@@ -86,8 +86,8 @@ Porte firewall da aprire per chiamare con Ekiga:
 ===Dynamic navigation dei NAT router simmetrici (Trigger port)===
 Molti router NAT permettono la creazione di regole (rules) dedicate a delle porte specifiche. Aprendo le porte 3478/3479 UDP per il server STUN, i pacchetti in ricezione destinati alle stesse porte vengono invece redirezionati sulle porte (5000-5100 UDP) di proposito. Tecnicamente è molto simile al port forwarding.<br>
 In figura c'é un esempio (non tutti i router permettono di impostare le trigger port):
-[[Image:Ekiga_trigger.jpg|center|thumb|300px|Il Trigger porting sul router.]]
-'''Mai disabilitare il NAT del router!'''
+[[Image:Ekiga_trigger.jpg|center|thumb|350px|Il Trigger porting sul router.]]
+{{Warning|Mai disabilitare il NAT del router!}}
 
 ===Qualità audio===
 Tra le preferenze di Ekiga, nella scheda codec audio si trova una lista di codec attivabili ed "ordinabili"; è utile attivare il codec con un consumo di banda più (16 KHz) o meno larga (8 KHz) o ad una qualità alta (G722) o media (Speex) in base alla propria connessione Internet.<br>
@@ -96,7 +96,7 @@ Speex, PCMU, PCMA.
 
 ===Compatibilità con altri client===
 Ekiga non è compatibile con Skype!<br>
-Il proprio account Ekiga.net può essere usato anche con altri client. ]http://wiki.ekiga.org/index.php/Which_programs_work_with_Ekiga_%3F Qui] una lista.
+Il proprio account Ekiga.net può essere usato anche con altri client. [http://wiki.ekiga.org/index.php/Which_programs_work_with_Ekiga_%3F Qui] una lista.
 
 == Riferimenti ==
 * [http://www.fedora-os.org Fedora-os.org]
