@@ -21,7 +21,8 @@ EXCLUDE="--disablerepo=kde --disablerepo=kde-all --disablerepo=kde-redhat"
 
 # intestazione
 cat >$OUTPUT << _EOF_
-# kickstart file generato da script $0 by Rokko (aka "zod" su fedoraonline.it) <br />- versione 0.001-alpha del 9/12/2010 - (C)CopyLeft 2010
+# kickstart file generato da script $0 by Rokko (aka "zod" su fedoraonline.it)
+# - versione 0.001-alpha del 9/12/2010 - (C)CopyLeft 2010
 # lo script è MOLTO MOLTO MOLTO sperimentale ed è fornito "AS IS"
 # morale: se non funziona e/o fa danni sono solo CAVOLI vostri! non è responsabilità mia!!!! :-)
 
