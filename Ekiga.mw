@@ -8,7 +8,6 @@ Con questo articolo si vuole dare delle indicazioni esaurienti sull'installazion
 L'installazione dai repository Fedora risulta essere molto semplice; nei repo è presente la versione 3.2.7-4 (maggio 2011):
 
  $ su -c yum install ekiga alsa-lib alsa-utils sox inotify-tools zenity
-
 === Dai sorgenti ===
 Di seguito la compilazione dei sorgenti della [http://ftp.gnome.org/pub/gnome/sources/ekiga/3.2/ versione 3.2.6] effettuata su Fedora 14 32bit (su Fedora 15 ci sono alcuni problemi per la compilazione, probabilmente legati alla versione dei pacchetti OPAL / PTLIB, tuttavia la versione 3.3.0 nei repo Fedora 15 sembra funzionare).<br>
 Installazione tool e librerie di sviluppo:
@@ -40,11 +39,19 @@ oppure:
  collect2: ld returned 1 exit status
 
 Un aiuto per superare l'ostacolo è il seguente:
-* Nel primo caso bisogna editare il makefile nella directory /lib/engine/components/libnotify prima di avviare il comando $make: alla riga #372 aggiungi il flag $(GTK_CFLAGS).
-* Nel secondo caso bisogna editare il make file nella directory /lib prima di avviare il comando $make: alla riga #57 aggiungi -lX11 -lXext così:
+* Nel primo caso bisogna editare il makefile nella directory /lib/engine/components/libnotify prima di avviare il comando $make:
+alla riga #372 aggiungi il flag $(GTK_CFLAGS).
+* Nel secondo caso bisogna editare il make file nella directory /lib prima di avviare il comando $make:
+alla riga #57 aggiungi -lX11 -lXext così:
 
  $(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) -lX11 -lXext  \
 
 Una volta compilato, installalo:
 
  # make install
+
+==Setup==
+
+Per poter utilizzare Ekiga bisogna registrare un proprio account: [https://www.ekiga.net/?page=register registrazione]<br>
+Una volta ottenuto, configurao il tuo account su Ekiga come nell'immagine assicurati che il tuo indirizzo venga registrato.
+[[Image:Ekiga.png|right|thumb|150px|La schermata di Ekiga.]]
