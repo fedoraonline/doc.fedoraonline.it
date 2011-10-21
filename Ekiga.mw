@@ -58,3 +58,11 @@ Una volta ottenuto, configurao il tuo account su Ekiga come nell'immagine assicu
 [[Image:Ekiga_account.png|left|thumb|200px|Creazione dell'account.]]
 
 ==Test di chiamata==
+
+Ekiga.net predispone dei numeri di chiamata per testare la propria configurazione; ecco i principali:
+
+* ''sip:500@ekiga.net'' Echo test, supporta il video (H264, H263-1998, H261 only) e audio (PCMA only) - audio bassa qualità
+* ''sip:520@ekiga.net'' Call-me test (chiama, aggancia e richiama), supporta solo l'audio
+* ''sip:501@ekiga.net'' Public conference room Ekiga.net (deve essere abilitato il PCMA audio codec)
+* ''sip:501xxxx@ekiga.net'' Room pubbliche (x = 0 a 9)
+* ''sip:5011122@ekiga.net'' Conference room francese 1122
