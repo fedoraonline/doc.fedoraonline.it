@@ -1,8 +1,9 @@
 Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi. Di seguito verranno descritti  entrambi:
 ==Installazione dei drivers usando akmod-nvidia==
 Prima di tutto sono necessari i repository rpmfusion free e nonfree.
-Se ancora non li avete installati, procedete a dare questo comando per una installazione immediata (tale comando va scritto tutto di seguito):
-<pre>$ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm</pre>
+Se ancora non li avete installati, procedete a dare questo comando per una installazione immediata:
+<pre>$ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm'
+su -c 'rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'</pre>
 Per sicurezza date un:
 <pre># yum update rpmfusion*</pre>
 
