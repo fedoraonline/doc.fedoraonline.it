@@ -52,10 +52,10 @@ Vi è anche la possibilità di nascondere l'indice:
 |}
 
 ==Sezioni==
-Hai visto sino ad ora che l'indice è il riepilogo delle intestazioni che vengono create e formattate con il tasto  di intestazione di 2° livello, che non fa altro che applicare prima e dopo la parola o la frase selezionata un doppio segno dell'uguale (=), creando una ''intestazione di 2° livello''.
-Dovresti cercare di evitare l'utilizzo di una ''intestazione di 1°livello'', in quanto sarebbe uguale al titolo della pagina e creerebbe confusione.
-Il segno uguale (=) ha in effetti una doppia funzione, quella di fomattare il testo per renderlo più evidente e quella di fare inserire la parte di testo racchiusa tra essi nell'indice della pagina (vedi quanto detto in precedenza [[Convenzioni_di_scrittura#indice | nell'indice]])
-Tu considera solo 4 livelli per le sezioni e sottosezioni, contraddistinte da un numero differente di segni uguale:
+Sino ad ora hai visto che l'indice è il riepilogo delle intestazioni che vengono create e formattate con il tasto  di intestazione di 2° livello, che non fa altro che applicare, prima e dopo la parola o la frase selezionata, un doppio segno dell'uguale (=), creando una ''intestazione di 2° livello''.<br>
+Dovresti cercare di evitare l'utilizzo di una ''intestazione di 1°livello'', in quanto sarebbe uguale al titolo della pagina e creerebbe confusione.<br>
+Il segno uguale (=) ha in effetti una doppia funzione: quella di fomattare il testo per renderlo più evidente, e quella di inserire la parte di testo racchiusa tra essi nell'indice della pagina (vedi quanto detto in precedenza [[Convenzioni_di_scrittura#indice | nell'indice]])
+Considera al massimo 4 livelli per le sezioni e sottosezioni, contraddistinte da un numero differente di segni uguale:
 {| align="center" border="1"
 |align="center" | <tt><nowiki>==livello 1==</nowiki></tt><br />
 |-
@@ -65,7 +65,7 @@ Tu considera solo 4 livelli per le sezioni e sottosezioni, contraddistinte da un
 |-
 |align="center" | <tt><nowiki>=====livello 4=====</nowiki></tt>
 |}
-Il risultato è una pagina avente un indice composto dalle varie intestazioni dopo aver creato delle sezioni, delle sotto-sezioni e un ulteriore livello di sotto-sezioni. 
+Il risultato è una pagina avente un indice composto dai vari livelli di intestazione: le sezioni, le sotto-sezioni e un ulteriore livello di sotto-sezioni. 
 {{Warning|Qualsiasi frase all'interno dei simboli <nowiki>= (i segni "uguale") </nowiki>viene considerata una intestazione e automaticamente viene inserita nell'indice!}}
 
 ==Formattazione==
