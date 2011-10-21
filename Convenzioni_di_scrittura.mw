@@ -175,19 +175,19 @@ Hai già stabilito che utilizzando il pulsante della toolbar, ti viene richiesto
 |-
 |Immagine a grandezza normale con nome
 |<tt><nowiki>[[File:Esempio.jpg|nome_da_mostrare]]</nowiki></tt>
-|[[File:Logofol.png|Banner Fedora]]
+|[[File:Banner.jpg|Banner Fedora]]
 |-
 |Thumbnail con nome (posizione left, right o center)
 |<tt><nowiki>[[File:Esempio.jpg|thumb| center|nome_da_mostrare]]</nowiki></tt>
-|[[File:Logofol.png|thumb|center|100px|Banner Fedora]]
+|[[File:Banner.jpg|thumb|center|100px|Banner Fedora]]
 |-
 |Immagine ridotta con nome
 |<tt><nowiki>[[File:Esempio.jpg|50px|nome_da_mostrare]]</nowiki></tt>
-|[[File:Logofol.png|50px|Banner Fedora]]
+|[[File:Banner.jpg|50px|Banner Fedora]]
 |-
 |Thumbnail ridotta con nome
 |<tt><nowiki>[[File:Esempio.jpg|thumb|50px| nome_da_mostrare]]</nowiki></tt>
-|[[File:Logofol.png|thumb|50px|Banner Fedora]]
+|[[File:Banner.jpg|thumb|50px|Banner Fedora]]
 |- 
 |}
 
