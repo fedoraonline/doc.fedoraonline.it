@@ -8,7 +8,7 @@ Lo script in realta' e' in fase pre-alpha (e probabilmente MAI funzionera'), ma 
 {{Warning|Questa guida NON è testata e potrebbe contenere molti errori! Se non si è sicuri di quello che si fa il consiglio è quello di NON seguirla!}}
 
 
-<pre>!/bin/bash
+<pre><span style="font-size: 16px">!/bin/bash
 
 TMP=`mktemp`
 OUTPUT=mykickstart.ks
@@ -98,4 +98,4 @@ echo "%end" >>$OUTPUT
 echo -e "\nFine! Si puo' ora dare il comando:\n"
 echo -e "livecd-creator --config=$OUTPUT --fslabel=Fedora-Live --cache=/var/cache/live \n"
 echo -e "...e sperare che funzioni!\n"
-rm -f $TMP </pre>
+rm -f $TMP </span></pre>
