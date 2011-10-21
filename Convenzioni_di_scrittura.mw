@@ -315,7 +315,7 @@ Infine potresti aver bisogno dei titoli in orizzontale, anzichè in verticale:
 |}
 
 ==Liste==
-Qualora tu avessi bisogno di una lista da non formattare come nelle [[#Sezioni|sezioni]], hai la possibilità di utilizzare dei markup specifici che possono aiutarti nell'elencare senza dover rientrare nell'indice:
+Qualora avessi bisogno di una lista da non formattare come nelle [[#Sezioni|sezioni]], hai la possibilità di utilizzare dei markup specifici che possono aiutarti nell'elencare senza dover rientrare nell'indice:
 {| align="center" border="1"
 !markup
 !sorgente
