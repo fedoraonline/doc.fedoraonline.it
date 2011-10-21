@@ -68,10 +68,10 @@ echo "%packages --default" >> $OUTPUT
 rpm -qa --queryformat '%{NAME}\n' | sort | uniq >> $OUTPUT
 
 # eliminazione pacchetti orfani (vengono commentati nel file kickstart)
-# nota: "\< ... \>" dovrebbe fare in modo che "sed" capisca "only-whole-word". Non sono sicuro che effettivamente abbia capito...
+# nota: "\< ... \>" dovrebbe fare in modo che "sed" capisca "only-whole-word".Non sono sicuro che effettivamente abbia capito...
 # l'alternativa è usare "\b ... \b"...
 
-for z in $(for i in `package-cleanup --orphans -q | grep -v kernel` ; do rpm -q $i --queryformat '%{NAME} ' ; done | sort | uniq ) 
+for z in $(for i in `package-cleanup --orphans -q|grep -v kernel` ; do rpm -q $i --queryformat '%{NAME} ' ; done | sort | uniq ) 
 do 
   sed -i "s/\<$z\>/#$z/" $OUTPUT
 done
