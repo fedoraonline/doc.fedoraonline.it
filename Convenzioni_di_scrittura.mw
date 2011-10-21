@@ -400,7 +400,6 @@ Come sottolineato nella guida su [[Contribuisci#Scrittura_in_corso|come contribu
 Esempio:
 {{InCorso|autore=NomeAutore}}
 
-In questo caso il link è rosso perchè non esiste un utente NomeAutore.
+In questo caso il link è rosso perchè non esiste un utente ''NomeAutore''.
 
 [[Categoria:FedoraOnline]]
-[[Categoria:Rilettura in corso]]
