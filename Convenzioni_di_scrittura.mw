@@ -385,8 +385,8 @@ Il markup è esattamente quello riportato:
 [[:Categoria:Due]]
 
 [[Categoria:Scrittura in corso]]</pre>
-e, una volta terminato la guida sarà sufficiente togliere la categoria “Scrittura in corso” e cancellare il “:” davanti alle categorie finali per pubblicare l’articolo definitivamente. 
-Per definire la categoria, occorre seguire il processo di registrazione alla Mailing List di FedoraOnLine e seguire le istruzioni ben spiegato nel [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|come contribuire]].
+e, una volta terminato la guida sarà sufficiente togliere la categoria “Scrittura in corso” e cancellare il “:” davanti alle categorie finali per pubblicare l’articolo definitivamente.<br>
+Per definire la categoria, occorre seguire il processo di registrazione alla Mailing List di FedoraOnLine e seguire le istruzioni, come spiegato nella pagina [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|come contribuire]].
 
 ==Riferimenti==
 E' sempre bene citare la fonte ed eventuali pagine di approfondimenti che hanno contribuito alla tua redazione dell'articolo o guida, nonchè, se avessi usato i numeri di rimando per le note a piè di pagina, creando i relativi riferimenti.
