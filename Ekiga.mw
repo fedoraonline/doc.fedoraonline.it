@@ -1,0 +1,50 @@
+== Introduzione ==
+
+Con questo articolo si vuole dare delle indicazioni esaurienti sull'installazione ed il setup di Ekiga 3.2.7 (stable, release note) su Fedora; dato che si è alla ricerca di software alternativo a Skype, si spera di poter essere d'aiuto a coloro che vogliono utilizzare software e servizi Voip liberi.
+
+== Installazione ==
+
+=== Via Yum ===
+L'installazione dai repository Fedora risulta essere molto semplice; nei repo è presente la versione 3.2.7-4 (maggio 2011):
+
+ $ su -c yum install ekiga alsa-lib alsa-utils sox inotify-tools zenity
+
+=== Dai sorgenti ===
+Di seguito la compilazione dei sorgenti della [http://ftp.gnome.org/pub/gnome/sources/ekiga/3.2/ versione 3.2.6] effettuata su Fedora 14 32bit (su Fedora 15 ci sono alcuni problemi per la compilazione, probabilmente legati alla versione dei pacchetti OPAL / PTLIB, tuttavia la versione 3.3.0 nei repo Fedora 15 sembra funzionare).<br>
+Installazione tool e librerie di sviluppo:
+
+ # yum groupinstall 'Librerie di sviluppo' 'Strumenti di sviluppo'
+
+Installazione dipendenze:
+
+ # yum-builddep ekiga
+
+Dopo aver scaricato l'archivio dei sorgenti lo devi compilare:
+
+ $ cd ekiga-3.2.6
+ $ ./configure --prefix=/usr
+ $ make
+
+Durante la compilazione può succedere di avere degli errori che impediscono la prosecuzione:
+
+ In file included from /usr/include/libnotify/notify.h:28:0,
+ from ../../../../lib/engine /components /libnotify/libnotify-ma in.cpp:41:
+ /usr/include/libnotify/notification.h:28:21: fatal error: gtk/gtk.h: File o directory non esistente
+ compilation terminated.
+
+oppure:
+
+ /usr/bin/ld:../lib/engine /.libs /libekiga _engine.a (xvwindow.o): undefined reference to symbol 'XShmQueryExtension'
+ /usr/bin/ld:note:'XShmQueryExtension' is defined in DSO /usr/lib/libXext.so.6 so try adding it to the linker command line
+ /usr/lib/libXext.so.6: could not read symbols: Invalid operation
+ collect2: ld returned 1 exit status
+
+Un aiuto per superare l'ostacolo è il seguente:
+* Nel primo caso bisogna editare il makefile nella directory /lib/engine/components/libnotify prima di avviare il comando $make: alla riga #372 aggiungi il flag $(GTK_CFLAGS).
+* Nel secondo caso bisogna editare il make file nella directory /lib prima di avviare il comando $make: alla riga #57 aggiungi -lX11 -lXext così:
+
+ $(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) -lX11 -lXext  \
+
+Una volta compilato, installalo:
+
+ # make install
