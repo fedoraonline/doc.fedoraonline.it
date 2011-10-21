@@ -98,3 +98,5 @@ echo -e "\nFine! Si puo' ora dare il comando:\n"
 echo -e "livecd-creator --config=$OUTPUT --fslabel=Fedora-Live --cache=/var/cache/live \n"
 echo -e "...e sperare che funzioni!\n"
 rm -f $TMP </pre>
+
+[[Categoria:Programmazione_e_Sviluppo]]
