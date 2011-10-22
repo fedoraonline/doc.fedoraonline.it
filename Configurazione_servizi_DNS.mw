@@ -52,7 +52,7 @@ Dopo aver verificato che la configurazione sia corretta si potrà verificare la 
  zone cello.local/IN: loaded serial 2011011901
 Se la sintassi è corretta startare il servizio named se non è attivo, e nel caso sia già attivo eseguire il reload dalla configurazione.
  [root@cellopc-mini ~]# service named restart
- Stopping named:                                            [  OK  ]
+ Stopping named:                                            [  <span style="color: #0000BB">OK</span>  ]
  Starting named:                                            [  OK  ]
 Editare il file di configurazione dei server DNS sul nostro sistema (il file /etc/resolv.conf), impostando come unico nameserver l'indirizzo 127.0.0.1.
  [root@cellopc-mini ~]# vim /etc/resolv.conf
