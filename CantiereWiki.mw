@@ -17,7 +17,7 @@ Questi tre stati, si ripetono per le altrettante tre fasi della pubblicazione de
 
 == Articoli in corso di stesura ==
 
-Dopo aver proposto l'articolo alla Mailing List dei redattori , come ben specificato nell'[[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|articolo "contribuisci"]] Occorre utilizzare il template '''<tt>AggiungiArticolo</tt>'''''Corsivo'' :
+Dopo aver proposto l'articolo alla Mailing List dei redattori , come ben specificato nell'[[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|articolo "contribuisci"]] Occorre utilizzare il template '''''<tt>AggiungiArticolo</tt>''''' che si presenta così:
  <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
 
 Verifica di aver inserito nella guida in corso la [[:Categoria:Scrittura in corso]] come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
