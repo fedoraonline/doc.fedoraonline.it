@@ -1,0 +1,36 @@
+[b]Come installare i driver Ati dai repository rpm-fusion per fedora 14.[/b]
+Tutte le operazioni vanno fatte da root.
+
+se avete installati i driver ati proprietari non rpm,  date prima di tutto:
+
+[code]# yum reinstall mesa-libGL[/code]
+cominciate con un:
+
+[code]# yum update kernel[/code]
+per aggiornare il kernel.
+
+Installate i repository rpm-fusion se non lo avete fatto:
+
+[code]rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm 
+rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm[/code]
+Ora controllate che tipo di kernel avete:
+
+[code]# uname -a[/code]
+se avete un kernel [b]non[/b] PAE procedete così:
+
+[code]# yum install kmod-catalyst xorg-x11-drv-catalyst xorg-x11-drv-catalyst-libs.i686[/code]
+se, invece, avete un kernel PAE:
+
+[code]# yum install kmod-catalyst-PAE xorg-x11-drv-catalyst-libs.i686 xorg-x11-drv-catalyst[/code]
+poi date:
+
+[code]# sed -i '/root=/s|$| nomodeset|' /boot/grub/grub.conf
+# cd /boot
+# mv initramfs-`uname -r`.img initramfs-`uname -r`.img-original
+# dracut -v /boot/initramfs-`uname -r`.img `uname -r`[/code]
+infine un :
+
+[code]# reboot[/code]
+avete finito.
+
+Procedura ripresa da: http://forums.fedoraforum.org/showthread.php?t=155503
