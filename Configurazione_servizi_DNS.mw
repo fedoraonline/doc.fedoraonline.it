@@ -1,54 +1,44 @@
-Questo articolo spiega come configurare un server DNS per una rete locale privata, in modo da poter usare dei DNS esterni per la navigazione su internet e poi la definizione degli host interni sempre sullo stesso sistema.<br />Inoltre ci sono alcuni consigli per migliorare le prestazioni del nostro server DNS. Il servizio DNS viene svolto tramite BIND 9.x su Fedora 14/15.
-<strong>Configurazione caching DNS locale </strong><br /><br />Un DNS (Domain Name System) permette di avere un'associazione tra indirizzi IP e nomi convenzione uomo come le definizione dei siti internet. Questo server non fa altro che associare i diversi hosts ai loro indirizzi IP e viceversa.<br />Per poter implementare questo tipo di servizio all'interno di una rete locale è possibile utilizzare il pacchetto BIND (Berkeley Internet Name Domain, in precedenza Berkeley Internet Name Daemon), che viene fornito come il software Unix per DNS più utilizzato. Con questa configurazione verrà configurato un proxy DNS server, che inoltrerà le richieste di lookup verso dei server DNS pubblici e manterrà una cache delle richieste già svolte in modo da fornirle ai client che ne richiedono la definizione.<br />Per prima cosa installare i pacchetti necessari al nostro server via yum.<br /><br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">/]</span><span style="color: #FF8000"># yum install -y bind bind-chroot bind-libs bind-utils
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />I file di configurazione se viene installato il pacchetto bind-chroot sono spostati sotto il direttorio /var/named/chroot per questioni di sicurezza. Si dovrà qundi copiare tutti i file forniti coni samples sotto questo direttorio.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">/]</span><span style="color: #FF8000"># rsync -avSA /usr/share/doc/bind-9.7.2/samples/etc/ /var/named/chroot/etc/
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">/]</span><span style="color: #FF8000"># rsync -avSA /usr/share/doc/bind-9.7.2/samples/var/named/ /var/named/chroot/var/named/
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Dopo di che verificare che la comunicazione sulla porta 53 dei server DNS pubblici funzioni correttamente. Nel nostro esempio verranno utilizzati due server DNS pubblici ospitati da Google.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nc -z 8.8.8.8 53
-<br /></span><span style="color: #0000BB">Connection to 8.8.8.8 53 port </span><span style="color: #007700">[</span><span style="color: #0000BB">tcp</span><span style="color: #007700">/</span><span style="color: #0000BB">domain</span><span style="color: #007700">] </span><span style="color: #0000BB">succeeded</span><span style="color: #007700">!
-<br />[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nc -z 8.8.4.4 53
-<br /></span><span style="color: #0000BB">Connection to 8.8.4.4 53 port </span><span style="color: #007700">[</span><span style="color: #0000BB">tcp</span><span style="color: #007700">/</span><span style="color: #0000BB">domain</span><span style="color: #007700">] </span><span style="color: #0000BB">succeeded</span><span style="color: #007700">!
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Ora si dovrà modificare la configurazione del file named.conf per le nostre esigenze eseguendo prima un backup del file di conf.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># cd /var/named/chroot/etc/
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># cp named.conf named.conf.orig
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Dopo di che verrà editato il file in modo da disabilitare l'ascolto sulla porta 53 per il protocollo IPV6 e poi verrà aggiunta la direttiva "forward", per inoltrare le richieste verso dei server DNS pubblici (indirizzi specificati nella direttiva "forwarders".<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># diff -ub named.conf.orig named.conf
-<br /></span><span style="color: #007700">--- </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf</span><span style="color: #007700">.</span><span style="color: #0000BB">orig    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">07</span><span style="color: #007700">-</span><span style="color: #0000BB">19 15</span><span style="color: #007700">:</span><span style="color: #0000BB">34</span><span style="color: #007700">:</span><span style="color: #0000BB">15.000000000 </span><span style="color: #007700">+</span><span style="color: #0000BB">0200
-<br /></span><span style="color: #007700">+++ </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">12</span><span style="color: #007700">-</span><span style="color: #0000BB">22 13</span><span style="color: #007700">:</span><span style="color: #0000BB">45</span><span style="color: #007700">:</span><span style="color: #0000BB">29.963726004 </span><span style="color: #007700">+</span><span style="color: #0000BB">0100
-<br /></span><span style="color: #007700">@@ -</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">7 </span><span style="color: #007700">+</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">7 </span><span style="color: #007700">@@
-<br /> 
-<br /> </span><span style="color: #0000BB">options </span><span style="color: #007700">{
-<br />     </span><span style="color: #0000BB">listen</span><span style="color: #007700">-</span><span style="color: #0000BB">on port 53 </span><span style="color: #007700">{ </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #007700">; };
-<br />-    </span><span style="color: #0000BB">listen</span><span style="color: #007700">-</span><span style="color: #0000BB">on</span><span style="color: #007700">-</span><span style="color: #0000BB">v6 port 53 </span><span style="color: #007700">{ ::</span><span style="color: #0000BB">1</span><span style="color: #007700">; };
-<br />+    </span><span style="color: #FF8000">//listen-on-v6 port 53 { ::1; };
-<br />     </span><span style="color: #0000BB">directory     </span><span style="color: #DD0000">"/var/named"</span><span style="color: #007700">;
-<br />     </span><span style="color: #0000BB">dump</span><span style="color: #007700">-</span><span style="color: #0000BB">file     </span><span style="color: #DD0000">"/var/named/data/cache_dump.db"</span><span style="color: #007700">;
-<br />         </span><span style="color: #0000BB">statistics</span><span style="color: #007700">-</span><span style="color: #0000BB">file </span><span style="color: #DD0000">"/var/named/data/named_stats.txt"</span><span style="color: #007700">;
-<br />@@ -</span><span style="color: #0000BB">25</span><span style="color: #007700">,</span><span style="color: #0000BB">6 </span><span style="color: #007700">+</span><span style="color: #0000BB">25</span><span style="color: #007700">,</span><span style="color: #0000BB">9 </span><span style="color: #007700">@@
-<br />     </span><span style="color: #0000BB">bindkeys</span><span style="color: #007700">-</span><span style="color: #0000BB">file </span><span style="color: #DD0000">"/etc/named.iscdlv.key"</span><span style="color: #007700">;
-<br /> 
-<br />     </span><span style="color: #0000BB">managed</span><span style="color: #007700">-</span><span style="color: #0000BB">keys</span><span style="color: #007700">-</span><span style="color: #0000BB">directory </span><span style="color: #DD0000">"/var/named/dynamic"</span><span style="color: #007700">;
-<br />+
-<br />+    </span><span style="color: #0000BB">forward first</span><span style="color: #007700">;
-<br />+    </span><span style="color: #0000BB">forwarders </span><span style="color: #007700">{ </span><span style="color: #0000BB">8.8.8.8</span><span style="color: #007700">; </span><span style="color: #0000BB">8.8.4.4</span><span style="color: #007700">; };
-<br /> };
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Inoltre si potrà specificare l'indirizzo o la lista di indirizzi dove il servizio named eseguirà il bind sulla porta 53, in modo da poter mettere in ascolto su pi indirizzi il nostro severver. Si dovrà specificare nella direttiva "listen on" all'interno delle parentesi graffe, separando ogni indirizzo da un ";".<br /><div class="xoopsCode"><code><span style="color: #000000">
+Questo articolo spiega come configurare un server DNS per una rete locale privata, in modo da poter usare dei DNS esterni per la navigazione su internet e poi la definizione degli host interni sempre sullo stesso sistema.
+Inoltre ci sono alcuni consigli per migliorare le prestazioni del nostro server DNS. Il servizio DNS viene svolto tramite BIND 9.x su Fedora 14/15.
+__TOC__
+==Configurazione caching DNS locale==
+Un DNS (Domain Name System) permette di avere un'associazione tra indirizzi IP e nomi convenzione uomo come le definizione dei siti internet. Questo server non fa altro che associare i diversi hosts ai loro indirizzi IP e viceversa.
+Per poter implementare questo tipo di servizio all'interno di una rete locale è possibile utilizzare il pacchetto BIND (Berkeley Internet Name Domain, in precedenza Berkeley Internet Name Daemon), che viene fornito come il software Unix per DNS più utilizzato. 
+Con questa configurazione verrà configurato un proxy DNS server, che inoltrerà le richieste di lookup verso dei server DNS pubblici e manterrà una cache delle richieste già svolte in modo da fornirle ai client che ne richiedono la definizione.
+Per prima cosa installare i pacchetti necessari al nostro server via yum.
+ [root@cellopc-mini /]# yum install -y bind bind-chroot bind-libs bind-utils
+I file di configurazione se viene installato il pacchetto bind-chroot sono spostati sotto il direttorio /var/named/chroot per questioni di sicurezza. Si dovrà qundi copiare tutti i file forniti con i samples sotto questo direttorio.
+ [root@cellopc-mini /]# rsync -avSA /usr/share/doc/bind-9.7.2/samples/etc/ /var/named/chroot/etc/
+ [root@cellopc-mini /]# rsync -avSA /usr/share/doc/bind-9.7.2/samples/var/named/ /var/named/chroot/var/named/
+Dopo di che verificare che la comunicazione sulla porta 53 dei server DNS pubblici funzioni correttamente. Nel nostro esempio verranno utilizzati due server DNS pubblici ospitati da Google.
+ [root@cellopc-mini etc]# nc -z 8.8.8.8 53
+ Connection to 8.8.8.8 53 port [tcp/domain] succeeded!
+ [root@cellopc-mini etc]# nc -z 8.8.4.4 53
+ Connection to 8.8.4.4 53 port [tcp/domain] succeeded!
+Ora si dovrà modificare la configurazione del file named.conf per le nostre esigenze eseguendo prima un backup del file di conf.
+ [root@cellopc-mini ~]# cd /var/named/chroot/etc/
+ [root@cellopc-mini etc]# cp named.conf named.conf.orig
+Dopo di che verrà editato il file in modo da disabilitare l'ascolto sulla porta 53 per il protocollo IPV6 e poi verrà aggiunta la direttiva "forward", per inoltrare le richieste verso dei server DNS pubblici (indirizzi specificati nella direttiva "forwarders".
+ [root@cellopc-mini etc]# diff -ub named.conf.orig named.conf
+ --- named.conf.orig    2010-07-19 15:34:15.000000000 +0200
+ +++ named.conf    2010-12-22 13:45:29.963726004 +0100
+ @@ -9,7 +9,7 @@
+ options {
+      listen-on port 53 { 127.0.0.1; };
+ -    listen-on-v6 port 53 { ::1; };
+ +    //listen-on-v6 port 53 { ::1; };
+      directory     "/var/named";
+      dump-file     "/var/named/data/cache_dump.db";
+          statistics-file "/var/named/data/named_stats.txt";
+ @@ -25,6 +25,9 @@
+      bindkeys-file "/etc/named.iscdlv.key";
+      managed-keys-directory "/var/named/dynamic";
+ +
+ +    forward first;
+ +    forwarders { 8.8.8.8; 8.8.4.4; };
+ };
+
+Inoltre si potrà specificare l'indirizzo o la lista di indirizzi dove il servizio named eseguirà il bind sulla porta 53, in modo da poter mettere in ascolto su pi indirizzi il nostro severver. Si dovrà specificare nella direttiva "listen on" all'interno delle parentesi graffe, separando ogni indirizzo da un ";".<br /><div class="xoopsCode"><code><span style="color: #000000">
 <span style="color: #0000BB">
 <br />root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim named.cond
 <br /></span><span style="color: #007700">...
