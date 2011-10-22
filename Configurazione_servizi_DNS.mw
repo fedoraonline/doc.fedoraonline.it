@@ -100,141 +100,110 @@ Per poter poi permettere le richieste di lookup interne è possibile configurare
 Dopo le modifiche eseguire il reload del servizio named per far caricare le nuove configurazioni.
 [root@cellopc-mini ~]# service named reload
 ==Configurazione internal DNS==
-Dopo aver configurato un proxy DNS per una rete locale è possibile creare un servizio DNS per una rete locale ed un suo dominio associato. In questo modo la risoluzione all'interno del dominio "cello.local" verranno prese dalla configurazione interna, mentre tutto il resto verrà demandato al DNS esterno.<br />Nella configurazione del DNS verrà introdotta la direttiva "view" che permette di avere una configurazione separata in base al client che vengono intercettate dalle direttive "match-clients" e "match-destinations". Solitamente esistono le viste "internal" ed "external" che mantengono separate le configurazioni e verranno applicate le diverse opzioni in base al match degli indirizzi.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
-<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
-<br /></span><span style="color: #007700">{
-<br />
-<br />...
-<br />
-<br />};
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Come già detto in precedenza le clausole "match-clients" e "match-destinations" verificano se gli IP sorgenti delle richieste o destinatari fanno parte della lista passata all'interno delle direttive. Nel nostro esempio viene passato localhost e due subnet internet utilizzate dal nostro server per servire le richieste di lookup da alcune macchine virtuali. E' possibile aggiungere altre reti.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
-<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
-<br /></span><span style="color: #007700">{
-<br />        </span><span style="color: #0000BB">match</span><span style="color: #007700">-</span><span style="color: #0000BB">clients           </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.11.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; };
-<br />        </span><span style="color: #0000BB">match</span><span style="color: #007700">-</span><span style="color: #0000BB">destinations      </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.11.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; };
-<br />...
-<br />        </span><span style="color: #0000BB">recursion yes</span><span style="color: #007700">;
-<br />        include </span><span style="color: #DD0000">"/etc/named.root.key"</span><span style="color: #007700">;
-<br />...
-<br />};
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Ora per ogni view sarà possible creare delle "zone", cioè suddividere per ogni dominio un file di configurazione separato dove sono contenuti tutti i record degli host risolvibili dal nostro DNS. Dato che abbiamo un dominio chiamato "cello.local" ci sarà una zone chiamata "cello.local" che definirà come master server del dominio il nostro server (con la direttiva "type" settata a "master" e poi specificato il nome del file di configurazione presente sotto il direttorio /var/named/chroot/var/named.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
-<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
-<br /></span><span style="color: #007700">...
-<br />        </span><span style="color: #0000BB">zone </span><span style="color: #DD0000">"cello.local" </span><span style="color: #007700">{
-<br />                </span><span style="color: #0000BB">type master</span><span style="color: #007700">;
-<br />                </span><span style="color: #0000BB">file </span><span style="color: #DD0000">"cello.local.zone.db"</span><span style="color: #007700">;
-<br />        };
-<br />...
-<br />};
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />I file *.zone.db contengono tutti tipi di record e la loro associazione. Questo file viene usato sia per la risoluzione diretta che inversa degli indirizzi sul nostro server DNS. Il contenuto del file cello.local.zone.db sul nostro server DNS conterrà tutte le informazioni per il dominio interno specificato nella zona configurata. Per prima cosà verranno specificate le entry:<br /><br />    * $ORIGIN : specifica il nome del dominio utilizzato e configurato nella zone del file named.conf e viene richiamato in tutte le entry dove il dominio non viene specificato. Per esempio se viene settata la direttiva in questo modo "$ORIGIN cello.local.", se viene inserita la entry "www" senza specificare alcun dominio, il DNS la comporrà come "www.cello.local.".<br />    * $TTL : identifica il time to live delle richieste, cioè il periodo di tempo impostato per considerare le informazioni passate dal DNS server valide. Solitamente il valore viene espresso in secondi ( impostandolo a 86400 secondi si mantiene il TTL ad un giorno). <br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db 
-<br /></span><span style="color: #0000BB">$ORIGIN cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
-<br /></span><span style="color: #0000BB">$TTL 86400
-<br /></span><span style="color: #007700">...
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Le prime rige della configurazione contengono le informazioni della zona cioè il record SOA (Start of Autority) ed indicato il nameserver principale del dominio ed alcuni parametri per la validità dei dati. A differenza degli altri tipi di record DNS, questo record viene espresso su più righe ma è da considerarsi come una singola riga di configurazione. Nella prima parte del SOA viene specificato i server DNS principali della zona (solitamente lo stesso server DNS che si sta configurando). Successivamente vengono riportati questi altri valori:<br /><br />    * serial : espresso solitamente nel formato "YYYYMMDDNN" identifica un numero che deve essere modifica ad ogni aggiornamento della configurazione, in modo che i server DNS secondari aggiornino la configurazione in caso di modifiche.<br />    * refresh : espresso in secondi identifica l'intervallo di tempo prima che il server DNS esegua un controllo di evenutali modifiche nei file di configurazione delle zone e ne esegua il caricamento<br />    * retry : espresso in secondi identifica l'intervallo di tempo prima che il server DNS secondario in caso di mancata connettività con il primario, ritenti di ripristinare il collegamento.<br />    * expire : espresso in secondi identifica l'intervallo di tempo prima che il server DNS secondario in caso di mancata connettività con il primario, consideri non più validi i dati in precedenza forniti.<br />    * minimum : espresso in secondi identifica l'intervallo di tempo che viene utilizzato dai server DNS esterni per considerare valide le informazioni fornite dal server DNS stesso. Questo valore nella versiond BIND 9.x viene sovrascritto dal $TTL. <br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
-<br /></span><span style="color: #007700">...
-<br />@               </span><span style="color: #0000BB">IN      SOA     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. </span><span style="color: #0000BB">ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. (
-<br />                                </span><span style="color: #0000BB">2011011901 </span><span style="color: #007700">; </span><span style="color: #0000BB">serial
-<br />                                21600 </span><span style="color: #007700">; </span><span style="color: #0000BB">refresh after 6 hours
-<br />                                3600 </span><span style="color: #007700">; </span><span style="color: #0000BB">retry after 1 hour
-<br />                                604800 </span><span style="color: #007700">; </span><span style="color: #0000BB">expire after 1 week
-<br />                                86400 </span><span style="color: #007700">) ; </span><span style="color: #0000BB">minimum TTL of 1 day
-<br /></span><span style="color: #007700">...
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Ora si dovranno definire il record NS (Name server) cioè il DNS considerato autorevole e quindi principale del nostro dominio. Nel nostro caso sarà lo stesso DNS che verrà risolto come "ns.cello.local.". Sotto verrà subito aggiunta una nuovo record DNS di tipo A cioè associabile ad un indirizzo IP (IPv4). Infatti la struttura di ogni record della zona sono:<br /><br />    * prima colonna : nome o indirizzo con cui viene svolta la lookup<br />    * seconda colonna : TTL del singolo record DNS<br />    * terza colonna : classe del record DNS (IN = internet).<br />    * quarta colonna : tipo di record DNS<br />    * quinta : indirzzo o nome che viene associato al termine della lookup. <br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
-<br /></span><span style="color: #007700">...
-<br />                </span><span style="color: #0000BB">86400   IN      NS              ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
-<br />
-<br /></span><span style="color: #0000BB">ns        86400   IN      A       192.168.10.1
-<br /></span><span style="color: #007700">...
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />In questo modo quando si cercherà di risolvere l'hostname ns.cellolocal verrà associato all'indirizzo 192.168.10.1. E' ora possibile inserire altri record per popolare il nostro server in base alla struttura della subnet utilizzata.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
-<br /></span><span style="color: #007700">...
-<br /></span><span style="color: #0000BB">server01    86400   IN    A    192.168.10.2
-<br />server02    86400   IN    A    192.168.10.3
-<br /></span><span style="color: #007700">...
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Nel caso si utilizzi un server web con Virtualhost configurati, risulta utile il record CNAME che non fa altro che puntare ad un altro record ad esempio di tipo A. Infatti nel nostro esempio viene definito il record per l'host "cellopc-mini" che ospita Apache con il VirtualHost "cellowiki". Basterà aggiungere un record di tipo CNAME facendolo puntare all'hostname definito nel precedente record A e il gioco sarà fatto<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
-<br /></span><span style="color: #007700">...
-<br /></span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini    86400   IN    A    192.168.10.1
-<br />cellowiki    86400   IN      CNAME       cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
-<br />..
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />La configurazione di esempio completa sarà la seguente:<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># cat /var/named/chroot/var/named/cello.local.zone.db 
-<br /></span><span style="color: #0000BB">$ORIGIN cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
-<br /></span><span style="color: #0000BB">$TTL 86400
-<br /></span><span style="color: #007700">@               </span><span style="color: #0000BB">IN      SOA     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. </span><span style="color: #0000BB">ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. (
-<br />                                </span><span style="color: #0000BB">2011011901 </span><span style="color: #007700">; </span><span style="color: #0000BB">serial
-<br />                                21600 </span><span style="color: #007700">; </span><span style="color: #0000BB">refresh after 6 hours
-<br />                                3600 </span><span style="color: #007700">; </span><span style="color: #0000BB">retry after 1 hour
-<br />                                604800 </span><span style="color: #007700">; </span><span style="color: #0000BB">expire after 1 week
-<br />                                86400 </span><span style="color: #007700">) ; </span><span style="color: #0000BB">minimum TTL of 1 day
-<br />
-<br />                86400   IN      NS              ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
-<br />
-<br /></span><span style="color: #0000BB">ns        86400   IN      A       192.168.10.1
-<br />
-<br />cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini    86400   IN    A    192.168.10.1
-<br />cellowiki    86400   IN      CNAME       cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
-<br />
-<br /></span><span style="color: #0000BB">server01    86400   IN    A    192.168.10.2
-<br />server02    86400   IN    A    192.168.10.3
-<br /></span>
-</span>
-</code></div><br />Verificare la sintassi dei file di configurazione tramite il comando named-checkconf.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># named-checkconf -z
-<br /></span><span style="color: #0000BB">zone localhost</span><span style="color: #007700">.</span><span style="color: #0000BB">localdomain</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
-<br />zone localhost</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
-<br />zone 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0</span><span style="color: #007700">.</span><span style="color: #0000BB">ip6</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
-<br />zone 1.0.0.127</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
-<br />zone 0.in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
-<br /></span>
-</span>
-</code></div><br />Se tutto è corretto eseguire il riavvio del nostro server DNS ed impostare il locale il proprio /etc/resolv.conf in modo che punti al DNS locale, eseguendo una ricerca per il dominio impostato nella zona.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named restart
-<br /></span><span style="color: #0000BB">Stopping named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
-<br /></span><span style="color: #0000BB">Starting named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># vim /etc/resolv.conf
-<br /></span><span style="color: #0000BB">nameserver 127.0.0.1
-<br />search cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local
-<br /></span>
-</span>
-</code></div><br />Tramite il comando nslookup si potranno fare delle query verso il DNS per capire se la nostra configurazione è corretta.<br /><div class="xoopsCode"><code><span style="color: #000000">
+Dopo aver configurato un proxy DNS per una rete locale è possibile creare un servizio DNS per una rete locale ed un suo dominio associato. In questo modo la risoluzione all'interno del dominio "cello.local" verranno prese dalla configurazione interna, mentre tutto il resto verrà demandato al DNS esterno.<br />Nella configurazione del DNS verrà introdotta la direttiva "view" che permette di avere una configurazione separata in base al client che vengono intercettate dalle direttive "match-clients" e "match-destinations". Solitamente esistono le viste "internal" ed "external" che mantengono separate le configurazioni e verranno applicate le diverse opzioni in base al match degli indirizzi.
+ [root@cellopc-mini named]# vim /var/named/chroot/etc/named.conf
+ view "internal"
+ {
+ 
+ ...
+ 
+ };
+Come già detto in precedenza le clausole "match-clients" e "match-destinations" verificano se gli IP sorgenti delle richieste o destinatari fanno parte della lista passata all'interno delle direttive. Nel nostro esempio viene passato localhost e due subnet internet utilizzate dal nostro server per servire le richieste di lookup da alcune macchine virtuali. E' possibile aggiungere altre reti.
+<pre>[root@cellopc-mini named]# vim /var/named/chroot/etc/named.conf
+view "internal"
+{
+        match-clients           { localhost; 192.168.10.0/24; 192.168.11.0/24; };
+        match-destinations      { localhost; 192.168.10.0/24; 192.168.11.0/24; };
+...
+        recursion yes;
+        include "/etc/named.root.key";
+...
+};</pre>
+Ora per ogni view sarà possible creare delle "zone", cioè suddividere per ogni dominio un file di configurazione separato dove sono contenuti tutti i record degli host risolvibili dal nostro DNS. Dato che abbiamo un dominio chiamato "cello.local" ci sarà una zone chiamata "cello.local" che definirà come master server del dominio il nostro server (con la direttiva "type" settata a "master" e poi specificato il nome del file di configurazione presente sotto il direttorio /var/named/chroot/var/named. 
+<pre>[root@cellopc-mini named]# vim /var/named/chroot/etc/named.conf
+view "internal"
+...
+        zone "cello.local" {
+                type master;
+                file "cello.local.zone.db";
+        };
+...
+};</pre>
+I file *.zone.db contengono tutti tipi di record e la loro associazione. Questo file viene usato sia per la risoluzione diretta che inversa degli indirizzi sul nostro server DNS. Il contenuto del file cello.local.zone.db sul nostro server DNS conterrà tutte le informazioni per il dominio interno specificato nella zona configurata. Per prima cosà verranno specificate le entry:<br /><br />    * $ORIGIN : specifica il nome del dominio utilizzato e configurato nella zone del file named.conf e viene richiamato in tutte le entry dove il dominio non viene specificato. Per esempio se viene settata la direttiva in questo modo "$ORIGIN cello.local.", se viene inserita la entry "www" senza specificare alcun dominio, il DNS la comporrà come "www.cello.local.".<br />    * $TTL : identifica il time to live delle richieste, cioè il periodo di tempo impostato per considerare le informazioni passate dal DNS server valide. Solitamente il valore viene espresso in secondi ( impostandolo a 86400 secondi si mantiene il TTL ad un giorno).
+ [root@cellopc-mini named]# vim /var/named/chroot/var/named/cello.local.zone.db 
+ $ORIGIN cello.local.
+ $TTL 86400
+ ...
+Le prime rige della configurazione contengono le informazioni della zona cioè il record SOA (Start of Autority) ed indicato il nameserver principale del dominio ed alcuni parametri per la validità dei dati. A differenza degli altri tipi di record DNS, questo record viene espresso su più righe ma è da considerarsi come una singola riga di configurazione. Nella prima parte del SOA viene specificato i server DNS principali della zona (solitamente lo stesso server DNS che si sta configurando). Successivamente vengono riportati questi altri valori:
+* serial : espresso solitamente nel formato "YYYYMMDDNN" identifica un numero che deve essere modifica ad ogni aggiornamento della configurazione, in modo che i server DNS secondari aggiornino la configurazione in caso di modifiche.
+* refresh : espresso in secondi identifica l'intervallo di tempo prima che il server DNS esegua un controllo di evenutali modifiche nei file di configurazione delle zone e ne esegua il caricamento
+* retry : espresso in secondi identifica l'intervallo di tempo prima che il server DNS secondario in caso di mancata connettività con il primario, ritenti di ripristinare il collegamento.
+* expire : espresso in secondi identifica l'intervallo di tempo prima che il server DNS secondario in caso di mancata connettività con il primario, consideri non più validi i dati in precedenza forniti.
+* minimum : espresso in secondi identifica l'intervallo di tempo che viene utilizzato dai server DNS esterni per considerare valide le informazioni fornite dal server DNS stesso. Questo valore nella versiond BIND 9.x viene sovrascritto dal $TTL. 
+ [root@cellopc-mini named]# vim /var/named/chroot/var/named/cello.local.zone.db
+ ...
+ @               IN      SOA     cellopc-mini.cello.local. ns.cello.local. (
+                                 2011011901 ; serial
+                                 21600 ; refresh after 6 hours
+                                 3600 ; retry after 1 hour
+                                 604800 ; expire after 1 week
+                                 86400 ) ; minimum TTL of 1 day
+ ...
+Ora si dovranno definire il record NS (Name server) cioè il DNS considerato autorevole e quindi principale del nostro dominio. Nel nostro caso sarà lo stesso DNS che verrà risolto come "ns.cello.local.". Sotto verrà subito aggiunta una nuovo record DNS di tipo A cioè associabile ad un indirizzo IP (IPv4). Infatti la struttura di ogni record della zona sono:
+* prima colonna : nome o indirizzo con cui viene svolta la lookup
+* seconda colonna : TTL del singolo record DNS
+* terza colonna : classe del record DNS (IN = internet).
+* quarta colonna : tipo di record DNS
+* quinta : indirzzo o nome che viene associato al termine della lookup. 
+ [root@cellopc-mini named]# vim /var/named/chroot/var/named/cello.local.zone.db
+ ...
+                 86400   IN      NS              ns.cello.local.
+ ns        86400   IN      A       192.168.10.1
+ ...
+In questo modo quando si cercherà di risolvere l'hostname ns.cellolocal verrà associato all'indirizzo 192.168.10.1. E' ora possibile inserire altri record per popolare il nostro server in base alla struttura della subnet utilizzata.
+ [root@cellopc-mini named]# vim /var/named/chroot/var/named/cello.local.zone.db
+ ...
+ server01    86400   IN    A    192.168.10.2
+ server02    86400   IN    A    192.168.10.3
+ ...
+Nel caso si utilizzi un server web con Virtualhost configurati, risulta utile il record CNAME che non fa altro che puntare ad un altro record ad esempio di tipo A. Infatti nel nostro esempio viene definito il record per l'host "cellopc-mini" che ospita Apache con il VirtualHost "cellowiki". Basterà aggiungere un record di tipo CNAME facendolo puntare all'hostname definito nel precedente record A e il gioco sarà fatto
+ [root@cellopc-mini named]# vim /var/named/chroot/var/named/cello.local.zone.db
+ ...
+ cellopc-mini    86400   IN    A    192.168.10.1
+ cellowiki    86400   IN      CNAME       cellopc-mini.cello.local.
+ ...
+La configurazione di esempio completa sarà la seguente:
+<pre>[root@cellopc-mini ~]# cat /var/named/chroot/var/named/cello.local.zone.db 
+$ORIGIN cello.local.
+$TTL 86400
+@               IN      SOA     cellopc-mini.cello.local. ns.cello.local. (
+                                2011011901 ; serial
+                                21600 ; refresh after 6 hours
+                                3600 ; retry after 1 hour
+                                604800 ; expire after 1 week
+                                86400 ) ; minimum TTL of 1 day
+                86400   IN      NS              ns.cello.local.
+ns        86400   IN      A       192.168.10.1
+cellopc-mini    86400   IN    A    192.168.10.1
+cellowiki    86400   IN      CNAME       cellopc-mini.cello.local.
+server01    86400   IN    A    192.168.10.2
+server02    86400   IN    A    192.168.10.3
+Verificare la sintassi dei file di configurazione tramite il comando named-checkconf.
+ [root@cellopc-mini ~]# named-checkconf -z
+ zone localhost.localdomain/IN: loaded serial 0
+ zone localhost/IN: loaded serial 0
+ zone 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa/IN: loaded serial 0
+ zone 1.0.0.127.in-addr.arpa/IN: loaded serial 0
+ zone 0.in-addr.arpa/IN: loaded serial 0
+Se tutto è corretto eseguire il riavvio del nostro server DNS ed impostare il locale il proprio /etc/resolv.conf in modo che punti al DNS locale, eseguendo una ricerca per il dominio impostato nella zona.
+ [root@cellopc-mini ~]# service named restart
+ Stopping named:                                            [  OK  ]
+ Starting named:                                            [  OK  ]
+
+ [root@cellopc-mini ~]# vim /etc/resolv.conf
+ nameserver 127.0.0.1
+ search cello.local
+Tramite il comando nslookup si potranno fare delle query verso il DNS per capire se la nostra configurazione è corretta.<br /><div class="xoopsCode"><code><span style="color: #000000">
 <span style="color: #0000BB">
 <br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># nslookup cellopc-mini
 <br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
