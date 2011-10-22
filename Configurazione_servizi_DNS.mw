@@ -1,0 +1,492 @@
+Questo articolo spiega come configurare un server DNS per una rete locale privata, in modo da poter usare dei DNS esterni per la navigazione su internet e poi la definizione degli host interni sempre sullo stesso sistema.<br />Inoltre ci sono alcuni consigli per migliorare le prestazioni del nostro server DNS. Il servizio DNS viene svolto tramite BIND 9.x su Fedora 14/15.
+<strong>Configurazione caching DNS locale </strong><br /><br />Un DNS (Domain Name System) permette di avere un'associazione tra indirizzi IP e nomi convenzione uomo come le definizione dei siti internet. Questo server non fa altro che associare i diversi hosts ai loro indirizzi IP e viceversa.<br />Per poter implementare questo tipo di servizio all'interno di una rete locale è possibile utilizzare il pacchetto BIND (Berkeley Internet Name Domain, in precedenza Berkeley Internet Name Daemon), che viene fornito come il software Unix per DNS più utilizzato. Con questa configurazione verrà configurato un proxy DNS server, che inoltrerà le richieste di lookup verso dei server DNS pubblici e manterrà una cache delle richieste già svolte in modo da fornirle ai client che ne richiedono la definizione.<br />Per prima cosa installare i pacchetti necessari al nostro server via yum.<br /><br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">/]</span><span style="color: #FF8000"># yum install -y bind bind-chroot bind-libs bind-utils
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />I file di configurazione se viene installato il pacchetto bind-chroot sono spostati sotto il direttorio /var/named/chroot per questioni di sicurezza. Si dovrà qundi copiare tutti i file forniti coni samples sotto questo direttorio.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">/]</span><span style="color: #FF8000"># rsync -avSA /usr/share/doc/bind-9.7.2/samples/etc/ /var/named/chroot/etc/
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">/]</span><span style="color: #FF8000"># rsync -avSA /usr/share/doc/bind-9.7.2/samples/var/named/ /var/named/chroot/var/named/
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Dopo di che verificare che la comunicazione sulla porta 53 dei server DNS pubblici funzioni correttamente. Nel nostro esempio verranno utilizzati due server DNS pubblici ospitati da Google.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nc -z 8.8.8.8 53
+<br /></span><span style="color: #0000BB">Connection to 8.8.8.8 53 port </span><span style="color: #007700">[</span><span style="color: #0000BB">tcp</span><span style="color: #007700">/</span><span style="color: #0000BB">domain</span><span style="color: #007700">] </span><span style="color: #0000BB">succeeded</span><span style="color: #007700">!
+<br />[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nc -z 8.8.4.4 53
+<br /></span><span style="color: #0000BB">Connection to 8.8.4.4 53 port </span><span style="color: #007700">[</span><span style="color: #0000BB">tcp</span><span style="color: #007700">/</span><span style="color: #0000BB">domain</span><span style="color: #007700">] </span><span style="color: #0000BB">succeeded</span><span style="color: #007700">!
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Ora si dovrà modificare la configurazione del file named.conf per le nostre esigenze eseguendo prima un backup del file di conf.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># cd /var/named/chroot/etc/
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># cp named.conf named.conf.orig
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Dopo di che verrà editato il file in modo da disabilitare l'ascolto sulla porta 53 per il protocollo IPV6 e poi verrà aggiunta la direttiva "forward", per inoltrare le richieste verso dei server DNS pubblici (indirizzi specificati nella direttiva "forwarders".<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># diff -ub named.conf.orig named.conf
+<br /></span><span style="color: #007700">--- </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf</span><span style="color: #007700">.</span><span style="color: #0000BB">orig    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">07</span><span style="color: #007700">-</span><span style="color: #0000BB">19 15</span><span style="color: #007700">:</span><span style="color: #0000BB">34</span><span style="color: #007700">:</span><span style="color: #0000BB">15.000000000 </span><span style="color: #007700">+</span><span style="color: #0000BB">0200
+<br /></span><span style="color: #007700">+++ </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">12</span><span style="color: #007700">-</span><span style="color: #0000BB">22 13</span><span style="color: #007700">:</span><span style="color: #0000BB">45</span><span style="color: #007700">:</span><span style="color: #0000BB">29.963726004 </span><span style="color: #007700">+</span><span style="color: #0000BB">0100
+<br /></span><span style="color: #007700">@@ -</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">7 </span><span style="color: #007700">+</span><span style="color: #0000BB">9</span><span style="color: #007700">,</span><span style="color: #0000BB">7 </span><span style="color: #007700">@@
+<br /> 
+<br /> </span><span style="color: #0000BB">options </span><span style="color: #007700">{
+<br />     </span><span style="color: #0000BB">listen</span><span style="color: #007700">-</span><span style="color: #0000BB">on port 53 </span><span style="color: #007700">{ </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #007700">; };
+<br />-    </span><span style="color: #0000BB">listen</span><span style="color: #007700">-</span><span style="color: #0000BB">on</span><span style="color: #007700">-</span><span style="color: #0000BB">v6 port 53 </span><span style="color: #007700">{ ::</span><span style="color: #0000BB">1</span><span style="color: #007700">; };
+<br />+    </span><span style="color: #FF8000">//listen-on-v6 port 53 { ::1; };
+<br />     </span><span style="color: #0000BB">directory     </span><span style="color: #DD0000">"/var/named"</span><span style="color: #007700">;
+<br />     </span><span style="color: #0000BB">dump</span><span style="color: #007700">-</span><span style="color: #0000BB">file     </span><span style="color: #DD0000">"/var/named/data/cache_dump.db"</span><span style="color: #007700">;
+<br />         </span><span style="color: #0000BB">statistics</span><span style="color: #007700">-</span><span style="color: #0000BB">file </span><span style="color: #DD0000">"/var/named/data/named_stats.txt"</span><span style="color: #007700">;
+<br />@@ -</span><span style="color: #0000BB">25</span><span style="color: #007700">,</span><span style="color: #0000BB">6 </span><span style="color: #007700">+</span><span style="color: #0000BB">25</span><span style="color: #007700">,</span><span style="color: #0000BB">9 </span><span style="color: #007700">@@
+<br />     </span><span style="color: #0000BB">bindkeys</span><span style="color: #007700">-</span><span style="color: #0000BB">file </span><span style="color: #DD0000">"/etc/named.iscdlv.key"</span><span style="color: #007700">;
+<br /> 
+<br />     </span><span style="color: #0000BB">managed</span><span style="color: #007700">-</span><span style="color: #0000BB">keys</span><span style="color: #007700">-</span><span style="color: #0000BB">directory </span><span style="color: #DD0000">"/var/named/dynamic"</span><span style="color: #007700">;
+<br />+
+<br />+    </span><span style="color: #0000BB">forward first</span><span style="color: #007700">;
+<br />+    </span><span style="color: #0000BB">forwarders </span><span style="color: #007700">{ </span><span style="color: #0000BB">8.8.8.8</span><span style="color: #007700">; </span><span style="color: #0000BB">8.8.4.4</span><span style="color: #007700">; };
+<br /> };
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Inoltre si potrà specificare l'indirizzo o la lista di indirizzi dove il servizio named eseguirà il bind sulla porta 53, in modo da poter mettere in ascolto su pi indirizzi il nostro severver. Si dovrà specificare nella direttiva "listen on" all'interno delle parentesi graffe, separando ogni indirizzo da un ";".<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br />root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim named.cond
+<br /></span><span style="color: #007700">...
+<br />     </span><span style="color: #0000BB">listen</span><span style="color: #007700">-</span><span style="color: #0000BB">on port 53 </span><span style="color: #007700">{ </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.1</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.2 </span><span style="color: #007700">}
+<br />...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />E' possibile settare la direttiva "forward" in due modalità:<br /><br />    * FORWARD ONLY: La richiesta viene passata al DNS server del nostro provider (o quello che abbiamo impostato), se lui non ha risposta restituiamo un errore.<br />    * FORWARD FIRST: Prima la richiesta viene passata al DNS del nostro provider, se questo non ha risposta vengono interrogati i root server. <br /><br />Conviene impostarlo a "forward first" sia perché in genere il DNS del nostro provider ci risponde piu' velocemente degli altri (anche avendo una buona cache), sia per generare meno traffico inutile in Internet. Dopo aver verificato che la configurazione sia corretta si potrà verificare la sintassi dei file tramite il comando "named-checkconf.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># chmod 644 /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># named-checkconf -z -t /var/named/chroot/
+<br /></span><span style="color: #0000BB">zone cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 2011011901
+<br /></span>
+</span>
+</code></div><br />Se la sintassi è corretta startare il servizio named se non è attivo, e nel caso sia già attivo eseguire il reload dalla configurazione.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named restart
+<br /></span><span style="color: #0000BB">Stopping named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB">Starting named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Editare il file di configurazione dei server DNS sul nostro sistema (il file /etc/resolv.conf), impostando come unico nameserver l'indirizzo 127.0.0.1.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># vim /etc/resolv.conf
+<br /></span><span style="color: #0000BB">nameserver 127.0.0.1
+<br /></span>
+</span>
+</code></div><br />Provando ora a richiedere la risoluzione del sito <a href="http://www.google.it" title="www.google.it" rel="external">www.google.it</a> la prima volta e campionando il tempo, la richiesta sarà di qualche secondo (nel nostro esempio quasi 8 secondi).<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># time nslookup <a href="http://www.google.it" title="www.google.it" rel="external">www.google.it</a>
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">Non</span><span style="color: #007700">-</span><span style="color: #0000BB">authoritative answer</span><span style="color: #007700">:
+<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">it    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.99
+<br />Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.104
+<br />
+<br />real    0m7.718s
+<br />user    0m0.009s
+<br />sys    0m0.016s
+<br /></span>
+</span>
+</code></div><br />Verificando le successive volte il tempo di esecuzione sarà di pochi millisecondi, perchè la lookup successiva è stata mantenuta in cache.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># time nslookup <a href="http://www.google.it" title="www.google.it" rel="external">www.google.it</a>
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">Non</span><span style="color: #007700">-</span><span style="color: #0000BB">authoritative answer</span><span style="color: #007700">:
+<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">it    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.104
+<br />Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.99
+<br />
+<br />real    0m0.024s
+<br />user    0m0.012s
+<br />sys    0m0.008s
+<br /></span>
+</span>
+</code></div><br />Attivare poi il servizio named al boot per mantenere il servizio DNS in caso di riavvii del sistema.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># chkconfig named on
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Per poter poi permettere le richieste di lookup interne è possibile configurare la direttiva "allow-query", specificando la lista di reti (o singoli hosts interni) che possono svolgere le richieste al nostro server DNS. risulta utile introdurre anche la direttiva "acl", che permette di creare dei gruppi di sottoreti che possono essere richiamate con facilità poi all'interno del file. Nel nostro esempio è stata creato il gruppo ACL "allowed_nets" che poi richiameremo successivamente negli hosts che possono eseguire le lookup.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># diff -ub named.conf.old named.conf
+<br /></span><span style="color: #007700">--- </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf</span><span style="color: #007700">.</span><span style="color: #0000BB">old    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">12</span><span style="color: #007700">-</span><span style="color: #0000BB">23 13</span><span style="color: #007700">:</span><span style="color: #0000BB">30</span><span style="color: #007700">:</span><span style="color: #0000BB">18.129356667 </span><span style="color: #007700">+</span><span style="color: #0000BB">0100
+<br /></span><span style="color: #007700">+++ </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">12</span><span style="color: #007700">-</span><span style="color: #0000BB">23 13</span><span style="color: #007700">:</span><span style="color: #0000BB">53</span><span style="color: #007700">:</span><span style="color: #0000BB">00.546357036 </span><span style="color: #007700">+</span><span style="color: #0000BB">0100
+<br /></span><span style="color: #007700">+</span><span style="color: #0000BB">acl allowed_nets </span><span style="color: #007700">{ </span><span style="color: #0000BB">192.168.10.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.11.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; };
+<br />+
+<br />-    </span><span style="color: #0000BB">allow</span><span style="color: #007700">-</span><span style="color: #0000BB">query     </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; };
+<br />+    </span><span style="color: #0000BB">allow</span><span style="color: #007700">-</span><span style="color: #0000BB">query     </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">allowed_nets</span><span style="color: #007700">; };
+<br />     </span><span style="color: #0000BB">recursion yes</span><span style="color: #007700">;
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Dopo le modifiche eseguire il reload del servizio named per far caricare le nuove configurazioni.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named reload
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br /><br /><strong>Configurazione internal DNS</strong><br /><br />Dopo aver configurato un proxy DNS per una rete locale è possibile creare un servizio DNS per una rete locale ed un suo dominio associato. In questo modo la risoluzione all'interno del dominio "cello.local" verranno prese dalla configurazione interna, mentre tutto il resto verrà demandato al DNS esterno.<br />Nella configurazione del DNS verrà introdotta la direttiva "view" che permette di avere una configurazione separata in base al client che vengono intercettate dalle direttive "match-clients" e "match-destinations". Solitamente esistono le viste "internal" ed "external" che mantengono separate le configurazioni e verranno applicate le diverse opzioni in base al match degli indirizzi.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
+<br /></span><span style="color: #007700">{
+<br />
+<br />...
+<br />
+<br />};
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Come già detto in precedenza le clausole "match-clients" e "match-destinations" verificano se gli IP sorgenti delle richieste o destinatari fanno parte della lista passata all'interno delle direttive. Nel nostro esempio viene passato localhost e due subnet internet utilizzate dal nostro server per servire le richieste di lookup da alcune macchine virtuali. E' possibile aggiungere altre reti.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
+<br /></span><span style="color: #007700">{
+<br />        </span><span style="color: #0000BB">match</span><span style="color: #007700">-</span><span style="color: #0000BB">clients           </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.11.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; };
+<br />        </span><span style="color: #0000BB">match</span><span style="color: #007700">-</span><span style="color: #0000BB">destinations      </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.11.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; };
+<br />...
+<br />        </span><span style="color: #0000BB">recursion yes</span><span style="color: #007700">;
+<br />        include </span><span style="color: #DD0000">"/etc/named.root.key"</span><span style="color: #007700">;
+<br />...
+<br />};
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Ora per ogni view sarà possible creare delle "zone", cioè suddividere per ogni dominio un file di configurazione separato dove sono contenuti tutti i record degli host risolvibili dal nostro DNS. Dato che abbiamo un dominio chiamato "cello.local" ci sarà una zone chiamata "cello.local" che definirà come master server del dominio il nostro server (con la direttiva "type" settata a "master" e poi specificato il nome del file di configurazione presente sotto il direttorio /var/named/chroot/var/named.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
+<br /></span><span style="color: #007700">...
+<br />        </span><span style="color: #0000BB">zone </span><span style="color: #DD0000">"cello.local" </span><span style="color: #007700">{
+<br />                </span><span style="color: #0000BB">type master</span><span style="color: #007700">;
+<br />                </span><span style="color: #0000BB">file </span><span style="color: #DD0000">"cello.local.zone.db"</span><span style="color: #007700">;
+<br />        };
+<br />...
+<br />};
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />I file *.zone.db contengono tutti tipi di record e la loro associazione. Questo file viene usato sia per la risoluzione diretta che inversa degli indirizzi sul nostro server DNS. Il contenuto del file cello.local.zone.db sul nostro server DNS conterrà tutte le informazioni per il dominio interno specificato nella zona configurata. Per prima cosà verranno specificate le entry:<br /><br />    * $ORIGIN : specifica il nome del dominio utilizzato e configurato nella zone del file named.conf e viene richiamato in tutte le entry dove il dominio non viene specificato. Per esempio se viene settata la direttiva in questo modo "$ORIGIN cello.local.", se viene inserita la entry "www" senza specificare alcun dominio, il DNS la comporrà come "www.cello.local.".<br />    * $TTL : identifica il time to live delle richieste, cioè il periodo di tempo impostato per considerare le informazioni passate dal DNS server valide. Solitamente il valore viene espresso in secondi ( impostandolo a 86400 secondi si mantiene il TTL ad un giorno). <br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db 
+<br /></span><span style="color: #0000BB">$ORIGIN cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">$TTL 86400
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Le prime rige della configurazione contengono le informazioni della zona cioè il record SOA (Start of Autority) ed indicato il nameserver principale del dominio ed alcuni parametri per la validità dei dati. A differenza degli altri tipi di record DNS, questo record viene espresso su più righe ma è da considerarsi come una singola riga di configurazione. Nella prima parte del SOA viene specificato i server DNS principali della zona (solitamente lo stesso server DNS che si sta configurando). Successivamente vengono riportati questi altri valori:<br /><br />    * serial : espresso solitamente nel formato "YYYYMMDDNN" identifica un numero che deve essere modifica ad ogni aggiornamento della configurazione, in modo che i server DNS secondari aggiornino la configurazione in caso di modifiche.<br />    * refresh : espresso in secondi identifica l'intervallo di tempo prima che il server DNS esegua un controllo di evenutali modifiche nei file di configurazione delle zone e ne esegua il caricamento<br />    * retry : espresso in secondi identifica l'intervallo di tempo prima che il server DNS secondario in caso di mancata connettività con il primario, ritenti di ripristinare il collegamento.<br />    * expire : espresso in secondi identifica l'intervallo di tempo prima che il server DNS secondario in caso di mancata connettività con il primario, consideri non più validi i dati in precedenza forniti.<br />    * minimum : espresso in secondi identifica l'intervallo di tempo che viene utilizzato dai server DNS esterni per considerare valide le informazioni fornite dal server DNS stesso. Questo valore nella versiond BIND 9.x viene sovrascritto dal $TTL. <br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
+<br /></span><span style="color: #007700">...
+<br />@               </span><span style="color: #0000BB">IN      SOA     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. </span><span style="color: #0000BB">ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. (
+<br />                                </span><span style="color: #0000BB">2011011901 </span><span style="color: #007700">; </span><span style="color: #0000BB">serial
+<br />                                21600 </span><span style="color: #007700">; </span><span style="color: #0000BB">refresh after 6 hours
+<br />                                3600 </span><span style="color: #007700">; </span><span style="color: #0000BB">retry after 1 hour
+<br />                                604800 </span><span style="color: #007700">; </span><span style="color: #0000BB">expire after 1 week
+<br />                                86400 </span><span style="color: #007700">) ; </span><span style="color: #0000BB">minimum TTL of 1 day
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Ora si dovranno definire il record NS (Name server) cioè il DNS considerato autorevole e quindi principale del nostro dominio. Nel nostro caso sarà lo stesso DNS che verrà risolto come "ns.cello.local.". Sotto verrà subito aggiunta una nuovo record DNS di tipo A cioè associabile ad un indirizzo IP (IPv4). Infatti la struttura di ogni record della zona sono:<br /><br />    * prima colonna : nome o indirizzo con cui viene svolta la lookup<br />    * seconda colonna : TTL del singolo record DNS<br />    * terza colonna : classe del record DNS (IN = internet).<br />    * quarta colonna : tipo di record DNS<br />    * quinta : indirzzo o nome che viene associato al termine della lookup. <br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
+<br /></span><span style="color: #007700">...
+<br />                </span><span style="color: #0000BB">86400   IN      NS              ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />
+<br /></span><span style="color: #0000BB">ns        86400   IN      A       192.168.10.1
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />In questo modo quando si cercherà di risolvere l'hostname ns.cellolocal verrà associato all'indirizzo 192.168.10.1. E' ora possibile inserire altri record per popolare il nostro server in base alla struttura della subnet utilizzata.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">server01    86400   IN    A    192.168.10.2
+<br />server02    86400   IN    A    192.168.10.3
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Nel caso si utilizzi un server web con Virtualhost configurati, risulta utile il record CNAME che non fa altro che puntare ad un altro record ad esempio di tipo A. Infatti nel nostro esempio viene definito il record per l'host "cellopc-mini" che ospita Apache con il VirtualHost "cellowiki". Basterà aggiungere un record di tipo CNAME facendolo puntare all'hostname definito nel precedente record A e il gioco sarà fatto<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini    86400   IN    A    192.168.10.1
+<br />cellowiki    86400   IN      CNAME       cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />..
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />La configurazione di esempio completa sarà la seguente:<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># cat /var/named/chroot/var/named/cello.local.zone.db 
+<br /></span><span style="color: #0000BB">$ORIGIN cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">$TTL 86400
+<br /></span><span style="color: #007700">@               </span><span style="color: #0000BB">IN      SOA     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. </span><span style="color: #0000BB">ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. (
+<br />                                </span><span style="color: #0000BB">2011011901 </span><span style="color: #007700">; </span><span style="color: #0000BB">serial
+<br />                                21600 </span><span style="color: #007700">; </span><span style="color: #0000BB">refresh after 6 hours
+<br />                                3600 </span><span style="color: #007700">; </span><span style="color: #0000BB">retry after 1 hour
+<br />                                604800 </span><span style="color: #007700">; </span><span style="color: #0000BB">expire after 1 week
+<br />                                86400 </span><span style="color: #007700">) ; </span><span style="color: #0000BB">minimum TTL of 1 day
+<br />
+<br />                86400   IN      NS              ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />
+<br /></span><span style="color: #0000BB">ns        86400   IN      A       192.168.10.1
+<br />
+<br />cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini    86400   IN    A    192.168.10.1
+<br />cellowiki    86400   IN      CNAME       cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />
+<br /></span><span style="color: #0000BB">server01    86400   IN    A    192.168.10.2
+<br />server02    86400   IN    A    192.168.10.3
+<br /></span>
+</span>
+</code></div><br />Verificare la sintassi dei file di configurazione tramite il comando named-checkconf.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># named-checkconf -z
+<br /></span><span style="color: #0000BB">zone localhost</span><span style="color: #007700">.</span><span style="color: #0000BB">localdomain</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
+<br />zone localhost</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
+<br />zone 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0</span><span style="color: #007700">.</span><span style="color: #0000BB">ip6</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
+<br />zone 1.0.0.127</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
+<br />zone 0.in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 0
+<br /></span>
+</span>
+</code></div><br />Se tutto è corretto eseguire il riavvio del nostro server DNS ed impostare il locale il proprio /etc/resolv.conf in modo che punti al DNS locale, eseguendo una ricerca per il dominio impostato nella zona.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named restart
+<br /></span><span style="color: #0000BB">Stopping named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB">Starting named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># vim /etc/resolv.conf
+<br /></span><span style="color: #0000BB">nameserver 127.0.0.1
+<br />search cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local
+<br /></span>
+</span>
+</code></div><br />Tramite il comando nslookup si potranno fare delle query verso il DNS per capire se la nostra configurazione è corretta.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># nslookup cellopc-mini
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">192.168.10.1
+<br />
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># nslookup server01
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">server01</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">192.168.10.2
+<br /></span>
+</span>
+</code></div><br />Ora si dovrà configurare la risoluzione inversa sulla nostra subnet, in modo da poter rintracciare l'host che sta utilizzando un determinato indirizzo. Il tipo di record utilizzato sarà il PTR, che permette di far puntare un indirizzo IP ad un indirizzo canonico sl DNS. Il file di configurazione delle zone inverse utilizza la nomenclatura "in-addr.arpa" specifica per la risoluzione degli indirizzi IP. Il nome del file di conf sarà: "<subnet>.in-addr.arpa.zone.db" come ad esempio "10.168.192.in-addr.arpa". L'inizio del file di configurazione sarà ancora formato dai record SOA e NS.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/10.168.192.in-addr.arpa.zone.db 
+<br /></span><span style="color: #0000BB">$ORIGIN 10.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">$TTL 86400
+<br /></span><span style="color: #007700">@               </span><span style="color: #0000BB">IN      SOA     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. </span><span style="color: #0000BB">ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. (
+<br />                                </span><span style="color: #0000BB">1000 </span><span style="color: #007700">; </span><span style="color: #0000BB">serial
+<br />                                21600 </span><span style="color: #007700">; </span><span style="color: #0000BB">refresh after 6 hours
+<br />                                3600 </span><span style="color: #007700">; </span><span style="color: #0000BB">retry after 1 hour
+<br />                                604800 </span><span style="color: #007700">; </span><span style="color: #0000BB">expire after 1 week
+<br />                                86400 </span><span style="color: #007700">) ; </span><span style="color: #0000BB">minimum TTL of 1 day
+<br />
+<br />                86400   IN      NS              ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Ora si dovranno inserire i record di tipo PTR puntando all'indirizzo sulla rete che viene utilizzato dal record specificato.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">1     IN      PTR     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">2     IN      PTR     server01</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">3     IN      PTR     server02</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Dopo aver inserito tutte le entry si dovrà modificare il file di configurazione principale named.conf inserendo nella vista "internal" anche la zona inversa.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim/var/named/chroot/etc/named.conf
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
+<br /></span><span style="color: #007700">{
+<br />      ...
+<br />        </span><span style="color: #0000BB">zone </span><span style="color: #DD0000">"10.168.192.in-addr.arpa" </span><span style="color: #007700">{
+<br />                </span><span style="color: #0000BB">type master</span><span style="color: #007700">;
+<br />                </span><span style="color: #0000BB">file </span><span style="color: #DD0000">"10.168.192.in-addr.arpa.zone.db"</span><span style="color: #007700">;
+<br />        };
+<br />      ...
+<br />};
+<br />...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Al termine delle modifiche eseguire ancora il check sulla sintassi dei file di configurazione e poi eseguire il restart del servizio named per caricare le modifiche.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># named-checkconf -z -t /var/named/chroot/
+<br /></span><span style="color: #0000BB">zone cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 2011011901
+<br />zone 10.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 1000
+<br />zone 11.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 1000
+<br /></span>
+</span>
+</code></div><br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># service named restart
+<br /></span><span style="color: #0000BB">Stopping named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB">Starting named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Provando ad eseguire ora delle risoluzioni su indirizzi IP interni, si dovrà verificare che la lookup venga svolta correttamente dal nostro DNS.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nslookup 192.168.10.1
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">1.10.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa    name </span><span style="color: #007700">= </span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />
+<br />[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nslookup 192.168.10.2
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">2.10.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa    name </span><span style="color: #007700">= </span><span style="color: #0000BB">server01</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />E' possibile creare più file di configurazione per la risoluzione interna, in modo da censire in modo più puntuale dei server, che si attestano su più LAN differenti. Modificare quindi il file di configurazione per la risoluzione diretta della zona, inserendo i nuovi host.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/var/named/cello.local.zone.db 
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">server01</span><span style="color: #007700">-</span><span style="color: #0000BB">admin  86400   IN    A    192.168.11.2
+<br />server02</span><span style="color: #007700">-</span><span style="color: #0000BB">admin  86400   IN    A    192.168.11.3
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Configurare il file di risoluzione inversa con gli host attestati sulla subnet e definiti nella configurazione della rioluzione diretta.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">] </span><span style="color: #0000BB">vim </span><span style="color: #007700">/var/</span><span style="color: #0000BB">named</span><span style="color: #007700">/</span><span style="color: #0000BB">chroot</span><span style="color: #007700">/var/</span><span style="color: #0000BB">named</span><span style="color: #007700">/</span><span style="color: #0000BB">11.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">.</span><span style="color: #0000BB">zone</span><span style="color: #007700">.</span><span style="color: #0000BB">db 
+<br />$ORIGIN 11.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">$TTL 86400
+<br /></span><span style="color: #007700">@               </span><span style="color: #0000BB">IN      SOA     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. </span><span style="color: #0000BB">ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">. (
+<br />                                </span><span style="color: #0000BB">1000 </span><span style="color: #007700">; </span><span style="color: #0000BB">serial
+<br />                                21600 </span><span style="color: #007700">; </span><span style="color: #0000BB">refresh after 6 hours
+<br />                                3600 </span><span style="color: #007700">; </span><span style="color: #0000BB">retry after 1 hour
+<br />                                604800 </span><span style="color: #007700">; </span><span style="color: #0000BB">expire after 1 week
+<br />                                86400 </span><span style="color: #007700">) ; </span><span style="color: #0000BB">minimum TTL of 1 day
+<br />
+<br />                86400   IN      NS              ns</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br />
+<br /></span><span style="color: #0000BB">1     IN      PTR     cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">2     IN      PTR     server01</span><span style="color: #007700">-</span><span style="color: #0000BB">admin</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB">3     IN      PTR     server02</span><span style="color: #007700">-</span><span style="color: #0000BB">admin</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local
+<br /></span>
+</span>
+</code></div><br />Modificare il file di configurazione named.conf inserendo nella vista internal anche la zona inversa appena creata, in modo da renderla disponibile ai client che svolgeranno le query.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #007700">....
+<br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
+<br /></span><span style="color: #007700">{
+<br />        ....
+<br />        </span><span style="color: #0000BB">zone </span><span style="color: #DD0000">"11.168.192.in-addr.arpa" </span><span style="color: #007700">{
+<br />                </span><span style="color: #0000BB">type master</span><span style="color: #007700">;
+<br />                </span><span style="color: #0000BB">file </span><span style="color: #DD0000">"11.168.192.in-addr.arpa.zone.db"</span><span style="color: #007700">;
+<br />        };
+<br />        ...
+<br />};
+<br />...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Ora eseguire il check sulla configurazione e poi eseguire il restart del servizio named.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># named-checkconf -z -t /var/named/chroot/
+<br /></span><span style="color: #0000BB">zone cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 2011011901
+<br />zone 10.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 1000
+<br />zone 11.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 1000
+<br /></span>
+</span>
+</code></div><br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># service named restart
+<br /></span><span style="color: #0000BB">Stopping named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB">Starting named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Verificare che svolgendo delle lookup sulla nuova subnet con risoluzione inversa o diretta venga svolto tutto in modo corretto.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nslookup server01-admin
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">server01</span><span style="color: #007700">-</span><span style="color: #0000BB">admin</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local
+<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">192.168.11.2
+<br />
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># nslookup 192.168.11.2
+<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
+<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
+<br />
+<br /></span><span style="color: #0000BB">2.11.168.192</span><span style="color: #007700">.</span><span style="color: #0000BB">in</span><span style="color: #007700">-</span><span style="color: #0000BB">addr</span><span style="color: #007700">.</span><span style="color: #0000BB">arpa    name </span><span style="color: #007700">= </span><span style="color: #0000BB">server01</span><span style="color: #007700">-</span><span style="color: #0000BB">admin</span><span style="color: #007700">.</span><span style="color: #0000BB">cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">.
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br /><br /><strong>Configurazione cache DNS per forwarder DNS</strong><br /><br />Se si utilizza un forwarder DNS con BIND 9.x e si naviga molto in internet, in alcuni casi si possono avere dei problemi durante lo stop del servizio named, perchè la dimensione della cache è troppo grande. Il file della cache viene specificando nel parametro "dump-file" nel file "named.conf".<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">options </span><span style="color: #007700">{
+<br />...
+<br />    </span><span style="color: #0000BB">dump</span><span style="color: #007700">-</span><span style="color: #0000BB">file     </span><span style="color: #DD0000">"/var/named/data/cache_dump.db"</span><span style="color: #007700">;
+<br />...
+<br />};
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Un piccolo wokraround è quello di ripulire la cache tramite il comando "rndc flus" (per maggirori dettagli vedi la pagina Pulizia cache di proxy DNS con BIND 9.x) prima dello stop, ma si potrebbe eseguire un piccolo tuning sulla cache tramite i seguenti parametri:<br /><br />    * max-cache-size : definisce la dimensione massima (in byte/K/M) del file di cache specificato nel paramtro "dump-file"<br />    * max-cache-ttl : definisce il TTL per mantenere valide le richieste positive dai DNS esterni in cache. Il parametro viene espresso in secondi<br />    * max-ncache-ttl : definisce il TTL per mantenere valide le richieste negative dai DNS esterni in cache. Il parametro viene espresso in secondi<br />    * cleaning-interval : Intervallo di tempo per la rimozione delle chiavi espirate. Il parametro viene espresso in minuti. <br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
+<br /></span><span style="color: #007700">...
+<br /></span><span style="color: #0000BB">options </span><span style="color: #007700">{
+<br />...
+<br />    </span><span style="color: #0000BB">dump</span><span style="color: #007700">-</span><span style="color: #0000BB">file     </span><span style="color: #DD0000">"/var/named/data/cache_dump.db"</span><span style="color: #007700">;
+<br />....
+<br />    </span><span style="color: #0000BB">allow</span><span style="color: #007700">-</span><span style="color: #0000BB">query     </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">allowed_nets</span><span style="color: #007700">; };
+<br />    </span><span style="color: #0000BB">recursion yes</span><span style="color: #007700">;
+<br />...
+<br />    </span><span style="color: #0000BB">forward first</span><span style="color: #007700">;
+<br />    </span><span style="color: #0000BB">forwarders </span><span style="color: #007700">{ </span><span style="color: #0000BB">8.8.8.8</span><span style="color: #007700">; </span><span style="color: #0000BB">8.8.4.4</span><span style="color: #007700">; };
+<br />
+<br />    </span><span style="color: #FF8000">/* Definisce la dimensione massima della cache (contenuta in dump-file). */    
+<br />    </span><span style="color: #0000BB">max</span><span style="color: #007700">-</span><span style="color: #0000BB">cache</span><span style="color: #007700">-</span><span style="color: #0000BB">size 10M</span><span style="color: #007700">;
+<br />
+<br />    </span><span style="color: #FF8000">/* Definisce quanti secondi mantenere in cache le risposte positive dai DNS esterni */
+<br />    </span><span style="color: #0000BB">max</span><span style="color: #007700">-</span><span style="color: #0000BB">cache</span><span style="color: #007700">-</span><span style="color: #0000BB">ttl 86400</span><span style="color: #007700">;
+<br />
+<br />    </span><span style="color: #FF8000">/* Definisce quanti secondi mantenere in cache le risposte negative dai DNS esterni */
+<br />        </span><span style="color: #0000BB">max</span><span style="color: #007700">-</span><span style="color: #0000BB">ncache</span><span style="color: #007700">-</span><span style="color: #0000BB">ttl 60</span><span style="color: #007700">;
+<br />
+<br />    </span><span style="color: #FF8000">/* Intervallo di tempo per la rimozione delle chiavi espirate (in minuti) */
+<br />    </span><span style="color: #0000BB">cleaning</span><span style="color: #007700">-</span><span style="color: #0000BB">interval 10</span><span style="color: #007700">;
+<br />...
+<br />};
+<br />...
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Dopo la modifica eseguire il riavvio del servizio named per applicare le modifiche.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named restart
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br /><br /><strong>Pulizia cache di proxy DNS</strong><br /><br />Quando si installa un proxy DNS server con BIND le lookup svolte verso DNS pubblici vengono salvate in locale per ridurre le richieste verso internet, e velocizzae i tempi di risposta. Per ripulire la cache che viene mantenuta su disco si potrà semplicemente riavviare il demone named in modo da far ricreare la cache<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named restart
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Oppure è possibile sfruttuare il comando rndc, che permette di invocare alcune operazioni sul demone named, senza dover forzatamente riavviare. Richiamando il comando rndc con l'opzione "flush", verrà svuotata la cache per tutte le zone sotto il controllo di named.<br /><div class="xoopsCode"><code><span style="color: #000000">
+<span style="color: #0000BB">
+<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># rndc flush
+<br /></span><span style="color: #0000BB"></span>
+</span>
+</code></div><br />Dopo la pulizia le prime lookup inviate verso un server pubblico saranno un pochino lente (qualche secondo) ma poi verranno mostrate in tempi in ordine di millisecondi
