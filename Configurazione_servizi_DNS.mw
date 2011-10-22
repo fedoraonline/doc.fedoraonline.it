@@ -282,7 +282,7 @@ $TTL 86400
                 86400   IN      NS              ns.cello.local.
 1     IN      PTR     cellopc-mini.cello.local.
 2     IN      PTR     server01-admin.cello.local.
-3     IN      PTR     server02-admin.cello.local
+3     IN      PTR     server02-admin.cello.local</pre>
 Modificare il file di configurazione named.conf inserendo nella vista internal anche la zona inversa appena creata, in modo da renderla disponibile ai client che svolgeranno le query.
 <pre>[root@cellopc-mini etc]# vim /var/named/chroot/etc/named.conf
 ....
@@ -295,7 +295,7 @@ view "internal"
         };
         ...
 };
-...
+...</pre>
 Ora eseguire il check sulla configurazione e poi eseguire il restart del servizio named.
 <pre>[root@cellopc-mini etc]# named-checkconf -z -t /var/named/chroot/
 zone cello.local/IN: loaded serial 2011011901
@@ -356,6 +356,7 @@ options {
 ...</pre>
 Dopo la modifica eseguire il riavvio del servizio named per applicare le modifiche.
  [root@cellopc-mini ~]# service named restart
+
 ==Pulizia cache di proxy DNS==
 Quando si installa un proxy DNS server con BIND le lookup svolte verso DNS pubblici vengono salvate in locale per ridurre le richieste verso internet, e velocizzae i tempi di risposta. Per ripulire la cache che viene mantenuta su disco si potrà semplicemente riavviare il demone named in modo da far ricreare la cache
  [root@cellopc-mini ~]# service named restart
