@@ -1,7 +1,7 @@
 Qui puoi trovare le guide che sono attualmente in lavorazione (nuove guide, modifiche di guide obsolete, ecc.).
 
 == Legenda ==
-Qui sotto riportiamo la tabella esplicativa per una immediata identificazione visiva dello stato avanzamento dei lavori.
+Qui sotto riportiamo la tabella esplicativa per una immediata identificazione visiva dello stato avanzamento dei lavori che si compone di tre fasi.
 {| {{TabellaBase}}
 | '''Terminato'''
 | {{StatoTerminato}} | Terminato
@@ -12,7 +12,7 @@ Qui sotto riportiamo la tabella esplicativa per una immediata identificazione vi
 | '''Da fare'''
 | {{StatoDaFare}} | Da fare
 |}
-Ti abbiamo creato un template che faciliti la modifica dello stato.
+Ti abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente da "Da fare" ad "In corso" ed infine a "Terminato".
 
 == Articoli in corso di stesura ==
 
