@@ -1,103 +1,74 @@
-In molti casi per creare disservizio su un sito internet si eseguono molteplici richieste in pochi secondi, in modo da far cadere il webserver che lo ospita. Questa tipologia di attacco viene chiamato Denial of Service (Dos) e si possono trovare maggiori dettagli su  <a href="http://it.wikipedia.org/wiki/Denial_of_service" title="http://it.wikipedia.org/wiki/Denial_of_service" rel="external">http://it.wikipedia.org/wiki/Denial_of_service</a> .<br><br />E' possibile però prevenire questo tipo di attachi se si utilizza un webserver Apache 2.x tramite il modulo mod_evasive, che non fa altro che bloccare per un certo tempo un indirizzo IP che svolge un numero di richieste in un breve lasso di tempo. E' possibile inoltre lanciare dei comandi di sistema operativo, come ad esempio il lancio di drop lato iptables.<br><br />Per prima cosa installare il pacchetto mod_evasive via yum.
-
-[code]# yum install -y mod_evasive[/code]
+In molti casi per creare disservizio su un sito internet si eseguono molteplici richieste in pochi secondi, in modo da far cadere il webserver che lo ospita. Questa tipologia di attacco viene chiamato Denial of Service (Dos) e si possono trovare maggiori dettagli su  [[http://it.wikipedia.org/wiki/Denial_of_service Wikipedia]].
+E' possibile però prevenire questo tipo di attachi se si utilizza un webserver Apache 2.x tramite il modulo mod_evasive, che non fa altro che bloccare per un certo tempo un indirizzo IP che svolge un numero di richieste in un breve lasso di tempo. E' possibile inoltre lanciare dei comandi di sistema operativo, come ad esempio il lancio di drop lato iptables.
+Per prima cosa installare il pacchetto mod_evasive via yum.
+ # yum install -y mod_evasive 
 Verrà installato il file .so sotto il direttorio /usr/lib/httpd/modules/ e poi verrà creato un file di configurazione di default sotto il direttorio /etc/httpd/conf.d/.
-
-[code][root@cellopc-mini ~]# rpm -ql mod_evasive-1.10.1-8.fc12.i686
-
-/etc/httpd/conf.d/mod_evasive.conf
-
-/usr/lib/httpd/modules/mod_evasive20.so
-
-/usr/share/doc/mod_evasive-1.10.1
-
-/usr/share/doc/mod_evasive-1.10.1/CHANGELOG
-
-/usr/share/doc/mod_evasive-1.10.1/LICENSE
-
-/usr/share/doc/mod_evasive-1.10.1/README
-
-/usr/share/doc/mod_evasive-1.10.1/test.pl[/code]
-Il file contiene già tutti i parametri configurabili per il modulo, ed esegue già il caricamento del modulo stesso, quindi non si dovrà inserire alcuna voce all'interno del file httpd.conf. I parametri configurabili sono:<br />* '''DOSHashTableSize''': dimensione della tabella di hash per la collezione dei dati di campionamento (conviene lasciare il default).<br />* '''DOSPageCount''': identifica la soglia di richiesta di una stessa pagina da parte di un host in un certo intervallo di tempo.<br />* '''DOSSiteCount''': identifica la soglia di richiesta di un qualsiasi oggetto da parte di un host in un certo intervallo di tempo.     <br />* '''DOSPageInterval''': intevallo di tempo per la soglia del parametro DOSPageCount in secondi.<br />* '''DOSSiteInterval''': intevallo di tempo per la soglia del parametro DOSSiteCount in secondi.<br />* '''DOSBlockingPeriod''': parametro che specifica l'intervallo di tempo (in secondi) utilizzato per mostare l'http error 403 ai client che stanno eseguendo un probabile DoS attack.<br />* '''DOSEmailNotify''': parametro che specifica l'indirizzo mail al quale inviare una mail di notifica, se un certo indirizzo IP sta eseguendo un probabile Dos Attack (deve essere installato mailx è configurato sendmail/postfix per invio delle mail dal sistema).<br />* '''DOSWhitelist''': con questo parametro è possibile aggiungere tramite delle wildcard, una lista di IP che non devono essere bloccati dal modulo.<br />* '''DOSLogDir''': specifica un path alternativo alla temp directory per la collezione dei dati (solitamente è /tmp).<br />* '''DOSSystemCommand''': lancia uno specifico comando quando viene superata la soglia da parte di un client. Per ricavare l'indirizzo IP che ha sfortato la soglia si deve usare la variabile "%s".<br /><br />Un esempio di configurazione è la seguente:
-
-[code][root@cellopc-mini ~]# vim /etc/httpd/conf.d/mod_evasive.conf
-
-LoadModule evasive20_module modules/mod_evasive20.so
-
-
-
-<IfModule mod_evasive20.c>
-
+ [root@cellopc-mini ~]# rpm -ql mod_evasive-1.10.1-8.fc12.i686
+ /etc/httpd/conf.d/mod_evasive.conf
+ /usr/lib/httpd/modules/mod_evasive20.so
+ /usr/share/doc/mod_evasive-1.10.1
+ /usr/share/doc/mod_evasive-1.10.1/CHANGELOG
+ /usr/share/doc/mod_evasive-1.10.1/LICENSE
+ /usr/share/doc/mod_evasive-1.10.1/README
+ /usr/share/doc/mod_evasive-1.10.1/test.pl
+Il file contiene già tutti i parametri configurabili per il modulo, ed esegue già il caricamento del modulo stesso, quindi non si dovrà inserire alcuna voce all'interno del file httpd.conf. 
+I parametri configurabili sono:
+* '''DOSHashTableSize''': dimensione della tabella di hash per la collezione dei dati di campionamento (conviene lasciare il default).
+* '''DOSPageCount''': identifica la soglia di richiesta di una stessa pagina da parte di un host in un certo intervallo di tempo.
+* '''DOSSiteCount''': identifica la soglia di richiesta di un qualsiasi oggetto da parte di un host in un certo intervallo di tempo.
+* '''DOSPageInterval''': intevallo di tempo per la soglia del parametro DOSPageCount in secondi.
+* '''DOSSiteInterval''': intevallo di tempo per la soglia del parametro DOSSiteCount in secondi.
+* '''DOSBlockingPeriod''': parametro che specifica l'intervallo di tempo (in secondi) utilizzato per mostare l'http error 403 ai client che stanno eseguendo un probabile DoS attack.
+* '''DOSEmailNotify''': parametro che specifica l'indirizzo mail al quale inviare una mail di notifica, se un certo indirizzo IP sta eseguendo un probabile Dos Attack (deve essere installato mailx è configurato sendmail/postfix per invio delle mail dal sistema).
+* '''DOSWhitelist''': con questo parametro è possibile aggiungere tramite delle wildcard, una lista di IP che non devono essere bloccati dal modulo.
+* '''DOSLogDir''': specifica un path alternativo alla temp directory per la collezione dei dati (solitamente è /tmp).
+* '''DOSSystemCommand''': lancia uno specifico comando quando viene superata la soglia da parte di un client. Per ricavare l'indirizzo IP che ha sfortato la soglia si deve usare la variabile "%s".
+Un esempio di configurazione è la seguente:
+ [root@cellopc-mini ~]# vim /etc/httpd/conf.d/mod_evasive.conf
+ LoadModule evasive20_module modules/mod_evasive20.so
+ <IfModule mod_evasive20.c>
     DOSHashTableSize    3097
-
     DOSPageCount        5
-
     DOSSiteCount        50
-
     DOSPageInterval     1
-
     DOSSiteInterval     1
-
     DOSBlockingPeriod   60
-
     DOSEmailNotify      mlorenzi@sorint.it
-
     DOSWhitelist   192.168.10.*
-
-    DOSWhitelist   192.168.11.*[/code]
+    DOSWhitelist   192.168.11.*
 Quando la configurazione è ok si dovrà eseguire il reload dei file di conf da parte del httpd.
-
-[code][root@cellopc-mini ~]# service httpd configtest
-
-Syntax OK
-
-[root@cellopc-mini ~]# service httpd reload
-
-Reloading httpd:                [ OK ][/code]
-Per poter testare la configurazione di questo modulo viene fornito uno script in perl, che esegue 100 richieste in un lasso di tempi di pochi millisecondi. Lo script si trova sotto il direttorio "/usr/share/doc/mod_evasive-<version>. e si chiama test.pl. Si potrà modificare all'interno l'indirizzo IP e la porta dove svolgere la richiesta, perchè di default inoltra le richieste al localhost sull porta 80 (se si mette nella whitelist l'indirizzo 127.0.0.1 lo script con la configurazione di default non funzionerà).
-
-[code][root@cellopc-mini mod_evasive-1.10.1]# perl test.pl
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-
-HTTP/1.1 200 OK
-.
-.
-.
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-
-HTTP/1.1 403 Forbidden
-.
-.
-.[/code]
-Quando si lancia lo script verrà dato prima "HTTP/1.1 200 OK" e poi "HTTP/1.1 403 Forbidden" e questo significa che test ha funzionato correttamente. Provando a rilanciare subito lo script in base al valore del parametro "DOSBlockingPeriod" si verrà da prima buttati fuori dal webserver per le troppe richieste ed il periodo di spospensione.
+ [root@cellopc-mini ~]# service httpd configtest
+ Syntax OK
+ [root@cellopc-mini ~]# service httpd reload
+ Reloading httpd:                [ OK ]
+Per poter testare la configurazione di questo modulo viene fornito uno script in perl, che esegue 100 richieste in un lasso di tempi di pochi millisecondi. 
+Lo script si trova sotto il direttorio "/usr/share/doc/mod_evasive-<version>. e si chiama test.pl. 
+Si potrà modificare all'interno l'indirizzo IP e la porta dove svolgere la richiesta, perchè di default inoltra le richieste al localhost sull porta 80 (se si mette nella whitelist l'indirizzo 127.0.0.1 lo script con la configurazione di default non funzionerà).
+ [root@cellopc-mini mod_evasive-1.10.1]# perl test.pl
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ HTTP/1.1 200 OK
+ .
+ .
+ .
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ HTTP/1.1 403 Forbidden
+ .
+ .
+ .
+Quando si lancia lo script verrà dato prima "HTTP/1.1 200 OK" e poi "HTTP/1.1 403 Forbidden" e questo significa che test ha funzionato correttamente.
+Provando a rilanciare subito lo script in base al valore del parametro "DOSBlockingPeriod" si verrà da prima buttati fuori dal webserver per le troppe richieste ed il periodo di spospensione.
