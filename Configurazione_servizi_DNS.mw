@@ -194,7 +194,7 @@ Verificare la sintassi dei file di configurazione tramite il comando named-check
  zone localhost/IN: loaded serial 0
  zone 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa/IN: loaded serial 0
  zone 1.0.0.127.in-addr.arpa/IN: loaded serial 0
- zone 0.in-addr.arpa/IN: loaded serial 0
+ zone 0.in-addr.arpa/IN: loaded serial 0</pre>
 Se tutto è corretto eseguire il riavvio del nostro server DNS ed impostare il locale il proprio /etc/resolv.conf in modo che punti al DNS locale, eseguendo una ricerca per il dominio impostato nella zona.
  [root@cellopc-mini ~]# service named restart
  Stopping named:                                            [  <span style="color: #007700">OK</span>  ]
