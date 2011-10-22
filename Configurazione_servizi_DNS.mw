@@ -18,7 +18,7 @@ Dopo di che verificare che la comunicazione sulla porta 53 dei server DNS pubbli
 Ora si dovrà modificare la configurazione del file named.conf per le nostre esigenze eseguendo prima un backup del file di conf.
  [root@cellopc-mini ~]# cd /var/named/chroot/etc/
  [root@cellopc-mini etc]# cp named.conf named.conf.orig
-Dopo di che verrà editato il file in modo da disabilitare l'ascolto sulla porta 53 per il protocollo IPV6 e poi verrà aggiunta la direttiva "forward", per inoltrare le richieste verso dei server DNS pubblici (indirizzi specificati nella direttiva "forwarders".
+Dopo di che verrà editato il file in modo da disabilitare l'ascolto sulla porta 53 per il protocollo IPV6 e poi verrà aggiunta la direttiva "forward", per inoltrare le richieste verso dei server DNS pubblici (indirizzi specificati nella direttiva "forwarders").
  [root@cellopc-mini etc]# diff -ub named.conf.orig named.conf
  --- named.conf.orig    2010-07-19 15:34:15.000000000 +0200
  +++ named.conf    2010-12-22 13:45:29.963726004 +0100
@@ -38,95 +38,69 @@ Dopo di che verrà editato il file in modo da disabilitare l'ascolto sulla porta
  +    forwarders { 8.8.8.8; 8.8.4.4; };
  };
 
-Inoltre si potrà specificare l'indirizzo o la lista di indirizzi dove il servizio named eseguirà il bind sulla porta 53, in modo da poter mettere in ascolto su pi indirizzi il nostro severver. Si dovrà specificare nella direttiva "listen on" all'interno delle parentesi graffe, separando ogni indirizzo da un ";".<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br />root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim named.cond
-<br /></span><span style="color: #007700">...
-<br />     </span><span style="color: #0000BB">listen</span><span style="color: #007700">-</span><span style="color: #0000BB">on port 53 </span><span style="color: #007700">{ </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.1</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.10.2 </span><span style="color: #007700">}
-<br />...
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />E' possibile settare la direttiva "forward" in due modalità:<br /><br />    * FORWARD ONLY: La richiesta viene passata al DNS server del nostro provider (o quello che abbiamo impostato), se lui non ha risposta restituiamo un errore.<br />    * FORWARD FIRST: Prima la richiesta viene passata al DNS del nostro provider, se questo non ha risposta vengono interrogati i root server. <br /><br />Conviene impostarlo a "forward first" sia perché in genere il DNS del nostro provider ci risponde piu' velocemente degli altri (anche avendo una buona cache), sia per generare meno traffico inutile in Internet. Dopo aver verificato che la configurazione sia corretta si potrà verificare la sintassi dei file tramite il comando "named-checkconf.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># chmod 644 /var/named/chroot/etc/named.conf
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># named-checkconf -z -t /var/named/chroot/
-<br /></span><span style="color: #0000BB">zone cello</span><span style="color: #007700">.</span><span style="color: #0000BB">local</span><span style="color: #007700">/</span><span style="color: #0000BB">IN</span><span style="color: #007700">: </span><span style="color: #0000BB">loaded serial 2011011901
-<br /></span>
-</span>
-</code></div><br />Se la sintassi è corretta startare il servizio named se non è attivo, e nel caso sia già attivo eseguire il reload dalla configurazione.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named restart
-<br /></span><span style="color: #0000BB">Stopping named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
-<br /></span><span style="color: #0000BB">Starting named</span><span style="color: #007700">:                                            [  </span><span style="color: #0000BB">OK  </span><span style="color: #007700">]
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Editare il file di configurazione dei server DNS sul nostro sistema (il file /etc/resolv.conf), impostando come unico nameserver l'indirizzo 127.0.0.1.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># vim /etc/resolv.conf
-<br /></span><span style="color: #0000BB">nameserver 127.0.0.1
-<br /></span>
-</span>
-</code></div><br />Provando ora a richiedere la risoluzione del sito <a href="http://www.google.it" title="www.google.it" rel="external">www.google.it</a> la prima volta e campionando il tempo, la richiesta sarà di qualche secondo (nel nostro esempio quasi 8 secondi).<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># time nslookup <a href="http://www.google.it" title="www.google.it" rel="external">www.google.it</a>
-<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
-<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
-<br />
-<br /></span><span style="color: #0000BB">Non</span><span style="color: #007700">-</span><span style="color: #0000BB">authoritative answer</span><span style="color: #007700">:
-<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">it    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
-<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
-<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
-<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.99
-<br />Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
-<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.104
-<br />
-<br />real    0m7.718s
-<br />user    0m0.009s
-<br />sys    0m0.016s
-<br /></span>
-</span>
-</code></div><br />Verificando le successive volte il tempo di esecuzione sarà di pochi millisecondi, perchè la lookup successiva è stata mantenuta in cache.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># time nslookup <a href="http://www.google.it" title="www.google.it" rel="external">www.google.it</a>
-<br /></span><span style="color: #0000BB">Server</span><span style="color: #007700">:        </span><span style="color: #0000BB">127.0.0.1
-<br />Address</span><span style="color: #007700">:    </span><span style="color: #0000BB">127.0.0.1</span><span style="color: #FF8000">#53
-<br />
-<br /></span><span style="color: #0000BB">Non</span><span style="color: #007700">-</span><span style="color: #0000BB">authoritative answer</span><span style="color: #007700">:
-<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">it    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
-<br /></span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com    canonical name </span><span style="color: #007700">= </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com</span><span style="color: #007700">.
-<br /></span><span style="color: #0000BB">Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
-<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.104
-<br />Name</span><span style="color: #007700">:    </span><span style="color: #0000BB">www</span><span style="color: #007700">.</span><span style="color: #0000BB">l</span><span style="color: #007700">.</span><span style="color: #0000BB">google</span><span style="color: #007700">.</span><span style="color: #0000BB">com
-<br />Address</span><span style="color: #007700">: </span><span style="color: #0000BB">74.125.87.99
-<br />
-<br />real    0m0.024s
-<br />user    0m0.012s
-<br />sys    0m0.008s
-<br /></span>
-</span>
-</code></div><br />Attivare poi il servizio named al boot per mantenere il servizio DNS in caso di riavvii del sistema.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># chkconfig named on
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Per poter poi permettere le richieste di lookup interne è possibile configurare la direttiva "allow-query", specificando la lista di reti (o singoli hosts interni) che possono svolgere le richieste al nostro server DNS. risulta utile introdurre anche la direttiva "acl", che permette di creare dei gruppi di sottoreti che possono essere richiamate con facilità poi all'interno del file. Nel nostro esempio è stata creato il gruppo ACL "allowed_nets" che poi richiameremo successivamente negli hosts che possono eseguire le lookup.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini etc</span><span style="color: #007700">]</span><span style="color: #FF8000"># diff -ub named.conf.old named.conf
-<br /></span><span style="color: #007700">--- </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf</span><span style="color: #007700">.</span><span style="color: #0000BB">old    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">12</span><span style="color: #007700">-</span><span style="color: #0000BB">23 13</span><span style="color: #007700">:</span><span style="color: #0000BB">30</span><span style="color: #007700">:</span><span style="color: #0000BB">18.129356667 </span><span style="color: #007700">+</span><span style="color: #0000BB">0100
-<br /></span><span style="color: #007700">+++ </span><span style="color: #0000BB">named</span><span style="color: #007700">.</span><span style="color: #0000BB">conf    2010</span><span style="color: #007700">-</span><span style="color: #0000BB">12</span><span style="color: #007700">-</span><span style="color: #0000BB">23 13</span><span style="color: #007700">:</span><span style="color: #0000BB">53</span><span style="color: #007700">:</span><span style="color: #0000BB">00.546357036 </span><span style="color: #007700">+</span><span style="color: #0000BB">0100
-<br /></span><span style="color: #007700">+</span><span style="color: #0000BB">acl allowed_nets </span><span style="color: #007700">{ </span><span style="color: #0000BB">192.168.10.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; </span><span style="color: #0000BB">192.168.11.0</span><span style="color: #007700">/</span><span style="color: #0000BB">24</span><span style="color: #007700">; };
-<br />+
-<br />-    </span><span style="color: #0000BB">allow</span><span style="color: #007700">-</span><span style="color: #0000BB">query     </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; };
-<br />+    </span><span style="color: #0000BB">allow</span><span style="color: #007700">-</span><span style="color: #0000BB">query     </span><span style="color: #007700">{ </span><span style="color: #0000BB">localhost</span><span style="color: #007700">; </span><span style="color: #0000BB">allowed_nets</span><span style="color: #007700">; };
-<br />     </span><span style="color: #0000BB">recursion yes</span><span style="color: #007700">;
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br />Dopo le modifiche eseguire il reload del servizio named per far caricare le nuove configurazioni.<br /><div class="xoopsCode"><code><span style="color: #000000">
-<span style="color: #0000BB">
-<br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini </span><span style="color: #007700">~]</span><span style="color: #FF8000"># service named reload
-<br /></span><span style="color: #0000BB"></span>
-</span>
-</code></div><br /><br /><strong>Configurazione internal DNS</strong><br /><br />Dopo aver configurato un proxy DNS per una rete locale è possibile creare un servizio DNS per una rete locale ed un suo dominio associato. In questo modo la risoluzione all'interno del dominio "cello.local" verranno prese dalla configurazione interna, mentre tutto il resto verrà demandato al DNS esterno.<br />Nella configurazione del DNS verrà introdotta la direttiva "view" che permette di avere una configurazione separata in base al client che vengono intercettate dalle direttive "match-clients" e "match-destinations". Solitamente esistono le viste "internal" ed "external" che mantengono separate le configurazioni e verranno applicate le diverse opzioni in base al match degli indirizzi.<br /><div class="xoopsCode"><code><span style="color: #000000">
+Inoltre si potrà specificare l'indirizzo o la lista di indirizzi dove il servizio named eseguirà il bind sulla porta 53, in modo da poter mettere in ascolto su pi indirizzi il nostro severver. Si dovrà specificare nella direttiva "listen on" all'interno delle parentesi graffe, separando ogni indirizzo da un ";". 
+ [root@cellopc-mini etc]# vim named.cond
+ ...
+      listen-on port 53 { 127.0.0.1; 192.168.10.1; 192.168.10.2 }
+ ...
+E' possibile settare la direttiva "forward" in due modalità:
+* FORWARD ONLY: La richiesta viene passata al DNS server del nostro provider (o quello che abbiamo impostato), se lui non ha risposta restituiamo un errore.
+* FORWARD FIRST: Prima la richiesta viene passata al DNS del nostro provider, se questo non ha risposta vengono interrogati i root server. Conviene impostarlo a "forward first" sia perché in genere il DNS del nostro provider ci risponde piu' velocemente degli altri (anche avendo una buona cache), sia per generare meno traffico inutile in Internet. 
+Dopo aver verificato che la configurazione sia corretta si potrà verificare la sintassi dei file tramite il comando "named-checkconf.
+ [root@cellopc-mini ~]# chmod 644 /var/named/chroot/etc/named.conf
+ [root@cellopc-mini etc]# named-checkconf -z -t /var/named/chroot/
+ zone cello.local/IN: loaded serial 2011011901
+Se la sintassi è corretta startare il servizio named se non è attivo, e nel caso sia già attivo eseguire il reload dalla configurazione.
+ [root@cellopc-mini ~]# service named restart
+ Stopping named:                                            [  OK  ]
+ Starting named:                                            [  OK  ]
+Editare il file di configurazione dei server DNS sul nostro sistema (il file /etc/resolv.conf), impostando come unico nameserver l'indirizzo 127.0.0.1.
+ [root@cellopc-mini ~]# vim /etc/resolv.conf
+ nameserver 127.0.0.1
+
+Provando ora a richiedere la risoluzione del sito www.google.it la prima volta e campionando il tempo, la richiesta sarà di qualche secondo (nel nostro esempio quasi 8 secondi).
+<pre>[root@cellopc-mini ~]# time nslookup www.google.it
+Server:        127.0.0.1
+Address:    127.0.0.1#53
+Non-authoritative answer:
+www.google.it    canonical name = www.google.com.
+www.google.com    canonical name = www.l.google.com.
+Name:    www.l.google.com
+Address: 74.125.87.99
+Name:    www.l.google.com
+Address: 74.125.87.104
+real    0m7.718s
+user    0m0.009s
+sys    0m0.016s</pre>
+Verificando le successive volte il tempo di esecuzione sarà di pochi millisecondi, perchè la lookup successiva è stata mantenuta in cache.
+<pre>[root@cellopc-mini ~]# time nslookup www.google.it
+Server:        127.0.0.1
+Address:    127.0.0.1#53
+Non-authoritative answer:
+www.google.it    canonical name = www.google.com.
+www.google.com    canonical name = www.l.google.com.
+Name:    www.l.google.com
+Address: 74.125.87.104
+Name:    www.l.google.com
+Address: 74.125.87.99
+real    0m0.024s
+user    0m0.012s
+sys    0m0.008s</pre>
+Attivare poi il servizio named al boot per mantenere il servizio DNS in caso di riavvii del sistema.
+ [root@cellopc-mini ~]# chkconfig named on
+Per poter poi permettere le richieste di lookup interne è possibile configurare la direttiva "allow-query", specificando la lista di reti (o singoli hosts interni) che possono svolgere le richieste al nostro server DNS. risulta utile introdurre anche la direttiva "acl", che permette di creare dei gruppi di sottoreti che possono essere richiamate con facilità poi all'interno del file. Nel nostro esempio è stata creato il gruppo ACL "allowed_nets" che poi richiameremo successivamente negli hosts che possono eseguire le lookup.
+<pre>[root@cellopc-mini etc]# diff -ub named.conf.old named.conf
+--- named.conf.old    2010-12-23 13:30:18.129356667 +0100
++++ named.conf    2010-12-23 13:53:00.546357036 +0100
++acl allowed_nets { 192.168.10.0/24; 192.168.11.0/24; };
++
+-    allow-query     { localhost; };
++    allow-query     { localhost; allowed_nets; };
+     recursion yes;</pre>
+Dopo le modifiche eseguire il reload del servizio named per far caricare le nuove configurazioni.
+[root@cellopc-mini ~]# service named reload
+==Configurazione internal DNS==
+Dopo aver configurato un proxy DNS per una rete locale è possibile creare un servizio DNS per una rete locale ed un suo dominio associato. In questo modo la risoluzione all'interno del dominio "cello.local" verranno prese dalla configurazione interna, mentre tutto il resto verrà demandato al DNS esterno.<br />Nella configurazione del DNS verrà introdotta la direttiva "view" che permette di avere una configurazione separata in base al client che vengono intercettate dalle direttive "match-clients" e "match-destinations". Solitamente esistono le viste "internal" ed "external" che mantengono separate le configurazioni e verranno applicate le diverse opzioni in base al match degli indirizzi.<br /><div class="xoopsCode"><code><span style="color: #000000">
 <span style="color: #0000BB">
 <br /></span><span style="color: #007700">[</span><span style="color: #0000BB">root</span><span style="color: #007700">@</span><span style="color: #0000BB">cellopc</span><span style="color: #007700">-</span><span style="color: #0000BB">mini named</span><span style="color: #007700">]</span><span style="color: #FF8000"># vim /var/named/chroot/etc/named.conf
 <br /></span><span style="color: #0000BB">view </span><span style="color: #DD0000">"internal"
