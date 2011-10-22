@@ -5,8 +5,9 @@ __TOC__
 ==Cominciamo==
 installate come prima cosa i pacchetti sviluppo:
  # yum groupinstall "strumenti di sviluppo"
- # yum install kernel-devel[/code]
+ # yum install kernel-devel
 scaricate il pacchetto[http://linuxtv.org/hg/v4l-dvb/archive/tip.tar.gz uvc-video] e scompattatelo in $HOME/Scaricati.
+
 ==Modifichiamo il sorgente==
  $ gedit $HOME/Scaricati/v4l-dvb-abd3aac6644e/linux/drivers/media/video/uvc/uvc_video.c
 sosituite questa sezione:
