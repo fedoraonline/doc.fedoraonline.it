@@ -363,3 +363,6 @@ Quando si installa un proxy DNS server con BIND le lookup svolte verso DNS pubbl
 Oppure è possibile sfruttuare il comando rndc, che permette di invocare alcune operazioni sul demone named, senza dover forzatamente riavviare. Richiamando il comando rndc con l'opzione "flush", verrà svuotata la cache per tutte le zone sotto il controllo di named.
  [root@cellopc-mini ~]# rndc flush
 Dopo la pulizia le prime lookup inviate verso un server pubblico saranno un pochino lente (qualche secondo) ma poi verranno mostrate in tempi in ordine di millisecondi
+
+
+[[Categoria:Sistema]]
