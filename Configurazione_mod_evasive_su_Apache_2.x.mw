@@ -1,4 +1,4 @@
-In molti casi per creare disservizio su un sito internet si eseguono molteplici richieste in pochi secondi, in modo da far cadere il webserver che lo ospita. Questa tipologia di attacco viene chiamato Denial of Service (Dos) e si possono trovare maggiori dettagli su  [[http://it.wikipedia.org/wiki/Denial_of_service Wikipedia]].
+In molti casi per creare disservizio su un sito internet si eseguono molteplici richieste in pochi secondi, in modo da far cadere il webserver che lo ospita. Questa tipologia di attacco viene chiamato Denial of Service (Dos) e si possono trovare maggiori dettagli su  [http://it.wikipedia.org/wiki/Denial_of_service Wikipedia].
 E' possibile però prevenire questo tipo di attachi se si utilizza un webserver Apache 2.x tramite il modulo mod_evasive, che non fa altro che bloccare per un certo tempo un indirizzo IP che svolge un numero di richieste in un breve lasso di tempo. E' possibile inoltre lanciare dei comandi di sistema operativo, come ad esempio il lancio di drop lato iptables.
 Per prima cosa installare il pacchetto mod_evasive via yum.
  # yum install -y mod_evasive 
@@ -72,3 +72,5 @@ Si potrà modificare all'interno l'indirizzo IP e la porta dove svolgere la rich
  .
 Quando si lancia lo script verrà dato prima "HTTP/1.1 200 OK" e poi "HTTP/1.1 403 Forbidden" e questo significa che test ha funzionato correttamente.
 Provando a rilanciare subito lo script in base al valore del parametro "DOSBlockingPeriod" si verrà da prima buttati fuori dal webserver per le troppe richieste ed il periodo di spospensione.
+
+[[Categoria:Rete_e_Server]]
