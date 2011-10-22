@@ -1,21 +1,16 @@
 Alcuni produttori hanno pensato bene di montare al contrario la webcam in alcuni modelli di portatili per motivi di spazio.
 Il problema è di facile soluzione quando il modulo di gestione della cam prevede l'opzione "flip" che capovolge l'immagine, ma se il modulo di gestione è uvcvideo, allora siete nei guai, perchè questo modulo non prevede il rovesciamento dell'immagine.
 Fortunatamente potete applicare la seguente procedura , testata e verificata su Fedora 14 kernel 2.6.35.
-[b]Cominciamo[/b]
+__TOC__
+==Cominciamo==
 installate come prima cosa i pacchetti sviluppo:
-
-[code]# yum groupinstall "strumenti di sviluppo"
-# yum install kernel-devel[/code]
-scaricate il pacchetto:
-http://linuxtv.org/hg/v4l-dvb/archive/tip.tar.gz
-scompattatelo in $HOME/Scaricati.
-
-[b]Modifichiamo il sorgente[/b]
-
-[code]$ gedit $HOME/Scaricati/v4l-dvb-abd3aac6644e/linux/drivers/media/video/uvc/uvc_video.c[/code]
+ # yum groupinstall "strumenti di sviluppo"
+ # yum install kernel-devel[/code]
+scaricate il pacchetto[http://linuxtv.org/hg/v4l-dvb/archive/tip.tar.gz uvc-video] e scompattatelo in $HOME/Scaricati.
+==Modifichiamo il sorgente==
+ $ gedit $HOME/Scaricati/v4l-dvb-abd3aac6644e/linux/drivers/media/video/uvc/uvc_video.c
 sosituite questa sezione:
-
-[code]static void uvc_video_decode_data(struct uvc_streaming *stream,
+<pre>static void uvc_video_decode_data(struct uvc_streaming *stream,
         struct uvc_buffer *buf, const __u8 *data, int len)
 {
     struct uvc_video_queue *queue = &stream->queue;
@@ -37,10 +32,9 @@ sosituite questa sezione:
         uvc_trace(UVC_TRACE_FRAME, "Frame complete (overflow).\n");
         buf->state = UVC_BUF_STATE_READY;
     }
-}[/code]
+}</pre>
 con questa sezione:
-
-[code]static void uvc_video_decode_data(struct uvc_streaming *stream,
+<pre>static void uvc_video_decode_data(struct uvc_streaming *stream,
       struct uvc_buffer *buf, const __u8 *data, int len)
 {
    struct uvc_video_queue *queue = &stream->queue;
@@ -105,23 +99,22 @@ con questa sezione:
       uvc_trace(UVC_TRACE_FRAME, "Frame complete (overflow).\n");
       buf->state = UVC_BUF_STATE_DONE;
    }
-}[/code]
+}</pre>
 salvate, chiudete.
-
-[b]Compiliamo ed installiamo il modulo[/b]
+==Compiliamo ed installiamo il modulo==
 sempre da utente procediamo con la compilazione:
-
-[code]$ cd $HOME/Scaricati/v4l-dvb-abd3aac6644e/
-$ make[/code]
+ $ cd $HOME/Scaricati/v4l-dvb-abd3aac6644e/
+ $ make
 poi da root :
-
-[code]$ su
-password_di_root
-# modprobe -r uvcvideo
-# mv /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.old
-# cp $HOME/Scaricati/v4l-dvb-abd3aac6644e/v4l/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko
-# depmod -a[/code]
-[b]Terminiamo[/b]
+ $ su
+ password_di_root
+ # modprobe -r uvcvideo
+ # mv /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.old
+ # cp $HOME/Scaricati/v4l-dvb-abd3aac6644e/v4l/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko
+ # depmod -a
+==Terminiamo==
 date un reboot e godetevi la vostra cam.
 
-ringrazio l'utente [url=http://www.fedoraonline.it/modules/newbb/viewtopic.php?topic_id=14779&forum=32]Fedorista[/url] per aver testato la procedura.
+ringrazio l'utente Fedorista per aver testato la procedura.
+
+[[Categoria:Configurazione]]
