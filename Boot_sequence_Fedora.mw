@@ -202,14 +202,15 @@ La struttura di initramfs è la seguente:
 Il ''tree'' lo si potrà verificare direttamente sul proprio PC, qui sarebbe troppo esteso da pubblicare.<br>
 Dopo il caricamento del kernel e dell'initrd/initramfs in memoria verrà lanciato lo script "init" che eseguirà il mount di sysfs, tmpfs, proc e devpts con il caricamento di alcuni moduli per l'attivazione del kernel e quando avrà montato la root verrà eseguito uno switch tra le due root directory, passando il controllo di tutto al processo /sbin/init (che avrà pid 1).
 
-==INIT SCRIPTS==
-Il processo "/sbin/init" avrà pid pari ad 1 ed è da considerarsi il padre di tutti i processi che vengono lanciati dal sistema.
+==Init scripts==
+
+Il processo "/sbin/init" ha pid pari ad 1 ed è da considerarsi il padre di tutti i processi che vengono lanciati dal sistema.
 
  [code][root@cellopc-mini kernel]# ps -ef | grep /sbin/init
  
  root         1     0  0 09:11 ?        00:00:01 /sbin/init
 
-Il processo init non farà altro che leggere nel file /etc/inittab il runlevel contenuto nella riga "initdefaul" e da qui eseguirà lo start di tutti i processi marcati con S*, che sono contenuti nella directory "/etc/rc<N>.d" in ordine alfabetico.
+Il processo init non fa altro che leggere nel file /etc/inittab il runlevel contenuto nella riga "initdefault" e da qui eseguirà lo start di tutti i processi marcati con S*, che sono contenuti nella directory "/etc/rc<N>.d" in ordine alfabetico.
 
  [code][root@cellopc-mini rc3.d]# cat /etc/inittab 
  
@@ -240,6 +241,6 @@ Il processo init non farà altro che leggere nel file /etc/inittab il runlevel c
  lrwxrwxrwx. 1 root root 22 Oct 22 20:24 /etc/rc5.d/S99livesys-late -> ../init.d/livesys-late
  lrwxrwxrwx. 1 root root 11 Oct 22 20:18 /etc/rc5.d/S99rc-local -> ../rc.local
 
-Al termine del lancio di tutti gli script il sistema sarà up and running.
+Al termine del lancio di tutti gli script il sistema sarà up e running.
 
-[[Categoria:Sistema]]
+[[Categoria:Grub]]
