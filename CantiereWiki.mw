@@ -12,7 +12,7 @@ Qui sotto riportiamo la tabella esplicativa per una immediata identificazione vi
 | '''Da fare'''
 | {{StatoDaFare}} | Da fare
 |}
-Ti abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente da "Da fare" ad "In corso" ed infine a "Terminato".<br>Questi tre stati, si ripetono per le altrettante tre fasi della pubblicazione dell'articolo (Stesura, Modifica, Rilettura), anche se la modifica è utile anche per altri scopi (ad esempio l'aggiornamento di un file preesistente).
+Ti abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente da "Da fare" ad "In corso" ed infine a "Terminato".<br />Questi tre stati, si ripetono per le altrettante tre fasi della pubblicazione dell'articolo (Stesura, Modifica, Rilettura), anche se la modifica è utile anche per altri scopi (ad esempio l'aggiornamento di un file preesistente).
 
 == Articoli in corso di stesura ==
 
