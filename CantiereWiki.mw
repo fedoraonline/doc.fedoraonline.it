@@ -100,10 +100,12 @@ Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rile
 
 == Rilettura in corso ==
 
-Occorre utilizzare il template <tt>RiletturaArticolo</tt> :
+Come nelle precedenti sezione, anche qui occorre utilizzare un template, '''<tt>RiletturaArticolo</tt>'''''Corsivo'' :
  <nowiki>{{RiletturaArticolo|articolo=Titolo della guida|autore=NomeWiki|Rilettore=NomeWiki|stato=Stato}}</nowiki>
 
-Verifica di aggiungere la : [[:Categoria:Rilettura in corso]] senza rimuovere la categoria di appartenenza originaria della guida.
+E anche in questo caso occorre verificare di aggiungere la : <nowiki>[[:Categoria:Rilettura in corso]]</nowiki> senza rimuovere la categoria di appartenenza originaria della guida.<br />
+Gli articoli in questa sezione sono quelli che dovranno essere approvati dai redattori per la pubblicazione, oppure rigettate con mail '''riportante i motivi''' all'autore, oppure passate alla sezione [[CantiereWiki#Articoli_in_aggiornamento| articoli in aggiornamento]] per una revisione anche in questo caso con una mail all'autore '''che ne riporti i motivi'''.<br />
+Qualsiasi redattore può modificare il template prendendosi in carico una o più guide modificando il template, sostituendo cioè il punto interrogativo con il proprio ''NomeWiki'' (di login).
 
 {| {{TabellaBase}}
 ! Articolo
