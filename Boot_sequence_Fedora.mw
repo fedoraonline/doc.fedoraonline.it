@@ -1,43 +1,46 @@
-'''INTRODUZIONE'''<br />
+==Introduzione==
+
 All'avvio dei PC viene eseguita una serie di step per arrivare al caricamento del sistema operativo (Linux o Windows) ed in questa pagina verranno descritti a grandi linee tutti i passaggi svolti nella boot sequence di un sistema Linux.
-__TOC__
-==BIOS e POST==
+
+==Bios e Post==
+
 Il BIOS è il primo stadio del processo di avvio che viene avviato dall'accensione. Il BIOS, che risiede nella ROM è eseguito da un particolare indirizzo di memoria al quale è inizializzato, dall'accensione, il contatore di programma della CPU. In questa fase viene effettuata l'inizializzazione base dell'hardware POST (power on self test) che passa il controllo del sistema allo stadio successivo fornito dall'utente. Tipicamente vengono caricati in memoria i primi settori del primo dispositivo selezionato trovato (disco fisso, dischetto floppy, CD-ROM, ...) e viene eseguito questo codice iniziale che può essere una qualsiasi tra le cose seguenti.
 * Il codice del bootloader
 * Il codice del kernel del sistema operativo finale, se può essere contenuto in questo piccolo spazio.
 Tipicamente il sistema viene avviato dalla partizione specificata del disco fisso primario. 
 I primi 2 settori del disco fisso nei PC più datati contengono il master boot record (MBR). Le informazioni sulle partizioni del disco, inclusa la selezione per l'avvio sono memorizzate alla fine di questo MBR. Il primo codice boot loader eseguito dal BIOS occupa la parte restante di questo MBR.
 
-==BOOTLOADER (LILO/GRUB)==
-Il bootloader ha il compito di caricare il kernel (cuore del sistema operativo) e quest'ultimo invece caricherà il restante software necessario. 
-In Linux in precedenza veniva utilizzato il Lilo (Linux Loader) che aveva alcune limitazione nel suo utilizzo tra le quali:
-* permette di caricare fino a 16 selezioni differenti.
-* non può eseguire il boot tramite rete
-* non ha un'interfaccia interattiva con cui interagire
+==Bootloader (LILO/GRUB)==
+
+Il bootloader ha il compito di caricare il kernel (cuore del sistema operativo) e quest'ultimo invece caricherà il restante software necessario.<br>
+In Linux in precedenza veniva utilizzato Lilo (Linux Loader), che aveva alcune limitazioni nel suo utilizzo tra le quali:
+* permette di caricare fino a 16 selezioni differenti;
+* non può eseguire il boot tramite rete;
+* non ha un'interfaccia interattiva con cui interagire;
 * deve essere reinstallato da capo, ogni volta che viene modificato il file di configurazione.
-Negli anni successivi il grub di Linux, è diventato il bootloader più usato grazie alla sua portabilità verso altri sistemi, ed il Lilo è stato deprecato.
-Il Grub permette di avere diverse caratteristiche tra cui:
-* permette di caricare infinite selezioni differenti
-* ha un'interfaccia interattiva funzionale con cui interagire.
-* permette il boot da rete, ma anche da altri device come cd-rom, device USB, LVM o ISCSI.
+Negli anni successivi il Grub di Linux, è diventato il bootloader più usato grazie alla sua portabilità verso altri sistemi, e Lilo è stato deprecato.<br>
+Grub permette di avere diverse caratteristiche tra cui:
+* permette di caricare infinite selezioni differenti;
+* ha un'interfaccia interattiva funzionale con cui interagire;
+* permette il boot da rete, ma anche da altri device come cd-rom, device USB, LVM o ISCSI;
 * permette di caricare più sistemi operativi differenti. 
-La sua funzionalità più utile è quella di poter caricare non solo sistemi operativi proprietari, ma anche altri sistemi come Windows. 
-Infatti questo bootloader è stato pensato per diversi sistemi operativi e non solo per Linux.
-Le device viste dal grub non vengono nominate come in Linux, con la nomenclatura "sd..." ma utilizzano una particolare nomenclatura che può cambiare da sistema a sistema, infatti i nomi vengono associati in base alle informazioni passate dal bios. 
-Non è detto quindi che una device denominata "sda" dal sistema operativo, sia la prima unità che il grub nomina come "hd0". Ogni disco viene nominato "hd..", e il numero parte da zero mentre il secondo valore passato indica la partizione scritta sul disco. 
-E' possibile passare anche una partizione estesa del disco stesso. Per esempio la prima partizione di un disco è (hd0,0) mentre la prima partizione estesa sarà (hd0,4).
-Il grub non fa distinzione tra device IDE o SCSI ed utilizza delle nomenclatura anche per floppy (con la sigla "fd") e per cdrom (con la sigla "cd").
-==STAGE 1==
-Il grub ha diversi stage di caricamente che permettono l'avvio del sistema non appena il server viene avviato. Quando il BIOS esegue il posto va a leggere sul disco fisso il primo settore chiamato MBR (Master Boot Record), che contiene la tabella delle partizioni nei primi 63 byte, mentre i successivi 446 bytes vengono usati per caricare il primo stage del grub. In questo stage sono contenute le primi frazioni di codice da eseguire per il caricamento del kernel, ma non avendo lo spazio per contenere tutte le informazioni, viene richiamatao lo stage 1.5
+La sua funzionalità più utile è quella di poter caricare non solo sistemi operativi liberi, ma anche sistemi proprietari come Windows. 
+Le device viste da Grub non vengono nominate come in Linux, con la nomenclatura "sd..." ma utilizzano una particolare nomenclatura che può cambiare da sistema a sistema, infatti i nomi vengono associati in base alle informazioni passate dal bios. 
+Non è detto quindi che una device denominata "sda" dal sistema operativo, sia la prima unità che Grub nomina come "hd0". Ogni disco viene nominato "hd..", e il numero parte da zero, mentre il secondo valore passato indica la partizione scritta sul disco.<br>
+E' possibile passare anche una partizione estesa del disco stesso. Per esempio, la prima partizione di un disco è (hd0,0) mentre la prima partizione estesa sarà (hd0,4). Grub non fa distinzione tra device IDE o SCSI ed utilizza delle nomenclature anche per floppy (con la sigla "fd") e per cdrom (con la sigla "cd").
+
+==Stage 1==
+
+Grub ha diversi stage di caricamento che permettono l'avvio del sistema non appena il server viene avviato. Quando il BIOS viene eseguito va a leggere sul disco fisso il primo settore chiamato MBR (Master Boot Record), che contiene la tabella delle partizioni nei primi 63 byte, mentre i successivi 446 bytes vengono usati per caricare il primo stage di Grub. In questo stage sono contenute le primi frazioni di codice da eseguire per il caricamento del kernel, ma non avendo lo spazio per contenere tutte le informazioni, viene richiamatao lo stage 1.5
 
  [root@cellopc-mini grub]# file stage1
  
  stage1: x86 boot sector; GRand Unified Bootloader, stage1 version 0x3, GRUB version 0.94, code offset 0x48
 
-==STAGE 1.5==
-Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo del grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5. 
-Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. 
-Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
+==Stage 1.5==
+
+Dato che la dimensione del MBR non è abbastanza grande per contenere il codice completo di Grub, viene riservato lo spazio addiacente al MBR stesso (solitamente fino al primo cilindro) per caricare lo stage 1.5.<br>
+Questo stage è una fase intermedia per inizializzare il caricamento effettivo del kernel e permette di montare determinate tipologie di filesystem. Nel filesystem che verrà montato saranno contenute le immagini del kernel ed initrd per eseguire il boot del sistema.
  [root@cellopc-mini grub]# ls -l *stage1_5
  
  -rw-r--r--. 1 root root 13056 Nov 19 09:38 e2fs_stage1_5
@@ -56,7 +59,8 @@ Nel filesystem che verrà montato saranno contenute le immagini del kernel ed in
  e2fs_stage1_5: GRand Unified Bootloader stage1_5 version 3.2, identifier 0x2, GRUB version 0.97,
                                                             configuration file /boot/grub/stage2
 
-==STAGE 2==
+==Stage 2==
+
 Lo stage 2 risiede in una qualsiasi parte del disco, solitamente nella partizione /boot, grande 500 MB. 
 In questa partizione sono contenute tutte le informazioni, i kernel usati e soprattutto la lista dei kernel da utilizzare (file /boot/grub/menu.lst).
 
@@ -65,8 +69,9 @@ In questa partizione sono contenute tutte le informazioni, i kernel usati e sopr
  stage2: GRand Unified Bootloader stage2 version 3.2, installed partition 65535,identifier 0x0,GRUB version 0.97,
                                                                        configuration file (hd0,0)/grub/grub.conf
 
-==FILE MENU.LST==
-Il file menù.lst contiene diverse informazioni principali per il caricamento dei kernel.
+==Il file menu.lst==
+
+Il file menu.lst contiene diverse informazioni principali per il caricamento dei kernel.
 
  [cello@cellopc grub]$ cat /boot/grub/menu.lst
  
@@ -96,20 +101,21 @@ Il file menù.lst contiene diverse informazioni principali per il caricamento de
         kernel /vmlinuz-2.6.27.5-117.fc10.i686 ro root=UUID=f06adec0-e94a-4904-8f56-53168e6c8ecf rhgb quiet
         initrd /initrd-2.6.27.5-117.fc10.i686.img[/code]
 
-* splashimage (hdn,m)/grub/Name.xpm.gz è il file immagine di splash
-* default n è la voce di boot predefinita, scelta al termine del tempo per la selezione da parte dell'utente
-* timeout m tempo m in secondi per effettuare una selezione, prima che sia lanciata la predefinita
-* password -md5 str password cifrata di boot 'str'
-* title str stringa di titolo 'str' per una voce di boot
-* root (hdn,m) partizione basilare, dove è alloggiato il kernel
-* kernel /path ro root=/dev/device specifica l'immaginde del kernel che verrà caricata in memoria
-* initrd /initrd.img contiene l'initial ram disk da utilizzare
+* splashimage (hdn,m)/grub/Name.xpm.gz è il file immagine di splash;
+* default ''n'' è la voce di boot predefinita, scelta al termine del tempo per la selezione da parte dell'utente;
+* timeout ''m'' tempo ''m'' in secondi per effettuare una selezione, prima che sia lanciata la predefinita;
+* password -md5 str password cifrata di boot 'str';
+* title str stringa di titolo 'str' per una voce di boot;
+* root (hdn,m) partizione basilare, dove è alloggiato il kernel;
+* kernel /path ro root=/dev/device specifica l'immagine del kernel che verrà caricata in memoria;
+* initrd /initrd.img contiene l'initial ram disk da utilizzare.
 
-==VMLINUZ==
-Dopo che viene eseguita la scelta dello specifico kernel da caricare verrà letto per prima cosa il path del file vmlinuz associato alla voce "kernel" nel file /boot/grub/menu.lst. 
-Questo file è una semplice immagine del kernel che viene caricata in memoria per poter caricare tutti i moduli e componenti del filesystem di root temporaneo fornito dall' initrd o initramfs.
+==Vmlinuz==
+
+Dopo che viene eseguita la scelta dello specifico kernel da caricare verrà letto per prima cosa il path del file vmlinuz associato alla voce "kernel" nel file /boot/grub/menu.lst. Questo file è una semplice immagine del kernel che viene copiata in memoria per poter caricare tutti i moduli e componenti del filesystem di root temporaneo fornito da initrd o initramfs.<br>
 Oltre a questa immagine del kernel caricata in memoria, tra i parametri viene specificato anche quale sarà la root device che dovrà essere caricata per lanciare la fase di init.
-==INITRD e INITRAMFS==
+
+==Initrd e Initramfs==
 Oltre all'immagine del kernel viene caricata in memoria anche un'immagine del filesystem di root temporanea, che servirà al caricamento del vero filesystem di root. 
 Questo piccolo filesystem temporaneo permette di eseguire le primissime operazioni di boot senza dover accedere al vero filesystem di root, che verrà caricato in fasi successive. 
 Nella prime versioni del kernel 2.6 veniva utilizzato initrd (initial ram disk) cioè una semplice immagine di un filesystem ext2/ext3 che viene caricato nella ramdisk, quindi viene considerata come una vera e propria block device.
