@@ -1,12 +1,12 @@
 '''INTRODUZIONE'''<br />
-All'avvio dei sistemi viene eseguita una serie di step per arrivare al caricamento del sistema operativo (Linux o Windows) ed in questa pagina verranno descritti a grandi linee tutti i passaggi svolti nella boot sequence di un sistema Linux.
+All'avvio dei PC viene eseguita una serie di step per arrivare al caricamento del sistema operativo (Linux o Windows) ed in questa pagina verranno descritti a grandi linee tutti i passaggi svolti nella boot sequence di un sistema Linux.
 __TOC__
 ==BIOS e POST==
-Il BIOS è il primo stadio del processo di avvio che viene avviato dall'accensione. Il BIOS, che risiede nella ROM è eseguito da un particolare indirizzo di memoria al quale è inizializzato, dall'accensione, il contatore di programma della CPU. In questa fase viene effettuata l'inizializzazione base dell'hardware POST (power on self test) e passa il controllo del sistema allo stadio successivo fornito dall'utente. Tipicamente vengono caricati in memoria i primi pochi settori del primo dispositivo selezionato trovato (disco fisso, dischetto floppy, CD-ROM, ...) e viene eseguito questo codice iniziale che può essere una qualsiasi tra le cose seguenti.
+Il BIOS è il primo stadio del processo di avvio che viene avviato dall'accensione. Il BIOS, che risiede nella ROM è eseguito da un particolare indirizzo di memoria al quale è inizializzato, dall'accensione, il contatore di programma della CPU. In questa fase viene effettuata l'inizializzazione base dell'hardware POST (power on self test) che passa il controllo del sistema allo stadio successivo fornito dall'utente. Tipicamente vengono caricati in memoria i primi settori del primo dispositivo selezionato trovato (disco fisso, dischetto floppy, CD-ROM, ...) e viene eseguito questo codice iniziale che può essere una qualsiasi tra le cose seguenti.
 * Il codice del bootloader
 * Il codice del kernel del sistema operativo finale, se può essere contenuto in questo piccolo spazio.
 Tipicamente il sistema viene avviato dalla partizione specificata del disco fisso primario. 
-I primi 2 settori del disco fisso nei PC vecchi contengono il master boot record (MBR). Le informazioni sulle partizioni del disco, inclusa la selezione per l'avvio sono memorizzate alla fine di questo MBR. Il primo codice boot loader eseguito dal BIOS occupa la parte restante di questo MBR.
+I primi 2 settori del disco fisso nei PC più datati contengono il master boot record (MBR). Le informazioni sulle partizioni del disco, inclusa la selezione per l'avvio sono memorizzate alla fine di questo MBR. Il primo codice boot loader eseguito dal BIOS occupa la parte restante di questo MBR.
 
 ==BOOTLOADER (LILO/GRUB)==
 Il bootloader ha il compito di caricare il kernel (cuore del sistema operativo) e quest'ultimo invece caricherà il restante software necessario. 
