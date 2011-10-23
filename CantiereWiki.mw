@@ -30,7 +30,7 @@ dove (tutti separati dal pipe (il simbolo '''|''')):
 **''InCorso''
 **''Terminato''
 *'''<nowiki>}}</nowiki>''' è il markup di chiusura del template.
-Salvando, verrà inserita tra quelle di stesura la nuova guida, segnalata con il link rosso (come già detto) selezionando il quale si aprirà la pagina di creazione/modifica per l'inizio dei lavori.<br />
+Salvando la guida, essa verrà inserita tra quelle in stesura, evidenziata con il link rosso (come già detto) selezionando il quale si aprirà la pagina di creazione/modifica per l'inizio dei lavori.<br />
 Innanzitutto, occorre scrivere in fondo alla guida in corso il markup <nowiki>[[:Categoria:Scrittura in corso]]</nowiki> come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.<br />
 In questa sezione non ci saranno articoli in riscrittura, non occorre aggiornare le guide obsolete (in tutto o in parte), sono da riscrivere ex-novo; tranne in rari casi, concordati comunque in Mailing List da inserire nella categoria [[CantiereWiki#Articoli_in_corso_di_aggiornamento|articoli in corso di aggiornamento]].<br />
 Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' occorrerà inserirlo tra le [[CantiereWiki#Rilettura_in_corso|riletture in corso]].
