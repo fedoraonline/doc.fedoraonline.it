@@ -10,7 +10,7 @@ Il BIOS è il primo stadio del processo di avvio che viene avviato dall'accensio
 Tipicamente il sistema viene avviato dalla partizione specificata del disco fisso primario. 
 I primi 2 settori del disco fisso nei PC più datati contengono il master boot record (MBR). Le informazioni sulle partizioni del disco, inclusa la selezione per l'avvio sono memorizzate alla fine di questo MBR. Il primo codice boot loader eseguito dal BIOS occupa la parte restante di questo MBR.
 
-==Bootloader (LILO/GRUB)==
+==Bootloader (Lilo/Grub)==
 
 Il bootloader ha il compito di caricare il kernel (cuore del sistema operativo) e quest'ultimo invece caricherà il restante software necessario.<br>
 In Linux in precedenza veniva utilizzato Lilo (Linux Loader), che aveva alcune limitazioni nel suo utilizzo tra le quali:
