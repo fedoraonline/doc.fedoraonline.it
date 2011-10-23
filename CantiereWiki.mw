@@ -17,7 +17,7 @@ Questi tre stati, si ripetono per le altrettante tre fasi della pubblicazione de
 
 == Articoli in corso di stesura ==
 
-Dopo aver proposto l'articolo alla Mailing List dei redattori , come ben specificato nell'articolo [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|"contribuisci"]], per inserire l'articolo accettato occorre utilizzare il template '''''<tt>AggiungiArticolo</tt>''''' (l'aggiunta va fatta selezionando il tasto modifica di questa sezione oppure #REDIRECT [[http://wikitest.fedoraonline.it/index.php?title=CantiereWiki&action=edit&section=2]]) che si presenta così:
+Dopo aver proposto l'articolo alla Mailing List dei redattori , come ben specificato nell'articolo [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|"contribuisci"]], per inserire l'articolo accettato occorre utilizzare il template '''''<tt>AggiungiArticolo</tt>''''' (l'aggiunta va fatta selezionando il tasto modifica di questa sezione oppure #REDIRECT [[CantiereWiki&action=edit&section=2]]) che si presenta così:
  <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
 dove (tutti separati dal pipe (il simbolo '''|''')):
 *'''<nowiki>{{</nowiki>''' è il markup per il template e non è da modificare;
