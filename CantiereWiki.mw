@@ -30,8 +30,8 @@ dove (tutti separati dal pipe (il simbolo '''|''')):
 **''InCorso''
 **''Terminato''
 *'''<nowiki>}}</nowiki>''' è il markup di chiusura del template.
-Salvando la pagina, troverete inserita tra quelle di stesura, la vostra guida segnalata con il link rosso (come già detto) selezionando il quale aprirete la pagina di creazione/modifica per l'inizio dei lavori.<br />
-Verifica di aver inserito in fondo alla guida in corso il markup <nowiki>[[:Categoria:Scrittura in corso]]</nowiki> come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
+Salvando la pagina, verrà inserita tra quelle di stesura, la nuova guida, segnalata con il link rosso (come già detto) selezionando il quale si aprirà la pagina di creazione/modifica per l'inizio dei lavori.<br />
+Innanzitutto, occorre inserire in fondo alla guida in corso il markup <nowiki>[[:Categoria:Scrittura in corso]]</nowiki> come unica categoria, e non la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.
 {| {{TabellaBase}}
 ! Fonte
 ! Articolo
