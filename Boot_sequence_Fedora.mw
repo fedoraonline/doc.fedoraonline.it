@@ -116,13 +116,11 @@ Dopo che viene eseguita la scelta dello specifico kernel da caricare verrà lett
 Oltre a questa immagine del kernel caricata in memoria, tra i parametri viene specificato anche quale sarà la root device che dovrà essere caricata per lanciare la fase di init.
 
 ==Initrd e Initramfs==
-Oltre all'immagine del kernel viene caricata in memoria anche un'immagine del filesystem di root temporanea, che servirà al caricamento del vero filesystem di root. 
-Questo piccolo filesystem temporaneo permette di eseguire le primissime operazioni di boot senza dover accedere al vero filesystem di root, che verrà caricato in fasi successive. 
-Nella prime versioni del kernel 2.6 veniva utilizzato initrd (initial ram disk) cioè una semplice immagine di un filesystem ext2/ext3 che viene caricato nella ramdisk, quindi viene considerata come una vera e propria block device.
-Per esigenze di sviluppo è stato creato initramfs (inital ram filesystem) cioè un archivio cpio compresso che viene caricato in tmpfs. 
-La prima differenza tra initrd e initramfs è che la dimensione del secondo è molto minore del primo e quindi viene caricato prima durante la fase di boot. Inoltre initramfs viene caricato in tmpfs, quindi la dimensione può essere modificata dinamicamente mentre per quanto riguarda il caricamento di initrd nella ramdisk, risulta molto più difficile da modificare. 
-Sempre per quanto riguarda initrd si dovrà avere un modulo per caricare il filesystem nella ramdisk. 
-Inoltre dato che initrd è un filesystem scompattato nella ramdisk si è legati al vero filesystem di root che viene specificato nel parametro "root=", mentre con initramfs non esiste alcun dispositivo legato all'immagine decompressa nella tmpfs, quindi si può montare il filesystem di root vero e proprio via rete o tramite altri metodi (iscsi, SAN,...). 
+Oltre all'immagine del kernel viene caricata in memoria anche un'immagine del filesystem di root temporanea, che servirà al caricamento del vero filesystem di root. Questo piccolo filesystem temporaneo permette di eseguire le primissime operazioni di boot senza dover accedere al vero filesystem di root, che verrà caricato in una fase successiva.<br> 
+Nella prime versioni del kernel 2.6 veniva utilizzato initrd (initial ram disk), una semplice immagine di un filesystem ext2/ext3 che viene caricato nella ramdisk, per poi essere considerata come una vera e propria block device.<br>
+Per esigenze di sviluppo è stato creato initramfs (inital ram filesystem) cioè un ''archivio cpio'' compresso che viene caricato in tmpfs. 
+La prima differenza tra initrd e initramfs è che la dimensione del secondo è molto minore del primo e quindi viene caricato prima durante la fase di boot. Inoltre initramfs viene caricato in tmpfs, motivo per cui la dimensione può essere modificata dinamicamente mentre per quanto riguarda il caricamento di initrd nella ramdisk, risulta molto più difficile da modificare. <br>
+Sempre per quanto riguarda initrd si dovrà avere un modulo per caricare il filesystem nella ramdisk. Inoltre, dato che initrd è un filesystem scompattato nella ramdisk si è legati al vero filesystem di root che viene specificato nel parametro "root=", mentre con initramfs non esiste alcun dispositivo legato all'immagine decompressa nella tmpfs, quindi si può montare il filesystem di root vero e proprio via rete o tramite altri metodi (iscsi, SAN,...). 
 La struttura di initrd è la seguente:
 
  [root@cw-spmi-mgm01 test]# file initrd-2.6.18-92.el5.img
@@ -201,8 +199,8 @@ La struttura di initramfs è la seguente:
  initramfs-2.6.35.6-48.fc14.i686.img: gzip compressed data, from Unix, last modified: Mon Nov 22 18:45:23 2010, 
                                                                                                 max compression
 
-Il tree lo potete verificare direttamente sul vostro PC, qui sarebbe troppo esteso da pubblicare.
-Dopo il caricamento del kernel e dell'initrd/initramfs in memoria verrà lanciato lo script "init" che eseguirà il mount di sysfs, tmpfs, proc e devpts con il caricamento di alcuni moduli per l'attivazione del kernel ed quando avrà montato la root verrà eseguito uno switch tra le due root directory e verrà passato il controllo di tutto al processo /sbin/init (che avrà pid 1).
+Il ''tree'' lo si potrà verificare direttamente sul proprio PC, qui sarebbe troppo esteso da pubblicare.<br>
+Dopo il caricamento del kernel e dell'initrd/initramfs in memoria verrà lanciato lo script "init" che eseguirà il mount di sysfs, tmpfs, proc e devpts con il caricamento di alcuni moduli per l'attivazione del kernel e quando avrà montato la root verrà eseguito uno switch tra le due root directory, passando il controllo di tutto al processo /sbin/init (che avrà pid 1).
 
 ==INIT SCRIPTS==
 Il processo "/sbin/init" avrà pid pari ad 1 ed è da considerarsi il padre di tutti i processi che vengono lanciati dal sistema.
