@@ -77,27 +77,6 @@ In questa sezione potranno anche essere aggiunte dagli utenti le guide, ritenute
 Non occorre aggiornare le guide obsolete, occorre riscriverle ex-novo; tranne in rari casi concordati comunque in Mailing List da inserire nella categoria seguente [[CantiereWiki#Articoli_in_corso_di_aggiornamento|articoli in corso di aggiornamento]].<br />
 Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' occorrerà inserirlo tra le [[CantiereWiki#Rilettura_in_corso|riletture in corso]].
 
-== Articoli in corso di aggiornamento ==
-
-Qualora l'articolo fosse in stato di "Terminato", nella sezione precedente ([[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]]) ma dovesse essere stato ritenuto "non pubblicabile" in fase di rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]), esso verrà inserite in questa sezione dai redattori che provvederanno ad inviare una mail all'autore per richiedere il completamento o la correzione per quanto rilevato.<br />
-L'autore potrà quindo trovare qui il proprio articolo pronto per essere modificato/corretto per poi venire riproposto alla pubblicazione.<br />
-Come detto in precedenza, in questa sezione trovano posto anche le guide che in Mailing List si è stabilito che possono essere aggiornate anzichè riscritte.<br />
-Occorre utilizzare il template '''''<tt>ModificaArticolo</tt>''''' (per la spigazione del markup si rimanda a quanto precisato in [[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]]) :
- <nowiki>{{ModificaArticolo|articolo=Titolo della guida|autore=NomeWiki|responsabile=NomeWiki|data=data|stato=stato}}</nowiki>
-
-Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> senza rimuovere la categoria di appartenenza originaria della guida.
-
-{| {{TabellaBase}}
-! Articolo
-! Autore originale
-! Responsabile della modifica
-! Data
-! Stato
-{{ModificaArticolo|articolo=inserire il titolo|autore=NomeCognome|responsabile=NomeCognome|data=19/10/2011|stato=DaFare}}
-|}
-
-Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione seguente.
-
 == Rilettura in corso ==
 
 Come nelle precedenti sezione, anche qui occorre utilizzare un template, '''''<tt>RiletturaArticolo</tt>''''':
@@ -138,3 +117,24 @@ Qualsiasi redattore può modificare il template prendendosi in carico una o più
 |}
 
 [[Categoria:FedoraOnline]]
+
+== Articoli in corso di aggiornamento ==
+
+Qualora l'articolo fosse in stato di "Terminato", nella sezione precedente ([[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]]) ma dovesse essere stato ritenuto "non pubblicabile" in fase di rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]), esso verrà inserite in questa sezione dai redattori che provvederanno ad inviare una mail all'autore per richiedere il completamento o la correzione per quanto rilevato.<br />
+L'autore potrà quindo trovare qui il proprio articolo pronto per essere modificato/corretto per poi venire riproposto alla pubblicazione.<br />
+Come detto in precedenza, in questa sezione trovano posto anche le guide che in Mailing List si è stabilito che possono essere aggiornate anzichè riscritte.<br />
+Occorre utilizzare il template '''''<tt>ModificaArticolo</tt>''''' (per la spigazione del markup si rimanda a quanto precisato in [[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]]) :
+ <nowiki>{{ModificaArticolo|articolo=Titolo della guida|autore=NomeWiki|responsabile=NomeWiki|data=data|stato=stato}}</nowiki>
+
+Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> senza rimuovere la categoria di appartenenza originaria della guida.
+
+{| {{TabellaBase}}
+! Articolo
+! Autore originale
+! Responsabile della modifica
+! Data
+! Stato
+{{ModificaArticolo|articolo=inserire il titolo|autore=NomeCognome|responsabile=NomeCognome|data=19/10/2011|stato=DaFare}}
+|}
+
+Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione seguente.
