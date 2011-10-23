@@ -24,7 +24,7 @@ dove (tutti separati dal pipe (il simbolo '''|''')):
 *'''AggiungiArticolo''' è il nome del template da richiamare, anch'esso da non modificare;
 *'''fonte=[url titolo]<nowiki><br /></nowiki> [url2 titolo2]''' gli eventuali indirizzo web della fonte da cui quell'articolo è scaturito (se più di uno, il <nowiki><br /></nowiki> vi permette di inserirli su più righe); se non ce ne fossero basta non inserire nulla dopo ''fonte='' che invece deve essere sempre presente;
 *'''articolo=Titolo della Guida''' dove "Titolo della Guida" deve essere sostituito con il titolo che avete scelto per la vostra guida. Ciò creerà il link rosso che andrete a selezionare per cominciare la redazione dell'articolo.
-*'''autore=NomeWiki''' dovrete andare a sostituire NomeWiki con il vostro nome inteso come ''NomeCogmome'', in relazione al vostro login.
+*'''autore=NomeWiki''' dovrete andare a sostituire NomeWiki con il vostro nome inteso come ''NomeCognome'', in relazione al vostro login.
 *'''stato=stato''' dovrete definire l'avanzamento dei lavori inserendo (al posto di "stato") uno di questi tre paramentri obbligatori:
 **''DaFare''
 **''InCorso''
