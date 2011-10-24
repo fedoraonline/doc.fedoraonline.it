@@ -1,0 +1,17 @@
+__TOC__
+== Introduzione ==
+
+DropxBox è un applicativo che permette di caricare su uno spazio disco sul web i file che vogliamo, in modo da porterli condividere con altri utenti (registrati!!), potendo impostare delle grant di accesso sulle varie directory create.<br />
+Per potersi registrare al sito e poter gestire online le proprie share si può andare sul sito https://www.dropbox.com/home . Viene messo disposizione gratuitamente uno spazio disco da 2 GB ma si può attivare anche più spazio, previo pagamento di una quota mensile.
+
+== Installazione ==
+
+Dopo aver reperito le informazioni è possibile installare un client sul proprio PC Fedora, che permette la sincronizzazione automatica dei file, senza dover necessariamente accedere via web (http).<br />
+Il pacchetto per la propria distro si può scaricare cliccando su [https://www.dropbox.com/downloading?src=index questo link], dopodichè si installa l'RPM manualmente:
+
+ [root@cellopc-mini Downloads]# rpm -ivh nautilus-dropbox-0.6.3-1.fedora.i386.rpm 
+
+Ad installazione terminata si può lanciare l'applicazione dal menù delle applicazioni, ovvero ''Internet > DropxBox'' e seguire il wizard che viene proposto per la creazione di un nuovo utente ed il cambio della directory che verrà sincronizzata.<br />
+DropBox crea la directory ''$HOME/Dropbox'', che verrà "syncata" automaticamente se l'applicazione è running, e sposta dei file o crea nuove directory sotto quel path in fase di aggiornamento.
+
+[[Categoria:Internet]]
