@@ -62,7 +62,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Ramfs e Tmpfs|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Tutti i tag RPM|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Tunnel criptato via SSH|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Dropbox|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Dropbox|autore=RobertMayr|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora *|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Controllo del "SELinux context" delle librerie|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Estensioni Yum|autore=RobertMayr|stato=DaFare}}
