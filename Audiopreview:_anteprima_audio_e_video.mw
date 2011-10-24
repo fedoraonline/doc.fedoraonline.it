@@ -28,18 +28,18 @@ Dopodichè bisogna spostarsi nella directory dove è stato scaricato il file, da
 
 == Utilizzo ==
 
-Ora che il tool è installato vediamo qualche esempio:
-
-# Ascoltare un anteprima di 20" di un set di mp3
+Ora che il tool è installato si vede qualche esempio:
+<ol>
+<li> Ascoltare un anteprima di 20" di un set di mp3</li>
 
  $ audiopreview -d 20 *mp3
 
-# Ascoltare un anteprima di 60" di due radio (due radio nazionali a caso) in streaming:
+<li> Ascoltare un anteprima di 60" di due radio (due radio nazionali a caso) in streaming:</li>
 
  $ audiopreview -d 60 mms://151.1.245.36/rtl102.5lq/ mms://fastreal.fastweb.it/RDS
 
-# Vedere un anteprima di 5", senza audio, dall'inizio di ogni file avi contenuto nella directory:
+<li> Vedere un anteprima di 5", senza audio, dall'inizio di ogni file avi contenuto nella directory:</li>
 
  $ audiopreview --no-audio -d 5 -p 0 *.avi
-
+</ol>
 [[Categoria:Multimedia]]
