@@ -11,7 +11,7 @@ A questo punto si può iniziare con l'installazione.
 
 == Installazione ==
 
-Per prima cosa scarichiamo il file sorgente compresso:
+Per prima cosa si scarica il file sorgente compresso:
 
  $ wget http://audiopreview.codealpha.net/dl.php?file=audiopreview-0.6.tar.gz
 
