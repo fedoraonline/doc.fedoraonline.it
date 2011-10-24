@@ -33,16 +33,17 @@ Nella sezione [[Convenzioni_di_scrittura|convenzioni di scrittura]] si possono t
 Se si ha già una idea per un nuovo articolo o per l'aggiornamento di uno obsoleto, l'inizio è sempre proporlo in Mailing List dove tutti gli iscritti (redattori) possono analizzare la proposta e, nel caso, discuterla.<br />
 Se, invece è necessario un periodo di apprendistato per acquisire la confidenza nell'utilizzo del wiki e delle convenzioni di scrittura, si può iniziare controllando i lavori in attesa di rilettura per l'approvazione o per il rigetto come spiegato in [[CantiereWiki#Rilettura_in_corso|CantiereWiki]].
 
-==Prerequisiti per la creazione o la modifica di un nuovo articolo==
-Se hai un'idea di una nuova guida o di un tutorial potresti scriverla seguendo i seguenti step:
-# Invia la tua proposta alla Mailing List. In questo modo anche altri utenti potranno commentare la tua proposta.
-# Se la guida viene accettata puoi iniziare a scrivere.
-# Inserisci la tua guida nella pagina del [[CantiereWiki]]. Questo inserimento automaticamente creerà un link alla pagina della tua guida.
-# In questa fase non dovete indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (nota i due punti davanti alla parola 'Categoria')
-# Finchè è in lavorazione indica la categoria attuale di appartenenza della tua guida, come descritto nel [[CantiereWiki]].
-# Attraverso la ML si potrà chiedere aiuto su formattazione, contenuto o correzione delle guide.
-# Una volta terminata aggiungi la tua guida alla tabella RiletturaInCorso, presente nel [[CantiereWiki]]. Ricordati anche di indicare che la guida è 'terminata', nella tabella 'RedazioneInCorso'.
-# Un altro redattore decide di rileggere la guida e lo dichiara nel [[CantiereWiki]]. Sarà lui a pubblicare la guida, togliendo la nota 'InCorso' e inserendola nella categoria definitiva.
+==Processo per la creazione o la modifica di un nuovo articolo==
+Nel caso di proposta di una nuova guida o di un tutorial, i passi da seguire sono:
+# Inviare la proposta alla Mailing List. In questo modo anche altri utenti potranno commentarla;
+# Se la guida viene accettata è possibile iniziare a scriverla;
+# Inserire la tua guida nella pagina del [[CantiereWiki]], come spiegato nella sezione dedicata agli [[CantiereWiki#Articoli_in_corso_di_stesura|articoli in corso di stesura]]. Questo inserimento automaticamente creerà un link (rosso) alla pagina della  guida;
+# In questa fase non si deve indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (notare i due punti davanti alla parola 'Categoria', che ne indicato lo stato di non pubblicazione);
+# Finchè è in lavorazione è necessario indicate lo stato attuale della guida, come descritto nel [[CantiereWiki]];
+# Attraverso la ML si potrà chiedere aiuto su formattazione, contenuto o correzione delle guide;
+# Una volta terminata occorre aggiungere la guida alla tabella RiletturaInCorso, presente nel CantiereWiki alla sezione [[CantiereWiki#Rilettura_in_corso|rilettura in corso]]. Occorre anche ricordarsi di indicare che la guida è 'terminata', nella tabella relativa allo stato;
+# Un altro redattore, apponendo il proprio nome nella colonna "rilettore" decide di rileggere la guida. Sarà lui a pubblicare la guida, togliendo la nota 'InCorso' e inserendola nella categoria definitiva, fatto salvo l'eventuale rigetto totale o parziale della stessa, in quest'ultimo caso inserendola nella sezione dedicata agli [[CantiereWiki#Articoli_in_corso_di_aggiornamento|articoli in corso di aggiornamento]].<br />
+Per una spiegazione più approfondita e dettagliata dell'iter delle guide, si rimanda al [[CantiereWiki]]
 
 ==Come scrivere?==
 
