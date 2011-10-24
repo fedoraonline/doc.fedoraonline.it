@@ -1,8 +1,11 @@
-Premetto che invio questa mia pseudo-guida ma ci sono parecchi "ma" e "se"...
+== Introduzione ==
 
-Allora, l'idea e' creare un dvd di installazione per fedora con i pacchetti il piu' possibile aggiornati (repos "updates") e partendo da un'installazione gia' esistente di fedora.
+Premetto che invio questa mia pseudo-guida ma ci sono parecchi "ma" e "se"...<br>
+Allora, l'idea e' creare un dvd di installazione per Fedora con i pacchetti il piu' possibile aggiornati (repo "updates") e partendo da un'installazione gia' esistente di Fedora.
 
-Quanti di voi hanno gia' usato "livecd-creator" sanno che e' necessario un file di "kickstart". La mia idea malata e' fare in modo che il file di kickstart venga generato in maniera automatica partendo dai pacchetti rpm gia' installati sulla propria macchina...
+Chi ha gia' usato "livecd-creator" sa che e' necessario un file di "kickstart". L'idea e' fare in modo che il file di kickstart venga generato in maniera automatica, partendo dai pacchetti rpm gia' installati sulla propria macchina...
+
+== Lo script ==
 
 Lo script in realta' e' in fase pre-alpha (e probabilmente MAI funzionera'), ma lo posto comunque perche' me lo sono inventato oggi (e' stato divertente...) e non so ne' QUANTO ne' QUANDO mai potro' rimetterci mano per fare in modo che sia quantomeno accettabile! Quindi se qualcuno vorra' divertirsi prendendo spunto da quello che ho scritto, sara' liberissimo di farlo .
 {{Warning|Questa guida NON è testata e potrebbe contenere molti errori! Se non si è sicuri di quello che si fa il consiglio è quello di NON seguirla!}}
