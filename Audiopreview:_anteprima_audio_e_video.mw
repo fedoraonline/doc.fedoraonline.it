@@ -1,3 +1,4 @@
+__TOC__
 == Introduzione ==
 
 Audiopreview è un tool avviabile da terminale che permette di ascoltare o vedere delle anteprime di file multimediali. Utilizza i codec gstreamer quindi prima di compilare e installare, bisogna fornirgli le librerie necessarie perché funzioni.
