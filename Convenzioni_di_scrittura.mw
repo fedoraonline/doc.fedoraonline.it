@@ -1,8 +1,20 @@
 Questa guida ti aiuterà a scrivere correttamente nuovi articoli sul nostro wiki, indicandoti le convenzioni alle quali attenersi.
-
 {{Warning|E' importante mantenere una certa uniformità nella redazione della documentazione del wiki!}}
 
+==Creare una nuova pagina==
+
+Per creare una nuova pagina esistono vari modi:
+* creare un link su una pagina esistente: per farlo devi includere il nome del link tra due parentesi quadre, come in questo <nowiki>[[esempio]]</nowiki>. Verrà creato un link rosso, che ti porterà ad una nuova pagina.
+* scrivere il titolo della nuova pagina direttamente nella barra degli indirizzi del browser. Per esempio potresti sostituire nell'indirizzo di http://doc.fedoraonline.it/wiki/Contribuisci la parola << Contribuisci >> con il titolo della nuova pagina da creare.
+* una buona guida dovrebbe iniziare con una introduzione, nella quale si presenta l'argomento e lo scopo della stessa. A questo scopo comincia con una sezione <nowiki>== Introduzione ==</nowiki>.
+* Le fonti utilizzate vanno inserite in fondo alla pagina, raccogliendole sotto la voce <nowiki>== Bibliografia ==</nowiki>.
+* Nelle sezioni della guida non andare oltre il quarto livello
+* Non abbiamo problemi di spazio, per cui evita abbreviazioni o parole sincopate: non verranno accettati.
+* È buona norma inserire le specifiche tecniche all’inizio della guida, come la versione Fedora utilizzata o qualche specifica hardware.
+* È '''obbligatorio inserire la categoria finale di destinazione''', oltre a quella di appartenenza durante la scrittura (da fare, in corso, terminata), altrimenti la guida non sarà accessibile dalla pagina principale.
+
 == Toolbar ==
+
 Dando un primo sguardo alla pagina risaltano, sul bordo superiore dell'area di scrittura, i tasti con i quali avrai molto a che fare e che ti saranno molto utili durante la scrittura (la toolbar).<br>
 
 [[File:toolbar.jpg|left|toolbar]]<br><br>
@@ -37,6 +49,7 @@ a così "<nowiki>selezioni la frase e premi il pulsante per toglierne la formatt
 |}
 
 == Indice ==
+
 L'indice (TOC - Table Of Contents) viene creato automaticamente nel momento in cui inserisci nel documento almeno quattro intestazioni. Qualora si creasse la necessità di doverne creare uno con un numero di voci inferiore, devi forzare mediawiki nel generarlo.
 Nel momento in cui crei una intestazione, in effetti segnali a mediawiki che stai creando un indice.
 In automatico questo indice viene inserito in alto a sinistra, ma puoi variare quasi a piacimento la sua posizione.
