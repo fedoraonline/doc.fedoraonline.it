@@ -80,4 +80,4 @@ Stando in tail sui log /var/log/messages e /var/log/lvmtest.log del server si no
  ==> /var/log/lvmtest.log <==
  May  4 14:21:18 lvmtest root: test rsyslog
 
-[[Categoria:Sistema]]
+[[Categoria:Rete_e_Server]]
