@@ -36,7 +36,9 @@ Se, invece è necessario un periodo di apprendistato per acquisire la confidenza
 
 ==Processo per la creazione o la modifica di un nuovo articolo==
 Nel caso di proposta di una nuova guida o di un tutorial, i passi da seguire sono:
-# Inviare la proposta alla Mailing List. In questo modo anche altri utenti potranno commentarla;
-# Se la guida viene accettata è possibile iniziare a scriverla;
-# Inserire la tua guida nella pagina del [[CantiereWiki]], come spiegato nella sezione dedicata agli [[CantiereWiki#Articoli_in_corso_di_stesura|articoli in corso di stesura]]. Questo inserimento automaticamente creerà un link (rosso) alla pagina della  guida;
-# In questa fase non si deve indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (notare i due punti davanti alla parola 'Categoria', che ne indicato lo stato di non pubblicazione).
+# inviare la proposta alla Mailing List. In questo modo anche altri utenti potranno commentarla;
+# se la guida viene accettata è possibile iniziare a scriverla;
+# inserire la tua guida nella pagina del [[CantiereWiki]], come spiegato nella sezione dedicata agli [[CantiereWiki#Articoli_in_corso_di_stesura|articoli in corso di stesura]]. Questo inserimento automaticamente creerà un link (rosso) alla pagina della  guida;
+# in questa fase non si deve indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (notare i due punti davanti alla parola 'Categoria', che ne indicato lo stato di non pubblicazione);
+# tenere sempre presente le nostre [[Convenzioni_di_scrittura|convenzioni di scrittura]];
+# cominciare con il nostro [[CantiereWiki|cantiere wiki]].
