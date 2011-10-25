@@ -12,12 +12,12 @@ Qui sotto riportiamo la tabella esplicativa per una immediata identificazione vi
 | '''Da fare'''
 | {{StatoDaFare}} | Da fare
 |}
-Abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente da "Da fare" ad "In corso" ed infine a "Terminato".<br />
+Abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente, da "Da fare" ad "In corso" ed infine a "Terminato".<br />
 Questi tre stati, si ripetono per le altrettante tre fasi della pubblicazione dell'articolo (Stesura, Modifica, Rilettura), anche se la modifica è utile anche per altri scopi (ad esempio l'aggiornamento di un file preesistente).
 
 == Articoli in corso di stesura ==
 
-Dopo aver proposto l'articolo alla Mailing List dei redattori , come ben specificato nell'articolo [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|"contribuisci"]], e dopo essere stato accettato, occorre inserirlo in questo Cantiere Wiki utilizzando il template '''''<tt>AggiungiArticolo</tt>''''' (l'aggiunta va fatta selezionando il tasto modifica di questa sezione oppure [http://wikitest.fedoraonline.it/index.php?title=CantiereWiki&action=edit&section=2 cliccando qua] e inserendo il template in fondo alla lista degli articoli già inseriti) che si presenta così:
+Dopo aver proposto l'articolo alla Mailing List dei redattori, come ben specificato nell'articolo [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|"contribuisci"]], e dopo essere stato accettato, occorre inserirlo in questo Cantiere Wiki utilizzando il template '''''<tt>AggiungiArticolo</tt>''''' (l'aggiunta va fatta selezionando il tasto modifica di questa sezione oppure [http://wikitest.fedoraonline.it/index.php?title=CantiereWiki&action=edit&section=2 cliccando qua] e inserendo il template in fondo alla lista degli articoli già inseriti) che si presenta così:
  <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
 dove (tutti separati dal pipe (il simbolo '''|''')):
 *'''<nowiki>{{</nowiki>''' è il markup per il template e non è da modificare;
