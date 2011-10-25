@@ -44,8 +44,8 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Configurazione servizi DNS|autore=GiuseppeDelvecchio|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Gnome-Shell e le sue estensioni|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ekiga|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=[[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=375 Da FOL]]<br>[[http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/  Da marionline.it]]|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=375 Da FOL]<br />[http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/  Da marionline.it]|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=374 Da FOL]<br />[http://blog.marionline.it/linux/fedora/montare-alcuni-file-immagine-senza-i-privilegi-di-root/ Da marionline.it] <br />|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Remote logging via rsyslog|autore=GiuseppeDelvecchio|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Libreoffice|autore=SimoneZaminga|stato=InCorso}}
