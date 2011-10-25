@@ -141,7 +141,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Responsabile della modifica
 ! Data
 ! Stato
-{{ModificaArticolo=Convenzioni di scrittura|autore=GabrieleTrombini|responsabile=GabrieleTrombini|data=26/10/2011|stato=InCorso}}
+{{ModificaArticolo|articolo=Convenzioni di scrittura|autore=GabrieleTrombini|responsabile=GabrieleTrombini|data=26/10/2011|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
