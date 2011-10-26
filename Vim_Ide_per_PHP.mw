@@ -170,7 +170,8 @@ Per installarlo in Fedora è molto semplice:
 
 Per fare il debug di una applicazione Php ci sono vari sistemi, quello che propongo e che trovo più semplice e utile è il debug remoto. La documentazione ufficiale e molto ben fatta, si trova a [http://www.xdebug.org/docs/remote questo indirizzo].<br />
 In questo articolo mi concentro su Vim, non sulle possibili differenti configurazioni di Xdebug e su come farlo funzionare correttamente, dunque rimando tutto alla documentazione ufficiale che è più che esauriente.<br />
-Se l'installazione è andata a termine correttamente si può passare al controllo della configurazione di xdebug. Il file di configurazione di xdebug in fedora si trova sotto <code>/etc/php.d/xdebug.ini</code>. Il mio file di configurazione è fatto così:
+Se l'installazione è andata a termine correttamente si può passare al controllo della configurazione di xdebug. Il file di configurazione di xdebug in fedora si trova sotto <code>/etc/php.d/xdebug.ini</code>. <br />
+Il mio file di configurazione è fatto così:
 
  $ cat /etc/php.d/xdebug.ini 
  ; Enable xdebug extension module
@@ -187,8 +188,7 @@ Dopo un riavvio di apache, nella pagina di informazioni del Php si potrà vedere
 Ora che il pacchetto Xdebug è installato e correttamente caricato (la pagina di informazioni di Php ce lo conferma) bisogna trasformare Vim in un client per il protocollo GDB (The GNU Project Debugger).<br />
 Per farlo si può usare il [http://www.vim.org/scripts/script.php?script_id=1929 plugin DBGp client] scritto da Sam Ghods il quale sul suo sito web ha fatto un'[http://tech.blog.box.net/2007/06/20/how-to-debug-php-with-vim-and-xdebug-on-linux/ ottima guida su come installare e configurare xdebug ed il suo plugin]. Questo plugin però è datato, Hadi Zeftin ne ha scritto uno più aggiornato che risolve alcuni problemi ed è reperibile a [http://www.vim.org/scripts/script.php?script_id=2508 questo indirizzo].<br />
 Dunque prima di tutto bisogna scaricare il pacchetto del plugin da [http://www.vim.org/scripts/script.php?script_id=2508 qui].<br />
-Dopo averlo scaricato bisogna scompattare il suo contenuto (i due file debugger.vim e debugger.py) all'interno della directory <code>.vim/plugin</code> presente nella home directory del proprio utente. Se è andato tutto liscio si può passare al primo debug della propria applicazione.
-
+Dopo averlo scaricato bisogna scompattare il suo contenuto (i due file debugger.vim e debugger.py) all'interno della directory <code>.vim/plugin</code> presente nella home directory del proprio utente. Se è andato tutto liscio si può passare al primo debug della propria applicazione.<br />
 Per il debug basta aprire un file qualsiasi del proprio progetto e pigiare <code>F5</code>. Si hanno da ora 10 secondi di tempo(il plugin precedente impostava 5 secondi massimi di attesa) per avviare una sessione di debug sul proprio server (o fare il refresh della pagina interessata sul browser nel caso si sia già avviata una sessione). Per farlo basta andare con il proprio browser web preferito alla pagina index.php (o alla pagina php di interesse) del proprio progetto avendo l'accortezza di richiamare la pagina aggiungendo in fondo all'URL <code>?XDEBUG_SESSION_START=1</code>. Per cui se ho il mio sito di nome example.com avvio la sessione di debug con l'URL: [http://example.com/index.php?XDEBUG_SESSION_START=1 http://example.com/index.php?XDEBUG_SESSION_START=1].<br />
 Tornando su Vim si potrà notare che è stata catturata la sessione di debug, viene aperto un nuovo tab.<br />
 Se si usa firefox si può utilizzare un'estensione interessante per avviare la sessione di debug: [https://addons.mozilla.org/en-US/firefox/addon/58688 easy Xdebug].<br />
@@ -230,6 +230,7 @@ E poi procedere con la ricostruzione dei tag della guida di Vim:
 Se la direttiva <code>:filetype plugin on</code> è già stata data all'interno del file di configurazione di Vim si potrà usare % esteso.
 
 == Un piccolo aiuto con Closetag ==
+
 Come già detto, quando si sviluppa un applicativo in Php è facile aver a che fare con codice HTML, questo perchè il Php è stato appositamente pensato e creato per la costruzione di applicativi web.<br />
 Esiste un plugin utile per chiudere in modo facile e veloce i tag HTML aperti senza doverli scrivere a mano: [http://vim.sourceforge.net/scripts/script.php?script_id=13 Closetag] creato da Steven Mueller.<br />
 L'installazione si esegue come al solito: si scarica il pacchetto e si posiziona direttamente all'interno di <code>.vim/plugin</code> presente nella home dell'utente.<br />
