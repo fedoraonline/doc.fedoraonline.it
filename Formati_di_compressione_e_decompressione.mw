@@ -11,10 +11,8 @@ Questi due concetti spesso si perdono di fronte alla presenza dei formati come Z
 Fatta questa premessa, cercherò di presentare i più comuni formati di archiviazione e compressione che si possono trovare nel mondo del software libero e come utilizzarli in modo semplice e veloce da terminale.<br />
 In realtà, gli ambienti desktop più moderni come Gnome o KDE, tramite anche i rispettivi programmi ''File Roller'' o ''Ark'', danno la possibilità di archiviare, comprimere, visionare, estrarre, aggiungere, togliere ecc. file o directory dai vari archivi in modo molto, molto, semplice con una comoda interfaccia grafica. Risulta però, a volte, utile avere uno specchietto ai principali comandi da impartire al terminale, per estrarre o archiviare file o directory.<br />
 Di seguito l'indice ordinato per "estensione", ricordo che in ''bash'' l'estensione di un file non indica il tipo di file, che è un carattere intrinseco del file stesso e che si può vedere con il comando <code>file</code>, ne è solo una indicazione.
+=Installazione dei pacchetti necessari:=
 
-
-
-#=Installazione dei pacchetti necessari:=
 Fedora, come la maggior parte delle distro linux, fornisce già i pacchetti necessari per lavorare con i tipo di file citati, i programmi spesso sono già installati. 
 Se non presenti sul sistema si possono installare con yum. Eccezion fatta per unrar, sono tutti presenti nei repo ufficiali di Fedora:
 
