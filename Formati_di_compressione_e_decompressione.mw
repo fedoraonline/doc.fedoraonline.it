@@ -24,7 +24,7 @@ Per unrar è necessario avere installato ed abilitato i [http://rpmfusion.org/ r
 
 ==Semplici archivi di file o directory ( .tar )==
 I file con estensione <code>.tar</code> normalmente indicano semplici archivi di file o directory create con il [http://www.gnu.org/software/tar/ programma tar] e sono chiamati archivi tarball.
-'''''==== Per creare un archivio tar: ===='''''
+==== '''''Per creare un archivio tar:''''' ====
 
  $ tar cvf nome_archivio.tar directory/ # o si indica il nome di un file o di più file o di più directory
  # oppure
