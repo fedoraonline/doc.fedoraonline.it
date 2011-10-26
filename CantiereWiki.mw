@@ -41,35 +41,12 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Autore
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Covergloobus|autore=CristianPozzessere|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Configurazione servizi DNS|autore=GiuseppeDelvecchio|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Gnome-Shell e le sue estensioni|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Ekiga|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=375 Da FOL]<br />[http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/  Da marionline.it]|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=374 Da FOL]<br />[http://blog.marionline.it/linux/fedora/montare-alcuni-file-immagine-senza-i-privilegi-di-root/ Da marionline.it] <br />|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Remote logging via rsyslog|autore=GiuseppeDelvecchio|stato=Terminato}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=372 Da FOL]<br />[http://blog.marionline.it/linux/partizione-criptata-disco-esterno-ext4/ Da marionline.it]|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Libreoffice|autore=SimoneZaminga|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Conky|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Openbox|autore=CristianPozzessere|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Immagine webcam al rovescio|autore=GiuseppeDelvecchio|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Script per la condivisione Internet|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Configurazione mod evasive su Apache 2.x|autore=GiuseppeDelvecchio|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Boot sequence Fedora|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Google Earth: Installazione RPM a 64bit|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Installazione Driver ATI|autore=GiuseppeDelvecchio|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Installazione Driver NVidia|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Testing:file kickstart per liveCD creator|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Ramfs e Tmpfs|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Tutti i tag RPM|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Tunnel criptato via SSH|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Dropbox|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora *|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Controllo del "SELinux context" delle librerie|autore=GiuseppeDelvecchio|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Estensioni Yum|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Cambiare TimeZone di cron|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ksplice:aggiornamento kernel a caldo|autore=GiuseppeDelvecchio|stato=DaFare}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?itemid=325 Da FOL]<br />[http://blog.marionline.it/?p=271 Da marionline.it]|articolo=Vim Ide per PHP|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Audiopreview: anteprima audio e video|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=USB modem mobile|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pizzata 2010|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Guide ALL INCLUSIVE **|autore=RobertMayr|stato=DaFare}}
