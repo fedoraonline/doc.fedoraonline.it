@@ -1,24 +1,18 @@
 Questa guida è pubblicata anche sul mio sito web a questo indirizzo: [http://blog.marionline.it/?p=271 http://blog.marionline.it/?p=271].
-
+<br />
 Ho creato una versione pdf di questo articolo con latex, lo si può liberamente scaricare sempre dal mio sito web, forse la versione pdf è anche di più facile lettura rispetto alla versione online...questione di gusti.<br />
-
 == Introduzione ==
 
 Se si programma codice php è importante avere un buon strumento che aiuti nella creazione e scrittura del codice.<br />
 Per scrivere applicazioni php basta anche un semplice editor di testo oppure si può utilizzare un IDE (Integrated Development Enviroment). Nel mondo open-source esistono moltissimi strumenti per scrivere in modo semplice e veloce i propri script o codici.<br />
 Io utilizzo Vi Improved (Vim), lo reputo molto potente e in grado di velocizzare di molto lo sviluppo e la scrittura di qualsiasi cosa, dopo aver compreso il suo funzionamento e dopo averlo opportunamente configurato ed eventualmente esteso (con appositi plugin) secondo le proprie necessità e gusti.<br />
-Voglio dunque presentare i passi che ho seguito per poter tramutare il mio editor di testo preferito in un potente editor per il linguaggio Php, fino a farlo diventare pressochè un IDE perfetto per Php che non ha nulla da invidiare ad altri strumenti di sviluppo.
-
-Questo mini-howto si rivolge principalmente ad un utente che utilizza come sistema operativo fedora. Io infatti uso fedora (al momento in cui scrivo fedora 12 a 64bit). Ciò non significa che i passi proposti non possano essere seguiti su di un altra distribuzione Linux o simil Unix, bisognerà solo fare attenzione ad alcune piccole differenze.
-
-Ciò che presento è perfettamente funzionante sulla serie 7 di Vim installato su fedora 12 a 64 bit. Se esistono esperienze che confermino il buon funzionamento dei passaggi da me proposti anche in altre architetture e S.O. (Sistema Operativo) prego di farmi sapere.
-
-Prima di continuare voglio far sapere che in rete si trovano moltissimi articoli e guide simili a ciò che ho scritto.
-        
+Voglio dunque presentare i passi che ho seguito per poter tramutare il mio editor di testo preferito in un potente editor per il linguaggio Php, fino a farlo diventare pressochè un IDE perfetto per Php che non ha nulla da invidiare ad altri strumenti di sviluppo.<br />
+Questo mini-howto si rivolge principalmente ad un utente che utilizza come sistema operativo fedora. Io infatti uso fedora (al momento in cui scrivo fedora 12 a 64bit). Ciò non significa che i passi proposti non possano essere seguiti su di un altra distribuzione Linux o simil Unix, bisognerà solo fare attenzione ad alcune piccole differenze.<br />
+Ciò che presento è perfettamente funzionante sulla serie 7 di Vim installato su fedora 12 a 64 bit. Se esistono esperienze che confermino il buon funzionamento dei passaggi da me proposti anche in altre architetture e S.O. (Sistema Operativo) prego di farmi sapere.<br />
+Prima di continuare voglio far sapere che in rete si trovano moltissimi articoli e guide simili a ciò che ho scritto.<br />        
 Questo articolo:
 [http://www.koch.ro/blog/index.php?/archives/63-VIM-an-a-PHP-IDE.html http://www.koch.ro/blog/index.php?/archives/63-VIM-an-a-PHP-IDE.html]
-mi ha dato dei buoni suggerimenti su come iniziare a fare la mia prima configurazione di Vim.
-
+mi ha dato dei buoni suggerimenti su come iniziare a fare la mia prima configurazione di Vim.<br />
 Questo mini-howto (o come si vuole chiamare) sarà composto da queste sezioni:
 
 __TOC__
@@ -33,8 +27,7 @@ Non esplico l'installazione e la configurazione di un server LAMP (Linux Apache 
 == Configurazione base ==
 
 Fedora, nell'installazione standard di Vim, da già una configurazione di base di quest'ultimo. La sintassi colorata è già attivata per esempio.<br />
-Si può leggere il file di configurazione di default di Vim in <code>/etc/vimrc</code>.
-
+Si può leggere il file di configurazione di default di Vim in <code>/etc/vimrc</code>.<br />
 Ho però voluto personalizzare ulteriormente la configurazione di Vim aggiungendo alcune caratteristiche. Ho creato dunque un file di nome .vimrc nella home directory del mio utente e al suo interno ho aggiunto quanto segue:
 
  set number "attivo la visualizzazione del numero delle righe"
@@ -46,16 +39,15 @@ Ho però voluto personalizzare ulteriormente la configurazione di Vim aggiungend
 Il comando che rende Vim già un ottimo editor per codice php è il penultimo: <code>autocmd FileType c,cpp,php set cindent shiftwidth=4</code>.<br />
 E' sempre importante creare una buona indentazione del proprio codice.<br />
 Con il comando <code>filetype on</code> ho attivato in Vim la possibilità di riconoscere i tipi di file che sta caricando e con il penultimo comando ho istruito Vim ad utilizzare l'indentazione standard del codice C per tutti i file con estensione c o cpp o php.<br />
-Il Php è abbastanza simile al C o al C++ come sintassi, quindi è una buona scelta usare l'indentazione del proprio codice come se fosse codice C con una indentazione di 4 spazi bianchi.
-
+Il Php è abbastanza simile al C o al C++ come sintassi, quindi è una buona scelta usare l'indentazione del proprio codice come se fosse codice C con una indentazione di 4 spazi bianchi.<br />
 Ora però è venuto il momento di estendere Vim in modo tale da essere ancora più veloci e produttivi nella creazione dei propri script.
 
 == ManPageView documentazione a portata di mano ==
+
 Una cosa importante è avere sempre a portata di mano la documentazione di Php.<br />
 Doversi spostare in un browser web e navigare alla ricerca della documentazione di una determinata funzione è abbastanza noioso e fa perdere tempo.<br />
 Io voglio poter leggere direttamente la documentazione di Php da Vim.<br />
-Esiste un [http://www.vim.org/scripts/script.php?script_id=489 plugin scritto da Charles Campbell] per far questo: [http://www.vim.org/scripts/script.php?script_id=489 ManPageView].
-
+Esiste un [http://www.vim.org/scripts/script.php?script_id=489 plugin scritto da Charles Campbell] per far questo: [http://www.vim.org/scripts/script.php?script_id=489 ManPageView].<br />
 L'installazione è davvero semplice, basta scaricare il pacchetto dalla pagina del progetto e come specificato nella documentazione, dopo essersi spostati nella directory del pacchetto scaricato procedere con:
 
  $ vim manpageview.vba.gz
@@ -83,7 +75,9 @@ Fatto questo bisogna aggiungere al proprio <code>.vimrc</code> le seguenti diret
 Diventa così semplicissimo creare una struttura per commentare le proprie funzioni. Basta posizionarsi col cursore sulla dichiarazione della propria funzione o della classe e fare <code>ctrl + p</code>.
 
 == Abilitare l'auto-completamento in Vim ==
-E' una cosa davvero semplice abilitare l'auto-completamento in Vim per il codice Php. Dato che spesso quando si sviluppa qualche applicazione web si ha a che fare con i CSS ho aggiunto anche una direttiva per i CSS:
+
+E' una cosa davvero semplice abilitare l'auto-completamento in Vim per il codice Php. <br />
+Dato che spesso quando si sviluppa qualche applicazione web si ha a che fare con i CSS ho aggiunto anche una direttiva per i CSS:
 
  autocmd FileType css set omnifunc=csscomplete#CompleteCSS smartindent shiftwidth=4 "aggiungo l'indentazione per i css"
  autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -107,7 +101,7 @@ Aspettando un attimo sarà poi possibile richiamare la guida del plugin con <cod
 Spesso capita di aver la necessità, specialmente nei progetti che hanno molti file, di fare delle ricerche all'interno del codice.<br />
 Qui ci viene in aiuto cscope.<br />
 Esiste un [http://cscope.sourceforge.net/cscope_vim_tutorial.html bellissimo tutorial in inglese] su come installare ed usare cscope con Vim.<br />
-I passi fondamentali da seguire per poter subito usufruire di cscope sono:
+I passi fondamentali da seguire per poter subito usufruire di cscope sono:<br />
 installare cscope e con fedora basta:
 
  $ su -c "yum install cscope" 
@@ -116,7 +110,7 @@ poi scaricare all'interno della cartella <code>.vim/plugin</code> il plugin per 
 
  $ wget -P ~/.vim/plugin http://cscope.sourceforge.net/cscope_maps.vim 
 
-Come usarlo?
+Come usarlo?<br />
 Cscope viene normalmente usato per il codice scritto in C. Può però essere usato per il Php. Per farlo basta entrare nella directory del progetto in Php e creare un file che indichi a cscope quali file visionare per il suo lavoro (i file php), dopo di che lanciare cscope in modo che ricostruisca il suo database, i passaggi dunque sono:
 
  $ find . -name '*.php' > ./cscope.files
@@ -124,18 +118,19 @@ Cscope viene normalmente usato per il codice scritto in C. Può però essere usa
  $ rm cscope.files
 
 Fatto questo possiamo passare all'uso di cscope. E' molto semplice.<br />
-Si può fare o utilizzando direttamente cscope, si entra nell'interfaccia di quest'ultimo e si fa una ricerca di una funzione, con le frecce ci si muove e con "invio" si può aprire in automatico Vi che ci farà vedere il codice sorgente. Con <code>Ctrl + d</code> si esce da cscope (ovviamente se si è dentro a Vi bisogna prima uscire da quest'ultimo). Per poter usare Vim bisogna impostare la variabile EDITOR in bash:
+Si può fare o utilizzando direttamente cscope, si entra nell'interfaccia di quest'ultimo e si fa una ricerca di una funzione, con le frecce ci si muove e con "invio" si può aprire in automatico Vi che ci farà vedere il codice sorgente. Con <code>Ctrl + d</code> si esce da cscope (ovviamente se si è dentro a Vi bisogna prima uscire da quest'ultimo). <br />
+Per poter usare Vim bisogna impostare la variabile EDITOR in bash:
 
  $ export EDITOR=vim
 
-per non doverla impostare ogni volta si può inserire questa riga all'interno del proprio bashrc o bash_profile.
-
+per non doverla impostare ogni volta si può inserire questa riga all'interno del proprio bashrc o bash_profile.<br />
 Il secondo sistema è utilizzare il plugin di Vim già installato.<br />
 Basta lanciare Vim e usare cscope con il comando di Vim <code>:cscope</code>, si può vedere la guida con <code>:help cscope</code>.<br />
 Per la navigazione, aprire un file php con Vim e spostarsi su una funzione che viene ripetuta più volte. Digitare in modalità comandi <code>Ctrl + \</code> ( \ è il backslash) e poi subito <code>s</code>. Verrà presentata la lista delle righe in cui compare la funzione, inserire il numero che si vuole andare a vedere e premere invio. Per tornare indietro premere <code>Ctrl + t</code>.<br />
-Se invece di <code>Ctrl + \</code> si fa <code>Ctrl + barra_spaziatrice</code> e poi subito <code>s</code> e si seleziona poi la riga di interesse, Vim aprirà una nuova finestra che visualizzerà la scelta richiesta.
-
+Se invece di <code>Ctrl + \</code> si fa <code>Ctrl + barra_spaziatrice</code> e poi subito <code>s</code> e si seleziona poi la riga di interesse, Vim aprirà una nuova finestra che visualizzerà la scelta richiesta.<br />
 Questo per un uso basilare, per un uso più approfondito rimando al tutorial che ho citato prima e reperibile [http://cscope.sourceforge.net/cscope_vim_tutorial.html qui].
+
+{{Warning|AAAA|E' importante mantenere una certa uniformità nella redazione della documentazione del wiki!}}
 
 ATTENZIONE -- Risoluzione di problemi<br />
 Quando lancio Vim mi viene fuori un messaggio di errore del tipo e568, ho risolto velocemente il "bug" modificando la riga 42 del plugin sostituendola con quanto segue:
