@@ -5,7 +5,7 @@ Un '''utente proveniente dal sistema operativo MS Windows''' sicuramente conosce
 Proverò a fare un po' di chiarezza e a fornire delle informazioni basilari all'approccio di questi file.
 Innanzitutto bisogna fare una netta distinzione tra: '''archiviazione''' e '''compressione''':
 *'''il primo è un procedimento di raccolta''' di file o directory in un unico file facilmente trasportabile e trasferibile. Esattamente come avviene nella realtà: prendo dei fogli, ad esempio i miei appunti universitari, e li infilo in una cartellina per raccoglierli e portarmeli in giro. Di per se non vi è alcun guadagno di spazio, le dimensioni rimangono tali e quali, anzi lo spessore della mia cartellina può far risultare il tutto di un volume più grande;
-*'''il secondo''', invece, '''è un processo di compattamento''' che permette di risparmiare spazio e peso tramite l'uso di vari algoritmi. Dall'esempio precedente: schiaccio la mia cartellina per eliminare l'aria presente tra i fogli e/o elimino i fogli doppi per ridurre il più possibile il peso ed il volume della mia cartella, in modo da portarla in giro più facilmente assieme ai miei libri.
+*'''il secondo''', invece, '''è un processo di compattamento''' che permette di risparmiare spazio e peso tramite l'uso di vari algoritmi. Dall'esempio precedente: schiaccio la mia cartellina per eliminare l'aria presente tra i fogli e/o elimino i fogli doppi per ridurre il più possibile il peso ed il volume della mia cartella, in modo da portarla in giro più facilmente assieme ai miei libri.<br />
 Questi due concetti spesso si perdono di fronte alla presenza dei formati come Zip o Rar, in quanto sono formati sia di archiviazione sia di compressione. Perso questo concetto diventa facile confondersi e non capire la denominazione di alcuni file.<br />
 Fatta questa premessa, cercherò di presentare i più comuni formati di archiviazione e compressione che si possono trovare nel mondo del software libero e come utilizzarli in modo semplice e veloce da terminale.<br />
 In realtà, gli ambienti desktop più moderni come Gnome o KDE, tramite anche i rispettivi programmi ''File Roller'' o ''Ark'', danno la possibilità di archiviare, comprimere, visionare, estrarre, aggiungere, togliere ecc. file o directory dai vari archivi in modo molto, molto, semplice con una comoda interfaccia grafica. Risulta però, a volte, utile avere uno specchietto ai principali comandi da impartire al terminale, per estrarre o archiviare file o directory.<br />
@@ -24,18 +24,18 @@ Per unrar è necessario avere installato ed abilitato i [http://rpmfusion.org/ r
 
 ==Semplici archivi di file o directory ( .tar )==
 I file con estensione <code>.tar</code> normalmente indicano semplici archivi di file o directory create con il [http://www.gnu.org/software/tar/ programma tar] e sono chiamati archivi tarball.
-=== Per creare un archivio tar: ===
+==== Per creare un archivio tar: ====
 
  $ tar cvf nome_archivio.tar directory/ # o si indica il nome di un file o di più file o di più directory
  # oppure
  $ tar cv directory/ > nome_archivio.tar # anche qui al posto di directory/ può essere come sopra
 
 Le due forme si equivalgono, la seconda utilizza semplicemente la re-direzione dello standard output di bash invece che utilizzare l'opzione interna di tar (<code>f</code>).
-=== Per estrarre un archivio tar: ===
+==== Per estrarre un archivio tar: ====
 
  $ tar xvf nome_archivio.tar
 
-=== Per vedere solo il contenuto di un archivio tar: ===
+==== Per vedere solo il contenuto di un archivio tar: ====
 
  $ tar tvf nome_archivio.tar
 
