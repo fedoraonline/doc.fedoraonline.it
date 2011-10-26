@@ -130,9 +130,8 @@ Per la navigazione, aprire un file php con Vim e spostarsi su una funzione che v
 Se invece di <code>Ctrl + \</code> si fa <code>Ctrl + barra_spaziatrice</code> e poi subito <code>s</code> e si seleziona poi la riga di interesse, Vim aprirà una nuova finestra che visualizzerà la scelta richiesta.<br />
 Questo per un uso basilare, per un uso più approfondito rimando al tutorial che ho citato prima e reperibile [http://cscope.sourceforge.net/cscope_vim_tutorial.html qui].
 
-{{Warning|AAAA|E' importante mantenere una certa uniformità nella redazione della documentazione del wiki!}}
+{{Warning|Risoluzione di problemi!}}
 
-ATTENZIONE -- Risoluzione di problemi<br />
 Quando lancio Vim mi viene fuori un messaggio di errore del tipo e568, ho risolto velocemente il "bug" modificando la riga 42 del plugin sostituendola con quanto segue:
 
  if has("cscope")
