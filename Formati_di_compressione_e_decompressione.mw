@@ -1,6 +1,6 @@
 Per chi è appena passato ad un nuovo sistema operativo libero, come Fedora, spesso si trova spiazzato dall'enorme quantità di pacchetti e programmi disponibili per l'archiviazione e la compressione dei file.<br />
 Articolo pubblicato anche sul mio blog:
-http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/
+http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/ <br />
 Un '''utente proveniente dal sistema operativo MS Windows''' sicuramente conoscerà il [http://www.info-zip.org/ formato Zip] e quasi sicuramente sarà venuto in contatto anche col [http://www.rarlab.com/ formato Rar]. Inoltre, se è un utente un po' più smaliziato e già orientato al software libero, avrà anche conosciuto [http://www.7-zip.org/ 7zip] ed il formato di archiviazione compressione di questo.<br />
 Proverò a fare un po' di chiarezza e a fornire delle informazioni basilari all'approccio di questi file.
 Innanzitutto bisogna fare una netta distinzione tra: '''archiviazione''' e '''compressione''':
@@ -22,9 +22,8 @@ Per unrar è necessario avere installato ed abilitato i [http://rpmfusion.org/ r
 
  # yum install unrar
 
-
 ==Semplici archivi di file o directory ( .tar )==
-I file con estensione <code>.tar</code> normalmente indicano semplici archivi di file o directory create con il [http://www.gnu.org/software/tar/ programma tar] e sono chiamati archivi tarball.
+I file con estensione <code>.tar</code> <pre>.tar</pre> normalmente indicano semplici archivi di file o directory create con il [http://www.gnu.org/software/tar/ programma tar] e sono chiamati archivi tarball.
 === Per creare un archivio tar: ===
 
  $ tar cvf nome_archivio.tar directory/ # o si indica il nome di un file o di più file o di più directory
