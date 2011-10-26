@@ -1,6 +1,5 @@
 Questo articolo è anche pubblicato sul mio blog a questo indirizzo:
-http://blog.marionline.it/linux/partizione-criptata-disco-esterno-ext4/
-
+http://blog.marionline.it/linux/partizione-criptata-disco-esterno-ext4/<br />
 Ho da poco acquistato un harddisk esterno usb per poter eseguire i backup del mio pc.<br />
 L'harddisk, come la maggioranza di quelli presenti sul mercato, è formattato e partizionato con un filesystem NTFS.<br />
 Io preferisco il software libero e dunque vorrei usare un filesystem tipo ext4.<br />
@@ -23,8 +22,7 @@ Ecco il risultato finale:
  /dev/sdb2       595786590   976703804   190458607+   7  HPFS/NTFS
 
 A questo punto, essendo un disco esterno mi sembra buona cosa trovare un sistema per proteggere i dati che vi andrò a depositare.<br />
-Esistono vari sistemi che agiscono a vari livelli, utilizzando ad esempio un software di backup che permetta la criptazione dei file (ad esempio [http://duplicity.nongnu.org/ duplicity]), oppure '''criptare''' direttamente '''la partizione ext4''' con l'uso di [http://code.google.com/p/cryptsetup/ LUKS].
-
+Esistono vari sistemi che agiscono a vari livelli, utilizzando ad esempio un software di backup che permetta la criptazione dei file (ad esempio [http://duplicity.nongnu.org/ duplicity]), oppure '''criptare''' direttamente '''la partizione ext4''' con l'uso di [http://code.google.com/p/cryptsetup/ LUKS].<br />
 In una installazione normale di fedora i software necessari dovrebbero essere già presenti. Sul mio sistema infatti ho questi pacchetti:
 
  # rpm -qa|grep cryptsetup|sort
@@ -41,8 +39,7 @@ Per criptare la partizione la cosa è molto semplice, basta lanciare tale comand
  # cryptsetup luksFormat /dev/sdb1
 
 <code>/dev/sdb1</code> è il mio "device", cioè la mia partizione che voglio criptare.
-Il software chiederà di confermare la volontà a procedere con l'operazione (se ci sono dati verranno cancellati, infatti eliminerà la formattazione presente), chiederà una passphrase e la sua conferma.
-
+Il software chiederà di confermare la volontà a procedere con l'operazione (se ci sono dati verranno cancellati, infatti eliminerà la formattazione presente), chiederà una passphrase e la sua conferma.<br />
 Ora la partizione è criptata però non è formattata con un filesystem...<br />
 Per prima cosa, dopo aver criptato la partizione, bisogna stabilire un punto di mappatura per potervi accedere "in chiaro". Si può procedere così:
 
@@ -69,8 +66,7 @@ Per smontare il tutto basta procedere in questo modo:
  # umount /mnt/prova
  # cryptsetup luksClose disco_criptato
 
-I desktop enviroment come Gnome o Kde dovrebbero essere in grado di mondare in modo semplice il disco, senza dover compiere i passi in un terminale. Per Kde è stato però aperto un bug sulla difficoltà di smontare il dispositivo: [https://bugs.kde.org/show_bug.cgi?id=268020 Bug 268020]. A breve dovrebbe arrivare il bugfix su Fedora.
-
+I desktop enviroment come Gnome o Kde dovrebbero essere in grado di mondare in modo semplice il disco, senza dover compiere i passi in un terminale. Per Kde è stato però aperto un bug sulla difficoltà di smontare il dispositivo: [https://bugs.kde.org/show_bug.cgi?id=268020 Bug 268020]. A breve dovrebbe arrivare il bugfix su Fedora.<br />
 Il disco montato tramite il proprio ambiente desktop avrà però un nome "suo" all'interno della directory <code>/media</code>, definito in automatico da udisks. Inserendo un label al disco si può avere un nome ben definito:
 
  # cryptsetup luksOpen /dev/sdb1 disco_criptato
@@ -82,8 +78,7 @@ Ecco che tramite <code>e2label</code> ho impostato un'etichetta alla partizione 
  totale 4
  drwxrwxrwx 3 root root 4096 23 apr 12.04 backup_criptato
 
-In questo modo sarà molto più facile poter far riferimento al proprio dispositivo esterno nel caso si vogliano creare script per il backup dei dati. Infatti montando il dispositivo con il proprio DE si può mantenere il riferimento a <code>/media/backup_criptato</code>.
-
+In questo modo sarà molto più facile poter far riferimento al proprio dispositivo esterno nel caso si vogliano creare script per il backup dei dati. Infatti montando il dispositivo con il proprio DE si può mantenere il riferimento a <code>/media/backup_criptato</code>.<br />
 Nel caso si voglia amministrare il proprio disco da terminale si può utilizzare senza problemi cryptsetup come precedentemente spiegato. Per cui normalmente basta collegare il disco esterno alla porta usb, identificare il nome del dispositivo, ad esempio:
 
  $ dmesg |tail
@@ -111,10 +106,12 @@ Fornire la passphrase, e montare il dispositivo criptato con mount, fare le oper
  # umount /mnt/prova
  # cryptsetup luksClose disco
 
-Volendo si può configurare udev per eseguire il montaggio automatico del dispositivo alla connessione alla porta usb o cercare di utilizzare udisks con le opportune regole in udev per montare e smontare il dispositivo da utente normale. Io per ora mi limito ad utilizzare la semplicità di Kde per montare e smontare dispositivi esterni.
+Volendo si può configurare udev per eseguire il montaggio automatico del dispositivo alla connessione alla porta usb o cercare di utilizzare udisks con le opportune regole in udev per montare e smontare il dispositivo da utente normale. Io per ora mi limito ad utilizzare la semplicità di Kde per montare e smontare dispositivi esterni.<br />
+Altra cosa interessante di cryptsetup e poter aggiungere altre chiavi o file di chiave per aprire il dispositivo. Nel secondo caso non occorre inserire la passphrase per aprire la partizione criptata, basta avere a disposizione il file di chiave. Per questo rimando ai documenti sotto riportati.
+<br />
 
-Altra cosa interessante di cryptsetup e poter aggiungere altre chiavi o file di chiave per aprire il dispositivo. Nel secondo caso non occorre inserire la passphrase per aprire la partizione criptata, basta avere a disposizione il file di chiave. Per questo rimando ai documenti sotto riportati:
-
+----
+<br />
 Riferimenti utili:
 
 * [http://appuntilinux.mirror.garr.it/mirrors/appuntilinux/a2/a230.htm Appunti di informatica libera]
