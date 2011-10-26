@@ -1,61 +1,85 @@
-Questa guida ti aiuterà a scrivere correttamente nuovi articoli sul nostro wiki, indicandoti le convenzioni alle quali attenersi.
+Questa guida sarà di aiuto  per una scrittura corretta dei nuovi articoli sul nostro wiki, indicando le convenzioni alle quali attenersi.
 {{Warning|E' importante mantenere una certa uniformità nella redazione della documentazione del wiki!}}
 
 ==Creare una nuova pagina==
 
 Per creare una nuova pagina esistono vari modi:
-* creare un link su una pagina esistente: per farlo devi includere il nome del link tra due parentesi quadre, come in questo <nowiki>[[esempio]]</nowiki>. Verrà creato un link rosso, che ti porterà ad una nuova pagina.
-* scrivere il titolo della nuova pagina direttamente nella barra degli indirizzi del browser. Per esempio potresti sostituire nell'indirizzo di http://doc.fedoraonline.it/wiki/Contribuisci la parola << Contribuisci >> con il titolo della nuova pagina da creare.
-* una buona guida dovrebbe iniziare con una introduzione, nella quale si presenta l'argomento e lo scopo della stessa. A questo scopo comincia con una sezione <nowiki>== Introduzione ==</nowiki>.
-* Le fonti utilizzate vanno inserite in fondo alla pagina, raccogliendole sotto la voce <nowiki>== Bibliografia ==</nowiki>.
-* Nelle sezioni della guida non andare oltre il quarto livello
-* Non abbiamo problemi di spazio, per cui evita abbreviazioni o parole sincopate: non verranno accettati.
-* È buona norma inserire le specifiche tecniche all’inizio della guida, come la versione Fedora utilizzata o qualche specifica hardware.
-* È '''obbligatorio inserire la categoria finale di destinazione''', oltre a quella di appartenenza durante la scrittura (da fare, in corso, terminata), altrimenti la guida non sarà accessibile dalla pagina principale.
+* creare un link su una pagina esistente: per farlo è necessario includere il nome del link tra due parentesi quadre, come in questo <nowiki>[[esempio]]</nowiki>. Verrà creato un link rosso, che porterà ad una nuova pagina:
+* scrivere il titolo della nuova pagina direttamente nella barra degli indirizzi del browser. Per esempio è possibile sostituire nell'indirizzo di http://doc.fedoraonline.it/wiki/Contribuisci la parola << Contribuisci >> con il titolo della nuova pagina da creare;
+* una buona guida dovrebbe iniziare con una introduzione, nella quale si presenta l'argomento e lo scopo della stessa. A questo scopo è bene iniziare con una sezione <nowiki>== Introduzione ==</nowiki>;
+* le fonti utilizzate vanno inserite in fondo alla pagina, raccogliendole sotto la voce <nowiki>== Bibliografia ==</nowiki>:
+* è preferibile non superare il quarto livello nelle sezioni dell'articolo, come specificato più avanti;
+* non abbiamo problemi di spazio, per cui occorre evitare abbreviazioni o parole sincopate: non verranno accettati;
+* è buona norma inserire le specifiche tecniche all’inizio della guida, come la versione Fedora utilizzata o qualche specifica hardware;
+* è '''obbligatorio inserire la categoria finale di destinazione''', oltre a quella di appartenenza durante la scrittura (da fare, in corso, terminata), altrimenti la guida non sarà accessibile dalla pagina principale.
+
+==Impostazione base di un nuovo articolo==
+A meno di esigenze particolari uno schema base per la stesura di un nuovo articolo è il seguente:
+
+ <nowiki>
+{{InCorso|autore=NomeRedattore}}
+{{Autore|NomeAutore}}
+
+== Introduzione ==
+
+== Titolo 1 ==
+Scrivi qui il contenuto dell’articolo.
+
+== Riferimenti ==
+* riferimento 1;
+* riferimento 2.
+
+[[:Categoria:Uno]]
+[[:Categoria:Due]]
+
+[[Categoria:Scrittura in corso]]</nowiki>
+
+Una volta che la guida è terminata, sarà sufficiente rimuovere il template “InCorso”, togliere la categoria “Scrittura in corso” e cancellare il “:” davanti alle categorie finali per pubblicare l’articolo definitivamente. 
+
+[[Categoria:FedoraOnline]]
 
 == Toolbar ==
 
-Dando un primo sguardo alla pagina risaltano, sul bordo superiore dell'area di scrittura, i tasti con i quali avrai molto a che fare e che ti saranno molto utili durante la scrittura (la toolbar).<br>
+Dando un primo sguardo alla pagina risaltano, sul bordo superiore dell'area di scrittura, i tasti con i quali si avrà molto a che fare e che saranno molto utili durante la scrittura (la toolbar).<br>
 
 [[File:toolbar.jpg|left|toolbar]]<br><br>
 
-Lo scopo dei tasti è molto intuitiva ma è necessario comunque fornirti una breve spiegazione:
+Lo scopo dei tasti è molto intuitiva ma è necessario comunque fornire una breve spiegazione:
 
 {|border="1" align="center" style="text-align:center;"
-|  [[File:toolbar_bold.jpg]]    ||  grassetto   ||   '''selezioni la frase, premi il pulsante e scrivi in grassetto'''
+|  [[File:toolbar_bold.jpg]]    ||  grassetto   ||   '''selezionare la frase, premere il pulsante e l'output risulterà essere grassetto'''
 |-
-|   [[File:toolbar_italic.jpg]]    ||   corsivo     ||   ''selezioni la frase, premi il pulsante e scrivi in corsivo''
+|   [[File:toolbar_italic.jpg]]    ||   corsivo     ||   ''selezionare la frase, premere il pulsante e l'output risulterà essere in corsivo''
 |-
-|   [[File:toolbar_internal_link.jpeg]]   || link interno ||  premi il pulsante e crei un link alla pagina del wiki che vuoi richiamare come la [[Pagina_principale]]
+|   [[File:toolbar_internal_link.jpeg]]   || link interno ||  prememere il pulsante e creare un link alla pagina del wiki che si vuole richiamare come la [[Pagina_principale]]
 |-
-|   [[File:toolbar_external_link.jpeg]]   || link esterno ||  premi il pulsante e crei un link ad una pagina sul web che vuoi richiamare come [http://www.fedoraonline.it fedoraonline] (devi però ricordarti, a parte il suffisso http:// prima del www del sito, di inserire, dopo uno spazio, il nome del link, altrimenti comparirà l'indirizzo in forma di numerazione dei link della pagina, come in questo caso: [http://www.fedoraonline.it]).
+|   [[File:toolbar_external_link.jpeg]]   || link esterno ||  premere il pulsante e creare un link ad una pagina sul web che si vuole richiamare come [http://www.fedoraonline.it fedoraonline] (occorre però ricordare, a parte il suffisso http:// prima del www del sito, di inserire, dopo uno spazio, il nome del link, altrimenti comparirà l'indirizzo in forma di numerazione dei collegamenti della pagina, come in questo caso: [http://www.fedoraonline.it]).
 |-
-|   [[File:toolbar_header.jpeg]]   || modifica la formattazione del titolo  ||  
-<span style="font-size: 16px"> '''selezioni la frase, premi il pulsante e la trasfomi in un titolo (ti inserisce la possibilità di modifica del paragrafo e un "a capo" automatico)''' </span>
+|   [[File:toolbar_header.jpeg]]   || modificare la formattazione in un titolo  ||  
+<span style="font-size: 16px"> '''selezionare la frase, premere il pulsante e la l'output risulterà essere un titolo (inserisce la possibilità di modifica del paragrafo e un "a capo" automatico)''' </span>
 
 |-
-|   [[File:toolbar_image.jpeg]]   || carica una immagine || selezioni il pulsante ed inserisci il nome dell'immagine in questo formato: <font color=red>File:Esempio.jpg</font>, selezionando poi il link rosso (che evidenzia l'assenza del file), hai la possibilità di caricarla sul server prelevandola dal tuo computer. Per avere una panoramica sul posizionamento e sul formato delle immagini, puoi leggere [http://www.mediawiki.org/wiki/Help:Images questo documento].
+|   [[File:toolbar_image.jpeg]]   || caricare una immagine || selezionare il pulsante ed inserire il nome dell'immagine in questo formato: <font color=red>File:Esempio.jpg</font>, selezionando poi il link rosso (che evidenzia l'assenza del file), si avrà la possibilità di caricarla sul server prelevandola dal proprio computer. Per avere una panoramica sul posizionamento e sul formato delle immagini, si può leggere [http://www.mediawiki.org/wiki/Help:Images questo documento].
 |-
-|   [[File:toolbar_media.jpeg]]   || carica un file in formato media ||  selezioni il pulsante ed inserisci il nome del file media in questo formato: <font color=red>Media:Esempio.ogg</font>, selezionando il link rosso (che evidenzia l'assenza del file), hai la possibilità di caricarlo sul server prelevandola dal tuo computer.
+|   [[File:toolbar_media.jpeg]]   || caricare un file in formato media ||  selezionare il pulsante ed inserire il nome del file media in questo formato: <font color=red>Media:Esempio.ogg</font>, selezionando poi il link rosso (che evidenzia l'assenza del file), si avrà la possibilità di caricarlo sul server prelevandolo dal proprio computer.
 |-
-|   [[File:toolbar_non_formatted.jpeg]]   || inserisce del testo non formattato || da così "'''''selezioni la frase e premi il pulsante per toglierne la formattazione'''''"
-a così "<nowiki>selezioni la frase e premi il pulsante per toglierne la formattazione</nowiki>"
+|   [[File:toolbar_non_formatted.jpeg]]   || inserire del testo non formattato || da così "'''''selezionare la frase e premere il pulsante per toglierne la formattazione'''''"
+a così "<nowiki>selezionare la frase e premere il pulsante per toglierne la formattazione</nowiki>"
 |-
-|   [[File:toolbar_signature.jpeg]]    || inserisce la firma ||  selezionando il pulsante inserisci la tua firma in formato  -- username ora, giorno mese anno (UTC).
+|   [[File:toolbar_signature.jpeg]]    || inserisce la firma ||  selezionando il pulsante si può inserire la propria firma in formato  -- username ora, giorno mese anno (UTC).
 |-
-|   [[File:toolbar_horizontal_line.jpeg]]   || inserisce una linea orzzontale ||  se vuoi inserire una linea orizzontale nella riga successiva, premi il pulsante e, come in questo caso, una linea separerà il testo. 
+|   [[File:toolbar_horizontal_line.jpeg]]   || inserire una linea orzzontale ||  per inserire una linea orizzontale nella riga successiva, premere il pulsante e, come in questo caso, una linea separerà il testo. 
 ----
 
 |}
 
 == Indice ==
 
-L'indice (TOC - Table Of Contents) viene creato automaticamente nel momento in cui inserisci nel documento almeno quattro intestazioni. Qualora si creasse la necessità di doverne creare uno con un numero di voci inferiore, devi forzare mediawiki nel generarlo.
-Nel momento in cui crei una intestazione, in effetti segnali a mediawiki che stai creando un indice.
-In automatico questo indice viene inserito in alto a sinistra, ma puoi variare quasi a piacimento la sua posizione.
-Tutto ciò riguarda il TOC creato in automatico, ma nel caso fossero presenti meno di quattro voci, sei costretto a crearlo forzatamente, inserendo una delle seguenti "magic words" (presta attenzione ai due underscore all'inizio ed alla fine della parola):
+L'indice (TOC - Table Of Contents) viene creato automaticamente nel momento in cui si inserisce nel documento almeno quattro intestazioni. Qualora si creasse la necessità di doverne creare uno con un numero di voci inferiore, occorre forzare mediawiki nel generarlo.<br />
+Nel momento in cui si crea una intestazione, in effetti si segnala a mediawiki che si sta creando un indice. In automatico questo indice viene inserito in alto a sinistra, ma è possibile variare quasi a piacimento la sua posizione.<br />
+Tutto ciò riguarda il TOC creato in automatico; ma nel caso fossero presenti meno di quattro voci, si è costretti a crearlo forzatamente, inserendo una delle seguenti "magic words" (prestare attenzione ai due underscore all'inizio ed alla fine della parola):
 {|border="1" cellpadding="5" align="center" style="text-align:center;"
-|<nowiki> __TOC__</nowiki>||per posizionarlo nello stesso punto dove inserisci il codice
+|<nowiki> __TOC__</nowiki>||per posizionarlo nello stesso punto dove viene inserito il codice
 |-
 |<nowiki>__FORCETOC__</nowiki>||per inserirlo nella posizione standard
 |}
@@ -65,10 +89,11 @@ Vi è anche la possibilità di nascondere l'indice:
 |}
 
 ==Sezioni==
-Sino ad ora hai visto che l'indice è il riepilogo delle intestazioni che vengono create e formattate con il tasto  di intestazione di 2° livello, che non fa altro che applicare, prima e dopo la parola o la frase selezionata, un doppio segno dell'uguale (=), creando una ''intestazione di 2° livello''.<br>
-Dovresti cercare di evitare l'utilizzo di una ''intestazione di 1°livello'', in quanto sarebbe uguale al titolo della pagina e creerebbe confusione.<br>
-Il segno uguale (=) ha in effetti una doppia funzione: quella di fomattare il testo per renderlo più evidente, e quella di inserire la parte di testo racchiusa tra essi nell'indice della pagina (vedi quanto detto in precedenza [[Convenzioni_di_scrittura#indice | nell'indice]])
-Considera al massimo 4 livelli per le sezioni e sottosezioni, contraddistinte da un numero differente di segni uguale:
+
+Sino ad ora si è visto che l'indice è il riepilogo delle intestazioni che vengono create e formattate con il tasto  di intestazione di 2° livello, che non fa altro che applicare, prima e dopo la parola o la frase selezionata, un doppio segno dell'uguale (=), creando una ''intestazione di 2° livello''.<br />
+Occorre cercare di evitare l'utilizzo di una ''intestazione di 1°livello'', in quanto sarebbe uguale al titolo della pagina e creerebbe confusione.<br />
+Il segno uguale (=) ha in effetti una doppia funzione: quella di fomattare il testo per renderlo più evidente, e quella di inserire la parte di testo racchiusa tra essi nell'indice della pagina (vedere quanto detto in precedenza [[Convenzioni_di_scrittura#indice |nell'indice]])<br />
+Bisogna considerare al massimo 4 livelli per le sezioni e sottosezioni, contraddistinte da un numero differente di segni uguale (=):
 {| align="center" border="1"
 |align="center" | <tt><nowiki>==livello 1==</nowiki></tt><br />
 |-
@@ -82,8 +107,10 @@ Il risultato è una pagina avente un indice composto dai vari livelli di intesta
 {{Warning|Qualsiasi frase all'interno dei simboli <nowiki>= (i segni "uguale") </nowiki>viene considerata una intestazione e automaticamente viene inserita nell'indice!}}
 
 ==Formattazione==
-Nella [[Convenzioni_di_scrittura#Toolbar | toolbar]] hai già visto come si formatta in grassetto, in corsivo, in entrambi oppure con nessuna formattazione perciò crediamo che tu abbia tutti gli strumenti per poter procedere con la scrittura. Per essere solo un po' più precisi e se proprio non vuoi ricorrere al tasto della toolbar, devi sapere che esso non fa altro che aggiungere degli apici (<nowiki>'</nowiki>) all'inizio ed alla fine della parola o frase che vuoi formattare (tranne nel caso di nessuna formattazione dove viene preposto il comando di markup <nowiki><nowiki></nowiki>, che viene poi chiuso, dopo la parola o frase, con il classico <nowiki></nowiki></nowiki>.<br>
-Nella tabella successiva potrai vedere qualche esempio di formattazione e il loro risultato:
+
+Nella [[Convenzioni_di_scrittura#Toolbar | toolbar]] è stato spiegato come si formatta in grassetto, in corsivo, in entrambi oppure con nessuna formattazione perciò crediamo che, a questo punto, già si abbia tutti gli strumenti per poter procedere con la scrittura.<br />
+Per essere solo un po' più precisi e se proprio non si vuole ricorrere al tasto della toolbar, si deve sapere che esso non fa altro che aggiungere degli apici (<nowiki>'</nowiki>) all'inizio ed alla fine della parola o frase che si vuole formattare (tranne nel caso di nessuna formattazione dove viene preposto il comando di markup <nowiki><nowiki></nowiki>, che viene poi chiuso, dopo la parola o frase, con il classico <nowiki></nowiki></nowiki>.<br />
+Nella tabella successiva è riportato qualche esempio di formattazione e il loro risultato:
 {| align="center" border="1"
 !markup
 !sorgente
@@ -117,7 +144,9 @@ $ ls -al (comando dato da utente)</pre>
 |}
 
 ==Collegamenti==
-I collegamenti possono essere di diversi tipi ma, fondamentalmente i due che hai già visto nella [[Convenzioni_di_scrittura#Toolbar |toolbar]] sono quelli fondamentali e quelli su cui ti baserai per la scrittura degli articoli. Nella tabella qui sotto ti proponiamo uno schema a cui ti puoi riferire nel momento in cui volessi personalizzare i link.
+
+I collegamenti possono essere di diversi tipi ma, fondamentalmente i due presenti nella [[Convenzioni_di_scrittura#Toolbar |toolbar]] sono quelli fondamentali e quelli su ci si dovrà basare per la scrittura degli articoli.<br />
+Nella tabella qui sotto è proposto uno schema a cui ci si può riferire nel momento in cui si volesse personalizzare i link.
 
 {|align="center" border="1"
 |-
@@ -177,9 +206,10 @@ senza titolo
 |}
 
 ==Immagini==
-Per quanto concerne le immagini, abbiamo diverse possibilità di posizionamento e dimensione.
-Alcune non saranno consentite per motivi inerenti alle difficoltà di sistemazione perciò, per poter ottenere un documento razionale e ben impostato dovrai utilizzare solo il codice che trovi indicato in questa guida.
-Hai già stabilito che utilizzando il pulsante della toolbar, ti viene richiesto il nome dell'immagine che successivamente andrai a caricare, il cui relativo codice è <pre>[[File:Esempio.jpg]]</pre>tuttavia per dare un nome all'immagine quando ci passi sopra con il mouse, occorre completare quel codice con un simbolo del pipe (|) seguito dal nome, così <pre>[[File:Esempio.jpg | nome_da_mostrare]]</pre>
+
+Per quanto concerne le immagini, il wiki offre diverse possibilità di posizionamento e dimensione.
+Alcune non saranno consentite per motivi inerenti alle difficoltà di sistemazione perciò, per poter ottenere un documento razionale e ben impostato si dovrà utilizzare solo il codice che indicato in questa guida.
+E' già stato stabilito che utilizzando il pulsante della toolbar, viene richiesto il nome dell'immagine che successivamente si andrà a caricare, il cui relativo codice è <pre>[[File:Esempio.jpg]]</pre>tuttavia per dare un nome all'immagine quando il mouse ci passa sopra, occorre completare quel codice con un simbolo del pipe (|) seguito dal nome, così <pre>[[File:Esempio.jpg | nome_da_mostrare]]</pre>
 {|align="center" border="1"
 |-
 !descrizione
@@ -205,11 +235,13 @@ Hai già stabilito che utilizzando il pulsante della toolbar, ti viene richiesto
 |}
 
 ==Tabelle==
-Per inserire una tabella all'interno dell'articolo, devi seguire un preciso markup.
-Innanzitutto la tabella inizia sempre con un <nowiki>{|</nowiki> all'inizio di una nuova riga.
-Se volessi mettere dei titoli alla tabella, è necessario che tu inserisca il <nowiki>!</nowiki>, uno per ogni colonna della tabella e sempre seguendo la logica dell'andare a capo ad ogni markup.
-Devi poi segnalare all'interprete che vuoi iniziare una riga e ciò si fa con <nowiki>|-</nowiki> (ricordati che anch'esso deve essere su una nuova riga.
-Infine devi scrivereil contenuto delle celle della tabella e per questo, a capo, devi usare <nowiki>|</nowiki>, per ogni contenuto sulla medesima riga. Se poi devi cominciare una nuova riga riprendi <nowiki>|-</nowiki> e per ogni contenuto <nowiki>|</nowiki>. Devi proseguire così fino alla fine della tabella che dovrà poi essere chiusa con <nowiki>|}</nowiki>
+
+Per inserire una tabella all'interno dell'articolo, è previsto un preciso markup.<br />
+Innanzitutto la tabella inizia sempre con un <nowiki>{|</nowiki> all'inizio di una nuova riga.<br />
+Se si volessero mettere dei titoli alla tabella, è necessario che inserire il <nowiki>!</nowiki>, uno per ogni colonna della tabella e sempre seguendo la logica dell'andare a capo ad ogni markup.<br />
+Occorre, poi, segnalare all'interprete che si vuole iniziare una riga e ciò si fa con <nowiki>|-</nowiki> (ricordati che anch'esso deve essere su una nuova riga.
+Infine bisogna scrivere il contenuto delle celle della tabella e, per questo, a capo, occorre usare <nowiki>|</nowiki>, per ogni contenuto sulla medesima riga. Se poi si deve cominciare una nuova riga bisogna riprendere <nowiki>|-</nowiki> e per ogni contenuto <nowiki>|</nowiki>.<br />
+Proseguire così fino alla fine della tabella, che dovrà poi essere chiusa con <nowiki>|}</nowiki><br />
 Facendo l'esempio delle convenzioni usate per questo articolo, la tabella si presenta così:
 {|align="center" border="1"
 |-
@@ -248,7 +280,7 @@ Facendo l'esempio delle convenzioni usate per questo articolo, la tabella si pre
 |riga 2 colonna 3
 |}
 |}
-Diciamo pure che questa è l'unica tipologia di tabella da poter utilizzare, anche se in giro per la rete puoi trovare diversi esempi per qualsiasi tipo di formato, utilizzando anche attributi html o convenzioni css. L'unico attributo di cui potresti aver bisogno nella redazione di documentazione su Fedora OnLine, è "colspan" per unire una o più colonne e "align" per impostarne l'allineamento:
+Diciamo pure che questa è l'unica tipologia di tabella da poter utilizzare, anche se in giro per la rete è possibile trovare diversi esempi per qualsiasi tipo di formato, utilizzando anche attributi html o convenzioni css. L'unico attributo di cui si potrebbe aver bisogno nella redazione di documentazione su Fedora OnLine, è "colspan" per unire una o più colonne e "align" per impostarne l'allineamento:
 {|align="center" border="1"
 |-
 !descrizione
@@ -328,7 +360,8 @@ Infine potresti aver bisogno dei titoli in orizzontale, anzichè in verticale:
 |}
 
 ==Liste==
-Qualora avessi bisogno di una lista da non formattare come nelle [[#Sezioni|sezioni]], hai la possibilità di utilizzare dei markup specifici che possono aiutarti nell'elencare senza dover rientrare nell'indice:
+
+Qualora si avesse la necessità di elencare una lista da non formattare come nelle [[#Sezioni|sezioni]], si possono utilizzare dei markup specifici che possono aiutare nell'elencare senza farle rientrare nell'indice:
 {| align="center" border="1"
 !markup
 !sorgente
@@ -391,22 +424,25 @@ Qualora avessi bisogno di una lista da non formattare come nelle [[#Sezioni|sezi
 |}
 
 ==Categorie==
-Al fine di poter catalogare e indicizzare correttamente le guide e gli articoli, come visto nell'articolo [[Contribuisci#Impostazione_base_di_un_nuovo_articolo| come contribuire]], è necessario che tu inserisca la categoria corretta dell'articolo in fondo alla pagina.
+
+Al fine di poter catalogare e indicizzare correttamente le guide e gli articoli, come visto nell'articolo [[Contribuisci#Impostazione_base_di_un_nuovo_articolo| come contribuire]], è necessario che venga inserita la categoria corretta dell'articolo in fondo alla pagina.<br />
 Il markup è esattamente quello riportato:
 <pre>
 [[:Categoria:Uno]]
 [[:Categoria:Due]]
 
 [[Categoria:Scrittura in corso]]</pre>
-e, una volta terminato la guida sarà sufficiente togliere la categoria “Scrittura in corso” e cancellare il “:” davanti alle categorie finali per pubblicare l’articolo definitivamente.<br>
+e, una volta terminato la guida sarà sufficiente togliere la categoria “Scrittura in corso” e cancellare il “:” davanti alle categorie finali per pubblicare l’articolo definitivamente.<br />
 Per definire la categoria, occorre seguire il processo di registrazione alla Mailing List di FedoraOnLine e seguire le istruzioni, come spiegato nella pagina [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|come contribuire]].
 
 ==Riferimenti==
-E' sempre bene citare la fonte ed eventuali pagine di approfondimenti che hanno contribuito alla tua redazione dell'articolo o guida, nonchè, se avessi usato i numeri di rimando per le note a piè di pagina, creando i relativi riferimenti.
-Utilizzando la combinazione tra i [[#Collegamenti| collegamenti]] e le [[#Liste|liste]], puoi agevolmente destreggiarti per compilare una lista di riferimenti davvero ben organizzata.
+
+E' sempre bene citare la fonte ed eventuali pagine di approfondimenti che hanno contribuito alla redazione dell'articolo o guida, nonchè, qualora fossero stati usati i numeri di rimando per le note a piè di pagina, creare i relativi riferimenti.
+Utilizzando la combinazione tra i [[#Collegamenti| collegamenti]] e le [[#Liste|liste]], ci si può agevolmente destreggiare per compilare una lista di riferimenti davvero ben organizzata.
 
 ==Modifiche==
-Per quanto riguarda le modifiche all'articolo, è molto importante che tu avvisi il resto dell'utenza del fatto che l'articolo è in fase di modifica.
+
+Per quanto riguarda le modifiche all'articolo, è molto importante che venga avvisato il resto dell'utenza del fatto che l'articolo è in fase di modifica.
 Come sottolineato nella guida su [[Contribuisci#Scrittura_in_corso|come contribuire]], ciò deve avvenire utilizzando il template "InCorso", indicandone anche il nome di colui che redige la modifica o la revisione:
 <pre>{{InCorso|autore=NomeAutore}}</pre>
 
@@ -418,9 +454,10 @@ In questo caso il link è rosso perchè non esiste un utente ''NomeAutore''.
 [[Categoria:FedoraOnline]]
 
 ==I template==
-Sul wiki di Fedora Ondine sono disponibili una serie di template per facilitare la scrittura. Consulta [[:Categoria:Template|l’elenco dei template disponibili]] per maggiori informazioni.
+
+Sul wiki di Fedora Ondine sono disponibili una serie di template per facilitare la scrittura. Consultare [[:Categoria:Template|l’elenco dei template disponibili]] per maggiori informazioni.
 <br>
-Di seguito qualche esempio sull’utilizzi dei template:
+Di seguito qualche esempio sull’utilizzo dei template:
 
 ===Autore/i della guida===
 Per identificare l’autore della guida è opportuno inserire il suo nome:
@@ -428,7 +465,7 @@ Per identificare l’autore della guida è opportuno inserire il suo nome:
 <nowiki>{{Autore|NomeAutore}}</nowiki>
 
 Questo creerà in automatico un link alla pagina personale dell’autore stesso.<br>
-Assicurati che all’inizio della pagina sia presente questo template.
+E' bene assicurarsi che all’inizio della pagina sia presente questo template.
 Esempio:
 {{Autore|NomeAutore}}
 
@@ -457,7 +494,6 @@ Per inserire una nota all’interno di un articolo occorre utilizzare questo tem
 Esempio:
 {{nota|titolo=Titolo della nota|contenuto=Testo della nota}}
 
-
 ===Avviso importante===
 Se si vuole inserire un appunto importante o si vuole attirare l’attenzione del lettore a una specifica particolare, è necessario utilizzare il template "Warning":
 
@@ -475,28 +511,3 @@ Per inserire il template per alcune convenzioni di scrittura all’interno dell�
 Questo template è da posizionare all’interno dell’introduzione per informare il lettore fin da subito della convenzione stessa.
 Esempio:
 {{Scrittura|Regole e convenzioni di scrittura}}
-
-==Impostazione base di un nuovo articolo==
-A meno di esigenze particolari uno schema base per la stesura di un nuovo articolo è il seguente:
-
- <nowiki>
-{{InCorso|autore=NomeRedattore}}
-{{Autore|NomeAutore}}
-
-== Introduzione ==
-
-== Titolo 1 ==
-Scrivi qui il contenuto dell’articolo.
-
-== Riferimenti ==
-* riferimento 1;
-* riferimento 2.
-
-[[:Categoria:Uno]]
-[[:Categoria:Due]]
-
-[[Categoria:Scrittura in corso]]</nowiki>
-
-Una volta terminato la guida sarà sufficiente rimuovere il template “InCorso”, togliere la categoria “Scrittura in corso” e cancellare il “:” davanti alle categorie finali per pubblicare l’articolo definitivamente. 
-
-[[Categoria:FedoraOnline]]
