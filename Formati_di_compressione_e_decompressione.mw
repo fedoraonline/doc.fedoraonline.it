@@ -137,7 +137,6 @@ I file con estensione <code>.zip</code> sono in genere archivi compressi zip, ch
 
  $ unzip -l nome_archivio.zip
 
-
 ==Archivi compressi tipo .rar==
 
 Il formato di compressione e archiviazione [http://www.rarlab.com/ rar] è proprietario. Se ne sconsiglia dunque l'uso per motivi, fondamentalmente, di carattere etico.<br />
