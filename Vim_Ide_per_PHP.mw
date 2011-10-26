@@ -2,7 +2,7 @@ Questa guida è pubblicata anche sul mio sito web a questo indirizzo: [http://bl
 
 Ho creato una versione pdf di questo articolo con latex, lo si può liberamente scaricare sempre dal mio sito web, forse la versione pdf è anche di più facile lettura rispetto alla versione online...questione di gusti.<br />
 
-= Sommario =
+== Introduzione ==
 
 Se si programma codice php è importante avere un buon strumento che aiuti nella creazione e scrittura del codice.<br />
 Per scrivere applicazioni php basta anche un semplice editor di testo oppure si può utilizzare un IDE (Integrated Development Enviroment). Nel mondo open-source esistono moltissimi strumenti per scrivere in modo semplice e veloce i propri script o codici.<br />
@@ -23,14 +23,14 @@ Questo mini-howto (o come si vuole chiamare) sarà composto da queste sezioni:
 
 __TOC__
 
-= Installare Vim =
+== Installare Vim ==
 
 Per incominciare bisogna installare Vim, aprendo un terminale basta digitare in Fedora:
 
  $ su -c "yum install vim-minimal vim-common vim-enhanced" 
 Non esplico l'installazione e la configurazione di un server LAMP (Linux Apache MySql Php).
 
-= Configurazione base =
+== Configurazione base ==
 
 Fedora, nell'installazione standard di Vim, da già una configurazione di base di quest'ultimo. La sintassi colorata è già attivata per esempio.<br />
 Si può leggere il file di configurazione di default di Vim in <code>/etc/vimrc</code>.
@@ -50,8 +50,7 @@ Il Php è abbastanza simile al C o al C++ come sintassi, quindi è una buona sce
 
 Ora però è venuto il momento di estendere Vim in modo tale da essere ancora più veloci e produttivi nella creazione dei propri script.
 
-= ManPageView documentazione a portata di mano =
-
+== ManPageView documentazione a portata di mano ==
 Una cosa importante è avere sempre a portata di mano la documentazione di Php.<br />
 Doversi spostare in un browser web e navigare alla ricerca della documentazione di una determinata funzione è abbastanza noioso e fa perdere tempo.<br />
 Io voglio poter leggere direttamente la documentazione di Php da Vim.<br />
@@ -71,7 +70,7 @@ L'uso di ManPageView è davvero molto semplice. Se c'è una connessione attiva a
 ''(sostituire nome_funzione con il nome di una funzione php).''<br />
 Se ad esempio si digita <code>:Man echo</code> Vim aprirà una finestra contente la documentazione della funzione echo presente nella documentazione ufficiale di php a [http://php.net/manual/en/function.echo.php questo indirizzo].
 
-= Commentare il proprio codice Php =
+== Commentare il proprio codice Php ==
 
 Dato che stiamo parlando di documentazione e di buona scrittura del proprio codice Php...<br />
 E' sempre importante documentare il proprio codice. Esiste per Vim un [http://www.vim.org/scripts/script.php?script_id=1355 plugin scritto da Tobias Schlitt] che semplifica l'operazione: [http://www.vim.org/scripts/script.php?script_id=1355 phpDocumentator].<br />
@@ -83,8 +82,7 @@ Fatto questo bisogna aggiungere al proprio <code>.vimrc</code> le seguenti diret
  vnoremap <C-P> :call PhpDocRange()<CR>
 Diventa così semplicissimo creare una struttura per commentare le proprie funzioni. Basta posizionarsi col cursore sulla dichiarazione della propria funzione o della classe e fare <code>ctrl + p</code>.
 
-= Abilitare l'auto-completamento in Vim =
-
+== Abilitare l'auto-completamento in Vim ==
 E' una cosa davvero semplice abilitare l'auto-completamento in Vim per il codice Php. Dato che spesso quando si sviluppa qualche applicazione web si ha a che fare con i CSS ho aggiunto anche una direttiva per i CSS:
 
  autocmd FileType css set omnifunc=csscomplete#CompleteCSS smartindent shiftwidth=4 "aggiungo l'indentazione per i css"
@@ -92,7 +90,7 @@ E' una cosa davvero semplice abilitare l'auto-completamento in Vim per il codice
 
 Se per esempio sto scrivendo una funzione per connettermi al database MySql ma voglio vedere quali sono le funzioni disponibili, in modalità inserimento di Vim digito direttamente <code>mysql</code> e poi pigio di seguito <code>Ctrl + x</code> e <code>Ctrl + o</code> e Vim presenterà una lista di tutte le funzioni Php che iniziano per <code>mysql</code>.
 
-= Ancora un po' di completamento automatico in Vim =
+== Ancora un po' di completamento automatico in Vim ==
 
 Esiste un plugin per Vim molto interessante: [http://www.vim.org/scripts/script.php?script_id=1879 AutoComplPop] scritto da Takeshi NISHIDA.<br />
 Con questo plugin Vim aprirà in automatico dei menu a popup con dei suggerimenti per il completamento del testo. Il plugin non impedisce la scrittura normale del testo.<br />
@@ -104,7 +102,7 @@ Per avere la guida di aiuto per questo plugin è il caso di ricostruire prima l'
 
 Aspettando un attimo sarà poi possibile richiamare la guida del plugin con <code>:help acp</code> .
 
-= Ricerca all'interno del codice con Cscope =
+== Ricerca all'interno del codice con Cscope ==
 
 Spesso capita di aver la necessità, specialmente nei progetti che hanno molti file, di fare delle ricerche all'interno del codice.<br />
 Qui ci viene in aiuto cscope.<br />
@@ -147,7 +145,7 @@ Quando lancio Vim mi viene fuori un messaggio di errore del tipo e568, ho risolt
          cs add ./cscope.out
  endif
 
-= Navigazione all'interno del codice con ctags =
+== Navigazione all'interno del codice con ctags ==
 
 Cscope è davvero utile per ritrovare facilmente pezzi di codice all'interno del proprio progetto. [http://ctags.sourceforge.net/ Ctags] (anche noto come [http://ctags.sourceforge.net/ Exuberant Ctags]) è un altro strumento molto utile per poter saltare e navigare all'interno del proprio codice.<br />
 Per prima cosa è necessario avere installato il programma ctags, se non è installato basta:
@@ -163,7 +161,7 @@ Ora con Vim basta aprire un file php, posizionarsi sopra una funzione del propri
 Invece di usare la combinazione dei tasti si può, in modalità comandi di Vim, digitare <code>:ta nome_funzione</code> e si verrà rimandati alla dichiarazione della funzione ricercata.<br />
 Esistono anche altre funzioni di Vim per la navigazione nei tag, con <code>:ts</code> si può vedere la lista delle funzioni ricercate. Per altre informazioni rimando alla documentazione di Vim reperibile dall'editor con <code>:help tag</code>.
 
-= Source Code Browser con Taglist Plugin =
+== Source Code Browser con Taglist Plugin ==
 
 Vim può diventare un ottimo browser del codice sorgente con il [http://vim-taglist.sourceforge.net/ plugin Taglist] ([http://vim.sourceforge.net/scripts/script.php?script_id=273 pagina nel repository di vim]). Ricordo che per usare questo plugin è necessario avere installato ctags, come ho spiegato precedentemente.<br />
 Per installare questo plugin basta scaricarlo e scompattarlo all'interno della solita directory per vim (<code>.vim</code>) dell'utente. Dopo aver fatto questa operazione bisogna ricostruire l'indice della documentazione aprendo Vim e dando <code>:helptags ~/.vim/doc</code>, così si può vedere la documentazione completa di questo plugin con <code>:help taglist.txt</code>.<br />
@@ -172,8 +170,7 @@ Per aprire la finestra con la lista dei tag basta digitare in modalità comandi 
 Per saltare da una voce della lista al codice si può usare o il mouse (se si è impostato Vim per usare il mouse come ho specificato all'inizio di questo articolo) o ci si posiziona col cursore sulla voce della lista e si da <code>Invio</code>.<br />
 Se invece di <code>Invio</code> si preme la barra spaziatrice si può vedere in basso (dove si entra nella modalità di inserimento comandi di Vim) la dichiarazione della riga in cui si trova il tag.
 
-= Debug del codice Php con Xdebug =
-
+== Debug del codice Php con Xdebug ==
 Nello sviluppo di un programma non può mancare la fase di debug. Xdebug è un'estensione per il Php molto utile per fare il debug di quest'ultimo.<br />
 Per installarlo in Fedora è molto semplice:
 
@@ -221,7 +218,7 @@ Se si è in debug e in modalità normale (o comandi) di Vim si può anche usare 
 Quando si sta eseguendo il debug capita che lo stack del Php si riempia di file che vengono richiamati. Con questo plugin è facile muoversi nello stack per recuperare la posizione da dove un file è stato richiamato per esempio. Per farlo basta semplicemente usare uno dei due comandi <code>:Up : Dn</code> per salire o scendere nello stack. Lo stack è visualizzato nel riquadro in basso a destra di Vim.<br />
 Nel riquadro centrale a destra c'è una piccola finestra che ricorda le funzioni che ho descritto in questa sezione del mio articolo.
 
-= Estendere il % di Vim =
+== Estendere il % di Vim ==
 
 Trovo molto utile la funzione % di Vim per muoversi in un file di testo. Lo trovo ancor più utile utilizzando un plugin che ne estende le funzioni: [http://www.vim.org/scripts/script.php?script_id=39 Matchit] creato da Benji Fisher.<br />
 E' stato costruito principalmente per essere usato in codice HTML e altri linguaggi. Quando si lavora in un progetto Php si ha spesso a che fare con codice HTML.<br />
@@ -240,18 +237,20 @@ E poi procedere con la ricostruzione dei tag della guida di Vim:
 
 Se la direttiva <code>:filetype plugin on</code> è già stata data all'interno del file di configurazione di Vim si potrà usare % esteso.
 
-= Un piccolo aiuto con Closetag =
-
+== Un piccolo aiuto con Closetag ==
 Come già detto, quando si sviluppa un applicativo in Php è facile aver a che fare con codice HTML, questo perchè il Php è stato appositamente pensato e creato per la costruzione di applicativi web.<br />
 Esiste un plugin utile per chiudere in modo facile e veloce i tag HTML aperti senza doverli scrivere a mano: [http://vim.sourceforge.net/scripts/script.php?script_id=13 Closetag] creato da Steven Mueller.<br />
 L'installazione si esegue come al solito: si scarica il pacchetto e si posiziona direttamente all'interno di <code>.vim/plugin</code> presente nella home dell'utente.<br />
 Il plugin dovrebbe già essere installato e funzionante. Lo si può testare provando ad aprire un file html (o anche xml), scrivere un tag html qualsiasi e poi provare a chiuderlo con <code>Ctrl + _</code>.
 
-= Conclusioni =
+== Conclusioni ==
 
 Con questo articoletto ho spiegato velocemente come configurare ed estendere Vim per poterlo tramutare in un IDE per la scrittura di codice Php.<br />
 Esistono molti altri plugin per Vim, reperibili dal sito web di Vim, che non ho avuto modo di studiare ed adoperare.<br />
 Se esiste un plugin utile che non ho menzionato prego di farmi sapere così vedrò di estendere ulteriormente questo articolo.
+<br />
+
+----
 
 [[:Categoria:Scrittura in corso]]
 [[:Categoria:Rilettura in corso]]
