@@ -110,7 +110,7 @@ L'opzione '''j''' specifica a tar di comprimere l'archivio usando bzip2.
  $ ls
  nome_archivio.tar
 
-'''Decomprimere con tar''':
+Decomprimere con tar:
 
  $ tar xvfj nome_archivio.tar.bz2
  $ ls
