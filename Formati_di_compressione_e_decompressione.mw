@@ -50,7 +50,7 @@ Gli archivi tar, poi, vengono spesso compressi utilizzando altri comandi che tra
 
 ==Archivi o file compressi tipo .tar.gz, .tgz, .gz==
 
-I file con estensione <code>.tar.gz</code> o <code>.tgz</code>, forma abbreviata, sono archivi tarball compressi utilizzando il [http://www.gzip.org/ programma gzip]. I file con estensione <code>.gz</code> sono, invece, dei semplici file compressi, non sono degli archivi. <br />
+I file con estensione <code>.tar.gz</code> o <code>.tgz</code>, <nowiki>.tgz</nowiki> forma abbreviata, sono archivi tarball compressi utilizzando il [http://www.gzip.org/ programma gzip]. I file con estensione <code>.gz</code> sono, invece, dei semplici file compressi, non sono degli archivi. <br />
 Da notare che la distribuzione [http://slackware.it/ Slackware] ha utilizzato il formato <code>.tgz</code> per distribuire i software da installare tramite <code>pkgtool</code>.
 ==== '''Creare un archivio .tar.gz o .tgz o un file .gz''' ====
 La creazione di un file .tar.gz o di un file .gz è identica, semplicemente il .tar.gz ha come partenza un archivio tar:
@@ -84,7 +84,6 @@ Se si tratta di un semplice file con estensione .gz si avrà il file decompresso
 ==== '''Vedere il contenuto dei un archivio .tar.gz''' ====
 
  $ tar tvfz nome_archivio.tar.gz
-
 
 ==Archivi o file compressi tipo .tar.bz2, .bz2==
 
