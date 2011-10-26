@@ -24,18 +24,18 @@ Per unrar è necessario avere installato ed abilitato i [http://rpmfusion.org/ r
 
 ==Semplici archivi di file o directory ( .tar )==
 I file con estensione <code>.tar</code> normalmente indicano semplici archivi di file o directory create con il [http://www.gnu.org/software/tar/ programma tar] e sono chiamati archivi tarball.
-==== '''''Per creare un archivio tar:''''' ====
+==== '''Per creare un archivio tar''' ====
 
  $ tar cvf nome_archivio.tar directory/ # o si indica il nome di un file o di più file o di più directory
  # oppure
  $ tar cv directory/ > nome_archivio.tar # anche qui al posto di directory/ può essere come sopra
 
 Le due forme si equivalgono, la seconda utilizza semplicemente la re-direzione dello standard output di bash invece che utilizzare l'opzione interna di tar (<code>f</code>).
-==== Per estrarre un archivio tar: ====
+==== '''Per estrarre un archivio tar''' ====
 
  $ tar xvf nome_archivio.tar
 
-==== Per vedere solo il contenuto di un archivio tar: ====
+==== '''Per vedere solo il contenuto di un archivio tar''' ====
 
  $ tar tvf nome_archivio.tar
 
@@ -52,7 +52,7 @@ Gli archivi tar, poi, vengono spesso compressi utilizzando altri comandi che tra
 
 I file con estensione <code>.tar.gz</code> o <code>.tgz</code>, forma abbreviata, sono archivi tarball compressi utilizzando il [http://www.gzip.org/ programma gzip]. I file con estensione <code>.gz</code> sono, invece, dei semplici file compressi, non sono degli archivi. <br />
 Da notare che la distribuzione [http://slackware.it/ Slackware] ha utilizzato il formato <code>.tgz</code> per distribuire i software da installare tramite <code>pkgtool</code>.
-=== Creare un archivio .tar.gz o .tgz o un file .gz: ===
+==== '''Creare un archivio .tar.gz o .tgz o un file .gz''' ====
 La creazione di un file .tar.gz o di un file .gz è identica, semplicemente il .tar.gz ha come partenza un archivio tar:
 
  $ ls
@@ -66,7 +66,7 @@ In realtà si può '''utilizzare''' direttamente il comando '''tar per creare un
  $ tar cvfz nome_archivio.tar.gz directory/ # al posto di directory può esserci uno o più file
 
 L'opzione '''z''' specifica a tar di comprimere l'archivio usando gzip.
-=== Decomprimere un file .gz o un archivio .tar.gz ===
+==== '''Decomprimere un file .gz o un archivio .tar.gz''' ====
  $ ls
  nome_archivio.tar.gz
  $ gunzip nome_archivio.tar.gz
@@ -81,7 +81,7 @@ Se si tratta di un semplice file con estensione .gz si avrà il file decompresso
  $ ls
  directory
 
-=== Vedere il contenuto dei un archivio .tar.gz ===
+==== '''Vedere il contenuto dei un archivio .tar.gz''' ====
 
  $ tar tvfz nome_archivio.tar.gz
 
@@ -90,7 +90,7 @@ Se si tratta di un semplice file con estensione .gz si avrà il file decompresso
 
 I file con estensione <code>.tar.bz2</code> sono archivi tarball compressi utilizzando il [http://www.bzip.org/ programma bzip2]. I file con estensione <code>.bz2</code> sono invece dei semplici file compressi.<br />
 L'uso base di bzip2 è praticamente uguale a gzip, cambia solamente il nome del programma da usare e, per quanto riguarda l'uso di tar, l'opzione da usare (si usa "j" invece di "z").
-=== Creare un archivio .tar.bz2 o un file .bz2: ===
+==== '''Creare un archivio .tar.bz2 o un file .bz2''' ====
 
  $ ls
  nome_archivio.tar
@@ -103,7 +103,7 @@ Con tar''':
  $ tar cvfj nome_archivio.tar.bz2 directory/ # al posto di directory può esserci uno o più file
 
 L'opzione '''j''' specifica a tar di comprimere l'archivio usando bzip2.
-=== Decomprimere un file .bz2 o un archivio .tar.bz2 ===
+==== '''Decomprimere un file .bz2 o un archivio .tar.bz2''' ====
  $ ls
  nome_archivio.tar.bz2
  $ bzip2 -d nome_archivio.tar.bz2
@@ -116,24 +116,24 @@ L'opzione '''j''' specifica a tar di comprimere l'archivio usando bzip2.
  $ ls
  directory
 
-=== Vedere il contenuto dei un archivio .tar.gz ===
+==== '''Vedere il contenuto dei un archivio .tar.gz''' ====
 
  $ tar tvfj nome_archivio.tar.bz2
 
 ==Archivi compressi tipo .zip==
 
 I file con estensione <code>.zip</code> sono in genere archivi compressi zip, che è forse il formato più conosciuto tra gli utenti medi. Nei vari sistemi operativi liberi, come Fedora, il programma di riferimento è [http://www.info-zip.org/ zip].
-=== Creare archivi compressi con zip ===
+==== '''Creare archivi compressi con zip''' ====
 
  $ zip nome_archivio.zip file1 file2 # ecc. si può indicare anche un solo file
  # oppure in caso di directory, usare il modo ricorsivo, aggiungere -r
  $ zip -r nome_archivio.zip directory/ # si possono aggiungere altre directory o file
 
-=== Decomprimere un file .zip ===
+==== '''Decomprimere un file .zip''' ====
 
  $ unzip nome_archivio.zip
 
-=== Vedere il contenuto di uno zip ===
+==== '''Vedere il contenuto di uno zip''' ====
 
  $ unzip -l nome_archivio.zip
 
@@ -141,30 +141,30 @@ I file con estensione <code>.zip</code> sono in genere archivi compressi zip, ch
 
 Il formato di compressione e archiviazione [http://www.rarlab.com/ rar] è proprietario. Se ne sconsiglia dunque l'uso per motivi, fondamentalmente, di carattere etico.<br />
 Come già detto, nelle distro Linux ed in particolar modo in Fedora, si può installare il comando unrar tramite l'installazione e l'abilitazione dei repository <code>rpmfusion-nonfree</code>.
-=== Creare un archivio compresso rar ===
+==== '''Creare un archivio compresso rar''' ====
 Il comando unrar, principalmente, permette di decomprimere un archivio rar e/o di visionarne il contenuto. Se si vuole poter creare un archivio rar bisogna comprare il software o scaricare la versione con la licenza di prova a [http://www.rarlab.com/download.htm questo indirizzo].
-=== Decomprimere un archivio rar ===
+==== '''Decomprimere un archivio rar''' ====
 
  $ unrar x nome_archivio.rar
 
 Estrae l'archivio nella directory corrente.
-=== Vedere il contenuto di un file rar ===
+==== '''Vedere il contenuto di un file rar''' ====
 
  $ unrar l nome_archivio.rar
 
 ==Archivi compressi tipo .7z==
 
 Il formato di compressione di [http://www.7-zip.org/ 7zip] non è in realtà molto utilizzato, si preferisce, in genere, utilizzare il tar.gz o il tar.bz2.
-=== Creare un archivio compresso .7z ===
+==== '''Creare un archivio compresso .7z''' ====
 
  $ 7z a -t7z nome_archivio.7z directory/ # si possono aggiungere file o directory
 
-=== Decomprimere un archivio compresso .7z ===
+==== '''Decomprimere un archivio compresso .7z''' ====
 
  $ 7z x nome_archivio.7z
 
 Nel caso la directory corrente contenesse gli stessi nomi dei file che si stanno estraendo, 7z chiederà come si vuole procedere.
-=== Vedere il contenuto di un archivio compresso .7z ===
+==== '''Vedere il contenuto di un archivio compresso .7z''' ====
 
  $ 7z l nome_archivio.7z
 
