@@ -45,13 +45,12 @@ Di seguito la spiegazione delle opzioni usate precedentemente:
 *'''v''': verbose, fa vedere i file che sono processati, può essere omessa;
 *'''f''': indica il nome dell'archivio.
 
-Il manpage del comando tar spiega in modo più completo tutti gli altri comandi e opzioni disponibili.
-
+Il manpage del comando tar spiega in modo più completo tutti gli altri comandi e opzioni disponibili.<br />
 Gli archivi tar, poi, vengono spesso compressi utilizzando altri comandi che tratterò di seguito.
 
 ==Archivi o file compressi tipo .tar.gz, .tgz, .gz==
 
-I file con estensione <code>.tar.gz</code> o <code>.tgz</code>, forma abbreviata, sono archivi tarball compressi utilizzando il [http://www.gzip.org/ programma gzip]. I file con estensione <code>.gz</code> sono, invece, dei semplici file compressi, non sono degli archivi.
+I file con estensione <code>.tar.gz</code> o <code>.tgz</code>, forma abbreviata, sono archivi tarball compressi utilizzando il [http://www.gzip.org/ programma gzip]. I file con estensione <code>.gz</code> sono, invece, dei semplici file compressi, non sono degli archivi. <br />
 Da notare che la distribuzione [http://slackware.it/ Slackware] ha utilizzato il formato <code>.tgz</code> per distribuire i software da installare tramite <code>pkgtool</code>.
 === Creare un archivio .tar.gz o .tgz o un file .gz: ===
 La creazione di un file .tar.gz o di un file .gz è identica, semplicemente il .tar.gz ha come partenza un archivio tar:
@@ -76,8 +75,7 @@ L'opzione '''z''' specifica a tar di comprimere l'archivio usando gzip.
  $ ls
  nome_archivio.tar
 
-Se si tratta di un semplice file con estensione .gz si avrà il file decompresso.
-Si può '''decomprimere''' ed estrarre l'archivio direttamente anche '''con il comando tar''':
+Se si tratta di un semplice file con estensione .gz si avrà il file decompresso. Si può '''decomprimere''' ed estrarre l'archivio direttamente anche '''con il comando tar''':
 
  $ tar xvfz nome_archivio.tar.gz
  $ ls
@@ -90,7 +88,7 @@ Si può '''decomprimere''' ed estrarre l'archivio direttamente anche '''con il c
 
 ==Archivi o file compressi tipo .tar.bz2, .bz2==
 
-I file con estensione <code>.tar.bz2</code> sono archivi tarball compressi utilizzando il [http://www.bzip.org/ programma bzip2]. I file con estensione <code>.bz2</code> sono invece dei semplici file compressi.
+I file con estensione <code>.tar.bz2</code> sono archivi tarball compressi utilizzando il [http://www.bzip.org/ programma bzip2]. I file con estensione <code>.bz2</code> sono invece dei semplici file compressi.<br />
 L'uso base di bzip2 è praticamente uguale a gzip, cambia solamente il nome del programma da usare e, per quanto riguarda l'uso di tar, l'opzione da usare (si usa "j" invece di "z").
 === Creare un archivio .tar.bz2 o un file .bz2: ===
 
@@ -122,8 +120,8 @@ L'opzione '''j''' specifica a tar di comprimere l'archivio usando bzip2.
 
  $ tar tvfj nome_archivio.tar.bz2
 
-
 ==Archivi compressi tipo .zip==
+
 I file con estensione <code>.zip</code> sono in genere archivi compressi zip, che è forse il formato più conosciuto tra gli utenti medi. Nei vari sistemi operativi liberi, come Fedora, il programma di riferimento è [http://www.info-zip.org/ zip].
 === Creare archivi compressi con zip ===
 
@@ -142,7 +140,7 @@ I file con estensione <code>.zip</code> sono in genere archivi compressi zip, ch
 
 ==Archivi compressi tipo .rar==
 
-Il formato di compressione e archiviazione [http://www.rarlab.com/ rar] è proprietario. Se ne sconsiglia dunque l'uso per motivi, fondamentalmente, di carattere etico.
+Il formato di compressione e archiviazione [http://www.rarlab.com/ rar] è proprietario. Se ne sconsiglia dunque l'uso per motivi, fondamentalmente, di carattere etico.<br />
 Come già detto, nelle distro Linux ed in particolar modo in Fedora, si può installare il comando unrar tramite l'installazione e l'abilitazione dei repository <code>rpmfusion-nonfree</code>.
 === Creare un archivio compresso rar ===
 Il comando unrar, principalmente, permette di decomprimere un archivio rar e/o di visionarne il contenuto. Se si vuole poter creare un archivio rar bisogna comprare il software o scaricare la versione con la licenza di prova a [http://www.rarlab.com/download.htm questo indirizzo].
@@ -155,8 +153,8 @@ Estrae l'archivio nella directory corrente.
 
  $ unrar l nome_archivio.rar
 
-
 ==Archivi compressi tipo .7z==
+
 Il formato di compressione di [http://www.7-zip.org/ 7zip] non è in realtà molto utilizzato, si preferisce, in genere, utilizzare il tar.gz o il tar.bz2.
 === Creare un archivio compresso .7z ===
 
@@ -173,9 +171,12 @@ Nel caso la directory corrente contenesse gli stessi nomi dei file che si stanno
 
 ==Conclusione==
 
-Tutti i programmi/comandi citati contengono altre opzioni utili per lavorare con i vari formati di compressione e archiviazione. Sul web si possono trovare decine e decine di guide sul loro uso e di seguito elencherò solo alcuni articoli che credo possano essere utili ad avvicinarsi a questi formati di archivio.
-Come si può vedere, forse il comando che fa davvero da padrone su tutti è <code>tar</code> con il quale si possono creare archivi e comprimerli come si preferisce. Volendo anche <code>7z</code> può essere utilizzato per estrarre, creare e comprimere directory o file in formato sia 7zip che zip, bzip, bzip2 o tar.
+Tutti i programmi/comandi citati contengono altre opzioni utili per lavorare con i vari formati di compressione e archiviazione.<br />
+Sul web si possono trovare decine e decine di guide sul loro uso e di seguito elencherò solo alcuni articoli che credo possano essere utili ad avvicinarsi a questi formati di archivio.<br />
+Come si può vedere, forse il comando che fa davvero da padrone su tutti è <code>tar</code> con il quale si possono creare archivi e comprimerli come si preferisce. Volendo anche <code>7z</code> può essere utilizzato per estrarre, creare e comprimere directory o file in formato sia 7zip che zip, bzip, bzip2 o tar.<br />
 Ognuno poi prenderà famigliarità con il comando ed il formato di compressione che preferisce.
+
+----
 
 Riferimenti e documentazione utile:
 
@@ -183,6 +184,9 @@ Riferimenti e documentazione utile:
 * [http://www.thegeekstuff.com/2010/04/unix-tar-command-examples/ Esempi uso del comando tar] (inglese)
 * [http://antoniodeluci.wordpress.com/2006/12/21/linux-formati-di-compressione-e-decompressione-su-terminale/ Linux formati di compressione e decompressione su terminale]
 * [http://appuntilinux.mirror.garr.it/mirrors/appuntilinux/a2/a231.htm#almltitle1175 Appunti di informatica libera - Archiviazione]
+
+----
+
 
 [[Categoria:Rilettura in corso]]
 [[Categoria:Sistema]]
