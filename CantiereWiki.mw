@@ -54,7 +54,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Ampliare struttura LVM|autore=RobertMayr|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Ampliare struttura LVM|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Configurare un SSD |autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire un filesystem ext3 in ext4|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=EeePC 1000H: creare una penna USB WinXP recovery|autore=RobertMayr|stato=DaFare}}
@@ -122,6 +122,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|rilettore=GabrieleTrombini|data=25/10/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Vim Ide per PHP|autore=MarioSantagiuliana|rilettore=GabrieleTrombini|data=26/10/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Libreoffice|autore=SimoneZaminga|rilettore=RobertMayr|data=27/10/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Ampliare struttura LVM|autore=RobertMayr|rilettore=?|data=27/10/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
