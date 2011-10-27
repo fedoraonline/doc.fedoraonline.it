@@ -21,7 +21,8 @@ Inoltre si avrà necessità dei seguenti file, che si trovano sul CD di supporto
 
 == Estrazione dei file da WINPE.ISO==
 
-
-
+Per primo biasogna creare una nuova directory "WINPE" su un disco con abbastanza spazio libero. Aprire Winrar e selezionare il file WINPE.ISO dal disco di supporto:
+[[Image:Winpe.png|center|thumb|350px|WinPE.ISO è un archivio WinRAR.]]
+Per far partire l'estrazione cliccare su "extract to" e selezionare la cartella /Winpe appena creata come destinazione. Confermare con ''OK'' e tutti i file verranno estratti nella directory.
 
 [[Categoria:Hardware]]
