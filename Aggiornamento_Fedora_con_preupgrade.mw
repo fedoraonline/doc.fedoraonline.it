@@ -1,3 +1,5 @@
 == Introduzione ==
 
-Esistono vari modi per aggiornare il sistema da una release di Fedora all'altra. In questo piccolo howto ci si vuole focalizzare sull'aggiornamento tramite ''Preupgrade'', che tra quelle disponibili è l'unica che effettivamente aggiorna il sistema agli ultimi pacchetti disponibili, perchè si connette ai [[:Categoria:Repository|repository Fedora updates]]
+Esistono vari modi per aggiornare il sistema da una release di Fedora all'altra. In questo piccolo howto ci si vuole focalizzare sull'aggiornamento tramite ''Preupgrade'', che tra quelle disponibili è l'unica che effettivamente aggiorna il sistema agli ultimi pacchetti disponibili, perchè si connette al [[:Categoria:Repository|repository 'Fedora updates']].
+
+== Preparazione del sistema ==
