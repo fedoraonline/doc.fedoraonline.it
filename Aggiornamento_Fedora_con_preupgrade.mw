@@ -35,7 +35,7 @@ Per ogni singolo kernel bisogna cancellare i seguenti file:
  # rm -rf initrd-2.6.x.x-x.fc15.i586.img
 
 Questa operazione va ripetuta per ogni versione di kernel, alla fine dovrebbero rimanere soltanto i file relativi al kernel in uso, ovvero l'ultimo.<br />
-Se non dovesse essere sufficiente liberare spazio cancellando i file inutili si può aumentare la partizione di /boot con [http://gparted.sourceforge.net/ gparted] oppure utilizzando una connessione via cavo (metodo descritto sul sito di [https://fedoraproject.org/wiki/How_to_use_PreUpgrade#Method_2:_Trick_preupgrade_into_downloading_the_installer fedoraproject].
+Se non dovesse essere sufficiente liberare spazio cancellando i file inutili si può aumentare la partizione di /boot con [http://gparted.sourceforge.net/ gparted] oppure utilizzando una connessione via cavo (metodo descritto sul sito di [https://fedoraproject.org/wiki/How_to_use_PreUpgrade#Method_2:_Trick_preupgrade_into_downloading_the_installer fedoraproject]).
 
 == L'aggiornamento ==
 
