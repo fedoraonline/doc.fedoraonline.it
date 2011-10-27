@@ -50,7 +50,7 @@ Il sistema eseguirà tutti i controlli necessari per poi partire con il download
 Una volta finito il download dei pacchetti viene nuovamente controllato il sistema e lo spazio nella directory ''/boot''. Se tutto va a buon fine verrà chiesto il riavvio del sistema.
 [[Image:Preupgrade3.png|center|thumb|350px|Controllo eseguito con successo, riavviare.]]
 Una volta fatto il reboot viene eseguito l'upgrade vero e proprio. Infatti vengono installati tutti i pacchetti aggiornati alla versione successiva ed è facilmente intuibile che questa fase può durare molto, anche ore...
-[[Image:Preupgrade3.png|center|thumb|350px|Installazione dei pacchetti della nuova release.]]
+[[Image:Preupgrade4.png|center|thumb|350px|Installazione dei pacchetti della nuova release.]]
 Non appena l'aggiornamento sarà terminato ci si ritroverà davanti alla "nuova" schermata di login.
 
 [[Categoria:Installazione]]
