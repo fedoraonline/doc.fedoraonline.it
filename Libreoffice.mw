@@ -7,8 +7,8 @@ LibreOffice dalla release di Fedora 15 è incluso nei [[:Categoria:Repository|re
 Per eseguire un'installazione, procedere nel modo seguente:
 <ol><li> Scaricare i seguenti pacchetti dal Sito Ufficiale, scegliendo l'architettura del sistema di riferimento:</li>
 
-* archivio del programma
-* language pack italiano
+* archivio del programma;
+* language pack italiano.
 
 <li> Una volta scaricato, aprire il terminale e recarsi nella cartella dove sono scaricati i file:</li>
 
