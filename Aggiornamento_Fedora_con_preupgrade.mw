@@ -3,7 +3,7 @@
 Esistono vari modi per aggiornare il sistema da una release di Fedora all'altra. In questo piccolo howto ci si vuole focalizzare sull'aggiornamento tramite ''Preupgrade'', che tra quelle disponibili è l'unica che effettivamente aggiorna il sistema agli ultimi pacchetti disponibili, perchè si connette al [[:Categoria:Repository|repository 'Fedora updates']].
 
 == Preparazione del sistema ==
-{{Suggerimento|Benchè l'aggiornamento dovrebbe funzionare senza particolari problemi è consigliato sempre il backup dei propri dati.}}
+{{Suggerimento|tip=Benchè l'aggiornamento dovrebbe funzionare senza particolari problemi è consigliato sempre il backup dei propri dati.}}
 Le operazioni che seguono vanno tutte date con i privilegi di root:
 
  $ su -
