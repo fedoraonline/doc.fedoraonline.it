@@ -41,7 +41,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Autore
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Covergloobus|autore=CristianPozzessere|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Libreoffice|autore=SimoneZaminga|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Libreoffice|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Openbox|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Tunnel criptato via SSH|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora *|autore=GabrieleTrombini|stato=DaFare}}
