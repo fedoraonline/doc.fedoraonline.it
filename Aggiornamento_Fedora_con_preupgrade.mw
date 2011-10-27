@@ -44,3 +44,6 @@ Completati tutti i preparativi si può partire con l'aggiornamento vero e propri
  # preupgrade
 
 Una volta digitato questo comando partirà una GUI che ti seguirà durante l'aggiornamento. Dopo il messaggio di benvenuto verrà chiesto di selezionare la versione da installare dopo l'aggiornamento. (in queste immagini per l'attuale mancanza a F16 viene proposto la Rawhide di Fedora Verne).
+[[Image:Preupgrade1.png|center|thumb|350px|Preupgrade propone le versioni disponibili per l'aggiornamento.]]
+Il sistema eseguirà tutti i controlli necessari per poi partire con il download dei pacchetti. E' bene sapere che durante questa fase un'eventuale uscita dal programma di aggiornamento non comprometterà nulla, e se si vuole si può riprendere il download anche successivamente dal punto in cui è stato interrotto.
+[[Image:Preupgrade2.png|center|thumb|350px|Il controllo dello spazio, dei pacchetti ecc.]]
