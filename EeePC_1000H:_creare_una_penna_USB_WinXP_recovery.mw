@@ -61,6 +61,7 @@ L'utilizzo della penna è abbastanza semplice:
 * Premere OK e poi selezionate ''Local > Disk > From Image'';
 * Dal menu a tendina ora si dovrà scegliere la penna USB, che per esempio potrebbe essere X: , e successivamente l'immagine EEEPCAH.GHO;
 * Selezionare il disco di destinazione o la partizione di destinazione;
-{{Warning|Assicurarsi di selezionare il disco o la partizione corretta, perchè una volta partito con il recovery tutti i dati presenti saranno irrecuperabilmente cancellati}}
+{{Warning|Assicurarsi di selezionare il disco o la partizione corretta, perchè una volta partito con il recovery tutti i dati presenti saranno cancellati per sempre!}}
 
 [[Categoria:Hardware]]
+[[Categoria:Installazione]]
