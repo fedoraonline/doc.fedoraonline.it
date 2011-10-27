@@ -1,0 +1,11 @@
+{{nota|titolo=Guida Off Topic|contenuto=La presente guida non rientra direttamente nelle tematiche Fedora, ma potrebbe comunque rivelarsi utile per installazioni dual boot}}
+== Introduzione ==
+
+I Netbook con sistemi Linux preinstallati sono ormai spariti, per cui molti sceglieranno il dual boot su questi piccoli portatili. I netbook, però, non hanno DVD, per cui crearsi una penna USB per mantenere la possibilità di recovery Windows potrebbe essere molto utile (da crearsi prima di installare Fedora).<br />
+La procedura seguente viene descritta prendendo come esempio un eeepc 1000H, ma dovrebbe essere corretta, al limite con piccole correzioni, anche per altri netbook se si utilizza Win XP.
+
+== Prerequisiti ==
+
+
+
+[[Categoria:Hardware]]
