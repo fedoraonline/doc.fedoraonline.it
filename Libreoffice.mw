@@ -1,39 +1,38 @@
-{{InCorso|autore=Simone Zaminga}}
-{{Autore|NomeAutore}}
-
 {{Obsoleto}}
 == Introduzione ==
-LibreOffice è incluso nei repository già dalla release di Fedora 15, come specificato su fedoraproject.org. Questa guida prevede l'installazione da sorgenti anche se la trattazione è ormai obsoleta.
+LibreOffice dalla release di Fedora 15 è incluso nei [[Categoria:Repository|repository]], come specificato su [http://fedoraproject.org fedoraproject.org]. Questa guida prevede l'installazione da sorgenti su rilasci precedenti alla 15.
 
 == Installazione di LibreOffice ==
-Se comunque bisogna eseguire un'installazione, procedere nel modo seguente:
 
-scaricare i seguenti pacchetti dal Sito Ufficiale, scegliendo l'architettura del sistema di riferimento:
+Per eseguire un'installazione, procedere nel modo seguente:
+<ol><li> Scaricare i seguenti pacchetti dal Sito Ufficiale, scegliendo l'architettura del sistema di riferimento:</li>
 
 * archivio del programma
 * language pack italiano
 
-Una volta scaricato, aprire il terminale, recarsi nella cartella dove sono scaricati i file:
+<li> Una volta scaricato, aprire il terminale e recarsi nella cartella dove sono scaricati i file:</li>
 
- cd  /percorso/
+ $ cd  /percorso/
 
-Nella posizione indicata, estrarre i file con il seguente comando:
+<li> Nella posizione indicata, estrarre i file con il seguente comando:</li>
 
  $ tar -xzvf nome_del_pacchetto.tar.gz
 
-Adesso posizionarsi, sempre da terminale, nella cartella RPMS che contiene tutti i file per l'installazione e digitare da root:
-
+<li> Posizionarsi, sempre da terminale, nella cartella RPMS che contiene tutti i file per l'installazione e digitare da root:</li>
+</ol>
  # yum localinstall --nogpgcheck *.rpm
 
 La conclusione dell'operazione porterà al compimento dell'installazione di LibreOffice su Fedora; per avviare le singole suite, basterà lanciare da terminale:
 
- /opt/libreoffice/program/swriter
- /opt/libreoffice/program/sdraw
- /opt/libreoffice/program/sbase
- /opt/libreoffice/program/simpress
- /opt/libreoffice/program/scalc
- /opt/libreoffice/program/smath
+ $ /opt/libreoffice/program/swriter
+ $ /opt/libreoffice/program/sdraw
+ $ /opt/libreoffice/program/sbase
+ $ /opt/libreoffice/program/simpress
+ $ /opt/libreoffice/program/scalc
+ $ /opt/libreoffice/program/smath
 
 Per installare la lingua italiana estrarre dall'archivio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima.
 
  # yum localinstall --nogpgcheck *.rpm
+
+[[Categoria:Ufficio]]
