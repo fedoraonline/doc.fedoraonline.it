@@ -212,7 +212,7 @@ Lo script realizzato per lo scopo, denominato "icshare" (Internet Connection Sha
 
 == Utilizzo==
 
-Se hai creato il file icshare (collocalo in /root/bin) non dimenticate di renderlo eseguibile:
+Una volta creato il file icshare (collocalo in /root/bin) è necessario renderlo eseguibile:
 
  # chmod ugo+x icshare
 
@@ -233,7 +233,7 @@ Lo script va eseguito sul gateway come utente root, e ha un piccolo help:
    status    Print info about the connetion sharing
 
 La modalità di utilizzo e' analoga a quella di yum, cioè prevede opzioni e comandi. I comandi principali sono start/stop per avviare/chiudere la condivisione della connessione.<br>
-L'opzione ''-i'' serve per specificare l'interfaccia della rete pubblica, quella ''-l'' e' per la rete privata. Le interfacce predefinite sono ppp0 per la rete pubblica ed eth0 per quella privata: se utilizzi queste non devi specificarle. Se invece il gateway e' connesso con rete wireless accessibile tramite interfaccia wlan0, allora si può condividere questa connessione con:
+L'opzione ''-i'' serve per specificare l'interfaccia della rete pubblica, quella ''-l'' e' per la rete privata. Le interfacce predefinite sono ppp0 per la rete pubblica ed eth0 per quella privata: se vengono utilizzate queste, non occorre specificarle. Se invece il gateway e' connesso con rete wireless accessibile tramite interfaccia wlan0, allora si può condividere questa connessione con:
 
  # icshare -i wlan0 start
 
