@@ -1,32 +1,39 @@
+{{InCorso|autore=Simone Zaminga}}
+{{Autore|NomeAutore}}
+
 {{Obsoleto}}
-LibreOffice è incluso nei repository già dalla release di Fedora 15, come specificato su fedoraproject.org.
+== Introduzione ==
+LibreOffice è incluso nei repository già dalla release di Fedora 15, come specificato su fedoraproject.org. Questa guida prevede l'installazione da sorgenti anche se la trattazione è ormai obsoleta.
+
+== Installazione di LibreOffice ==
 Se comunque bisogna eseguire un'installazione, procedere nel modo seguente:
 
 scaricare i seguenti pacchetti dal Sito Ufficiale, scegliendo l'architettura del sistema di riferimento:
+
 * archivio del programma
 * language pack italiano
 
 Una volta scaricato, aprire il terminale, recarsi nella cartella dove sono scaricati i file:
 
-cd  /percorso/
+ cd  /percorso/
 
 Nella posizione indicata, estrarre i file con il seguente comando:
 
-$ tar -xzvf nome_del_pacchetto.tar.gz
+ $ tar -xzvf nome_del_pacchetto.tar.gz
 
 Adesso posizionarsi, sempre da terminale, nella cartella RPMS che contiene tutti i file per l'installazione e digitare da root:
 
-# yum localinstall --nogpgcheck *.rpm
+ # yum localinstall --nogpgcheck *.rpm
 
 La conclusione dell'operazione porterà al compimento dell'installazione di LibreOffice su Fedora; per avviare le singole suite, basterà lanciare da terminale:
 
-/opt/libreoffice/program/swriter
-/opt/libreoffice/program/sdraw
-/opt/libreoffice/program/sbase
-/opt/libreoffice/program/simpress
-/opt/libreoffice/program/scalc
-/opt/libreoffice/program/smath
+ /opt/libreoffice/program/swriter
+ /opt/libreoffice/program/sdraw
+ /opt/libreoffice/program/sbase
+ /opt/libreoffice/program/simpress
+ /opt/libreoffice/program/scalc
+ /opt/libreoffice/program/smath
 
 Per installare la lingua italiana estrarre dall'archivio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima.
 
-# yum localinstall --nogpgcheck *.rpm
+ # yum localinstall --nogpgcheck *.rpm
