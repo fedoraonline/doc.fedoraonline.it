@@ -19,7 +19,7 @@ Per eseguire un'installazione, procedere nel modo seguente:
  $ tar -xzvf nome_del_pacchetto.tar.gz
 
 <li> Posizionarsi, sempre da terminale, nella cartella RPMS che contiene tutti i file per l'installazione e digitare da root:</li>
-</ol>
+
  # yum localinstall --nogpgcheck *.rpm
 
 La conclusione dell'operazione porterà al compimento dell'installazione di LibreOffice su Fedora; per avviare le singole suite, basterà lanciare da terminale:
@@ -31,8 +31,8 @@ La conclusione dell'operazione porterà al compimento dell'installazione di Libr
  $ /opt/libreoffice/program/scalc
  $ /opt/libreoffice/program/smath
 
-Per installare la lingua italiana estrarre dall'archivio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima.
+<li>Per installare la lingua italiana estrarre dall'archivio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima.</li>
 
  # yum localinstall --nogpgcheck *.rpm
-
+</ol>
 [[Categoria:Ufficio]]
