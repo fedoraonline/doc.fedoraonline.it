@@ -45,7 +45,7 @@ Per iniziare la formattazione inserire la penna USB nel netbook e far partire l'
 A questo punto bisogna selezionare le voci '''USB removable, Enable Disk Format''' e '''Enable file copy'''.<br />
 Alla fine si seleziona la cartella sorgente /Winpe che è stata creata pochi minuti fa.
 [[Image:Petousb.png|center|thumb|350px|Ecco come appare l'applicativo per la creazione della penna USB.]]
-{{Warning|Cliccando su START e confermando l'operazione, SI ELIMINERANNO TUTTI I DATI PRESENTI SULLA PENNA USB!}}
+{{Warning|Cliccando su START e confermando l'operazione, '''si elimineranno tutti i dati presenti sulla penna USB'''!}}
 Ci vorrà un po' di tempo, alla fine si può confermare con ''OK'' e chiudere PeToUSB.
 
 == Copiare il file immagine ==
