@@ -63,8 +63,8 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Aggiornamento Fedora con preupgrade|autore=RobertMayr|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=RPMFusion|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Workaround per webcam con modulo uvcvideo|autore=GiuseppeDelvecchio|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Log in tempo reale dei comandi bash|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Ridimensionare partizioni LVM|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Log in tempo reale dei comandi bash|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Ridimensionare partizioni LVM|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=TrueCrypt|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
