@@ -6,6 +6,22 @@ La procedura seguente viene descritta prendendo come esempio un eeepc 1000H, ma 
 
 == Prerequisiti ==
 
+Tutto quello che serve è:
+* una penna USB con almeno 4GB di capacità
+* Il CD di supporto incluso con l'Asus eeepc 1000H
+* [http://go2.wordpress.com/?id=725X1342&site=myeeeguides.wordpress.com&url=http%3A%2F%2Fwww.rarlab.com%2F Winrar]
+* [http://go2.wordpress.com/?id=725X1342&site=myeeeguides.wordpress.com&url=http%3A%2F%2Fgocoding.com%2Fpage.php%3Fal%3Dpetousb PeToUSB]
+
+Inoltre si avrà necessità dei seguenti file, che si trovano sul CD di supporto:
+* WINPE.ISO (nella directory root del CD)
+* EEEPCAH.GHO (nella directory "Recovery")
+
+'''WINPE.ISO''' è una versione light di Win XP e contiene inoltre il file GHOST32.EXE, della nota casa di salvataggio file.<br />
+'''EEEPCAH.GHO''' contiene l'immagine del disco dopo l'installazione della fabbrica, e può essere installato con Symantec Ghost.
+
+== Estrazione dei file da WINPE.ISO==
+
+
 
 
 [[Categoria:Hardware]]
