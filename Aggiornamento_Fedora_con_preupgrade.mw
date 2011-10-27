@@ -25,7 +25,7 @@ Una volta riavviato ci si rilogga nel terminale come root per proseguire.
 
  # yum install preupgrade 
 
-Siccome l'aggiornamento dalla versione 11 in poi, rispetto agli upgrade precedenti, richiede molto più spazio nella directory /boot, è necessario liberare più spazio possibile. Per farlo si possono, a questo punto, eliminare tutti i kernel (se si ha una partizione /boot uguale o inferiore a 300MB) tranne l'ultimo, che si sta utilizzando.<br />
+Siccome l'aggiornamento dalla versione 11 in poi, rispetto agli upgrade precedenti, richiede molto più spazio nella directory /boot, è necessario liberarne il più possibile. Per farlo si possono, a questo punto, eliminare tutti i kernel (se si ha una partizione /boot uguale o inferiore a 300MB) tranne l'ultimo, che si sta utilizzando.<br />
 Per ogni singolo kernel bisogna cancellare i seguenti file: 
 {{Warning|Assicurarsi di cancellare sempre i file relativi al kernel, con la stessa numerazione.<br />Una cancellazione di un file del kernel attuale renderebbe il sistema inutilizzabile}}
  # cd /boot
