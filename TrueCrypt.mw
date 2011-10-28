@@ -34,7 +34,6 @@ Citazione:
     ''../Common/SecurityToken.cpp:660: error: ‘CKR_NEW_PIN_MODE’ was not declared in this scope
     ../Common/SecurityToken.cpp:661: error: ‘CKR_NEXT_OTP’ was not declared in this scope''
 
-
 <li>Nessun panico, aprire con un editor di testo:</li>
 
  # nano Open Common/SecurityToken.cpp
