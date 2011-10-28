@@ -50,7 +50,7 @@ Citazione:
 Salvare e uscire.
 <li>Eseguire nuovamente "make".</li>
 
-A questo puonto tutto dovrebbe andare bene e Truecrypt dovrebbe compilarsi e trovarsi nella sotto-directory Main, dove sara' possibile eseguirlo (sempre con i privilegi di root).
+A questo punto tutto dovrebbe andare bene e Truecrypt dovrebbe compilarsi e trovarsi nella sotto-directory Main, dove sara' possibile eseguirlo (sempre con i privilegi di root).
 
 Per chi volesse sbizzarrirsi eseguire:
 
