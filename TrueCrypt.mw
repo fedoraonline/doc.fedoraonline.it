@@ -23,6 +23,7 @@ Scaricare il sorgente da: [http://www.truecrypt.org/downloads2 http://www.truecr
 
  $ export PKCS11_INC=/usr/include/gp11
 
+</ol>
 <li>Collocarsi all'interno della cartella decompressa ed eseguire:</li>
 
  $ make
