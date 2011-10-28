@@ -17,7 +17,7 @@ che restituisce un output come questo:
  plymouth-theme-solar.i686 : Plymouth "Solar" theme
  plymouth-theme-spinfinity.i686 : Plymouth "Spinfinity" theme
 
-Per installar altri temi:
+Per installare altri temi:
 
  yum install plymouth-theme-* plymouth-plugin-* plymouth-utils
 
@@ -48,7 +48,8 @@ Esempio: per avviare Fedora con una risoluzione a 1280x1024 con 16M di colori di
 
  title Fedora (2.6.33.5-112.fc13.i686.PAE)
          root (hd0,0)
-         kernel /boot/vmlinuz-2.6.33.5-112.fc13.i686.PAE ro root=UUID=bb061789-157b-4cb2-85c8-633026e8df1e rhgb quiet vga=0x31B
+         kernel /boot/vmlinuz-2.6.33.5-112.fc13.i686.PAE ro root=UUID=bb061789-157b-
+         4cb2-85c8-633026e8df1e rhgb quiet vga=0x31B
          initrd /boot/initrd-2.6.33.5-112.fc13.i686.PAE.img
 
 [[Categoria:Grub]]
