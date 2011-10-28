@@ -57,10 +57,10 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=RPMFusion|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Workaround per webcam con modulo uvcvideo|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=TrueCrypt|autore=SimoneZaminga|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=TrueCrypt|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Vademecum sicurezza|autore=GiuseppeDelvecchio|stato=DaFare}}
 |}
