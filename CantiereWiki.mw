@@ -47,7 +47,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Controllo del "SELinux context" delle librerie|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ksplice:aggiornamento kernel a caldo|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=USB modem mobile|autore=GiuseppeDelvecchio|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Pizzata 2010|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
@@ -56,18 +55,11 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=RPMFusion|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Workaround per webcam con modulo uvcvideo|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=TrueCrypt|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Vademecum sicurezza|autore=GiuseppeDelvecchio|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=ATrpms|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Livna|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=KDE-RedHat|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=JPackage|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Adobe|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Planet-CCRMA|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Compiz-Fusion|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Skype|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Remi|autore=RobertMayr|stato=DaFare}}
