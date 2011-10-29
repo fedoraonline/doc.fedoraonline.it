@@ -1,0 +1,29 @@
+__TOC__
+== Introduzione ==
+
+Skype fa parte dei repository di '''''terze parti'''''. L'installazione è necessaria se si sceglie di utilizzare Skype piuttosto che una soluzione non proprietaria come Ekiga. Il repo è disponibile attualmente per le versioni da Fedora 12 compresa in poi.
+
+== Installazione ==
+
+Si può facilmente creare un file ''/etc/yum.repos.d/skype.repo'' digitando da root:
+
+ # gedit /etc/yum.repos.d/skype.repo
+
+e inserire le seguenti righe:
+
+ [skype]
+ name=Skype Repository
+ baseurl=http://download.skype.com/linux/repos/fedora/updates/i586/
+ gpgkey=http://www.skype.com/products/skype/linux/rpm-public-key.asc
+ enabled=0
+ gpgcheck=0
+
+Salvare e chiudere.<br />
+Il repo è pronto per l'uso, ma non è attivo di default (consigliato). Se si volesse installare i pacchetti di Skype è necessario attivarlo per la singola operazione:
+
+ # yum --enablerepo=skype install nome_pacchetto
+
+== Riferimenti ==
+* [http://www.skype.com/intl/it/welcomeback/?intcmp=wlogo Sito ufficiale Skype]
+
+[[Categoria:Repository]]
