@@ -4,6 +4,10 @@ Per poter installare facilmente Adobe Acrobat Reader è necessario avere install
 
 Fatto questo si può tranquillamente procedere con l'installazione, attivando il repo digitando:
 
- # yum --enablerepo=adobe install AdobeReader_ita
+===Installazione a 32bit===
+ # yum --enablerepo=adobe-linux-i386 install AdobeReader_ita
+
+===Installazione a 64bit===
+ # yum --enablerepo=adobe-linux-x86_64 install AdobeReader_ita
 
 [[Categoria:Ufficio]]
