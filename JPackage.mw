@@ -38,7 +38,7 @@ Il repo è pronto per l'uso, ma non è attivo di default (consigliato). Se si vo
 
  # yum --enablerepo=jpackage install nome_pacchetto
 
-Riferimenti:
+== Riferimenti ==
 * [http://www.jpackage.org/yum.php Sito ufficiale JPackage]
 
 [[Categoria:Repository]]
