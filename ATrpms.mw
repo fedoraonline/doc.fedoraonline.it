@@ -26,7 +26,7 @@ e inserire le seguenti righe:
 Salvare e chiudere.<br />
 Il repo è pronto per l'uso, ma non è attivo di default (consigliato). Se si volesse installare dei pacchetti provenienti da ATrpms è necessario attivarlo per la singola operazione:
 
- # yum --enablerepo=ATrpms install nome_pacchetto
+ # yum --enablerepo=atrpms install nome_pacchetto
 
 Riferimenti:
 * [http://atrpms.net/ Sito ufficiale ATrpms]
