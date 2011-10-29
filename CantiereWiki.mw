@@ -64,17 +64,17 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Vademecum sicurezza|autore=GiuseppeDelvecchio|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=ATrpms|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Livna|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=KDE-RedHat|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=JPackage|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Adobe|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Planet-CCRMA|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Compiz-Fusion|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Skype|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Remi|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Adobe Acrobat Reader|autore=?|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Livna|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=KDE-RedHat|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=JPackage|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Adobe|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Planet-CCRMA|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Compiz-Fusion|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Skype|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Remi|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Adobe Acrobat Reader|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Flash plugin|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Cairo Dock|autore=?|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Cairo Dock|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Touchpad|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Virtualizzazione|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=HP Photosmart C4380|autore=?|stato=DaFare}}
