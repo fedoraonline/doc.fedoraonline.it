@@ -1,0 +1,20 @@
+__TOC__
+== Introduzione ==
+
+Il repo Remi è creato e mantenuto da Remi Collet, appassionato di Fedora. I pacchetti con i quali è diventato famoso sono firefox5, mysql-workbench, php-oci8, php-fpm..., ma ultimamente include tutti i componenti di un sistema [[LAMP|LAMP]], mozilla e le ultime versioni del software per Fedora.<br />
+Il repo è disponibile per le versioni di Fedora dalla 10 compresa in poi.
+{{Warning|L'utilizzo del repo di Remi è consigliato soltanto per utenti esperti, in quanto molti pacchetti sono testing.<br />
+E' questa la caratteristica che permette di provare molti pacchetti che poi saranno inclusi nelle future versioni di Fedora.}}
+
+== Installazione ==
+
+===Installazione automatica===
+Per ogni versione di Fedora è necessario inserire il numero esatto, come evidenziato in questi esempi:
+Per '''Fedora 16''' Verne
+ <nowiki>yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-16.rpm</nowiki>
+
+Per '''Fedora 15''' Lovelock
+ <nowiki>yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-15.rpm</nowiki>
+
+Per '''Fedora 14''' Laughlin
+ <nowiki>yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-14.rpm</nowiki>
