@@ -60,7 +60,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Vademecum sicurezza|autore=GiuseppeDelvecchio|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Compiz-Fusion|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Skype|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Remi|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Adobe Acrobat Reader|autore=RobertMayr|stato=DaFare}}
@@ -137,6 +136,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=JPackage|autore=RobertMayr|rilettore=?|data=29/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Adobe|autore=RobertMayr|rilettore=?|data=29/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Planet-CCRMA|autore=RobertMayr|rilettore=?|data=29/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Compiz-Fusion|autore=RobertMayr|rilettore=?|data=29/10/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
