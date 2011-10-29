@@ -1,7 +1,7 @@
 __TOC__
 == Introduzione ==
 
-Adobe fa parte dei repository di '''''terze parti'''''. L'installazione è utile per l'installazione del plugin Flash Player e del lettore Acrobat Reader. Il repo è disponibile attualmente per le versioni da Fedora 6 compresa in poi.
+ATrpms fa parte dei repository di '''''terze parti'''''. L'installazione è utile per l'installazione del lettore Acrobat Reader. Il repo è disponibile attualmente per le versioni da Fedora 6 compresa in poi.
 
 == Installazione ==
 
@@ -15,4 +15,3 @@ Adobe fa parte dei repository di '''''terze parti'''''. L'installazione è utile
 * [http://adobe.com Sito ufficiale Adobe]
 
 [[Categoria:Repository]]
-[[Categoria:Yum]]
