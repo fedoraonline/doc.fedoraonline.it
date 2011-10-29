@@ -2,7 +2,7 @@ __TOC__
 == Introduzione ==
 
 ATrpms fa parte dei repository di '''''terze parti'''''. L'installazione è utile qualora si necessiti di pacchetti aggiuntivi in relazione alla multimedialità. Il repo è disponibile attualmente per le versioni da Fedora 12 compresa in poi, sia stabile che testing.
-{{Warning|L'utilizzo di ATrpms potrebbe generare in alcuni pacchetti delle incompatibilità, se si utilizzano contemporaneamente anche [[Livna|Livna]] e [[RPMFusion|RPMFusion]].}}
+{{Warning|L'utilizzo di ATrpms potrebbe generare in alcuni pacchetti delle incompatibilità, se si attivano contemporaneamente anche [[Livna|Livna]] e [[RPMFusion|RPMFusion]].}}
 
 == Installazione ==
 In ogni caso è necessario installare la chiave GPG:
