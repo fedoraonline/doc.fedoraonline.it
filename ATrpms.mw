@@ -28,7 +28,7 @@ Il repo è pronto per l'uso, ma non è attivo di default (consigliato). Se si vo
 
  # yum --enablerepo=atrpms install nome_pacchetto
 
-Riferimenti:
+== Riferimenti ==
 * [http://atrpms.net/ Sito ufficiale ATrpms]
 
 [[Categoria:Repository]]
