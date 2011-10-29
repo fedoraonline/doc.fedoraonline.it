@@ -17,7 +17,7 @@ Alcune delle possibili configurazioni riguardano:
 * Dimensione icone;
 * Visualizzazione barra.
 
-== Aggiunta di nuovi selettori ==
+== Aggiunta di nuovi lanciatori ==
 
 Per aggiungere dei lanciatori esiste una funzione molto semplice:
 # Avviare l'applicazione che si vuole aggiungere;
@@ -27,6 +27,6 @@ Per aggiungere dei lanciatori esiste una funzione molto semplice:
 # Fatto.
 
 Una volta configurato tutto si possono anche eliminare i pannelli di Gnome. Successivamente il desktop si presenta così:
-[[Image:Cairo.jpg|thumb|400px|Alla fantasia non viene posto nessun limite. Questo è un esempio di come Cairo potrebbe apparire.]]
+[[Image:Cairo.jpg|thumb|center|500px|Alla fantasia non viene posto nessun limite. Questo è un esempio di come Cairo potrebbe apparire.]]
 
 [[Categoria:Sistema]]
