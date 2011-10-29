@@ -11,10 +11,10 @@ E' questa la caratteristica che permette di provare molti pacchetti che poi sara
 ===Installazione automatica===
 Per ogni versione di Fedora è necessario inserire il numero esatto, come evidenziato in questi esempi:
 Per '''Fedora 16''' Verne
- <nowiki>yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-16.rpm</nowiki>
+ # yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-16.rpm
 
 Per '''Fedora 15''' Lovelock
- <nowiki>yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-15.rpm</nowiki>
+ # yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-15.rpm
 
 Per '''Fedora 14''' Laughlin
- <nowiki>yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-14.rpm</nowiki>
+ # yum install --nogpgcheck http://rpms.famillecollet.com/remi-release-14.rpm
