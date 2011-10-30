@@ -1,5 +1,5 @@
 In molti casi per creare disservizio su un sito internet si eseguono molteplici richieste in pochi secondi, in modo da far cadere il webserver che lo ospita. Questa tipologia di attacco viene chiamato Denial of Service (Dos) e si possono trovare maggiori dettagli su  [http://it.wikipedia.org/wiki/Denial_of_service Wikipedia].
-E' possibile però prevenire questo tipo di attachi se si utilizza un webserver Apache 2.x tramite il modulo mod_evasive, che non fa altro che bloccare per un certo tempo un indirizzo IP che svolge un numero di richieste in un breve lasso di tempo. E' possibile inoltre lanciare dei comandi di sistema operativo, come ad esempio il lancio di drop lato iptables.
+E' possibile però prevenire questo tipo di attachi se si utilizza un webserver Apache 2.x tramite il modulo mod_evasive, che non fa altro che bloccare per un certo tempo un indirizzo IP che svolge un numero di richieste in un breve lasso di tempo. E' possibile inoltre lanciare dei comandi di sistema operativo, come ad esempio il lancio di drop lato iptables.<br />
 Per prima cosa installare il pacchetto mod_evasive via yum.
  # yum install -y mod_evasive 
 Verrà installato il file .so sotto il direttorio /usr/lib/httpd/modules/ e poi verrà creato un file di configurazione di default sotto il direttorio /etc/httpd/conf.d/.
@@ -41,9 +41,9 @@ Quando la configurazione è ok si dovrà eseguire il reload dei file di conf da 
  Syntax OK
  [root@cellopc-mini ~]# service httpd reload
  Reloading httpd:                [ OK ]
-Per poter testare la configurazione di questo modulo viene fornito uno script in perl, che esegue 100 richieste in un lasso di tempi di pochi millisecondi. 
+Per poter testare la configurazione di questo modulo viene fornito uno script in perl, che esegue 100 richieste in un lasso di tempo di pochi millisecondi. 
 Lo script si trova sotto il direttorio "/usr/share/doc/mod_evasive-<version>. e si chiama test.pl. 
-Si potrà modificare all'interno l'indirizzo IP e la porta dove svolgere la richiesta, perchè di default inoltra le richieste al localhost sull porta 80 (se si mette nella whitelist l'indirizzo 127.0.0.1 lo script con la configurazione di default non funzionerà).
+Si potrà modificare all'interno l'indirizzo IP e la porta dove svolgere la richiesta, perchè di default inoltra le richieste al localhost sulla porta 80 (se si mette nella whitelist l'indirizzo 127.0.0.1 lo script con la configurazione di default non funzionerà).
  [root@cellopc-mini mod_evasive-1.10.1]# perl test.pl
  HTTP/1.1 200 OK
  HTTP/1.1 200 OK
