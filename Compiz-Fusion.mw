@@ -9,3 +9,4 @@ Compiz-Fusion fa parte dei repository di '''''terze parti'''''. L'installazione 
  # yum install --nogpgcheck http://www.lordmorgul.net/pub/compiz/compiz-fusion-release-1-8.noarch.rpm
 
 [[Categoria:Repository]]
+[[Categoria:Yum]]
