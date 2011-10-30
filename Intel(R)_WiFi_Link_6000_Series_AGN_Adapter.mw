@@ -13,5 +13,4 @@ Basteranno i seguenti comandi per farlo:
  password di root
  # yum remove iwl6000g2a-firmware.noarch
  # yum install iwl6000g2b-firmware.noarch
-
 [[Categoria:Wi-Fi]]
