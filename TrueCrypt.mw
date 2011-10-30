@@ -1,8 +1,7 @@
 == Introduzione ==
-Truecrypt, per chi non lo conoscesse ha la possibilità di creare interi dischi o file criptati molto sicuri e affidabili per gli scopi più vari; purtroppo installarlo su Fedora e' una vera tragedia.
+Truecrypt, per chi non lo conoscesse ha la possibilità di creare interi dischi o file criptati molto sicuri e affidabili per gli scopi più vari; purtroppo installarlo su Fedora è una vera tragedia.
 
-Maggiori informazioni sul programma si trovano direttamente sul sito
-[http://www.truecrypt.org http://www.truecrypt.org]
+Maggiori informazioni sul programma si trovano direttamente sul sito [http://www.truecrypt.org http://www.truecrypt.org]
 
 == Installazione di TrueCrypt ==
 
@@ -29,7 +28,7 @@ Scaricare il sorgente da: [http://www.truecrypt.org/downloads2 http://www.truecr
 
  $ make
 
-Sicuramente sia che si usi Gnome che KDE si ricevera' un messaggio di errore se sara' il seguente:
+Sicuramente sia che si usi Gnome che KDE si riceverà un messaggio di errore, se sarà il seguente:
 
 Citazione:
 
@@ -40,7 +39,7 @@ Citazione:
 
  # nano Open Common/SecurityToken.cpp
 
-Ricercare la riga 660 (quello dell'errore precedente) e decommentare:
+Ricercare la riga 660 (quello dell'errore precedente) e de-commentare:
 
  '' //TC_TOKEN_ERR (CKR_NEW_PIN_MODE)
  //TC_TOKEN_ERR (CKR_NEXT_OTP)''
@@ -48,9 +47,9 @@ Ricercare la riga 660 (quello dell'errore precedente) e decommentare:
 Salvare e uscire.
 <li>Eseguire nuovamente "make".</li>
 
-A questo punto tutto dovrebbe andare bene e Truecrypt dovrebbe compilarsi e trovarsi nella sotto-directory Main, dove sara' possibile eseguirlo (sempre con i privilegi di root).
+A questo punto tutto dovrebbe andare bene e Truecrypt dovrebbe compilarsi e trovarsi nella sotto-directory Main, dove sarà possibile eseguirlo (sempre con i privilegi di root).
 
-Per chi volesse sbizarrirsi eseguire:
+Per chi volesse sbizzarrirsi eseguire:
 
  # cp Main/truecrypt /usr/share/
 </ol>
