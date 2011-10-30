@@ -7,7 +7,7 @@ Tutti gli altri contenuti di Livna nel 2008 sono migrati su [[RPMFusion|RPMFusio
 
 == Installazione ==
 
-L'installazione è molto semplice, perchè automatizzata.
+L'installazione è molto semplice, perché automatizzata.
 
  # rpm -ivh http://rpm.livna.org/livna-release.rpm
 
