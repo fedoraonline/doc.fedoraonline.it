@@ -42,7 +42,7 @@ I player che sono in grado di riprodurre sia file audio che video sono chiamati 
 
  # yum install mplayer smplayer mplayer-gui gecko-mediaplayer mencoder
 
-Per poter sfruttare mplayer con tutta la sua potenzialità esistono altri codec utili, proprio perchè supporti anche formati che non sono compresi di default. Per poterli installare bisogna prima scaricare [http://www.mplayerhq.hu/MPlayer/releases/codecs/ qui] il pacchetto e poi installare l'ultimo "binary codec", attualmente 'all-20110131.tar.bz2':
+Per poter sfruttare mplayer con tutta la sua potenzialità esistono altri codec utili, proprio perché supporta anche formati che non sono compresi di default. Per poterli installare bisogna prima scaricare [http://www.mplayerhq.hu/MPlayer/releases/codecs/ qui] il pacchetto e poi installare l'ultimo "binary codec", attualmente 'all-20110131.tar.bz2':
 
  # mkdir -p /usr/lib/codecs
  # tar -jxvf all-20110131.tar.bz2 --strip-components 1 -C /usr/lib/codecs/
