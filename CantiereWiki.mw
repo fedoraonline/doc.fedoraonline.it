@@ -99,7 +99,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Boot sequence Fedora|autore=GabrieleTrombini|rilettore=RobertMayr|data=23/10/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|rilettore=GabrieleTrombini|data=25/10/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|rilettore=GabrieleTrombini|data=25/10/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|rilettore=GabrieleTrombini|data=25/10/2011|stato=InCorso}}
@@ -110,6 +109,20 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Log in tempo reale dei comandi bash|autore=MarioSantagiuliana|rilettore=?|data=27/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Ridimensionare partizioni LVM|autore=MarioSantagiuliana|rilettore=?|data=27/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=KDE 4: Plasmoid Daisy Corolla|autore=MarioSantagiuliana|rilettore=?|data=27/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Controllo del "SELinux context" delle librerie|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Ksplice:aggiornamento kernel a caldo|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=USB modem mobile|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Music on console|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Workaround per webcam con modulo uvcvideo|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Vademecum sicurezza|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Progetto Fedora|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Partecipare al Fedora Project|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Segnalare un bug|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=La comunità italiana|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Tradurre Fedora|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Sviluppare Fedora|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Disegnare Fedora|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Documentare Fedora|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
