@@ -1,0 +1,17 @@
+'''La segnalazione di bug è importante''' per la crescita di Fedora e dei software che include. E' importante non solo da un punto di vista di '''sicurezza informatica''' ma anche di '''usabilità e funzionalità''' di Fedora.
+
+Un '''bug è un "difetto"''' nella scrittura di un software. Esiste un '''sistema di comunicazione tra gli utenti e gli sviluppatori Fedora''' che permette la segnalazione dei bug incontrati nell'utilizzo dei software [https://bugzilla.redhat.com Bugzilla].
+
+'''Nel Fedora Project''' esiste un importante '''gruppo''' che si interessa all'amministrazione dei '''bug''': il [https://fedoraproject.org/wiki/BugZappers/it BugZappers].<br />
+Se credi di avere le capacità o '''vuoi unirti''' a questo gruppo importante, vedi la [https://fedoraproject.org/wiki/BugZappers/Joining/it pagina di adesione al gruppo.]
+
+'''Per segnalare dei bug''' non occorre fare parte del gruppo BugZapper, basta '''assicurarsi di''' poche cose, ad esempio che:
+# non sia già un bug noto, presente tra i [http://fedoraproject.org/wiki/Bugs/Common Commons Bug] 
+# non sia già menzionato nelle Release Note ufficiali (ad es. [http://docs.fedoraproject.org/en-US/Fedora/14/html/Release_Notes/ Release Note per F14])
+# non sia già presente in Bugzilla
+# non sia in corso di discussione nella mailing list
+
+Comunque è bene '''prendere visione di''' [http://fedoraproject.org/wiki/Bugs_and_feature_requests/it questa pagina] per avere tutte le informazioni necessarie su come segnalare correttamente un bug di Fedora, '''prima di crearne uno nuovo'''.
+
+[[:Categoria:Scrittura in corso]]
+[[Categoria:Fedora Project]]
