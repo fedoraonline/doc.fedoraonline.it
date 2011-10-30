@@ -5,8 +5,8 @@ seguito verranno descritti  entrambi:
 Prima di tutto sono necessari i repository rpmfusion free e nonfree.
 Se ancora non sono installati, procedere a dare questo comando per una
 installazione immediata:
- $ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.  rpm'
- $ su -c 'rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.  noarch.rpm'
+ $ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm'
+ $ su -c 'rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
 Per sicurezza dare un:
  # yum update rpmfusion*
 Ora occorre installare il pacchetto sviluppo del kernel:
@@ -73,6 +73,7 @@ Volendo si può anche abilitare gli effetti Desktop, ora tutto il necessario è 
 Dopo l'uso dell'utility come root
  # nvidia-settings
 controllare che in /etc/X11/xorg.conf sia presente la Section "Files"
+
 ==Utilizzo dell'installer scaricabile dal sito di nvidia==
 Una volta scaricato il package per la propria videocard, occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
  # init 3
