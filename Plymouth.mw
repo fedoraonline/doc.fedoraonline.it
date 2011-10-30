@@ -1,7 +1,7 @@
 __TOC__
 == Introduzione ==
 
-Plymouth è il boot grafico di Fedora in sostituzione di RHGB. Affinchè esso svolga il proprio lavoro è necessario attivare il modesetting, di conseguenza passando il parametro "nomodesetting", plymouth non si avvierà.
+Plymouth è il boot grafico di Fedora in sostituzione di RHGB. Affinché esso svolga il proprio lavoro è necessario attivare il modesetting, di conseguenza passando il parametro "nomodesetting", plymouth non si avvierà.
 
 == Temi ==
 
@@ -22,7 +22,7 @@ Per installare altri temi:
 
  yum install plymouth-theme-* plymouth-plugin-* plymouth-utils
 
-Mentre, per sapere quale tema si sta utilizzando di default, basterà difitare:
+Mentre, per sapere quale tema si sta utilizzando di default, basterà digitare:
 
  $ plymouth-set-default-theme 
 
