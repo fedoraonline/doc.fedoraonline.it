@@ -1,6 +1,6 @@
 == Introduzione ==
 
-Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti siti web. Flash è una soluzione proprietaria, e benchè ci siano molte alternative ad esso, come gnash, rimane il più utilizzato.
+Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti siti web. Flash è una soluzione proprietaria, e benché ci siano molte alternative ad esso, come gnash, rimane il più utilizzato.
 
 == Installazione ==
 {{Nota|titolo=Prerequisito|contenuto=Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Adobe|Adobe]].}}
