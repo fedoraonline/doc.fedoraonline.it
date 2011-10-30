@@ -3,47 +3,42 @@ Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi. Di
 seguito verranno descritti  entrambi:
 ==Installazione dei drivers usando akmod-nvidia==
 Prima di tutto sono necessari i repository rpmfusion free e nonfree.
-Se ancora non li avete installati, procedete a dare questo comando per una
+Se ancora non sono installati, procedere a dare questo comando per una
 installazione immediata:
-<pre>$ su -c 'rpm -Uvh
-http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.
-rpm'
-$ su -c 'rpm -Uvh
-http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.
-noarch.rpm'</pre>
-Per sicurezza date un:
-<pre># yum update rpmfusion*</pre>
+ $ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.  rpm'
+ $ su -c 'rpm -Uvh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.  noarch.rpm'
+Per sicurezza dare un:
+ # yum update rpmfusion*
 Ora occorre installare il pacchetto sviluppo del kernel:
-<pre># yum install kernel-devel</pre>
-Oppure '''kernel-PAE-devel''' se usate il kernel-PAE; inoltre verificate che le
+ # yum install kernel-devel
+Oppure '''kernel-PAE-devel''' se si usa il kernel-PAE; inoltre verificare che le
 versioni di kernel e kernel-devel (o kernel-PAE-devel) "collìmino", cioè
 corrispondano perfettamente:
-<pre>$ rpm -qa|grep kernel</pre>
+ $ rpm -qa|grep kernel
 e
-<pre>$ rpm -q kernel-devel</pre>
-Mi raccomando di verificare che la versione di kernel che utilizzerete
+ $ rpm -q kernel-devel
+Mi raccomando di verificare che la versione di kernel che si utilizza
 corrisponda alla versione del kernel-devel.
-In base al modello di videocard da voi posseduta che potrete evidenziare con il
+In base al modello di videocard posseduta che si potrà evidenziare con il
 comando:
-<pre># lspci|grep -i vga</pre>
-potrete scegliere i drivers corretti per il vostro sistema:
-*Se possedete una nVidia GeForce serie 6 o superiore, farete
-<pre># yum install akmod-nvidia</pre>
+ # lspci|grep -i vga
+si potrà scegliere i drivers corretti per il proprio sistema:
+*Se si possiede una nVidia GeForce serie 6 o superiore, fare
+ # yum install akmod-nvidia
 *Per una serie 5
-<pre># yum install akmod-nvidia-173xx</pre>
+ # yum install akmod-nvidia-173xx
 *Per una serie 4
-<pre># yum install akmod-nvidia-96xx</pre>
-Riavviate il sistema. Avete terminato.
+ # yum install akmod-nvidia-96xx
+Riavviare il sistema. Terminato.
 Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata
-dal produttore, per una regolazione  più "fine" del display, volete impostare i valori corretti, per cui
-dovrete servirvi di questo tool di nvidia per farlo. 
-Vi occorrono i permessi di root, quindi:
+dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
+Occorrono i permessi di root, quindi:
  $ su
  password
  # nvidia-settings
-Da "X Server Display configuration" impostate la risoluzione e la frequenza a 60hz
-e salvate il file nel xorg.conf con il bottone che è visualizzato nella GUI. 
-Dopodichè aprite il file xorg.conf e inserite le modifiche:
+Da "X Server Display configuration" impostare la risoluzione e la frequenza a 60hz
+e salvare il file nel xorg.conf con il bottone che è visualizzato nella GUI. 
+Dopodichè aprire il file xorg.conf ed inserire le modifiche:
 
  # gedit /etc/X11/xorg.conf 
  Section "Monitor"
@@ -55,8 +50,8 @@ Dopodichè aprite il file xorg.conf e inserite le modifiche:
     VertRefresh     56.0 - 75.0
     Option         "DPMS"
  EndSection
-Se notate che la sovrascrittura da parte di nvidia-settings vi ha tolto il
-path per il driver stesso, per cui non avrete più il direct rendering attivo.
+Da notare che la sovrascrittura da parte di nvidia-settings ha tolto il
+path per il driver stesso, per cui non si avrà più il direct rendering attivo.
 Inserite, quindi, nel "file section" quanto necessario:
 
  Section "Files"
@@ -64,8 +59,8 @@ Inserite, quindi, nel "file section" quanto necessario:
      '''ModulePath   "/usr/lib/xorg/modules/extensions/nvidia"'''
      '''ModulePath   "/usr/lib/xorg/modules"'''
  EndSection
-Salvate il vostro xorg.conf e riavviate il server X con Ctrl+Alt+Backspace.
-Verificate ora se ora tutto è andato come volevate:
+Salvare il proprio xorg.conf e riavviare il server X con <code>Ctrl+Alt+Backspace</code>.
+Verificare ora se tutto è andato come desiderato:
 
  $ glxgears
  37026 frames in 5.0 seconds = 7405.197 FPS
@@ -73,33 +68,33 @@ Verificate ora se ora tutto è andato come volevate:
  29925 frames in 5.0 seconds = 5984.936 FPS
  29787 frames in 5.0 seconds = 5957.285 FPS
  29894 frames in 5.0 seconds = 5978.601 FPS
-Volendo potete anche abilitare gli effetti Desktop, ora tutto il necessario è stato attivato.
+Volendo si può anche abilitare gli effetti Desktop, ora tutto il necessario è stato attivato.
 
 Dopo l'uso dell'utility come root
  # nvidia-settings
-controllate che in /etc/X11/xorg.conf sia presente la Section "Files"
+controllare che in /etc/X11/xorg.conf sia presente la Section "Files"
 ==Utilizzo dell'installer scaricabile dal sito di nvidia==
-Una volta scaricato il package per la vostra videocard, occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
+Una volta scaricato il package per la propria videocard, occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
  # init 3
 Quindi far partire l'installer con
  # sh NVIDIA-Linux-<arch>-<version>-pkgX.run
-Usando questo metodo, vi saranno necessarie alcune librerie; l'installer man mano vi dirà cosa è necessario.
-Personalmente nel sistema ho installati i gruppi "Strumenti di sviluppo" e "Librerie di sviluppo".
+Usando questo metodo, saranno necessarie alcune librerie; l'installer man mano dirà cosa è necessario.
+Personalmente nel sistema ho installato i gruppi "Strumenti di sviluppo" e "Librerie di sviluppo".
 Per installarli:
  # yum groupinstall "Strumenti di sviluppo" "Librerie di sviluppo"
 (Se avete voglia di battere meno tasti potete dare:
  # yum install @development-tools @development-libs
-Se avete un sistema a 64 bit,  e volete che funzionino le "OpenGL 32 bit
-compatibility mode", potete installare:
+Se si possiede un sistema a 64 bit, e si vuole che funzionino le "OpenGL 32 bit
+compatibility mode", si può installare:
  # yum install glibc*686
-Non credo che avrete bisogno di altro.
-Se avete necessità di disinstallare i drivers nvidia usando questo II metodo occorrerà dare un:
+Non credo che si avrà bisogno di altro.
+Se si ha necessità di disinstallare i drivers nvidia usando questo II metodo occorrerà dare un:
  # nvidia-uninstall
-Se ne avrete necessità, l'utility
+Se si avrà la necessità, l'utility
  # nvidia-xconfig 
 genererà un nuovo xorg.conf creando automaticamente anche una copia di
 backup
-{{Warning|Non usate mai i due metodi contemporaneamente, nel senso esclusivo della parola: o l'uno oppure l'altro.}}
-Nel secondo metodo descritto, avrete lo svantaggio di dover ad ogni aggiornamento dei drivers, procurarvi l'ultima versione e reinstallarli.
-Dovrete fare lo stesso ad ogni nuova versione di kernel che installerete.
+{{Warning|Non usare mai i due metodi contemporaneamente, nel senso esclusivo della parola: o l'uno oppure l'altro.}}
+Nel secondo metodo descritto, si avrà lo svantaggio di dover ad ogni aggiornamento dei drivers, procurarsi l'ultima versione e reinstallarli.
+Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 [[Categoria:Schede grafiche]]
