@@ -1,6 +1,6 @@
 == Introduzione ==
 
-A differenza di KDE che offre di per se molti widgets, su Gnome ci si avvale dei desklet, il più delle volte dei gdesklets. Ma ci sono anche altre possibilità, tra cui una è la famosa cairo-dock, una barra che assomiglia (poi dipende come la si configura) a quella McOS e dalla quale è possibile gestire tutte le funzionalità (o quasi) dei pannelli di Gnome.
+A differenza di KDE che offre di per se molti widgets, su Gnome ci si avvale dei desklet, il più delle volte dei gdesklets. Ma ci sono anche altre possibilità, tra cui una è la famosa cairo-dock, una barra che assomiglia (poi dipende come la si configura) a quella MacOS e dalla quale è possibile gestire tutte le funzionalità (o quasi) dei pannelli di Gnome.
 
 == Installazione ==
 
@@ -12,7 +12,8 @@ Per installare Cairo-dock ci si può avvalere di Yum:
 
 In ''Applicazioni -> Strumenti di Sistema'' a questo punto saranno presenti due voci, una che richiama cairo-dock con e una senza l'uso di OpenGL. Selezionando quella con OpenGL si apre una barra in basso, che rimane completamente configurabile.<br />
 Alcune delle possibili configurazioni riguardano:
-* Lancia cairo-dock all'avvio di Fedora*b) Tema;
+* Lancia cairo-dock all'avvio di Fedora
+* Tema;
 * Icone da utilizzare;
 * Dimensione icone;
 * Visualizzazione barra.
