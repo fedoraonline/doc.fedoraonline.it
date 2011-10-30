@@ -1,7 +1,7 @@
 __TOC__
 == Introduzione ==
 
-Cron è un utility che consente di eseguire comandi ad intervalli regolari per mezzo del demone crond.<br />
+Cron è una utility che consente di eseguire comandi ad intervalli regolari per mezzo del demone crond.<br />
 Inoltre consente di specificare nel file '''''/etc/crontab''''' i comandi da eseguire e la data/ora (oppure l'intervallo di tempo) in cui andranno eseguiti. Nello specificare l'ora di esecuzione potrebbe essere utile voler specificare una ''TimeZone'' diversa da quella dell'orologio di sistema.<br />
 Per esempio, avendo un orologio di sistema impostato sulla zona Europe/Rome si potrebbe comunque volere che il demone crond interpreti gli orari specificati nel file /etc/crontab come orari UTC.
 
