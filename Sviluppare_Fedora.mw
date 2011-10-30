@@ -7,19 +7,19 @@ Si interessa della crescita del Sistema Operativo Fedora.<br />
 Esso può far parte di uno o più dei seguenti gruppi:
 
 === BugZappers ===
-[[BugZappers.jpg|File=link=https://fedoraproject.org/wiki/BugZappers/it/]]
+[[File:BugZappers.jpg|File=link=https://fedoraproject.org/wiki/BugZappers/it/]]
 
 * Canale IRC di Freenode: ''#fedora-meeting'' e ''#fedora-zappers ''
 * Mailing list: https://admin.fedoraproject.org/mailman/listinfo/test 
 
 === Documentazione ===
-[[DocsProject.jpg|link=https://fedoraproject.org/wiki/Docs_Project/it/]]
+[[File:DocsProject.jpg|link=https://fedoraproject.org/wiki/Docs_Project/it/]]
 
 * Canale IRC Freenode: ''#fedora-meeting'' e #''fedora-docs''
 * Mailing list: https://admin.fedoraproject.org/mailman/listinfo/docs
 
 === Assicurazione Qualità di Fedora ===
-[[QA.jpg|link=https://fedoraproject.org/wiki/QA/it]]
+[[File:QA.jpg|link=https://fedoraproject.org/wiki/QA/it]]
 
 * Canale IRC di FreeNode: ''#fedora-qa''
 * Mailing List: https://www.redhat.com/mailman/listinfo/fedora-test-list
@@ -47,7 +47,7 @@ per fornire server, strumenti ed utilità al Fedora Project.
 * Maggiori informazioni su https://fedoraproject.org/wiki/Infrastructure
 
 === Siti Web ===
-[[websites.jpg|link=https://fedoraproject.org/wiki/Websites/it/]]
+[[File:websites.jpg|link=https://fedoraproject.org/wiki/Websites/it/]]
 
 Per migliorare l'immagine di Fedora e creare la miglior interfaccia possibile per gli utenti su Internet.
 * Canale IRC di Freenode: ''#fedora-websites''
