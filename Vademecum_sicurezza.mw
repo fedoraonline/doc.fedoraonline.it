@@ -1,11 +1,11 @@
-Avrete notato un'attenzione, a volte maniacale, verso il problema sicurezza da parte di molti membri della nostra comunità, questo articolo cerca di spiegarvi il perchè.<br />
+Avrete noto un'attenzione, a volte maniacale, verso il problema sicurezza da parte di molti membri della nostra comunità, questo articolo cerca di spiegarvi il perchè.<br />
 Questa non vuole essere una guida specifica riguardo alla sicurezza, ma semplicemente una raccolta di comportamenti "virtuosi".<br />
 Inoltre non vogliamo analizzare qui i motivi per i quali un aggressore voglia violare il Vostro sistema.<br />
 L'articolo è indirizzato ad utenti desktop e/o server di piccola caratura.
 
 == Premessa ==
 Cominciamo col dire che sistemi basati sul kernel Linux e sulla struttura Gnu sono molto sicuri, ma non sono inviolabili.<br />
-Essi sono sostanzialmente immuni da tanti problemi di sicurezza che affliggono altri sistemi, ma presentano altre forme di vulnerabilità, che  possono venire confinati in un ambito di rischio accettabile mediante comportamenti adeguati.<br />
+Essi sono sostanzialmente immuni da tanti problemi di sicurezza che affliggono altri sistemi, ma presentano altre forme di vunerabilità, che  possono venire confinati in un ambito di rischio accettabile mediante comportamenti adeguati.<br />
 I motivi per cui i sistemi basati su Linux sono considerati particolarmente sicuri sono, grosso modo, i seguenti:
 
 # Lo sviluppo kernel è continuo, mediamente una nuova versione kernel è disponibile con una frequenza mensile.
@@ -31,7 +31,7 @@ Se il nostro sistema è connesso ad una rete, per quanto essa possa essere affid
 
 Provate ad "abbassare" il firewall ed attivare contemporaneamente un servizio "esposto" al web che usi un protocollo come ssh, ftp oppure http, navigate nel web magari attraverso qualche sito "sospetto" ed osservate contemporaneamente i log di sicurezza, li vedrete riempire nel giro di pochi minuti di segnalazioni di tentativi di accesso non autorizzato.<br />
 Siete sotto attacco.<br />
-Il "chi" e "perchè" faccia una operazione del genere non sono per noi rilevanti (che ci crediate o no attualmente nel web è in corso una vera e propria cyber-war tra opposte fazioni appoggiate e sovvenzionate da precise entità politiche/militari/economiche); è il come che ci interessa.<br />
+Il "chi" e "perchè" faccia una operazione del genere non sono per noi rilevanti ( che ci crediate o no attualmente nel web è in corso una vera e propria cyber-war tra opposte fazioni appoggiate e sovvenzionate da precise entità politiche/militari/economiche); è il come che ci interessa.<br />
 
 == Vie di attacco ==
 Ci sono molte vie di attacco ad un sistema, noi ne analizzeremo solo alcune, quelle che possono avere un senso rispetto all'utenza alla quale è rivolto questo articolo:
@@ -68,6 +68,8 @@ oppure
 
  # tail -f /var/log/secure
 
+oppure, ancora, come l'ottimo Geno propone [http://www.fedoraonline.it/modules/newbb/viewtopic.php?post_id=89115#forumpost89115 qui]
+
 Cosa fare se vi accorgete di essere sotto attacco:
 * Raffinare le regole di iptables
 * Modificare runtime le vostre password, rendendole sempre più complesse
@@ -81,7 +83,7 @@ Cosa fa il servzio ntp ? Preleva la data e l'ora esatta da un server web e reimp
 E' un servizio assai utile se vogliamo tenere sincronizzati gli orologi delle macchine appartenenti ad una stessa rete. Vi accorgerete, però, anche della sua pericolosità:
 * Dialoga via web 
 * Imposta l'ora del nostro sistema ( vi ricordo che per impostare l'ora del sistema occorrono i privilegi root )
-Se il nostro servizio è basato su software che contiene qualche vunerabilità (tutti software contengono vulnerabilità), esso potrebbe essere utilizzato per violare il sistema.<br />
+Se il nostro servizio è basato su software che contiene qualche vunerabilità ( tutti software contengono vunerabilità), esso potrebbe essere utilizzato per violare il sistema.<br />
 In che modo?<br />
 Esistono gli exploit, ovvero delle procedure in grado di "inoculare" codice da far eseguire al servizio in maniera non autorizzata, codice che per esempio potrebbe provocare l'apertura di una shell root sul terminale dell'aggressore. E' evidente la pericolosità di una situazione del genere.<br />
 Fortunatamente questo tipo di attacco, è sferrato dagli aggressori solo verso sistemi di particolare interesse e per cui ne vale la pena.<br />
@@ -94,24 +96,22 @@ Come ci si può difendere da essi, se spesso operazioni del genere sono silenti,
 # Non usate '''mai''' il login grafico da root, in una situazione del genere mettete l'aggressore nelle condizioni di poter eseguire un exploit con risultati positivi in pochi minuti.
 # un vettore molto utilizzato per questo tipo di attacco è il software peer to peer, evitatelo se possibile.
 
-=== Man in the middle ===
-La tecnica del "''Man In The Middle''" (abbreviata frequentemente con ''MITM'') non è una vera e propria tecnica di attacco, bensì una tecnica di osservazione del sistema oggetto dell'attacco.
-
-L'idea su cui si basa questa tecnica, consiste in una redirezione del traffico in modo da far passare il flusso attraverso la macchina dell'attaccante, e poter osservare i pacchetti ("sniffare") al loro passaggio.
-Esistono tool specifici per realizzare il man in the middle.
-
-Difendersi da una tecnica del genere non è difficile, basta far passare le informazioni sensibili, attraverso protocolli criptati. Naturalmente occorre prestare attenzione sulla genuinità dei pacchetti che riceviamo (vedi par.installazione di software).
+=== Man in middle ===
+La tecnica del "man in middle" non è una vera e propria tecnica di attacco, bensi una tecnica di osservazione del sistema oggetto dell'attacco.<br />
+L'idea su cui si basa questa tecnica, consiste in una redirezione del traffico in modo da far passare il flusso attraverso la macchina dell'attaccante, e poter osservare i pacchetti ("sniffare") al loro passaggio.<br />
+Esistono tool specifici per realizzare il man in middle.<br />
+Difendersi da una tecnica del genere non è difficile, basta far passare le informazioni sensibili, attraverso protocolli criptati. Naturalmente occorre prestare attenzione sulla genuinità dei pacchetti che riceviamo ( vedi par.installazione di software).
 
 === I virus ===
 I virus, propriamente detti, non hanno alcun effetto su sistemi Linux.<br />
-I sistemi antivirus su Linux sono inutili, essi hanno un senso solo se la vostra macchina ridireziona il traffico web verso altre macchine attrezzate con altri sistemi operativi vulnerabili ai virus. In questo caso esse possono filtrare e proteggere le macchine vunerabili presenti nella vostra rete.<br />
+I sistemi antivirus su Linux sono inutili, essi hanno un senso solo se la vostra macchina ridireziona il traffico web verso altre macchine attrezzate con altri sistemi operativi vunerabili ai virus. In questo caso esse possono filtrare e proteggere le macchine vunerabili presenti nella vostra rete.<br />
 Esistono, però, i cosidetti "proof of concept", ovvero studi teorici di virus che "potrebbero" girare su macchine linux. Abbiamo detto teorici, perchè non vi è alcuna notizia sul fatto che questi studi funzionino sul serio, anzi si sa del contrario, ovvero, che non funzionano.<br />
 Nel caso abbiate timore che questi pericoli teorici possano essere usati contro di voi, spesso basta una contromisura molto semplice: l'opzione noexec sul mount della vostra home.
 
 == Installazione di software ==
 Terminiamo la nostra analisi con quello che riteniamo il pericolo più grande per gli utenti di un sistema desktop.<br />
 La pericolosità di installare software non sicuro è enorme rispetto alla pericolosità dei punti 1,2,3 analizzati in questo articolo (facendo sempre riferimento all'utenza verso la quale l'articolo stesso è rivolto).<br />
-Fate sempre uso dei repository ufficiali e non usate '''mai''' l'opzione --nogpgcheck in dnf o rpm, questa opzione rinuncia al controllo della firma del pacchetto in fase di installazione, unica cosa che ne garantisce la genuinità cioè il controllo della firma garantisce che il pacchetto è identico a quello depositato nel repository ufficiale.<br />
+Fate sempre uso dei repository ufficiali e non usate '''mai''' l'opzione --nogpgcheck in yum o rpm, questa opzione rinuncia al controllo della firma del pacchetto in fase di installazione, unica cosa che ne garantisce la genuinità cioè il controllo della firma garantisce che il pacchetto è identico a quello depositato nel repository ufficiale.<br />
 Vi ricordo che a seguito di un attacco ai server Fedora (agosto 2008), la comunità internazionale decise di cambiare le firme dei pacchetti in Fedora otto e nove a scopo precauzionale.<br />
 Supponiamo, per esempio, che qualcuno voglia fare uno scherzo e realizzi un pacchetto rpm contenente una simpatica applicazione.<br />
 L'applicazione vi piace e decidete di installarla.<br />
@@ -126,4 +126,6 @@ Quindi, vi esorto ad usare solo repository rpm affidabili e sicuri.<br />
 Evitate di installare applicazioni dai sorgenti anche se i siti dai quali prelevate il software sono sicuri.<br />
 Con la tecnica del "man in middle", qualcuno potrebbe modificare il pacchetto a suo piacimento, magari "infilandoci" una fork-bomb oppure qualcosa di peggio, cosa che con l'uso dei repository ufficiali e con il controllo della firma, sarebbe impossibile.
 
+[[:Categoria:Scrittura in corso]]
+[[Categoria:Sistema]]
 [[Categoria:Sicurezza]]
