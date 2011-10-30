@@ -1,7 +1,7 @@
 __TOC__
 == Introduzione ==
 
-JPackage è Utile per l'installazione di pacchetti java. Il repo è disponibile attualmente per tutte le versioni di Fedora, sia stabile che testing.
+JPackage è utile per l'installazione di pacchetti java. Il repo è disponibile attualmente per tutte le versioni di Fedora, sia stabile che testing.
 {{Warning|L'utilizzo di JPackage potrebbe generare delle incompatibilità con OpenJDK, di conseguenza la sua installazione non è raccomandata.}}
 
 == Installazione ==
