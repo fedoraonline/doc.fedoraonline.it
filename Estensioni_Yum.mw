@@ -1,6 +1,6 @@
 == Introduzione ==
 Esistono una serie di estensioni utili per Yum ('''Y'''ellowdog '''U'''pdater '''M'''odified) se si utilizza la linea di comando.<br />
-Ovviamente non si vuole elencare tutte le possibilità, aspetto per il quale si rimanda alle pagina ''man'', ma si elencheranno quelle più significative. Per avere l'elemco dei plugin presenti sul sistema basta digitare:
+Ovviamente non si vuole elencare tutte le possibilità, aspetto per il quale si rimanda alle pagina ''man'', ma si elencheranno quelle più significative. Per avere l'elenco dei plugin presenti sul sistema basta digitare:
 
  $ ls /etc/yum/pluginconf.d/
 
@@ -31,7 +31,7 @@ Prima di utilizzare questo plugin, se non fosse installato di default, è necess
 
 == Yum-downloadonly ==
 
-E' possibile installare un plugin per scaricare i pacchetti RPM dai repository senza dover installare necessariamente il pacchetto. Questo plugin diventa utile per recepire dei pacchetti RPM da trasferire successivcamente su altri sistemi.
+E' possibile installare un plugin per scaricare i pacchetti RPM dai repository senza dover installare necessariamente il pacchetto. Questo plugin diventa utile per recepire dei pacchetti RPM da trasferire successivamente su altri sistemi.
 
  # yum install yum-plugin-downloadonly
 
@@ -44,7 +44,7 @@ Conviene dunque sfruttare il comando "yumdownload". Installare via yum il pacche
 
  # yum install yum-utils
 
-Dopodichè si richiama il comando yumdownloader seguito dal nome del pacchetto da scaricare.
+Dopodiché si richiama il comando yumdownloader seguito dal nome del pacchetto da scaricare.
 
  $ yumdownloader unrar
 
