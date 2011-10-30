@@ -37,7 +37,7 @@ Questa operazione è importantissima per far partire Ghost all'avvio del sistema
  [launchApp]
  AppPath=x:\GHOST32.EXE
 
-Dopodichè basta salvare il file senza cambiare il nome del file.
+Dopodiché basta salvare il file senza cambiare il nome del file.
 
 == Formattazione penna USB e copia dei file ==
 
