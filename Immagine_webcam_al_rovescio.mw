@@ -102,7 +102,7 @@ con questa sezione:
     }
  }
 salvare, chiudere.
-==Compiliare ed installare il modulo==
+==Compilare ed installare il modulo==
 Sempre da utente procedere con la compilazione:
  $ cd $HOME/Scaricati/v4l-dvb-abd3aac6644e/
  $ make
