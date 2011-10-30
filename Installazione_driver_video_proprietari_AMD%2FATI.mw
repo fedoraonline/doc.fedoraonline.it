@@ -1,26 +1,26 @@
 Tutte le operazioni vanno fatte da root.
-Se avete installati i driver ati proprietari non rpm,  date prima di tutto:
+Se si hanno installati i driver ati proprietari non rpm,  dare prima di tutto:
  # yum reinstall mesa-libGL
-Cominciate con un:
+Cominciare con un:
  # yum update kernel
-per aggiornare il kernel.
-Installate i repository rpm-fusion se non lo avete fatto:
+per aggiornare il kernel.<br />
+Installare i repository rpm-fusion se non lo si è già fatto:
  # rpm -Uvh <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm</nowiki>
  # rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm</nowiki>
-Ora controllate che tipo di kernel avete:
+Ora controllare che tipo di kernel si possiede:
  # uname -a
-Se avete un kernel''' non PAE''' procedete così:
+Se si possiede un kernel '''non PAE''' procedere così:
  # yum install kmod-catalyst xorg-x11-drv-catalyst xorg-x11-drv-catalyst-libs.i686
-Se, invece, avete un kernel PAE:
+Se, invece, si possiede un kernel PAE:
  # yum install kmod-catalyst-PAE xorg-x11-drv-catalyst-libs.i686 xorg-x11-drv-catalyst 
-Poi date:
+Poi dare:
  # sed -i '/root=/s|$| nomodeset|' /boot/grub/grub.conf
  # cd /boot
  # mv initramfs-`uname -r`.img initramfs-`uname -r`.img-original
  # dracut -v /boot/initramfs-`uname -r`.img `uname -r`[/code]
-infine un :
+infine un:
  # reboot 
-avete finito.
+finito.
 
 Procedura ripresa da: [http://forums.fedoraforum.org/showthread.php?t=155503 fedoraforum]
 
