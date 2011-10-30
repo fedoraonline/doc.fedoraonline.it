@@ -39,10 +39,10 @@ oppure:
  collect2: ld returned 1 exit status
 
 Un aiuto per superare l'ostacolo è il seguente:
-* Nel primo caso bisogna editare il makefile nella directory /lib/engine/components/libnotify prima di avviare il comando <code>$ make</code>:
-alla riga #372 aggiungi il flag <code>$(GTK_CFLAGS)</code>.
-* Nel secondo caso bisogna editare il make file nella directory /lib prima di avviare il comando <code>$ make</code>:
-alla riga #57 aggiungi <code>-lX11 -lXext</code> così:
+* Nel primo caso bisogna editare il makefile nella directory /lib/engine/components/libnotify prima di avviare il comando $make:
+alla riga #372 aggiungi il flag $(GTK_CFLAGS).
+* Nel secondo caso bisogna editare il make file nella directory /lib prima di avviare il comando $make:
+alla riga #57 aggiungi -lX11 -lXext così:
 
  $(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) -lX11 -lXext  \
 
