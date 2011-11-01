@@ -1,4 +1,4 @@
-{{nota|Traduzione dall'originale di Mauriat Miranda|pubblicato l'8 giugno 2009 reperibile qui: [http://www.mjmwired.net/resources/mjm-services-f11.html Fedora 11 - Services and Daemons in Fedora 11]}}
+{{nota|titolo=Traduzione dall'originale di Mauriat Miranda|contenuto=pubblicato l'8 giugno 2009 reperibile qui: [http://www.mjmwired.net/resources/mjm-services-f11.html Fedora 11 - Services and Daemons in Fedora 11]}}
 
 Si invita prima di tutto alla lettura della guida sulla [http://www.mjmwired.net/resources/mjm-fedora-manage-services.html gestione dei servizi].<br />
 Quest'ultima include spiegazioni sui servizi e sui demoni, sui runlevel e sulle utility che posso gestire i servizi stessi.<br />
@@ -293,4 +293,7 @@ Potete anche scegliere di donare qualcosa per supportare l'hosting per il mio si
 
 '''[http://www.mjmwired.net/about.php#copyright Copyright © 2003-2009] by Mauriat Miranda''' (mjmwired.net).
 
-[[Categoria:Traduzioni]]
+[[:Categoria:Scrittura in corso]]
+[[Categoria:Fedoraserver]]
+[[Categoria:Sistema]]
+[[Categoria:Rete e Server]]
