@@ -2,15 +2,15 @@ Con questa guida si vuole spiegare come installare e configurare vnc (Virtual Ne
 {{Warning|Le istruzioni che seguono sono testate per Fedora 11 in ambiente gnome.}}
 Per prima cosa installare i pacchetti relativi a vnc. Su tutte le versioni di Fedora verificare i pacchetti relativi a vnc con questo comando:
 
- # dnf search vnc
+ # yum search vnc
  tigervnc.i586 : A TigerVNC remote display system
  tigervnc-server.i586 : A TigerVNC server
 
 Sopra sono elencati i pacchetti che serviranno, quindi, per installare:
 
- # dnf install tigervnc*
+ # yum install tigervnc*
 
-Una volta terminata l'installazione, procedere a configurare il server vnc. Il consiglio è di non utilizzare l'utenza root per connettersi tramite vnc in quanto esso non ha connessione criptata e  l'utenza root dovrebbe essere utilizzata solo in caso di estrema necessità, quindi, impostare la password per vnc:
+Una volta terminata l'installazione, procedere a configurare il server vnc. Il consiglio è di non utilizzare l'utenza root per connettersi tramite vnc in quanto esso non ha connessione criptata e  l'utenza root dovrebbe essere utilizzata solo in caso di estrema necessità, quindi, imposatre la password per vnc:
 
  $ vncpasswd
  Password: 123456
@@ -50,4 +50,6 @@ Quindi digitare:<br />
 <br />
 Ora dovrebbe essere tutto ok, e si dovrebbe essere in grado di connettersi tramite vnc.
 
+[[:Categoria:Scrittura in corso]]
+[[Categoria:Sistema]]
 [[Categoria:Rete e Server]]
