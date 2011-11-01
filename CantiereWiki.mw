@@ -70,7 +70,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Resctricted bash|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Disabilitare caricamento moduli del kernel|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Informazioni sul sistema|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Informazioni sul sistema|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Gestione base dei pacchetti rpm|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=MarioSantagiuliana|stato=DaFare}}
@@ -132,6 +132,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Documentare Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Compiz-fusion & unsupported plugin|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Check capacità disco-popup di allarme|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Informazioni sul sistema|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
