@@ -86,10 +86,12 @@ A questo punto è possibile rimuovere il pacchetto vecchio:
 
  # rpm -e --noscripts lam-libs-7.1.2-11.fc9.i386
 
-{{nota|Opzione --noscripts|l'opzione '''--noscripts''' potrebbe essere necessaria in quanto altrimenti gli script eseguiti pre/post disinstallazione andrebbero a "scornarsi" con il pacchetto nuovo, che tuttavia deve rimanere nel sistema.}}
+{{nota|titolo=Opzione --noscripts|l'opzione '''--noscripts''' potrebbe essere necessaria in quanto altrimenti gli script eseguiti pre/post disinstallazione andrebbero a "scornarsi" con il pacchetto nuovo, che tuttavia deve rimanere nel sistema.}}
 
 Il mio consiglio è di provare a disinstallare il pacchetto senza tale opzione e di aggiungerla qualora rpm restituisca errori tipo il seguente:
  # rpm -e lam-libs-7.1.2-11.fc9.i386
  errore: scriptlet %preun(lam-libs-2:7.1.2-11.fc9.i386) fallita, uscita con stato 2
 
+[[:Categoria:Scrittura in corso]]
+[[Categoria:Sistema]]
 [[Categoria:Yum]]
