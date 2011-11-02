@@ -2,9 +2,9 @@ In questo piccolo articolo sono raccolti i comandi base per l'installazione dei 
 
 == Installazione software con RPM su Fedora ==
 
-Uno degli ostacoli più duri da superare quando si inizia ad usare un nuovo sistema operativo è quello di sapere come installare i software desiderati o usati spesso e che non vengono installati di default. In ambienti Linux, di certo non troveremo dei file .exe che fanno tutto il lavoro di installazione (e spesso qualcos'altro); invece si scoprirà che ci sono modi per installare un software, inizialmente difficili da interpretare, ma che con un po' di pazienza e di studio risulteranno piuttosto semplici.
+Uno degli ostacoli più duri da superare quando si inizia ad usare un nuovo sistema operativo è quello di sapere come installare i software desiderati o usati spesso e che non vengono installati in default. In ambienti Linux, di certo non troveremo dei file .exe che fanno tutto il lavoro di installazione (e spesso qualcos'altro); invece si scoprirà che ci sono modi per installare un software, inizialmente difficili da interpretare, ma che con un po' di pazienza e di studio risulteranno piuttosto semplici.
 
-Sicuramente la strada più semplice è quella di utilizzare  yum (Yellowdog Updater Modified) che è un package manager (manager di pacchetti basato sugli rpm), non prima di aver configurato i repository giusti per la propria versione di Fedora, ma per questo si rimanda alle ottime guide che si possono trovare su Fedoraonline. Un esempio: si ha la necessità di installare un software per Fedora che gestisca la contabilità personale; bene allora andare in programmi->sistema->terminale:
+Sicuramente la strada più semplice è quella di utilizzare  yum (Yellowdog Updater Modified) che è un package manager (manager di pacchetti basato sugli rpm), non prima di aver configurato i repository giusti per la propria versione di Fedora, ma per questo si rimanda alle ottime guide che si possono trovare su Fedoraonline. Un esempio: si ha la necessità di installare un software per Fedora che gestisca la contabilità personale; bene allora andare programmi->sistema->terminale:
 
  $ yum search personal finance manager
 
@@ -25,8 +25,8 @@ Se il software non convince, lo si può rimuovere:
 
 Può succedere però che yum non trovi il software che si cerca o che abbia a disposizione dei software che all'utente non vadano bene.<br />
 Si può fare una ricerca più ampia del pacchetto software .rpm, ma bisogna tener presente delle indicazioni:
-# Su Internet esistono vari siti con hanno a disposizione dei database di pacchetti rpm, dedicati ad una o più distribuzioni Linux, come “RPMfind” o “RPMseek”;
-# E' fondamentale fare attenzione al tipo di rpm: 
+# su internet esistono vari siti con hanno a disposizione dei database di pacchetti rpm, dedicati ad una o più distribuzioni Linux, come “RPMfind” o “RPMseek” (i link si possono trovare nella sezione -Links- del forum); ci si può anche informare, da chi è più esperto scrivendo in Fedoraonline, sui siti più sicuri.
+# è fondamentale fare attenzione al tipo di rpm: 
  pacchetto.i386.rpm                  pacchetto per architetture di processori a 32 bit
  pacchetto.src.rpm                   contiene codice sorgente
  pacchetto-devel.i386.rpm            dedicato solo allo sviluppo (development)
@@ -68,14 +68,14 @@ Il postfisso --oldpackage è una delle numerose opzioni dei comandi generali; un
 Il comando generale per rimuovere un pacchetto è
 
  # rpm -e nomepackage
-
-se ad esempio è installato il pacchetto grisbi-0.5.9-8.fc10.i386.rpm allora da terminale digitare
+ 
+se ad esempio abbiamo installato il pacchetto grisbi-0.5.9-8.fc10.i386.rpm allora da terminale digitare
 
  $ su -
  password: password di root
  # rpm -e grisbi
 
-Anche per il comando di rimozione ''-e|--erase''' vale l'opzione ''--test''
+Anche per il comando di rimozione -e|--erase vale l'opzione  --test 
 
  # rpm -e --test grisbi
 
@@ -83,11 +83,13 @@ mentre se vogliamo rimuovere più versioni installate dello stesso software, all
 
  # rpm -e --allmatches grisbi
 
-== Comando di verifica ==
+== Comando verifica ==
 
-Il comando ''-V|--verify'' confronta le informazioni del pacchetto appena installato con le informazioni dello stesso nei metadati del database che lo conteneva: confronta le dimensioni, i permessi, il tipo, il proprietario di ogni file; mentre i file non installati, come ad esempio la documentazione, saranno ignorati.<br />
+Il comando -V|--verify confronta le informazioni del pacchetto appena installato con le informazioni dello stesso nei metadati del database che lo conteneva: confronta le dimensioni, i permessi, il tipo, il proprietario di ogni file; mentre i file non installati, come ad esempio la documentazione, saranno ignorati.<br />
 Installazione e verifica del pacchetto software-1.2.noarch.rpm 
 
  # rpm -iV  software-1.2.noarch.rpm
 
+[[:Categoria:Scrittura in corso]]
 [[Categoria:Sistema]]
+[[Categoria:Yum]]
