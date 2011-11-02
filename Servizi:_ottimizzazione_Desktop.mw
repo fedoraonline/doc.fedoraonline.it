@@ -18,7 +18,7 @@ oppure per linea di comando:
 
 in abbinamento con il comando:
 
-# service nomeservizio start | stop | restart | status
+ # service nomeservizio start | stop | restart | status
 leggete le pagine man per ulteriori informazioni.  
 
 ==Avvertenza==
