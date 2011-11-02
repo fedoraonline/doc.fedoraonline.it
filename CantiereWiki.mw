@@ -58,7 +58,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Touchpad|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Virtualizzazione|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=HP Photosmart C4380|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=KDE|autore=?|stato=DaFare}}
+{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=8&itemid=294 Link]|articolo=KDE|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione VNC|autore=MarioSantagiuliana|stato=Terminato}}
