@@ -55,9 +55,9 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Touchpad|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Virtualizzazione|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=HP Photosmart C4380|autore=?|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Touchpad|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Virtualizzazione|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=HP Photosmart C4380|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=8&itemid=294 Link]|articolo=KDE|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|stato=Terminato}}
@@ -134,6 +134,9 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Check capacità disco-popup di allarme|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Informazioni sul sistema|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Touchpad|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Virtualizzazione|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=HP Photosmart C4380|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
