@@ -76,7 +76,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Audio assente|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Yum: elencare e rimuovere i pacchetti duplicati|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Modulo Creative Labs SB X-Fi|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Lettore di impronte digitali|autore=MarioSantagiuliana|stato=Terminato}}
@@ -133,6 +133,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Compiz-fusion & unsupported plugin|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Check capacità disco-popup di allarme|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Informazioni sul sistema|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
