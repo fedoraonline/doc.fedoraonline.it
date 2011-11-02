@@ -199,7 +199,7 @@ Questo servizio è un potenziale pericolo sotto il profilo della sicurezza, usat
 
 ==network==
 
-Vedi [[#NetworkManager|NetworkManager]].
+Vedi [[#NetworkManager.2C_network|NetworkManager]].
 
 ==nfs, nfslock==				
 è raccomandato tenerli: ''' disabilitato  '''
