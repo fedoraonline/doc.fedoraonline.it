@@ -1,11 +1,6 @@
-__TOC__
-== Introduzione ==
-
 Per limitare un utente, in modo che possa lanciare solo una serie limitata di comandi e non si vuole utilizzare il sudo, è possibile creare una shell ristretta che limiti le funzionalità che questo utente potrà usare. Le restricted bash (o rbash) sono installate di default sui sistemi ubuntu ma su distribuzioni come Fedora, Red Hat o CentOS bisognerà applicare un piccolo workaround per poter utilizzare queste bash.
 
-== Installazione ==
-
-Nell'esempio ci sarà un gruppo ''rgroup'' ed un utente ''ruser'' che utilizzerà le restricted bash.
+Nell'esempio ci sarà un gruppo rgroup ed un utente ruser che utilizzerà le restricted bash.
 
  [root@localhost /]# groupadd rgroup
  [root@localhost /]# useradd -g rgroup -d /home/ruser -m -s /bin/bash ruser
@@ -16,13 +11,13 @@ Nell'esempio ci sarà un gruppo ''rgroup'' ed un utente ''ruser'' che utilizzer�
  Retype new UNIX password:
  passwd: all authentication tokens updated successfully.
 
-Per prima cosa eseguire un symlink tra la shell ''/bin/bash'' e la nuova shell ''/bin/rbash'' per poter creare la nuova tipologia di bash.
+Per prima cosa eseguire un symlink tra la shell /bin/bash e la nuova shell /bin/rbash per poter creare la nuova tipologia di bash.
 
  [root@localhost /]# ln -s /bin/bash /bin/rbash
  [root@localhost /]# ls -l /bin/rbash
  lrwxrwxrwx 1 root root 9 Mar 20 13:53 /bin/rbash -> /bin/bash
 
-Inserire la nuova shell all'interno dell'elenco di shell di sistema contenuta nel file ''/etc/shells''.
+Inserire la nuova shell all'interno dell'elenco di shell di sistema contenuta nel file /etc/shells.
 
  [root@localhost /]# echo "/bin/rbash" >> /etc/shells
 
@@ -40,9 +35,7 @@ Con il comando chsh è possibile cambiare la shell di default in uso da un utent
  Changing shell for ruser.
  Shell changed.
 
-== Configurazione ==
-
-Nel file ''.bash_profile'' di ogni utente è settato il percorso dove trovare i diversi comandi, e in questo caso si dovrà limitare l'accesso a questi percorsi settando un percorso personalizzato, dove convogliare i soli comandi utili e non altri. Per questo si dovrà creare la directory bin sotto la home che verrà utilizzata come path directory. Per questo modificare la variabile PATH dell'utente inserendo il nuovo percorso per rintracciare i comandi.
+Nel file .bash_profile di ogni utente è settato il percorso dove trovare i diversi comandi, e in questo caso si dovrà limitare l'accesso a questi percorsi settando un percorso personalizzato, dove convogliare i soli comandi utili e non altri. Per questo si dovrà creare la directory bin sotto la home che verrà utilizzata come path directory. Per questo modificare la variabile PATH dell'utente inserendo il nuovo percorso per rintracciare i comandi.
 
  [ruser@localhost ~]$ echo $PATH
  /usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/ruser/bin
@@ -62,12 +55,13 @@ Nel file ''.bash_profile'' di ogni utente è settato il percorso dove trovare i 
  
  export PATH
 
-Modificare i proprietari dei file ''.bashrc'' e ''.bash_profile'' per non permettere agli utenti di modificare il path dei comandi, che è stato impostato in precedenza.
+Modificare i proprietari dei file .bashrc e .bash_profile per non permettere agli utenti di modificare il path dei comandi, che è stato impostato in precedenza.
+
 
  [root@localhost /]# chown root:root /home/ruser/.bash_profile
  [root@localhost /]# chown root:root /home/ruser/.bashrc
 
-Ora per ogni comando che si vuole far usare all'utente ristretto, basterà creare un symlink tra il path assoluto del comando sotto il direttorio ''$HOME/bin'' che utilizziamo come path directory dell'utente.
+Ora per ogni comando che si vuole far usare all'utente ristretto, basterà creare un symlinl tra il path assoluto del comando sotto il direttorio $HOME/bin che utilizziamo come path directory dell'utente.
 
  [root@localhost /]# ln -s /usr/bin/tail /home/ruser/bin/
  [root@localhost /]# ln -s /bin/tar /home/ruser/bin/
@@ -80,11 +74,12 @@ Ora per ogni comando che si vuole far usare all'utente ristretto, basterà crear
  lrwxrwxrwx 1 root root 13 Mar 23 09:02 tail -> /usr/bin/tail
  lrwxrwxrwx 1 root root  8 Mar 23 09:03 tar -> /bin/tar
 
-Se si vuole permettere l'uso di alcune directory si può creare dei direttorio sotto la home e poi eseguire dei symlink come fatto con i comandi. L'utente infatti non potrà uscire al di fuori della sua home directory ne lanciare comandi che inizino con /, infatti:
+Se vogliamo permettere l'uso di alcune directory si può creare dei direttorio sotto la home e poi eseguire dei symlink come fatto con i comandi. L'utente infatti non potrà uscire al di fuori della sua home directory ne lanciare comandi che inizino con /, infatti:
 
  [ruser@localhost ~]$ cd /home
  -rbash: cd: restricted
  [ruser@localhost ~]$ /bin/sh
  -rbash: /bin/sh: restricted: cannot specify `/' in command names
 
+[[:Categoria:Scrittura in corso]]
 [[Categoria:Sistema]]
