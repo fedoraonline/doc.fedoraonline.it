@@ -17,6 +17,7 @@ Nei riavvii successivi il demone sarà abilitato di default.
 Si consiglia di creare la virtualizzazione sotto qemu/KVM, l'utilizzo di Xen è un po' più complicato.
 
 == Xen ==
+
 Comunque, per utilizzare Xen, occorre installarlo a parte:
 
  # yum install xen
@@ -32,21 +33,18 @@ Per avviare la macchina virtuale:
 oppure, in KDE, ''menù K > Applicazioni > Sistema > Manager della macchina virtuale''.
 
 == Virtualbox ==
-È possibile scegliere due strade per installare VirtualBox.
-===Repository===
-È molto consigliato l'utilizzo del [[VirtualBox_repo|'''repository apposito''']] per avere sempre l'ultima versione aggiornata di VirtualBox.
 
-===RPM scaricato===
-È possibile scaricare l'RPM e utilizzare un software esterno come VirtualBox, prelevandolo da [http://www.virtualbox.org/wiki/Linux_Downloads qui], oppure digitando:
+E' possibile anche utilizzare un software esterno come è VirtualBox, prelevandolo da [http://www.virtualbox.org/wiki/Linux_Downloads qui],
+oppure digitando:
 
- $ wget http://download.virtualbox.org/virtualbox/4.1.0/VirtualBox-4.1-4.1.0_73009_fedora15-1.x86_64.rpm
+ $ cd ~/Scaricati && wget http://download.virtualbox.org/virtualbox/4.1.0/VirtualBox-4.1-4.1.0_73009_fedora15-1.x86_64.rpm
  $ su
  ''password di root''
- # yum install ./VirtualBox*
+ # rpm -ivh VirtualBox*
 
-'''NB: la versione potrebbe cambiare in futuro.'''
+NB: la versione potrebbe cambiare in futuro.
 
-Durante l'installazione il programma non troverà il modulo del kernel ma se lo compilerà in piena autonomia.<br />
+Durante l'installazione il programma non troverà il modulo del kernel e se lo compilerà in piena autonomia.<br />
 Importante sarà poi verificare che il proprio utente sia anche nel gruppo '''''vboxusers''''', cosa che dovrebbe avvenire all'installazione, ma, se non lo fosse, occorre inserirlo; l'una e l'altra cosa si possono fare digitando da terminale:
 
  $ system-config-users
@@ -57,4 +55,4 @@ Infine, sempre da terminale:
 
 e registrarsi.
 
-[[Categoria:Virtualizzazione]]
+[[Categoria:Programmazione e Sviluppo]]
