@@ -55,31 +55,12 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Touchpad|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Virtualizzazione|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=HP Photosmart C4380|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=8&itemid=294 Link]|articolo=KDE|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Configurazione VNC|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Services in Fedora 11 di Mauriat Miranda|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Compiz-fusion & unsupported plugin|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Check capacità disco-popup di allarme|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Quota Linux|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Resctricted bash|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Disabilitare caricamento moduli del kernel|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Informazioni sul sistema|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Gestione base dei pacchetti rpm|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Audio assente|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Yum: elencare e rimuovere i pacchetti duplicati|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Modulo Creative Labs SB X-Fi|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Lettore di impronte digitali|autore=MarioSantagiuliana|stato=Terminato}}
 |}
 
 (*): da confrontarsi prima sul procedere!
@@ -122,21 +103,25 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Music on console|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Workaround per webcam con modulo uvcvideo|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Vademecum sicurezza|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Progetto Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Partecipare al Fedora Project|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Segnalare un bug|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=La comunità italiana|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Tradurre Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Sviluppare Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Disegnare Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Documentare Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=31/10/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Compiz-fusion & unsupported plugin|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Check capacità disco-popup di allarme|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Informazioni sul sistema|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Touchpad|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Virtualizzazione|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=HP Photosmart C4380|autore=RobertMayr|rilettore=?|data=01/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Touchpad|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Virtualizzazione|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=HP Photosmart C4380|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Configurazione VNC|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Services in Fedora 11 di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Quota Linux|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Resctricted bash|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Gestione base dei pacchetti rpm|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Installare e configurare Virtualbox|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Audio assente|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Yum: elencare e rimuovere i pacchetti duplicati|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Modulo Creative Labs SB X-Fi|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Lettore di impronte digitali|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
