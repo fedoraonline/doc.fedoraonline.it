@@ -55,7 +55,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Wireless bcm43xx|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=8&itemid=294 Link]|articolo=KDE|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=8&itemid=294 Link]|articolo=KDE|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Disabilitare caricamento moduli del kernel|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=DaFare}}
