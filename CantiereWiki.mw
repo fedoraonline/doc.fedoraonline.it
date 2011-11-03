@@ -62,13 +62,13 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Driver ATI schede pre 9250|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Blocco siti con iptables|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Ascoltare file ape|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Mysql in replication server|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Sincronizzare Thunderbird Lightning con il proprio Nokia via bluetooth|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Open Office: installazione parallela e indipendente|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Blocco siti con iptables|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Ascoltare file ape|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Mysql in replication server|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Sincronizzare Thunderbird Lightning con il proprio Nokia via bluetooth|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Open Office: installazione parallela e indipendente|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Google Desktop e i suoi gadgets|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Bytes letti/scritti da dd|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Gestione di tre sistemi operativi|autore=RobertMayr|stato=DaFare}}
