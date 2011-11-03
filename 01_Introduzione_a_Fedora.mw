@@ -1,42 +1,42 @@
-== Introduzione a Fedora ==
 __TOC__
 
-===  Che cos'è Fedora ===
-[http://fedora.redhat.com/ http://fedora.redhat.com/]
+==  Che cos'è Fedora ==
+* [http://fedora.redhat.com/ http://fedora.redhat.com/]
 
-===  Dove posso vedere delle immagini di Fedora ===
-[http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32 http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32]
+==  Dove posso vedere delle immagini di Fedora ==
+* [http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32 http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32]
 
-===  Dove posso trovare un elenco di tutti i programmi e di tutte le librerie che posso installare con Fedora ===
-[http://distrowatch.com/fedora http://distrowatch.com/fedora]
+==  Dove posso trovare un elenco di tutti i programmi e di tutte le librerie che posso installare con Fedora ==
+* [http://distrowatch.com/fedora http://distrowatch.com/fedora]
 
-===  Da dove posso scaricare Fedora ===
-[http://fedora.redhat.com/Download/mirrors.html http://fedora.redhat.com/Download/mirrors.html]
+==  Da dove posso scaricare Fedora ==
+* [http://fedora.redhat.com/Download/mirrors.html http://fedora.redhat.com/Download/mirrors.html]
 
-===  Dove posso trovare aiuto per la mia Fedora ===
-[http://fedora.redhat.com/docs/ Nel sito di documentazione ufficiale]
-[http://stanton-finley.net/fedora_core_5_installation_notes.html Nelle note di installazione di Fedora Core 5]''''(N.d.T. ne trovi la traduzione in questo sito)''''
-[http://www.fedorafaq.org/ Nelle Fedora FAQ non ufficiali]
-[http://home.gagme.com/greg/linux/fc5-tips.php Nei "Fedora Core 5 Tips and Tricks"]
-[http://www.mjmwired.net/resources/mjm-fedora-fc4.html Nella guida personale di Mauriat Miranda all'installazione di Fedora Core 5]'''' (N.d.T. ne trovi la traduzione in questo sito)''''
-[http://www.fedoraforum.org/ Nei Forum su Fedora]
-[http://fedorasolved.org/ Su Fedora Solved]
-[http://fedora.redhat.com/participate/communicate/ In altre risorse]
+==  Dove posso trovare aiuto per la mia Fedora ==
+* [http://fedora.redhat.com/docs/ Nel sito di documentazione ufficiale]
+* [http://stanton-finley.net/fedora_core_5_installation_notes.html Nelle note di installazione di Fedora Core 5]''''(N.d.T. ne trovi la traduzione in questo sito)''''
+* [http://www.fedorafaq.org/ Nelle Fedora FAQ non ufficiali]
+* [http://home.gagme.com/greg/linux/fc5-tips.php Nei "Fedora Core 5 Tips and Tricks"]
+* [http://www.mjmwired.net/resources/mjm-fedora-fc4.html Nella guida personale di Mauriat Miranda all'installazione di Fedora Core 5]'''' (N.d.T. ne trovi la traduzione in questo sito)''''
+* [http://www.fedoraforum.org/ Nei Forum su Fedora]
+* [http://fedorasolved.org/ Su Fedora Solved]
+* [http://fedora.redhat.com/participate/communicate/ In altre risorse]
 
-===  Dove posso cercare per nuovi programmi ===
-[http://gnomefiles.org/ http://gnomefiles.org]
-[http://freshmeat.net/browse/18/ http://freshmeat.net]
-[http://sourceforge.net/ http://sourceforge.net]
-[http://kde-apps.org/ http://kde-apps.org]
-[http://fedoraproject.org/wiki/Extras Fedora Extras project]
-[http://rpm.pbone.net/ http://rpm.pbone.net]
-[http://rpm.livna.org/ http://rpm.livna.org]
+==  Dove posso cercare per nuovi programmi ==
+* [http://gnomefiles.org/ http://gnomefiles.org]
+* [http://freshmeat.net/browse/18/ http://freshmeat.net]
+* [http://sourceforge.net/ http://sourceforge.net]
+* [http://kde-apps.org/ http://kde-apps.org]
+* [http://fedoraproject.org/wiki/Extras Fedora Extras project]
+* [http://rpm.pbone.net/ http://rpm.pbone.net]
+* [http://rpm.livna.org/ http://rpm.livna.org]
 
-===  Dove posso cercare elementi di stile per il desktop ===
-[http://gnome-look.org/ http://gnome-look.org]
-[http://art.gnome.org/ http://art.gnome.org]
-[http://kde-look.org/ http://kde-look.org]
+==  Dove posso cercare elementi di stile per il desktop ==
+* [http://gnome-look.org/ http://gnome-look.org]
+* [http://art.gnome.org/ http://art.gnome.org]
+* [http://kde-look.org/ http://kde-look.org]
 
 [[:Categoria:Scrittura in corso]] 
 [[:Categoria:Rilettura in corso]]
+[[Categoria:Sistema]]
 [[Categoria:Fedoraserver]]
