@@ -23,7 +23,7 @@ Per ottenerle basta dare il comando:
  $ cpuid
 
 Se dovesse essere installato un multiprocessore, il comando sarebbe leggermente diverso:
-{{Nota|titolo=Importante:|contenuto=E' necessario essere root!}}
+{{Nota|Importante:|E' necessario essere root!}}
  # cpuid -1 -k
 
 Esso fornisce informazioni per il processore primario. Da utilizzare con l'opzione ''-k | --kernel'', con la quale si avranno informazioni dal kernel.<br />
@@ -33,7 +33,7 @@ Di default le informazioni sono ottenute direttamente dall'applicazione, in acco
 
 L'opzione ''-v | --version'' da informazioni sulla versione di cpuid:
 
- $ cpuid -v 
+ $ cpuid -v
 
 ===Opzioni di utilizzo: Procbench===
 Il tool procbench permette anche di effettuare dei test di calcolo sulle cpu x86, oltre a fornirne informazioni tecniche attraverso cpuid.<br />
