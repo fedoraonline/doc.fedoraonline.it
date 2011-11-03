@@ -23,7 +23,7 @@ Vengono creati programmi per ogni necessità informatica, ma per diventare un si
 === Il software libero ===
 Una delle caratteristiche fondamentali, che ha contribuito al successo del kernel Linux e di conseguenza delle applicazioni e del software legato ad esso, è il fatto che viene rilasciato l'intero codice sorgente, in modo che possa essere modificato e sviluppato dalla comunità. A differenza del software proprietario, in cui il codice sorgente rimane blindato, il software libero stimola la condivisione delle conoscenze; un aspetto importante che ha portato presto al software Open Source.
 
-{{nota|titolo=Software Open Source|contenuto=E' un software rilasciato con un tipo di licenza per la quale il codice sorgente è lasciato alla disponibilità di eventuali sviluppatori, in modo che con la collaborazione (in genere libera e spontanea) il prodotto finale possa raggiungere una complessità maggiore di quanto potrebbe ottenere un singolo gruppo di programmazione.}}
+{{nota|Software Open Source|E' un software rilasciato con un tipo di licenza per la quale il codice sorgente è lasciato alla disponibilità di eventuali sviluppatori, in modo che con la collaborazione (in genere libera e spontanea) il prodotto finale possa raggiungere una complessità maggiore di quanto potrebbe ottenere un singolo gruppo di programmazione.}}
 
 == Fedora che cos'è? ==
 
@@ -40,13 +40,13 @@ Infine c'è da sottolineare che Fedora come desktop predefinito utilizza GNOME. 
 
 == Il Desktop di default: GNOME ==
 
-{{nota|titolo=Installazione|contenuto=Per una guida di installazione passo passo scegli una delle guide di installazione che trovi nella categoria apposita.}}
+{{nota|Installazione|Per una guida di installazione passo passo scegli una delle guide di installazione che trovi nella categoria apposita.}}
 
 L'installazione è stata terminata con successo e al primo login ti trovi davanti una scrivania nuova: GNOME ('''G'''NU '''N'''etwork '''O'''bject '''M'''odel '''E'''nvironment). Un Desktop Environment sconosciuto, che già dal primo impatto è molto diverso rispetto alle interfacce grafiche alle quali probabilmente sei abituato.
 [[Image:gnome_base.jpg|center|thumb|400px|Gnome dopo la prima installazione si presenta così.<br>
 Se così non fosse verifica il corretto funzionamento dei driver grafici, trovi un suggerimento più avanti]]
 
-{{nota|titolo=Desktop Environment|contenuto=Verrà trattato solamente il Desktop di default, ma è importante sapere che si possono usare molti altri DE: KDE, Xfce, Lxde, Fluxbox e molti altri.}}
+{{nota|Desktop Environment|Verrà trattato solamente il Desktop di default, ma è importante sapere che si possono usare molti altri DE: KDE, Xfce, Lxde, Fluxbox e molti altri.}}
 [[Image:gnome_app.jpg|left|thumb|400px|Le applicazioni presenti possono essere visualizzati anche per categoria]]
 Si nota fin da subito che è un Desktop pulito, privo di icone e menu. Quello che vedi si chiama Gnome-Shell, una scrivania interattiva, e portando il mouse in alto a sinistra noterai subito perchè.<br />
 Toccare l'angolo superiore sinistro equivale al click su "Attività"; le finestre aperte verranno minimizzate e sul Desktop compariranno al centro. A sinistra avrai un menu di avvio veloce, altamente configurabile, a destra ci saranno le aree di lavoro. Cliccando in alto su "Applicazioni potrai vedere e scegliere le applicazioni installate sul tuo sistema, come nell'immagine a sinistra.<br />
@@ -72,7 +72,7 @@ Noterai come alcuni aspetti, come Nautilus, il file manager, ti saranno familiar
 Fedora, come tutte le distribuzioni Linux, è un vero sistema multi-utente, nel senso che è in grado di gestire un'infinità di utenti, attribuendo al solo amministratore (root) i permessi di installazione di applicativi, di modifiche su file di configurazione ecc.<br />
 Detto questo la prima differenza rispetto alle macchine con sistemi operativi Microsoft sta proprio in questa distinzione netta tra utente e amministratore, che di fatto su Windows spesso sono la stessa persona. Non è solo una necessità di un sistema multi-utente, ma chiude le porte a moltissimi malware e cavalli di troia, che non avendo i permessi di root non riescono ad arrecare danni significativi al sistema.
 
-{{Nota|titolo=Password di root!|contenuto=E' la chiave per il tuo sistema, '''conservala bene''' e non darla mai, per nessun motivo, a terzi. Inoltre non dovresti mai attuare meccanismi che aggirano l'inserimento della password di root!}}
+{{Nota|Password di root!|E' la chiave per il tuo sistema, '''conservala bene''' e non darla mai, per nessun motivo, a terzi. Inoltre non dovresti mai attuare meccanismi che aggirano l'inserimento della password di root!}}
 
 Fedora è un sistema rpm-based, il che vuol dire che per l'installazione di pacchetti software si avvale di formati RPM ('''R'''ed Hat '''P'''ackage '''M'''anager).
 [[Image:PackageKit.jpg|right|thumb|300px|PackageKit è il gestore grafico di pacchetti RPM di Fedora]]
@@ -105,7 +105,7 @@ Non è possibile inserire tutte le informazioni in un'unica guida, per cui ti co
 
 {{Warning|Prima di seguire le guide appena citate assicurati di aver installato il repository ''RPMFusion'' descritto sopra!}}
 
-{{Nota|titolo=A proposito di schede grafiche|contenuto=Gnome-shell per un corretto funzionamento necessita dell'accelerazione grafica. Questo vuol dire che molto probabilmente, se hai delle schede Intel o NVidia, il sistema riconoscerà in autonomia la tua scheda e caricherà il driver libero necessario.<br>Altrimenti, ma sicuramente per le schede ATI, dovrai installare il driver corretto per la tua scheda grafica.<br />
+{{Nota|A proposito di schede grafiche|Gnome-shell per un corretto funzionamento necessita dell'accelerazione grafica. Questo vuol dire che molto probabilmente, se hai delle schede Intel o NVidia, il sistema riconoscerà in autonomia la tua scheda e caricherà il driver libero necessario.<br>Altrimenti, ma sicuramente per le schede ATI, dovrai installare il driver corretto per la tua scheda grafica.<br />
 Per le indicazioni sull'installazione dei driver per la tua specifica scheda grafica consulta la guida adatta in [[:Categoria:Schede grafiche| questa categoria]]}}
 
 == Il Terminale ==
