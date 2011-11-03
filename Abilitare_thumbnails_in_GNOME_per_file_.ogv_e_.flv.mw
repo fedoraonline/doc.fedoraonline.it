@@ -3,9 +3,9 @@ Se si è affezionati alla visualizzazione delle icone di anteprima dei video ma 
 
 La situazione di partenza è questa:<br />
 nel proprio sistema la visualizzazione delle icone di anteprima per i video è abilitata
-[[File:http://web.tiscali.it/astharoth/thumb_ok.jpg]]
+[[File:thumb_gnomethumb_ok.jpg]]
 ma con alcuni tipi di file la creazione del thumbnail non avviene e viene visualizzata la seguente icona:
-[[File:http://web.tiscali.it/astharoth/thumb_fail.jpg]]
+[[File:thumb_gnomethumb_fail.jpg]]
 
 Verranno usati come esempio due file: un file .ogv (ark.ogv) e uno .flv (getvideo.flv). Ma il procedimento è utilizzabile per molti altri formati.<br />
 I passi da seguire per rimediare sono i seguenti:
@@ -16,9 +16,9 @@ Se ciò non avviene le cause possono in genere essere due: il file è corrotto o
 
 ==Se totem è in grado di visualizzare il video==
 Bisogna vedere qual'è il tipo di MIME del file in questione. Farlo è molto semplice: cliccate col destro sull'icona del file, selezionate Proprietà e nella schermata che si apre prendete nota del tipo MIME segnalato. Nel caso dei due file di esempio:
-[[File:http://web.tiscali.it/astharoth/thumb_prop_ogv.jpg]]
+[[File:thumb_gnomethumb_prop_ogv.jpg]]
 
-[[File:http://web.tiscali.it/astharoth/thumb_prop_flv.jpg]]
+[[File:thumb_gnomethumb_prop_flv.jpg]]
 
 ==Comandi da eseguire==
 Aprire il terminale e come utente normale dare i seguenti comandi:
@@ -40,8 +40,8 @@ e
 ==Aprire nautilus==
 Aprite nautilus (il file manager di default in GNOME), andare nella cartella dove è presente il file in questione e premere il pulsante aggiorna. Dopo qualche istante dovrebbe comparire la tanto agognata icona!
 
-[[File:http://web.tiscali.it/astharoth/thumb_ok_ogv.jpg]]
-[[File:http://web.tiscali.it/astharoth/thumb_ok_flv.jpg]]
+[[File:thumb_gnomethumb_ok_ogv.jpg]]
+[[File:thumb_gnomethumb_ok_flv.jpg]]
 
 Se l'icona non viene creata provare a forzarne la ricostruzione andando nel terminale come utente normale e digitando:
 
