@@ -1,60 +1,41 @@
+== Introduzione a Fedora ==
 __TOC__
-== Qualche breve nota ==
-Come usare questi Mini HowTo
 
-=== Premessa ===
+===  Che cos'è Fedora ===
+[http://fedora.redhat.com/ http://fedora.redhat.com/]
 
-# Questa raccolta di "Tips&Tricks" costituisce una guida non ufficiale per iniziare a lavorare con Fedora Core 5 e Fedora Core 6. Non è riconducibile né a Fedora, né a RedHat inc., in quanto è in massima parte costituita da materiale proveniente da:
-#* una libera traduzione dall'inglese effettuata dal team di www.fedoraserver.org della guida ''''Unofficial Fedora Core 6 Starter Guide'''' disponibile all'indirizzo [http://easylinux.info/wiki/Fedora http://easylinux.info/wiki/Fedora_fc5]
-#* suggerimenti originali dei collaboratori di fedoraserver.org
-#* indicazioni tratte da forum su Fedora Core, sia in lingua italiana che inglese
-# Questa raccolta di "Tips&Tricks" deve essere distribuita sotto i termini della [http://www.gnu.org/copyleft/fdl.html GNU Free Documentation License.]
-# Questa guida è testata per installazioni standard di Fedora Core 5 e Fedora Core 6 su "Personal computer", con pacchetti di base.
-# Per ridurre la possibilità di sbagliare, copia ed incolla i comandi nel Terminale(Applicazioni -&gt; Strumenti di sistema -&gt; Terminale) aperto (seleziona con il mouse i comandi, clicca con il pulsante destro sulla selezione -&gt; Copia/Incolla. Puoi anche usare Ctrl+C per copiare e Shift+Insert per incollare).
-{{Nota|Nota:| Molte volte dovrai eseguire i comandi qui riportati da root. Prima di potere intervenire dovrai allora digitare
-<pre>su -</pre>
-e quindi immettere la password di root, oppure leggi [[#15.3]] Come aprire un terminale in modalità super utente}}
-<ol>
-<li value="5">Se non ti piace lavorare in modalità terminale leggi #4.3 Come installare un'interfaccia grafica (GUI) per yum ("yum" e "wget" richiedono una connessione Internet per installare/aggiornare a versioni superiori/scaricare programmi).</li>
-</ol>
+===  Dove posso vedere delle immagini di Fedora ===
+[http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32 http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32]
 
-==  Che cos'è Fedora ==
-* [http://fedora.redhat.com/ http://fedora.redhat.com/]
+===  Dove posso trovare un elenco di tutti i programmi e di tutte le librerie che posso installare con Fedora ===
+[http://distrowatch.com/fedora http://distrowatch.com/fedora]
 
-==  Dove posso vedere delle immagini di Fedora ==
-* [http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32 http://shots.osdir.com/slideshows/slideshow.php?release=335&amp;slide=32]
+===  Da dove posso scaricare Fedora ===
+[http://fedora.redhat.com/Download/mirrors.html http://fedora.redhat.com/Download/mirrors.html]
 
-==  Dove posso trovare un elenco di tutti i programmi e di tutte le librerie che posso installare con Fedora ==
-* [http://distrowatch.com/fedora http://distrowatch.com/fedora]
+===  Dove posso trovare aiuto per la mia Fedora ===
+[http://fedora.redhat.com/docs/ Nel sito di documentazione ufficiale]
+[http://stanton-finley.net/fedora_core_5_installation_notes.html Nelle note di installazione di Fedora Core 5]''''(N.d.T. ne trovi la traduzione in questo sito)''''
+[http://www.fedorafaq.org/ Nelle Fedora FAQ non ufficiali]
+[http://home.gagme.com/greg/linux/fc5-tips.php Nei "Fedora Core 5 Tips and Tricks"]
+[http://www.mjmwired.net/resources/mjm-fedora-fc4.html Nella guida personale di Mauriat Miranda all'installazione di Fedora Core 5]'''' (N.d.T. ne trovi la traduzione in questo sito)''''
+[http://www.fedoraforum.org/ Nei Forum su Fedora]
+[http://fedorasolved.org/ Su Fedora Solved]
+[http://fedora.redhat.com/participate/communicate/ In altre risorse]
 
-==  Da dove posso scaricare Fedora ==
-* [http://fedora.redhat.com/Download/mirrors.html http://fedora.redhat.com/Download/mirrors.html]
+===  Dove posso cercare per nuovi programmi ===
+[http://gnomefiles.org/ http://gnomefiles.org]
+[http://freshmeat.net/browse/18/ http://freshmeat.net]
+[http://sourceforge.net/ http://sourceforge.net]
+[http://kde-apps.org/ http://kde-apps.org]
+[http://fedoraproject.org/wiki/Extras Fedora Extras project]
+[http://rpm.pbone.net/ http://rpm.pbone.net]
+[http://rpm.livna.org/ http://rpm.livna.org]
 
-==  Dove posso trovare aiuto per la mia Fedora ==
-* [http://fedora.redhat.com/docs/ Nel sito di documentazione ufficiale]
-* [http://stanton-finley.net/fedora_core_5_installation_notes.html Nelle note di installazione di Fedora Core 5]''''(N.d.T. ne trovi la traduzione in questo sito)''''
-* [http://www.fedorafaq.org/ Nelle Fedora FAQ non ufficiali]
-* [http://home.gagme.com/greg/linux/fc5-tips.php Nei "Fedora Core 5 Tips and Tricks"]
-* [http://www.mjmwired.net/resources/mjm-fedora-fc4.html Nella guida personale di Mauriat Miranda all'installazione di Fedora Core 5]'''' (N.d.T. ne trovi la traduzione in questo sito)''''
-* [http://www.fedoraforum.org/ Nei Forum su Fedora]
-* [http://fedorasolved.org/ Su Fedora Solved]
-* [http://fedora.redhat.com/participate/communicate/ In altre risorse]
-
-==  Dove posso cercare per nuovi programmi ==
-* [http://gnomefiles.org/ http://gnomefiles.org]
-* [http://freshmeat.net/browse/18/ http://freshmeat.net]
-* [http://sourceforge.net/ http://sourceforge.net]
-* [http://kde-apps.org/ http://kde-apps.org]
-* [http://fedoraproject.org/wiki/Extras Fedora Extras project]
-* [http://rpm.pbone.net/ http://rpm.pbone.net]
-* [http://rpm.livna.org/ http://rpm.livna.org]
-
-==  Dove posso cercare elementi di stile per il desktop ==
-* [http://gnome-look.org/ http://gnome-look.org]
-* [http://art.gnome.org/ http://art.gnome.org]
-* [http://kde-look.org/ http://kde-look.org]
-
-{{Link/succ|02_Repositories|02 Repositories}}
+===  Dove posso cercare elementi di stile per il desktop ===
+[http://gnome-look.org/ http://gnome-look.org]
+[http://art.gnome.org/ http://art.gnome.org]
+[http://kde-look.org/ http://kde-look.org]
 
 [[:Categoria:Scrittura in corso]] 
 [[:Categoria:Rilettura in corso]]
