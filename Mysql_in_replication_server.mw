@@ -1,4 +1,4 @@
-In questo articolo si vuole porre l'attenzione sul backup; come tutti sanno, nel mondo dell'informatica la parola backup è fondamentale, ma cosa fare se si vuole un backup in tempo reale?
+In questo articolo vuole porre l'attenzione sul backup; come tutti sanno, nel mondo dell'informatica la parola backup è fondamentale, ma cosa fase se si vuole un backup in tempo reale?
 
 Nell'esempio si hanno tre macchine, si utilizzerà [http://linux-vserver.org/Welcome_to_Linux-VServer.org Linux VServer] e davanti alla seguente situazione iniziale:
  ---------------------------------------------------
@@ -104,4 +104,8 @@ Entrare su uno slave server e dare:
 Se tutto è andato a posto si vedrà la stessa sullo slave.<br />
 Inoltre ricordo che questa procedura è molto ben documentata in rete.
 
+
+[[:Categoria:Scrittura in corso]] 
+[[:Categoria:Rilettura in corso]]
 [[Categoria:Rete e Server]]
+[[Categoria:Sistema]]
