@@ -1,0 +1,732 @@
+Questa guida nasce come frutto della collaborazione tra due utenti del forum www.fedoraonline.it, che invece di limitarsi a scambiarsi i vari post del tipo "Come si fa?" hanno deciso di condividere le proprie esperienze ed il proprio tempo libero per la configurazione di un server di posta "che funziona".
+
+Di Federico Ciofi (f.ciofi at hotmail punto it) e Guido Caruso (caruso at idra punto unipa punto it).
+
+__TOC__
+
+==  Introduzione ==
+Questa guida nasce come frutto della collaborazione tra due utenti del forum www.fedoraonline.it, che invece di limitarsi a scambiarsi i vari post del tipo "Come si fa?" hanno deciso di condividere le proprie esperienze ed il proprio tempo libero per la configurazione di un server di posta "che funziona".<br />
+Dopo varie mail scambiate e dopo un'attività di debug sul sistema, è nata questa guida, che altro non è che proprio le mail riorganizzate e riscritte.<br />
+Dunque un'avvertenza: nell'attesa che gli autori abbiano la voglia e la pazienza di procedere ad ulteriori revisioni di quanto potrete qui trovare, leggete quanto segue appunto come delle note, che vi condurrano ad un server perfettamente funzionante, ma che non hanno la pretesa di svelare tutto, né di approfondire i vari concetti esaminati.
+
+Ma un avvertimento in più non guasta: un server di posta è una "creatura" delicata, che va rispettata e accudita. I potenziali problemi che si possono nascondere dietro la noncuranza possono, ai due opposti: trasformarvi in spammatori involontari e farvi finire in qualche black list (il minimo che possa capitare ad uno spammatore...); fare perdere a qualche vostro utente un messaggio veramente importante (come quello del famoso magnate africano che gli offre la possibilità di arricchirsi con i suoi pozzi di petrolio o vendendo pastiglie di viagra).
+
+Tutto ciò che è qui indicato è a vostro ausilio; ogni malfunzionamento del sistema non è da addebitarsi agli autori.
+Detto questo, cominciamo. Cosa useremo:
+# Centos
+# Postfix
+# vm-pop3d
+# amavisd-new
+# clamav
+# spamassassin
+# openwebmail
+# shorewall
+# un pizzico di pazienza e nervi saldi...
+
+==  Prepariamo il sistema ==
+Installiamo Centos con installazione minimale (non ci occorre interfaccia grafica; installeremo poi quello che ci serve, anche lo stesso Postfix), per poi fare un:
+
+ # yum update
+
+E' molto importante che i nomi della macchina siano ben configurati. I file in cui dovremo guardare sono:
+
+ /etc/hosts
+ 127.0.0.1   localhost.localdomain   localhost
+ tuo_ip        mail.tuodominio.com   mail
+ /etc/sysconfig/network
+ NETWORKING=yes
+ HOSTNAME=mail.tuodominio.com
+ GATEWAY=ip_tuo_gateway
+
+e poi gli altri:
+
+ /etc/sysconfig/network-scripts/ifcfg-eth0
+ /etc/resolv.conf (qui metti l'ip del tuo dns)
+
+Per adesso disabilitiamo Selinux, il firewall locale e non configuriamo nulla su iptables.
+
+==  Postfix ==
+"What is Postfix? It is Wietse Venema's mailer that started life as an alternative to the widely-used Sendmail program." [http://www.postfix.org/] Postfix è quindi un mail server, o mail transfer agent (MTA), ovvero un programma (un demone in ambiente Unix-like) che smista da un computer (host) all'altro la posta elettronica, "parlando" SMTP. Postfix utilizza una serie di piccoli programmi per il lavoro di delivery di posta, cioè è un progetto modulare, in opposizione a Sendmail, che utilizza un approccio monolitico (un solo programma). L'attenzione dei progettisti nei riguardi della compatibilità con Sendmail, la sicurezza e la facilità di configurazione sono tra le principali virtù di Postfix, selezionato come server di posta di default di alcune distribuzioni Linux (es. SUSE) e la cui quota di utilizzo è in decisa ascesa.
+
+=== Postfix: installazione ===
+Rimuoviamo Sendmail in modo da eludere probabili conflitti con Postfix:
+
+ # yum remove sendmail
+
+L'installazione di Postfix può essere delegata a yum:
+
+ # yum install postfix
+
+=== Postfix: configurazione di base ===
+La configurazione di Postfix è abbastanza intuitiva, in quanto i parametri di configurazione posseggono nomi sufficientemente autoesplicativi e i file di configurazione sono densi di commenti. Una configurazione tipica necessita della modifica di due file di configurazione, main.cf e aliases. Successivamente dovremo spostare la nostra attenzione su un terzo file di configurazione, master.cf.
+
+main.cf è uno dei due file principali di Postfix (l'altro è master.cf) e permette di controllare il comportamento generale dell'applicazione. Spostiamoci nella directory /etc/postfix ed eseguiamo una copia di backup del file come misura precauzionale:
+
+ # cd /etc/postfix/
+ # cp main.cf  main.cf.orig
+
+Quindi apriamo il file con il nostro editor preferito (vi nel nostro esempio):
+
+ # vi main.cf
+
+Come precedentemente anticipato, dobbiamo apportare delle sostanziali modifiche rispetto al file originale, ma la struttura del file e l'abbondanza di commenti può rendere questa operazione meno criptica del previsto. Riportiamo di seguito, accompagnate da alcune brevi considerazioni, le righe che dobbiamo modificare e le righe più importanti che non devono essere modificate, ma su cui è importante spendere qualche parola:
+
+ soft_bounce = no
+ notify_classes = resource, software, bounce, policy, protocol
+ 2bounce_notice_recipient = postmaster
+
+Con queste righe diciamo a Postfix cosa fare delle mail rispedite al mittente. In particolare richiediamo che il sistema avvisi l'utente postmaster di questo evento e di possibili problemi con il mail server. Notare che l'abilitazione del parametro soft_bounce è di norma effettuata solo in fase di test, in quanto la sua attivazione lascia accodate nel sistema le email che sarebbero dovute essere rispedite immediatamente al mittente, in modo da permetterne l'analisi.
+
+ #myhostname = host.domain.tld
+ #myhostname = virtual.domain.tld
+ #mydomain = domain.tld
+
+Queste tre righe devono essere commentate, in quanto vogliamo, nel nostro caso, che Postfix prenda il nome Internet della macchina direttamente dal file /etc/hosts (che in pratica è un DNS in locale). A tal proposito possiamo digitare il comando hostname nella shell, in modo da verificare la corretta configurazione di tale file di sistema: non deve comparire localhost.localdomain ma, appunto, il nome qualificato della macchina; ad es. mail.tuodominio.it. Diversamente potremmo voler indicare questo parametro nel file di configurazione di Postfix, ad esempio per impostare più domini virtuali o perché, per qualche motivo, non siamo sicuri della corretta configurazione di tale parametro nel sistema.
+
+ myorigin = $mydomain
+
+Questo parametro permette di specificare il dominio da usare per la posta inviata attraverso questo server. In genere il valore di default è la variabile $myhostname, ma a meno che non si utilizzi il server per una piccola rete locale, sarà opportuno modificarlo con $mydomain.
+
+ inet_interfaces = all
+
+Con inet_interface possiamo specificare le interfacce di rete da cui accettare email (in genere tutte).
+
+ relay_domains = $mydestination
+ mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain, mail.$mydomain, www.$mydomain, ftp.$mydomain
+
+Con questa coppia di parametri, invece, possiamo specificare l'elenco dei domini che postfix considererà locali; le email relative a tali domini verranno smistate direttamente, senza interpellare l'esterno.
+
+ mynetworks = 192.168.1.0/24, 127.0.0.0/8
+
+Questa variabile permette di impostare host per host le macchine che possono usare il server per l'inoltro dei messaggi, ovvero indica a postfix chi è autorizzato a mandare la posta (per negare l'open relay). Nel nostro caso potremmo per esempio voler mandare posta dagli host della rete privata 192.168.1.0/24, oltre che da 127.0.0.1 (localhost). Per reti ampie potremmo voler aggiungete ulteriori sottoreti (usando le maschere opportune), sia pubbliche che private.
+
+ #alias_maps = dbm:/etc/aliases
+ alias_maps = hash:/etc/aliases
+ #alias_maps = hash:/etc/aliases, nis:mail.aliases
+ #alias_maps = netinfo:/aliases
+
+Notiamo che l'unica riga che non va commentata è quella che specifica il percorso in cui Postfix cercherà il file aliases, il cui ruolo verrà trattato ampiamente tra breve.
+
+ mailbox_size_limit = 209715200
+ virtual_mailbox_limit = 209715200
+ message_size_limit = 31457280
+
+Il primi due parametri limitano la capacità totale della mailbox, il terzo la dimensione massima dei singoli messaggi. I valori sono in byte e consigliamo di personalizzarli secondo le proprie esigenze. Queste direttive possono anche essere omesse e in tal caso saranno usati i valori di default.
+
+ disable_vrfy_command = yes
+
+Il protocollo SMTP offre una serie di comandi utili per visualizzare informazioni inerenti il server di posta. Questi comandi però possono esser sfruttati per scopi non del tutto etici. Per evitare ciò è consigliabile disabilitare alcuni comandi tra cui il VRFY che permette la verifica di inidirizzi email sul server.
+Possiamo ora salvare le modifiche ed uscire dall'editor. Invece di modificare i file di configurazione a mano, è possibile utilizzare lo strumento postconf per impostare tutti i parametri di Postfix. Il comando:
+
+ # postconf -d
+
+mostra i valori di default per tutti i parametri.
+Verifichiamo ora se Postfix è attivo:
+
+ # service postfix status
+
+se risponde dicendo che è interrotto, lancia il servizio
+
+ # service postfix start
+
+Verificare che un server SMTP sia correttamente in ascolto (sulla porta 25) è un utilizzo classico del protocollo di rete telnet. Digitiamo quindi:
+
+ # telnet 127.0.0.1 25
+
+se vediamo un output come questo:
+
+ Trying 127.0.0.1...
+ Connected to mail.tuodominio.it (127.0.0.1).
+ Escape character is '^]'.
+ 220 mail.tuodominio.it ESMTP
+
+vuol dire che Postfix è attivo e aspetta nostre disposizioni (per uscire da telnet digitiamo quit). Nel caso in cui le nostre verifiche abbiano avuto esito negativo, è consigliabile analizzare il log file /var/log/maillog, in cui vengono scritti gli eventi controllati dai demoni della posta elettronica.
+
+==  Utenti e alias ==
+Il passo successivo nella configurazione di un server di posta riguarda la definizione degli utenti. Un utente reale è un utente definito negli account di sistema e, in linea di principio, può accedere (remotamente o localmente) alla macchina. Un server di posta posto in rete sul quale sono definiti utenti reali costituisce senz'altro un invito a nozze ai malintenzionati di Internet. Una possibilità alternativa, flessibile e sicura, è definire un utente virtuale, ovvero un utente che non può avere alcun accesso fisico alla macchina server poiché non esiste alcun riferimento in /etc/passwd o in /etc/shadow. E' un utente che è definito solo per l'utilizzo di alcuni servizi erogati dal server. Nel caso specifico, dovendo definire utenti che accedono al servizio di posta si può installare il modulo vm-pop3d che è un server POP3 dotato solo di file di gestione password e di spool di mail, ma di questo parleremo più avanti. Vediamo ora come configurare il sistema per gestire utenti virtuali in un dominio reale.
+
+Ogni utente deve avere un proprio file di spool. Sono utenti virtuali e quindi non hanno la propria home; dobbiamo indicare a postfix dove mettere la posta arrivata. Dobbiamo creare la directory del dominio:
+
+ # mkdir -p /var/spool/virtual/tuodominio.it
+
+che deve contenere un file per ogni utente virtuale; file che possiamo creare così (naturalmente uno per ogni utente):
+
+ # touch /var/spool/virtual/tuodominio.it/nome_tuo_utente
+
+e poi assegnamo i permessi alla directory del dominio:
+
+ # chown root:mail /var/spool/virtual/tuodominio.it
+ # chmod 777 /var/spool/virtual/tuodominio.it
+
+e ai file di spool:
+
+ # chown root:mail /var/spool/virtual/tuodominio.it/nome_tuo_utente
+ # chmod 666 /var/spool/virtual/tuodominio.it/nome_tuo_utente
+
+/etc/aliases (può risiedere anche in /etc/postfix/) è il file di configurazione attraverso il quale specificare gli alias di posta del mailserver Postifx. Ogni entry deve essere nel formato nome:valore. Impostando per esempio:
+
+ nomeutente1:	/var/spool/virtual/tuodominio.it/nomeutente1
+
+si indica a Postfix di redirigere le email dirette all'utente nomeutente1@tuodominio.it sul corrispondente file di spool. Questo è ciò che dobbiamo fare per ogni utente virtuale del sistema. Se invece definiamo, sul sistema tuodominio.it, una riga del tipo:
+
+ nomeutente1:	nomegmail@gmail.com
+
+Postfix reindirizza le email dirette all'utente nomeutente1@tuodominio.it sull'indirizzo email esterno specificato (utente in redirect). Possiamo poi fare in modo che la posta indirizzata ad un utente venga smistata ad un'altro utente (utente in alias):
+
+ nomeutente1:	/var/spool/virtual/tuodominio/nomeutente2
+
+oppure combinare i casi precedenti:
+
+ nomeutente1:	/var/spool/virtual/tuodominio/nomeutente1, nometin@aliceposta.it
+
+In quest'ultimo esempio (utente in forward) la posta diretta all'utente nomeutente1@tuodominio.it viene smistata sul corrispondente file di spool e reindirizzata sull'indirizzo email specificato.
+Facciamo una copia di backup del file aliases:
+
+ # cd /etc/
+ # cp aliases aliases.orig
+
+Quindi apriamo il file con un editor e apportiamo le modifiche desiderate come sopra indicato. Notiamo che il file contiene già la definizione di numerosi alias comunemente usati dal sistema. Il file è strutturato in modo tale che le email dirette a tali utenti sono reindirizzate all'utente root. Consigliamo di creare un utente virtuale, per esempio possiamo chiamarlo trash, e di reindirizzare la posta di root a trash. I messaggi che vengono indirizzati all'utente trash sono di vari tipi, tra cui:
+# notifica di virus trovati;
+# notifica di messaggi di spam bloccati;
+# notifica di mail non recapitate (con il motivo);
+# notifica di vari malfunzionamenti.
+Ogni giorno, poi, viene recapitato a root (e da questo a trash) un file di riepilogo generale.
+IMPORTANTE: ogni volta che modifichiamo il contenuto di questo file dobbiamo lanciare il comando:
+
+ # newaliases
+
+per fare rigenerare il database che viene letto da Postfix (e poi dobbiamo riavviare Postfix). Possiamo anche lanciare questo comando (sortiscono lo stesso effetto):
+
+ # postalias /etc/aliases
+
+==  vm-pop3d ==
+virtualmail-pop3d (aka vm-pop3d) è un server POP3. Supporta file di password e mail spool directory alternativi e può essere usato per impostare account virtuali, ovvero mailbox senza un reale proprietario Unix. Ciò permette anche di avere più account con lo stesso nome su un sistema.
+Scarichiamo il sorgente di vm-pop3d:
+
+ # wget ftp://sunsite.unc.edu/pub/Linux/system/mail/pop/vm-pop3d-1.1.6.tar.gz
+
+Dalla directory dove è stato salvato il file, compiliamo e installiamo il server con i seguenti comandi:
+
+ # tar xvzf vm-pop3d-1.1.6.tar.gz
+ # cd vm-pop3d-1.1.6
+ # ./configure
+ #  make
+ #  make install
+
+Facciamo gestire il pop3 a Xinetd. Inetd è un demone (servizio) che ascolta sulle porte specificate nel suo file di configurazione e fa avviare il relativo servizio nel momento in cui viene fatta una richiesta. Viene chiamato superdemone proprio per questa sua funzione di controllo di altri demoni. Il vantaggio di usarlo è di ottimizzare le risorse del sistema, avviando il programma che gestisce un determinato servizio solo quando ci sono effettive richieste. Nelle versioni di Linux più recenti Inetd è stato sostituito da un superdemone più versatile e sicuro: Xinetd. A differenza del precedessore, Xinetd offre ulteriori vantaggi, tra cui meccanismi che mitigano l'impatto di un attacco DOS. Andiamo nella directory:
+
+ # cd /etc/xinetd.d/
+
+e configuriamo Xinetd per la gestione del demone pop3 creando un file di nome pop3 con il seguente contenuto:
+
+ service pop3
+ {
+ 	disable	= no
+ 	socket_type	= stream
+ 	protocol	= tcp
+ 	user		= root
+ 	wait		= no
+ 	instances	= 100
+ 	server		= /usr/local/sbin/vm-pop3d
+ 	server_args	= -i
+ 	log_type	= SYSLOG local4 info
+ 	log_on_success	= PID HOST EXIT DURATION
+ 	log_on_failure	= HOST ATTEMPT
+ }
+
+Tale file deve avere 644 come permessi e deve essere proprietà di root (come gli altri che troviamo nella directory):
+
+ # chown root:root /etc/xinetd.d/pop3
+ # chmod 644 /etc/xinetd.d/pop3
+
+Alcune righe di queste file possono essere personalizzate secondo la nostra esigenza. Per esempio il parametro istances indica il numero massimo di richieste che il servizio può gestire alla volta.
+Una volta terminata la configurazione di xinetd riavviamo il servizio:
+
+ # service xinted restart
+
+e verifichiamo che il demone pop sia attivo ed in ascolto lanciando il comando:
+
+ #  netstat -tua
+
+che fornisce un output come questo:
+
+ Active Internet connections (servers and established)
+ Proto Recv-Q Send-Q Local Address               Foreign Address             State
+ tcp        0      0 *:pop3                      *:*                         LISTEN
+
+==  Passwords ==
+Per aggiungere al sistema le password degli utenti virtuali (accesso ai file di spool degli utenti virtuali) possiamo usare questo piccolo eseguibile perl:
+
+ #!/usr/bin/perl
+ $name = $ARGV[0];
+ @salt_chars	= ('a'..'z','A'..'Z','0'..'9');
+ $salt		= $salt_chars[rand(62)] . $salt_chars[rand(62)];
+ $passwd = crypt ($ARGV[1], $salt);
+ print "$name:$passwd\n";
+
+Possiamo chiamare questo script per esempio addvirtpasswd e dobbiamo metterlo nella directory /usr/sbin/ e dare esattamente gli stessi permessi degli altri file che troviamo lì dentro:
+
+ # chown root:root /usr/sbin/addvirtpasswd
+ # chmod 755 /usr/sbin/addvirtpasswd
+
+Dobbiamo poi creare la seguente directory:
+
+ # mkdir -p /etc/virtual/tuodominio.it
+
+e poi lanciare lo script (per ogni utente):
+
+ addvirtpasswd nomeutente passwordutente &gt;&gt; /etc/virtual/tuodominio.it/passwd
+
+dove:
+# nomeutente è la parte prima della @ nell'indirizzo (pippo@pluto.it -&gt; pippo);
+# passwordutente è la password dell'utente;
+# passwd è il nome del file destinato a contenere le password degli utenti, file che viene letto da vm-pop3d.
+
+Adesso digitando setup ed entrando nella gestione dei servizi di sistema troveremo anche il servizio pop3; indichiamolo come partente all'avvio (insieme a xinetd ed a postfix).
+
+==  Postfix: filtri anti-UCE ==
+Postfix ha già dei filtri che permettono di controllare la posta in ingresso e bloccare spammers. Questi di seguito vanno bene per noi, ma non è detto che vadano bene per voi, anzi...<br />
+Riapriamo il file main.cf:
+
+ # vi /etc/postfix/main.cf
+
+e aggiungiamo le seguenti righe:
+
+ smtpd_delay_reject = yes
+ smtpd_helo_required = yes
+ disable_vrfy_command = yes
+ smtpd_helo_restrictions = permit_mynetworks,
+                            reject_non_fqdn_hostname,
+                            reject_invalid_hostname,
+                            permit<br /><br />smtpd_recipient_restrictions = permit_mynetworks,
+                                 reject_unauth_pipelining,
+                                 reject_non_fqdn_recipient,
+                                 reject_unknown_recipient_domain,
+                                 reject_invalid_hostname,
+                                 reject_non_fqdn_sender,
+                                 reject_unknown_sender_domain,
+                                 reject_unauth_destination,
+                                 reject_rbl_client bl.spamcop.net,
+                                 reject_rbl_client zombie.dnsbl.sorbs.net,
+                                 reject_rbl_client list.dsbl.org,
+                                 reject_rbl_client sbl.spamhaus.org,
+                                 reject_rbl_client sbl-xbl.spamhaus.org,
+                                 reject_rbl_client blackholes.easynet.nl,
+                                 reject_rbl_client combined.njabl.org,
+                                 reject_rbl_client dul.dnsbl.sorbs.net,
+                                 permit
+ 
+ mime_header_checks = pcre:/etc/postfix/mime_header_checks
+
+Le regole specificate, vengono applicate durante e dopo lo scambio delle mail.<br />
+smtp_helo_required = yes impone che i server da cui riceviamo la posta si presentino correttamente (HELO); molti server utilizzati da spammers non lo fanno. Ma dobbiamo fare molta attenzione nell'usare questa direttiva, in quanto c'è il rischio di etichettare come spam falsi negativi.
+
+La riga mime_header_checks = pcre:/etc/postfix/mime_header_checks implica la scrittura del file /etc/postfix/mime_header_checks, che conterrà l'elenco delle estensioni vietate, tra cui troviamo exe, com ed altre (naturalmente possiamo rimuovere/aggiungere estensioni a piacere...).<br />
+Salviamo le modifiche, usciamo dall'editor e spostiamoci nella directory:
+
+ # cd /etc/postfix/
+
+Quindi, dobbiamo creare il suddetto file, di nome mime_header_checks, che deve contenere le seguenti righe:
+
+ /^((Content-(Disposition: attachment;|Type:).*|\ +)| *)(file)?name\ *=\ 
+ 
+ *"?.*\.(lnk|asd|hlp|ocx|reg|bat|c[ho]m|cmd|exe|dll|vxd|pif|scr|hta|jse?|sh[mbs]|vb[esx]|ws[fh]|wmf)"?\ *$/
+
+ REJECT	ATTENZIONE: allegato di tipo non ammesso - WARNING: attachment type non allowed
+
+Notiamo che tale file contiene anche il messaggio, personalizzabile, che farà parte dell'email che avviserà l'utente del problema. Impostiamo infine i permessi del file mime_header_checks:
+
+ # chown root:root /etc/postfix/mime_header_checks
+ # chmod 644 /etc/postfix/mime_header_checks
+
+==  Antivirus ==
+Per processare le email in arrivo e filtrare i virus possiamo utilizzare ClamAV, un antivirus che ha bisogno di amavisd-new per dialogare con Postfix. AMaVIS è uno scanner per email che supporta numerosi motori di scansione (ovvero content checkers: virus scanners e SpamAssassin) e si integra con diversi MTA, tra cui molto bene Postfix. Innanzi tutto dobbiamo installare il pacchetto perl-DBI (richiesto da amavisd-new):
+
+ # yum install perl-DBI
+
+Poi, per l'installazione di amavisd-new e ClamAV dobbiamo aggiungere il repository DAG:
+
+ # vi /etc/yum.repos.d/rpmforge.repo
+
+in cui scriviamo, per Red Hat Enterprise 4 e cloni:
+
+ # Name: RPMforge RPM Repository for Red Hat Enterprise 4 - dag
+ # URL: http://rpmforge.net/
+ [rpmforge]
+ name = Red Hat Enterprise $releasever - RPMforge.net - dag
+ #baseurl = http://apt.sw.be/redhat/el4/en/$basearch/dag
+ mirrorlist = http://apt.sw.be/redhat/el4/en/mirrors-rpmforge
+ #mirrorlist = file:///etc/yum.repos.d/mirrors-rpmforge
+ enabled = 0
+ gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+ gpgcheck = 1
+
+Quindi importiamo la chiave del repository:
+
+ # rpm --import http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt
+
+Analogamente, per l'installazione del repository, possiamo seguire le indicazioni presenti alla pagina web http://dag.wieers.com/home-made/apt/FAQ.php#B . Installiamo prima amavisd-new e poi clamav (e le dipendenze, naturalmente):
+
+ # yum --enablerepo=rpmforge install amavisd-new
+ # yum --enablerepo=rpmforge install clamav
+ # yum --enablerepo=rpmforge install clamd
+
+Il funzionamento del terzetto postfix+amavisd-new+clamav richiede delle modifiche in quattro file di configurazione:
+# /etc/postfix/main.cf
+# /etc/postfix/master.cf
+# /etc/amavisd.conf
+# /etc/clamd.conf
+
+====/etc/postfix/main.cf====
+Aggiungiamo (tra breve vedremo il perché) in main.cf la seguente riga:
+
+ content_filter = smtp-amavis:[127.0.0.1]:10024
+
+====/etc/postfix/master.cf====
+Questo file, che come anticipato precedentemente è uno dei file di configurazione più importanti di Postfix, regola la configurazione del master daemon che gestisce il comportamento di tutti i demoni che compongono questo sistema di posta. Fermiamo il servizio Postfix, se è attivo:
+
+ # service postfix stop
+
+Facciamo la solita preventiva copia di backup:
+
+ # cd /etc/postfix/
+ # cp master.cf master.cf.orig
+
+Aggiungiamo le seguenti righe:
+
+ 127.0.0.1:10025 inet n - n - - smtpd
+ 	-o content_filter=
+ 	-o local_recipient_maps=
+ 	-o smtpd_helo_restrictions=
+ 	-o smtpd_client_restrictions=
+ 	-o smtpd_sender_restrictions=
+ 	-o header_checks=
+ 	-o body_checks=
+ 	-o mime_header_checks=
+ 	-o smtpd_recipient_restrictions=permit_mynetworks,reject_unauth_destination
+ 	-o mynetworks=127.0.0.0/8
+ smtp-amavis unix - - y - 2 smtp
+ 	-o smtp_data_done_timeout=1200
+ 	-o disable_dns_lookups=yes
+
+Postfix accetta la posta nella porta 25, la controlla e poi la passa (via SMTP) a smtp-amavis sulla 10024 (ricordiamo la riga del file main.cf, no?); la posta viene quindi verificata con i vari filtri antispam ed antivirus e poi la ripassa a postfix sulla porta 10025. Tutto avviene in locale sul server, per questo il parametro mynetworks conteneva anche la rete 127.0.0.0/8. Inoltre la riga "127.0.0.1:10025 inet n - n - - smtpd" dice che (seconda n) l'ambiente non è chrooted (come è nel nostro caso; in caso contrario va messo y, cioè "127.0.0.1:10025 inet n - y - - smtpd".
+Attiviamo amavisd-new:
+
+ # service amavisd start
+
+Il corretto funzionamento di tutto si verifica ancora con telnet:
+
+ # telnet 127.0.0.1 10025
+
+e
+
+ #telnet 127.0.0.1 10024
+
+in cui devono rispondere rispettivamente postfix e amavisd-new.
+
+====/etc/amavisd.conf====
+Questo è il file di configurazione di amavisd-new. Facciamone il backup:
+
+ # cd /etc/
+ # cp amavisd.conf amavisd.conf.orig
+
+Rispetto all'originale, le righe che dobbiamo modificare o a cui dobbiamo prestare attenzione sono le seguenti:
+
+ $daemon_user  = "amavis";
+ $daemon_group = "amavis";
+
+Queste righe indicano amavis come daemon_user e daemon_group.
+
+ $mydomain = 'tuodominio.it';
+ $MYHOME = '/var/amavis';
+ # $unix_socketname = "$MYHOME/amavisd.sock";
+ $virus_admin               = "root\@tuodominio.it";
+ $mailfrom_notify_admin     = "root\@tuodominio.it";
+ $mailfrom_notify_recip     = "root\@tuodominio.it";
+ $mailfrom_notify_spamadmin = "root\@tuodominio.it";
+ $final_virus_destiny      = D_DISCARD;
+ $final_banned_destiny     = D_BOUNCE;
+ $final_spam_destiny       = D_DISCARD;
+ $final_bad_header_destiny = D_PASS;
+
+Queste righe indicano il destino delle mail "non buone"; BOUCE: avvisa della cosa; DISCARD: distrugge la mail; PASS passano (le possiamo cambiare a nostro piacimento).
+
+ ['ClamAV-clamd',
+   \&amp;ask_daemon, ["CONTSCAN {}\n", "/var/run/clamav/clamd.sock"],
+   qr/\bOK$/, qr/\bFOUND$/,
+   qr/^.*?: (?!Infected Archive)(.*) FOUND$/ ],
+
+Queste righe sono state de-commentate per dire ad amavis che stiamo usando ClamAV (al posto di un altro antivirus). Notiamo poi che la riga "\&amp;ask_daemon, ["CONTSCAN {}\n", "/var/run/clamav/clamd"]," è stata modificata in "\&amp;ask_daemon, ["CONTSCAN {}\n", "/var/run/clamav/clamd.sock"],".
+
+Molto importanti sono anche le direttive $sa_tag_level_deflt, $sa_tag2_level_deflt, $sa_kill_level_deflt, $sa_dsn_cutoff_level, che indicano il punteggio che il filtro bayesiano (antispam) deve raggiungere prima di considerare spam le mail.
+
+====/etc/clamd.conf====
+Questo è il file di configurazione di ClamAV. Facciamone il backup:
+
+ # cd /etc/
+ # cp clamd.conf clamd.conf.orig
+
+Dobbiamo indicare al demone di ClamAV di lavorare in local mode, ovvero per mezzo del socket file /var/run/clamav/clamd.sock, anziché in TCP mode:
+
+ LocalSocket /var/run/clamav/clamd.sock
+ #TCPSocket 3310
+ #TCPAddr 127.0.0.1
+
+Cerchiamo poi la riga:
+
+ # Run as a selected user (clamd must be started by root).
+ # Default: disabled
+ User clamav
+
+e modifichiamola con:
+
+ User amavis
+
+cioè stiamo dicendo che l'utente che deve gestire ClamAV non deve essere "clamav", ma "amavis". Questo perchè AMaVIS deve fare da interfaccia tra Postfix e ClamAV stesso. Ciò posto, dobbiamo creare l'utente "amavis", che ancora non esiste:
+
+ # groups clamav
+ # groups amavis
+
+che dovranno rispondere indicandoci a quali gruppi appartengono gli utenti amavis (amavis:amavis -&gt;&gt; utente amavis, gruppo amavis) e clamav (clamav:clamav -&gt;&gt; utente clamav, gruppo clamav). Dobbiamo assegnare l'utente clamav al gruppo amavis, e fare in modo che il gruppo amavis sia il gruppo primario per l'utente clamav. Ed allora:
+
+ # usermod -g amavis clamav
+
+Clamav usa tre directory:
+# /var/clamav -&gt; per il proprio database
+# /var/log/clamav -&gt; per i file di log
+# /var/run/clamav -&gt; per il pid</ul>
+Bisogna darne il possesso ad amavis (necessario per farlo lavorare correttamente):
+
+ # chown -R amavis:clamav /var/clamav
+ # chown -R amavis:clamav /var/log/clamav
+ # chown -R amavis:clamav /var/run/clamav
+
+Poi spostiamoci nella directory:
+
+ # cd /etc/logrotate.d/
+
+ed apriamo i file clamav e freshclam. Entrambi contengono una riga come questa:
+
+ 	create 644 clamav clamav
+
+cambiamola in entrambi nella seguente:
+
+ 	create 644 amavis clamav
+
+Infine modifichiamo il file di configurazione freshclam.conf:
+
+ # cd /etc
+ # vi freshclam.conf
+
+Dobbiamo modificare la direttiva DatabaseOwner in modo tale che freshclam sia eseguito con i privilegi di amavis anziché clamav:
+
+ DatabaseOwner amavis
+
+Riavviamo i servizi clamd e amavisd: se tutto è stato fatto correttamente, dovremmo vedere:
+
+ Starting Clam AV daemon:				[  OK  ]
+
+e
+
+ Starting Mail Virus Scanner (amavisd):			[  OK  ]
+
+L'utility che viene lanciata periodicamente per l'aggiornamento del database dei virus è freshclam. Possiamo lanciarla anche da shell con il comando:
+
+ # freshclam
+
+Facciamolo subito per assicurarci che non ci siano messaggi di errore a video.
+
+==  Spamassassin ==
+Spamassassin è un filtro per le email in grado di identificare e marchiare lo spam, cioè tutte le email indesiderate solitamente a carattere commerciale che intasano le caselle di posta degli utenti di internet. Non solo questo strumento dovrebbe già essere installato sul nostro sistema (rpm -q spamassassin per una verifica), ma non occorre cambiare i parametri di default per fare funzionare il tutto. Per fare partire manualmente spamassassin possiamo fare così:
+
+ # cd /etc/init.d
+ #service spamassassin start
+
+A questo punto però possiamo anche lanciare il comando setup e configurare come partenti all'avvio i servizi amavisd, clamd, pop3, postfix, spamassassin. Quindi fare un reboot e osservare se tutto parte normalmente.
+
+Bisogna dire qualcosa su spamassassin. Il file di configurazione è /etc/mail/spamassassin/local.cf in questo file possiamo mettere tutte le regole che vogliamo e non verrà sovrascritto negli aggiornamenti succesivi del software (i file di configurazione presenti nella directory /usr/share/spamassassin invece lo saranno...). La configurazione di spamassasin si presta a molte "manovre" per diminuire lo spam. Bisogna provarle "on the road". Ma una cosa è veramente importante sapere: per riconoscere lo spam, spamassassin deve essere addestrato. Siccome si basa su un filtro bayesiano, deve apprendere cosa è spam e cosa non lo è. L'unico modo è quello di dargli in pasto le mail che sfuggono al suo controllo e fargliele segnare come spam. A tal fine entra in gioco il programma sa-learn (man sa-learn per dettagli). Questo vuol dire che all'inizio passeranno tutte le email? No. In rete esistono raccolte di mail spam. Consigliamo il link <a href="http://spamlinks.net/filter-archives.htm">http://spamlinks.net/filter-archives.htm</a>
+Vediamo brevemente come usare sa-learn. Come detto abbiamo due possibilità:
+# passargli le nostre mail di spam personali;
+# dargli quelle degli archivi online.</ul>
+Nel primo caso possiamo usare sa-learn nel seguente modo:
+
+ # sa-learn --spam --showdots --file as.eml
+
+dove, il messaggio di spam l'abbiamo salvato con il nome di "as.eml" e l'opzione showdots semplicemente mostra lo stato di avanzamento dell'operazione con dei puntini. Nel secondo caso dobbiamo scaricare massivamente gli archivi (per esempio con il comando wget -nc url_archivio_online/*) in una directory appositamente creata. Supponendo che gli archivi siano tutti di tipo .gz, ecco uno script (di shell) che può tornare utile:
+
+ # for i in *.gz ; do gunzip -c $i &gt; /tmp/spam.file | sa-learn --spam --mbox --showdots /tmp/spam.file ; done
+
+In definitiva abbiamo creato un ciclo che apre tutti i file della directory (che sono in formato mbox) e li fa leggere a sa-learn. Dopo l'addestramento dobbiamo riavviare sa ed amavisd.
+
+==  Openwebmail ==
+OpenWebMail è un client di posta elettronica via Web, veloce da installare, facile da configurare, ed estremamente personalizzabile. Scarichiamolo così:
+
+ # wget http://openwebmail.org/openwebmail/download/redhat/rpm/release/openwebmail-2.52-1.i386.rpm
+
+soddisfiamo le due dipendenze fondamentali (perl-suidperl e perl-Text-Iconv):
+
+ # yum install perl-suidperl
+ # yum --enablerepo=rpmforge install perl-Text-Iconv
+
+e installiamo il pacchetto openwebmail:
+
+ # rpm -ivh openwebmail-2.52-1.i386.rpm
+
+Il passo successivo prevede di avviare il server web apache (servizio httpd):
+
+ # service httpd start
+
+e lanciare lo script di configurazione:
+
+ # /var/www/cgi-bin/openwebmail/openwebmail-tool.pl --init
+
+che fornirà probabilmente un output di questo tipo:
+
+ Please change '/var/www/cgi-bin/openwebmail/etc/dbm.conf' from
+ dbm_ext                 .db
+ dbmopen_ext             none
+ dbmopen_haslock         no
+ to
+ dbm_ext                 .db
+ dbmopen_ext             .db
+ dbmopen_haslock         no
+ And execute '/var/www/cgi-bin/openwebmail/openwebmail-tool.pl --init' again!
+
+Lo script ci richiede di apporre delle modifiche al file dbm.conf. Il file dbm.conf, nel nostro caso, è in /var/www/cgi-bin/openwebmail/etc/defaults/ (e non nella dir di cui sopra). Dopo aver apportato le modifiche rilanciamo nuovamente lo script:
+
+ # /var/www/cgi-bin/openwebmail/openwebmail-tool.pl --init
+
+Ora non dovrebbe essere rilevato alcun problema. Possiamo allora passare alla configurazione (e personalizzazione) manuale di OpenWebMail. Apriamo il file /var/www/cgi-bin/openwebmail/auth/auth_unix.pl per sostituire le righe:
+
+ my $passwdfile_plaintext = $conf{'passwdfile_plaintext'} || '/etc/passwd';
+ my $passwdfile_encrypted = $conf{'passwdfile_encrypted'} || '/etc/master.passwd';
+ my $passwdmkdb = $conf{'passwdmkdb'} || '/usr/sbin/pwd_mkdb';
+
+con
+
+ my $passwdfile_plaintext = $conf{'passwdfile_plaintext'} || '/etc/shadow';
+ my $passwdfile_encrypted = $conf{'passwdfile_encrypted'} || '/etc/master.passwd';
+ my $passwdmkdb = $conf{'passwdmkdb'} || 'none';
+
+Rechiamoci nella directory /var/www/cgi-bin/openwebmail/etc/ che conterrà il file openwebmail.conf, il principale file di configurazione di OpenWebMail. Quindi facciamo una copia precauzionale di backup:
+
+ cd /var/www/cgi-bin/openwebmail/etc/
+ cp openwebmail.conf openwebmail.conf.orig
+
+Vediamo quali sono le righe che dobbiamo modificare o a cui dobbiamo prestare attenzione:
+
+ auth_module                     auth_pop3.pl
+ dbm_ext				.db
+ dbmopen_ext			.db
+ dbmopen_haslock			no
+ 
+ spellcheck_dictionaries         italian, english, american
+ 
+ # Personal Information
+ default_language                it
+ default_dictionary		it
+ use_homedirspool		no
+ use_homedirfolders		no
+ enable_changepwd		no
+ enable_autoreply		no
+ enable_setforward		no
+ enable_setfromemail		no
+ enable_webdisk			no
+ enable_sshterm			no
+ getmail_from_pop3_authserver	no
+ autopop3_at_refrsh		yes
+ auth_withdomain			no
+ folderquota			35000
+ default_iconset			Cool3D.Italian
+
+Diamo comunque un'occhiata alle varie opzioni per personalizzarle a nostro piacere. Alcune parlano da sole (lingua, set di icone, etc.). Per una lista dei parametri possiamo far riferimento al file /var/www/cgi-bin/openwebmail/etc/openwebmail.conf.help. Ora rechiamoci nella directory:
+
+ # cd /var/www/cgi-bin/openwebmail/etc/sites.conf
+
+e andiamo a creare un file di configurazione, che chiameremo come il nostro dominio (tuodominio.it), contenente le seguenti righe:
+
+ mailspooldir		/var/spool/virtual/tuodominio.it
+ auth_withdomain		yes
+ auth_module		auth_pop3.pl
+ #auth_module		auth_vdomain.pl
+ domainnames		tuodominio.it
+ use_homedirspools	no
+ use_syshomedir		no
+ enable_autoreply	no
+ enable_setforward	no
+
+==  Firewall ==
+Se volessimo configurare il nostro server mail come un bastion host, dovremmo configurare adeguatamente il firewall di sistema. Per la configurazione di iptables, usiamo Shorewall. Non è un servizio nel senso più stretto del termine, ma una interfaccia a iptables, che ne implementa le regole in maniera del tutto intuitiva. Su sistemi Red Hat based e derivati viene trattato come un servizio.
+Scarichiamo l'rpm (non dal sito di shorewall):
+
+ # wget http://www.invoca.ch/pub/packages/shorewall/3.2/shorewall-3.2.6/shorewall-3.2.6-1.noarch.rpm
+
+e installiamolo come di consueto:
+
+ rpm -ivh shorewall-3.2.6-1.noarch.rpm
+
+I file di configurazione di Shorewall li troviamo nella directory
+
+ # cd /etc/shorewall/
+
+Per il nostro scopo è sufficiente apportare delle modifiche ai file: zones, interfaces, policy, rules. La situazione che ipotizziamo è la seguente: abbiamo un pc con una sola scheda di rete, che si interfaccia con Internet.
+
+ # vi zones
+
+La fine del file deve essere come segue (attenzione all'incolonnamento!):
+
+ fw	firewall
+ net	ipv4
+ #LAST LINE - ADD YOUR ENTRIES ABOVE THIS ONE - DO NOT REMOVE
+
+e poi:
+
+ # vi interfaces
+
+la cui fine deve essere come segue:
+
+ net	eth0		xxx.xxx.xxx.255
+ #LAST LINE -- ADD YOUR ENTRIES BEFORE THIS ONE -- DO NOT REMOVE
+
+sostituendo xxx.xxx.xxx.255 con il proprio indirizzo broadcast. Successivamente:
+
+ # vi policy
+
+la cui file deve essere come segue:
+ 
+ net             fw              DROP
+ fw              net             DROP
+ #LAST LINE -- DO NOT REMOVE
+
+Ovvero, abbiamo bloccato tutto! Ora andiamo ad aprire quello che ci serve (web, posta elettronica, ssh):
+
+ # vi rules
+
+e la cui fine deve essere come segue:
+
+ ACCEPT  fw      net     icmp
+ ACCEPT  fw      net     tcp     25
+ ACCEPT  fw      net     udp     53
+ ACCEPT  fw      net     tcp     53
+ ACCEPT  fw      net     tcp     80
+ ACCEPT  fw      net     tcp     21
+ ACCEPT  net     fw      tcp     80
+ ACCEPT  net     fw      tcp     110
+ ACCEPT  net     fw      tcp     25
+ ACCEPT  net     fw      tcp     443
+ ACCEPT  net     fw      tcp     465
+ ACCEPT  net     fw      tcp     587
+ ACCEPT  net     fw      tcp     995
+ ACCEPT  net     fw      tcp     22 
+ #LAST LINE -- ADD YOUR ENTRIES BEFORE THIS ONE -- DO NOT REMOVE
+
+Apriamo infine il file /etc/shorewall/shorewall.conf e impostiamo la variabile STARTUP_ENABLED=Yes. Dopo tutto questo, andiamo in setup e segnamo shorewall come servizio da avviare.
+
+==  Copyright ==
+Questa guida viene rilasciata sotto la [http://www.softwarelibero.it/gnudoc/fdl.it.html|Licenza per Documentazione Libera GNU].
+
+[[:Categoria:Scrittura in corso]] 
+[[:Categoria:Rilettura in corso]]
+[[Categoria:Sistema]]
+[[Categoria:Rete e Server]]
+[[Categoria:Fedoraserver]]
