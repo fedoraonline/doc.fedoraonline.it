@@ -19,9 +19,9 @@ Il look di KDE4 è decisamente innovativo, costituito da molti punti fondamental
 ==Installazione di KDE==
 Per installare KDE, basta yum:
 
- $ su -c 'yum groupinstall KDE'
+ $ su -c 'yum groupinstall "KDE (K Desktop Environment)"'
 
-Al successivo riavvio, alla schermata di login, sarà possibile effettuare la scelta (casella in basso) tra Gnome e, appunto, KDE.
+Al successivo riavvio, alla schermata di login, sarà possibile effettuare la scelta (casella in basso) tra gnome e, appunto, KDE.
 
 ==Configurazione di KDM==
 Installando KDE, come dipendenza viene anche installato il proprio login manager, solo che non è attivato di default.<br />
@@ -110,4 +110,6 @@ Si vede in basso la voce "Scarica nuovi temi", si preme e si selezionano i temi 
 Parimenti, per l'installazione di schemi di colori, sempre da systemsettings --> aspetto, selezionare l'icona dei colori, dopo di che digitare "Scarica nuovi schemi". Una volta installati, come in precedenza, sono pronti per la selezione.<br />
 Differentemente da quanto detto in precedenza, per poter installare nuovi sfondi, oltre ai metodi tradizionali, basta posizionarsi su un'area vuota del desktop e premere il tasto destro del mouse e nella finestra che appare premere "Ottieni nuovi sfondi", dopodichè la procedura è la medesima vista in precedenza.
 
-[[Categoria:Ambiente Desktop]]
+Per eventuali aggiunte e variazioni relative alla presente guida scrivere sul forum o vedere la pagina [[Contribuisci]].
+
+Questo è tutto.
