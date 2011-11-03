@@ -1,7 +1,9 @@
 Questa guida nasce come frutto della collaborazione tra due utenti del forum www.fedoraonline.it, che invece di limitarsi a scambiarsi i vari post del tipo "Come si fa?" hanno deciso di condividere le proprie esperienze ed il proprio tempo libero per la configurazione di un server di posta "che funziona".
 
 Di Federico Ciofi (f.ciofi at hotmail punto it) e Guido Caruso (caruso at idra punto unipa punto it).
+
 __TOC__
+
 ==  Introduzione ==
 Questa guida nasce come frutto della collaborazione tra due utenti del forum www.fedoraonline.it, che invece di limitarsi a scambiarsi i vari post del tipo "Come si fa?" hanno deciso di condividere le proprie esperienze ed il proprio tempo libero per la configurazione di un server di posta "che funziona".<br />
 Dopo varie mail scambiate e dopo un'attività di debug sul sistema, è nata questa guida, che altro non è che proprio le mail riorganizzate e riscritte.<br />
@@ -24,7 +26,7 @@ Detto questo, cominciamo. Cosa useremo:
 ==  Prepariamo il sistema ==
 Installiamo Centos con installazione minimale (non ci occorre interfaccia grafica; installeremo poi quello che ci serve, anche lo stesso Postfix), per poi fare un:
 
- # dnf update
+ # yum update
 
 E' molto importante che i nomi della macchina siano ben configurati. I file in cui dovremo guardare sono:
 
@@ -49,11 +51,11 @@ Per adesso disabilitiamo Selinux, il firewall locale e non configuriamo nulla su
 === Postfix: installazione ===
 Rimuoviamo Sendmail in modo da eludere probabili conflitti con Postfix:
 
- # dnf remove sendmail
+ # yum remove sendmail
 
-L'installazione di Postfix può essere delegata a dnf:
+L'installazione di Postfix può essere delegata a yum:
 
- # dnf install postfix
+ # yum install postfix
 
 === Postfix: configurazione di base ===
 La configurazione di Postfix è abbastanza intuitiva, in quanto i parametri di configurazione posseggono nomi sufficientemente autoesplicativi e i file di configurazione sono densi di commenti. Una configurazione tipica necessita della modifica di due file di configurazione, main.cf e aliases. Successivamente dovremo spostare la nostra attenzione su un terzo file di configurazione, master.cf.
@@ -340,7 +342,7 @@ Notiamo che tale file contiene anche il messaggio, personalizzabile, che farà p
 ==  Antivirus ==
 Per processare le email in arrivo e filtrare i virus possiamo utilizzare ClamAV, un antivirus che ha bisogno di amavisd-new per dialogare con Postfix. AMaVIS è uno scanner per email che supporta numerosi motori di scansione (ovvero content checkers: virus scanners e SpamAssassin) e si integra con diversi MTA, tra cui molto bene Postfix. Innanzi tutto dobbiamo installare il pacchetto perl-DBI (richiesto da amavisd-new):
 
- # dnf install perl-DBI
+ # yum install perl-DBI
 
 Poi, per l'installazione di amavisd-new e ClamAV dobbiamo aggiungere il repository DAG:
 
@@ -365,9 +367,9 @@ Quindi importiamo la chiave del repository:
 
 Analogamente, per l'installazione del repository, possiamo seguire le indicazioni presenti alla pagina web http://dag.wieers.com/home-made/apt/FAQ.php#B . Installiamo prima amavisd-new e poi clamav (e le dipendenze, naturalmente):
 
- # dnf --enablerepo=rpmforge install amavisd-new
- # dnf --enablerepo=rpmforge install clamav
- # dnf --enablerepo=rpmforge install clamd
+ # yum --enablerepo=rpmforge install amavisd-new
+ # yum --enablerepo=rpmforge install clamav
+ # yum --enablerepo=rpmforge install clamd
 
 Il funzionamento del terzetto postfix+amavisd-new+clamav richiede delle modifiche in quattro file di configurazione:
 # /etc/postfix/main.cf
@@ -563,8 +565,8 @@ OpenWebMail è un client di posta elettronica via Web, veloce da installare, fac
 
 soddisfiamo le due dipendenze fondamentali (perl-suidperl e perl-Text-Iconv):
 
- # dnf install perl-suidperl
- # dnf --enablerepo=rpmforge install perl-Text-Iconv
+ # yum install perl-suidperl
+ # yum --enablerepo=rpmforge install perl-Text-Iconv
 
 e installiamo il pacchetto openwebmail:
 
@@ -723,4 +725,8 @@ Apriamo infine il file /etc/shorewall/shorewall.conf e impostiamo la variabile S
 ==  Copyright ==
 Questa guida viene rilasciata sotto la [http://www.softwarelibero.it/gnudoc/fdl.it.html|Licenza per Documentazione Libera GNU].
 
+[[:Categoria:Scrittura in corso]] 
+[[:Categoria:Rilettura in corso]]
+[[Categoria:Sistema]]
+[[Categoria:Rete e Server]]
 [[Categoria:Fedoraserver]]
