@@ -1,0 +1,124 @@
+Installiamo anche su Fedora 12 i principali repositori di terze parti, RPMFusion.
+Come di consuetudine, anche se non cambia nulla rispetto alla release precedente, rinnoviamo la nostra guida per l'installazione dei principali repositori di software di terze parti.
+RPMFusion distingue i programmi tra i free ed i nonfree, ciascuno con una locazione propria.
+Per i free, il pacchetto da scricare è [url=http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm]questo,[/url] mentre per i nonfree è [url=http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm]questo.[/url]
+Qualora non si volesse installare in locale è possibile farlo direttamente attingendo al link usando il comando rpm:
+
+[code]$ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+[/code]
+Il comando va digitato su una unica riga, anche se nell'esempio compare su più righe per problemi di formattazione.
+
+E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
+Usando nano (voi potete usare qualsiasi editor preferiate):
+
+[code]$ su -c 'nano /etc/yum.repos.d/rpmfusion-free.repo'[/code]
+Si apre il documento vuoto che deve essere così popolato:
+
+[quote][rpmfusion-free]
+name=RPM Fusion for Fedora $releasever - Free
+#baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch
+
+[rpmfusion-free-debuginfo]
+name=RPM Fusion for Fedora $releasever - Free - Debug
+#baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/debug/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-debug-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch
+
+[rpmfusion-free-source]
+name=RPM Fusion for Fedora $releasever - Free - Source
+#baseurl=http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/source/SRPMS/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-source-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch[/quote]
+dopodichè provvediamo a creare il repo free-updates:
+
+[code]$ su -c 'nano /etc/yum.repos.d/rpmfusion-free-updates.repo'[/code]
+da popolare così:
+
+[quote][rpmfusion-free-updates]
+name=RPM Fusion for Fedora $releasever - Free - Updates
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/$releasever/$basearch/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch
+
+[rpmfusion-free-updates-debuginfo]
+name=RPM Fusion for Fedora $releasever - Free - Updates Debug
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/$releasever/$basearch/debug/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-debug-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch
+
+[rpmfusion-free-updates-source]
+name=RPM Fusion for Fedora $releasever - Free - Updates Source
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/$releasever/SRPMS/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-updates-released-source-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch[/quote]
+I repositori nonfree e nonfree-updates, rispettivamente devono essere creati così (al pari dei precedenti):
+
+[code]$ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree.repo'[/code]
+le cui istruzioni da inserire sono:
+
+[quote][rpmfusion-nonfree]
+name=RPM Fusion for Fedora $releasever - Nonfree
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/os/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch
+
+[rpmfusion-nonfree-debuginfo]
+name=RPM Fusion for Fedora $releasever - Nonfree - Debug
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/$basearch/debug/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-debug-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch
+
+[rpmfusion-nonfree-source]
+name=RPM Fusion for Fedora $releasever - Nonfree - Source
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/source/SRPMS/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-source-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch[/quote]
+ed il reposotorio nonfree-updates:
+
+[code]$ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree-updates.repo'[/code]
+con le seguenti istruzioni:
+
+[quote][rpmfusion-nonfree-updates]
+name=RPM Fusion for Fedora $releasever - Nonfree - Updates
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/$basearch/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch
+
+[rpmfusion-nonfree-updates-debuginfo]
+name=RPM Fusion for Fedora $releasever - Nonfree - Updates Debug
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/$basearch/debug/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-debug-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch
+
+[rpmfusion-nonfree-updates-source]
+name=RPM Fusion for Fedora $releasever - Nonfree - Updates Source
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/SRPMS/
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-source-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch[/quote]
