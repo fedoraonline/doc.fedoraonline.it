@@ -92,10 +92,10 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=14 Rescue Mode |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=15 Trucchi vari |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=16 Samba Server |autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=17 SSH prossimo articolo |autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=17 SSH |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=18 Database Server |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=19 Web Server |autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=20 FTP Server prossimo articolo |autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=20 FTP Server |autore=MarioSantagiuliana|stato=Terminato}}
 |}
 
 (*): da confrontarsi prima sul procedere!
@@ -194,10 +194,10 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=15 Trucchi vari |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Un centralino con Asterisk e Fedora|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=16 Samba Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=17 SSH prossimo articolo |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=17 SSH |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=18 Database Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=19 Web Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=20 FTP Server prossimo articolo |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=20 FTP Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
