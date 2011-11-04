@@ -60,7 +60,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Yum localinstall simulato|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Gdesklets|autore=RobertMayr|stato=DaFare}}
@@ -177,6 +177,9 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=18 Database Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=19 Web Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=20 FTP Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
