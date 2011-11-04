@@ -24,7 +24,7 @@ dovresti vedere un access point. Puoi utilizzare Network Manager per controllare
 
  yum -y install nvidia-glx kernel-module-nvidia-$(uname -r)
 
-<li>Leggi [[15 Trucchi vari#Come riavviare GNOME senza riavviare il computer|Come riavviare GNOME senza riavviare il computer]]</li>
+<li>Leggi [[15 Trucchi vari prossimo articolo#Come riavviare GNOME senza riavviare il computer|Come riavviare GNOME senza riavviare il computer]]</li>
 <li>In caso di problemi leggi nV News sul forum [http://www.nvnews.net/vbulletin/forumdisplay.php?s=&amp;forumid=14 "Linux and nVidia Graphics"]</li>
 </ol>
 
@@ -102,7 +102,7 @@ dovresti vedere un access point. Puoi utilizzare Network Manager per controllare
 ==  Come incrementare la velocità del CD/DVD-ROM ==
 <ol>
 <li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
-'' Assumiamo che /dev/cdrom sia il CD/DVD-ROM ''
+<li>Assumiamo che /dev/cdrom sia il CD/DVD-ROM </li>
 
  /sbin/hdparm -d1 /dev/cdrom
  gedit /etc/hdparm.conf
@@ -119,7 +119,7 @@ dovresti vedere un access point. Puoi utilizzare Network Manager per controllare
 ==  Come montare/smontare manualmente il CD/DVD-ROM, e come mostrare tutti i file/directory nascoste ed associate ==
 <ol>
 <li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
-''Assumiamo che /dev/cdrom0 sia il CD/DVD-ROM''
+<li>Assumiamo che /dev/cdrom0 sia il CD/DVD-ROM</li>
 <li>Per montare il CD/DVD-ROM</li>
 
  mount /media/cdrom0/ -o unhide
@@ -132,7 +132,7 @@ dovresti vedere un access point. Puoi utilizzare Network Manager per controllare
 ==  Come forzare manualmente il montaggio/smontaggio del CD/DVD-ROM ==
 <ol>
 <li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
-''Assumiamo che /dev/cdrom0 sia il CD/DVD-ROM''
+<li>Assumiamo che /dev/cdrom0 sia il CD/DVD-ROM</li>
 
  umount /media/cdrom0/ -l
 </ol>
@@ -147,4 +147,6 @@ dovresti vedere un access point. Puoi utilizzare Network Manager per controllare
 
 {{Link/prec|07 Amministrazione di utenti|07 Amministrazione di utenti}}{{Link/succ|09 Masterizzare CD/DVD|09 Masterizzare CD/DVD}}
 
+[[:Categoria:Scrittura in corso]] 
+[[:Categoria:Rilettura in corso]]
 [[Categoria:Fedoraserver]]
