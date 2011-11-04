@@ -1,10 +1,10 @@
 Questo documento tratta, anche per Fedora 12, dei principali repositori di terze parti, '''RPMFusion'''.<br />
 Anche se non cambia nulla rispetto alla release precedente, viene proposta la guida per l'installazione dei principali repositori di software di terze parti.<br />
 RPMFusion distingue i programmi tra i free ed i nonfree, ciascuno con una locazione propria.<br />
-Per i free, il pacchetto da scaricare è [url=http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm]questo,[/url] mentre per i nonfree è [url=http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm questo].<br />
+Per i free, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm questo].<br />
 Qualora non si volesse installare in locale è possibile farlo direttamente attingendo al link usando il comando rpm:
 
- $ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+ $ su -c 'rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm</nowiki> <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm</nowiki>'
 
 Il comando va digitato su una unica riga, anche se nell'esempio compare su più righe per problemi di formattazione.
 
