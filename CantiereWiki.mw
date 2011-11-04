@@ -58,9 +58,9 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Come compilare il kernel di Fedora 7 partendo dai sorgenti|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Come compilare il kernel di Fedora 7 partendo dai sorgenti|autore=RobertMayr|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Yum localinstall simulato|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Gdesklets|autore=RobertMayr|stato=DaFare}}
