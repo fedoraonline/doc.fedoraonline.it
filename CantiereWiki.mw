@@ -60,7 +60,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Driver ATI schede pre 9250|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Driver ATI schede pre 9250|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Blocco siti con iptables|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ascoltare file ape|autore=MarioSantagiuliana|stato=Terminato}}
@@ -172,6 +172,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Wireless bcm43xx|autore=SimoneZaminga|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Disabilitare caricamento moduli del kernel|autore=SimoneZaminga|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=03 Fedora Updates |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Driver ATI schede pre 9250|autore=RobertMayr|rilettore=?|data=02/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
