@@ -1,4 +1,22 @@
 __TOC__
+== Qualche breve nota ==
+Come usare questi Mini HowTo
+
+=== Premessa ===
+
+# Questa raccolta di "Tips&Tricks" costituisce una guida non ufficiale per iniziare a lavorare con Fedora Core 5 e Fedora Core 6. Non è riconducibile né a Fedora, né a RedHat inc., in quanto è in massima parte costituita da materiale proveniente da:
+#* una libera traduzione dall'inglese effettuata dal team di www.fedoraserver.org della guida ''''Unofficial Fedora Core 6 Starter Guide'''' disponibile all'indirizzo [http://easylinux.info/wiki/Fedora http://easylinux.info/wiki/Fedora_fc5]
+#* suggerimenti originali dei collaboratori di fedoraserver.org
+#* indicazioni tratte da forum su Fedora Core, sia in lingua italiana che inglese
+# Questa raccolta di "Tips&Tricks" deve essere distribuita sotto i termini della [http://www.gnu.org/copyleft/fdl.html GNU Free Documentation License.]
+# Questa guida è testata per installazioni standard di Fedora Core 5 e Fedora Core 6 su "Personal computer", con pacchetti di base.
+# Per ridurre la possibilità di sbagliare, copia ed incolla i comandi nel Terminale(Applicazioni -&gt; Strumenti di sistema -&gt; Terminale) aperto (seleziona con il mouse i comandi, clicca con il pulsante destro sulla selezione -&gt; Copia/Incolla. Puoi anche usare Ctrl+C per copiare e Shift+Insert per incollare).
+{{Nota|Nota:| Molte volte dovrai eseguire i comandi qui riportati da root. Prima di potere intervenire dovrai allora digitare
+<pre>su -</pre>
+e quindi immettere la password di root, oppure leggi [[#15.3]] Come aprire un terminale in modalità super utente}}
+<ol>
+<li value="5">Se non ti piace lavorare in modalità terminale leggi #4.3 Come installare un'interfaccia grafica (GUI) per yum ("yum" e "wget" richiedono una connessione Internet per installare/aggiornare a versioni superiori/scaricare programmi).</li>
+</ol>
 
 ==  Che cos'è Fedora ==
 * [http://fedora.redhat.com/ http://fedora.redhat.com/]
