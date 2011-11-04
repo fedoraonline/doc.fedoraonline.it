@@ -61,7 +61,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Driver ATI schede pre 9250|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Blocco siti con iptables|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ascoltare file ape|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Mysql in replication server|autore=MarioSantagiuliana|stato=Terminato}}
@@ -182,6 +182,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=07 Amministrazione di utenti |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=08 Hardware |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=09 Masterizzare CD/DVD |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
