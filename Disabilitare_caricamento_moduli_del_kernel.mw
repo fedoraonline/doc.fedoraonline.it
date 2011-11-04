@@ -2,6 +2,7 @@ E' possibile disabilitare il caricamento di particolari moduli del kernel.
 
 * Nel file '''/etc/modprobe.d/blacklist''' vengono inseriti i moduli del kernel da non caricare. Di default sono già presenti alcuni moduli in blacklist, quindi per aggiungerne di nuovi basterà incrementare una nuova entry blacklist .
 
+
  [root@vrhel5 ~]# cat /etc/modprobe.d/blacklist
  #                                             
  # Listing a module here prevents the hotplug scripts from loading it.
@@ -37,7 +38,7 @@ E' possibile disabilitare il caricamento di particolari moduli del kernel.
  blacklist hisax
  blacklist hisax_fcpcipnp
 
-* Nell'esempio è mostrato come disabilitare i moduli del kernel relativi ad iptables. I moduli coinvolti sono ip_tables e x_tables. Per sicurezza verranno bloccati e disabilitati al boot.
+* Nell'esempio è mostrato come disabiliterare i moduli del kernel relativi ad iptables. I moduli coinvolti sono ip_tables e x_tables. Per sicurezza verranno bloccati e disabilitati al boot.
 
  [root@vrhel5 ~]# lsmod | grep tables
  ip_tables             18053  1 iptable_filter
@@ -85,5 +86,3 @@ E' possibile disabilitare il caricamento di particolari moduli del kernel.
  [root@vrhel5 ~]# iptables -L        
  iptables v1.3.5: can't initialize iptables table `filter': iptables who? (do you need to insmod?)
  Perhaps iptables or your kernel needs to be upgraded.
-
-[[Categoria:Sistema]]
