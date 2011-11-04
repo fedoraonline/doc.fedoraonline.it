@@ -49,4 +49,7 @@ Si potranno fare anche più connessioni simultanee verso lo stesso host, sfrutta
  will not be shown, you would have to be root to see it all.)
  tcp        0      0 127.0.0.1:9001              0.0.0.0:*                   LISTEN      6799/ssh            
  tcp        0      0 172.29.7.93:57619           10.175.18.213:22            ESTABLISHED 6799/ssh            
- tcp        0      0 ::1:9001                    :::*                        LISTEN      6799/ssh[/code]
+ tcp        0      0 ::1:9001                    :::*                        LISTEN      6799/ssh
+
+[[Categoria:Rete_e_Server]]
+[[Categoria:Sicurezza]]
