@@ -20,7 +20,7 @@ Altrimenti, molto semplicemente da riga di comando:
 ==Prepariamo l'ambiente==
 
 Installiamo '''''fedora-rpmdevtools''''', che ci consentirà di “pacchettizzare” tutto il nostro lavoro in comodi file rpm, DA NON DISTRIBUIRE, ma liberamente utilizzabili per l'installazione su tutte le macchine della nostra LAN.
-<pre>yum install fedora-rpmdevtools
+<pre># yum install fedora-rpmdevtools
 
 =============================================================================
  Package                 Arch       Version          Repository        Size
@@ -69,7 +69,7 @@ Ora, posizionandoci nella cartella dove abbiamo scaricato quest'ultimo file, pos
 
 Al termine dell'operazione, troveremo nella cartella /rpmbuild/RPMS/i586/ i pacchetti rpm del nostro Java Development Kit. I pacchetti vanno poi installati in questo modo:
 <pre>$ cd ~/rpmbuild/RPMS/i586/
-$ yum localinstall *.rpm
+# yum localinstall *.rpm
 
 =============================================================================
  Package                 Arch       Version          Repository        Size
