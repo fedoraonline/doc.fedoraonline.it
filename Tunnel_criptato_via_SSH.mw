@@ -21,7 +21,7 @@ Verificando le connesioni attive si nota che viene aperta una connessione ssh ve
 Ora provando a fare una richiesta sulla porta 9000 tramite firefox o wget potremmo navigare il webserver sul nostro pc locale.
 
  [cello@cellopc-mini ~]$ wget localhost:9000/admin/
- --2010-10-23 15:00:54--  <a href="http://localhost:9000/admin/" title="http://localhost:9000/admin/"
+ --2010-10-23 15:00:54--  <nowiki><a href="http://localhost:9000/admin/" title="http://localhost:9000/admin/"</nowiki>
  rel="external">http://localhost:9000/admin/</a>
  Resolving localhost... 127.0.0.1
  Connecting to localhost|127.0.0.1|:9000... connected.
