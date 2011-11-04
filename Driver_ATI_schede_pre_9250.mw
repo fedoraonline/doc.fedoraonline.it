@@ -1,0 +1,6 @@
+{{Obsoleto}}
+== Introduzione ==
+
+I driver per le schede video ati NON funzionano per schede del tipo ''9250'' e precedenti. Si consiglia, se non si ha assoluta necessità, di non installarli, perchè trattasi sempre di software non GPL.
+{{Warning|Prima di proseguire è necessario avere installa i repo [[RPMFusion|RPMFusion]]!}}
+== Installazione ==
