@@ -64,7 +64,7 @@ da popolare così:
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch<br />
 I repositori nonfree e nonfree-updates, rispettivamente devono essere creati così (al pari dei precedenti):
 
- $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree.repo'[/code]
+ $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree.repo'
 le cui istruzioni da inserire sono:
 
  [rpmfusion-nonfree]
@@ -92,7 +92,7 @@ le cui istruzioni da inserire sono:
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch<br />
 ed il reposotorio nonfree-updates:
  
- $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree-updates.repo'[/code]
+ $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree-updates.repo'
 con le seguenti istruzioni:
 
  [rpmfusion-nonfree-updates]
