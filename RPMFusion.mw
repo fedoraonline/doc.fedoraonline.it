@@ -12,7 +12,7 @@ Usando nano (o qualsiasi editor si preferisca):
  $ su -c 'nano /etc/yum.repos.d/rpmfusion-free.repo'
 Si apre il documento vuoto che deve essere così popolato:
 
-[code][rpmfusion-free]
+<code>[rpmfusion-free]
 name=RPM Fusion for Fedora $releasever - Free
 #baseurl=<nowiki>http://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/$basearch/os/</nowiki>
 mirrorlist=<nowiki>http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-$releasever&arch=$basearch</nowiki>
@@ -34,7 +34,7 @@ name=RPM Fusion for Fedora $releasever - Free - Source
 mirrorlist=<nowiki>http://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-source-$releasever&arch=$basearch</nowiki>
 enabled=0
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch[/code]
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch</code>
 dopodichè si provvederà a creare il repo free-updates:
  $ su -c 'nano /etc/yum.repos.d/rpmfusion-free-updates.repo'
 da popolare così:
