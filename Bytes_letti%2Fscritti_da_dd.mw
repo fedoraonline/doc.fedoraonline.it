@@ -1,0 +1,42 @@
+== Introduzione ==
+Questi passaggi servono per capire a che punto è il comando dd (disk dump), utile soprattutto se si sta facendo delle operazioni su moltissimi file.<br />
+E' una cosa semplicissima! Basta inviare un segnale SIGUSR1 al processo in questione e dd ci risponde.
+
+== Procedure di esempio ==
+
+Si riassume di seguite le operazioni e il momento in cui lanciarle:
+<pre># -- lancio in background il comando per creare il file "pippo" della dimensione di circa 5 gigabytes
+# -- contenente dati casuali
+# dd if=/dev/urandom of=pippo bs=1M count=5000 &
+[1] 26497
+# -- aspetto qualche minuto e poi chiedo a "dd" a che punto è arrivato
+#  kill -s SIGUSR1 26497
+315+0 records in
+314+0 records out
+329252864 bytes (329 MB) copied, 108,09 s, 3,0 MB/s
+# -- oppure, se non mi piace "-s SIGUSR1" passo come argomento di kill 
+# -- il numero del segnale in questione (10)
+# kill -10 26497Bytes letti/scrittii da dd
+353+0 records in
+352+0 records out
+369098752 bytes (369 MB) copied, 121,146 s, 3,0 MB/s</pre>
+{{Nota|Nota:|Per visualizzare l'elenco di tutti i segnali si può utilizzare il comando '''''kill -l'''''.}}
+<pre>$ kill -l
+ 1) SIGHUP     2) SIGINT     3) SIGQUIT     4) SIGILL
+ 5) SIGTRAP     6) SIGABRT     7) SIGBUS     8) SIGFPE
+ 9) SIGKILL    10) SIGUSR1    11) SIGSEGV    12) SIGUSR2
+13) SIGPIPE    14) SIGALRM    15) SIGTERM    16) SIGSTKFLT
+17) SIGCHLD    18) SIGCONT    19) SIGSTOP    20) SIGTSTP
+21) SIGTTIN    22) SIGTTOU    23) SIGURG    24) SIGXCPU
+25) SIGXFSZ    26) SIGVTALRM    27) SIGPROF    28) SIGWINCH
+29) SIGIO         30) SIGPWR    31) SIGSYS    34) SIGRTMIN
+35) SIGRTMIN+1    36) SIGRTMIN+2    37) SIGRTMIN+3    38) SIGRTMIN+4
+39) SIGRTMIN+5    40) SIGRTMIN+6    41) SIGRTMIN+7    42) SIGRTMIN+8
+43) SIGRTMIN+9    44) SIGRTMIN+10    45) SIGRTMIN+11    46) SIGRTMIN+12
+47) SIGRTMIN+13    48) SIGRTMIN+14    49) SIGRTMIN+15    50) SIGRTMAX-14
+51) SIGRTMAX-13    52) SIGRTMAX-12    53) SIGRTMAX-11    54) SIGRTMAX-10
+55) SIGRTMAX-9    56) SIGRTMAX-8    57) SIGRTMAX-7    58) SIGRTMAX-6
+59) SIGRTMAX-5    60) SIGRTMAX-4    61) SIGRTMAX-3    62) SIGRTMAX-2
+63) SIGRTMAX-1    64) SIGRTMAX</pre>
+
+[[Categoria:Programmazione e Sviluppo]]
