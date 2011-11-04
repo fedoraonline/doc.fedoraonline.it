@@ -67,7 +67,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Mysql in replication server|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Sincronizzare Thunderbird Lightning con il proprio Nokia via bluetooth|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Open Office: installazione parallela e indipendente|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Google Desktop e i suoi gadgets|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Google Desktop e i suoi gadgets|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Bytes letti/scritti da dd|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|stato=Terminato}}
@@ -173,6 +173,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Disabilitare caricamento moduli del kernel|autore=SimoneZaminga|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=03 Fedora Updates |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Driver ATI schede pre 9250|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Google Desktop e i suoi gadgets|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
