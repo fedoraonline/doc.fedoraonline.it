@@ -2,9 +2,9 @@
 Questi passaggi servono per capire a che punto è il comando dd (disk dump), utile soprattutto se si sta facendo delle operazioni su moltissimi file.<br />
 E' una cosa semplicissima! Basta inviare un segnale SIGUSR1 al processo in questione e dd ci risponde.
 
-== Procedura di esempio ==
+== Procedure di esempio ==
 
-Si riassumono di seguito le operazioni e il momento in cui lanciarle:
+Si riassume di seguite le operazioni e il momento in cui lanciarle:
 <pre># -- lancio in background il comando per creare il file "pippo" della dimensione di circa 5 gigabytes
 # -- contenente dati casuali
 # dd if=/dev/urandom of=pippo bs=1M count=5000 &
