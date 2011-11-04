@@ -1,0 +1,111 @@
+==  Come svuotare (fare il "blank") di CD-RW/DVD-RW ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+''Assumiamo che /dev/cdrom sia il CD/DVD-ROM''
+
+ umount /dev/cdrom
+ cdrecord dev=/dev/cdrom blank=fast
+</ol>
+
+==  Come masterizzare file/directory su CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+
+ nautilus burn:///
+
+<li>Trascinare file/directory dentro la finestra che si è aperta</li>
+
+ Menu File -> Scrivi su Disco... -> Scrivi
+</ol>
+
+==  Come masterizzare un'immagine (ISO) su CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+
+ Fai click con il pulsante destro del mouse sull'Imagine (ISO) del file -> Scrivi su Disco... -> Scrivi
+</ol>
+
+==  Come duplicare un CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Leggi [[#Come creare un file immagine (ISO) da un CD/DVD| Come creare un file immagine (ISO) da un CD/DVD]]</li>
+<li>Leggi [[#Come masterizzare un'immagine (ISO) su CD/DVD|Come masterizzare un'immagine (ISO) su CD/DVD]]</li>
+</ol>
+
+==  Come creare un file immagine (ISO) da un CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+''Assumiamo che /dev/cdrom sia il CD/DVD-ROM''
+
+ umount /dev/cdrom
+ dd if=/dev/cdrom of=file.iso bs=1024
+</ol>
+
+==  Come creare un file immagine (ISO) da directory ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+
+ mkisofs -o file.iso /percorso/alla/directory/
+</ol>
+
+==  Come generare un file per un checksum di tipo MD5 ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+
+ md5sum file.iso > file.iso.md5
+</ol>
+
+==  Come effettuare checksum di tipo MD5 a un file ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+''Assumiamo che i file file.iso e file.iso.md5 siano nella stessa directory''
+
+ md5sum -c file.iso.md5
+</ol>
+
+==  Come effettuare il mount/unmount di un file immagine (ISO) senza masterizzarlo ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Montare il file immagine (ISO)</li>
+
+ mkdir /media/iso
+ modprobe loop
+ mount file.iso /media/iso/ -t iso9660 -o loop
+
+<li>Smontare il file immagine (ISO)</li>
+
+ umount /media/iso/
+</ol>
+
+==  Come configurare/cambiare la velocità di masterizzazione di un masterizzatore CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Applicazioni -> Strumenti di Sistema -> Editor della Configurazione</li>
+<li>Editor della Configurazione</li>
+
+ / -> apps -> nautilus-cd-burner -> default_speed (setta/cambia la velocità di masterizzazione)
+</ol>
+
+==  Come abilitare il "burnproof" per un masterizzatore CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Applicazioni -> Strumenti di Sistema -> Editor della Configurazione</li>
+<li>Editor della Configurazione</li>
+
+ / -> apps -> nautilus-cd-burner -> burnproof (con il segno di spunta)
+</ol>
+
+==  Come abilitare l' "overburning" per un masterizzatore CD/DVD ==
+<ol>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Applicazioni -> Strumenti di Sistema -> Editor della Configurazione</li>
+<li>Editor della Configurazione</li>
+
+ / -> apps -> nautilus-cd-burner -> overburn (con il segno di spunta)
+</ol>
+
+{{Link/prec|08 Hardware|08 Hardware}}{{Link/succ|10 Funzionalità di rete|10 Funzionalità di rete}}
+
+[[:Categoria:Scrittura in corso]] 
+[[:Categoria:Rilettura in corso]]
+[[Categoria:Fedoraserver]]
