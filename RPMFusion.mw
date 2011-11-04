@@ -1,12 +1,11 @@
-Installiamo anche su Fedora 12 i principali repositori di terze parti, RPMFusion.
-Come di consuetudine, anche se non cambia nulla rispetto alla release precedente, rinnoviamo la nostra guida per l'installazione dei principali repositori di software di terze parti.
-RPMFusion distingue i programmi tra i free ed i nonfree, ciascuno con una locazione propria.
-Per i free, il pacchetto da scricare è [url=http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm]questo,[/url] mentre per i nonfree è [url=http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm]questo.[/url]
+Questo documento tratta, anche per Fedora 12, dei principali repositori di terze parti, '''RPMFusion'''.<br />
+Anche se non cambia nulla rispetto alla release precedente, viene proposta la guida per l'installazione dei principali repositori di software di terze parti.<br />
+RPMFusion distingue i programmi tra i free ed i nonfree, ciascuno con una locazione propria.<br />
+Per i free, il pacchetto da scaricare è [url=http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm]questo,[/url] mentre per i nonfree è [url=http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm questo].<br />
 Qualora non si volesse installare in locale è possibile farlo direttamente attingendo al link usando il comando rpm:
 
-[code]$ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
-http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
-[/code]
+ $ su -c 'rpm -Uvh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm'
+
 Il comando va digitato su una unica riga, anche se nell'esempio compare su più righe per problemi di formattazione.
 
 E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
@@ -122,3 +121,6 @@ mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-r
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch[/quote]
+
+[[Categoria:Repository]]
+[[Categoria:Yum]]
