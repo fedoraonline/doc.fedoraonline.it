@@ -71,7 +71,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Bytes letti/scritti da dd|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Gestione di tre sistemi operativi|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Gestione di tre sistemi operativi|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Gestione avanzata dei pacchetti su Fedora |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=OpenOffice, Java e Multimedia su Fedora Core|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Un centralino con Asterisk e Fedora |autore=RobertMayr|stato=DaFare}}
@@ -184,6 +184,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=09 Masterizzare CD/DVD |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Bytes letti/scritti da dd|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Gestione di tre sistemi operativi|autore=RobertMayr|rilettore=?|data=04/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
