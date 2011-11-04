@@ -1,6 +1,6 @@
 ==  Come usare un CD di installazione di Fedora, per accedere al sistema con i privilegi di root ==
 <ol>
-<li>Leggi #Premessa</li>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
 <li>Inserisci il CD #1 di Fedora nel lettore CD-ROM ed avvia il sistema da esso </li>
 
  linux rescue
@@ -8,7 +8,7 @@
 
 ==  Come modificare la password di GRUB, se l'hai dimenticata ==
 <ol>
-<li>Leggi #Premessa</li>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
 
  grub
 
@@ -35,8 +35,8 @@
 
 ==  Come recuperare il menu di GRUB dopo un'installazione di Windows ==
 <ol>
-<li>Leggi #Premessa</li>
-<li>Leggi #14.1 Come usare un CD di installazione di Fedora, per accedere al sistema con i privilegi di root</li>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Leggi [[#Come usare un CD di installazione di Fedora, per accedere al sistema con i privilegi di root|Come usare un CD di installazione di Fedora, per accedere al sistema con i privilegi di root]]</li>
 ''Assumiamo che /dev/hda sia il dispositivo della partizione /boot''
 
  # grub-install /dev/hda
@@ -44,8 +44,8 @@
 
 ==  Come aggiungere la selezione per l'avvio di Windows nel menu di GRUB ==
 <ol>
-<li>Leggi #Premessa</li>
-<li>Leggi #8.5 Come vedere il contenuto della tabella delle partizioni</li>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Leggi [[08 Hardware#Come vedere il contenuto della tabella delle partizioni|Come vedere il contenuto della tabella delle partizioni]]</li>
 ''Assumiamo che /dev/hda1 sia la partizione Windows ''
 
  cp /boot/grub/menu.lst /boot/grub/menu.lst_backup
@@ -64,10 +64,10 @@
 
 ==  Come leggere le partizioni Linux (ext2, ext3) da Windows ==
 <ol>
-<li>Leggi #Premessa</li>
-<li>Scarica Explore2fs da <a href="http://easylinux.info/uploads/explore2fs-1.07.zip">qui</a></li>
+<li>Leggi [[01_Introduzione_a_Fedora#Premessa|Premessa]]</li>
+<li>Scarica Explore2fs da [http://easylinux.info/uploads/explore2fs-1.07.zip qui]</li>
 ''oppure''
-<li>Vedi <a href="http://www.fs-driver.org/index.html">www.fs-driver.org</a></li>
+<li>Vedi [http://www.fs-driver.org/index.html www.fs-driver.org]</li>
 </ol>
 
 {{Link/prec|13 Sicurezza|13 Sicurezza}}{{Link/succ|15 Trucchi vari|15 Trucchi vari}}
