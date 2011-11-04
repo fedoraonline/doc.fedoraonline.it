@@ -90,7 +90,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=12 Windows|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=13 Sicurezza |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=14 Rescue Mode |autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=15 Trucchi vari prossimo articolo |autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=15 Trucchi vari |autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=16 Samba Server |autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=17 SSH prossimo articolo |autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=18 Database Server |autore=MarioSantagiuliana|stato=DaFare}}
@@ -191,7 +191,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=12 Windows|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=13 Sicurezza |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=14 Rescue Mode |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=15 Trucchi vari prossimo articolo |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=15 Trucchi vari |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
