@@ -40,9 +40,7 @@ Ora aprire il menu di configurazione andando in Sistema->mministrazione->Samba.
 
 Andare in Preferenze->Impostazioni Server e inseriamo le impostazioni di base e sicurezza come sotto.
 
-[[File:smb1.jpg|center]]
-
-[[File:smb2.jpg|center]]
+[[File:smb1.jpg]] [[File:smb2.jpg]]
 
 </ol>
 
@@ -54,9 +52,7 @@ Andare in Preferenze->Utenti Samba e aggiungere un utente.
 In questo modo per accedere alle risorse condivise si inserirà l'utente ospite con la rispettiva password. In poche parole accedere alle risorse tramite l'alias 'utente'.<br />
 Ora bisogna specificare cosa condividere, io ho scelto la directory /Pubblici, alla quale ho dato i permessi 755 (per renderla accessibile anche agli altri utenti). Si veda l'inserimento della condivisione cliccando sul tasto 'Aggiungi condivisione'. Anche qui si inseriranno le impostazioni di base e di accesso.
 
-[[File:smb4.jpg|center]]
-
-[[File:smb5.jpg|center]]
+[[File:smb4.jpg]] [[File:smb5.jpg]]
 
 Ora bisogna inserire la condivisione, se ne possono inserire altre, per semplicità qui ne metto soltanto una.
 
