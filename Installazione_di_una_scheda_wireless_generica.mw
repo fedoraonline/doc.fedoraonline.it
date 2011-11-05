@@ -17,9 +17,9 @@ Oltre alla propria scheda e al computer dove si vuole installarla, si ha la nece
 Questa ipotesi è particolarmente utile ed efficiente pertanto se il proprio computer non è dotato di connessione via cavo si invito a dotarlo di un simile dispositivo almeno temporaneamente, e assumeremo nel prosieguo che si avrà risolto questo problema.
 
 ==Convenzioni==
-{{Scrittura|Il simbolo '''$''' vuol dire che le operazioni possono essere eseguite da terminale utente.<br />
-il simbolo '''#''' vuol dire che le operazioni devono essere eseguite in terminale root ovvero con poteri superutente.}}
-Per ottenerli da interfaccia grafica -> strumenti di sistema -> terminale
+Quando incontrate il simbolo $ vuol dire che le operazioni possono essere eseguite da terminale utente.<br />
+Quando incontrate il simbolo # le operazioni corrispondenti devono essere eseguite in terminale root ovvero con poteri superutente:<br />
+per ottenerli da interfaccia grafica -> strumenti di sistema -> terminale
  $ su -
  password:(inserite la password di root)
 non dimenticare il - "trattino" dopo "su" altrimenti si avranno i poteri root ma ambiente utente.
@@ -51,9 +51,9 @@ l'output potrebbe essere una cosa del genere:
 oppure più lungo.
 
 La linea del tipo:
- 01:04.0 Network controller: Pinco-Pallina Comunications PPC1452 802.11g (rev 05)
+ '''01:04.0 Network controller: Pinco-Pallina Comunications PPC1452 802.11g (rev 05)'''
 oppure:
- 00:0a.0 Ethernet controller: Pinco-Pallina Comunications PPC1452 802.11g (rev 04)
+ '''00:0a.0 Ethernet controller: Pinco-Pallina Comunications PPC1452 802.11g (rev 04)'''
 è quello che interessa (ripeto: ho usato nomi di fantasia e la scheda in questione naturalmente non esiste).<br />
 Se ci sono dubbi tenere presente che il protocollo standard della connessione wifi è: 802.11 e può essere di diversi tipi: a,b,g,... etc.
 
@@ -426,7 +426,7 @@ Se invece il ping è in ordine, provare a dare un:
 se la risposta è simile alla precedente allora si può stare tranquilli, altrimenti bisogna intervenire sul file /etc/resolv.conf in questo modo:
  # gedit /etc/resolv.conf
 ed inserire la/le linee:
- nameserver xxx.xxx.xxx.xxx
+ '''nameserver xxx.xxx.xxx.xxx'''
 dove xxx.xxx.xxx.xxx è l'indirizzo ip del DNS (domain name server), quasi sempre i router hanno anche il servizio DNS e quindi è sufficiente inserire 192.168.1.1 altrimenti bisogna usare i DNS del proprio provider.
 
 Se si vuole provare in maniera completa la scheda, mettere a terra la eth0:
@@ -500,5 +500,7 @@ Se tutto è a posto andare [[#Come verificare che il modulo sia presente nel nos
 ===Come utilizzare moduli kernel non specifici===
 Per il momento rimando alle guide del sito relative a ndiswrapper, madwifi, etc.. si integrerà successivamente questa sezione.
 
+
 [[Categoria:Hardware]]
 [[Categoria:Wi-Fi]]
+[[Categoria:Sistema]]
