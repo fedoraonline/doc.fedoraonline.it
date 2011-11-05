@@ -1,11 +1,10 @@
-{{Obsoleto}}
-{{Warning|Questa guida è stata fatta per schede AMD/Ati ed è testata su Fedora 8, per cui è da considerare obsoleta!}}
+{{Nota|Nota|Questa guida è stata fatta per schede AMD/Ati ed è testata su Fedora 8, per cui è da considerare obsoleta!}}
 {{Scrittura|Tutte le operazioni di seguito vanno eseguite come '''root'''.}}
 ==Introduzione==
 
 Per far funzionare Compiz Fusion su Fedora con i driver proprietari '''''fglrx''''' di Amd e usando ''AIGLX'', non è più necessario downgradare xorg-x11-server-Xorg, a partire dalla versione 8.02 dei suddetti driver.
 
-Se in precedenza si era eseguito downgrade ''xorg-x11-server-Xorg'' è necessario eseguire:
+Se in precedenza si aveva downgradato ''xorg-x11-server-Xorg'' è necessario eseguire:
 
  # gedit /etc/yum.conf
 
@@ -17,57 +16,65 @@ dopodiché si aggiorna tramite yum, per installare l'ultima versione di ''xorg-x
 
 == Procedura di installazione ==
 <ol>
-<li> Diventare root con il comando: </li>
- $ su -
- password di root
+<li> Diventare root con il comando:
+<pre>$ su -
+password di root</pre>
+</li>
 
-<li> Installare il repository Livna nel caso non lo si abbia già installato: </li>
- # rpm -ivh http://rpm.livna.org/livna-release-8.rpm
+<li> Installare il repository Livna nel caso non lo si abbia già installato:
+<pre># rpm -ivh http://rpm.livna.org/livna-release-8.rpm</pre>
 {{Warning|Il repository Livna è incompatibile con i repository Freshrpms e Atrpms!}}
+</li>
 
-<li> Installare i ''kmod-fglrx'' e ''xorg-x11-drv-fglrx'': </li>
- # yum install xorg-x11-drv-fglrx kmod-fglrx
+<li> Installare i ''kmod-fglrx'' e ''xorg-x11-drv-fglrx'':
+<pre># yum install xorg-x11-drv-fglrx kmod-fglrx</pre>
+</li>
 
-<li> Rimuovere eventuali pacchetti di ''compiz'' o ''emerald'' già installati: </li>
- # yum remove compiz*
+<li> Rimuovere eventuali pacchetti di ''compiz'' o ''emerald'' già installati:
+<pre># yum remove compiz*</pre>
+</li>
 
-<li> Aggiungere il repository ''compiz-fusion'', dove si trova la versione 0.6.99 di compiz fusion: </li>
- # wget http://www.dfm.uninsubria.it/compiz/fusion/compiz-fusion.repo
- # mv compiz-fusion.repo  /etc/yum.repos.d/
+<li> Aggiungere il repository ''compiz-fusion'', dove si trova la versione 0.6.99 di compiz fusion:
+<pre># wget http://www.dfm.uninsubria.it/compiz/fusion/compiz-fusion.repo
+# mv compiz-fusion.repo  /etc/yum.repos.d/</pre>
+</li>
 
-<li> Reinstallare compiz fusion ed emerald: </li>
- # yum install compiz-all fusion-icon-all compiz-fusion-plugins-unsupported compiz-bcop ccsm emerald-themes
+<li> Reinstallare compiz fusion ed emerald:
+<pre># yum install compiz-all fusion-icon-all compiz-fusion-plugins-unsupported compiz-bcop ccsm emerald-themes</pre>
+</li>
 
-<li> Eseguire: </li>
- # gedit /etc/X11/xorg.conf
+<li> Eseguire:
+<pre># gedit /etc/X11/xorg.conf</pre>
 
 ed aggiungere nel file:
- Section "Extensions"
- Option "Composite" "Enable"
- EndSection
- 
- Section "ServerFlags"
- Option "AIGLX" "on"
- EndSection
- 
- Section "DRI"
- Mode 0666
- EndSection
+<pre>Section "Extensions"
+Option "Composite" "Enable"
+EndSection
+
+Section "ServerFlags"
+Option "AIGLX" "on"
+EndSection
+
+Section "DRI"
+Mode 0666
+EndSection</pre>
 
 e nella sezione "Device":
- Option "UseFastTLS" "0"
- Option "BlockSignalsOnLock" "on"
- Option "ForceGenericCPU" "off"
- Option "KernelModuleParm" "locked-userpages=0"</pre>
+<pre>Option "UseFastTLS" "0"
+Option "BlockSignalsOnLock" "on"
+Option "ForceGenericCPU" "off"
+Option "KernelModuleParm" "locked-userpages=0"</pre>
+</li>
 
-<li> Ravviare il pc, e finalmente si può far partire compiz fusion, da terminale (con il proprio utente): </li>
- $ fusion-icon
+<li> Ravviare il pc, e finalmente si può far partire compiz fusion, da terminale (con il proprio utente):
+<pre>$ fusion-icon</pre>
+</li>
 
-<li> Se tutto funziona, si può far partire all'avvio compiz fusion in questo modo:</li>
+<li> Se tutto funziona, si può far partire all'avvio compiz fusion in questo modo:<br />
 Aprire ''Sistema > Preferenze > Personale > Sessioni'', cliccare su ''Aggiungi'' ed inserire alla voce Comando:
- /usr/bin/fusion-icon
+<pre>/usr/bin/fusion-icon</pre>
 
 scegliendo anche un nome a scelta.
-</ol>
+</li></ol>
 
 [[Categoria:Schede grafiche]]
