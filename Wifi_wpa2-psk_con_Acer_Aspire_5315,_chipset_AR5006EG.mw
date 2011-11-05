@@ -1,4 +1,6 @@
 {{Obsoleto}}
+Questa guida è una copia di quella presente [http://alexcami.altervista.org/forum/viewtopic.php?f=24&t=396 a questo indirizzo] (l'autore sono io e pertanto ne autorizzo la pubblicazione anche sul sito Fedoraonline! Lo dico giusto per evitare problemi vari di copyleft :-p)
+
 Ecco come configurare una connessione wireless wpa2-psk su un portatile ACER ASPIRE 5315 con la seguente scheda integrata:
 
  # lspci | grep Atheros
@@ -6,19 +8,19 @@ Ecco come configurare una connessione wireless wpa2-psk su un portatile ACER ASP
 
 (si veda anche [http://madwifi.org/ticket/1679 questa pagina] per maggiori dettagli sui drivers madwifi)
 
-* Inserire in black list i drivers '''ath5k''' già presenti nel kernel
+* inserire in black list i drivers '''ath5k''' già presenti nel kernel
  # echo "blacklist ath5k" >> /etc/modprobe.d/blacklist
 
-* Scaricare [http://snapshots.madwifi.org/madwifi-ng/madwifi-ng-r2756-20071018.tar.gz i drivers madwifi] e [http://madwifi.org/attachment/ticket/1679/madwifi-ng-0933.ar2425.20071130.i386.patch?format=raw questa patch]
+* scaricare [http://snapshots.madwifi.org/madwifi-ng/madwifi-ng-r2756-20071018.tar.gz i drivers madwifi] e [http://madwifi.org/attachment/ticket/1679/madwifi-ng-0933.ar2425.20071130.i386.patch?format=raw questa patch]
 
-* Estrarre i drivers madwifi, applicare la patch ed eseguirne l'installazione
+* estrarre i drivers madwifi, applicare la patch ed eseguirne l'installazione
  # tar xvfz madwifi-ng-r2756-20071018.tar.gz
  # cd madwifi-ng-r2756-20071018
  # patch -p0 < ../madwifi-ng-0933.ar2425.20071130.i386.patch
  # make
  # make install
 
-* Installare '''wpa_supplicant''' e modificarne il file di configurazione '''/etc/wpa_supplicant/wpa_supplicant.conf'''
+* installare '''wpa_supplicant''' e modificarne il file di configurazione '''/etc/wpa_supplicant/wpa_supplicant.conf'''
  # yum install wpa_supplicant
  # vi /etc/wpa_supplicant/wpa_supplicant.conf # utilizzate il vostro editor preferito... a me piace il "vi"!
 il nuovo file di configurazione dovrà essere fatto in questo modo:
@@ -34,7 +36,7 @@ il nuovo file di configurazione dovrà essere fatto in questo modo:
 
 ...naturalmente "SSID_DELLA_MIA_RETE" e "BLA_BLA_BLA_QUESTA_E_LA_MIA_PASSKEY_BLA_BLA_BLA" andranno modificati secondo le impostazioni del proprio access point
 
-* Creare lo script '''/root/bin/connessione_wireless.sh''' che verrà utilizzato per attivare l'interfaccia wireless e connettersi all'access point:
+* creare lo script '''/root/bin/connessione_wireless.sh''' che verrà utilizzato per attivare l'interfaccia wireless e connettersi all'access point:
  #!/bin/bash
  
  ifdown eth0
@@ -48,14 +50,14 @@ anche in questo caso sostituire "BLA_BLA_BLA_QUESTA_E_LA_MIA_PASSKEY_BLA_BLA_BLA
  # chown root:root /root/bin/connessione_wireless.sh
  # chmod 770 /root/bin/connessione_wireless.sh
 
-* Riavviare il computer per verificare che al boot vengano caricati i drivers corretti:
+* riavviare il computer per verificare che al boot vengano caricati i drivers corretti:
  # shutdown -g0 -i6 -y # mi piace scriverlo così!
  ...e dopo il riavvio...
  # lspci | grep ath
 
 I drivers caricati dovranno essere gli "ath_pci" e non gli "ath5k"
 
-* Eseguire la connessione wireless
+* eseguire la connessione wireless
  # connessione_wireless.sh
 e verificarne il corretto funzionamento e le corrette impostazioni:
  # iwconfig
@@ -65,4 +67,5 @@ e verificarne il corretto funzionamento e le corrette impostazioni:
  # traceroute IP_DI_NON_SO_CHI
  # ecc. ecc. ecc.
 
+[[Categoria:Hardware]]
 [[Categoria:Wi-Fi]]
