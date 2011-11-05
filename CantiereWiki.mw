@@ -61,7 +61,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Yum localinstall simulato|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Gdesklets|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Gdesklets|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Controllare il Desktop con vnc attraverso un tunnel ssh|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Samba: condivisione tra Fedora e Windows|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Creare immagini ISO da cd o dvd|autore=MarioSantagiuliana|stato=Terminato}}
@@ -188,6 +188,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Wifi wpa2-psk con Acer Aspire 5315, chipset AR5006EG|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Fedora su PowerBook G3 Pismo|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Installazione di una scheda wireless generica|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Gdesklets|autore=RobertMayr|rilettore=?|data=05/11/2011|stato=DaFare}}
 |}
 
 
