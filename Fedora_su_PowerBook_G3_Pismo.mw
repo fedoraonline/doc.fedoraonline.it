@@ -125,4 +125,11 @@ Per evitare questo bisogna usare l'opzione '''updatedb --prunepaths /sys''' inve
 Per apportare modifiche ai file di configurazione bisogna essere utente root (amministratore), i file di configurazione sono dei semplici file di testo, modificabili con programmi come '''vi''', '''nano''' o '''gedit'''.<br />
 Per diventare root scrivere '''su''' in una finestra di terminale, dare invio e poi inserire la password di root.
 
+Per altre informazioni di base per utenti alle prime armi vedere queste guide.
+* [http://www.fedoraonline.it/modules/smartsection/item.php?itemid=140 http://www.fedoraonline.it/modules/smartsection/item.php?itemid=140]
+* [http://www.fedoraonline.it/modules/smartsection/item.php?itemid=83 http://www.fedoraonline.it/modules/smartsection/item.php?itemid=83]
+
+
+
 [[Categoria:Hardware]]
+[[Categoria:Sistema]]
