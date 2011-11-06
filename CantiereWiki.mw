@@ -61,7 +61,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Cambiare l'immagine di grub|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Cambiare l'immagine di grub|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Modem Speedtouch 330 su Fedora Core|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Leggere i floppy da terminale|autore=RobertMayr|stato=DaFare}}
@@ -212,6 +212,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Cambiare l'immagine di grub|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
 |}
 
 
