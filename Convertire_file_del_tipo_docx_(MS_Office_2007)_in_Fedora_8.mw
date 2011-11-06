@@ -26,9 +26,9 @@ oppure odf-converter-1.1-5.x86_64.rpm per sistemi x86_64 da [http://download.go-
 l'applicazione viene gestita tramite linea di comando.
 
 <li>Per utilizzarla basta dare un:</li>
-</ol>
 
  $ OdfConvert /I Nome_File.docx
 
 verrà così convertito il formato docx in formato Open Document e il file sarà presente nella directory corrente.
 Richiamando esclusivamente il comando OdfConvert l'applicazione vi restituirà tutte le opzioni disponibili.
+</ol>
