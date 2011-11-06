@@ -1,6 +1,5 @@
 {{Obsoleto}}
 == Introduzione ==
-
 Come dare alla nostra preferita suite di programmi per ufficio il pieno supporto ai contenuti multimediali che Java di Sun ci può offrire. Guida testata con FC5 e FC6.
 Questa guida è stata scritta da Nico Timeo, sistemista presso la Società [http://www.techpoint.catania.it/ Techpoint] di Catania.
 
@@ -18,22 +17,22 @@ Altrimenti, molto semplicemente da riga di comando:
  # yum remove openoffice*
 
 ==Prepariamo l'ambiente==
-
 Installiamo '''''fedora-rpmdevtools''''', che ci consentirà di “pacchettizzare” tutto il nostro lavoro in comodi file rpm, DA NON DISTRIBUIRE, ma liberamente utilizzabili per l'installazione su tutte le macchine della nostra LAN.
-<pre># yum install fedora-rpmdevtools
+ # yum install fedora-rpmdevtools
+ 
+ =============================================================================
+  Package                 Arch       Version          Repository        Size
+ =============================================================================
+ Installing:
+  fedora-rpmdevtools      noarch     1.6-1.fc5        extras             61 k
+ Installing for dependencies:
+  gcc                     i386       4.1.1-1.fc5      updates           4.6 M
+  gcc-c++                 i386       4.1.1-1.fc5      updates           3.3 M
+  libgomp                 i386       4.1.1-1.fc5      updates            48 k
+  libstdc++-devel         i386       4.1.1-1.fc5      updates           9.5 M
+  redhat-rpm-config       noarch     8.0.40-1         core               44 k
+  rpm-build               i386       4.4.2-15.2       core              534 k
 
-=============================================================================
- Package                 Arch       Version          Repository        Size
-=============================================================================
-Installing:
- fedora-rpmdevtools      noarch     1.6-1.fc5        extras             61 k
-Installing for dependencies:
- gcc                     i386       4.1.1-1.fc5      updates           4.6 M
- gcc-c++                 i386       4.1.1-1.fc5      updates           3.3 M
- libgomp                 i386       4.1.1-1.fc5      updates            48 k
- libstdc++-devel         i386       4.1.1-1.fc5      updates           9.5 M
- redhat-rpm-config       noarch     8.0.40-1         core               44 k
- rpm-build               i386       4.4.2-15.2       core              534 k</pre>
 Fatto ciò, possiamo creare il nostro “tree” per rpmbuild (da utente comune):
 
  $ fedora-buildrpmtree
@@ -56,7 +55,6 @@ Ora dobbiamo inserire nella lista dei nostri repository anche quello del [http:/
  # wget http://www.jpackage.org/jpackage.repo
 
 ==Installiamo il Java Development Kit==
-
 Per scaricare il JDK Sun andiamo sul sito di [http://java.sun.com/j2se/1.5.0/download.jsp Sun], clicchiamo su Download JDK 5.0 Update 10 (la più recente al momento in cui scrivo).<br />
 Accettiamo la licenza e scarichiamo il file jdk-1_5_0_10-linux-i586.bin scegliendo il formato Linux self-extracting, che deve essere copiato nella cartella SOURCES del nostro build tree:
 
@@ -68,25 +66,25 @@ Ora, posizionandoci nella cartella dove abbiamo scaricato quest'ultimo file, pos
  $ rpmbuild --rebuild java-1.5.0-sun-1.5.0.10-2jpp.nosrc.rpm
 
 Al termine dell'operazione, troveremo nella cartella /rpmbuild/RPMS/i586/ i pacchetti rpm del nostro Java Development Kit. I pacchetti vanno poi installati in questo modo:
-<pre>$ cd ~/rpmbuild/RPMS/i586/
-# yum localinstall *.rpm
-
-=============================================================================
- Package                 Arch       Version          Repository        Size
-=============================================================================
-Installing:
- java-1.5.0-sun          i586       1.5.0.07-1jpp    java-1.5.0-sun-1.5.0.07-1jpp.i586.rpm   85 M
- java-1.5.0-sun-alsa     i586       1.5.0.07-1jpp    java-1.5.0-sun-alsa-1.5.0.07-1jpp.i586.rpm   64 k
- java-1.5.0-sun-demo     i586       1.5.0.07-1jpp    java-1.5.0-sun-demo-1.5.0.07-1jpp.i586.rpm   14 M
- java-1.5.0-sun-devel    i586       1.5.0.07-1jpp    java-1.5.0-sun-devel-1.5.0.07-1jpp.i586.rpm   12 M
- java-1.5.0-sun-fonts    i586       1.5.0.07-1jpp    java-1.5.0-sun-fonts-1.5.0.07-1jpp.i586.rpm  2.0 M
- java-1.5.0-sun-jdbc     i586       1.5.0.07-1jpp    java-1.5.0-sun-jdbc-1.5.0.07-1jpp.i586.rpm   66 k
- java-1.5.0-sun-plugin   i586       1.5.0.07-1jpp    java-1.5.0-sun-plugin-1.5.0.07-1jpp.i586.rpm  1.9 M
- java-1.5.0-sun-src      i586       1.5.0.07-1jpp    java-1.5.0-sun-src-1.5.0.07-1jpp.i586.rpm   17 M
-Installing for dependencies:
- jpackage-utils          noarch     1.6.6-1jpp_2rh   core               50 k
- unixODBC                i386       2.2.11-6.2.1     core              905 k
- unixODBC-devel          i386       2.2.11-6.2.1     core              850 k</pre>
+ # cd ~/rpmbuild/RPMS/i586/
+ # yum localinstall *.rpm
+ 
+ =============================================================================
+  Package                 Arch       Version          Repository        Size
+ =============================================================================
+ Installing:
+  java-1.5.0-sun          i586       1.5.0.07-1jpp    java-1.5.0-sun-1.5.0.07-1jpp.i586.rpm   85 M
+  java-1.5.0-sun-alsa     i586       1.5.0.07-1jpp    java-1.5.0-sun-alsa-1.5.0.07-1jpp.i586.rpm   64 k
+  java-1.5.0-sun-demo     i586       1.5.0.07-1jpp    java-1.5.0-sun-demo-1.5.0.07-1jpp.i586.rpm   14 M
+  java-1.5.0-sun-devel    i586       1.5.0.07-1jpp    java-1.5.0-sun-devel-1.5.0.07-1jpp.i586.rpm   12 M
+  java-1.5.0-sun-fonts    i586       1.5.0.07-1jpp    java-1.5.0-sun-fonts-1.5.0.07-1jpp.i586.rpm  2.0 M
+  java-1.5.0-sun-jdbc     i586       1.5.0.07-1jpp    java-1.5.0-sun-jdbc-1.5.0.07-1jpp.i586.rpm   66 k
+  java-1.5.0-sun-plugin   i586       1.5.0.07-1jpp    java-1.5.0-sun-plugin-1.5.0.07-1jpp.i586.rpm  1.9 M
+  java-1.5.0-sun-src      i586       1.5.0.07-1jpp    java-1.5.0-sun-src-1.5.0.07-1jpp.i586.rpm   17 M
+ Installing for dependencies:
+  jpackage-utils          noarch     1.6.6-1jpp_2rh   core               50 k
+  unixODBC                i386       2.2.11-6.2.1     core              905 k
+  unixODBC-devel          i386       2.2.11-6.2.1     core              850 k
 Se durante l'installazione riceviamo un errore riguardante la “firma” dei pacchetti, dobbiamo momentaneamente disabilitarne la verifica. Per far ciò basterà modificare il parametro gpgcheck in ''gpgcheck=0'' nel file /etc/yum.conf.<br />
 Ora dobbiamo indicare al sistema, ma soprattuto alle applicazioni che utilizzano Java, dove si trova il nuovo ambiente di runtime modificando il file /etc/profile:
 
@@ -107,8 +105,7 @@ Visto che siamo in ballo, ne approfittiamo per configurare anche il plugin per i
 Ora possiamo riavviare il sistema per rendere effettive le modifiche.
 
 ==Installiamo il Java Multimedia Framework==
-
-Andiamo sul [http://java.sun.com/products/java-media/jmf/2.1.1/download.html sito], clicchiamo su Download, accettiamo la licenza e scarichiamo il file jmf-2_1_1e-alljava.zip selezionando Cross-platform Java.
+Andiamo sul [http://java.sun.com/products/java-media/jmf/2.1.1/download.html sito], clicchiamo su Download, accettiamo la licenza e scarichiamo il file jmf-2_1_1e-alljava.zip selezionando Cross-platform Java.<br />
 Con lo stesso procedimento andiamo [http://java.sun.com/javase/technologies/desktop/media/jmf/2.1.1/specdownload.html qui] per sacricare il file jmf-2_0-spec.zip (JMF 2.0 API Specification).<br />
 Inoltre da [http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7276-jmf-2.0-fr-doc-oth-JSpec&SiteId=JSC&TransactionId=noreg questo sito] preleviamo il file jmf2_0-guide-html.zip (JMF 2.0 API Guide).<br />
 Questi tre file, vanno copiati nella cartella ~/rpmbuild/SOURCES.<br />
@@ -121,8 +118,7 @@ L'installazione è semplice:
  # rpm -ivh *.rpm
 
 ==Installiamo OpenOffice.org==
-
-Utilizzeremo, per l'installazione, i binari ufficiali disponibili a [http://it.openoffice.org/ questo indirizzo].
+Utilizzeremo, per l'installazione, i binari ufficiali disponibili a [http://it.openoffice.org/ questo indirizzo].<br />
 Scarichiamo la versione 2.1.0 (la più aggiornata al momento in cui scrivo), ovviamente quella senza JRE. Otterremo il file Ooo_2.1.0_LinuxIntel_install_it.tar.gz, da scompattare. Nella cartella estratta troviamo una sottocartella RPMS, con tutti i file rpm da installare. Ci posizioniamo in questa cartella e digitiamo:
 
  # rpm -ivh *.rpm
@@ -135,15 +131,12 @@ poi passiamo alla sottocartella ''desktop-integration'':
 Abbiamo completato l'installazione di OpenOffice.org!
 
 ==Configurazione JMF in OpenOffice==
-
 Dal menu ''Strumenti'' selezioniamo ''Opzioni''. Nella sezione ''OpenOffice.org'', sotto ''Java'', premiamo il pulsante ''Classpath''. Nella scheda seguente clicchiamo su ''Aggiungi Archivio'' e selezioniamo il file ''jmf.jar'' dalla cartella ''/usr/share/jmf/lib''. Riavviamo OpenOffice per rendere effettive le modifiche.
 
 ==Verifica==
-
 Per verificare che effettivamente OpenOffice sia in grado di supportare le nuove funzionalità multimediali di JMF, basta aprire un documento vuoto, selezionare dal menu ''Strumenti'' la voce ''Gallery'', e selezionare la voce ''Suoni'' dal menu a sinistra. Se facendo doppio click su un evento sonoro siamo in grado di ascoltare il suono in questione, tutto è andato a buon fine.
 
 ==Note finali==
-
 In questo modo non abbiamo più motivo di rimpiangere Microsoft Office.<br />
 Se soltanto la scelta di Sun in merito alle licenze non fosse così infelice, potremmo aggiungere il supporto multimediale ad OpenOffice in modo sicuramente meno macchinoso! In ogni caso, una volta generati i pacchetti rpm, possiamo utilizzarli per tutte le nostre installazioni. L'importante è non “redistribuirli”.<br />
 Ricordiamoci, durante gli aggiornamenti con YUM, di disabilitare la ricerca di nuove versioni di OpenOffice, altrimenti il nostro lavoro sarà stato inutile! Il comando da eseguire è quindi:
@@ -153,7 +146,6 @@ Ricordiamoci, durante gli aggiornamenti con YUM, di disabilitare la ricerca di n
 Infine, se abbiamo modificato il file ''/etc/yum.conf'' per installare pacchetti non firmati, questo è il momento opportuno per ripristinare il valore ''gpgcheck=1''. Quando si parla di sicurezza, è bene essere previdenti!
 
 ==Copyright==
-
 Questo articolo viene rilasciato sotto [http://creativecommons.org/licenses/by-nc-sa/2.0/it/ Licenza Creative Commons].
 
 [[Categoria:Fedoraserver]]
