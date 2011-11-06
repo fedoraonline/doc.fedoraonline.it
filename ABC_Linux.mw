@@ -123,7 +123,7 @@ In un sistema che parte automaticamente in modo solo testo, questa riga sarà ''
 Se so che nel mio sistema è installato un ambiente grafico, perchè l'ho scelto durante l'installazione, ma non parte, allora posso provare a sostituire il 5 al 3 nella riga di inittab.<br />
 Per fare la prova e vedere se l'ambiente grafico esiste, prima di modificare la riga posso provare a scrivere '''startx''' e dare invio, per vedere se parte il modo grafico. Poi posso sempre tornare alla modalità testo con ctrl+alt+F1 per apportare le modifiche. (Utile anche nel caso, possibile, in cui mi ritrovassi con lo schermo nero e il monitor in modalità risparmio energetico, perchè non riceve segnale dalla scheda video.)
 
-==Ho una doppia installazione Fedora/windows==
+===Ho una doppia installazione Fedora/windows===
 Chi installa Fedora e Windows sullo stesso disco, potrebbe avere problemi all'avvio nella scelta tra i sue sistemi operativi. In questo caso una soluzione può essere quella di ripristinare il '''bootloader''' grub e/o la sua configurazione (tramite il file /boot/grub/grub.conf). Il bootloader è un codice che risiede in una particolare zona del disco, viene eseguito nelle prime fasi di avvio e permette il caricamento del resto del sistema.<br />
 Qui nel forum esistono già vari post in cui si è trattato di problemi di bootloader, basta cercarli inserendo "bootloader" o "grub" come parola di ricerca.
 
