@@ -1,0 +1,153 @@
+Guida all'installazione della wireless pen D-Link DWL-G122 ver.B su kernel >= 2.16<br />
+Requisiti:
+* Header del kernel serie >= 2.16
+* Gruppo pacchetti sviluppo (gcc, cpp, automake, make..)
+* wpa_supplicant (opzionale: per usare l'autenticazione WPA).
+
+Da utente "root"
+<ol>
+<li>Scaricare il sorgente del modulo per il kernel</li>
+
+http://rt2x00.serialmonkey.com/rt2570-cvs-daily.tar.gz
+
+<li>Scompattare il codice</li>
+Entriamo nella directory dove abbiamo memorizzato il file e digitiamo
+ tar -xvzf rt2570-cvs-daily.tar.gz
+
+<li>Posizionarsi nella directory Module</li>
+ cd rt2570-cvs-2007100204/Module
+
+<li>Compilare ed installare il modulo</li>
+ make
+ make install
+
+<li>Eliminare eventuali moduli già presenti</li>
+ echo 'blacklist rt2570usb' >> //etc/modprobe.d/blacklist
+ echo 'blacklist rt2570usb' >> //etc/modprobe.d/blacklist-compat
+
+<li>Disattivare i servizi NetworkManager e networkManagerDispatcher</li>
+ service NetworkManager stop
+ service NetworkManagerDispatcher stop
+
+Per la disattivazione in modo permanente andare sul menù di sistema Amministrazione -> Impostazioni server -> services e dalla comoda interfaccia deselezionare i servizi suddetti, salvare e chiudere.
+
+<li>Configurazione e Attivazione della wireless</li>
+Identificare il dispositivo
+ iwconfig
+
+che produce 
+
+ Rausb0    RT2500USB WLAN  ESSID:""  Nickname:""
+           Mode:Managed  Frequency=2.437 GHz  Access Point: 00:11:95:9C:BD:AC
+           Bit Rate=48 Mb/s
+           RTS thr:off   Fragment thr:off
+           Encryption key:off
+           Link Quality=84/100  Signal level:-57 dBm  Noise level:-87 dBm
+           Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+           Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+ 
+ Eth0      no wireless extensions.
+
+il dispositivo in questione e rausb0 (ma potrebbe essere rausb1 o altro, per cui considerare da ora in poi il vostro dispositivo)
+
+Configurazione
+ ifconfig rausb0 down
+ ifconfig rausb0 indirizzo_ip
+ route add default gw indirizzo_gateway
+ iwconfig rausb0 essid "nome-rete"
+
+{{Nota|Nota:| Per indirizzo_ip si intende l'indirizzo ip che vogliamo dare alla nostra interfaccia di rete, ovvero stiamo considerando un indirizzo ip statico (ad esempio 192.168.1.1)<br /> Per indirizzo_gateway si intende l'indirizzo del vostro router wireless (ad esempio 192.168.1.1), eventualmente aggiungete il parametro netmask x.x.x.x, ad esempio}}
+
+ route add default gw 192.168.1.1 netmask 255.255.255.0
+
+Per chi vuole usare una rete aperta 
+ iwpriv rausb0 auth 1
+ iwpriv rausb0 enc 1
+ ifconfig rausb0 up
+
+E la connessione è subito disponibile
+
+Per chi vuole usare WEP invece
+ iwpriv rausb0 auth 1
+ iwpriv rausb0 enc 2
+ ifconfig rausb0 up
+ed usare un qualsiasi gestore di connessione che supporti wep, come wlassistant o wif-radar
+
+Per chi vuole usare WPA assicurarsi che il servizio wpa_supplicant non sia già in esecuzione, per fermarlo:
+ service wpa_supplicant stop
+
+Per configurare la wireless
+ iwpriv rausb0 auth 3
+ iwpriv rausb0 enc 3
+ iwpriv rausb0 wpapsk "password-rete"
+ ifconfig rausb0 up
+ wpa_supplicant -Bw -Dwext -irausb0
+
+<li>Configurazione e attivazione automatica al riavvio</li>
+basta modificare il file //etc/rc.local con
+
+ gedit //etc/rc.local
+
+ed aggiungere le righe precedenti, ovvero per chi utilizza una connessione aperta:
+ ifconfig rausb0 down
+ ifconfig rausb0 indirizzo_ip
+ route add default gw indirizzo_gateway
+ iwconfig rausb0 essid "nome-rete"
+ iwpriv rausb0 auth 1
+ iwpriv rausb0 enc 1
+ ifconfig rausb0 up
+
+Per chi usa WEP
+ ifconfig rausb0 down
+ ifconfig rausb0 indirizzo_ip
+ route add default gw indirizzo_gateway
+ iwconfig rausb0 essid "nome-rete"
+ iwpriv rausb0 auth 1
+ iwpriv rausb0 enc 2
+ ifconfig rausb0 up
+
+Per chi usa WPA
+ ifconfig rausb0 down
+ ifconfig rausb0 indirizzo_ip
+ route add default gw indirizzo_gateway
+ iwconfig rausb0 essid "nome-rete"
+ iwpriv rausb0 auth 3
+ iwpriv rausb0 enc 3
+ iwpriv rausb0 wpapsk "password-rete"
+ ifconfig rausb0 up
+ wpa_supplicant -Bw -Dwext -irausb0
+
+e disattivare il lancio automatico del servizio wpa_supplicant, ovvero dal menù di sistema -> amministrazione -> impostazioni server -> services  e deselezionare la casella corrispondente, salvare e chiudere
+</ol>
+
+Un ringraziamento particolare a "virus" perché è il vero suggeritore di questa guida che si può leggere anche su http://rt2x00.serialmonkey.com/fc4howto/rt2570_fc4_howto.html
+
+{{Warning|La guida funziona anche per Fedora 8, con qualche piccolo accorgimento: bisogna introdurre un piccolo ritardo tra i comandi (il perché non lo so ma funziona).}}
+Personalmente ho creato il seguente script posizionato in /bin con nome wireless.sh (con permessi di esecuzione), che richiamo come ultimo comando in rc.local.
+
+ echo Ripristino connessione wireless..
+ service wpa_supplicant stop
+ sleep 1
+ //sbin/ifconfig rausb0 down
+ sleep 1
+ //sbin/ifconfig rausb0 192.168.1.2
+ sleep 1
+ //sbin/route add default gw 192.168.1.1
+ sleep 1
+ //sbin/iwconfig rausb0 essid "G604T_WIRELESS"
+ sleep 1
+ //sbin/iwpriv rausb0 auth 3
+ sleep 1
+ //sbin/iwpriv rausb0 enc 3
+ sleep 1
+ //sbin/iwpriv rausb0 wpapsk "password"
+ sleep 1
+ //sbin/ifconfig rausb0 up
+ sleep 1
+ wpa_supplicant -Bw -Dwext -irausb0
+ sleep 1
+ echo connessione effettuata.
+ 
+Ciao da Zeus  8-)
+
+[[Categoria:Wi-Fi]]
