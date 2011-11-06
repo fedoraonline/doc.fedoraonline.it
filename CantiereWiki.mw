@@ -56,7 +56,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Convertire file del tipo docx (MS Office 2007) in Fedora 8|autore=SimoneZaminga|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Convertire file del tipo docx (MS Office 2007) in Fedora 8|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=USB D-Link DWL-G122 Ver. C1|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
