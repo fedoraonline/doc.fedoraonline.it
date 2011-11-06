@@ -1,47 +1,45 @@
-== Introduzione ==
+Informazioni di base sulle partizioni e sui dischi, con alcuni esempi.
 
 In questa guida vengono descritte le partizioni di sistema create durante l'installazione, e più in generale vengono fornite notizie di base sul partizionamento e il montaggio di dischi.<br />
 Le informazioni qui riportate derivano da ricerche che ho fatto quando mi trovavo a dover risolvere un qualche problema riguardo i dischi, e da risposte ricevute a domande che ho fatto qui sul forum.
 
 Partizionare il disco serve a dividerlo in porzioni separate da usare per scopi diversi.<br />
-Con il partizionamento automatico effettuato durante l'installazione di Fedora su una tipica macchina con un singolo hard disk, il disco viene diviso in tre parti: una partizione di boot, una root ( / ) e una di swap.
+Con il partizionamento automatico effettuato durante l'installazione di Fedora su una tipica macchina con un singolo hard disk, il disco viene diviso in tre parti: una partizione di boot una root ( / ) e una di swap.
 
 Esistono tre tipi di partizione: primaria, estesa e logica. Ogni hard disk può avere un massimo di tre partizioni primarie e una estesa, la partizione estesa a sua volta fa da contenitore per un massimo di 12 partizioni logiche.
 
 Inoltre il partizionamento automatico delle ultime versioni di Fedora prepara il disco (o i dischi) avviando una gestione particolare chiamata Logical Volume Manager (LVM), ma in questa guida verrà considerato solo come preparare manualmente le partizioni.
 
 ==Punti di mount (mount point)==
-
 Ogni partizione può avere un suo punto di mount: immaginando che l'hard disk (HD) sia un albero e i dati in esso contenuti siano foglie, il punto di mount indica il punto di innesto di un ramo sull'albero e da lì parte un path (percorso) che arriva fino ai dati.<br />
 Una volta "montata", una partizione (o forse sarebbe più esatto dire il file system in essa contenuto) è vista dal sistema come un'estensione dell'HD, come una directory, anche se se si trova fisicamente su un disco diverso da quello di avvio, magari aggiunto in un secondo tempo rispetto alla prima installazione del sistema.
 
-Il punto di mount della partizione di boot (che conterrà i dati necessari alle prime fasi di avvio del sistema) sarà ''/boot''.<br />
-Il punto di mount della partizione che contiene tutti gli altri file di sistema e che conterrà anche i vari file di log, e le applicazioni installate sarà '''/''' (slash, o radice, root in inglese, ma da non confondere con l'utente root).<br />
+Il punto di mount della partizione di boot (che conterrà i dati necessari alle prime fasi di avvio del sistema) sarà /boot.<br />
+Il punto di mount della partizione che contiene tutti gli altri file di sistema e che conterrà anche i vari file di log, e le applicazioni installate sarà / (slash, o radice, root in inglese, ma da non confondere con l'utente root).<br />
 La partizione di swap non ha bisogno di un punto di mount.
 
 ==Dimensione e funzione delle partizioni==
-
-La partizione di '''boot''' deve trovarsi fisicamente nei primi settori del disco (deve partire dal settore 1) e basta che sia grande 500Mb: è però consigliabile impostare la boot ad almeno 1Gb per evitare problemi delle ultime versioni di fedora al momento del preupgrade. Conterrà i file necessari alle prime fasi di avvio del sistema.
+La partizione di '''boot''' deve trovarsi fisicamente nei primi settori del disco (deve partire dal settore 1) e basta che sia grande 100Mb. Conterrà i file necessari alle prime fasi di avvio del sistema.
 
 La partizione di '''swap''' serve come contenitore temporaneo per dati che il sistema sta utilizzando, ma che non riesce a immagazzinare nella memoria RAM. Sui sistemi più vecchi, con meno di 32 Mb di RAM era consigliabile creare una partizione di swap di dimensioni doppie rispetto alla quantità di RAM, mentre con le macchine attuali, che hanno grandi quantità di RAM è possibile lavorare bene anche con una partizione di swap delle stesse dimensioni della RAM fisica.
 
-La partizione '''/''' (root), come già accennato, è la partizione "principale" del disco, qui verrà installato il sistema operativo con tutti i suoi file e directory di sistema. Se si decide di non creare altre partizioni, alla partizione '''/''' può essere assegnato tutto lo spazio rimanente del disco, dopo aver sottratto i 100Mb per /boot e lo spazio di swap. Nell'installazione standard automatizzata di Fedora viene installata all'interno di '''/''' anche la directory ''/home'', nella quale verranno archiviati tutti i dati e le impostazioni personali dei vari utenti (Desktop, preferenze dei programmi, ecc.).
+La partizione '''/''' (root), come già accennato, è la partizione "principale" del disco, qui verrà installato il sistema operativo con tutti i suoi file e directory di sistema. Se si decide di non creare altre partizioni, alla partizione / può essere assegnato tutto lo spazio rimanente del disco, dopo aver sottratto i 100Mb per /boot e lo spazio di swap. Nell'installazione standard automatizzata di Fedora viene installata all'interno di / anche la directory /home, nella quale verranno archiviati tutti i dati e le impostazioni personali dei vari utenti (Desktop, preferenze dei programmi, ecc.).
+
 
 ==Formattazione==
-
 La formattazione prepara il disco per la scrittura dei dati, creando una struttura che servirà a organizzare i file e tener traccia delle loro proprietà e permessi.
 
-In genere le partizioni di ''/boot'' e '''/''' vengono formattate con il filesystem ext3 la partizione di swap va formattata con li suo filesystem di tipo swap.<br />
+In genere le partizioni di /boot e / vengono formattate con il filesystem ext3 la partizione di swap va formattata con li suo filesystem di tipo swap.<br />
 I vari tipi di formattazione (ext3, ext2, reiser, FAT e decine di altri tipi) differiscono tra loro per varie caratteristiche e per il modo in cui i dati vengono organizzati e identificati.
 
 E' infine possibile preparare e formattare al momento dell'installazione di Fedora anche altre partizioni per suddividere il disco come più ci fa comodo.<br />
 In particolare potrebbe essere utile fare una partizione separata che conterrà tutti i nostri dati, in questo modo, se fosse necessario reinstallare il sistema operativo e riformattare l'hard disk sarà possibile riformattare solo le partizioni di boot, di swap e la radice, senza toccare i file che resteranno sulla partizione separata.<br />
 Per il punto di mount della partizione aggiuntiva è possibile scegliere il nome che si vuole (ad es. /dati), alla conclusione dell'installazione /dati sarà a tutti gli effetti una directory (si può capire che è una partizione a sè e non una semplice directory perchè contiene una directory chiamata lost&found creata dal sistema operativo stesso). <br />
 
-{{Nota|Nota:|la partizione aggiuntiva inoltre può anche essere formattata con un tipo di filesystem diverso da ext3, ad esempio si può formattare in FAT32 se si vuole avere la possibilità di togliere l'hard disk, spostarlo su una macchina Windows e leggerlo senza software aggiuntivi. Windows non leggerebbe così immediatamente un disco formattato con ext3.}}
+i{{Nota|Nota:|la partizione aggiuntiva inoltre può anche essere formattata con un tipo di filesystem diverso da ext3, ad esempio si può formattare in FAT32 se si vuole avere la possibilità di togliere l'hard disk, spostarlo su una macchina Windows e leggerlo senza software aggiuntivi. Windows non leggerebbe così immediatamente un disco formattato con ext3.}}
+
 
 ==Identificazione di hard disk e partizioni==
-
 Fedora e molte altre distribuzioni Linux identificano gli HD installati e le partizioni presenti su di essi tramite una sigla formata da lettere e numeri.<br />
 Il criterio è il seguente:
 * le prime due lettere indicano il tipo di disco (hd per dischi ide, sd per dischi scsi, sata, e per i pendrive USB), 
@@ -56,8 +54,8 @@ Un disco slave primario è identificato come '''hdb''', un master secondario '''
 
 Un device sarà, ad esempio, /dev/sda e per montare una penna USB con sopra un'unica partizione sda1 si usa il comado '''mount -t auto /dev/sda1 /punto/di/mount'''.
 
-==Comandi utili==
 
+==Comandi utili==
 Un elenco di comandi utili per visualizzare i dischi installati e le loro partizioni, vanno scritti in una finestra di terminale.
 
 ===df -h===
@@ -66,6 +64,7 @@ Fa un elenco dello spazio disponibile su disco riportando le partizioni e la lor
  /dev/hda2              73G   29G   41G  42% /
  /dev/hda1              99M   15M   80M  16% /boot
  tmpfs                 315M     0  315M   0% /dev/shm
+
 
 ===dmesg | grep hd===
 Cerca tra i messaggi del kernel tutte le righe in cui compare la stringa "hd", utile per sapere come viene identificato ad es. un nuovo disco appena collegato.<br />
@@ -81,6 +80,7 @@ Se si cerca un nuovo disco scsi o un nuovo pendrive usare sd invece di hd, come 
  sda: assuming drive cache: write through
   sda: sda1
  sd 0:0:0:0: Attached scsi removable disk sda
+
 
 ===fdisk -l===
 va dato come utente root '''/sbin/fdisk -l''' riporta l'elenco dei dischi e le loro partizioni.<br />
@@ -141,9 +141,10 @@ Nessuna partizione presente sul pendrive, creiamone una.
  Last cylinder or +size or +sizeM or +sizeK (1-1012, default 1012):      '''premuto invio'''
  Using default value 1012
 
+
 {{Nota|Note:|
-(1) premendo '''m''' appare l'elenco delle azioni possibili<br />
-(2) una volta trovata in elenco l'opzione adatta, premendo la sua lettera (in questo caso '''n''') appaiono le istruzioni relative}}
+(1) premendo m appare l'elenco delle azioni possibili<br />
+(2) una volta trovata in elenco l'opzione adatta, premendo la sua lettera (in questo caso n) appaiono le istruzioni relative}}
 
 Per uscire da fdisk salvando le modifiche apportate, premere w. Per uscire senza salvare premere q.
 
@@ -207,17 +208,18 @@ Se il device che abbiamo visto nell'esempio precedente fosse il nostro nuovo HD 
  sysfs                   /sys                    sysfs   defaults        0 0
  LABEL=SWAP-hda5         swap                    swap    defaults        0 0
 
+
+
 aggiungendo in fondo la riga
  /dev/sda1               /Condiviso/mount/usb    ext3    rw,user         0 0
 
 Nella prima colonna va il nome del device, nella seconda il punto di mount, nella terza il tipo di filesystem, nella quarta le opzioni di mount (in questo caso rw per permettere lettura e scrittura e user per permettere anche a tutti gli utenti di usarlo. Le ultime due colonne servono a indicare al sistema operativo in che ordine e se eseguire il controllo diagnostico del filesystem.
 
 {{Warning|Per evitare di far danni e perdere il file /etc/fstab è meglio farne prima una copia per poterlo, in caso, ripristinare. Come root usare il comando '''cp /etc/fstab /etc/fstab.copia'''.}}
-</ol>
 
 ==Manuali==
-Ognuno dei comandi a cui si è accennato ha molte opzioni, per avere a video spiegazioni dettagliate di tutte le opzioni e delle particolarità di ognuno, usare '''man nomecomando''', per stamparle leggete la guida [[Stampare le pagine man|Stampare le pagine man]].
-Se state usando per la prima volta i comandi da terminale leggete [[Primi passi nel terminale|Primi passi nel terminale]].
-Per modificare i file di configurazione come ''/etc/fstab'' è necessario usare un editor di testo, ad esempio '''vi'''.
+Ognuno dei comandi a cui si è accennato ha molte opzioni, per avere a video spiegazioni dettagliate di tutte le opzioni e delle particolarità di ognuno, usare '''man nomecomando''', per stamparle leggete la guida [http://www.fedoraonline.it/modules/wfsection/article.php?articleid=109 Stampare le pagine man].
+Se state usando per la prima volta i comandi da terminale leggete [http://www.fedoraonline.it/modules/wfsection/article.php?articleid=93 Primi passi nel terminale].
+Per modificare i file di configurazione come /etc/fstab è necessario usare un editor di testo, ad esempio '''vi'''.
 
 [[Categoria:Sistema]]
