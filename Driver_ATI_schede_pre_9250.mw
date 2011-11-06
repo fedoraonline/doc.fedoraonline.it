@@ -64,8 +64,8 @@ Poi:
 
  # gedit /boot/grub/grub.conf
 
-Aggiungere alla linea del kernel l'opzione: '''''nopat'''''
-Se ci sono errori al boot riguardanti le librerie ''libdrm'' aggiungere anche : '''''nomodeset'''''
+Aggiungere alla linea del kernel l'opzione: '''''nopat'''''.<br />
+Se ci sono errori al boot riguardanti le librerie ''libdrm'' aggiungere anche : '''''nomodeset'''''.
 
 Ora si può dare un restart del sistema e godersi la scheda Ati.
 
