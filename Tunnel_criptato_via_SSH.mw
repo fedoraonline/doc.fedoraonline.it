@@ -1,13 +1,13 @@
 Con Linux è possibile creare un tunnel SSH tra due sistemi in modo che si apra un canale criptato via SSH facendo comunicare due porte differenti tra loro.<br />
-Ad esempio se si ha un server di destinazione con un webserver che risponde alla porta 80, ma dal nostro pc non riusciamo a raggiungerlo, con il tunnel SSH, possiamo far passare tutto il traffico verso la porta 80, su una porta a nostra scelta di localhost. Per l'implementazione il comando è:
+Ad esempio se si ha un server di destinazione con un webserver che risponde alla porta 80, ma dal proprio pc non si riesce a raggiungerlo, con il tunnel SSH, si può far passare tutto il traffico verso la porta 80, su una porta a propria scelta di localhost. Per l'implementazione il comando è:
 
  ssh -L <portalocale>:localhost:<portaremota> <utente>@<hostremoto>
 
-Nel nostro esempio ci collegheremo all'host sulla porta 8888 passando sulla porta 9000 locale.
+In questo esempio ci si collega all'host sulla porta 8888 passando sulla porta 9000 locale.
 
  [cello@cellopc-mini ~]$ ssh -L 9000:localhost:8888 root@cw-stto-mgm01-admin
 
-Verificando le connesioni attive si nota che viene aperta una connessione ssh verso l'host e poi aperta la porta locale per ricevere le richieste da inoltrare al server remoto.
+Verificando le connessioni attive si nota che viene aperta una connessione ssh verso l'host e poi aperta la porta locale per ricevere le richieste da inoltrare al server remoto.
 
  [cello@cellopc-mini ~]$ ps -ef | ssh
  cello     6762  6255  0 14:55 pts/3    00:00:00 ssh -L 9000:localhost:8888 root@cw-stto-mgm01-admin
@@ -21,7 +21,7 @@ Verificando le connesioni attive si nota che viene aperta una connessione ssh ve
 Ora provando a fare una richiesta sulla porta 9000 tramite firefox o wget potremmo navigare il webserver sul nostro pc locale.
 
  [cello@cellopc-mini ~]$ wget localhost:9000/admin/
- --2010-10-23 15:00:54--  <nowiki><a href="http://localhost:9000/admin/" title="http://localhost:9000/admin/" rel="external">http://localhost:9000/admin/</a></nowiki>
+ --2010-10-23 15:00:54--  http://localhost:9000/admin/
 
  Resolving localhost... 127.0.0.1
  Connecting to localhost|127.0.0.1|:9000... connected.
