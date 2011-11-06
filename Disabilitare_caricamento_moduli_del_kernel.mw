@@ -2,7 +2,6 @@ E' possibile disabilitare il caricamento di particolari moduli del kernel.
 
 * Nel file '''/etc/modprobe.d/blacklist''' vengono inseriti i moduli del kernel da non caricare. Di default sono già presenti alcuni moduli in blacklist, quindi per aggiungerne di nuovi basterà incrementare una nuova entry blacklist .
 
-
  [root@vrhel5 ~]# cat /etc/modprobe.d/blacklist
  #                                             
  # Listing a module here prevents the hotplug scripts from loading it.
