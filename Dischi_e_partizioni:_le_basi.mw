@@ -36,7 +36,7 @@ E' infine possibile preparare e formattare al momento dell'installazione di Fedo
 In particolare potrebbe essere utile fare una partizione separata che conterrà tutti i nostri dati, in questo modo, se fosse necessario reinstallare il sistema operativo e riformattare l'hard disk sarà possibile riformattare solo le partizioni di boot, di swap e la radice, senza toccare i file che resteranno sulla partizione separata.<br />
 Per il punto di mount della partizione aggiuntiva è possibile scegliere il nome che si vuole (ad es. /dati), alla conclusione dell'installazione /dati sarà a tutti gli effetti una directory (si può capire che è una partizione a sè e non una semplice directory perchè contiene una directory chiamata lost&found creata dal sistema operativo stesso). <br />
 
-i{{Nota|Nota:|la partizione aggiuntiva inoltre può anche essere formattata con un tipo di filesystem diverso da ext3, ad esempio si può formattare in FAT32 se si vuole avere la possibilità di togliere l'hard disk, spostarlo su una macchina Windows e leggerlo senza software aggiuntivi. Windows non leggerebbe così immediatamente un disco formattato con ext3.}}
+{{Nota|Nota:|la partizione aggiuntiva inoltre può anche essere formattata con un tipo di filesystem diverso da ext3, ad esempio si può formattare in FAT32 se si vuole avere la possibilità di togliere l'hard disk, spostarlo su una macchina Windows e leggerlo senza software aggiuntivi. Windows non leggerebbe così immediatamente un disco formattato con ext3.}}
 
 
 ==Identificazione di hard disk e partizioni==
@@ -216,6 +216,7 @@ aggiungendo in fondo la riga
 Nella prima colonna va il nome del device, nella seconda il punto di mount, nella terza il tipo di filesystem, nella quarta le opzioni di mount (in questo caso rw per permettere lettura e scrittura e user per permettere anche a tutti gli utenti di usarlo. Le ultime due colonne servono a indicare al sistema operativo in che ordine e se eseguire il controllo diagnostico del filesystem.
 
 {{Warning|Per evitare di far danni e perdere il file /etc/fstab è meglio farne prima una copia per poterlo, in caso, ripristinare. Come root usare il comando '''cp /etc/fstab /etc/fstab.copia'''.}}
+</ol>
 
 ==Manuali==
 Ognuno dei comandi a cui si è accennato ha molte opzioni, per avere a video spiegazioni dettagliate di tutte le opzioni e delle particolarità di ognuno, usare '''man nomecomando''', per stamparle leggete la guida [http://www.fedoraonline.it/modules/wfsection/article.php?articleid=109 Stampare le pagine man].
