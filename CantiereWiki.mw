@@ -74,14 +74,14 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=ATI Mobility Radeon 9600 M10|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Centrare lo schermo con xvidtune|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Due piccoli script bash di amministrazione utenti|autore=SimoneZaminga|stato=DaFare}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=D-Link DWL G122 ver. B kernel 2.16 o superiore|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Nuovi servizi per Konqueror|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Impostare un RAID software|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Dischi e partizioni: le basi|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=VMware *|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|stato=DaFare}}
+{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=D-Link DWL G122 ver. B kernel 2.16 o superiore|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Nuovi servizi per Konqueror|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Impostare un RAID software|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Dischi e partizioni: le basi|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=VMware|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|stato=Terminato}}
 |}
 
 (*) esistono due guide su VMWare!
