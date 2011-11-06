@@ -1,7 +1,8 @@
+{{Obsoleto}}
 {{Warning|La seguente guida è da utilizzare su un sistema con Gnome 2.x, motivo per cui è da considerare obsoleta!}}
 ==Introduzione==
 
-Per chi utilizza Gnome come Desktop Manager e vuole personalizzare maggiormente il proprio desktop ci sono le ''gdesklets''. Simile a ''superkaramba'' per KDE sono delle applet che ci permettono di far apparire sul desktop informazioni sul sistema: p.e. una barra di lancio, previsioni del tempo e molto più.<br />
+Per chi utilizza Gnome come Desktop Manager e vuole personalizzare maggiormente il proprio desktop ci sono le ''gdesklets''. Simile a ''superkaramba'' per KDE sono delle applet che permettono di far apparire sul desktop informazioni sul sistema: p.e. una barra di lancio, previsioni del tempo e molto più.<br />
 In questo articolo si prenderanno come esempio soltanto:
 * Previsioni meteo
 * Informazioni sul sistema
@@ -9,7 +10,7 @@ In questo articolo si prenderanno come esempio soltanto:
 
 ==Installazione==
 
-Inanzitutto è necessario installare il pacchetto gdesklets, disponibile nei repository, quindi da terminale basterà digitare:
+Innanzitutto è necessario installare il pacchetto gdesklets, disponibile nei repository, quindi da terminale basterà digitare:
 
  # yum install gdesklets
 
@@ -41,7 +42,7 @@ La procedura d'installazione è la stessa descritta prima, anche la configurazio
 La starterbar invece è scaricabile da [http://www.gnome-look.org/content/show.php/Custom+Gdesklets+Starterbar?content=34782 qui] e si installa come da procedura standard. Comparirà un'icona sola con la propria ''/home directory''. Una volta messa sul desktop si possono aggiungere alla barra quante icone si vogliono; è necessario inserire il nome che si vuole dare al lanciatore e specificare il percorso:<br />
 Per esempio: per ''firefox'' si metterà ''/usr/bin/firefox'' e così via. Per la gran parte delle applicazioni da lanciare tramite starter-bar viene associata in automatico anche l'icona. Altrimenti si può selezionare una a proprio piacere.<br />
 {{Nota|Estensione icone|La starterbar accetta solo icone in formato .svg e non .svgz.}}
-Se si volesse, per chi è un pochino pratico di codice html, è possibile modificare ulteriormente l'aspetto della barra che inizialmente appare un pochino grezza. Lo si può fare intervenendo diretamente sul codice, cliccando dal menu che si apre con il tasto destro del mouse "View source".<br />
+Se si volesse, per chi è un pochino pratico di codice html, è possibile modificare ulteriormente l'aspetto della barra che inizialmente appare un pochino grezza. Lo si può fare intervenendo direttamente sul codice, cliccando dal menu che si apre con il tasto destro del mouse "View source".<br />
 Per fare un esempio in questa guida sono stati eliminati lo sfondo e i bordi, in modo che la barra appaia integrata meglio nel desktop.
 
 Il resto è personalizzabile utilizzando la propria fantasia, il desktop appena descritto, unito a uno sfondo un po' diverso, ora si presenta così:
