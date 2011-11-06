@@ -62,10 +62,10 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Cambiare l'immagine di grub|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Modem Speedtouch 330 su Fedora Core|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Modem Speedtouch 330 su Fedora Core|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Leggere i floppy da terminale|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Stampare le pagine man|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Leggere i floppy da terminale|autore=RobertMayr|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Stampare le pagine man|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Webcam TRUST WB-1400T|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di una rete wifi|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=GabrieleTrombini|stato=DaFare}}
