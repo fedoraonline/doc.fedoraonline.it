@@ -67,13 +67,14 @@ comando per gestire il firewall in Fedora, ha moltissime funzioni per filtrare i
 ====NAT (Network Address Translation)====
 operazione tramite la quale un nodo della rete "maschera" l'indirizzo IP dei pacchetti che gli giungono e li inoltra come se fossero pacchetti originati da esso stesso; lo stesso nodo si occuperà poi, al ritorno dei pacchetti di risposta, di smistarli di nuovo ai nodi originali di provenienza.
 
-====Gateway====
+====gateway====
 viene chiamato così un apparato hardware dedicato (in genere il router ADSL che permette il collegamento a Internet), oppure un nodo configurato via software, affinchè si occupi di trasferire pacchetti di dati tra reti di diverse classi (tipicamente tra una rete domestica di classe C 192.168.0.x/255.255.255.0 e la rete pubblica Internet)
 
-====Essere root====
+====essere root====
 root è l'utente amministratore della macchina, gli è permesso modificare tutte le configurazioni.
 Per alcune nozioni di base su root e sull'uso di alcuni comandi vedere la guida 'primi passi nel terminale': http://www.fedoraonline.it/modules/wfsection/article.php?articleid=93
 La spiegazione sarebbe troppo lunga da includere qui.
+
 
 ===Approfondimento===
 ====Spiegazioni per il file /etc/rc.d/rc.local====
@@ -110,4 +111,5 @@ In modo forse un po' presuntuoso io battezzerei una macchina così configurata c
 
 Se anche voi, come me, siete fanatici di nomi evocativi per i nodi della vostra rete, non sarebbe una cattiva idea chiamare questo nodo Giano, oppure Janus: l'antica divinità romana che custodiva le porte e i passaggi.
 
+[[Categoria:Sistema]]
 [[Categoria:Rete e Server]]
