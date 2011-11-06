@@ -17,7 +17,6 @@ Nei riavvii successivi il demone sarà abilitato di default.
 Si consiglia di creare la virtualizzazione sotto qemu/KVM, l'utilizzo di Xen è un po' più complicato.
 
 == Xen ==
-
 Comunque, per utilizzare Xen, occorre installarlo a parte:
 
  # yum install xen
@@ -33,7 +32,6 @@ Per avviare la macchina virtuale:
 oppure, in KDE, ''menù K > Applicazioni > Sistema > Manager della macchina virtuale''.
 
 == Virtualbox ==
-
 E' possibile anche utilizzare un software esterno come è VirtualBox, prelevandolo da [http://www.virtualbox.org/wiki/Linux_Downloads qui],
 oppure digitando:
 
