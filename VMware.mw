@@ -41,14 +41,21 @@ Per finire creare un link simbolico e si è concluso, Vmware è configurato e pr
  ln -s /etc/rc.d/init.d/vmware /etc/rc.d/rc0.d/K08vmware
 
 Lanciare quindi vmware e ci si trova davanti alla seguente finestra:
-[[File:vmware1.png]]
-[[File:vmware2.png]]
+
+[[File:vmware1.png]] [[File:vmware2.png]]
+
 Creare una nuova macchina virtuale e scegliere l'installazione tipica. Scegliere il sistema operativo ospite che si vuole installare dal menu a tendina.
+
 [[File:vmware3.png]]
+
 Per dare al proprio sistema ospite pieno accesso alla rete locale e a Internet scegliere il "bridget networking", che creerà una specie di ponte sul proprio collegamento abituale. Scegliere la dimensione del disco che si vuole dedicare al proprio sistema ospite e finire la configurazione.
+
 [[File:vmware4.png]]
+
 Ora ci si trova davanti al proprio sistema virtuale (non ancora installato) e si ha la possibilità di scegliere quanta RAM si vuole togliere a Fedora per darla virtualmente a Vmware ecc. Dare un'occhiata all'impostazione del CD-Rom, che ora ci servirà per installare Windows. E' riconosciuto come /dev/cdrom, ma spesso in questo modo non permette di effettuare il boot da CD. A volte dipende dalla configurazione della macchina, provare prima a lasciare /dev/cdrom e aggiungere "legacy emulation", oppure si può modificare la device dandogli il nome /dev/hdc con legacy emulation attiva.
+
 [[File:vmware5.png]]
+
 Inserire il CD di Windows e far partire la propria macchina virtuale con la freccettina verde. Inizia il boot e parte una normale installazione come se si fosse fisicamente sul harddisk, solo che ci si trova in una finestra e fisicamente sul disco non verrà scritto nulla se non una cartella. Niente paura quindi se la propria macchina vi dice che formatterà il disco e tutti i dati verranno persi ecc., Windows è soltanto una cartella che si può cestinare in qualsiasi momento come un semplice file.<br />
 Una volta installato si può scegliere di installare i Tools di Vmware che sono nient'altro che dei driver aggiornati per configurare meglio il sistema virtuale, per farlo andare in VM->Vmware tools.<br />
 {{Nota|NB:|Se non dovesse partire il boot si può usare un trucchetto, inserire un disco di Win98 che durante il boot riconosce il proprio lettore CD o DVD come lettore standard, togliere il Cd e inserire il CD di Windows XP o 2000, ora il boot dovrebbe partire...}}
