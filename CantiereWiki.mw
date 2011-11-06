@@ -184,12 +184,12 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=18 Database Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=19 Web Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=20 FTP Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Yum localinstall simulato|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=-|articolo=Tunnel criptato via SSH|autore=GabrieleTrombini|rilettore=MarioSantagiuliana|data=04/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=-|articolo=RPMFusion|autore=GabrieleTrombini|rilettore=MarioSantagiuliana|data=04/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Yum localinstall simulato|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=-|articolo=Tunnel criptato via SSH|autore=GabrieleTrombini|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=-|articolo=RPMFusion|autore=GabrieleTrombini|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Controllare il Desktop con vnc attraverso un tunnel ssh|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Samba: condivisione tra Fedora e Windows|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
@@ -199,10 +199,10 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Wifi wpa2-psk con Acer Aspire 5315, chipset AR5006EG|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Fedora su PowerBook G3 Pismo|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Installazione di una scheda wireless generica|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Gdesklets|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=VPN tra router Netgear DG834G e PC Linux in Dial-Up|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Abilitare Compiz Fusion con driver fglrx e AIGLX su Fedora: Schede AMD/ATI|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|rilettore=MarioSantagiuliana|data=06/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Gdesklets|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=VPN tra router Netgear DG834G e PC Linux in Dial-Up|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Abilitare Compiz Fusion con driver fglrx e AIGLX su Fedora: Schede AMD/ATI|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|rilettore=MarioSantagiuliana|data=06/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=D-Link DWL G122 ver. B kernel 2.16 o superiore|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Nuovi servizi per Konqueror|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
