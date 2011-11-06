@@ -58,7 +58,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file del tipo docx (MS Office 2007) in Fedora 8|autore=SimoneZaminga|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=USB D-Link DWL-G122 Ver. C1|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Cambiare l'immagine di grub|autore=RobertMayr|stato=DaFare}}
@@ -211,6 +211,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=VMware|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
 |}
 
 
