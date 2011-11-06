@@ -1,13 +1,13 @@
-Fedora è installata, ma non si ha installato una o più applicazioni indispensabili?<br />
+Fedora è installata, ma non si è installato una o più applicazioni indispensabili?<br />
 E' disponibile una rete attiva? Oppure si dispone solo del Dvd/cd di installazione?<br />
 Niente paura, questa procedura simula un ''yum localinstall'' e permetterà di installare quello che occorre.
 
-Per cominciate bisogna diventare root:
+Per cominciare bisogna diventare root:
 
  $ su -
  password di root
 
-dopodichè si danno comandi seguenti:
+dopo di che si danno comandi seguenti:
 
  # mkdir /root/repo_dvd
  # mount -r -o loop /dev/sr1 /root/repo_dvd 
