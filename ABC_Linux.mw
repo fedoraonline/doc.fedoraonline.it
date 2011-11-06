@@ -5,9 +5,9 @@ Alcuni aiuti e suggerimenti di base per chi ha appena iniziato ad usare Linux: e
 
 Questa guida si propone di dare alcune informazioni di base utili a chi inizia a utilizzare Linux per la prima volta.<br />
 Raccoglie alcuni dei problemi più comuni di cui si è parlato qui nel forum fedoraonline e alcune spiegazioni su come intervenire per risolverli, o almeno iniziare a capire qual è il problema.<br />
-Può essere utile leggere oltre a questa guida anche la guida [[Primi passi nel terminale|Primi passi nel terminale]].
+Può essere utile leggere oltre a questa guida anche la guida [http://www.fedoraonline.it/modules/smartsection/item.php?itemid=83 primi passi nel terminale].
 
-==Il terminale e l'ambiente grafico==
+==il terminale e l'ambiente grafico==
 Sebbene la maggior parte degli utenti utilizzi principalmente l'ambiente grafico quando lavora col proprio computer, Linux è nato con una interfaccia testuale, sempre accessibile anche quando l'ambiente grafico è in funzione, e indispensabile per risolvere situazioni di emergenza. Dalla semplice interfaccia a riga di comando si ha il pieno controllo del sistema. Si può accedere al terminale dall'ambiente grafico stesso tramite un apposito menu, oppure con la combinazione di tasti '''ctrl+alt+f1'''. ctrl+alt+f7 torna alla modalità grafica. (Inoltre si possono attivare operazioni diverse aprendo diversi terminali con ctrl+alt+f2 +f3 e così via)
 
 ==L'utente root==
@@ -18,10 +18,10 @@ Infine si può diventare utente root con il comando '''su -''' (su spazio meno) 
 
 ==I permessi==
 Essendo nato come sistema multiutente, in Linux è possibile assegnare dei permessi ad ogni utente, in particolare quali file può leggere, modificare (e quindi anche cancellare) o eseguire. Inoltre ogni utente può appartenere a un gruppo di lavoro, e il gruppo, a sua volta potrà avere il permesso di usare alcuni file e non altri.<br />
-Per una guida sui permessi vedere qui: [[Gestione dei permessi|Gestione dei permessi]] 
+Per una guida sui permessi vedere qui: [http://www.fedoraonline.it/modules/smartsection/item.php?itemid=17 http://www.fedoraonline.it/modules/smartsection/item.php?itemid=17] 
 
-==File di testo==
-Praticamente tutte le caratteristiche di un sistema Linux possono essere gestite tramite "semplici" file di configurazione in formato testo.<br />
+==file di testo==
+Praticamente tutte le caratteristiche si un sistema Linux posso essere gestite tramite "semplici" file di configurazione in formato testo.<br />
 Se si ha un problema con la propria installazione, spesso basta correggere il giusto file di configurazione e il problema si risolve.
 
 ==Nano e Vi==
@@ -123,9 +123,9 @@ In un sistema che parte automaticamente in modo solo testo, questa riga sarà ''
 Se so che nel mio sistema è installato un ambiente grafico, perchè l'ho scelto durante l'installazione, ma non parte, allora posso provare a sostituire il 5 al 3 nella riga di inittab.<br />
 Per fare la prova e vedere se l'ambiente grafico esiste, prima di modificare la riga posso provare a scrivere '''startx''' e dare invio, per vedere se parte il modo grafico. Poi posso sempre tornare alla modalità testo con ctrl+alt+F1 per apportare le modifiche. (Utile anche nel caso, possibile, in cui mi ritrovassi con lo schermo nero e il monitor in modalità risparmio energetico, perchè non riceve segnale dalla scheda video.)
 
-===Ho una doppia installazione Fedora/Windows===
+==Ho una doppia installazione Fedora/windows==
 Chi installa Fedora e Windows sullo stesso disco, potrebbe avere problemi all'avvio nella scelta tra i sue sistemi operativi. In questo caso una soluzione può essere quella di ripristinare il '''bootloader''' grub e/o la sua configurazione (tramite il file /boot/grub/grub.conf). Il bootloader è un codice che risiede in una particolare zona del disco, viene eseguito nelle prime fasi di avvio e permette il caricamento del resto del sistema.<br />
-Per ripristinare e aggiornare grub seguire l'apposita [[Reinstallare_Grub|guida]].
+Qui nel forum esistono già vari post in cui si è trattato di problemi di bootloader, basta cercarli inserendo "bootloader" o "grub" come parola di ricerca.
 
 Se si è installato Fedora su un hard disk e si vuole tornare a Windows, bisogna cancellare l'hard disk da Fedora e rimuovere le partizioni Linux, prima che il cd/dvd di installazione di Windows sia in grado di riconoscere il disco di nuovo.<br />
 Per fare questo si usa il comando '''fdisk''', di cui si parla nella guida dischi e partizioni, le basi.<br />
