@@ -1,0 +1,68 @@
+{{Obsoleto}}
+== Introduzione ==
+
+Quando si avvia un computer sul quale Fedora è il sistema operativo prescelto, dopo il boot compare ''GRUB'', nel quale c'è almeno una riga che indica il kernel che sta per essere lanciato (di solito parte in automatico dopo pochi secondi).br />
+In seguito le righe aumenteranno (anche perché GRUB è un semplice file di testo configurabile a piacere dall'utente, ma l'impostazione standard di Fedora prevede soltanto 2 kernel disponibili contemporaneamente.
+
+== Verifica e procedura ==
+
+Si può verificare quanto appena detto digitando:
+
+ # cat /etc/yum/pluginconf.d/installonlyn.conf
+
+che dovrebbe restituire il seguente contenuto:
+
+ [main]
+ enabled=1
+ # this sets the number of package versions which are kept
+ tokeep=2
+
+A questo punto è evidente che la variabile da modificare è il numero arabo inserito nel file 'installonlyn.conf' dopo il segno "=" alla fine della riga ''tokeep''.
+
+Prima di procedere è meglio fare una copia di sicurezza del file:
+
+ # cp /etc/yum/pluginconf.d/installonlyn.conf /etc/yum/pluginconf.d/installonlyn.conf.old
+
+e poi modificare quello originale con il proprio editor preferito (gedit, vi, nano, kedit, emacs ecc.).
+
+{{Nota|Nota|Durante l'installazione di Fedora in alcuni computer (soprattutto quelli molto recenti, che sono molto potenti) insieme al kernel normale viene installata in automatico anche la versione modificata per far girare in modo nativo (cioè 'dentro' Fedora) Xen, un software in grado di far girare in modo paravirtualizzato altri sistemi operativi (cioè Solaris, altre versioni di GNU/Linux, ma anche Windows ecc.). Essi si distinguono facilmente da quelli 'normali' perché portano nel nome stesso l'indicazione 'xen': kernel.x86_64 MA kernel-xen.x86_64, kernel-devel.x86_64 MA kernel-xen-devel.x86_64 e così via...}}
+Questo significa che un kernel 'normale' e un altro 'xenizzato' contano già come 2 kernel, cioè esauriscono le possibilità di default.
+Quindi, se dopo la prima installazione si trova in GRUB un kernel e un kernel-xen (dato che di default sono solamente due), per evitare che in caso di malfunzionamenti non si avvii più nulla, conviene raddoppiare il numeretto indicato, per esempio ''tokeep=4''.
+
+{{Nota|Nota|Nel conteggio '''NON''' sono ovviamente compresi i vari kernel-devel, kernel-headers ecc. che servono per svolgere compiti particolari ma non possono esistere 'da soli', cioè senza il kernel di base.}}
+{{Warning|A partire da '''Fedora 8''' è cambiata l'organizzazione di questi files, in un certo senso semplificandola.<br />
+Le informazioni seguenti fanno riferimento a questa release, mentre le precedenti dovrebbero valere almeno fino alla 6 e/o alla 7.}}
+
+Il file sul quale bisogna operare (da "Wererwolf" in poi) è:
+
+ /etc/yum/yum.conf
+
+Subito dopo l'installazione esso contiene almeno le due righe seguenti:
+ 
+ [main]
+ installonly_limit=2
+
+Tuttavia per le ragioni suesposte il suggerimento è di portare il numero (come spiegato sopra, 2 è quello di default) almeno a 4: così si avrà la possibilità di far avviare da Grub uno di 4 kernel.<br />
+La modifica si può effettuare sul file:
+
+ yum.conf
+
+Naturalmente è sempre buona norma salvare la versione iniziale prima di cambiarlo:
+
+ # cp /etc/yum/yum.conf /etc/yum/yum.conf-old
+
+(o qualsiasi altro nome che vi faccia ricordare cosa sia).
+
+Tenere sempre conto che se si utilizza qualche plugin (p.es. fastestmirror o presto), nel file ci sarà anche la riga
+
+ plugins=1
+
+dove il numero non indica la quantità di plugin attivi nella propria Linuxbox, ma va inteso in senso binario: ossia, che questa opzione è attivata e funzionante.<br />
+Per maggiori delucidazioni e approfondimenti, in ogni caso, è opportuno prendere visione direttamente della man page specifica:
+
+ $ man yum.conf
+
+che è molto chiara, assai dettagliata e permette di specificare moltissime altre opzioni, oltre a queste "di base".
+L'unico 'difetto', per così dire, è che c'è solamente in inglese...
+
+[[Categoria:Grub]]
