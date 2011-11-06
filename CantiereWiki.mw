@@ -53,38 +53,20 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Convertire file del tipo docx (MS Office 2007) in Fedora 8|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=USB D-Link DWL-G122 Ver. C1|autore=RobertMayr|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Cambiare l'immagine di grub|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Modem Speedtouch 330 su Fedora Core|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Leggere i floppy da terminale|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Stampare le pagine man|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Webcam TRUST WB-1400T|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di una rete wifi|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=SDL_gfx risoluzione conflitto tra i repo dries e core|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Cancellare allegati da "mail evolution"|autore=RobertMayr|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=ATI Mobility Radeon 9600 M10|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Centrare lo schermo con xvidtune|autore=SimoneZaminga|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Due piccoli script bash di amministrazione utenti|autore=SimoneZaminga|stato=DaFare}}
-{{AggiungiArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=D-Link DWL G122 ver. B kernel 2.16 o superiore|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Nuovi servizi per Konqueror|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Impostare un RAID software|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Dischi e partizioni: le basi|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=VMware|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|stato=Terminato}}
 |}
-
-(*) esistono due guide su VMWare!
 
 == Rilettura in corso ==
 
@@ -124,13 +106,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Music on console|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Workaround per webcam con modulo uvcvideo|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Vademecum sicurezza|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Compiz-fusion & unsupported plugin|autore=RobertMayr|rilettore=MarioSantagiuliana|data=01/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Check capacità disco-popup di allarme|autore=RobertMayr|rilettore=MarioSantagiuliana|data=01/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Informazioni sul sistema|autore=RobertMayr|rilettore=MarioSantagiuliana|data=01/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Generare una password "casuale" con uno script in bash|autore=RobertMayr|rilettore=MarioSantagiuliana|data=02/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Touchpad|autore=RobertMayr|rilettore=MarioSantagiuliana|data=02/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Virtualizzazione|autore=RobertMayr|rilettore=MarioSantagiuliana|data=02/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=HP Photosmart C4380|autore=RobertMayr|rilettore=MarioSantagiuliana|data=02/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Configurazione VNC|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
@@ -155,11 +131,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Un server di posta con Postfix (e altre cosette...) v. 0.1 |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=01 Introduzione a Fedora|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=02 Repositories|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Wireless bcm43xx|autore=SimoneZaminga|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Disabilitare caricamento moduli del kernel|autore=SimoneZaminga|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=03 Fedora Updates |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Driver ATI schede pre 9250|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Google Desktop e i suoi gadgets|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=04 Aggiungere Applicazioni |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=05 Altri Desktop Environments |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 
@@ -168,28 +140,17 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=07 Amministrazione di utenti |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=08 Hardware |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=09 Masterizzare CD/DVD |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Prima pizzata Fedora Online-La vera storia|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Bytes letti/scritti da dd|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Gestione di tre sistemi operativi|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=OpenOffice, Java e Multimedia su Fedora Core|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=10 Funzionalità di rete|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=11 Desktop Remoto|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=12 Windows|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=13 Sicurezza |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=14 Rescue Mode |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=15 Trucchi vari |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Un centralino con Asterisk e Fedora|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=16 Samba Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=17 SSH |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=18 Database Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=19 Web Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=20 FTP Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Gestire gruppi di programmi con yum|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Gestire lo sfondo casuale di Gnome|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Come compilare il kernel di Fedora partendo dai sorgenti|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Yum localinstall simulato|autore=RobertMayr|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=-|articolo=Tunnel criptato via SSH|autore=GabrieleTrombini|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=-|articolo=RPMFusion|autore=GabrieleTrombini|rilettore=MarioSantagiuliana|data=04/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Controllare il Desktop con vnc attraverso un tunnel ssh|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Samba: condivisione tra Fedora e Windows|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
@@ -199,10 +160,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Wifi wpa2-psk con Acer Aspire 5315, chipset AR5006EG|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Fedora su PowerBook G3 Pismo|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Installazione di una scheda wireless generica|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Gdesklets|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=VPN tra router Netgear DG834G e PC Linux in Dial-Up|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Abilitare Compiz Fusion con driver fglrx e AIGLX su Fedora: Schede AMD/ATI|autore=RobertMayr|rilettore=MarioSantagiuliana|data=05/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Trasferimento di file gz su pendrive|autore=SimoneZaminga|rilettore=MarioSantagiuliana|data=06/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=D-Link DWL G122 ver. B kernel 2.16 o superiore|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Nuovi servizi per Konqueror|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
