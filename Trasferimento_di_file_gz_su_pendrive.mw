@@ -7,7 +7,7 @@ Questo piccolo script è in grado di :
 <li> gestire gli eventuali errori.</li>
 </ol>
 
-'''nota per chi legge e corregge.. bisogna lasciare questa riga sottostante?'''</br>
+'''nota per chi legge e corregge.. bisogna lasciare questa riga sottostante?'''<br/>
 Esso è il risultato di mie riflessioni e dell'aiuto di altri utenti di Fedoraonline come si può evincere dalla [http://www.fedoraonline.it/modules/newbb/viewtopic.php?post_id=73962#forumpost73962 discussione]. 
  <nowiki>
 #!/bin/bash
