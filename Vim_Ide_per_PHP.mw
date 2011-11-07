@@ -1,19 +1,11 @@
-Questa guida è pubblicata anche sul mio sito web a questo indirizzo: [http://blog.marionline.it/?p=271 http://blog.marionline.it/?p=271].
-<br />
-Ho creato una versione pdf di questo articolo con latex, lo si può liberamente scaricare sempre dal mio sito web, forse la versione pdf è anche di più facile lettura rispetto alla versione online...questione di gusti.<br />
 == Introduzione ==
 
 Se si programma codice php è importante avere un buon strumento che aiuti nella creazione e scrittura del codice.<br />
 Per scrivere applicazioni php basta anche un semplice editor di testo oppure si può utilizzare un IDE (Integrated Development Enviroment). Nel mondo open-source esistono moltissimi strumenti per scrivere in modo semplice e veloce i propri script o codici.<br />
-Io utilizzo Vi Improved (Vim), lo reputo molto potente e in grado di velocizzare di molto lo sviluppo e la scrittura di qualsiasi cosa, dopo aver compreso il suo funzionamento e dopo averlo opportunamente configurato ed eventualmente esteso (con appositi plugin) secondo le proprie necessità e gusti.<br />
-Voglio dunque presentare i passi che ho seguito per poter tramutare il mio editor di testo preferito in un potente editor per il linguaggio Php, fino a farlo diventare pressochè un IDE perfetto per Php che non ha nulla da invidiare ad altri strumenti di sviluppo.<br />
-Questo mini-howto si rivolge principalmente ad un utente che utilizza come sistema operativo fedora. Io infatti uso fedora (al momento in cui scrivo fedora 12 a 64bit). Ciò non significa che i passi proposti non possano essere seguiti su di un altra distribuzione Linux o simil Unix, bisognerà solo fare attenzione ad alcune piccole differenze.<br />
-Ciò che presento è perfettamente funzionante sulla serie 7 di Vim installato su fedora 12 a 64 bit. Se esistono esperienze che confermino il buon funzionamento dei passaggi da me proposti anche in altre architetture e S.O. (Sistema Operativo) prego di farmi sapere.<br />
-Prima di continuare voglio far sapere che in rete si trovano moltissimi articoli e guide simili a ciò che ho scritto.<br />        
-Questo articolo:
-[http://www.koch.ro/blog/index.php?/archives/63-VIM-an-a-PHP-IDE.html http://www.koch.ro/blog/index.php?/archives/63-VIM-an-a-PHP-IDE.html]
-mi ha dato dei buoni suggerimenti su come iniziare a fare la mia prima configurazione di Vim.<br />
-Questo mini-howto (o come si vuole chiamare) sarà composto da queste sezioni:
+Vi Improved (Vim) è molto potente e in grado di velocizzare di molto lo sviluppo e la scrittura di qualsiasi cosa, ovviamente dopo aver compreso il suo funzionamento e dopo averlo opportunamente configurato ed eventualmente esteso (con appositi plugin) secondo le proprie necessità e gusti.<br />
+Nella presente guida verranno presentati i passi per poter tramutare l'editor di testo in un potente editor per il linguaggio Php, fino a farlo diventare pressochè un IDE perfetto per Php che non ha nulla da invidiare ad altri strumenti di sviluppo.<br />
+L'articolo si rivolge principalmente ad un utente che utilizza come sistema operativo Fedora. Ciò non significa che i passi proposti non possano essere seguiti su di un altra distribuzione Linux o simil Unix, bisognerà solo fare attenzione ad alcune piccole differenze.<br />
+La guida è perfettamente funzionante sulla serie 7 di Vim installato su fedora 12 a 64 bit.<br />
 
 __TOC__
 
@@ -22,7 +14,7 @@ __TOC__
 Per incominciare bisogna installare Vim, aprendo un terminale basta digitare in Fedora:
 
  $ su -c "yum install vim-minimal vim-common vim-enhanced" 
-Non esplico l'installazione e la configurazione di un server LAMP (Linux Apache MySql Php).
+L'installazione e la configurazione di un server LAMP (Linux Apache MySql Php) può essere seguita nell'apposita [[:LAMP|guida]].
 
 == Configurazione base ==
 
@@ -243,7 +235,9 @@ Esistono molti altri plugin per Vim, reperibili dal sito web di Vim, che non ho 
 Se esiste un plugin utile che non ho menzionato prego di farmi sapere così vedrò di estendere ulteriormente questo articolo.
 <br />
 
-----
+== Riferimenti ==
 
-[[Categoria:Rilettura in corso]]
-[[:Categoria:Programmazione e Sviluppo]]
+* [http://blog.marionline.it/?p=271 http://blog.marionline.it/?p=271]
+* [http://www.koch.ro/blog/index.php?/archives/63-VIM-an-a-PHP-IDE.html http://www.koch.ro/blog/index.php?/archives/63-VIM-an-a-PHP-IDE.html]
+
+[[Categoria:Programmazione e Sviluppo]]
