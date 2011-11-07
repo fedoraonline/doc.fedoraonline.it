@@ -1,6 +1,9 @@
+== Introduzione ==
 Di recente si parla tanto di GRUB2, la nuova versione del bootloader più usato nell'ambiente GNU/Linux.<br />
 Molti parlano delle sue potenzialità, molti lo criticano ma sono indiscusse le sue qualità, pratiche ed estetiche.<br />
 In primo luogo la possibilità di effettuare il boot da immagini ISO, estremamente comodo per distribuzioni di ripristino del sistema, recupero dati e perché no, di prova.
+
+== Installazione ==
 
 Purtroppo i pacchetti forniti nei repository Fedora sono piuttosto lacunosi ma viste le poche dipendenze è piuttosto facile compilarlo da se includendo le funzionalità necessarie per mostrare le sue vere potenzialità...
 
@@ -16,9 +19,9 @@ e estrarlo:
  (-f = accetta l'argomento del file al posto dello stdin)
 a questo punto entrare nella cartella generata:
  $ cd grub-1.97
-prima di compilare abbiamo bisogni di poche dipendenze:
+prima di compilare bisogna aggiungere alcune dipendenze:
  $ yum install bison diffutils gawk gcc
-ed eventuali soliti utili per la compilazione che se mancano vi verrà segnalato dallo script di configurazione...
+ed eventuali soliti utility per la compilazione che se mancano vi verrà segnalato dallo script di configurazione...
 
 Ora, assicurarsi di avere gli strumenti necessari (mancanti negli rpm di fedora), eseguire:
  $ ./configure --enable-grub-mkfont
@@ -38,7 +41,7 @@ Il mio consiglio è quello di usare i font Unicode poiché alcuni caratteri spec
 
 I font unicode sono reperibili qui:<br />
 [http://unifoundry.com/unifont-5.1.20080820.pcf.gz http://unifoundry.com/unifont-5.1.20080820.pcf.gz]<br />
-a questo punto non resta che copiarli nel nostro hd di boot o ovunque si è in grado di reperirli da grub (è preferibile una partizione senza lvm come anche quello di boot generato automaticamente dall'installazione di fedora)
+a questo punto non resta che copiarli nel hd di boot o ovunque si è in grado di reperirli da grub (è preferibile una partizione senza lvm come anche quello di boot generato automaticamente dall'installazione di fedora)
 
 {{Warning|Attenzione, in questa parte si sta scrivendo l'MBR sull'hd e se l'operazione non va a buon fine si rischia di non avere l'accesso all'installazione quindi
 # Non mi ritengo responsabile per eventuali problemi
@@ -47,7 +50,7 @@ a questo punto non resta che copiarli nel nostro hd di boot o ovunque si è in g
 Ora installare grub sul mbr:<br />
 ovviamente con i privilegi di superutente ($ su):
  # grub-install --no-floppy /dev/sdX
-con al posto di sdX l'hd che impostato come di boot dal bios...
+al posto di sdX inserire l'hd impostato al boot dal bios...
 
 Bene, ora è tutto pronto, non resta che configurare...
 
@@ -61,18 +64,18 @@ con al posto di <menuentrydefault> il menuentry preferito nell'ordine in cui si 
 E fin qui niente di nuovo...<br />
 Ora impostare la partizione di lavoro di grub (quella dove si hanno le immagini di sfondo e fonts)
  set root=(hd0,0)
-con al posto di (hd0,0) la partizione di boot (badare che grub0.xx già di suo aveva una tabella particolare:
+al posto di (hd0,0) indicare la partizione di boot (badare che grub0.xx già di suo aveva una tabella particolare:
  hd0 -> /dev/sda - hd0,0 -> /dev/sda1 - hd0,1 -> /dev/sda2
  hd1 -> /dev/sdb - hd0,0 -> /dev/sdb1 - hd0,1 -> /dev/sdb2
 ora per semplificare le cose (o meglio, complicarle a chi è abituato già alle stranezze di grub0.xx) sono:
  hd0 -> /dev/sda - hd0,1 -> /dev/sda1 - hd0,2 -> /dev/sda2
  hd1 -> /dev/sdb - hd0,1 -> /dev/sdb1 - hd0,2 -> /dev/sdb2
-per il nostro sommo gaudio grub2 ha un'eccellente funzione chiamata search che permette di trovare il disco (hdx,x) tramite il suo uuid, così prevenendo anche problemi di scambio di dischi e la sintassi (per quanto sia impossibile trovarla) è piuttosto semplice:
+per il sommo gaudio degli utenti grub2 ha un'eccellente funzione chiamata search che permette di trovare il disco (hdx,x) tramite il suo uuid, così prevenendo anche problemi di scambio di dischi e la sintassi (per quanto sia impossibile trovarla) è piuttosto semplice:
  search -s root --fs-uuid <UUID dell'HD>
 al posto di set root....<br />
 e per rintracciare l'uuid del disco di boot basta fare un bel:
  ls -l /dev/disk/by-uuid/
-se si hanno dubbi su quale sia eseguire da root fdisk -l e vedere qual'è il disco con l'asterisco che sarà il disco di boot.<br />
+Se si hanno dubbi su quale sia, eseguire da root ''fdisk -l'' e vedere qual'è il disco con l'asterisco che sarà il disco di boot.<br />
 Ora per la grafica:
  insmod font
  insmod gfxterm
@@ -89,14 +92,14 @@ Ora per la grafica:
          set menu_color_normal=cyan/blue
          set menu_color_highlight=white/blue
  fi
-con al posto di 1280x1024x32 la risoluzione che si preferisce nel medesimo formato (es. 800x600x16) e l'ultima parte (quella che indica la profondità di colore è consigliabile ometterla così cercherà da solo quella ottimale e compatibile).
+Al posto di ''1280x1024x32'' impostare la risoluzione che si preferisce nel medesimo formato (es. 800x600x16) e l'ultima parte (quella che indica la profondità di colore è consigliabile ometterla così cercherà da solo quella ottimale e compatibile).
 
 Al posto di /boot/theme/unifont.pf2 bisogna indicare il path completo del font generato precedentemente (attenzione a inserirlo in una partizione raggiungibile, altrimenti funziona lo stesso ma niente grafica...).
 
 Al posto di /boot/theme/boot.png inserire il nome dell'immagine di sfondo (possibilmente proporzionata alla risoluzione che impostata)<br />
 (se si preferisce il formato tga basta cambiare anche insmod png in insmod tga)<br />
 e dulcis in fundo... le opzioni nel menu (menuentry):<br />
-riporto un esempio che si dovrà correggere con le impostazioni del proprio kernel e del proprio inird file...
+Di seguito si riporta un esempio che si dovrà correggere con le impostazioni del proprio kernel e del proprio ''initrd'' file...
  menuentry "Fedora (2.6.30.9-96.fc11.x86_64)" {
          linux   /boot/f11/vmlinuz-2.6.30.9-96.fc11.x86_64 root=/dev/mapper/vg0-lv0 ro quiet
          initrd  /boot/f11/initrd-2.6.30.9-96.fc11.x86_64.img
@@ -108,8 +111,7 @@ riporto un esempio che si dovrà correggere con le impostazioni del proprio kern
          drivemap $root (hd0)
          chainloader +1
 
-Come si sarà notato lo stesso giochetto di search per trovare la partizione si può fare anche all'interno dei menuentry, la funzione per caricare il kernel è a differenza di grub quella che vede (linux /boot.....)<br />
-et voilà, ecco un magnifico avvio grafico e con la possibilità (che spiegherò in un'altra guida) di avviare con le funzioni (loop) anche le immagini iso...<br />
-Ora mi rendo conto che dopo una notte passata totalmente in bianco (nemmeno 10 minuti di sonno) ho scritto una guida su grub2 e quindi mi sento molto "nerd" e stanco quindi vado a dormire... e se ci sono imprecisioni o se non si capisce niente ditemelo e siate comprensivi con un morto di sonno...
+Si nota che lo stesso giochetto di search si può fare anche per trovare la partizione all'interno dei menuentry, la funzione per caricare il kernel è a differenza di grub quella che vede (linux /boot.....)<br />
+et voilà, un magnifico avvio grafico e la possibilità di avviare con le funzioni (loop) anche le immagini iso...<br />
 
-Stefano - UnoSD
+[[Categoria:Grub]]
