@@ -1,4 +1,3 @@
-Articolo pubblicato anche sul mio blog a [http://blog.marionline.it/linux/fedora/montare-alcuni-file-immagine-senza-i-privilegi-di-root/ questo indirizzo].<br />
 Rispondere alla domanda: "'''come si può vedere il contenuto dei file .iso?'''" è molto semplice se si è utenti root o se si può accedere in amministrazione alla macchina che si ha a disposizione. Basta semplicemente montare il file con un comando analogo (da utente root ovviamente):
 
  # mount -o loop file.iso directory_di_mount/
@@ -25,7 +24,9 @@ Altre informazioni sulle opzioni di fuseiso si possono ottenere lanciandolo con 
 
  $ fuseiso -h
 
-Altra documentazione utile (in Inglese):
-*[http://www.thegeekstuff.com/2009/06/how-to-mount-view-iso-file-as-root-and-non-root-user-in-unix/#more-553 How To Mount and View ISO File as Root and Regular User in Linux]
+
+==Riferimenti e documentazione==
+* Articolo pubblicato precedentemente su [http://blog.marionline.it/linux/fedora/montare-alcuni-file-immagine-senza-i-privilegi-di-root/ marionline.it].
+* [http://www.thegeekstuff.com/2009/06/how-to-mount-view-iso-file-as-root-and-non-root-user-in-unix/#more-553 How To Mount and View ISO File as Root and Regular User in Linux] (in Inglese).
 
 [[Categoria:Sistema]]
