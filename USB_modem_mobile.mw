@@ -1,17 +1,14 @@
 Spesso gli usb modem di tipo mobile con connessione internet tramite UMTS oppure EDGE od anche GSM, danno diversi "grattacapi" per la loro installazione.<br />
 Nel nostro Sito ci sono diverse guide su pennette specifiche, guide a firma di diversi ottimi utenti, oltre a innumerevoli discussioni.<br />
 Questa guida vuole fornire i mezzi conoscitivi per mettervi in grado di porre rimedio qualunque sia l'hardware di cui disponete.
-
-* il prompt '''$''' indica i comandi da dare come utente
-* il prompt '''#''' indica i comandi da dare come root.
-
+{{Scrittura|Il prompt '''$''' indica i comandi da dare come utente;<br />
+Il prompt '''#''' indica i comandi da dare come root.}}
 == Individuare il dispositivo ==
 Alcuni di questi dispositivi ingannano il sistema, settano, colpevolmente e coscientemente, in maniera errata gli identificativi hardware.<br />
-Vi mostreremo come sia possibile risettare gli identificativi e permettere al kernel un adeguato riconoscimento del dispositivo.<br />
-Supponiamo di avere una siffatta pennetta ed alla sua introduzione, il comando:
+Si dimostrerà come sia possibile risettare gli identificativi e permettere al kernel un adeguato riconoscimento del dispositivo.<br />
+Si suppone di avere una siffatta pennetta ed alla sua introduzione, il comando:
 
- # lsusb
- 
+ # lsusb 
 risponde:
 
  Bus 001 Device 003: ID. '''19d2:2000''' Pinco-Pallina Communication S.p.A.
@@ -295,8 +292,6 @@ farla diventare:
 oppure
  Modem = /dev/ttyUSB3
 
-salvare chiudete, riprovare.
+salvare, chiudere e riprovare.
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Installazione]]
 [[Categoria:Hardware]]
