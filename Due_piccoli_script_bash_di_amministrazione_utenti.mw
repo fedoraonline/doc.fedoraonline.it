@@ -1,12 +1,12 @@
-== Introduzione ==
+Sono due script per amministrare l'abilitazione degli utenti.
 
-I seguenti sono due script per amministrare l'abilitazione degli utenti.<br />
-Questo articolo tratta di un piccolo serverino dove si collegano per lavoro una decina di utenti. Ho cominciato da qualche settimana a studiare gli script della bash ed ho prodotto questi script di cui sono molto orgoglioso (sono i primi che faccio in vita mia). Siccome ho imparato molto da questo sito li metto a disposizione a voi anche per miglioramenti.
+Ho fatto da un mese un piccolo serverino dove si collegano per lavoro una decina di utenti. Ho cominciato da qualche settimana a studiare gli script della bash ed ho prodotto questi script di cui sono molto orgoglioso (sono i primi che faccio in vita mia). Siccome ho imparato molto da questo sito li metto a disposizione a voi anche per miglioramenti.
 
-== Operazioni di esempio ==
+Alle 7:00 del mattino il demone crond fa partire questo
+script. Abilita gli utenti solo se non è sabato o domenica:
 
-Alle 7:00 del mattino il demone crond fa partire questo script. Abilita gli utenti solo se non è sabato o domenica:
-<pre>#!/bin/bash
+ <nowiki>
+script#!/bin/bash
 VARDATA=`date +%a`
 echo $VARDATA
 echo
@@ -34,9 +34,12 @@ dom) quit;;
 Sat) quit;; # Occorre dare in inglese il valore
 Sun) quit;; # Occorre dare in inglese il valore
 *) permetti;;
-esac</pre>
+esac
+ </nowiki>
+
 Alle sette di sera il demone crond fa partire invece questo script:
-<pre>#!/bin/sh
+ <nowiki>
+#!/bin/sh
 clear
 passwd -l utente1
 passwd -l utente2
@@ -46,8 +49,7 @@ echo
 echo Utenti temporaneamente sospesi!
 echo ------------------------------
 echo
-echo</pre>
+echo
+ </nowiki>
 
-Saranno un po' rospi, ma funzionano.
-
-[[Categoria:Programmazione e Sviluppo]]
+Saranno un po' rospi, ma a me funzionano.
