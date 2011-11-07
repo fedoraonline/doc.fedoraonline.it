@@ -10,7 +10,7 @@ Sopra sono elencati i pacchetti che serviranno, quindi, per installare:
 
  # yum install tigervnc*
 
-Una volta terminata l'installazione, procedere a configurare il server vnc. Il consiglio è di non utilizzare l'utenza root per connettersi tramite vnc in quanto esso non ha connessione criptata e  l'utenza root dovrebbe essere utilizzata solo in caso di estrema necessità, quindi, imposatre la password per vnc:
+Una volta terminata l'installazione, procedere a configurare il server vnc. Il consiglio è di non utilizzare l'utenza root per connettersi tramite vnc in quanto esso non ha connessione criptata e  l'utenza root dovrebbe essere utilizzata solo in caso di estrema necessità, quindi, impostare la password per vnc:
 
  $ vncpasswd
  Password: 123456
@@ -50,6 +50,4 @@ Quindi digitare:<br />
 <br />
 Ora dovrebbe essere tutto ok, e si dovrebbe essere in grado di connettersi tramite vnc.
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Sistema]]
 [[Categoria:Rete e Server]]
