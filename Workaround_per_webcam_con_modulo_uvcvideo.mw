@@ -6,7 +6,7 @@ sono mal gestite dal modulo uvcvideo che è "costretto" all'errore:
  uvcvideo: Failed to query (129) UVC probe control : -110 (exp. 26).
  uvcvideo: Failed to initialize the device (-5)
 
-se ci si trova in una situazione del genere, consigliamo di eseguire la seguente procedura testata sul kernel 2.6.30 F11.
+Se ci si trova in una situazione del genere, consigliamo di eseguire la seguente procedura testata sul kernel 2.6.30 F11.
 
 == Prima di tutto installare: ==
  # yum groupinstall "Strumenti di sviluppo"
@@ -27,7 +27,7 @@ http://linuxtv.org/hg/v4l-dvb/archive/tip.tar.gz
 
  $ cd /home/utente/Scaricati
 
-dove utente è il Proprio utente
+dove utente è il proprio utente
 
  $ tar zxvf v4l-dvb-19c0469c02c3.tar.gz
  $ cd v4l-dvb-19c0469c02c3
@@ -78,7 +78,6 @@ scollegare e rimettere la cam e verificare l'output di:
 
 se non viene più segnalato nulla e viene creato il dispositivo /dev/video0, allora vuol dire che tutto è in ordine.
 
-Aprire una applicazione del tipo cheese oppure camorana e godetesi la Propria cam.
+Aprire una applicazione del tipo ''cheese'' oppure ''camorana'' e godersi la propria cam.
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Multimedia]]
+[[Categoria:Webcam]]
