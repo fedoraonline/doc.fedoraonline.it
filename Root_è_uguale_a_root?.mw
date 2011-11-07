@@ -1,5 +1,5 @@
 Diventare root spesso non ci da tutti i permessi, perchè? Dipende dai diritti e dalla path che usiamo.<br />
-Loggarsi come root da terminale permette di eseguire le varie operazioni di amministrazione, installazione o configurazione del proprio sistema. Guardando meglio, però, root non è uguale a root... ovvero, digitando il seguente comando nel terminale:
+Loggarsi come root da terminale permette di eseguire le varie operazioni di amministrazione, installazione o configurazione del proprio sistema. Guardando meglio, però, root non è uguale a root...ovvero, digitando il seguente comando nel terminale:
 
  $ su
  password
