@@ -1,7 +1,9 @@
 {{Nota|Nota:|Configurazione di una connessione Libero ADSL col driver cxacru (modem Pocket USB ADSL Atlantis-Land) utilizzando le applet di Fedora Core 5.}}
 
 ==Introduzione==
-Questa guida ha lo scopo di semplificare la configurazione e l'utilizzo di una connessione ADSL con il driver ''cxacru''.
+Questa guida può essere considerata un corollario al seguente articolo: http://www.fedoraonline.it/modules/wfsection/article.php?page=1&articleid=82
+
+Lo scopo è semplificare la configurazione e l'utilizzo di una connessione ADSL col driver cxacru.
 
 La Fedora Core 5 utilizzata è:
 
@@ -61,7 +63,7 @@ Successivamente si crea una configurazione di device di tipo "Modem connection" 
  Make this connection the default route: Checked
  Modem port: ppp0
 
-Ovviamente bisogna rimpiazzare i valori tra '''( )''' con i propri dati (es. utente, password ecc.).
+Ovviamente bisogna rimpiazzare i valori tra '''()''' con i propri dati (es. utente, password ecc.).
 
 Il numero di telefono utilizzato è fittizio (non si effettua una chiamata).<br />
 Libero richiede anche il dominio per identificare l'utente.<br />
@@ -107,9 +109,11 @@ Come risultato, dopo aver salvato la configurazione, si ottengono i seguenti fil
  "your_userATyour_domain"     *       "your_password"
  ####### redhat-config-network will overwrite this part!!! (end) ############
 
+
 * File '''/etc/ppp/peers/ppp0''':
  
  connect "/usr/bin/wvdial --remotename ppp0 --chat 'ppp0'"
+
 
 * File '''/etc/sysconfig/network-scripts/ifcfg-ppp0''':
  
@@ -139,6 +143,7 @@ Come risultato, dopo aver salvato la configurazione, si ottengono i seguenti fil
  IDLETIMEOUT=600
  LINESPEED=9600
  MODEMPORT=/dev/ttyS0
+
 
 ==Avvio della connessione ADSL==
 
@@ -182,4 +187,7 @@ Il file '''/etc/resolv.conf''' viene modificato automaticamente dagli script di 
 Ho avuto qualche problema con le applet di configurazione, in quanto a volte riportano inaspettatamente i parametri impostati ai rispettivi valori di default (in particolare quelli con la selezione a tendina).<br />
 '''Soluzione:''' controllare sempre tutte le impostazioni prima di salvare la configurazione.
 
-[[Categoria:Hardware]]
+Buon divertimento con Fedora
+ergosum
+
+[[Categoria:Sistema]]
