@@ -1,7 +1,7 @@
+__TOC__
 La procedura seguente permetterà di installare un simpatico quanto leggero ed efficiente player musicale per linea di comando:<br />
 MOC - Music On Console<br />
-gli rpm disponibili in rete non funzionano su Fedora 12 per una diversa disposizione dei file riguardante i codecs nell'albero di sistema.
-
+{{Warning|Gli rpm disponibili in rete non funzionano su Fedora 12 per una diversa disposizione dei file riguardante i codecs nell'albero di sistema.}}
 == Operazioni preliminari ==
 Controllare di avere gli strumenti di sviluppo installati, in caso negativo dare un:
 
@@ -53,5 +53,4 @@ oppure al sito di sviluppo : http://moc.daper.net/
 
 Buon ascolto con moc.
 
-[[:Categoria:Scrittura in corso]]
 [[Categoria:Multimedia]]
