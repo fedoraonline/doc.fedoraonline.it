@@ -82,16 +82,17 @@ Anche l'output di locate può essere passato a less.
 
 Praticamente tutte le impostazioni di Linux sono contenute in file di testo, ad esempio la risoluzione dello schermo o il tipo di layout della tastiera.<br />
 Per modificare un file di testo, un programma molto usato è '''vi''', ha moltissime funzioni.<br />
-Esiste già un tutorial che ne spiega [[Guida base ai comandi vi|l'uso di base]]
+Qui sul forum esiste già un tutorial che ne spiega l'uso di base.<br />
+http://www.fedoraonline.it/modules/wfsection/article.php?articleid=46
 
 ==Interrompere un comando==
 
-Per interrompere l'esecuzione di un comando si usa la combinazione di tasti ''CTRL+C''.
+Per interrompere l'esecuzione di un comando si usa la combinazione di tasti CTRL+C
 
 ==Le pagine di manuale==
 
 Tutti i comandi hanno un manuale in linea su Linux, per richiamare le istruzioni su come usare un comando si usa il comando '''man nomecomando'''.<br />
-All'interno delle pagine di manuale ci si sposta in su e in giù tra le varie pagine con i tasti PGSU e PGGIU della tastiera. Si esce dal manuale premendo '''q'''.<br />
+All'interno delle pagine di manuale ci si sposta in su e in giù tra le varie pagine con i tasti PGSU e PGGIU della tastiera. Si esce del manuale premendo q.<br />
 Naturalmente ciò che apparirebbe sullo schermo può essere passato ai comandi grep e less per filtrare i le pagine.
 
 [[Categoria:Sistema]]
