@@ -6,7 +6,7 @@ La politica di avere molti servizi attivi al lancio del sistema non è da noi co
 Vediamo quale attivazione dei servizi può ritenersi '''minimale''' in un sistema '''desktop''', in maniera tale che sia possibile procedere alla abilitazione del servizio in un secondo momento, controllando la corretta configurazione dello stesso.
 La configurazione qui esposta, con '''Selinux disattivato''', impegna circa '''100 Mb''' di memoria ram allo startup completo del sistema con interfaccia grafica ( runlevel 5)
 
-Per la descrizione dei singoli servizi vi rimando alla guida di [url=http://www.fedoraonline.it/modules/smartsection/item.php?itemid=265]Miranda[/url]
+Per la descrizione dei singoli servizi vi rimando alla guida di [[:Services in Fedora 11 di Mauriat Miranda|Miranda]].
 
 Se avete necessità di abilitare o disabilitare servizi potete usare il tool:
 
@@ -299,6 +299,4 @@ Componente critico da tenere necessariamente abilitato.
 ==zvbid==					
 è raccomandato tenerlo: ''' disabilitato  '''
 
-[[:Categoria:Scrittura in corso]]
 [[Categoria:Sistema]]
-[[Categoria:Rete e Server]]
