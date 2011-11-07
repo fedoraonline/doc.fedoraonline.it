@@ -8,7 +8,7 @@ Per prima cosa verificare che il filesystem da convertire sia montato e che sia 
  # blkid  /dev/mapper/vg_test-lv_test
  /dev/mapper/vg_test-lv_test: UUID="202a3efa-bfad-4a7c-ac41-7fd4bf691700" SEC_TYPE="ext2" TYPE="ext3" 
 
- {{Warning|Smontare il filesystem prima di eseguire tutte le operazioni di modificare.}} 
+ {{Warning|Smontare il filesystem prima di eseguire tutte le operazioni di modifica.}} 
 
  # umount /mnt
 
@@ -86,7 +86,6 @@ Verificare tramite il comando tune2fs, la features e grandezza degli extent impo
  
 Con il comando tune2fs verrà forzata la grandezza degli inode a 256 e aggiunte le features del nuovo filesystem ext4. 
 
-
  # tune2fs -I 256 -O has_journal,extents,huge_file,flex_bg,uninit_bg,dir_nlink,extra_isize /dev/vg_test/lv_test 
  tune2fs 1.41.9 (22-Aug-2009)
  The inode size is already 256
@@ -117,3 +116,5 @@ Verificare con il comando blkid che il tipo del filesystem sia modificato.
 
  # blkid /dev/vg_test/lv_test 
  /dev/vg_test/lv_test: UUID="202a3efa-bfad-4a7c-ac41-7fd4bf691700" TYPE="ext4"
+
+[[Categoria:Sistema]]
