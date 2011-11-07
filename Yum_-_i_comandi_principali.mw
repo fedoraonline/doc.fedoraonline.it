@@ -1,4 +1,4 @@
-Yum è molto semplice da usare, la cosa più importante è che sia configurato con i repositories più usati (vedi guida), poi loggiarsi come root e vedere i comandi più frequenti.
+Yum è molto semplice da usare, la cosa più importante è che sia configurato con i repository più usati, poi loggarsi come root e vedere i comandi più frequenti.
 
  $ su
  password
@@ -88,5 +88,4 @@ Questo file disabilita i plugins di yum:
 oppure
  # yum install nomepacchetto --noplugins
 
-[[Categoria:Sistema]]
 [[Categoria:Yum]]
