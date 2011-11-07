@@ -1,5 +1,4 @@
-Questo articolo è anche pubblicato sul mio blog a questo indirizzo:
-http://blog.marionline.it/linux/partizione-criptata-disco-esterno-ext4/<br />
+Questo articolo è anche pubblicato sul mio blog a questo indirizzo: http://blog.marionline.it/linux/partizione-criptata-disco-esterno-ext4/<br />
 Ho da poco acquistato un harddisk esterno usb per poter eseguire i backup del mio pc.<br />
 L'harddisk, come la maggioranza di quelli presenti sul mercato, è formattato e partizionato con un filesystem NTFS.<br />
 Io preferisco il software libero e dunque vorrei usare un filesystem tipo ext4.<br />
@@ -38,7 +37,7 @@ Per criptare la partizione la cosa è molto semplice, basta lanciare tale comand
 
  # cryptsetup luksFormat /dev/sdb1
 
-<code>/dev/sdb1</code> è il mio "device", cioè la mia partizione che voglio criptare.
+<code>/dev/sdb1</code> è il mio "device", cioè la mia partizione che voglio criptare.<br />
 Il software chiederà di confermare la volontà a procedere con l'operazione (se ci sono dati verranno cancellati, infatti eliminerà la formattazione presente), chiederà una passphrase e la sua conferma.<br />
 Ora la partizione è criptata però non è formattata con un filesystem...<br />
 Per prima cosa, dopo aver criptato la partizione, bisogna stabilire un punto di mappatura per potervi accedere "in chiaro". Si può procedere così:
@@ -108,11 +107,8 @@ Fornire la passphrase, e montare il dispositivo criptato con mount, fare le oper
 
 Volendo si può configurare udev per eseguire il montaggio automatico del dispositivo alla connessione alla porta usb o cercare di utilizzare udisks con le opportune regole in udev per montare e smontare il dispositivo da utente normale. Io per ora mi limito ad utilizzare la semplicità di Kde per montare e smontare dispositivi esterni.<br />
 Altra cosa interessante di cryptsetup e poter aggiungere altre chiavi o file di chiave per aprire il dispositivo. Nel secondo caso non occorre inserire la passphrase per aprire la partizione criptata, basta avere a disposizione il file di chiave. Per questo rimando ai documenti sotto riportati.
-<br />
 
-----
-<br />
-Riferimenti utili:
+==Riferimenti utili==
 
 * [http://appuntilinux.mirror.garr.it/mirrors/appuntilinux/a2/a230.htm Appunti di informatica libera]
 * [http://kriener.org/articles/2009/06/29/encrypt-your-hard-disk http://kriener.org/articles/2009/06/29/encrypt-your-hard-disk]
@@ -121,4 +117,3 @@ Riferimenti utili:
 * [https://wiki.archlinux.org/index.php/System_Encryption_with_LUKS https://wiki.archlinux.org/index.php/System_Encryption_with_LUKS]
 
 [[Categoria:Sistema]]
-[[Categoria:Rilettura in corso]]
