@@ -13,7 +13,7 @@ Lo stesso risultato si poteva raggiungere con un comando solo, ovvero:
 
  # chown gigi:scuola file
 
-Si passa ora alla gestione vera e propria dei permessi.<br />
+Si passa ora alla gestione vera e propria dei permessi:<br />
 Come detto prima i permessi per ogni categoria sono 3:<br />
 * Lettura (read=r)
 * Scrittura (write=w)
@@ -22,13 +22,13 @@ Come detto prima i permessi per ogni categoria sono 3:<br />
 Provare a vedere i permessi di un file e digitando:
 
  # ls -l
- -rw-r--r--  1 root root     0 27 gen 15:02 file.txt
+-rw-r--r--  1 root root     0 27 gen 15:02 file.txt
 
 Come si può vedere il file.txt appartiene a root del gruppo root e ha i seguenti permessi:
 * Il proprietario può leggere e scrivere il file (rw-)
 * Il gruppo può solo leggere il file (r--)
 * Altri utenti possono solo leggere il file (r--)
-Ora si vuole modificare i permessi, in modo che il gruppo possa fare qualsiasi operazione. Per indicare le categorie si useranno le opzioni: 
+Ora si vuole modificare i permessi, in modo che il gruppo possa fare qualsiasi operazione. Per indicare le categorie si useranno le opzioni 
  -a (all=tutti)
  -u (user=utente)
  -g (group=gruppo)
