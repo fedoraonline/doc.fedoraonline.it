@@ -88,15 +88,15 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Ksplice:aggiornamento kernel a caldo|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=USB modem mobile|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Music on console|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Workaround per webcam con modulo uvcvideo|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Vademecum sicurezza|autore=MarioSantagiuliana|rilettore=?|data=30/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Configurazione VNC|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Services in Fedora 11 di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Ksplice:aggiornamento kernel a caldo|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=USB modem mobile|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Music on console|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Workaround per webcam con modulo uvcvideo|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Vademecum sicurezza|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Ranpwd: Generatore di password casuali da terminale|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Servizi: ottimizzazione Desktop|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Configurazione VNC|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Services in Fedora 11 di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Quota Linux|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Resctricted bash|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Gestione base dei pacchetti rpm|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
@@ -184,9 +184,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Gestione dei permessi|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Midnight Comander|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Il tasto TAB|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Yum - i comandi principali|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-
-
 |}
 
 
