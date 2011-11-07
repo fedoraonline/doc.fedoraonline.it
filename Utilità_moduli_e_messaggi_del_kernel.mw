@@ -1,8 +1,7 @@
-Spesso si ha bisogno di alcuni comandi per vedere se i propri moduli: sono caricati correttamente, o per comprendere quali sono caricati in automatico dal sistema, più eventuali accortezze.<br />
-Di seguito vengono riportati i comandi principali  che serviranno a capire meglio di cosa trattano e quando usarli:
+Spesso si ha bisogno di alcuni comandi per vedere se i propri moduli sono caricati correttamente o per capire quali sono i moduli che il proprio sistema carica in automatico ecc...<br />
+Di seguito i comandi principali per capire meglio di cosa si tratta e quando usarli:
 
 ==modprobe==
-
 Utility per il proprio kernel che permette di caricare dei moduli in memoria eseguendo alcuni test per la configurazione dei parametri.<br />
 Il comando va eseguito come root:
 
@@ -15,7 +14,6 @@ Per caricare il modulo sound. Spesso possono essere utili anche le opzioni:
  # modprobe -r  (per scaricare i moduli mantenendo le dipendenze)
 
 ==lsmod==
-
 Il comando per visualizzare tutti i moduli caricati in memoria è lsmod:
 
  # lsmod
@@ -61,8 +59,7 @@ Il comando per visualizzare tutti i moduli caricati in memoria è lsmod:
  jbd                    68185  1 ext3
 
 ==lsusb==
-
-Per leggere le informazioni USB del proprio sistema attraverso lsusb si ha bisogno di aver attivato il supporto per il /proc filesystem. Infatti lsusb legge le informazioni da /proc/bus/usb.
+Per leggere le informazioni USB del proprio sistema attraverso lsusb si ha bisogno di avere attivato il supporto per il /proc filesystem. Infatti lsusb legge le informazioni da /proc/bus/usb.
 
  # lsusb
  Bus 004 Device 001: ID 0000:0000
@@ -74,9 +71,9 @@ Per chi vuole un output molto dettagliato può usare l'opzione:
 
  # lsusb -v
 
-==dmesg==
 
-E' l'utility che legge tutte le informazioni del kernel compreso i messaggi di boot. Siccome le informazioni che vengono fornite sono davvero tante; utilizzando "more" o "less" si possono per avere più o meno righe di output, ovvero:
+==dmesg==
+E' l'utility che legge tutte le informazioni del kernel compreso i messaggi di boot. Siccome le informazioni che vengono fornite sono davvero tante si possono usare "more" o "less" per avere più o meno righe di output, ovvero:
 
  # dmesg | more
  # dmesg | less
@@ -91,6 +88,6 @@ Un esempio di un device USB. Per avere le informazioni sul proprio USB attravers
  drivers/usb/input/hid-core.c: v2.0:USB HID core driver
  SELinux: initialized (dev usbfs, type usbfs), uses genfs_contexts
 
-In questo modo è possibile interrogare qualsiasi periferica collegata al proprio sistema dall'ultimo boot, in modo semplice, veloce e completo.
+In questo modo si possono interrogare qualsiasi periferica collegata al proprio sistema dall'ultimo boot in modo semplice, veloce e completo.
 
 [[Categoria:Sistema]]
