@@ -5,7 +5,7 @@ Rispondere alla domanda: "'''come si può vedere il contenuto dei file .iso?'''"
 
 e poi navigare in <code>directory_di_mount/</code>. <br />
 A volte, non serve neppure specificare l'opzione <code>loop</code> se il filesystem dell'immagine è conosciuto da [http://www.kernel.org/pub/linux/utils/util-linux/libblkid-docs/ libblkid]. La pagina di man del comando mount è abbastanza esaustiva in proposito.<br />
-Rispondere alla domanda: "'''come si può montare un file immagine da utente normale senza essere root?'''" è forse un po' più complicato.
+Rispondere alla domanda: "'''come si può montare un file immagine da utente normale senza essere root?'''" è forse un po' più complicato.<br />
 Chi ha installato sul proprio sistema [http://www.midnight-commander.org/ Midnight Commander] dovrebbe riuscire ad aprire il file immagine e visionare il contenuto senza problemi.<br />
 Gli utenti Kde, invece, possono fare una cosa simile utilizzando [http://www.krusader.org/ Krusader], dunque in un ambiente grafico.<br />
 Ma se non si ha Krusader o Midnight Commander come si fa? Niente paura, si può ottenere questa cosa utilizzando [http://sourceforge.net/projects/fuseiso/ FuseISO]. '''FuseISO''' è un modulo per [http://fuse.sourceforge.net/ FUSE] che supporta file del tipo ISO9660 Level 1 e 2, Rock Ridge, Joliet e zisofs, praticamente i file che circolano con queste estensioni .iso, .nrg, .bin, .mdf e .img.<br />
@@ -24,14 +24,8 @@ Per smontare il dispositivo invece bisognerà dare questo comando:
 Altre informazioni sulle opzioni di fuseiso si possono ottenere lanciandolo con l'opzione -h:
 
  $ fuseiso -h
-<br />
-----
-<br />
+
 Altra documentazione utile (in Inglese):
 *[http://www.thegeekstuff.com/2009/06/how-to-mount-view-iso-file-as-root-and-non-root-user-in-unix/#more-553 How To Mount and View ISO File as Root and Regular User in Linux]
-<br />
-----
-<br />
 
 [[Categoria:Sistema]]
-[[Categoria:Rilettura in corso]]
