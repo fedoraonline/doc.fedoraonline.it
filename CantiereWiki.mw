@@ -216,10 +216,10 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 {{ModificaArticolo|articolo=Convenzioni di scrittura|autore=GabrieleTrombini|responsabile=GabrieleTrombini|data=26/10/2011|stato=InCorso}}
-{{ModificaArticolo|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=DaFare}}
-{{ModificaArticolo|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=DaFare}}
-{{ModificaArticolo|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=DaFare}}
-{{ModificaArticolo|articolo=Vim Ide per PHP|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=DaFare}}
+{{ModificaArticolo|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
+{{ModificaArticolo|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
+{{ModificaArticolo|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
+{{ModificaArticolo|articolo=Vim Ide per PHP|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
