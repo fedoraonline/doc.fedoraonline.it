@@ -14,6 +14,7 @@ __TOC__
 Per incominciare bisogna installare Vim, aprendo un terminale basta digitare in Fedora:
 
  $ su -c "yum install vim-minimal vim-common vim-enhanced" 
+
 L'installazione e la configurazione di un server LAMP (Linux Apache MySql Php) può essere seguita nell'apposita [[:LAMP|guida]].
 
 == Configurazione base ==
@@ -45,12 +46,15 @@ L'installazione è davvero semplice, basta scaricare il pacchetto dalla pagina d
  $ vim manpageview.vba.gz
    :so %
    :q    
+
 Per utilizzare questo pacchetto è importante avere installato sul proprio sistema elinks. Per installarlo in fedora basta digitare in un terminale:
 
  $ su -c "yum install elinks" 
+
 L'uso di ManPageView è davvero molto semplice. Se c'è una connessione attiva a internet all'interno della propria sessione di Vim in modalità normale (non inserimento) basta digitare:
 
  :Man nome_funzione 
+
 ''(sostituire nome_funzione con il nome di una funzione php).''<br />
 Se ad esempio si digita <code>:Man echo</code> Vim aprirà una finestra contente la documentazione della funzione echo presente nella documentazione ufficiale di php a [http://php.net/manual/en/function.echo.php questo indirizzo].
 
@@ -61,9 +65,11 @@ E' sempre importante documentare il proprio codice. Esiste per Vim un [http://ww
 Anche qui, l'installazione di questo plugin è a dir poco semplice.<br />
 Dopo aver scaricato il pacchetto basta copiare il file <code>php-doc.vim</code> nella directory <code>.vim/plugin</code> presente nella home directory dell'utente.<br />
 Fatto questo bisogna aggiungere al proprio <code>.vimrc</code> le seguenti direttive:
+
  inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
  nnoremap <C-P> :call PhpDocSingle()<CR> 
  vnoremap <C-P> :call PhpDocRange()<CR>
+
 Diventa così semplicissimo creare una struttura per commentare le proprie funzioni. Basta posizionarsi col cursore sulla dichiarazione della propria funzione o della classe e fare <code>ctrl + p</code>.
 
 == Abilitare l'auto-completamento in Vim ==
@@ -155,6 +161,7 @@ Per saltare da una voce della lista al codice si può usare o il mouse (se si è
 Se invece di <code>Invio</code> si preme la barra spaziatrice si può vedere in basso (dove si entra nella modalità di inserimento comandi di Vim) la dichiarazione della riga in cui si trova il tag.
 
 == Debug del codice Php con Xdebug ==
+
 Nello sviluppo di un programma non può mancare la fase di debug. Xdebug è un'estensione per il Php molto utile per fare il debug di quest'ultimo.<br />
 Per installarlo in Fedora è molto semplice:
 
@@ -233,7 +240,6 @@ Il plugin dovrebbe già essere installato e funzionante. Lo si può testare prov
 Con questo articoletto ho spiegato velocemente come configurare ed estendere Vim per poterlo tramutare in un IDE per la scrittura di codice Php.<br />
 Esistono molti altri plugin per Vim, reperibili dal sito web di Vim, che non ho avuto modo di studiare ed adoperare.<br />
 Se esiste un plugin utile che non ho menzionato prego di farmi sapere così vedrò di estendere ulteriormente questo articolo.
-<br />
 
 == Riferimenti ==
 
