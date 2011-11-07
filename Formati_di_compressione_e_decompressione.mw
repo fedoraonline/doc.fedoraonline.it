@@ -1,11 +1,9 @@
 Per chi è appena passato ad un nuovo sistema operativo libero, come Fedora, spesso si trova spiazzato dall'enorme quantità di pacchetti e programmi disponibili per l'archiviazione e la compressione dei file.<br />
-Articolo pubblicato anche sul mio blog:
-http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/ <br />
 Un '''utente proveniente dal sistema operativo MS Windows''' sicuramente conoscerà il [http://www.info-zip.org/ formato Zip] e quasi sicuramente sarà venuto in contatto anche col [http://www.rarlab.com/ formato Rar]. Inoltre, se è un utente un po' più smaliziato e già orientato al software libero, avrà anche conosciuto [http://www.7-zip.org/ 7zip] ed il formato di archiviazione compressione di questo.<br />
-Proverò a fare un po' di chiarezza e a fornire delle informazioni basilari all'approccio di questi file.
+Proverò a fare un po' di chiarezza e a fornire delle informazioni basilari all'approccio di questi file.<br />
 Innanzitutto bisogna fare una netta distinzione tra: '''archiviazione''' e '''compressione''':
-*'''il primo è un procedimento di raccolta''' di file o directory in un unico file facilmente trasportabile e trasferibile. Esattamente come avviene nella realtà: prendo dei fogli, ad esempio i miei appunti universitari, e li infilo in una cartellina per raccoglierli e portarmeli in giro. Di per se non vi è alcun guadagno di spazio, le dimensioni rimangono tali e quali, anzi lo spessore della mia cartellina può far risultare il tutto di un volume più grande;
-*'''il secondo''', invece, '''è un processo di compattamento''' che permette di risparmiare spazio e peso tramite l'uso di vari algoritmi. Dall'esempio precedente: schiaccio la mia cartellina per eliminare l'aria presente tra i fogli e/o elimino i fogli doppi per ridurre il più possibile il peso ed il volume della mia cartella, in modo da portarla in giro più facilmente assieme ai miei libri.<br />
+* '''il primo è un procedimento di raccolta''' di file o directory in un unico file facilmente trasportabile e trasferibile. Esattamente come avviene nella realtà: prendo dei fogli, ad esempio i miei appunti universitari, e li infilo in una cartellina per raccoglierli e portarmeli in giro. Di per se non vi è alcun guadagno di spazio, le dimensioni rimangono tali e quali, anzi lo spessore della mia cartellina può far risultare il tutto di un volume più grande;
+* '''il secondo''', invece, '''è un processo di compattamento''' che permette di risparmiare spazio e peso tramite l'uso di vari algoritmi. Dall'esempio precedente: schiaccio la mia cartellina per eliminare l'aria presente tra i fogli e/o elimino i fogli doppi per ridurre il più possibile il peso ed il volume della mia cartella, in modo da portarla in giro più facilmente assieme ai miei libri.<br />
 Questi due concetti spesso si perdono di fronte alla presenza dei formati come Zip o Rar, in quanto sono formati sia di archiviazione sia di compressione. Perso questo concetto diventa facile confondersi e non capire la denominazione di alcuni file.<br />
 Fatta questa premessa, cercherò di presentare i più comuni formati di archiviazione e compressione che si possono trovare nel mondo del software libero e come utilizzarli in modo semplice e veloce da terminale.<br />
 In realtà, gli ambienti desktop più moderni come Gnome o KDE, tramite anche i rispettivi programmi ''File Roller'' o ''Ark'', danno la possibilità di archiviare, comprimere, visionare, estrarre, aggiungere, togliere ecc. file o directory dai vari archivi in modo molto, molto, semplice con una comoda interfaccia grafica. Risulta però, a volte, utile avere uno specchietto ai principali comandi da impartire al terminale, per estrarre o archiviare file o directory.<br />
@@ -13,7 +11,7 @@ Di seguito l'indice ordinato per "estensione", ricordo che in ''bash'' l'estensi
 
 ==Installazione dei pacchetti necessari:==
 
-Fedora, come la maggior parte delle distro linux, fornisce già i pacchetti necessari per lavorare con i tipo di file citati, i programmi spesso sono già installati. 
+Fedora, come la maggior parte delle distro linux, fornisce già i pacchetti necessari per lavorare con i tipo di file citati, i programmi spesso sono già installati.<br />
 Se non presenti sul sistema si possono installare con yum. Eccezion fatta per unrar, sono tutti presenti nei repo ufficiali di Fedora:
 
  # yum install tar gzip bzip2 p7zip
@@ -96,6 +94,7 @@ Se si tratta di un semplice file con estensione .gz si avrà il file decompresso
 
 I file con estensione <code>.tar.bz2</code> sono archivi tarball compressi utilizzando il [http://www.bzip.org/ programma bzip2]. I file con estensione <code>.bz2</code> sono invece dei semplici file compressi.<br />
 L'uso base di bzip2 è praticamente uguale a gzip, cambia solamente il nome del programma da usare e, per quanto riguarda l'uso di tar, l'opzione da usare (si usa "j" invece di "z").
+
 === Creare un archivio .tar.bz2 o un file .bz2 ===
 
  $ ls
@@ -111,6 +110,7 @@ Con tar:
 L'opzione '''j''' specifica a tar di comprimere l'archivio usando bzip2.
 
 === Decomprimere un file .bz2 o un archivio .tar.bz2 ===
+
  $ ls
  nome_archivio.tar.bz2
  $ bzip2 -d nome_archivio.tar.bz2
@@ -190,6 +190,7 @@ Come si può vedere, forse il comando che fa davvero da padrone su tutti è <cod
 Ognuno poi prenderà famigliarità con il comando ed il formato di compressione che preferisce.
 
 ==Riferimenti e documentazione utile==
+* Articolo pubblicato precedentemente su: [http://blog.marionline.it/linux/formati-di-compressione-e-decompressione-base/ marionline.it]
 * [http://www.thegeekstuff.com/2010/10/bzcommand-examples/ Esempi del comando bzip] (inglese)
 * [http://www.thegeekstuff.com/2010/04/unix-tar-command-examples/ Esempi uso del comando tar] (inglese)
 * [http://antoniodeluci.wordpress.com/2006/12/21/linux-formati-di-compressione-e-decompressione-su-terminale/ Linux formati di compressione e decompressione su terminale]
