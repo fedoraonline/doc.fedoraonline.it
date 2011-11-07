@@ -1,11 +1,11 @@
 VI è un  utilissimo editor a riga di comando presente in ogni sistema operativo Unix/Linux e quindi anche in Fedora.<br />
-Tutti dovrebbero sapere almeno i comadi base. D'accordo che  editor grafici come Gedit ed eventuali altri, sono più semplici da utilizzare, ma in caso di emergenza, tipo dover entrare in modalità testo perché X non si avvia, Gedit non funzionerebbe. Oppure, se Fedora non parte, bisogna avviare in modalità rescue e poi entrare in chroot/mnt/sysimage, da dove si può accedere al File System ed eventualmente fare delle modifiche... magari al grub.conf. Ecco, in questo caso è essenziale conoscere come poter utilizzare vi.
+Tutti dovrebbero sapere almeno i comadi base. D'accordo che  editor grafici come Gedit ecc sono più semplici da utilizzare, ma in caso di emergenza, tipo dover entrare in modalità testo perché X non si avvia Gedit non funzia. Oppure, se Fedora non parte, bisogna avviare in modalità rescue e poi entrare in chroot/mnt/sysimage, da dove si può accedere al File System ed eventualmente fare delle modifiche...magari a grub.conf. Ecco, in questo caso è essenziale conoscere come poter utilizzare vi.
 
 Per avviarlo basta digitare:
 
  # vi <nome_file>
 
-L'editor dispone di due modi base per la manipolazione del testo: 
+L'editor dispone di due modi di base per la manipolazione del testo: 
 * modo Comando
 * modo Inserimento testo
 Di default, appena aperto il file ci si trova in modalità Comando. Per entrare in modalità inserimento basta premere il tasto "i" ed in basso a sinistra appare la scritta INSERT che indica appunto in che modalità ci si trova.<br />
@@ -35,5 +35,4 @@ poi
  # vi  <nome_originale-old> 
 e salvarlo con i comandi sopra come  <nome_originale>
 
-[[Categoria:Programmazione e Sviluppo]]
-[[Categoria:Ufficio]]
+[[Categoria:Sistema]]
