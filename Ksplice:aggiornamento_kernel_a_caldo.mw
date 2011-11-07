@@ -1,4 +1,9 @@
+__TOC__
+== Introduzione ==
+
 Ksplice è una nuova applicazione che permette di aggiornare in realtime il kernel senza dover riavviare per installare le nuove modifiche. Questo tool verifica le eventuali fix e le applica sfruttando un particolare meccanismo per inserire il nuovo codice, nella funzione attualmente contenuta nell'immagine del kernel caricata in memoria. Questo servizio è a pagamento per alcune distro, mentre per Fedora è gratuito (http://www.ksplice.com/news/20100831-fedora).
+
+== Verifiche sistema ==
 
 Per prima cosa verificare che la versione di Fedora attualmente installata sul sistema sia supportata da Ksplice, verificando sul sito di Ksplice all'URL http://www.ksplice.com/pricing
 
@@ -8,6 +13,8 @@ Per prima cosa verificare che la versione di Fedora attualmente installata sul s
 {{Warning|Come si può notare la guida è stata testata all'epoca di Fedora 13.}}
 
 Dopo aver verificato che la versione di Fedora sia supportata, si dovrà per prima cosa scaricare il pacchetto rpm dal sito di Ksplice da installare manualmente in un secondo momento.
+
+==Installazione ==
 
  [root@cellopc-mini ~]# wget http://www.ksplice.com/uptrack/dist/fedora/13/ksplice-uptrack.rpm
  
@@ -39,5 +46,4 @@ Per richiamare l'interfaccia grafica si dovrà lanciare come utente non privileg
 
 Cliccare su "Check" per verificare eventuali update dal repoistory fornito da KSplice. Altrimenti premere "Close" per uscire. Dopo aver selezionato gli update da installare, premere su "Install" per far partire il processo di aggiornamento a caldo del kernel.
 
-[[:Categoria:Scrittura in corso]]
 [[Categoria:Sistema]]
