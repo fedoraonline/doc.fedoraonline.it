@@ -5,7 +5,7 @@ L'articolo è indirizzato ad utenti desktop e/o server di piccola caratura.
 
 == Premessa ==
 Cominciamo col dire che sistemi basati sul kernel Linux e sulla struttura Gnu sono molto sicuri, ma non sono inviolabili.<br />
-Essi sono sostanzialmente immuni da tanti problemi di sicurezza che affliggono altri sistemi, ma presentano altre forme di vunerabilità, che  possono venire confinati in un ambito di rischio accettabile mediante comportamenti adeguati.<br />
+Essi sono sostanzialmente immuni da tanti problemi di sicurezza che affliggono altri sistemi, ma presentano altre forme di vulnerabilità, che  possono venire confinati in un ambito di rischio accettabile mediante comportamenti adeguati.<br />
 I motivi per cui i sistemi basati su Linux sono considerati particolarmente sicuri sono, grosso modo, i seguenti:
 
 # Lo sviluppo kernel è continuo, mediamente una nuova versione kernel è disponibile con una frequenza mensile.
@@ -31,7 +31,7 @@ Se il nostro sistema è connesso ad una rete, per quanto essa possa essere affid
 
 Provate ad "abbassare" il firewall ed attivare contemporaneamente un servizio "esposto" al web che usi un protocollo come ssh, ftp oppure http, navigate nel web magari attraverso qualche sito "sospetto" ed osservate contemporaneamente i log di sicurezza, li vedrete riempire nel giro di pochi minuti di segnalazioni di tentativi di accesso non autorizzato.<br />
 Siete sotto attacco.<br />
-Il "chi" e "perchè" faccia una operazione del genere non sono per noi rilevanti ( che ci crediate o no attualmente nel web è in corso una vera e propria cyber-war tra opposte fazioni appoggiate e sovvenzionate da precise entità politiche/militari/economiche); è il come che ci interessa.<br />
+Il "chi" e "perchè" faccia una operazione del genere non sono per noi rilevanti (che ci crediate o no attualmente nel web è in corso una vera e propria cyber-war tra opposte fazioni appoggiate e sovvenzionate da precise entità politiche/militari/economiche); è il come che ci interessa.<br />
 
 == Vie di attacco ==
 Ci sono molte vie di attacco ad un sistema, noi ne analizzeremo solo alcune, quelle che possono avere un senso rispetto all'utenza alla quale è rivolto questo articolo:
@@ -68,8 +68,6 @@ oppure
 
  # tail -f /var/log/secure
 
-oppure, ancora, come l'ottimo Geno propone [http://www.fedoraonline.it/modules/newbb/viewtopic.php?post_id=89115#forumpost89115 qui]
-
 Cosa fare se vi accorgete di essere sotto attacco:
 * Raffinare le regole di iptables
 * Modificare runtime le vostre password, rendendole sempre più complesse
@@ -83,7 +81,7 @@ Cosa fa il servzio ntp ? Preleva la data e l'ora esatta da un server web e reimp
 E' un servizio assai utile se vogliamo tenere sincronizzati gli orologi delle macchine appartenenti ad una stessa rete. Vi accorgerete, però, anche della sua pericolosità:
 * Dialoga via web 
 * Imposta l'ora del nostro sistema ( vi ricordo che per impostare l'ora del sistema occorrono i privilegi root )
-Se il nostro servizio è basato su software che contiene qualche vunerabilità ( tutti software contengono vunerabilità), esso potrebbe essere utilizzato per violare il sistema.<br />
+Se il nostro servizio è basato su software che contiene qualche vunerabilità (tutti software contengono vulnerabilità), esso potrebbe essere utilizzato per violare il sistema.<br />
 In che modo?<br />
 Esistono gli exploit, ovvero delle procedure in grado di "inoculare" codice da far eseguire al servizio in maniera non autorizzata, codice che per esempio potrebbe provocare l'apertura di una shell root sul terminale dell'aggressore. E' evidente la pericolosità di una situazione del genere.<br />
 Fortunatamente questo tipo di attacco, è sferrato dagli aggressori solo verso sistemi di particolare interesse e per cui ne vale la pena.<br />
@@ -104,7 +102,7 @@ Difendersi da una tecnica del genere non è difficile, basta far passare le info
 
 === I virus ===
 I virus, propriamente detti, non hanno alcun effetto su sistemi Linux.<br />
-I sistemi antivirus su Linux sono inutili, essi hanno un senso solo se la vostra macchina ridireziona il traffico web verso altre macchine attrezzate con altri sistemi operativi vunerabili ai virus. In questo caso esse possono filtrare e proteggere le macchine vunerabili presenti nella vostra rete.<br />
+I sistemi antivirus su Linux sono inutili, essi hanno un senso solo se la vostra macchina ridireziona il traffico web verso altre macchine attrezzate con altri sistemi operativi vulnerabili ai virus. In questo caso esse possono filtrare e proteggere le macchine vunerabili presenti nella vostra rete.<br />
 Esistono, però, i cosidetti "proof of concept", ovvero studi teorici di virus che "potrebbero" girare su macchine linux. Abbiamo detto teorici, perchè non vi è alcuna notizia sul fatto che questi studi funzionino sul serio, anzi si sa del contrario, ovvero, che non funzionano.<br />
 Nel caso abbiate timore che questi pericoli teorici possano essere usati contro di voi, spesso basta una contromisura molto semplice: l'opzione noexec sul mount della vostra home.
 
@@ -126,6 +124,4 @@ Quindi, vi esorto ad usare solo repository rpm affidabili e sicuri.<br />
 Evitate di installare applicazioni dai sorgenti anche se i siti dai quali prelevate il software sono sicuri.<br />
 Con la tecnica del "man in middle", qualcuno potrebbe modificare il pacchetto a suo piacimento, magari "infilandoci" una fork-bomb oppure qualcosa di peggio, cosa che con l'uso dei repository ufficiali e con il controllo della firma, sarebbe impossibile.
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Sistema]]
 [[Categoria:Sicurezza]]
