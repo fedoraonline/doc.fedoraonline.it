@@ -1,4 +1,4 @@
-== Introduzione ==Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: 7 novembre 2011).<br />
+Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: 7 novembre 2011).<br />
 Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f16.html questo riferimento].
 
 Questa è una guida <i>personale</i> alla configurazione di Fedora 16.<br />
@@ -18,24 +18,25 @@ Scaricare il file immagine del DVD o il CD multi set di Fedora 16 da un [http://
 
 Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f16.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
 {{Nota|Nota|L'installer di Fedora (anaconda) è ridotto al minimo e molte delle configurazioni si dovranno eseguire dopo l'installazione.}}
+Con qualche eccezione l'installer di Fedora è molto semplice e la gran parte dei settaggi di default sono corretti. Le opzioni più ''critiche'' invece sono il ''partizionamento'' e il ''bootloader''.<br />
+Se si vuole fare la '''Configurazione della rete''' durante l'installazione, assicurarsi di selezionare ''Configura Rete'' quando si è al prompt per il proprio hostname. Per le impostazioni delle '''connessioni di rete''' selezionare ''modifica'' per System pXpY ('X' e 'Y' sono numeri) e assicurarsi di selezionare di connettersi automaticamente. Modificare anche le altre impostazioni se necessario.
+
+===Partizionare===
+* Se si ha un disco fisso vuoto o si desidera cancellare l'intero contenuto del disco fisso, si può lasciare che l'installer ''usi l'intero spazio disponibile'';
+* Se si desidera avviare in dual-boot o salvare dei dati contenuti nel disco fisso, bisogna selezionare o ''diminuire il sistema corrente'' oppure ''Usa lo sapzio libero'';
+* Per i miei sistemi seleziono: Crea un layout personalizzato.
+In questo caso raccomando almeno 3 partizioni: una partizione primaria / di root di 8-12GB, una partizione /home di 10GB+ e una partizione swap di 1-2GB. La partizione principale è quella dove saranno installate le applicazioni. La partizione /home conterrà tutti i dati personali (meglio se la si può definire di grandi dimensioni). La partizione di swap dovrebbe essere almeno pari alla dimensione della memoria fisica del proprio sistema, sistemi con grandi dimensioni di memoria comunque non hanno bisogno di grandi spazi per lo swap.
+
+===Boot Loader===
 
 
 
 
 
 
-<b>a)</b> <b>Configurazione della rete</b> Fedora 16 utilizza Network Manager per configurare automaticamente la rete per l'installazione. Agli utenti verrà chiesto solamente il nome del loro host (p.e. miocomputer). I parametri della rete vanno configurati dopo l'installazione.
 
-<b>b)</b> <b>Data/Fuso orario</b> Se si utilizza il Dual Boot è necessario deselezionare "l'orologio di sistema utilizza UTC".
 
-<b>c)</b> <b>Password root</b> Questa è la password dell'<i>amministratore</i> o <i>superuser</i>, con la quale è possibile accedere a qualsiasi file di sistema. Scegliete una password sicura e memorizzatela. L'account di root non deve essere utilizzato per il normale login!
-
-<b>d)</b> <b>Partizionare</b> Se si ha un disco fisso vuoto o si desidera cancellare l'intero contenuto del disco fisso, si può lasciare che l'installer lo partizioni automaticamente, oppure che rimuova tutto e passi a partizionare.
-Se si desidera avviare in dual-boot o salvare dei dati contenuti nel disco fisso, bisogna selezionare il partizionamento da utente. Io raccomando almeno 3 partizioni: una partizione di 8-12GB per /, la partizione principale, una partizione di 10+GB per /home e una partizione di 1-2GB per lo &lt;swap&gt;. La partizione principale è quella dove saranno installate le applicazioni. La partizione /home conterrà tutti i dati personali (meglio se la si può definire di grandi dimensioni). La partizione di &lt;swap&gt; dovrebbe essere almeno pari alla dimensione della memoria fisica del proprio sistema (se si vorrà avere il supporto a cose come <i>ACPI hibernate</i>).
-<b>NOTA (EXT4)</b> Fedora 16 supporta pienamente il filesystem ext4 per effettuare il boot (questo era un problema in Fedora 11)
-[b]NOTA (/boot):[/b] Se utilizzi una partizione /boot assicurati che sia '''almeno di 300 MB''' ([url=https://fedoraproject.org/wiki/Common_F16_bugs#boot-300mb]bug[/url])
-
-<b>e)</b> <b>Boot Loader</b> Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio <i>Sistema Operativo Principale</i>, si possono lasciare le opzioni predefinite. Tutto funzionerà per il dual boot con altri sistemi operativi (ad es. con Windows).
+Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio <i>Sistema Operativo Principale</i>, si possono lasciare le opzioni predefinite. Tutto funzionerà per il dual boot con altri sistemi operativi (ad es. con Windows).
 Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, <b>NON nell'MBR</b>. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel <i>First sector of boot partition</i>. Io ho usato <a href="http://www.winimage.com/bootpart.htm" target="_blank">Bootpart</a> da Windows 2000 per caricare Linux.
 Un´alternativa a Bootpart è descritta nel <a href="http://www.tldp.org/HOWTO/Linux+NT-Loader.html" target="_blank">NT OS Loader + Linux mini-HOWTO</a> (o anche <a href="http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html" target="_blank">Grub Win2K Howto</a>). Gli utenti <b>Vista</b> possono usare il <i>Vista Boot Manager</i> seguendo il <a href="http://port25.technet.com/archive/2006/10/13/Using-Vista_2700_s-Boot-Manager-to-Boot-Linux-and-Dual-Booting-with-BitLocker-Protection-with-TPM-Support.aspx" target="_blank">Port25 Vista Boot Manager Howto</a>. Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. <b>Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.</b>
 
@@ -425,3 +426,5 @@ Potete anche scegliere di donare qualcosa per supportare l'hosting per il mio si
 <b>PER FAVORE NON</b> fate copie in mirror, traducete o copiate questa pagina <i>senza</i> contattarmi. Io ho speso diverse ore di lavoro personalmente per ricercare e verificare quanto è qui riportato.
 
 <b><a href="http://www.mjmwired.net/about.php#copyright">Copyright © 2003-2009</a></b><b> by Mauriat Miranda</b> (mjmwired.net).
+
+[[Categoria:Traduzioni]]
