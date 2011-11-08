@@ -147,7 +147,7 @@ Per sicurezza dare un riavvio del sistema e poi gli utenti potranno utilizzare t
 * [http://www.reactivated.net/fprint/wiki/Main_Page Progetto fprint]
 * [https://bugs.kde.org/show_bug.cgi?id=116682 Bug di kde con thinkfinger]
 
-==Sviluppi futuri in fedora:==
+==Sviluppi futuri in Fedora:==
 Nel progetto fedora pare che si stia implementando un sistema che semplifichi l'utilizzo dei dispositivi per leggere le impronte digitali tramite fprint e l'utilizzo di un demone particolare: fprintd.<br />
 Per queste novità il riferimento è su fedoraproject.org a [https://fedoraproject.org/wiki/Features/Fingerprint questo indirizzo].
 
