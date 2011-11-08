@@ -41,11 +41,11 @@ Ora collegarsi alla lista delle schede supportate da [http://ndiswrapper.sourcef
 {{Nota|Scheda USB| Se si possiede una scheda USB per forza va usato ''ndiswrapper'' in quanto ''madwifi'' non supporta tali schede.}}
 Per l'esempio concreto si trova l'ID, ma non in corrispondenza della scheda giusta, invece si trova un link presso un'altra scheda che conferma che si dovrà capire se è supportata in [http://madwifi.org/wiki/Compatibility madwifi]...ed eccola, completamente supportata, viene indicato anche il chipset, come da output "lspci", ovvero Atheros 5212.
 
-Si proseguirà direttamente con l'installazione di madwifi, per chi ha una scheda supportata da ndiswrapper deve continuare a leggere [[Configurazione_di_una_rete_wif|qui]], dove si parla dell'installazione di ndiswrapper e poi delle configurazioni delle schede con i driver madwifi e ndiswrapper.
+Si proseguirà direttamente con l'installazione di madwifi, per chi ha una scheda supportata da ndiswrapper deve continuare a leggere [[Configurazione_di_una_rete_wifi#Installazione_di_ndiswrapper|qui]], dove si parla dell'installazione di ndiswrapper e poi delle configurazioni delle schede con i driver madwifi e ndiswrapper.
 
 == Installazione di madwifi ==
 
-Per installare madwifi si può scaricare il file sorgente dal sito ufficiale e compilarlo oppure installare il pacchetto madwifi e il pacchetto per il kernel da livna. Per fare la seconda (e la più semplice) si deve configurare i [[:Categoria:Repository]] e poi digitare nel terminale:
+Per installare madwifi si può scaricare il file sorgente dal sito ufficiale e compilarlo oppure installare il pacchetto madwifi e il pacchetto per il kernel da livna. Per fare la seconda (e la più semplice) si deve configurare i [[:Categoria:Repository|repository]] e poi digitare nel terminale:
 
  # yum --enablerepo=livna install kmod-madwifi madwifi 
 
@@ -122,22 +122,97 @@ Esiste uno strumento in modalità grafica che potrà dare una mano nella configu
  # yum install wlassistant
 
 Il programma è molto piccolo e lo si troverà nel menu di amministrazione del sistema, la configurazione è semplice ed intuitiva:
-[[Image:wlass1.jpg]]
-[[Image:wlass2.jpg]]
+[[Image:Wlass1.jpg|center]]
+
+[[Image:Wlass2.jpg|center]]
 Si aprirà una schermata di configurazione della propria rete, nella quale bisogna digitare il nome della rete (ESSID) e la configurazione IP o DHCP. Nella scheda di sicurezza si sceglierà una rete aperta e si confermano le impostazioni cliccando su OK.<br />
 Ora si sceglie la rete con il tasto destro e ci si connette al router o al nostro access point.<br />
 Per connettere la scheda wifi al boot è necessario soltanto che in ''amministrazione > reti'' sia attivato il flag su "connetti all'avvio del sistema".
-[[Image:wlass3.jpg]]
+[[Image:Wlass3.jpg|center]]
 == Configurazione della connessione wifi in un sistema protetto con chiave WEP ==
 
 Anche se si dovesse scegliere una cifratura WEP il consiglio è di installare wlassistant (come per il sistema aperto), che per semplicità ed efficacia è un ottimo strumento ad interfaccia grafica.<br />
 Eseguire quindi i passi della configurazione aperta, ma invece di scegliere un sistema "open", e quindi aperto, si sceglierà quello "restricted" inserendo la chiave WEP nel campo sottostante.<br />
 A questo punto è possibile connettersi alla rete, che verrà identificata in grassetto una volta connessi.
-[[Image:wlass4.jpg]]
+[[Image:Wlass4.jpg|center]]
+Per avviare la scheda all'avvio scegliere sempre la scheda di configurazione in ''amministrazione > reti'' e flaggare la connessione all'avvio; unica cosa in più che si deve fare è inserire la chiave WEP che viene richiesta nel campo successivo, ma sempre all'interno della configurazione.
 
+== Configurazione della connessione wifi in un sistema protetto con chiave WPA-PSK ==
 
+La configurazione con cifratura WPA-PSK è un pochino più difficile ma anche la più sicura. Ci sono vari strumenti, come d'altronde per le altre cifrature, che si possono utilizzare, ma nessuno in modalità grafica da un supporto al 100% per il WPA-PSK.<br />
+Si userà quindi il metodo testuale, installando prima di tutto ''wpa_supplicant'':
 
+ # yum install wpa_supplicant
 
+Si può procedere subito con il file di configurazione aprendo con il proprio editor di testo preferito il file ''/etc/wpa_supplicant/wpa_supplicant.conf''.<br />
+{{Suggerimento|E' buona norma salvarsi una copia dell'originale rinominandola ''wpa_supplicant-old.conf'', poi modificare il file in base alle proprie impostazioni.}}
+Di seguito un esempio (con # viene indicato qualche commento utile).
+<pre>ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+eapol_version=1
+# ap_scan=0,1,2 di solito funziona 1
+ap_scan=1
+fast_reauth=1
 
+network={
+        # nome della nostra rete
+        ssid="nome-rete"
+        proto=WPA
+        key_mgmt=WPA-PSK
+        pairwise=TKIP
+        group=TKIP
+        # psk=chiave segreta
+        psk="password"
+}</pre>
+Salvare e uscire.
+{{Suggerimento|Se si vuole, invece di scrivere la propria chiave nel file di configurazione, si può usare anche un'ulteriore codifica, utilizzando uno strumento apposito.}}
+Digitare nel terminale:
 
-Per avviare la scheda all'avvio scegliamo sempre la scheda di configurazione in amministrazione->reti e flagghiamo la connessione all'avvio; unica cosa in più che facciamo è inserire la chiave WEP che viene richiesta nel campo successivo, ma sempre all'interno della configurazione.
+ # wpa_passphrase nome-rete password
+
+si avrà come output la parte della rete del file di configurazione:
+<pre>network={
+        ssid="nome-rete"
+        key_mgmt=WPA-PSK
+        # psk=password
+        psk="chiaveHEX123ABC"
+}</pre>
+Fatto questo bisogna connettersi al router, per verificare che sia tutto ok, quindi digitare nel terminale per identificare la rete alla quale ci si vuole connettere:
+
+ # iwconfig ath0 essid nome-rete
+
+Sostituire ''ath0'' se necessario con il dispositivo che usa la scheda wireless.<br />
+Ora tirare su la scheda e lanciare il demone di ''wpa_supplicant'' indicando il driver usato, ovvero:
+
+ # ifconfig ath0 up
+ # wpa_supplicant -Bw -Dwext -iath0 -c/etc/wpa_supplicant/wpa_supplicant.conf -qq
+
+Anche qui, se necessario sostituire ''ath0'' con il dispositivo che usa la propria scheda, se si utilizza il driver ndiswrapper invece di ''-Dwext'' usare ''-Dndiswrapper''.<br />
+Infine connettersi facendosi assegnare un indirizzo dal router in automatico:
+
+ dhclient ath0
+
+Se tutto funziona per il verso giusto si dovrebbe essere online, e lo si può verificare anche attraverso gli strumenti ad interfaccia grafica come wlassistant.<br />
+Se la connessione dovrà avvenire direttamente all'avvio è utile uno script da far eseguire durante il boot. Quindi, prima di tutto, in ''amministrazione > servizi'' attivare il demone wpa_supplicant. Salvare e uscire.<br />
+Lo script da far eseguire lo si inserirà in ''/etc/rc.local'' (l'ultimo che viene eseguito durante la fase di boot), nel quale si aggiungeràla seguente riga:
+
+ /usr/local/sbin/wifi-script
+
+Lo script ''/usr/local/sbin/wifi-script'' invece è il seguente, è un file che contiene niente meno che i comandi visti prima:
+<pre>#!/bin/bash
+
+# specifica il nome della rete cui connettersi
+iwconfig ath0 essid nome-rete
+
+# Attiva la scheda di rete
+ifconfig ath0 up
+
+# Lancia il demone che gestisce la protezione WPA
+wpa_supplicant -Bw -Dwext -iath0 -c/etc/wpa_supplicant/wpa_supplicant.conf -qq
+
+# Chiede al dhcp server del router un indirizzo ip
+dhclient ath0</pre>
+
+Ci siamo, ora non solo si potrà navigare ma ogni volta che si avvia il PC esso si connetterà automaticamente al proprio router o all'access point.
+
+[[Categoria:Wi-Fi]]
