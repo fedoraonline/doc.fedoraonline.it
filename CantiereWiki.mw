@@ -96,28 +96,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Gestione avanzata dei pacchetti su Fedora |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Un server di posta con Postfix (e altre cosette...) v. 0.1 |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=01 Introduzione a Fedora|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=02 Repositories|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=03 Fedora Updates |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=04 Aggiungere Applicazioni |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=05 Altri Desktop Environments |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-
-{{RiletturaArticolo|fonte=|articolo=06 Applicazioni Commerciali |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-
-{{RiletturaArticolo|fonte=|articolo=07 Amministrazione di utenti |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=08 Hardware |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=09 Masterizzare CD/DVD |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=10 Funzionalità di rete|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=11 Desktop Remoto|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=12 Windows|autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=13 Sicurezza |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=14 Rescue Mode |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=15 Trucchi vari |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=16 Samba Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=17 SSH |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=18 Database Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=19 Web Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=20 FTP Server |autore=MarioSantagiuliana|rilettore=?|data=04/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Controllare il Desktop con vnc attraverso un tunnel ssh|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Samba: condivisione tra Fedora e Windows|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
@@ -156,7 +134,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Guida base ai comandi vi|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Utilità moduli e messaggi del kernel|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Root è uguale a root?|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Wine|autore=MarioSantagiuliana|rilettore=SimoneZaminga|data=08/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Configurazione di una rete wifi|autore=RobertMayr|rilettore=?|data=08/11/2011|stato=DaFare}}
 |}
 
