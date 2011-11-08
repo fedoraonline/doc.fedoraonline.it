@@ -24,7 +24,7 @@ Con .wine si può a questo punto installare i programmi Windows come se si usass
 per lanciare ad esempio il setup di una propria applicazione Windows. <br />
 Tale applicazione verrà eseguita in un ambiente virtuale ed installata nelle cartelle del proprio Fake_windows.
 
-In linea teorica è possibile installare ed eseguire tutto.. in quanto in realtà molti programmi richiedono  di configurare l'ambiente wine in modo particolare.
+In linea teorica è possibile installare ed eseguire tutto; in quanto molti programmi richiedono  di configurare l'ambiente wine in modo particolare.
 
 Senza addentrarsi in particolari un po' complicati, si può utilizzare un tool molto potente che aiuta a "sistemare" wine per poter far girare la maggior parte degli applicativi.<br />
 Questo programma si chiama wine-tools e si può scaricare dalla sezione download di www.winehq.com
