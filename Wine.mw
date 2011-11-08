@@ -52,4 +52,4 @@ Per poter installare Wine-tools è necessario avere sul proprio sistema il pacch
 Wine è un mondo vasto e occorrerebbe stilare guide specifiche per ogni singolo aspetto ma si spera che questa guida sia utile per chi si avvicina per la prima volta a questo programma.<br />
 Wine possiede tante potenzialità che magari verranno sviscerate in altre guide più specifiche che verranno create in futuro(ad esempio si scoprirà anche che Wine può "allacciarsi" direttamente ad un sistema Windows vero installato in una partizione - purché sia FAT - e utilizzare direttamente tutti i programmi e i componenti installati sulla vera macchina Windows).
 
-[[Categoria:Sistema]]
+[[Categoria:Virtualizzazione]]
