@@ -1,7 +1,7 @@
 Una piccola guida base per cominciare con Wine, un non emulatore che permette di installare ed eseguire programmi Win su Fedora.
 
 Molti utenti che si affacciano a Linux provenendo dal mondo Winzoz e sentono la necessità di portarsi dietro molti programmi Windows senza magari osservare che Linux stesso offre tantissimi applicativi analoghi a quelli Windows ma FREE.<br />
-Come fare per far girare applicazioni Windows sotto Linux? Esistono vari sistemi; wine è un sistema che permette di fare questo mettendo un buon compromesso tra facilità d'uso e economicità monetaria (è gratuito).
+Come fare per far girare applicazioni Windows sotto Linux? Esistono vari sistemi; Wine è un sistema che permette di fare questo mettendo un buon compromesso tra facilità d'uso e economicità monetaria (è gratuito).
 
 E' possibile reperire il pacchetto RPM per FC3 direttamente dal sito [http://www.winehq.com www.winehq.com] oppure tramite Yum.
 
@@ -9,7 +9,7 @@ Wine non è un banale emulatore software, esso è composto da due grossi blocchi
 
 ==Installazione==
 L'installazione è semplice e si effettua come Root. Dopodiché si può utilizzarlo (anzi è caldamente consigliato) come utente.<br />
-Wine creerà una cartella nascosta nella propria home chiamata .wine al suo interno si troveranno due cartelle fondamentali:
+Wine creerà una cartella nascosta nella propria home chiamata .Wine al suo interno si troveranno due cartelle fondamentali:
 
 dosdevice e fake_windows
 
@@ -24,14 +24,14 @@ Con .wine si può a questo punto installare i programmi Windows come se si usass
 per lanciare ad esempio il setup di una propria applicazione Windows. <br />
 Tale applicazione verrà eseguita in un ambiente virtuale ed installata nelle cartelle del proprio Fake_windows.
 
-In linea teorica è possibile installare ed eseguire tutto; in quanto molti programmi richiedono  di configurare l'ambiente wine in modo particolare.
+In linea teorica è possibile installare ed eseguire tutto; in quanto molti programmi richiedono  di configurare l'ambiente Wine in modo particolare.
 
-Senza addentrarsi in particolari un po' complicati, si può utilizzare un tool molto potente che aiuta a "sistemare" wine per poter far girare la maggior parte degli applicativi.<br />
-Questo programma si chiama wine-tools e si può scaricare dalla sezione download di [http://www.winehq.com www.winehq.com]
+Senza addentrarsi in particolari un po' complicati, si può utilizzare un tool molto potente che aiuta a ''sistemare'' Wine per poter far girare la maggior parte degli applicativi.<br />
+Questo programma si chiama Wine-tools e si può scaricare dalla sezione download di [http://www.winehq.com www.winehq.com]
 
 Questo script permette di impostare correttamente un ambiente Wine installando i componenti di base di Windows che sono necessari dalla maggior parte delle applicazioni Windows.<br />
 Questi componenti (DCOM98, IE, WindowMediaPlayer, Jet4.0, MFC library, etc..) sono componenti che non sono forniti di default insieme a Wine e necessitano di essere installati separatamente. Wine-tools effettua queste operazioni.<br />
-Una volta installato wine-tools (lanciando il programma insall.sh) è possibile lanciarlo col comando da shell 
+Una volta installato Wine-tools (lanciando il programma insall.sh) è possibile lanciarlo col comando da shell 
 
  wine-tools
 
@@ -45,11 +45,11 @@ Si aprirà una finestra a menu molto chiara che permetterà di installare i comp
  Windows Media Player
 
 Una volta installati questi componenti il proprio sistema Windows virtuale sarà compatibile con il 60-70% delle applicazioni Windows in circolazione e per installarle basta come detto prima lanciare il setup.exe dell'applicazione stessa.<br />
-Wine-tools permette anche già di installare diversi applicativi configurando just-in time il sistema wine per quell'applicazione.
+Wine-tools permette anche già di installare diversi applicativi configurando just-in time il sistema Wine per quell'applicazione.
 
-Per poter installare wine-tools è necessario avere sul proprio sistema il pacchetto qtdialog (reperibile comunque dal repository o da [http://www.rpmfind.net www.rpmfind.net]).
+Per poter installare Wine-tools è necessario avere sul proprio sistema il pacchetto qtdialog (reperibile comunque dal repository o da [http://www.rpmfind.net www.rpmfind.net]).
 
 Wine è un mondo vasto e occorrerebbe stilare guide specifiche per ogni singolo aspetto ma si spera che questa guida sia utile per chi si avvicina per la prima volta a questo programma.<br />
-Wine possiede tante potenzialità che magari verranno sviscerate in altre guide più specifiche che verranno create in futuro(ad esempio si scoprirà anche che wine può "allacciarsi" direttamente ad un sistema Windows vero installato in una partizione - purché sia FAT - e utilizzare direttamente tutti i programmi e i componenti installati sulla vera macchina Windows).
+Wine possiede tante potenzialità che magari verranno sviscerate in altre guide più specifiche che verranno create in futuro(ad esempio si scoprirà anche che Wine può "allacciarsi" direttamente ad un sistema Windows vero installato in una partizione - purché sia FAT - e utilizzare direttamente tutti i programmi e i componenti installati sulla vera macchina Windows).
 
 [[Categoria:Sistema]]
