@@ -13,7 +13,7 @@ Lo stesso risultato si poteva raggiungere con un comando solo, ovvero:
 
  # chown gigi:scuola file
 
-Si passa ora alla gestione vera e propria dei permessi:<br />
+Si passa ora alla gestione vera e propria dei permessi.<br />
 Come detto prima i permessi per ogni categoria sono 3:<br />
 * Lettura (read=r)
 * Scrittura (write=w)
