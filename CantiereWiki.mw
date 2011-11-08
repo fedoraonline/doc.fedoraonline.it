@@ -88,15 +88,12 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Lettore di impronte digitali|autore=MarioSantagiuliana|rilettore=?|data=02/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=KDE|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Blocco siti con iptables|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Ascoltare file ape|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Mysql in replication server|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Sincronizzare Thunderbird Lightning con il proprio Nokia via bluetooth|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Open Office: installazione parallela e indipendente|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Ascoltare file ape|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Mysql in replication server|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Sincronizzare Thunderbird Lightning con il proprio Nokia via bluetooth|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Open Office: installazione parallela e indipendente|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Gestione avanzata dei pacchetti su Fedora |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Un server di posta con Postfix (e altre cosette...) v. 0.1 |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=01 Introduzione a Fedora|autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
