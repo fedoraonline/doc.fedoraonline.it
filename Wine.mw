@@ -1,7 +1,7 @@
 Una piccola guida base per cominciare con Wine, un non emulatore che permette di installare ed eseguire programmi Win su Fedora.
 
-Molti utenti che si affacciano a Linux provenendo dal mondo Winzoz e sentono la necessità di portarsi dietro molti programmi windows senza magari osservare che Linux stesso offre tantissimi applicativi analoghi a quelli windows ma FREE.<br />
-Come fare per far girare applicazioni Windows sotto linux? Esistono vari sistemi; wine è un sistema che permette di fare questo mettendo un buon compromesso tra facilità d'uso e economicità monetaria (è gratuito).
+Molti utenti che si affacciano a Linux provenendo dal mondo Winzoz e sentono la necessità di portarsi dietro molti programmi Windows senza magari osservare che Linux stesso offre tantissimi applicativi analoghi a quelli Windows ma FREE.<br />
+Come fare per far girare applicazioni Windows sotto Linux? Esistono vari sistemi; wine è un sistema che permette di fare questo mettendo un buon compromesso tra facilità d'uso e economicità monetaria (è gratuito).
 
 E' possibile reperire il pacchetto RPM per FC3 direttamente dal sito www.winehq.com oppure tramite Yum.
 
@@ -13,15 +13,15 @@ Wine creerà una cartella nascosta nella propria home chiamata .wine al suo inte
 
 dosdevice e fake_windows
 
-La prima contiene dei link logici ai dispositivi di massa (hdb, floppy, etc) e alla posizione /home/user/.wine/fake_windows. Questi link logici portano il nome dei classici drive di windows (a:, c:, d: etc).<br />
-Dentro Fake_windows si troveranno la struttura di base delle cartelle di un sistema operativo windows (Program files, Windows, Windows/System32 etcc).<br />
+La prima contiene dei link logici ai dispositivi di massa (hdb, floppy, etc) e alla posizione /home/user/.wine/fake_windows. Questi link logici portano il nome dei classici drive di Windows (a:, c:, d: etc).<br />
+Dentro Fake_windows si troveranno la struttura di base delle cartelle di un sistema operativo Windows (Program files, Windows, Windows/System32 etcc).<br />
 
 ==Uso==
-Con .wine si può a questo punto installare i programmi windows come se si usasse windows stesso ovvero da shell basta digitare
+Con .wine si può a questo punto installare i programmi Windows come se si usasse Windows stesso ovvero da shell basta digitare
 
  wine setup.exe 
 
-per lanciare ad esempio il setup di una propria applicazione windows. <br />
+per lanciare ad esempio il setup di una propria applicazione Windows. <br />
 Tale applicazione verrà eseguita in un ambiente virtuale ed installata nelle cartelle del proprio Fake_windows.
 
 In linea teorica è possibile installare ed eseguire tutto.. in quanto in realtà molti programmi richiedono  di configurare l'ambiente wine in modo particolare.
@@ -29,7 +29,7 @@ In linea teorica è possibile installare ed eseguire tutto.. in quanto in realt�
 Senza addentrarsi in particolari un po' complicati, si può utilizzare un tool molto potente che aiuta a "sistemare" wine per poter far girare la maggior parte degli applicativi.<br />
 Questo programma si chiama wine-tools e si può scaricare dalla sezione download di www.winehq.com
 
-Questo script permette di impostare correttamente un ambiente Wine installando i componenti di base di windows che sono necessari dalla maggior parte delle applicazioni Windows.<br />
+Questo script permette di impostare correttamente un ambiente Wine installando i componenti di base di Windows che sono necessari dalla maggior parte delle applicazioni Windows.<br />
 Questi componenti (DCOM98, IE, WindowMediaPlayer, Jet4.0, MFC library, etc..) sono componenti che non sono forniti di default insieme a Wine e necessitano di essere installati separatamente. Wine-tools effettua queste operazioni.<br />
 Una volta installato wine-tools (lanciando il programma insall.sh) è possibile lanciarlo col comando da shell 
 
@@ -44,12 +44,12 @@ Si aprirà una finestra a menu molto chiara che permetterà di installare i comp
  IE 6 / Outlook Express
  Windows Media Player
 
-Una volta installati questi componenti il proprio sistema windows virtuale sarà compatibile con il 60-70% delle applicazioni windows in circolazione e per installarle basta come detto prima lanciare il setup.exe dell'applicazione stessa.<br />
+Una volta installati questi componenti il proprio sistema Windows virtuale sarà compatibile con il 60-70% delle applicazioni Windows in circolazione e per installarle basta come detto prima lanciare il setup.exe dell'applicazione stessa.<br />
 Wine-tools permette anche già di installare diversi applicativi configurando just-in time il sistema wine per quell'applicazione.
 
 Per poter installare wine-tools è necessario avere sul proprio sistema il pacchetto qtdialog (reperibile comunque dal repository o da www.rpmfind.net).
 
 Wine è un mondo vasto e occorrerebbe stilare guide specifiche per ogni singolo aspetto ma si spera che questa guida sia utile per chi si avvicina per la prima volta a questo programma.<br />
-Wine possiede tante potenzialità che magari verranno sviscerate in altre guide più specifiche che verranno create in futuro(ad esempio si scoprirà anche che wine può "allacciarsi" direttamente ad un sistema windows vero installato in una partizione - purché sia FAT - e utilizzare direttamente tutti i programmi e i componenti installati sulla vera macchina windows).
+Wine possiede tante potenzialità che magari verranno sviscerate in altre guide più specifiche che verranno create in futuro(ad esempio si scoprirà anche che wine può "allacciarsi" direttamente ad un sistema Windows vero installato in una partizione - purché sia FAT - e utilizzare direttamente tutti i programmi e i componenti installati sulla vera macchina Windows).
 
 [[Categoria:Sistema]]
