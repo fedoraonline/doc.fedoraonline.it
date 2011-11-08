@@ -1,0 +1,427 @@
+== Introduzione ==Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: 7 novembre 2011).<br />
+Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f16.html questo riferimento].
+
+Questa è una guida <i>personale</i> alla configurazione di Fedora 16.<br />
+Questa pagina fornisce delle informazioni che qualcuno potrebbe trovare utili. Ricorda che quanto segue ha funzionato per <i>me</i>, e assicurati di avere effettuato copie di backup dei tuoi file critici nel caso in cui tu dovessi provare ad eseguire quanto qui riportato. Questa guida è stata testata dall'autore utilizzando entrambe le versioni a 32bit e a 64bit su un AMD64 Desktop. I sistemi descritti si avviano correttamente anche in dual-boot con Windows 7.
+
+==Supporti di installazione==
+
+Fedora 16 viene distribuita in singoli CD-ROM o DVD-ROM per l'installazione. Si possono scaricare sia i dischi (CD) multipli che il DVD singolo. Il disco DVD-ROM è il metodo di installazione preferito e raccomandato. Facendo il boot dal DVD o dal CD#1 partirà l'installer, il quale farà si che Fedora venga installata o che venga fatto l'upgrade di una versione precedente sulla propria macchina. I successivi passaggi sono stati fatti con il DVD.
+
+Esistono anche dei "LiveCD" che possono avviare il sistema ed eseguire una installazione di base di Fedora 16 nella memoria RAM, fornendo inoltre un metodo più semplice di installazione (non completo come quello del DVD o dei multi-CD ). Il LiveCD predefinito rende disponibile Gnome (es: Fedora-16-x86_64-Live-Desktop.iso). Esiste uno specifico LiveCD che rende disponibile KDE. Entrambi forniscono un programma di installazione, ma entrambi rendono disponibile molto meno software che un DVD. Inoltre richiedono anche molta più memoria per essere usati. Il LiveCD può essere utile per dimostrazioni.
+{{Nota|Nota|Per fare l'upgrade di una precedente versione di Fedora, non si può usare un LiveCD.}}
+==Installazione==
+
+E' <b>fortemente raccomandata</b> la lettura delle [http://docs.fedoraproject.org/release-notes/f16/it-IT/html/ Note di Rilascio di Fedora] e della [http://docs.fedoraproject.org/install-guide/f16/en-US/html/ Guida ufficiale all'Installazione] prima di installare Fedora.<br />
+Un'ulteriore raccomandazione è quella di leggere i [https://fedoraproject.org/wiki/Common_F16_bugs Problemi comuni] prima di installare.<br />
+Scaricare il file immagine del DVD o il CD multi set di Fedora 16 da un [http://mirrors.fedoraproject.org/publiclist/Fedora/16/ mirror] di Fedora</a> (o usare [http://torrent.fedoraproject.org torrent]) e masterizzarlo (per ulteriori informazioni su come scaricare i CD o il DVD di [http://www.mjmwired.net/resources/mjm-download-fedora.html Fedora].
+
+Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f16.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
+{{Nota|Nota|L'installer di Fedora (anaconda) è ridotto al minimo e molte delle configurazioni si dovranno eseguire dopo l'installazione.}}
+
+
+
+
+
+
+<b>a)</b> <b>Configurazione della rete</b> Fedora 16 utilizza Network Manager per configurare automaticamente la rete per l'installazione. Agli utenti verrà chiesto solamente il nome del loro host (p.e. miocomputer). I parametri della rete vanno configurati dopo l'installazione.
+
+<b>b)</b> <b>Data/Fuso orario</b> Se si utilizza il Dual Boot è necessario deselezionare "l'orologio di sistema utilizza UTC".
+
+<b>c)</b> <b>Password root</b> Questa è la password dell'<i>amministratore</i> o <i>superuser</i>, con la quale è possibile accedere a qualsiasi file di sistema. Scegliete una password sicura e memorizzatela. L'account di root non deve essere utilizzato per il normale login!
+
+<b>d)</b> <b>Partizionare</b> Se si ha un disco fisso vuoto o si desidera cancellare l'intero contenuto del disco fisso, si può lasciare che l'installer lo partizioni automaticamente, oppure che rimuova tutto e passi a partizionare.
+Se si desidera avviare in dual-boot o salvare dei dati contenuti nel disco fisso, bisogna selezionare il partizionamento da utente. Io raccomando almeno 3 partizioni: una partizione di 8-12GB per /, la partizione principale, una partizione di 10+GB per /home e una partizione di 1-2GB per lo &lt;swap&gt;. La partizione principale è quella dove saranno installate le applicazioni. La partizione /home conterrà tutti i dati personali (meglio se la si può definire di grandi dimensioni). La partizione di &lt;swap&gt; dovrebbe essere almeno pari alla dimensione della memoria fisica del proprio sistema (se si vorrà avere il supporto a cose come <i>ACPI hibernate</i>).
+<b>NOTA (EXT4)</b> Fedora 16 supporta pienamente il filesystem ext4 per effettuare il boot (questo era un problema in Fedora 11)
+[b]NOTA (/boot):[/b] Se utilizzi una partizione /boot assicurati che sia '''almeno di 300 MB''' ([url=https://fedoraproject.org/wiki/Common_F16_bugs#boot-300mb]bug[/url])
+
+<b>e)</b> <b>Boot Loader</b> Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio <i>Sistema Operativo Principale</i>, si possono lasciare le opzioni predefinite. Tutto funzionerà per il dual boot con altri sistemi operativi (ad es. con Windows).
+Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, <b>NON nell'MBR</b>. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel <i>First sector of boot partition</i>. Io ho usato <a href="http://www.winimage.com/bootpart.htm" target="_blank">Bootpart</a> da Windows 2000 per caricare Linux.
+Un´alternativa a Bootpart è descritta nel <a href="http://www.tldp.org/HOWTO/Linux+NT-Loader.html" target="_blank">NT OS Loader + Linux mini-HOWTO</a> (o anche <a href="http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html" target="_blank">Grub Win2K Howto</a>). Gli utenti <b>Vista</b> possono usare il <i>Vista Boot Manager</i> seguendo il <a href="http://port25.technet.com/archive/2006/10/13/Using-Vista_2700_s-Boot-Manager-to-Boot-Linux-and-Dual-Booting-with-BitLocker-Protection-with-TPM-Support.aspx" target="_blank">Port25 Vista Boot Manager Howto</a>. Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. <b>Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.</b>
+
+<b>f)</b> <b>Selezione dei pacchetti</b> Le principali opzioni per l'installazione sono le seguenti. Le si può selezionare direttamente, saltando quindi la <i>personalizzazione dell'installazione del software</i> (passo successivo), se si pensa di installare la maggior parte del software online (tramite Yum). E' raccomandato di scegliere almeno qualche applicazione.
+
+Ufficio e produttività; - [Altamente raccomandato]
+Sviluppo Software - [Altamente raccomandato / <b>Necessario</b>]
+Web Server - [Opzionale (utile per gli sviluppatori web)]
+
+<b>Aggiungere Software da Repository addizionali</b> - [NON raccomandato durante l'installazione].
+Si ha la possibilità di aggiungere alcune utili risorse durante il processo di installazione. Questo rende disponibili MOLTE applicazioni aggiuntive rispetto a quelle incluse nel
+CD o nel DVD. Comunque ciò richiede una connessione Internet ad alta velocità e che venga riconosciuta dall'installer di Fedora. Questo incrementa anche in <i>maniera significativa</i> il tempo di installazione.
+Se si sceglie <i>Personalizza ora</i> si avrà la possibilità <i>di una selezione individuale dei pacchetti da installare</i>. L'installer di Fedora avrà selezionato di default gran parte degli applicativi necessari. Comunque, io raccomando l'installazione di KDE (K Desktop Environment) sotto ''Desktop Environments''.
+
+Dopo avere installato i pacchetti selezionati, riavviare il sistema. Per coloro che hanno optato per installare grub sul primo settore della partizione / invece che nell'MBR, è necessario seguire una delle guide sopra citate per avviare Fedora.
+
+Dopo il primo avvio:
+<b>Licenza</b> - Accettare la licenza di Fedora
+<b>Crea utente</b> - Creare 1 utente per se stessi. <b>Utilizzare sempre</b> questo account e <b>mai</b> l'account di root per il login. <i>L'account di root '''NON è abilitato''' per l'utilizzo in ambiente grafico</i>.
+<b>Data ed ora</b> - Network Time Protocol - Abilitare questa opzione <i>SOLO</i> se si ha una connessione internet attiva e funzionante (ad es. di tipo: broadband, T1, DSL). Non si dovrà controllare l'ora ogni volta che parte il servizio.
+<b>Profilo Hardware</b> - Fedora usa ''smolt'' per comunicare informazioni di base non intrusive sulla specifica installazione effettuata. Mentre questo è utile per gli sviluppatori di Fedora, potrebbe essere vista come un'intrusione della privacy. E' raccomandato di comprendere quali informazioni vengono spedite prima di consentire al sistema di farlo. 
+
+<h3><a name="sudo"></a><a name="_Configurare_sudo"></a><a href="#_Personal_Fedora_10_Installation_Guide">Configurare sudo</a></h3>
+8 giugno 2009
+
+Fedora, come tutte le altre distribuzioni Linux, ha un utente root ed ha anche utenti individuali. L'utente root è il "superutente", al pari di "Amministratore" in Windows. Occorre usare il proprio account personale per gli usi correnti e root solo per le operazioni di amministrazione/configurazione. Per diventare 'root' si può usare su o sudo. Comunque sudo richiede delle operazioni di configurazione. Si avvii, da root:
+
+[code]echo 'loginname ALL=(ALL) ALL' >> /etc/sudoers[/code]
+Dove 'loginname' è il proprio account per un utente individuale.
+Va usato 'ALL=(ALL) NOPASSWD:ALL' se non si vuole richiesta una password. Se viene richiesta una password durante l'uso di 'sudo', si dovrà fornire la password dell'utente, non quella di root.
+Esempio:
+
+[code]['''mirandam'''@charon ~]$ su
+Password:    &lt;--- Enter root password
+[root@charon mirandam]# chmod +w /etc/sudoers
+[root@charon mirandam]# echo ''''mirandam''' ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+[root@charon mirandam]# exit[/code]
+Il seguente è un esempio di come sudo lascia eseguire i comandi di root:
+
+[code][mirandam@charon ~]$ du -sh /root
+du: `/root': '''Permission denied'''  &lt;--- Senza sudo!!!
+[mirandam@charon ~]$ sudo du -sh /root
+163M    /root&gt;                   &lt;--- Con sudo!!![/code]
+<b>N.B.:</b> Ogni comando dato su questa pagina funzionerà anche rimuovendo sudo dalla riga. Comunque, in tal caso, si dovrà avere avuto accesso al sistema come 'root'. Un alternativa all'usare sudo è usare su al login come root, <em>prima</em> di eseguire un comando.
+
+<h3><a name="yum"></a><a name="_Configurare_yum"></a><a href="#_top">Configurare yum</a></h3>
+17 novembre 2009
+
+Fedora usa yum per installare ed aggiornare il proprio software. Quando è connesso ad internet, yum determina automaticamente le dipendenze delle applicazioni.
+
+<b>Repository di Fedora</b>
+
+Fedora ha due repository abilitati come impostazione predefinita: fedora (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed updates (pacchetti di aggiornamento, più recenti di fedora). 
+
+<b>YUM Plugins</b>
+
+Yum ha disponiile molti plugins, <i>fastestmirror</i> è il plugin che accelera il download cercando collegamenti più veloci. Inoltre in Fedora 16 è incluso <i>yum-presto</i>, che durante il prcesso di update dovrebbe scaricare soltanto le porzioni nuove del pacchetto stesso. Per installarli:
+
+[code][mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror[/code]
+<b>Repository di Terze Parti</b>
+
+Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), deve essere usato un repository di "parte terza". Il repository consigliato per Fedora è: <a href="http://rpmfusion.org/" target="_blank">RPM-Fusion</a>. Per lo scopo di questa guida tutte le installazioni possono essere fatte con questo repository, altrimenti verrà indicato espressamente.
+Per installare RPM-Fusion digitate:
+
+[code][mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm \
+http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm[/code]
+<h3><a name="nvidia"></a><a name="_Installare_i_driver_Nvidia"></a><a href="#_top">Installare i driver Nvidia</a></h3>
+17 novembre 2009
+
+Per dare le massime indicazioni per l'installazione dei driver Nvidia si rimanda a <a href="http://www.mjmwired.net/resources/mjm-fedora-nvidia.html" target="_blank">Fedora Nvidia Driver Install Guide</a> ([url=http://www.mjmwired.net/resources/mjm-fedora-nvidia.html]http://www.mjmwired.net/resources/mjm-fedora-nvidia.html[/url]).
+
+<h3><a name="network"></a><a name="Gestione rete"></a><a href="#_top">Gestione rete</a></h3>
+18 novembre 2009
+
+'''Rete non attiva'''
+
+Se si installa da Cd o DVD la rete <a href="https://fedoraproject.org/wiki/Documentation_Networking_Beat#Ethernet_connections_are_not_started_at_first_boot" target="_blank">non sarà attiva</a> du default.
+
+Opzione 1: Modifica: /etc/sysconfig/network-scripts/ifcfg-eth0 e cambia ONBOOT=no a ONBOOT=yes.
+Opzione 2: In Gnome clicca con il tasto destro del mouse sull'icona della rete.
+Scegli ''modifica connessioni''
+Seleziona ''sistema eth0'' e clicca su ''modifica'' (inserisci la password di root quando richiesta)
+Seleziona ''connetti automaticamente'' e poi click su ''Applica''.
+
+<h3><a name="mp3"></a><a name="_Installare_lettori_MP3"></a><a href="#_top">Installare lettori MP3</a></h3>
+8 giugno 2009
+
+Fedora viene distribuita senza alcuna forma di supporto ai file di tipo MP3. Per aggiungere il supporto all'esecuzione di MP3 si <b>deve installare da "terze parti"</b>. Quanto segue richiede l'uso del repository di <a href="#_Configurare_yum">RPMFusion</a>.
+
+<b>XMMS</b>:
+semplice, vecchia GUI, opzioni minimalistiche (ma molto popolari)
+Installazione, per utenti di yum:
+
+[code][mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-pulse xmms-skins[/code]
+<b>Audacious</b>: (un fork di <b>Beep Media Player - BMP</b>). 
+Una rivisitazione di XMMS per renderlo un po' più moderno. In versione base, ma un po' meglio di XMMS.
+Installazione, per utenti di yum:
+
+[code][mirandam@charon ~]$ sudo yum install audacious audacious-plugins-freeworld*[/code]
+N.B.: C'è un '*' alla fine del comando.
+
+<b>Rythmbox/Gstreamer</b> - Una semplice applicazione audio simile al layout di iTunes.
+
+Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere già installati durante l'installazione di <a href="#_Installazione">Gnome</a> (sopra citata). I componenti che non vengono installati sono quelli relativi all'MP3 (e ad altri formati).
+Per utenti con yum:
+
+[code][mirandam@charon ~]$ sudo yum install rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg[/code]
+<b>Amarok</b> - Una moderna applicazione ricca di opzioni aggiuntive.
+
+E' di aiuto avere già KDE installato (come prima citato).
+Installazione, yum:
+
+[code][mirandam@charon ~]$ sudo yum install amarok xine-lib-extras-freeworld[/code]
+<b>Nota:</b> Pulseaudio - Sono stato in grado di eseguire tutte le applicazioni con le loro impostazioni di default oppure utilizzando OSS/Alsa quando Pulseaudio era attivato.
+
+<h3><a name="mediaplayer"></a><a href="#_top">Installare i Media Players</a></h3>
+9 giugno 2009
+
+Fedora ha un numero limitato di lettori sia Audio che Video. Per quanto riguarda l'audio si guardino le note sugli <a href="#_Installare_lettori_MP3">MP3 player</a>. Per il video e il multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: <a href="#_Configurare_yum">RPMFusion</a>. Accertati di avere configurato il <a href="#_Configurare_yum">repository RPMFusion </a>prima di procedere. Nota che le molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.
+I media player più famosi sono (in ordine): Mplayer, Xine e  VLC. Ognuo di questi ha i propri punti di forza. Installa quello che preferisci, sebbene i primi due sono raccomandati.
+
+<b><a href="#_top">Mplayer</a></b> - Mplayer è disponibile sia in una versione a riga di comando (mplayer) sia in una versione GUI, anch'essa con il potente tool di encoding Mencoder (molto valido per il ripping o la compressione audio/video). In aggiunta esiste un plugin per il web, molto funzionale, che permette la riproduzione di molti formati popolari in Firefox/Mozilla (WMV, QuickTime, etc).
+Installazione con yum, con <a href="#_Configurare_yum">RPMFusion</a> abilitato:
+
+[code][mirandam@charon ~]$ sudo yum install mplayer mplayer-gui gecko-mediaplayer mencoder[/code]
+- Da notare che mencoder è opzionale ma fornisce molte opzioni di decodifica.
+- <b>Binary Codecs:</b> Per favore installa I <a href="http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs">Binary Codecs</a> per un maggiore supporto di formati che MPlayer non supporta nativamente.
+- MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
+
+<b><a href="#_Personal_Fedora_8_Installation_Guide">Xine</a></b> - Xine è simile, per molti aspetti, ad MPlayer, ma manca delle applicazioni a riga di comando e dell'encoder. Comunque ha un pieno supporto del DVD playback e una buona usabilità.
+Installazione con yum, con <a href="#_Configurare_yum">RPMFusion</a> abilitato:
+
+[code][mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld[/code]
+<b>Binary Codecs:</b> Per favore installa I <a href="http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs">Binary Codecs</a> per un maggiore supporto di formati che Xine non supporta in maniera nativa.
+'''DVD Playback:''' Per riprodurre correttamente i DVD leggi DVD Playback poche righe più giù.
+
+<a name="binarycodecs"></a><a href="http://www.mjmwired.net/resources/mjm-fedora-f10.html#binarycodecs"><b>Binary Codecs</b></a>
+
+MPlayer projects mantiene un package complete di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
+<b>NOTA:</b> Cè una significativa variazione, in relazione alla architettura. (i386, x86_64, ppc). La 32bit i386 lavora al meglio.
+
+- Andare su : <a href="http://www.mplayerhq.hu/MPlayer/releases/codecs/" target="_blank">http://www.mplayerhq.hu/MPlayer/releases/codecs/</a>
+- Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora..Molti utenti 32-bit useranno: <a href="http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20071007.tar.bz2" target="_blank">all-20071007.tar.bz2</a>
+- Installa i codecs:
+
+[code][mirandam@charon Download]$ sudo mkdir -p /usr/lib/codecs
+[mirandam@charon Download]$ sudo tar -jxvf all-20071007.tar.bz2 --strip-components 1 -C /usr/lib/codecs/[/code]
+<b><a href="#_top">VLC</a></b> - VLC è un semplice media player con una interfaccia molto semplice da usare. Supporta anche il DVD playback. Benchè molte esigenze sarebbero accontentate con Xine e Mplayer, alcuni preferiscono VLC.
+Installazione con yum, con <a href="#_Configurare_yum">RPMFusion</a> abilitato :
+
+[code][mirandam@charon ~]$ sudo yum install vlc[/code]
+<b><a href="#_top">DVD Playback</a></b> - Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository di Livna. Utilizzate il repository di Livna per scaricarlo o scaricate il singolo pacchetto e installatelo successivamente.
+
+- Configurare il repo di Livna:
+
+[code][mirandam@charon ~]$ sudo rpm -ivh http://rpm.livna.org/livna-release-9.rpm
+[mirandam@charon ~]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-livna[/code]
+Installare il pacchetto con Yum:
+
+[code][mirandam@charon ~]$ sudo yum install libdvdcss[/code]
+<b>Nota:</b> Pulseaudio - Sono stato in grado di eseguire tutte le applicazioni con le loro impostazioni di default.
+
+<h3><a name="ttf"></a><a name="_Installare_i_font_TrueType_di_Micro"></a><a href="#_top">Installare i font TrueType di Microsoft</a></h3>
+8 giugno 2009
+
+Il sito ufficiale per questo pacchetto è <a href="http://corefonts.sourceforge.net/" target="_blank">http://corefonts.sourceforge.net/</a>, ma comunque sto utilizzando questo <a href="http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.spec" target="_blank">SPEC file</a>.
+Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.0-3.noarch.rpm (''non linkare direttamente a questo link''):
+
+<a href="http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.noarch.rpm">msttcore-fonts-2.0-3.noarch.rpm</a>
+
+[code][mirandam@charon Download]$ sudo rpm -ivh msttcore-fonts-2.0-3.noarch.rpm[/code]
+Fedora incoraggia l'uso dei <a href="https://www.redhat.com/promo/fonts/" target="_blank">Liberation Fonts</a>. Tali font dovrebbero essere già installati come impostazione predefinita (e inclusi nel DVD).
+
+<h3><a name="service"></a><a name="_Disabilitare_Servizi/Demoni_non_nec"></a><a href="#_top">Disabilitare Servizi/Demoni non necessari</a></h3>
+19 novembre 2009
+
+Informazioni riguardanti i servizi e le loro funzioni possono essere trovati su: <a href="http://www.mjmwired.net/resources/mjm-services-f16.html">Services in Fedora 16</a> ([url=http://www.mjmwired.net/resources/mjm-services-f16.html]http://www.mjmwired.net/resources/mjm-services-f16.html[/url]).
+Per informazioni su come gestire i servizi in Fedora per favore si legga: <a href="http://www.mjmwired.net/resources/mjm-fedora-manage-services.html">Managing Services in Fedora</a> ([url=http://www.mjmwired.net/resources/mjm-fedora-manage-services.html]http://www.mjmwired.net/resources/mjm-fedora-manage-services.html[/url]).
+
+<h3><a name="flash"></a><a href="#_flash">Il plugin per Macromedia Flash</a></h3>
+18 novembre 2009
+
+Il plugin per Macromedia(Adobe) Flash può essere installato dal sito web di Adobe.
+Per utenti yum: [RACCOMANDATO]
+
+<b>Installazione su Fedora 32-bit</b>
+Installa il repository di Adobe per Yum:
+
+[code][mirandam@charon Download]$ [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
+[mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux[/code]
+Installa il plugin:
+
+[code][mirandam@charon Download]$ sudo yum install flash-plugin[/code]
+<b>Installazione su Fedora 64-bit</b>
+Gli utenti a 64bit hanno 2 opzioni, una è quella di utilizzare il plugin a 32-bit "wrapped" (raccomandato finchè Adobe non rilascia ufficialmente il plugin nativo a 64 bit); l'altra è quella di installare la versione Alpha del plugin a 64 bit.
+
+<u>Utilizzo del plugin a 32-bit</u>
+Per primo installate il repository di Adobe come descritto sopra e poi instalate le dipendenze mancanti insieme al plugin:
+
+[code][mirandam@charon Download]$ [mirandam@charon Download]$ sudo yum install nspluginwrapper.{i686,x86_64} alsa-plugins-pulseaudio.i686
+[mirandam@charon Download]$ sudo yum install flash-plugin[/code]
+<u>Installazione del plugin Alpha a 64 bit</u>
+Scaricate l'utlima versione del plugin dal sito di <a href="http://labs.adobe.com/downloads/flashplayer10.html">Adobe Labs</a>. Sarà in formato tar.gz.
+Ora installate il plugin nella directory dei plugin di Mozilla, per esempio:
+
+[code][mirandam@charon Download]$ sudo tar -zxvf libflashplayer-10.0.45.2.linux-x86_64.so.tar.gz -C /usr/lib64/mozilla/plugins[/code]
+Riavviate Firefox o il vostro browser Mozilla.
+Ulteriori informazioni sono disponibili sul [url=https://fedoraproject.org/wiki/Flash]Fedora Wiki[/url].
+
+<h3><a name="java"></a><a href="#_top">Installare il Plugin Java</a></h3>
+18 novembre 2009
+
+L'installazione standard di Fedora installerà <i>OpenJDK</i> (basato su Sun Java). In caso contrario può essere installato con yum:
+
+[code][mirandam@charon ~]$ sudo yum install java-1.6.0-openjdk java-1.6.0-openjdk-plugin[/code]
+Con openJDK installato, le applicazioni e le applet Java dovrebbero funzionare automaticamente! Potrebbe essere che alcuni applet non funzionano correttamente, proprio perchè OpenJDK ha ancora qualche limite.<i> Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano.</i>
+
+<b>Usare invece Sun Java</b>
+
+Se preferisci il <i>Sun Java</i> o se OpenJDK non funziona correttamente, puoi scaricare Sun Java ed usarlo con Fedora. 
+Download del pacchetto Java da: <a href="http://java.sun.com/javase/downloads/index.jsp" target="_blank">http://java.sun.com/javase/downloads/index.jsp</a> (utilizza sempre l'ultimo update)
+Seleziona: <i>Java Runtime Environment (JRE) 6 Update 17</i> (JDK è per sviluppatori)
+Alla pagina successiva seleziona la piattaforma <i>Linux</i> per sistemi a 32 bit e<i> "Linux x64"</i> per sistemi a 64 bit.
+Scegli la lingua (multilanguage), accetta l'accordo di Licenza ed selziona "continue":
+Alla pagina successiva seleziona il primo RPM:
+
+[code]Java SE Runtime Environment 6u17
+jre-6u17-linux-i586-rpm.bin       (utenti 32-bit)
+
+jre-6u17-linux-x64-rpm.bin        (utenti 64-bit) [/code]
+Per installare:
+
+[code][mirandam@charon Download]$ sudo sh jre-6u17-linux-i586-rpm.bin
+-OR-
+[mirandam@charon Download]$ sudo sh jre-6u17-linux-x64-rpm.bin[/code]
+(Digita 'spazio' alla fine, poi digita 'yes'). Dovresti vedere l'installazione del RPM, se non è così installalo manualmente con ''sudo rpm -ivh''.
+Quando si esegue un comando <i>java</i>, Fedora preferisce usare OpenJDK, per usare il Sun Java si usi il comando 'alternatives':
+
+[code][mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/bin/java java /usr/java/default/bin/java 20000
+[/code]
+Lo stesso è da applicare al Mozilla/Firefox Plugin:
+
+Per '''sistemi a 32 bit'''
+
+[code][mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so \
+libjavaplugin.so /usr/java/default/plugin/i386/ns7/libjavaplugin_oji.so 20000[/code]
+Per '''sistemi a 64 bit'''
+
+[code][mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so \
+libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 20000[/code]
+Potrebbe essere necessario riavviare Firefox.
+<b>Nota:</b> Se desideri ritornare ad <i>OpenJDK</i> puoi eseguire i seguenti comandi per passare da un Sun a OpenJDK.
+
+[code][mirandam@charon ~]$ sudo /usr/sbin/alternatives --config java
+
+[mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so
+(o per 64-bit)
+[mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
+[/code]
+<i>Per fare l'update:</i> se fai l'update del pacchetto JRE, scarica sempplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando <i>alternatives</i> in quanto le impostazioni rimangono intatte.
+
+<h3><a name="acrobat"></a><a href="#_top">Installare Adobe Acrobat</a></h3>
+18 novembre 2009
+
+Per visualizzare i file PDF, Fedora include evince o okular. Il seguente è indirizzato a utenti che necessitano di Adobe Acrobat Reader.
+Per utenti Yum:
+Installate il repository di adobe.repo:
+
+[code][mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
+[mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+
+[mirandam@charon Download]$ sudo yum install AdobeReader_enu[/code]
+<b>N.B:</b> La versione installata utilizza l'inglese: <b>enu</b>. Per vedere le lingue disponibili date il seguente comando:
+
+[code][mirandam@charon Download]$ yum list AdobeReader\*[/code]
+Per altre lingue l'installazione è simile: AdobeReader_fra
+Se non sei sicuro del nome esatto cercalo con:
+<i>yum info AdobeReader_fra </i>
+
+Altrimenti installalo manualmente come descritto qui: (utenti a '''64 bit''' dovrebbero installare Acrobat Reader tramite Yum per risolvere tutte le dipendenze a 32 bit)
+
+Scaricare Acrobat da: <a href="http://www.adobe.com/products/acrobat/readstep2_allversions.html" target="_blank">http://www.adobe.com/products/acrobat/readstep2_allversions.html</a>
+
+Selezionare:
+Sistema operativo: Unix/Linux
+Versione: Linux - x86(.rpm)
+La tua lingua.
+
+La versione corrente di Adobe Acrobat è la 9.2 e il file da scaricare varia in funzione della lingua. Non tutte le lingue sono supportate nella versione per Linux.
+
+[code][mirandam@charon downloads]$ <b>su -c</b> 'rpm -ivh AdbeRdr9.1.0-1_i486linux_enu.rpm'[/code]
+<h3><a name="samba"></a><a name="_Configurare_Samba_-_Condividere_fil"></a><a href="#_top">Configurare Samba - Condividere file con Windows</a></h3>
+18 novembre 2009
+
+Se si possiedono computer con Windows installato o una Lan e si vuole condividere file tra macchine con Windows e con Linux, bisogna configurare Samba. Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
+
+<b>1. Installare Samba</b>
+
+[code][mirandam@charon ~]$ sudo yum install samba samba-client[/code]
+<b>2. Aggiungere 'Shares'</b>
+Bisogna editare /etc/samba/smb.conf come root: (usando nano al posto di gedit se non si utilizza una GUI)
+
+[code][mirandam@charon ~]$ sudo gedit /etc/samba/smb.conf[/code] 
+Definire il nome del Windows Workgroup nella sezione [global].
+Aggiungere le shares alla fine del file. Ad esempio:
+
+[code][c_drive]
+   path = /media/c_drive
+   public = yes
+   writable = no
+[netshare]
+   path = /data/
+   public = yes
+   writable = yes
+[/code]
+Se si definisce come 'writable' (scrivibile), la risorsa <b>deve essere</b> scrivibile anche in Linux. I permessi addizionali devono corrispondere (esempio: drw-rw-rw).
+Se i dati della directory home (tutti i file personali sotto /home/nomeutente) devono essere accessibili, bisogna indicare 'browseable = yes' sotto [homes]
+(~riga 250). Il file di configurazione è <i>molto descrittivo</i>, occorre leggerlo da cima a fondo per avere maggiori idee o informazioni.
+
+<b>3. Aggiungere gli utenti</b>
+Per avere accesso alle shares, bisogna essere degli utenti definiti. Aggiungere <i>utenti e password</i> valide usando il comando smbpasswd.
+Tali parametri SARANNO il nome utente e la password da usare per il login <b>da Windows</b> per accedere al computer Linux. La password <b>NON deve necessariamente coincidere </b>con la password Linux.
+
+[code][mirandam@charon ~]$ sudo smbpasswd -a username
+New SMB password:
+Retype new SMB password:
+account_policy_get: (warnings ignored)
+Added user username.
+[/code]
+(Note: 'nomeutente' deve essere un account valido sulla macchina)
+
+<b>4. Avviare il servizio Samba</b>
+Avviare Samba e controllare la presenza di errori:
+
+[code][mirandam@charon ~]$ sudo /etc/init.d/smb start
+Starting SMB services:                                     [  OK  ][/code]
+Usare chkconfig o serviceconf per abilitare Samba (smb) nei runlevels 3 e 5. Questo renderà certo l'avvio di Samba ad ogni avvio di Fedora.
+
+[code][mirandam@charon ~]$ /sbin/chkconfig --list smb
+smb             0:off   1:off   2:off   3:off   4:off  5:off   6:off
+[mirandam@charon ~]$ sudo /sbin/chkconfig --level 35 smb on
+[mirandam@charon ~]$ /sbin/chkconfig --list smb
+smb             0:off   1:off   2:off  3:on    4:off   5:on    6:off[/code]
+Riavviare Samba per ogni cambiamento a utenti/password od a 'smb.conf'
+
+[code][mirandam@charon ~]$ sudo /etc/init.d/smb restart
+Shutting down SMB services:                               [   OK  ]
+Starting SMB services:                                    [   OK  ][/code]
+<b>5. Gestione sicurezza per Samba</b>
+<b>Firewall</b>
+
+Il Firewall di default bloccherà Samba, per permettergli l'accesso digita:
+
+[code][mirandam@charon ~]$ system-config-firewall
+[/code]
+Per abilitare Samba a lavorare attraverso il proprio firewall, bisogna configurare 'Samba' come un 'Servizio fidato' e confermarlo con 'Applica'. In alternativa, e se non si ha accesso a un server grafico bisogna digitare nel terminale:
+
+[code][mirandam@charon ~]$ sudo system-config-firewall-tui
+[/code]
+Per abilitare Samba a lavorare attraverso il proprio firewall, utilizza il tasto 'TAB' per scendere fino alla voce 'personalizza'. Nei 'servizi fidati' seleziona 'Samba' e premi il tasto 'TAB' fino a poter dare OK.
+
+<b>SELinux</b>
+
+SELinux ha un <em>controllo significativo</em> su Samba e ne limita differenti parti. Si avvii system-config-selinux. Per favore si leggano le righe #23 - #51 in /etc/samba/smb.conf per una migliore spiegazione. In alternativa si può digitare:
+
+[code][mirandam@charon ~]$ system-config-selinux
+[/code]
+Selezionare <i>Boolean</i> e digitare <i>'Samba'</i> nel filtro. (senza apici)
+A questo punto puoi ignorare SELinux e accedere alle tue 'Windows shares' anche se il SELinux TroubleShooter in Gnome ti avviserà tramite un Pop-up spiegandoti l'errore. Seguendo quelle indicazioni potrai essere più sicuro.
+Per attivare ogni cambiamento apportato alla configurazione di SELinux o di smb.conf, è raccomandato riavviare Samba.
+
+<hr align="center" size="2" width="100%" >
+<h3><a name="moreinfo"></a><a href="http://www.mjmwired.net/resources/mjm-fedora-f9.html#moreinfo">Ulteriori informazioni</a></h3>
+
+<a href="http://www.mjmwired.net/resources/mjm-services-f16.html">Fedora 16 - Services and Daemons in Fedora 16</a>
+<a href="http://www.mjmwired.net/linux/category/fedora/f16/">Fedora 16 Blog Entries</a>
+<a href="http://www.mjmwired.net/resources/mjm-fedora-nvidia.html">Fedora Nvidia Driver Install Guide</a>
+<a href="http://www.mjmwired.net/resources/mjm-fedora-f11.html">Fedora 11 Personal Installation Guide</a>
+<a href="http://www.mjmwired.net/resources/mjm-fedora-manage-services.html">Managing Services in Fedora</a>
+<a href="http://www.mjmwired.net/resources/mjm-fedora-help.html">Fedora Help Forum Posts and Threads</a>
+
+<hr align="center" size="2" width="100%" >
+Commenti, suggerimenti, domande o qualunque altro contributo a questa o a una qualunque delle <a href="http://www.mjmwired.net/resources.php">altre mie pagine</a> sono ben accetti. Per favore usate il seguente <a href="http://www.mjmwired.net/contact.php">link</a> per contattarmi.
+Aiutatemi: se avete trovato questa guida o ogni altra risorsa collegata utile, per favore considerate di aiutare il mio sito raccomandando questa pagina ad altri o linkandola. Io apprezzo tutto il supporto che posso ricevere. Grazie in anticipo.
+Potete anche scegliere di donare qualcosa per supportare l'hosting per il mio sito.
+<b>Disclaimer:</b> The author makes no claim to the accuracy of the information provided. This information is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY. There is no implied support from referencing this guide. Any help that is provided is at will. Use this information at your own risk. Always make proper backups and use caution when modifying critical system files.
+<b>PER FAVORE NON</b> fate copie in mirror, traducete o copiate questa pagina <i>senza</i> contattarmi. Io ho speso diverse ore di lavoro personalmente per ricercare e verificare quanto è qui riportato.
+
+<b><a href="http://www.mjmwired.net/about.php#copyright">Copyright © 2003-2009</a></b><b> by Mauriat Miranda</b> (mjmwired.net).
