@@ -24,7 +24,7 @@ dovresti vedere un access point. Puoi utilizzare Network Manager per controllare
 
  yum -y install nvidia-glx kernel-module-nvidia-$(uname -r)
 
-<li>Leggi [[15 Trucchi vari prossimo articolo#Come riavviare GNOME senza riavviare il computer|Come riavviare GNOME senza riavviare il computer]]</li>
+<li>Leggi [[15 Trucchi vari#Come riavviare GNOME senza riavviare il computer|Come riavviare GNOME senza riavviare il computer]]</li>
 <li>In caso di problemi leggi nV News sul forum [http://www.nvnews.net/vbulletin/forumdisplay.php?s=&amp;forumid=14 "Linux and nVidia Graphics"]</li>
 </ol>
 
