@@ -2,13 +2,13 @@
 Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
 Nelle nostre prove, abbiamo riscontrato i soliti problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, e allora ecco come procedere!
 
-Il problema è ovviamente dato dalla configurazione dei permessi: per prima cosa, dobbiamo aggiungere la nostra utenza al gruppo vboxusers (possiamo controllare che non sia già stato fatto in automatico lanciando il comando groups), con il seguente comando
+Il problema è ovviamente dato dalla configurazione dei permessi: per prima cosa, bisogna aggiungere la propria utenza al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico lanciando il comando groups), con il seguente comando:
 
  # gpasswd -a $(logname) vboxusers
 
-Ora dobbiamo garantire i permessi di scrittura e lettura su "usbfs" per gli utenti che appartengono al gruppo "vboxusers".
+Ora bisogna garantire i permessi di scrittura e lettura su "usbfs" per gli utenti che appartengono al gruppo "vboxusers".
 
-Su Fedora 10, "usbfs" è accessibile da /proc/bus/usb che per configurazione di defualt appartiene all'utente root e al gruppo root. Potremmo anche modificare i permessi con il comando chmod, ma ogni qualvolta riavviamo il sistema, dovremmo rifare la medesima procedura. Inoltre non possiamo eseguire a piacimento le operazioni di mount, perché il sistema comunica costantemente con "usbfs", e finché esiste tale comunicazione ( cioè esattamente per tutto il tempo in cui il sistema è running ) il filesystem risulta "busy". Il "trucco" sta nel "montare" una copia di "usbfs" da qualche parte nel sistema, passando gli effetti delle configurazioni anche su /proc/bus/usb. Per fare questo, ci serve l'id del gruppo "vboxusers", che troviamo con il seguente comando:
+Su Fedora 10, "usbfs" è accessibile da ''/proc/bus/usb'' che per configurazione di default appartiene all'utente root e al gruppo root. Si potrebbe anche modificare i permessi con il comando chmod, ma ogni qualvolta si riavvia il sistema, si dovrà rifare la medesima procedura. Inoltre non si potrà eseguire a piacimento le operazioni di mount, perché il sistema comunica costantemente con "usbfs", e finché esiste tale comunicazione ( cioè esattamente per tutto il tempo in cui il sistema è running ) il filesystem risulta "busy". Il "trucco" sta nel "montare" una copia di "usbfs" da qualche parte nel sistema, passando gli effetti delle configurazioni anche su /proc/bus/usb. Per fare questo, serve l'id del gruppo "vboxusers", che si ricava con il seguente comando:
 
  $ cat /etc/group | grep vboxusers
 
@@ -16,7 +16,7 @@ L'output sarà qualcosa di simile a:
 
  vboxusers:x:501:nomeutente
 
-che specifica appunto che sul proprio sistema l'id del gruppo (gid) "vboxusers" è 501. Ora mpossiamo procedere nella creazione di un altro punto di mount per "usbfs". Decidiamo di crearlo in /root/usbfs:
+che specifica appunto che sul proprio sistema l'id del gruppo (gid) "vboxusers" è 501. Ora si può procedere nella creazione di un altro punto di mount per "usbfs". In questo esempio lo si crea in ''/root/usbfs'':
 
  # mkdir /mnt/usbfs
 
@@ -26,7 +26,7 @@ Il prossimo passo è la modifica del file /etc/fstab per "montare" una copia di 
  riga da aggiungere:
  none /mnt/usbfs usbfs rw,devgid=501,devmode=664 0 0
 
-Ovviamente, se nel vostro sistema il gid del gruppo "vboxusers" è differente da 501, dovete sostituirlo con quello appropriato. Per applicare i cambiamenti, lanciamo il comando di "mount":
+Ovviamente, se nel sistema il gid del gruppo "vboxusers" è differente da 501, si dovrà sostituirlo con quello appropriato. Per applicare i cambiamenti, lanciare il comando di "mount":
 
  #  mount -a
 
@@ -40,8 +40,6 @@ poi dare il comando:
 
  # /etc/init.d/vboxdrv setup
 
-Dopo questa procedura, finalmente i vostri sistemi virtuali leggeranno qualsiasi collegamento USB, esattamente come il vostro sistema operativo. Chiaramente è necessario settare, per ogni macchina virtuale, i controller USB che volete rendere attivi.
+Dopo questa procedura, finalmente i propri sistemi virtuali leggeranno qualsiasi collegamento USB, esattamente come il sistema operativo vero e proprio. Chiaramente è necessario settare, per ogni macchina virtuale, i controller USB che si vuole rendere attivi.
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Sistema]]
-[[Categoria:Ufficio]]
+[[Categoria:Virtualizzazione]]
