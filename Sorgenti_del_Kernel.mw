@@ -42,7 +42,7 @@ Ora serve un po' di pazienza, lasciare che Fedora lavori e non interrompere asso
  Preparing... ####################### [100%]
  1:kernel-sourcecode ...################# [100%]
 
-Fatto! In questo modo si sono installate le sorgenti, andate a verificarne la presenza in /usr/src/linux.
+Fatto! In questo modo si sono installate le sorgenti; andate a verificarne la presenza in /usr/src/linux.
 
  # cd /usr/src/linux
  # ls
