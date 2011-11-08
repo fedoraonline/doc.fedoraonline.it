@@ -92,6 +92,4 @@ Il mio consiglio è di provare a disinstallare il pacchetto senza tale opzione e
  # rpm -e lam-libs-7.1.2-11.fc9.i386
  errore: scriptlet %preun(lam-libs-2:7.1.2-11.fc9.i386) fallita, uscita con stato 2
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Sistema]]
 [[Categoria:Yum]]
