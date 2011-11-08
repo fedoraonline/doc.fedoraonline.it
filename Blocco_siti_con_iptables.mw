@@ -1,6 +1,6 @@
 Il seguente piccolo script permette di filtrare attraverso iptables il traffico verso siti "indesiderati".
 
-Supponiamo di avere  due schede di rete tra le quali è interposto un firewall  come nel seguente schema:
+Si suppone di avere  due schede di rete tra le quali è interposto un firewall  come nel seguente schema:<br />
 '''|INTERNET|<----------------->|eth0|< ---> firewall<--->|eth1|<---->|switch|'''
 
 Il listato che imposta le regole di filtraggio è questo.
@@ -35,7 +35,5 @@ Il filtraggio avverrà dal momento del lancio dello script.
 
 Un saluto da Mandela900
 
-[[:Categoria:Scrittura in corso]] 
-[[:Categoria:Rilettura in corso]]
 [[Categoria:Rete e Server]]
 [[Categoria:Sicurezza]]
