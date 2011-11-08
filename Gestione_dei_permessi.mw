@@ -28,7 +28,7 @@ Come si può vedere il file.txt appartiene a root del gruppo root e ha i seguent
 * Il proprietario può leggere e scrivere il file (rw-)
 * Il gruppo può solo leggere il file (r--)
 * Altri utenti possono solo leggere il file (r--)
-Ora si vuole modificare i permessi, in modo che il gruppo possa fare qualsiasi operazione. Per indicare le categorie si useranno le opzioni 
+Ora si vuole modificare i permessi, in modo che il gruppo possa fare qualsiasi operazione. Per indicare le categorie si useranno le opzioni: 
  -a (all=tutti)
  -u (user=utente)
  -g (group=gruppo)
