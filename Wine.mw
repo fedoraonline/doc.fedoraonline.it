@@ -3,7 +3,7 @@ Una piccola guida base per cominciare con Wine, un non emulatore che permette di
 Molti utenti che si affacciano a Linux provenendo dal mondo Winzoz e sentono la necessità di portarsi dietro molti programmi Windows senza magari osservare che Linux stesso offre tantissimi applicativi analoghi a quelli Windows ma FREE.<br />
 Come fare per far girare applicazioni Windows sotto Linux? Esistono vari sistemi; wine è un sistema che permette di fare questo mettendo un buon compromesso tra facilità d'uso e economicità monetaria (è gratuito).
 
-E' possibile reperire il pacchetto RPM per FC3 direttamente dal sito http://www.winehq.com oppure tramite Yum.
+E' possibile reperire il pacchetto RPM per FC3 direttamente dal sito [http://www.winehq.com www.winehq.com] oppure tramite Yum.
 
 Wine non è un banale emulatore software, esso è composto da due grossi blocchi: una serie di DLL "riscritte" per Linux che compongono alcune parti del Core di Windows e da un programma che permette il loro interfacciamento sul sistema Linux.
 
