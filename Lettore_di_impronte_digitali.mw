@@ -1,6 +1,3 @@
-Come far funzionare il proprio lettore di impronte biometrico con fedora 10.<br />
-Questa piccola guida l'ho già pubblicata sul mio sito web [http://blog.marionline.it/?p=57 <a href="http://www.marionline.it" target="_blank"><a href="http://www.marionline.it" target="_blank">www.marionline.it]</a></a> e la pubblico anche su fedoraonline rispettando la licenza del mio sito web.
-
 Come far funzionare il lettore di impronte digitali con fedora 10?<br />
 La risposta è semplice e sul web si trovano un sacco di guide interessanti e utili.<br />
 Provo a scrivere una mini guida anch'io perché ho trovato delle difficoltà con fedora 10 a far funzionare bene il software per il lettore di impronte biometrico presente sul mio portatile: Dell XPS M1530. 
@@ -142,7 +139,8 @@ Si può vedere con lsusb(sono quelli che qui ho evidenziato):
 al posto di $USERS si sostituisce l'utente.<br />
 Per sicurezza dare un riavvio del sistema e poi gli utenti potranno utilizzare tranquillamente pam_fprint_enroll o fprint_demo.
 
-==Riferimenti a cui mi sono ispirtato:==
+==Riferimenti ==
+* [http://blog.marionline.it/?p=57 http://blog.marionline.it]
 * [http://www.thinkwiki.org/wiki/How_to_enable_the_fingerprint_reader_with_ThinkFinger#Fedora.2FFedora_Core How to per abilitare il lettore di impronte digitali con thinkfinger]
 * [http://www.fedoraonline.it/modules/newbb/viewtopic.php?topic_id=8159&viewmode=flat&order=ASC&type=&mode=0&start=0 Discussione forum Fedoraonline]
 * [http://thinkfinger.sourceforge.net/index.php Progetto ThinkFinger]
@@ -153,6 +151,4 @@ Per sicurezza dare un riavvio del sistema e poi gli utenti potranno utilizzare t
 Nel progetto fedora pare che si stia implementando un sistema che semplifichi l'utilizzo dei dispositivi per leggere le impronte digitali tramite fprint e l'utilizzo di un demone particolare: fprintd.<br />
 Per queste novità il riferimento è su fedoraproject.org a [https://fedoraproject.org/wiki/Features/Fingerprint questo indirizzo].
 
-[[:Categoria:Scrittura in corso]]
-[[Categoria:Sistema]]
 [[Categoria:Hardware]]
