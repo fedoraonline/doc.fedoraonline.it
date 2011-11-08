@@ -27,7 +27,7 @@ Tale applicazione verrà eseguita in un ambiente virtuale ed installata nelle ca
 In linea teorica è possibile installare ed eseguire tutto; in quanto molti programmi richiedono  di configurare l'ambiente wine in modo particolare.
 
 Senza addentrarsi in particolari un po' complicati, si può utilizzare un tool molto potente che aiuta a "sistemare" wine per poter far girare la maggior parte degli applicativi.<br />
-Questo programma si chiama wine-tools e si può scaricare dalla sezione download di www.winehq.com
+Questo programma si chiama wine-tools e si può scaricare dalla sezione download di [http://www.winehq.com www.winehq.com]
 
 Questo script permette di impostare correttamente un ambiente Wine installando i componenti di base di Windows che sono necessari dalla maggior parte delle applicazioni Windows.<br />
 Questi componenti (DCOM98, IE, WindowMediaPlayer, Jet4.0, MFC library, etc..) sono componenti che non sono forniti di default insieme a Wine e necessitano di essere installati separatamente. Wine-tools effettua queste operazioni.<br />
@@ -47,7 +47,7 @@ Si aprirà una finestra a menu molto chiara che permetterà di installare i comp
 Una volta installati questi componenti il proprio sistema Windows virtuale sarà compatibile con il 60-70% delle applicazioni Windows in circolazione e per installarle basta come detto prima lanciare il setup.exe dell'applicazione stessa.<br />
 Wine-tools permette anche già di installare diversi applicativi configurando just-in time il sistema wine per quell'applicazione.
 
-Per poter installare wine-tools è necessario avere sul proprio sistema il pacchetto qtdialog (reperibile comunque dal repository o da www.rpmfind.net).
+Per poter installare wine-tools è necessario avere sul proprio sistema il pacchetto qtdialog (reperibile comunque dal repository o da [www.rpmfind.net www.rpmfind.net]).
 
 Wine è un mondo vasto e occorrerebbe stilare guide specifiche per ogni singolo aspetto ma si spera che questa guida sia utile per chi si avvicina per la prima volta a questo programma.<br />
 Wine possiede tante potenzialità che magari verranno sviscerate in altre guide più specifiche che verranno create in futuro(ad esempio si scoprirà anche che wine può "allacciarsi" direttamente ad un sistema Windows vero installato in una partizione - purché sia FAT - e utilizzare direttamente tutti i programmi e i componenti installati sulla vera macchina Windows).
