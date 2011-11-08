@@ -22,7 +22,7 @@ Come detto prima i permessi per ogni categoria sono 3:<br />
 Provare a vedere i permessi di un file e digitando:
 
  # ls -l
--rw-r--r--  1 root root     0 27 gen 15:02 file.txt
+ -rw-r--r--  1 root root     0 27 gen 15:02 file.txt
 
 Come si può vedere il file.txt appartiene a root del gruppo root e ha i seguenti permessi:
 * Il proprietario può leggere e scrivere il file (rw-)
