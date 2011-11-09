@@ -1,4 +1,4 @@
-Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: 7 novembre 2011).<br />
+Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: 8 novembre 2011).<br />
 Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f16.html questo riferimento].
 
 Questa è una guida <i>personale</i> alla configurazione di Fedora 16.<br />
@@ -99,29 +99,53 @@ Il seguente è un esempio di come sudo lascia eseguire i comandi di root:
 
 == Configurare yum ==
 
+Fedora usa ''yum'' per installare ed aggiornare il proprio software. Quando è connesso ad internet, yum determina automaticamente le dipendenze delle applicazioni.
 
+===Repository di Fedora===
+Fedora ha due repository abilitati come impostazione predefinita: ''fedora'' (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed ''updates'' (pacchetti di aggiornamento, più recenti di fedora). 
 
-
-
-
-Fedora usa yum per installare ed aggiornare il proprio software. Quando è connesso ad internet, yum determina automaticamente le dipendenze delle applicazioni.
-
-<b>Repository di Fedora</b>
-
-Fedora ha due repository abilitati come impostazione predefinita: fedora (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed updates (pacchetti di aggiornamento, più recenti di fedora). 
-
-<b>YUM Plugins</b>
-
-Yum ha disponiile molti plugins, <i>fastestmirror</i> è il plugin che accelera il download cercando collegamenti più veloci. Inoltre in Fedora 16 è incluso <i>yum-presto</i>, che durante il prcesso di update dovrebbe scaricare soltanto le porzioni nuove del pacchetto stesso. Per installarli:
+===YUM Plugins===
+Yum ha disponiile molti plugins. Fedora 12 e successive abilitano di default ''yum-presto'', che durante il processo di update dovrebbe scaricare soltanto le porzioni nuove del pacchetto stesso. Inoltre molti utenti attivano ''fastestmirror'', il plugin che accelera il download cercando collegamenti più veloci.<br />
+Per installarlo:
 
  [mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror
-'''Repository di Terze Parti'''
 
-Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), deve essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/" RPM-Fusion</a>. Per lo scopo di questa guida tutte le installazioni possono essere fatte con questo repository, altrimenti verrà indicato espressamente.
+===Repository di Terze Parti===
+Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), deve essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/" RPMFusion</a>. Per lo scopo di questa guida tutte le installazioni possono essere fatte con questo repository, altrimenti verrà indicato espressamente.
 Per installare RPM-Fusion digitate:
 
- [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm \
-http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+ [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
+ 
+ [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
+
+== Ambienti Desktop alternativi ==
+
+Molti utenti trovano Gnome 3 difficile da usare e dovrebbero provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora 16. Da notare che sono tutti opzionali. Utilizzate yum se volete installarli:
+
+[http://www.mjmwired.net/resources/mjm-fedora-f16.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
+Per installarlo:
+
+ [mirandam@charon ~]$ sudo yum groupinstall "KDE Software Compilation"
+
+[http://www.mjmwired.net/resources/mjm-fedora-f16.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]).<br />
+Per installarlo:
+
+ [mirandam@charon ~]$ sudo yum groupinstall LXDE
+
+[http://www.mjmwired.net/resources/mjm-fedora-f16.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]).<br />
+Per installarlo:
+
+ [mirandam@charon ~]$ sudo yum groupinstall XFCE
+
+''Note: Xfce è la mia scelta personale/raccomandata.''
+
+
+
+
+
+
+
+
 <h3><a name="nvidia"></a><a name="_Installare_i_driver_Nvidia"></a>[#_top">Installare i driver Nvidia</a></h3>
 17 novembre 2009
 
