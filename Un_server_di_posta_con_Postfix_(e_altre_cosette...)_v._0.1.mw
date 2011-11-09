@@ -1,9 +1,7 @@
 Questa guida nasce come frutto della collaborazione tra due utenti del forum www.fedoraonline.it, che invece di limitarsi a scambiarsi i vari post del tipo "Come si fa?" hanno deciso di condividere le proprie esperienze ed il proprio tempo libero per la configurazione di un server di posta "che funziona".
 
 Di Federico Ciofi (f.ciofi at hotmail punto it) e Guido Caruso (caruso at idra punto unipa punto it).
-
 __TOC__
-
 ==  Introduzione ==
 Questa guida nasce come frutto della collaborazione tra due utenti del forum www.fedoraonline.it, che invece di limitarsi a scambiarsi i vari post del tipo "Come si fa?" hanno deciso di condividere le proprie esperienze ed il proprio tempo libero per la configurazione di un server di posta "che funziona".<br />
 Dopo varie mail scambiate e dopo un'attività di debug sul sistema, è nata questa guida, che altro non è che proprio le mail riorganizzate e riscritte.<br />
@@ -725,8 +723,4 @@ Apriamo infine il file /etc/shorewall/shorewall.conf e impostiamo la variabile S
 ==  Copyright ==
 Questa guida viene rilasciata sotto la [http://www.softwarelibero.it/gnudoc/fdl.it.html|Licenza per Documentazione Libera GNU].
 
-[[:Categoria:Scrittura in corso]] 
-[[:Categoria:Rilettura in corso]]
-[[Categoria:Sistema]]
-[[Categoria:Rete e Server]]
 [[Categoria:Fedoraserver]]
