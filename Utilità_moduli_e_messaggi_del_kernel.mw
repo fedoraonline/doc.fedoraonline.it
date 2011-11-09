@@ -1,4 +1,4 @@
-Spesso si ha bisogno di alcuni comandi per vedere se i propri moduli sono caricati correttamente, o per comprendere quali sono i moduli che il proprio sistema carica in automatico ecc. ecc.<br />
+Spesso si ha bisogno di alcuni comandi per vedere se i propri moduli: sono caricati correttamente, o per comprendere quali sono caricati in automatico dal sistema, più eventuali accortezze.<br />
 Di seguito vengono riportati i comandi principali  che serviranno a capire meglio di cosa trattano e quando usarli:
 
 ==modprobe==
