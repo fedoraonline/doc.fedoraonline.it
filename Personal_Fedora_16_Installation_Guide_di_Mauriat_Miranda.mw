@@ -79,7 +79,7 @@ Occorre usare il proprio account personale per gli usi correnti e root solo per 
  
  Dove 'loginname' è il proprio account per un utente individuale.
  Va usato 'ALL=(ALL) NOPASSWD:ALL' se non si vuole richiesta una password.<br />
-Se viene richiesta una password durante l'uso di 'sudo', si dovrà fornire la password dell'utente, non quella di root.
+ Se viene richiesta una password durante l'uso di 'sudo', si dovrà fornire la password dell'utente, non quella di root.
 
 Esempio:
 
