@@ -8,7 +8,7 @@ Modificare il file di configurazione di sudo con il seguente comando:
 
  visudo
 
-Inserire la seguente riga, salvare il tutto e uscire dal file
+Inserire la seguente riga, salvare il tutto e uscire dal file.
 
  %admins ALL=(ALL)       ALL
 
