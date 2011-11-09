@@ -38,8 +38,8 @@ Questo comando attiverà tutti i controller individuati:
 
 NB: Vi sono elencati i gruppi raid, in questo caso soltanto uno (isw_cdgiiahhib) con una sola partizione (isw_cgiiahhib_O.S.1)
 
-Finalmente si può montare il proprio dispositivo, per farlo usare il noto comando mount.<br />
-(Ricordarsi di creare il proprio punto di montaggio prima)
+Finalmente si può montare il proprio dispositivo, per farlo usare il noto comando mount:<br />
+(ricordarsi di creare il proprio punto di montaggio prima)
 
  # mount -o ro /dev/mapper/la_partizione_individuata /mnt/tuo_punto_di_montaggio
 
