@@ -90,9 +90,10 @@ Esempio:
 Il seguente è un esempio di come sudo lascia eseguire i comandi di root:
 
  [mirandam@charon ~]$ du -sh /root
- du: `/root': '''Permission denied'''  <-- Senza sudo!!!
+ du: `/root': '''Permission denied'''      <-- Senza sudo!!!
+ 
  [mirandam@charon ~]$ sudo du -sh /root
- 163M    /root                         <-- Con sudo!!!
+ 163M    /root                       <-- Con sudo!!!
 
 {{Nota|Nota|Ogni comando dato su questa pagina funzionerà anche rimuovendo sudo dalla riga. Comunque, in tal caso, si dovrà avere avuto accesso al sistema come 'root'. Un alternativa all'usare sudo è usare su al login come root, ''prima'' di eseguire un comando.}}
 
