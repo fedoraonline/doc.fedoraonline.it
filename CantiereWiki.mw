@@ -62,7 +62,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Webcam TRUST WB-1400T|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=SDL_gfx risoluzione conflitto tra i repo dries e core|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=ATI Mobility Radeon 9600 M10|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=ATI Mobility Radeon 9600 M10|autore=GabrieleTrombini|stato=DaFare}}{{AggiungiArticolo|fonte=-|articolo=Folio|autore=GabrieleTrombini|stato=DaFare}}
 |}
 
 == Rilettura in corso ==
@@ -87,9 +87,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Open Office: installazione parallela e indipendente|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Abilitare thumbnails in GNOME per file .ogv e .flv|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Inviare sms con skype su Fedora|autore=MarioSantagiuliana|rilettore=RobertMayr|data=03/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Gestione avanzata dei pacchetti su Fedora |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Un server di posta con Postfix (e altre cosette...) v. 0.1 |autore=MarioSantagiuliana|rilettore=?|data=03/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
