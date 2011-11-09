@@ -1,11 +1,14 @@
+== Introduzione ==
 Probabilmente molti si saranno disperati per mesi, come me, del fatto che con la versione di Skype per linux non è possibile inviare sms.
 Molti avranno provato a usare wine per installare la versione windows, senza successo. Ma forse non tutti hanno alla fine trovato una soluzione, che c'è, ed è pure molto semplice.
 
 == Cosa serve ==
+
 Bisogna per prima cosa avere skype installato sulla propria distribuzione fedora, all'ultima versione 2.0.0.xx.<br />
 Serve anche python, almeno alla versione 2.5.
 
 == Come fare ==
+
 Scaricare quindi l'ultima versione di skype4py da questo indirizzo (prendere il tar.gz):
 [http://sourceforge.net/project/showfiles.php?group_id=202148 http://sourceforge.net/project/showfiles.php?group_id=202148]
 e l'ultima versione di skysentials da quest'altro:
@@ -18,11 +21,12 @@ e copiarla nella cartella
  /home/nomeutente/skysentials-1.0.1 (il numero potrebbe essere diverso)
 Si può anche cancellare la cartella Skype4py-1.0.29.0 adesso.<br />
 Il gioco è fatto.<br />
-Per inviare i sms bisogna avviare skype normalmente (lo si fa partire e si mette username e password) quindi aprire un terminale e dare
+Per inviare gli sms bisogna avviare skype normalmente (lo si fa partire e si mette username e password), quindi aprire un terminale e dare:
  $ python /home/nomeutente/skysentials-1.0.1/skysentials.py 
 (questo programmino funziona solo se skype è già aperto e loggato, altrimenti darà errore o si comporterà stranamente)
 
 == Risparmiare tempo ==
+
 Qualcuno potrebbe storcere il naso, perché ogni volta si deve aprire skype, e poi un terminale e scrivere quella riga lunga. Per queste persone che vogliono solo il massimo dalla vita, la guida continua.<br />
 Bisogna fare un piccolo eseguibile bash che si occupa di fare le seguenti cose:
 # aprire skype, se non è gia aperto
@@ -55,9 +59,11 @@ Se si è proceduto correttamente, ora basterà aprire un terminale e dare
 perché il programma parta, lanciando skype, se non è gia aperto, e il python.
 
 == Risparmiare ancora più tempo ==
+
 I più esigenti, che dalla vita vogliono proprio tutto, potrebbero dirsi, "ok, ma non si può fare tutto premendo solo su un bottone????"<br />
 Ebbene si, si può.<br />
 Premere col destro sul desktop e scegliete:
+
 ===per KDE3.5=== 
 crea/collegamento a un'applicazione.<br />
 Si aprirà una nuova finestra, scegliere un nome, e poi andate nel menu Applicazione.<br />
@@ -73,13 +79,12 @@ Tipo, lasciare applicazione, scegliete un nome<br />
 dare ok. Premere col destro sull'icona che si è cosi creata, andare nel menu Permessi e dare la spunta per renderlo eseguibile.
 
 Dare ok, ed è fatta. Adesso premendo su questo bottone (che si può eventualmente trascinare sul pannello) si può fare partire skype e il python.<br />
-Come si vedrà il piccolo python è molto semplice, ma fa il suo lavoro, vi da accesso a tutta la vostra rubrica skype. Scegliere un numero, premete su "check number" e poi scrivere il testo, e inviare. Semplice no?
-Se il python non dovesse rispondere, di solito vuol dire che il programma è partito quando skype non era ancora ben loggato, in questo caso si consiglia di aumentare lo sleep nel sms.sh e riprovare.
+Come si vedrà il piccolo python è molto semplice, ma fa il suo lavoro, vi da accesso a tutta la vostra rubrica skype. Scegliere un numero, premete su "check number" e poi scrivere il testo, e inviare.<br />
+Se il python non dovesse rispondere, di solito vuol dire che il programma è partito quando skype non era ancora ben loggato, in questo caso si consiglia di aumentare lo sleep nel ''sms.sh'' e riprovare.
 
-Si ringrazia Virus, per i consigli che ha dato. Il sito degli sviluppatori beta, da cui è stata appresa dell'esistenza di questo python (bene imbeccato dall'amico Escanor) è [http://share.skype.com/sites/it/2007/11/sms_con_linux_e_skype.html http://share.skype.com/sites/it/2007/11/sms_con_linux_e_skype.html]
+== Riferimenti ==
 
+* [http://share.skype.com/sites/it/2007/11/sms_con_linux_e_skype.html http://share.skype.com/sites/it/2007/11/sms_con_linux_e_skype.html]
 
-[[:Categoria:Scrittura in corso]] 
-[[:Categoria:Rilettura in corso]]
-[[Categoria:Sistema]]
-[[Categoria:Ufficio]]
+[[Categoria:Multimedia]]
+[[Categoria:Internet]]
