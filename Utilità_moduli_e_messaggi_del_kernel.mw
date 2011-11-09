@@ -2,6 +2,7 @@ Spesso si ha bisogno di alcuni comandi per vedere se i propri moduli: sono caric
 Di seguito vengono riportati i comandi principali  che serviranno a capire meglio di cosa trattano e quando usarli:
 
 ==modprobe==
+
 Utility per il proprio kernel che permette di caricare dei moduli in memoria eseguendo alcuni test per la configurazione dei parametri.<br />
 Il comando va eseguito come root:
 
@@ -14,6 +15,7 @@ Per caricare il modulo sound. Spesso possono essere utili anche le opzioni:
  # modprobe -r  (per scaricare i moduli mantenendo le dipendenze)
 
 ==lsmod==
+
 Il comando per visualizzare tutti i moduli caricati in memoria è lsmod:
 
  # lsmod
@@ -59,6 +61,7 @@ Il comando per visualizzare tutti i moduli caricati in memoria è lsmod:
  jbd                    68185  1 ext3
 
 ==lsusb==
+
 Per leggere le informazioni USB del proprio sistema attraverso lsusb si ha bisogno di aver attivato il supporto per il /proc filesystem. Infatti lsusb legge le informazioni da /proc/bus/usb.
 
  # lsusb
@@ -71,8 +74,8 @@ Per chi vuole un output molto dettagliato può usare l'opzione:
 
  # lsusb -v
 
-
 ==dmesg==
+
 E' l'utility che legge tutte le informazioni del kernel compreso i messaggi di boot. Siccome le informazioni che vengono fornite sono davvero tante; utilizzando "more" o "less" si possono per avere più o meno righe di output, ovvero:
 
  # dmesg | more
