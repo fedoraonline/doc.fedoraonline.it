@@ -185,7 +185,7 @@ Fedora ha un numero limitato di lettori sia Audio che Video. Per il video e il m
 I media player più famosi sono i seguenti. Ognuno di questi ha i propri punti di forza. Installa quello che preferisci, sebbene almeno ''MPlayer'' e ''VLC'' sono raccomandati.
 
 ===Mplayer===
-Mplayer è disponibile sia in una versione a riga di comando (mplayer) sia in una versione GUI, anch'essa con il potente tool di encoding Mencoder (molto valido per il ripping o la compressione audio/video). In aggiunta esiste un plugin per il web, molto funzionale, che permette la riproduzione di molti formati popolari in Firefox/Mozilla (WMV, QuickTime, etc).
+Mplayer è disponibile sia in una versione a riga di comando (mplayer) sia in una versione GUI, anch'essa con il potente tool di encoding Mencoder (molto valido per il ripping o la compressione audio/video). In aggiunta esiste un plugin per il web, molto funzionale, che permette la riproduzione di molti formati popolari in Firefox/Mozilla (WMV, QuickTime, etc).<br />
 Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install mplayer mplayer-gui gecko-mediaplayer mencoder
@@ -195,122 +195,102 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 * MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
 
 ===Xine===
-
-
-
-
-
-
-
-
-Xine è simile, per molti aspetti, ad MPlayer, ma manca delle applicazioni a riga di comando e dell'encoder. Comunque ha un pieno supporto del DVD playback e una buona usabilità.
-Installazione con yum, con [#_Configurare_yum">RPMFusion]abilitato:
+Xine è simile, per molti aspetti, ad MPlayer, ma manca delle applicazioni a riga di comando e dell'encoder. Comunque ha un pieno supporto del DVD playback e una buona usabilità.<br />
+Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld
-'''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs">Binary Codecs]per un maggiore supporto di formati che Xine non supporta in maniera nativa.
+
+'''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs]per un maggiore supporto di formati che Xine non supporta in maniera nativa.
 '''DVD Playback:''' Per riprodurre correttamente i DVD leggi DVD Playback poche righe più giù.
 
-<a name="binarycodecs"></a>[http://www.mjmwired.net/resources/mjm-fedora-f10.html#binarycodecs">'''Binary Codecs'''</a>
+===Banshee===
+Banshee è un player simile a iTunes che supporta la sincronizzazione con molti altri dispositivi.<br />
+Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
+ [mirandam@charon ~]$ sudo yum install banshee gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg
+
+===Binary Codecs===
 MPlayer projects mantiene un package complete di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
-<b>NOTA:''' Cè una significativa variazione, in relazione alla architettura. (i386, x86_64, ppc). La 32bit i386 lavora al meglio.
-
-- Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/" http://www.mplayerhq.hu/MPlayer/releases/codecs/</a>
-- Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora..Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20071007.tar.bz2" all-20071007.tar.bz2</a>
-- Installa i codecs:
+{{Nota|Nota|C'è una significativa variazione, in relazione alla architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
+* Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/" http://www.mplayerhq.hu/MPlayer/releases/codecs/</a>
+* Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20071007.tar.bz2 all-20071007.tar.bz2]<br />
+* Installare i codecs:
 
  [mirandam@charon Download]$ sudo mkdir -p /usr/lib/codecs
-[mirandam@charon Download]$ sudo tar -jxvf all-20071007.tar.bz2 --strip-components 1 -C /usr/lib/codecs/
-'''[#_top">VLC</a>''' - VLC è un semplice media player con una interfaccia molto semplice da usare. Supporta anche il DVD playback. Benchè molte esigenze sarebbero accontentate con Xine e Mplayer, alcuni preferiscono VLC.
-Installazione con yum, con [#_Configurare_yum">RPMFusion]abilitato :
+ [mirandam@charon Download]$ sudo tar -jxvf all-20071007.tar.bz2 --strip-components 1 -C /usr/lib/codecs/
+
+===VLC===
+VLC è un semplice media player con una interfaccia molto semplice da usare. Supporta anche il DVD playback. Benchè molte esigenze sarebbero accontentate con Xine e Mplayer, alcuni preferiscono VLC.<br />
+Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install vlc
-'''[#_top">DVD Playback</a>''' - Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository di Livna. Utilizzate il repository di Livna per scaricarlo o scaricate il singolo pacchetto e installatelo successivamente.
 
-- Configurare il repo di Livna:
+===DVD Playback===
+Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository di ATrpms.
+* Configurare il repo di ATrpms:
 
- [mirandam@charon ~]$ sudo rpm -ivh http://rpm.livna.org/livna-release-9.rpm
-[mirandam@charon ~]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-livna
-Installare il pacchetto con Yum:
+ [mirandam@charon Download]$ wget http://www.mjmwired.net/resources/files/atrpms.repo
+ [mirandam@charon Download]$ sudo cp ./atrpms.repo /etc/yum.repos.d/atrpms.repo
+ [mirandam@charon Download]$ sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 
- [mirandam@charon ~]$ sudo yum install libdvdcss
-<b>Nota:</b> Pulseaudio - Sono stato in grado di eseguire tutte le applicazioni con le loro impostazioni di default.
+* Installare il pacchetto:
 
-<h3><a name="ttf"></a><a name="_Installare_i_font_TrueType_di_Micro"></a>[#_top">Installare i font TrueType di Microsoft</a></h3>
-8 giugno 2009
+[mirandam@charon ~]$ sudo yum --enablerepo=atrpms install libdvdcss
+{{Suggerimento|per l'incompatibilità di ATrpms e RPMFusion è necessario tenere questo repository disabilitato. Precedentemente si utilizzava il repo Livna, che però è diventato irraggioungibile}}
 
-Il sito ufficiale per questo pacchetto è [http://corefonts.sourceforge.net/" http://corefonts.sourceforge.net/</a>, ma comunque sto utilizzando questo [http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.spec" SPEC file</a>.
+==Installare i font TrueType di Microsoft==
+
+Il sito ufficiale per questo pacchetto è [http://corefonts.sourceforge.net/ http://corefonts.sourceforge.net], ma comunque sto utilizzando questo [http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.spec SPEC file].<br />
 Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.0-3.noarch.rpm (''non linkare direttamente a questo link''):
 
-[http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.noarch.rpm">msttcore-fonts-2.0-3.noarch.rpm</a>
+[http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.noarch.rpm msttcore-fonts-2.0-3.noarch.rpm]
 
  [mirandam@charon Download]$ sudo rpm -ivh msttcore-fonts-2.0-3.noarch.rpm
-Fedora incoraggia l'uso dei [https://www.redhat.com/promo/fonts/" Liberation Fonts</a>. Tali font dovrebbero essere già installati come impostazione predefinita (e inclusi nel DVD).
 
-<h3><a name="service"></a><a name="_Disabilitare_Servizi/Demoni_non_nec"></a>[#_top">Disabilitare Servizi/Demoni non necessari</a></h3>
-19 novembre 2009
+Fedora incoraggia l'uso dei [https://www.redhat.com/promo/fonts/ Liberation Fonts]. Tali font dovrebbero essere già installati come impostazione predefinita (e inclusi nel DVD).
 
-Informazioni riguardanti i servizi e le loro funzioni possono essere trovati su: [http://www.mjmwired.net/resources/mjm-services-f16.html">Services in Fedora 16]([url=http://www.mjmwired.net/resources/mjm-services-f16.html]http://www.mjmwired.net/resources/mjm-services-f16.html[/url]).
-Per informazioni su come gestire i servizi in Fedora per favore si legga: [http://www.mjmwired.net/resources/mjm-fedora-manage-services.html">Managing Services in Fedora]([url=http://www.mjmwired.net/resources/mjm-fedora-manage-services.html]http://www.mjmwired.net/resources/mjm-fedora-manage-services.html[/url]).
+== Adobe Flash Plugin ==
 
-<h3><a name="flash"></a>[#_flash">Il plugin per Macromedia Flash</a></h3>
-18 novembre 2009
+Il plugin per Adobe Flash può essere installato dal sito web di Adobe.<br />
+===Installare il repository di Adobe===
+'''32-bit'''
+ [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
+ [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 
-Il plugin per Macromedia(Adobe) Flash può essere installato dal sito web di Adobe.
-Per utenti yum: [RACCOMANDATO]
+'''64-bit'''
+ [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
+ [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 
-'''Installazione su Fedora 32-bit'''
-Installa il repository di Adobe per Yum:
-
- [mirandam@charon Download]$ [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
-[mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
-Installa il plugin:
-
+===Installare il Flsh Plugin===
  [mirandam@charon Download]$ sudo yum install flash-plugin
-'''Installazione su Fedora 64-bit'''
-Gli utenti a 64bit hanno 2 opzioni, una è quella di utilizzare il plugin a 32-bit "wrapped" (raccomandato finchè Adobe non rilascia ufficialmente il plugin nativo a 64 bit); l'altra è quella di installare la versione Alpha del plugin a 64 bit.
+Riavviare Firefox o altri browser Mozilla.<Br />
+Ulteriori informazioni sono disponibili sul [https://fedoraproject.org/wiki/Flash Fedora Wiki].
 
-<u>Utilizzo del plugin a 32-bit</u>
-Per primo installate il repository di Adobe come descritto sopra e poi instalate le dipendenze mancanti insieme al plugin:
+==Installare il Plugin Java==
 
- [mirandam@charon Download]$ [mirandam@charon Download]$ sudo yum install nspluginwrapper.{i686,x86_64} alsa-plugins-pulseaudio.i686
-[mirandam@charon Download]$ sudo yum install flash-plugin
-<u>Installazione del plugin Alpha a 64 bit</u>
-Scaricate l'utlima versione del plugin dal sito di [http://labs.adobe.com/downloads/flashplayer10.html">Adobe Labs</a>. Sarà in formato tar.gz.
-Ora installate il plugin nella directory dei plugin di Mozilla, per esempio:
-
- [mirandam@charon Download]$ sudo tar -zxvf libflashplayer-10.0.45.2.linux-x86_64.so.tar.gz -C /usr/lib64/mozilla/plugins
-Riavviate Firefox o il vostro browser Mozilla.
-Ulteriori informazioni sono disponibili sul [url=https://fedoraproject.org/wiki/Flash]Fedora Wiki[/url].
-
-<h3><a name="java"></a>[#_top">Installare il Plugin Java</a></h3>
-18 novembre 2009
-
-L'installazione standard di Fedora installerà <i>OpenJDK</i> (basato su Sun Java). In caso contrario può essere installato con yum:
+L'installazione standard di Fedora installerà ''OpenJDK'' (basato su Sun Java). In caso contrario può essere installato con yum:
 
  [mirandam@charon ~]$ sudo yum install java-1.6.0-openjdk java-1.6.0-openjdk-plugin
-Con openJDK installato, le applicazioni e le applet Java dovrebbero funzionare automaticamente! Potrebbe essere che alcuni applet non funzionano correttamente, proprio perchè OpenJDK ha ancora qualche limite.<i> Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano.</i>
 
-<b>Usare invece Sun Java</b>
+Con OpenJDK installato, le applicazioni e le applet Java dovrebbero funzionare automaticamente! Potrebbe essere che alcuni applet non funzionano correttamente, proprio perchè OpenJDK ha ancora qualche limite.''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
 
-Se preferisci il <i>Sun Java</i> o se OpenJDK non funziona correttamente, puoi scaricare Sun Java ed usarlo con Fedora. 
-Download del pacchetto Java da: [http://java.sun.com/javase/downloads/index.jsp" http://java.sun.com/javase/downloads/index.jsp](utilizza sempre l'ultimo update)
-Seleziona: <i>Java Runtime Environment (JRE) 6 Update 17</i> (JDK è per sviluppatori)
-Alla pagina successiva seleziona la piattaforma <i>Linux</i> per sistemi a 32 bit e<i> "Linux x64"</i> per sistemi a 64 bit.
-Scegli la lingua (multilanguage), accetta l'accordo di Licenza ed selziona "continue":
-Alla pagina successiva seleziona il primo RPM:
+===Usare invece Sun Java===
+Se preferisci il ''Sun Java'' o se OpenJDK non funziona correttamente, puoi scaricare Sun Java ed usarlo con Fedora.<br />
+Download del pacchetto Java da: [http://java.sun.com/javase/downloads/index.jsp http://java.sun.com/javase/downloads/index.jsp]<br />
+Seleziona: ''Java Runtime Environment (JRE) 6 Update 17'' (JDK è per sviluppatori)br />
+Alla pagina successiva accetta l'accordo di Licenza ed selziona "continue":<br />
+Per utenti 32-bit: seleziona "Linux '''x86'''"<br />
+jre-7u1-linux-i586.'''rpm'''
 
- Java SE Runtime Environment 6u17
-jre-6u17-linux-i586-rpm.bin       (utenti 32-bit)
+Per utenti 64-bit: seleziona "Linux '''x64'''"<br />
+jre-7u1-linux-x64.'''rpm'''
 
-jre-6u17-linux-x64-rpm.bin        (utenti 64-bit) 
-Per installare:
+Installazione:
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u1-linux-i586.rpm
+ -OR-
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u1-linux-x64.rpm
 
- [mirandam@charon Download]$ sudo sh jre-6u17-linux-i586-rpm.bin
--OR-
-[mirandam@charon Download]$ sudo sh jre-6u17-linux-x64-rpm.bin
-(Digita 'spazio' alla fine, poi digita 'yes'). Dovresti vedere l'installazione del RPM, se non è così installalo manualmente con ''sudo rpm -ivh''.
-Quando si esegue un comando <i>java</i>, Fedora preferisce usare OpenJDK, per usare il Sun Java si usi il comando 'alternatives':
+Quando si esegue un comando ''java'', Fedora preferisce usare OpenJDK, per usare il Sun Java si usi il comando ''alternatives'':
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/bin/java java /usr/java/default/bin/java 20000
 
@@ -319,21 +299,25 @@ Lo stesso è da applicare al Mozilla/Firefox Plugin:
 Per '''sistemi a 32 bit'''
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so \
-libjavaplugin.so /usr/java/default/plugin/i386/ns7/libjavaplugin_oji.so 20000
+libjavaplugin.so /usr/java/default/lib/i386/libnpjp2.so 20000
+
 Per '''sistemi a 64 bit'''
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so \
 libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 20000
-Potrebbe essere necessario riavviare Firefox.
-<b>Nota:</b> Se desideri ritornare ad <i>OpenJDK</i> puoi eseguire i seguenti comandi per passare da un Sun a OpenJDK.
+
+Potrebbe essere necessario riavviare Firefox.<br />
+'''Nota''': Se desideri ritornare ad ''OpenJDK'' puoi eseguire i seguenti comandi per passare da un Sun a OpenJDK.
 
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config java
+ 
+ [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so
+ (or for 64-bit)
+ [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
 
-[mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so
-(o per 64-bit)
-[mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
+''Per fare l'update:'' se fai l'update del pacchetto JRE, scarica sempplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte.
 
-<i>Per fare l'update:</i> se fai l'update del pacchetto JRE, scarica sempplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando <i>alternatives</i> in quanto le impostazioni rimangono intatte.
+Ulteriori informazioni: [http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html Install Documentation for Linux]
 
 <h3><a name="acrobat"></a>[#_top">Installare Adobe Acrobat</a></h3>
 18 novembre 2009
