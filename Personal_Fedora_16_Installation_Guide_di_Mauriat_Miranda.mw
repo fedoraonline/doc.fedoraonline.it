@@ -28,36 +28,31 @@ Se si vuole fare la '''Configurazione della rete''' durante l'installazione, ass
 In questo caso raccomando almeno 3 partizioni: una partizione primaria / di root di 8-12GB, una partizione /home di 10GB+ e una partizione swap di 1-2GB. La partizione principale è quella dove saranno installate le applicazioni. La partizione /home conterrà tutti i dati personali (meglio se la si può definire di grandi dimensioni). La partizione di swap dovrebbe essere almeno pari alla dimensione della memoria fisica del proprio sistema, sistemi con grandi dimensioni di memoria comunque non hanno bisogno di grandi spazi per lo swap.
 
 ===Boot Loader===
+* Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio ''Sistema Operativo Principale'', si possono lasciare le opzioni predefinite.
+* Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, '''NON nell'MBR'''. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel ''First sector of boot partition''. Gli utenti '''Windows 7''' (o '''Vista''') possono usare [http://neosmart.net/dl.php?id=1 EasyBCD] (freeware download per Windows). Se si sta ancora utilizzando Windows XP (o 2000) si può utilizzare [http://www.winimage.com/bootpart.htm Bootparte]per avviare Linux. Un´alternativa a Bootpart è descritta nel [http://www.tldp.org/HOWTO/Linux+NT-Loader.html" NT OS Loader + Linux mini-HOWTO](o anche nel [http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html Grub Win2K Howto]). Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. '''Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.'''
+
+===Selezione dei pacchetti'''===
+Se si possiede una connessione veloce ad Internet, non è necessario installare nulla in fase di installazione. Fedora può facilmente aggiungere altro software in un secondo momento. La selezione di default dei pacchetti da installare è in genere accettabile. La maggior parte degli utenti dovrebbe installare Fedora con l'opzione Desktop.
+{{Nota|Nota|A causa dei cambiamenti di Gnome nelle ultime versioni di Fedora è consigliabile installare almeno un ulteriore ambiente Desktop.}}
+I seguenti DE sono installabili attraverso l'opzione "personalizza ora":
+* Sotto la voce ''Ambienti Desktop'' selezionare almeno uno di:
+** KDE
+** LXDE
+** Xfce
+
+Possono essere anche installati successivamente se si desidera. Per ulteriori informazioni leggere [http://www.mjmwired.net/resources/mjm-fedora-f16.html#desktops Desktop alternativi].
+
+Installare i pacchetti selezionati e riavviare.
+
+Per coloro che hanno optato per installare grub sul primo settore della partizione / invece che nell'MBR, è necessario seguire una delle guide sopra citate per avviare Fedora.
+
+Dopo il '''primo avvio''':
+Dopo il primo avvio di Fedora seguire le istruzioni sullo schermo.
+
+Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dovrà essere anche ''ammnistratore'', selezionare ''aggiungi al gruppo degli amministratori''.
 
 
 
-
-
-
-
-
-Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio <i>Sistema Operativo Principale</i>, si possono lasciare le opzioni predefinite. Tutto funzionerà per il dual boot con altri sistemi operativi (ad es. con Windows).
-Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, '''NON nell'MBR'''. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel <i>First sector of boot partition</i>. Io ho usato [http://www.winimage.com/bootpart.htm" Bootpart]da Windows 2000 per caricare Linux.
-Un´alternativa a Bootpart è descritta nel [http://www.tldp.org/HOWTO/Linux+NT-Loader.html" NT OS Loader + Linux mini-HOWTO](o anche [http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html Grub Win2K Howto</a>). Gli utenti '''Vista''' possono usare il <i>Vista Boot Manager</i> seguendo il [http://port25.technet.com/archive/2006/10/13/Using-Vista_2700_s-Boot-Manager-to-Boot-Linux-and-Dual-Booting-with-BitLocker-Protection-with-TPM-Support.aspx Port25 Vista Boot Manager Howto</a>. Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. '''Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.'''
-
-<b>f)</b> '''Selezione dei pacchetti''' Le principali opzioni per l'installazione sono le seguenti. Le si può selezionare direttamente, saltando quindi la <i>personalizzazione dell'installazione del software</i> (passo successivo), se si pensa di installare la maggior parte del software online (tramite Yum). E' raccomandato di scegliere almeno qualche applicazione.
-
-Ufficio e produttività; - [Altamente raccomandato]
-Sviluppo Software - [Altamente raccomandato / '''Necessario''']
-Web Server - [Opzionale (utile per gli sviluppatori web)]
-
-'''Aggiungere Software da Repository addizionali''' - [NON raccomandato durante l'installazione].
-Si ha la possibilità di aggiungere alcune utili risorse durante il processo di installazione. Questo rende disponibili MOLTE applicazioni aggiuntive rispetto a quelle incluse nel
-CD o nel DVD. Comunque ciò richiede una connessione Internet ad alta velocità e che venga riconosciuta dall'installer di Fedora. Questo incrementa anche in <i>maniera significativa</i> il tempo di installazione.
-Se si sceglie <i>Personalizza ora</i> si avrà la possibilità <i>di una selezione individuale dei pacchetti da installare</i>. L'installer di Fedora avrà selezionato di default gran parte degli applicativi necessari. Comunque, io raccomando l'installazione di KDE (K Desktop Environment) sotto ''Desktop Environments''.
-
-Dopo avere installato i pacchetti selezionati, riavviare il sistema. Per coloro che hanno optato per installare grub sul primo settore della partizione / invece che nell'MBR, è necessario seguire una delle guide sopra citate per avviare Fedora.
-
-Dopo il primo avvio:
-'''Licenza''' - Accettare la licenza di Fedora
-'''Crea utente''' - Creare 1 utente per se stessi. '''Utilizzare sempre''' questo account e '''mai''' l'account di root per il login. <i>L'account di root '''NON è abilitato''' per l'utilizzo in ambiente grafico</i>.
-'''Data ed ora''' - Network Time Protocol - Abilitare questa opzione <i>SOLO</i> se si ha una connessione internet attiva e funzionante (ad es. di tipo: broadband, T1, DSL). Non si dovrà controllare l'ora ogni volta che parte il servizio.
-'''Profilo Hardware''' - Fedora usa ''smolt'' per comunicare informazioni di base non intrusive sulla specifica installazione effettuata. Mentre questo è utile per gli sviluppatori di Fedora, potrebbe essere vista come un'intrusione della privacy. E' raccomandato di comprendere quali informazioni vengono spedite prima di consentire al sistema di farlo. 
 
 <h3><a name="sudo"></a><a name="_Configurare_sudo"></a>[#_Personal_Fedora_10_Installation_Guide>Configurare sudo</a></h3>
 8 giugno 2009
