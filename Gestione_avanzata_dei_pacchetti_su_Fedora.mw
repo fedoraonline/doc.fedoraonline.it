@@ -50,11 +50,11 @@ I profili si trovano nella cartella /etc/mock. Sono dei file nominati in questo 
 Si può creare un link simbolico, chiamato defaults.cfg, al proprio profilo preferito, in modo da non doverlo specificare ogni volta.<br />
 All'interno del profilo è possibile aggiungere i repository desiderati, personalizzare il flag e le opzioni di compilazione, e molto altro.
 
-L'utilizzo è molto semplice. Supponiamo di voler compilare il source RPM del kernel. Innanzitutto otteniamo il pacchetto sorgente con yumdownloader:
+L'utilizzo è molto semplice. Si suppone di voler compilare il source RPM del kernel. Innanzitutto si ottiene il pacchetto sorgente con yumdownloader:
  yumdownloader --source kernel
-poi costruiamo il pacchetto RPM cosi:
+poi si costruisce il pacchetto RPM cosi:
  mock kernel.srpm
-Attendiamo un po', e a lavoro terminato troveremo nella cartella /var/lib/mock l'RPM pronto da installare.<br />
+Attendere un po', e a lavoro terminato lo si troverà nella cartella /var/lib/mock l'RPM pronto da installare.<br />
 Mock ha molte altre opzioni, leggere man mock per approfondire.
 {{Nota|NOTA|L'utente che vuole usare Mock deve essere inserito nel gruppo mock.}}
 
@@ -88,8 +88,4 @@ eseguendo:
  # yum provides *pippo.h
 si otterrà la lista dei pacchetti che contengono il file pippo.h, e sarà possibile installare quello desiderato.
 
-
-[[:Categoria:Scrittura in corso]] 
-[[:Categoria:Rilettura in corso]]
-[[Categoria:Sistema]]
 [[Categoria:Yum]]
