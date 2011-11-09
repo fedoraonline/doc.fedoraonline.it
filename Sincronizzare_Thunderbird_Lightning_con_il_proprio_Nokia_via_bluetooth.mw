@@ -1,11 +1,14 @@
-Piccolo how-to per sincronizzare il proprio calendario del cellulare con il calendario di Lightning e non solo.<br />
-La guida è pubblicata anche sul mio blog: http://blog.marionline.it/?p=32
+== Introduzione ==
 
+{{nota|Nota|Desidero avvisare, che la guida presente è valida con la versione di fedora 8 che ho utilizzato come base per provare e creare la guida.}}
+Piccolo how-to per sincronizzare il proprio calendario del cellulare con il calendario di Lightning e non solo.<br />
 Al linux day in seguito alla presentazione di openoffice 3 ho scoperto Lightning, un’estensione di thunderbird, un vero e proprio PIM(Personal Information Management).<br />
 Tornato a casa, ho studiato la situazione e ho scoperto che anche KDE ha dei suoi strumenti PIM molto validi e integrati con l’ambiente desktop, si trovano tutti sotto kde-pim installati di default. Per utilizzarli  basta lanciare kontact.<br />
 Ero, però, deciso ad utilizzare Lightning. Pertanto l'ho scaricato ed installato.<br />
 Per farlo funzionare  ho trovato  [http://www.stefanolaguardia.eu/2008/08/29/linux-desktop-guida-sincronizzare-thunderbird-lightning-sunbird-con-nokia-n-ed-e-series-via-bluetooth/ questa guida]. <br />
 E’ scritta per debian/ubuntu. Nell’articolo viene chiarito che c’è la necessità di utilizzare un calendario in formato ICAL ma di default è in SQLite che non funziona con opensync. Il trucco è (cito testualmente): “Il trucco consiste nell’esportare il Calendario di default in un file .ics e, successivamente, cancellare il calendario installato e caricare quello ics esportato (quest’utlima operazione la si fa dal menu “File –> Open –> Calendar File”).”<br />
+
+== Installazione ==
 
 Parto come presupposto che il bluetooth sia già configurato e già funzionante (per cui che già il telefono si connette al pc e viceversa e che si possono scambiare dei file).<br />
 I software di cui abbiamo bisogno per far sincronizzare il telefono via bluetooth sono essenzialmente multisync e opensync al quale deve essere aggiunto i plugin SyncML più altri plugin che possono essere utili per fare la sincronizzazione con altri software(tipo evolution, kde-pim, ecc.).
@@ -19,7 +22,7 @@ Ciò installerà multisync e anche la sua finestra grafica, opensync e vari plug
 Ora c’è bisogno anche del plugin “syncml-plugin”, che contiene syncml-obex-client, essenziale per poter far la sincronizzazione tramite bluetooth con il protocollo SyncML.<br />
 Per farlo ci sarà bisogno di compilare il pacchetto perchè non si trova l’rpm.<br />
 Il pacchetto si scarica da [http://www.opensync.org/attachment/wiki/download questa pagina] e ha un nome simile a questo: libopensync-plugin-syncml-0.22.tar.bz2 (potrebbero cambiare in funturo i numeri della versione).<br />
-Una volta scaricato, scompattarlo dove si preferisce con un tar xvf, o con il programma che si preferisce.<br />
+Una volta scaricato, scompattarlo dove si preferisce con un ''tar xvf'', o con il programma che si preferisce.<br />
 Da shell si entra nella cartella scompattata ed eseguire i soliti 3 comandi per la configurazione, compilazione e l’installazione:
 
  ./configure
@@ -28,12 +31,12 @@ Da shell si entra nella cartella scompattata ed eseguire i soliti 3 comandi per 
  password root
  make install
 
-Il checkinstall va in errore e non  permette la costruzione dell’rpm, per cui ho proceduto con make install.
+Il ''checkinstall'' va in errore e non  permette la costruzione dell’rpm, per cui ho proceduto con ''make install''.
 
 {{Warning|per fare la compilazione è necessario anche avere dei pacchetti di sviluppo come: libsoup-devel e openobex-devel.<br />
 Se non sono presenti, durante il ./configure verrà segnalato un errore.}}
 
-Una volta installati tutti i pacchetti possiamo dare questo comando e vedere il suo output per confermare l’esistenza dei plugin(dovrebbe venire una cosa simile a questa, varia a seconda dei plugin che avete installato ovviamente):
+Una volta installati tutti i pacchetti possiamo dare questo comando e vedere il suo output per confermare l’esistenza dei plugin (dovrebbe venire una cosa simile a questa, varia a seconda dei plugin installati, ovviamente):
 
  $ msynctool --listplugins
  Available plugins:
@@ -114,15 +117,16 @@ Per sincronizzare i contatti e l’agenda del telefono basta dare:
 
 Senza complicarsi la vita kitchensync è molto più intuitivo ed inizierà la sincronizzazione una volta che è stato opportunamente configurato.
 
-Con il mio nokia 6021 sembra funzionare senza problemi. Però devo ancora fare un vero e proprio “testing” massivo di conferma.<br />
-Altre guide a cui mi sono ispirato:
-* http://seawolfsanctuary.blogspot.com/2008/03/sync-your-phone-with-fedora-or-when.html
+Con il mio nokia 6021 sembra funzionare senza problemi. Però devo ancora fare un vero e proprio “testing” massivo di conferma.
 
-In particolare che mi hanno aiutato a risolvere un problema importante(l’installazione del plugin syncml-obex-client fondamentale per comunicare con il cellulare):
+== Riferimenti ==
+
+* http://seawolfsanctuary.blogspot.com/2008/03/sync-your-phone-with-fedora-or-when.html
 * http://clunixchit.blogspot.com/2007/07/syncing-mobile-phone-and-kontact-via.html
 * http://www.harald-hoyer.de/linux_and_syncml_multisync_with_nokia_6280
+* http://blog.marionline.it
 
-{{nota|Aggiornamento|Desidero avvisare ora, anche se con un po' di ritardo, che la guida presente è valida con la versione di fedora 8 che ho utilizzato come base per provare e creare la guida.}}
+== Aggiornamenti utili ==
 
 Con l'introduzione di kde4 le cose sono cambiate parecchio e i vari progetti sono evoluti.<br />
 sunbird-sync non esiste più, al suo posto si sta facendo strada bluezSync:
@@ -135,6 +139,4 @@ https://bugzilla.redhat.com/show_bug.cgi?id=477193
 
 Appena avrò del tempo proverò a creare una guida per fedora 10 e/o successive con i software aggiornati.
 
-[[:Categoria:Scrittura in corso]] 
-[[:Categoria:Rilettura in corso]]
 [[Categoria:Ufficio]]
