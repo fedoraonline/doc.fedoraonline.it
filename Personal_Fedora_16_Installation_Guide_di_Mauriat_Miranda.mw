@@ -12,9 +12,9 @@ Esistono anche dei "LiveCD" che possono avviare il sistema ed eseguire una insta
 {{Nota|Nota|Per fare l'upgrade di una precedente versione di Fedora, non si può usare un LiveCD.}}
 ==Installazione==
 
-E' <b>fortemente raccomandata</b> la lettura delle [http://docs.fedoraproject.org/release-notes/f16/it-IT/html/ Note di Rilascio di Fedora] e della [http://docs.fedoraproject.org/install-guide/f16/en-US/html/ Guida ufficiale all'Installazione] prima di installare Fedora.<br />
+E' '''fortemente raccomandata''' la lettura delle [http://docs.fedoraproject.org/release-notes/f16/it-IT/html/ Note di Rilascio di Fedora] e della [http://docs.fedoraproject.org/install-guide/f16/en-US/html/ Guida ufficiale all'Installazione] prima di installare Fedora.<br />
 Un'ulteriore raccomandazione è quella di leggere i [https://fedoraproject.org/wiki/Common_F16_bugs Problemi comuni] prima di installare.<br />
-Scaricare il file immagine del DVD o il CD multi set di Fedora 16 da un [http://mirrors.fedoraproject.org/publiclist/Fedora/16/ mirror] di Fedora</a> (o usare [http://torrent.fedoraproject.org torrent]) e masterizzarlo (per ulteriori informazioni su come scaricare i CD o il DVD di [http://www.mjmwired.net/resources/mjm-download-fedora.html Fedora].
+Scaricare il file immagine del DVD o il CD multi set di Fedora 16 da un [http://mirrors.fedoraproject.org/publiclist/Fedora/16/ mirror] di Fedora (o usare [http://torrent.fedoraproject.org torrent]) e masterizzarlo (per ulteriori informazioni su come scaricare i CD o il DVD di [http://www.mjmwired.net/resources/mjm-download-fedora.html Fedora].
 
 Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f16.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
 {{Nota|Nota|L'installer di Fedora (anaconda) è ridotto al minimo e molte delle configurazioni si dovranno eseguire dopo l'installazione.}}
@@ -29,7 +29,7 @@ In questo caso raccomando almeno 3 partizioni: una partizione primaria / di root
 
 ===Boot Loader===
 * Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio ''Sistema Operativo Principale'', si possono lasciare le opzioni predefinite.
-* Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, '''NON nell'MBR'''. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel ''First sector of boot partition''. Gli utenti '''Windows 7''' (o '''Vista''') possono usare [http://neosmart.net/dl.php?id=1 EasyBCD] (freeware download per Windows). Se si sta ancora utilizzando Windows XP (o 2000) si può utilizzare [http://www.winimage.com/bootpart.htm Bootparte]per avviare Linux. Un´alternativa a Bootpart è descritta nel [http://www.tldp.org/HOWTO/Linux+NT-Loader.html" NT OS Loader + Linux mini-HOWTO](o anche nel [http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html Grub Win2K Howto]). Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. '''Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.'''
+* Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, '''NON nell'MBR'''. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel ''First sector of boot partition''. Gli utenti '''Windows 7''' (o '''Vista''') possono usare [http://neosmart.net/dl.php?id=1 EasyBCD] (freeware download per Windows). Se si sta ancora utilizzando Windows XP (o 2000) si può utilizzare [http://www.winimage.com/bootpart.htm Bootparte]per avviare Linux. Un´alternativa a Bootpart è descritta nel [http://www.tldp.org/HOWTO/Linux+NT-Loader.html" NT OS Loader + Linux mini-HOWTO] (o anche nel [http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html Grub Win2K Howto]). Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. '''Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.'''
 
 ===Selezione dei pacchetti'''===
 Se si possiede una connessione veloce ad Internet, non è necessario installare nulla in fase di installazione. Fedora può facilmente aggiungere altro software in un secondo momento. La selezione di default dei pacchetti da installare è in genere accettabile. La maggior parte degli utenti dovrebbe installare Fedora con l'opzione Desktop.
@@ -112,7 +112,7 @@ Per installarlo:
  [mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror
 
 ===Repository di Terze Parti===
-Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), deve essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/" RPMFusion</a>. Per lo scopo di questa guida tutte le installazioni possono essere fatte con questo repository, altrimenti verrà indicato espressamente.
+Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), deve essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/ RPMFusion]. Per lo scopo di questa guida tutte le installazioni possono essere fatte con questo repository, altrimenti verrà indicato espressamente.
 Per installare RPM-Fusion digitate:
 
  [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
@@ -181,7 +181,7 @@ Per chi volesse '''TUTTO''', seguire questo comando:
 
 ==Installare i Media Players==
 
-Fedora ha un numero limitato di lettori sia Audio che Video. Per il video e il multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [RPMFusion|RPMFusion]. Accertati di avere configurato il repository RPMFusion prima di procedere. Nota che le molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
+Fedora ha un numero limitato di lettori sia Audio che Video. Per il video e il multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [[RPMFusion|RPMFusion]]. Accertati di avere configurato il repository RPMFusion prima di procedere. Nota che le molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
 I media player più famosi sono i seguenti. Ognuno di questi ha i propri punti di forza. Installa quello che preferisci, sebbene almeno ''MPlayer'' e ''VLC'' sono raccomandati.
 
 ===Mplayer===
@@ -200,7 +200,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld
 
-'''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs]per un maggiore supporto di formati che Xine non supporta in maniera nativa.
+'''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che Xine non supporta in maniera nativa.
 '''DVD Playback:''' Per riprodurre correttamente i DVD leggi DVD Playback poche righe più giù.
 
 ===Banshee===
@@ -212,7 +212,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 ===Binary Codecs===
 MPlayer projects mantiene un package complete di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
 {{Nota|Nota|C'è una significativa variazione, in relazione alla architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
-* Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/" http://www.mplayerhq.hu/MPlayer/releases/codecs/</a>
+* Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/ http://www.mplayerhq.hu/MPlayer/releases/codecs]
 * Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20071007.tar.bz2 all-20071007.tar.bz2]<br />
 * Installare i codecs:
 
@@ -278,7 +278,8 @@ Con OpenJDK installato, le applicazioni e le applet Java dovrebbero funzionare a
 Se preferisci il ''Sun Java'' o se OpenJDK non funziona correttamente, puoi scaricare Sun Java ed usarlo con Fedora.<br />
 Download del pacchetto Java da: [http://java.sun.com/javase/downloads/index.jsp http://java.sun.com/javase/downloads/index.jsp]<br />
 Seleziona: ''Java Runtime Environment (JRE) 6 Update 17'' (JDK è per sviluppatori)br />
-Alla pagina successiva accetta l'accordo di Licenza ed selziona "continue":<br />
+Alla pagina successiva accetta l'accordo di Licenza ed selziona "continue":
+
 Per utenti 32-bit: seleziona "Linux '''x86'''"<br />
 jre-7u1-linux-i586.'''rpm'''
 
@@ -319,38 +320,25 @@ Potrebbe essere necessario riavviare Firefox.<br />
 
 Ulteriori informazioni: [http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html Install Documentation for Linux]
 
-<h3><a name="acrobat"></a>[#_top">Installare Adobe Acrobat</a></h3>
-18 novembre 2009
+==Installare Adobe Acrobat==
 
-Per visualizzare i file PDF, Fedora include evince o okular. Il seguente è indirizzato a utenti che necessitano di Adobe Acrobat Reader.
-Per utenti Yum:
-Installate il repository di adobe.repo:
+Per visualizzare i file PDF, Fedora include ''evince'' o ''okular''. Il seguente è indirizzato a utenti che necessitano di Adobe Acrobat Reader.<br />
+Per utenti Yum:<br />
+Installate il repository di adobe e poi il Reader:
 
  [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
-[mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+ [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+ 
+ [mirandam@charon Download]$ sudo yum install AdobeReader_enu
 
-[mirandam@charon Download]$ sudo yum install AdobeReader_enu
-<b>N.B:</b> La versione installata utilizza l'inglese: '''enu'''. Per vedere le lingue disponibili date il seguente comando:
-
- [mirandam@charon Download]$ yum list AdobeReader\*
+{{Nota|Nota|La versione installata utilizza l'inglese: '''enu'''. Per vedere le lingue disponibili date il seguente comando:
+ [mirandam@charon Download]$ yum list AdobeReader\*}}
 Per altre lingue l'installazione è simile: AdobeReader_fra
-Se non sei sicuro del nome esatto cercalo con:
-<i>yum info AdobeReader_fra </i>
+Se non sei sicuro del nome esatto cercalo con:<br />
+''yum info AdobeReader_fra''<br />
+La versione corrente di Adobe Acrobat è la 9.x e il file da scaricare varia in funzione della lingua. Non tutte le lingue sono supportate nella versione per Linux.
 
-Altrimenti installalo manualmente come descritto qui: (utenti a '''64 bit''' dovrebbero installare Acrobat Reader tramite Yum per risolvere tutte le dipendenze a 32 bit)
-
-Scaricare Acrobat da: [http://www.adobe.com/products/acrobat/readstep2_allversions.html" http://www.adobe.com/products/acrobat/readstep2_allversions.html</a>
-
-Selezionare:
-Sistema operativo: Unix/Linux
-Versione: Linux - x86(.rpm)
-La tua lingua.
-
-La versione corrente di Adobe Acrobat è la 9.2 e il file da scaricare varia in funzione della lingua. Non tutte le lingue sono supportate nella versione per Linux.
-
- [mirandam@charon downloads]$ '''su -c''' 'rpm -ivh AdbeRdr9.1.0-1_i486linux_enu.rpm'
-<h3><a name="samba"></a><a name="_Configurare_Samba_-_Condividere_fil"></a>[#_top">Configurare Samba - Condividere file con Windows</a></h3>
-18 novembre 2009
+== Configurare Samba - Condividere file con Windows ==
 
 Se si possiedono computer con Windows installato o una Lan e si vuole condividere file tra macchine con Windows e con Linux, bisogna configurare Samba. Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
 
