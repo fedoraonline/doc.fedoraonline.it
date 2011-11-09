@@ -1,4 +1,4 @@
-Il programma "sudo" permette di eseguire dei programmi che normalmente vengono eseguiti da root anche da utenti normali. Essendo un comando abbastanza pericoloso necessita di una certa attenzione nell'essere configurato.
+Il programma "sudo" permette di eseguire dei programmi che normalmente vengono eseguiti da root anche da utenti normali. Essendo un comando abbastanza pericoloso, necessita di una certa attenzione nell'essere configurato.
 
 Per evitare malintesi o errori creare un nuovo gruppo di utenti a cui verrà dato il permesso di utilizzare sudo, lo si chiamerà admins
 
