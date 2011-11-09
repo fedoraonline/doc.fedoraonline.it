@@ -44,7 +44,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Openbox|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pirelli w-gate Alice|autore=GabrieleTrombini|stato=DaFare}}
@@ -123,6 +123,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Cambiare il prompt del terminale|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Configurazione Sudo|autore=MarioSantagiuliana|rilettore=SimoneZaminga|data=09/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=Configurazione di una rete wifi|autore=RobertMayr|rilettore=?|data=08/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|rilettore=?|data=09/11/2011|stato=DaFare}}
 |}
 
 
