@@ -30,7 +30,7 @@ NB: Controllate che il proprio controller figuri nella lista.
 
  # dmraid -ay -v
 
-Questo comando attiverà tutti i controller individuati.
+Questo comando attiverà tutti i controller individuati:
 
  [root@localhost /]# dmraid -ay -v
  INFO: Activating GROUP RAID set "isw_cdgiiahhib"
