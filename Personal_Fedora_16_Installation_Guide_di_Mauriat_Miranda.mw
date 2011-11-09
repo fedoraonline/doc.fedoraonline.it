@@ -139,77 +139,70 @@ Per installarlo:
 
 ''Note: Xfce è la mia scelta personale/raccomandata.''
 
+== Installare lettori MP3 ==
 
+Fedora viene distribuita senza alcuna forma di supporto ai file di tipo MP3. Per aggiungere il supporto all'esecuzione di MP3 si '''deve installare da "terze parti"'''. Quanto segue richiede l'uso del repository di [[RPMFusion|RPMFusion]].
 
-
-
-
-
-
-<h3><a name="nvidia"></a><a name="_Installare_i_driver_Nvidia"></a>[#_top">Installare i driver Nvidia</a></h3>
-17 novembre 2009
-
-Per dare le massime indicazioni per l'installazione dei driver Nvidia si rimanda a [http://www.mjmwired.net/resources/mjm-fedora-nvidia.html" Fedora Nvidia Driver Install Guide]([url=http://www.mjmwired.net/resources/mjm-fedora-nvidia.html]http://www.mjmwired.net/resources/mjm-fedora-nvidia.html[/url]).
-
-<h3><a name="network"></a><a name="Gestione rete"></a>[#_top">Gestione rete</a></h3>
-18 novembre 2009
-
-'''Rete non attiva'''
-
-Se si installa da Cd o DVD la rete [https://fedoraproject.org/wiki/Documentation_Networking_Beat#Ethernet_connections_are_not_started_at_first_boot" non sarà attiva]du default.
-
-Opzione 1: Modifica: /etc/sysconfig/network-scripts/ifcfg-eth0 e cambia ONBOOT=no a ONBOOT=yes.
-Opzione 2: In Gnome clicca con il tasto destro del mouse sull'icona della rete.
-Scegli ''modifica connessioni''
-Seleziona ''sistema eth0'' e clicca su ''modifica'' (inserisci la password di root quando richiesta)
-Seleziona ''connetti automaticamente'' e poi click su ''Applica''.
-
-<h3><a name="mp3"></a><a name="_Installare_lettori_MP3"></a>[#_top">Installare lettori MP3</a></h3>
-8 giugno 2009
-
-Fedora viene distribuita senza alcuna forma di supporto ai file di tipo MP3. Per aggiungere il supporto all'esecuzione di MP3 si '''deve installare da "terze parti"'''. Quanto segue richiede l'uso del repository di [#_Configurare_yum">RPMFusion</a>.
-
-<b>XMMS</b>:
-semplice, vecchia GUI, opzioni minimalistiche (ma molto popolari)
-Installazione, per utenti di yum:
+===XMMS===
+Semplice, vecchia GUI, opzioni minimalistiche (ma molto popolari).<br />
+Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-pulse xmms-skins
-'''Audacious''': (un fork di '''Beep Media Player - BMP'''). 
-Una rivisitazione di XMMS per renderlo un po' più moderno. In versione base, ma un po' meglio di XMMS.
-Installazione, per utenti di yum:
 
- [mirandam@charon ~]$ sudo yum install audacious audacious-plugins-freeworld*
-N.B.: C'è un '*' alla fine del comando.
+===Audacious===
+Un player in versione base, ma un po' meglio di XMMS.<br />
+Installazione, con yum:
 
-<b>Rythmbox/Gstreamer</b> - Una semplice applicazione audio simile al layout di iTunes.
+ [mirandam@charon ~]$ sudo yum install audacious '''audacious-plugins-freeworld*'''
+ N.B.: C'è un '*' alla fine del comando.
 
-Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere già installati durante l'installazione di [#_Installazione">Gnome](sopra citata). I componenti che non vengono installati sono quelli relativi all'MP3 (e ad altri formati).
-Per utenti con yum:
+===Rythmbox/Gstreamer===
+Una semplice applicazione audio simile al layout di iTunes.<br />
+Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere già installati durante l'installazione di Gnome (sopra citata). I componenti che non vengono installati sono quelli relativi all'MP3 (e ad altri formati).<br />
+Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg
-'''Amarok''' - Una moderna applicazione ricca di opzioni aggiuntive.
 
-E' di aiuto avere già KDE installato (come prima citato).
+===Amarok===
+Una moderna applicazione ricca di opzioni aggiuntive.<br />
+E' di aiuto avere già KDE installato (come prima citato).<br />
 Installazione, yum:
 
  [mirandam@charon ~]$ sudo yum install amarok xine-lib-extras-freeworld
-<b>Nota:</b> Pulseaudio - Sono stato in grado di eseguire tutte le applicazioni con le loro impostazioni di default oppure utilizzando OSS/Alsa quando Pulseaudio era attivato.
 
-<h3><a name="mediaplayer"></a>[#_top">Installare i Media Players</a></h3>
-9 giugno 2009
+===Comando combinato===
+Per chi volesse '''TUTTO''', seguire questo comando:
 
-Fedora ha un numero limitato di lettori sia Audio che Video. Per quanto riguarda l'audio si guardino le note sugli [#_Installare_lettori_MP3">MP3 player</a>. Per il video e il multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [#_Configurare_yum">RPMFusion</a>. Accertati di avere configurato il [#_Configurare_yum">repository RPMFusion </a>prima di procedere. Nota che le molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.
-I media player più famosi sono (in ordine): Mplayer, Xine e  VLC. Ognuo di questi ha i propri punti di forza. Installa quello che preferisci, sebbene i primi due sono raccomandati.
+ [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-pulse xmms-skins \
+ audacious audacious-plugins-freeworld* \
+ rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
+ amarok xine-lib-extras-freeworld
 
-'''[#_top">Mplayer</a>''' - Mplayer è disponibile sia in una versione a riga di comando (mplayer) sia in una versione GUI, anch'essa con il potente tool di encoding Mencoder (molto valido per il ripping o la compressione audio/video). In aggiunta esiste un plugin per il web, molto funzionale, che permette la riproduzione di molti formati popolari in Firefox/Mozilla (WMV, QuickTime, etc).
-Installazione con yum, con [#_Configurare_yum">RPMFusion]abilitato:
+==Installare i Media Players==
+
+Fedora ha un numero limitato di lettori sia Audio che Video. Per il video e il multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [RPMFusion|RPMFusion]. Accertati di avere configurato il repository RPMFusion prima di procedere. Nota che le molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
+I media player più famosi sono i seguenti. Ognuno di questi ha i propri punti di forza. Installa quello che preferisci, sebbene almeno ''MPlayer'' e ''VLC'' sono raccomandati.
+
+===Mplayer===
+Mplayer è disponibile sia in una versione a riga di comando (mplayer) sia in una versione GUI, anch'essa con il potente tool di encoding Mencoder (molto valido per il ripping o la compressione audio/video). In aggiunta esiste un plugin per il web, molto funzionale, che permette la riproduzione di molti formati popolari in Firefox/Mozilla (WMV, QuickTime, etc).
+Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install mplayer mplayer-gui gecko-mediaplayer mencoder
-- Da notare che mencoder è opzionale ma fornisce molte opzioni di decodifica.
-- '''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs">Binary Codecs]per un maggiore supporto di formati che MPlayer non supporta nativamente.
-- MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
 
-'''[#_Personal_Fedora_8_Installation_Guide">Xine</a>''' - Xine è simile, per molti aspetti, ad MPlayer, ma manca delle applicazioni a riga di comando e dell'encoder. Comunque ha un pieno supporto del DVD playback e una buona usabilità.
+* Da notare che mencoder è opzionale ma fornisce molte opzioni di decodifica.
+* '''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
+* MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
+
+===Xine===
+
+
+
+
+
+
+
+
+Xine è simile, per molti aspetti, ad MPlayer, ma manca delle applicazioni a riga di comando e dell'encoder. Comunque ha un pieno supporto del DVD playback e una buona usabilità.
 Installazione con yum, con [#_Configurare_yum">RPMFusion]abilitato:
 
  [mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld
