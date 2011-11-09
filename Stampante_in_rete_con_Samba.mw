@@ -51,7 +51,7 @@ Far ripartire i servizi SMB e CUPS e la configurazione del server è fatta:
  # /sbin/service smb restart
  # /sbin/service cups restart
 
-Ora bisogna configurare il client, ripartire da printconf-gui e cliccare su NUOVO. <br/>
+Ora bisogna configurare il client; ripartire da printconf-gui e cliccare su NUOVO. <br/>
 Dare un nome alla stampante per identificarla in rete:
 
 [[File:print3.jpg]]
