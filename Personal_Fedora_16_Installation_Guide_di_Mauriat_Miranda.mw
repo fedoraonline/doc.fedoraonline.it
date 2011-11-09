@@ -342,59 +342,49 @@ La versione corrente di Adobe Acrobat è la 9.x e il file da scaricare varia in 
 
 Se si possiedono computer con Windows installato o una Lan e si vuole condividere file tra macchine con Windows e con Linux, bisogna configurare Samba. Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
 
-<b>1. Installare Samba</b>
+===Installare Samba===
+ [mirandam@charon ~]$ sudo yum install samba samba-client cifs-utils
 
- [mirandam@charon ~]$ sudo yum install samba samba-client
-<b>2. Aggiungere 'Shares'</b>
-Bisogna editare /etc/samba/smb.conf come root: (usando nano al posto di gedit se non si utilizza una GUI)
+===Aggiungere 'Shares'===
+Bisogna editare '''/etc/samba/smb.conf''' come root: (usando ''nano'' al posto di ''gedit'' se non si utilizza una GUI)
 
- [mirandam@charon ~]$ sudo gedit /etc/samba/smb.conf 
-Definire il nome del Windows Workgroup nella sezione [global].
+ [mirandam@charon ~]$ sudo gedit /etc/samba/smb.conf
+
+Definire il nome del Windows Workgroup nella sezione [global].<br />
 Aggiungere le shares alla fine del file. Ad esempio:
-
- [c_drive]
+<pre>[c_drive]
    path = /media/c_drive
    public = yes
    writable = no
 [netshare]
    path = /data/
    public = yes
-   writable = yes
+   writable = yes</pre>
+Se si definisce come 'writable' (scrivibile), la risorsa '''deve essere''' scrivibile prima su Linux. I permessi addizionali devono corrispondere (esempio: ''drw-rw-rw'').<br />
+Se i dati della directory home (tutti i file personali sotto ''/home/nomeutente'') devono essere accessibili, bisogna indicare 'browseable = yes' sotto [homes] (~riga 279).<br />
+Il file di configurazione è ''molto descrittivo'', occorre leggerlo da cima a fondo per avere maggiori idee o informazioni.
 
-Se si definisce come 'writable' (scrivibile), la risorsa '''deve essere''' scrivibile anche in Linux. I permessi addizionali devono corrispondere (esempio: drw-rw-rw).
-Se i dati della directory home (tutti i file personali sotto /home/nomeutente) devono essere accessibili, bisogna indicare 'browseable = yes' sotto [homes]
-(~riga 250). Il file di configurazione è <i>molto descrittivo</i>, occorre leggerlo da cima a fondo per avere maggiori idee o informazioni.
-
-<b>3. Aggiungere gli utenti</b>
-Per avere accesso alle shares, bisogna essere degli utenti definiti. Aggiungere <i>utenti e password</i> valide usando il comando smbpasswd.
-Tali parametri SARANNO il nome utente e la password da usare per il login '''da Windows''' per accedere al computer Linux. La password '''NON deve necessariamente coincidere '''con la password Linux.
+===Aggiungere gli utenti===
+Per avere accesso alle shares, bisogna essere degli utenti definiti. Aggiungere ''utenti e password'' valide usando il comando ''smbpasswd''.<br />
+Tali parametri SARANNO il nome utente e la password da usare per il login '''da Windows''' per accedere al computer Linux. La password '''NON deve necessariamente coincidere''' con la password Linux.
 
  [mirandam@charon ~]$ sudo smbpasswd -a username
-New SMB password:
-Retype new SMB password:
-account_policy_get: (warnings ignored)
-Added user username.
+ New SMB password:
+ Retype new SMB password:
+ Added user username.
+{{Nota|Nota|''nomeutente'' deve essere un account valido sulla macchina.}}
+==Avviare il servizio Samba==
+ [mirandam@charon ~]$ sudo systemctl start smb.service nmb.service
 
-(Note: 'nomeutente' deve essere un account valido sulla macchina)
+Rendere effettivo l'avvio di Samba ad ogni avvio di Fedora.
 
-<b>4. Avviare il servizio Samba</b>
-Avviare Samba e controllare la presenza di errori:
+ [mirandam@charon ~]$ sudo systemctl enable smb.service nmb.service
 
- [mirandam@charon ~]$ sudo /etc/init.d/smb start
-Starting SMB services:                                     [  OK  ]
-Usare chkconfig o serviceconf per abilitare Samba (smb) nei runlevels 3 e 5. Questo renderà certo l'avvio di Samba ad ogni avvio di Fedora.
+Riavviare Samba per ogni cambiamento a utenti/password od a ''smb.conf'':
 
- [mirandam@charon ~]$ /sbin/chkconfig --list smb
-smb             0:off   1:off   2:off   3:off   4:off  5:off   6:off
-[mirandam@charon ~]$ sudo /sbin/chkconfig --level 35 smb on
-[mirandam@charon ~]$ /sbin/chkconfig --list smb
-smb             0:off   1:off   2:off  3:on    4:off   5:on    6:off
-Riavviare Samba per ogni cambiamento a utenti/password od a 'smb.conf'
+ [mirandam@charon ~]$ sudo systemctl restart smb.service
 
- [mirandam@charon ~]$ sudo /etc/init.d/smb restart
-Shutting down SMB services:                               [   OK  ]
-Starting SMB services:                                    [   OK  ]
-<b>5. Gestione sicurezza per Samba</b>
+===Gestione sicurezza per Samba===
 '''Firewall'''
 
 Il Firewall di default bloccherà Samba, per permettergli l'accesso digita:
@@ -405,35 +395,26 @@ Per abilitare Samba a lavorare attraverso il proprio firewall, bisogna configura
 
  [mirandam@charon ~]$ sudo system-config-firewall-tui
 
-Per abilitare Samba a lavorare attraverso il proprio firewall, utilizza il tasto 'TAB' per scendere fino alla voce 'personalizza'. Nei 'servizi fidati' seleziona 'Samba' e premi il tasto 'TAB' fino a poter dare OK.
+Per abilitare Samba a lavorare attraverso il proprio firewall, utilizza il tasto <TAB> per scendere fino alla voce ''personalizza''. Nei 'servizi fidati' seleziona 'Samba' e premi il tasto <TAB> fino a poter dare ''OK''.
 
-<b>SELinux</b>
+'''SELinux'''
 
-SELinux ha un <em>controllo significativo</em> su Samba e ne limita differenti parti. Si avvii system-config-selinux. Per favore si leggano le righe #23 - #51 in /etc/samba/smb.conf per una migliore spiegazione. In alternativa si può digitare:
+SELinux ha un ''controllo significativo'' su Samba e ne limita differenti parti. Si avvii ''system-config-selinux''. Per favore si leggano le righe #20 - #59 in ''/etc/samba/smb.conf'' per una migliore spiegazione. In alternativa si può digitare:
 
  [mirandam@charon ~]$ system-config-selinux
 
-Selezionare <i>Boolean</i> e digitare <i>'Samba'</i> nel filtro. (senza apici)
-A questo punto puoi ignorare SELinux e accedere alle tue 'Windows shares' anche se il SELinux TroubleShooter in Gnome ti avviserà tramite un Pop-up spiegandoti l'errore. Seguendo quelle indicazioni potrai essere più sicuro.
+Selezionare ''Boolean'' e digitare ''Samba'' nel filtro. (Si utilizzerà ''Yum'' per installare ''policycoreutils-gui'')<br />
 Per attivare ogni cambiamento apportato alla configurazione di SELinux o di smb.conf, è raccomandato riavviare Samba.
 
-<hr align="center" size="2" width="100%" >
-<h3><a name="moreinfo"></a>[http://www.mjmwired.net/resources/mjm-fedora-f9.html#moreinfo">Ulteriori informazioni</a></h3>
+==Ulteriori informazioni==
 
-[http://www.mjmwired.net/resources/mjm-services-f16.html">Fedora 16 - Services and Daemons in Fedora 16</a>
-[http://www.mjmwired.net/linux/category/fedora/f16/">Fedora 16 Blog Entries</a>
-[http://www.mjmwired.net/resources/mjm-fedora-nvidia.html">Fedora Nvidia Driver Install Guide</a>
-[http://www.mjmwired.net/resources/mjm-fedora-f11.html">Fedora 11 Personal Installation Guide</a>
-[http://www.mjmwired.net/resources/mjm-fedora-manage-services.html">Managing Services in Fedora</a>
-[http://www.mjmwired.net/resources/mjm-fedora-help.html">Fedora Help Forum Posts and Threads</a>
-
-<hr align="center" size="2" width="100%" >
-Commenti, suggerimenti, domande o qualunque altro contributo a questa o a una qualunque delle [http://www.mjmwired.net/resources.php">altre mie pagine]sono ben accetti. Per favore usate il seguente [http://www.mjmwired.net/contact.php">link]per contattarmi.
-Aiutatemi: se avete trovato questa guida o ogni altra risorsa collegata utile, per favore considerate di aiutare il mio sito raccomandando questa pagina ad altri o linkandola. Io apprezzo tutto il supporto che posso ricevere. Grazie in anticipo.
+----
+Commenti, suggerimenti, domande o qualunque altro contributo a questa o a una qualunque delle [http://www.mjmwired.net/resources.php altre mie pagine] sono ben accetti. Per favore usate il seguente [http://www.mjmwired.net/contact.php link] per contattarmi.<br />
+Aiutatemi: se avete trovato questa guida o ogni altra risorsa collegata utile, per favore considerate di aiutare il mio sito raccomandando questa pagina ad altri o linkandola. Io apprezzo tutto il supporto che posso ricevere. Grazie in anticipo.<br />
 Potete anche scegliere di donare qualcosa per supportare l'hosting per il mio sito.
-'''Disclaimer:''' The author makes no claim to the accuracy of the information provided. This information is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY. There is no implied support from referencing this guide. Any help that is provided is at will. Use this information at your own risk. Always make proper backups and use caution when modifying critical system files.
-'''PER FAVORE NON''' fate copie in mirror, traducete o copiate questa pagina <i>senza</i> contattarmi. Io ho speso diverse ore di lavoro personalmente per ricercare e verificare quanto è qui riportato.
+'''Disclaimer:''' The author makes no claim to the accuracy of the information provided. This information is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY. There is no implied support from referencing this guide. Any help that is provided is at will. Use this information at your own risk. Always make proper backups and use caution when modifying critical system files.<br />
+'''PER FAVORE NON''' fate copie in mirror, traducete o copiate questa pagina ''senza'' contattarmi. Io ho speso diverse ore di lavoro personalmente per ricercare e verificare quanto è qui riportato.
 
-<b>[http://www.mjmwired.net/about.php#copyright">Copyright © 2003-2009</a></b><b> by Mauriat Miranda</b> (mjmwired.net).
+[http://www.mjmwired.net/about.php#copyright '''Copyright © 2003-2011'''] '''by Mauriat Miranda''' (mjmwired.net).
 
 [[Categoria:Traduzioni]]
