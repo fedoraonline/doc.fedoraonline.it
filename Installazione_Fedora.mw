@@ -1,3 +1,11 @@
+Questa guida si propone di trattare l'installazione della release'''''Fedora 16 "Verne"''''', su un personal computer con architettura a 32 bit e utilizzando tre tipi di media a disposizione:
+* DVD ;
+* CD netinstall;
+* CD live desktop; 
+Tutte queste versioni sono liberamente scaricabili e messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
+{{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kmv che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' come nei dischi non virtualizzati.<br />
+Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento con capacità di certo soddisfacente per qualsiasi utilizzo.}} 
+
 Installazione da dvd
 
 Partire con l'avvio da dvd ed il dvd inserito
