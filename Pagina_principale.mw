@@ -69,11 +69,11 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 [[:Categoria:Grafica | Grafica]] | [[:Categoria:Ufficio | Ufficio]] | [[:Categoria:Multimedia | Multimedia]] | [[:Categoria:Giochi | Giochi]] | [[:Categoria:Internet | Internet]]</div>
 <br />
 <div class="principale">'''Le più gettonate...'''
-* [[Guide d'installation de Fedora en images|Installation de Fedora]]
-* [[Au secours je suis perdu…]]
-* [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
-* [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
-* [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
+* [[Flash plugin | Flash plugin]]
+* [[Ekiga | Ekiga]]
+* [[Multimedia Player e codecs | Multimedia Player e codecs]]
+* [[Google Earth: Installazione RPM a 64bit | Google Earth a 64bit]]
+* [[Ascoltare file ape | Ascoltare file ape]]
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
@@ -82,11 +82,11 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 [[:Categoria:Fedoraserver | Fedoraserver]] | [[:Categoria:Fedora Legacy | Fedora Legacy]]</div>
 <br />
 <div class="principale">'''Le più gettonate...'''
-* [[Guide d'installation de Fedora en images|Installation de Fedora]]
-* [[Au secours je suis perdu…]]
-* [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
-* [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
-* [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
+* [[Personal Fedora 16 Installation Guide di Mauriat Miranda | Personal Fedora 16 Installation Guide]]
+* [[Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda | Compilatore GCC alternativo su Fedora]]
+* [[Un centralino con Asterisk e Fedora | Un centralino con Asterisk e Fedora]]
+* [[Un server di posta con Postfix (e altre cosette...) v. 0.1 | Un server di posta con Postfix]]
+* [[Come compilare il kernel di Fedora partendo dai sorgenti | Compilare il kernel di Fedora partendo dai sorgenti]]
 </div></div>
 
 </div>
@@ -100,11 +100,11 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 [[:Categoria:Hardware | Hardware]]</div>
 <br />
 <div class="principale">'''Le più gettonate...'''
-* [[Guide d'installation de Fedora en images|Installation de Fedora]]
-* [[Au secours je suis perdu…]]
-* [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
-* [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
-* [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
+* [[Installazione Driver NVidia | Installazione Driver NVidia]]
+* [[Installazione Driver ATI | Installazione Driver ATI]]
+* [[Configurazione di una rete wifi | Configurazione di una rete wifi]]
+* [[Workaround per webcam con modulo uvcvideo | Webcam con modulo uvcvideo]]
+* [[Stampante in rete con Samba | Stampante in rete con Samba]]
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
@@ -113,11 +113,11 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 [[:Categoria:Rete e Server | Rete e Server]] | [[:Categoria:Programmazione e Sviluppo | Prog. e Sviluppo]] | [[:Categoria:Sicurezza | Sicurezza]]</div>
 <br />
 <div class="principale">'''Le più gettonate...'''
-* [[Guide d'installation de Fedora en images|Installation de Fedora]]
-* [[Au secours je suis perdu…]]
-* [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
-* [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
-* [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
+* [[Samba: condivisione tra Fedora e Windows | Samba: condivisione tra Fedora e Windows]]
+* [[LAMP | LAMP]]
+* [[Vademecum sicurezza | Vademecum sicurezza]]
+* [[Configurazione VNC | Configurazione VNC]]
+* [[Vim Ide per PHP | Vim Ide per PHP]]
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
@@ -126,11 +126,11 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 [[:Categoria:FAQ | FAQ]] | [[:Categoria:FedoraOnline | Fedora Online]] | [[:Categoria:Progetto Fedora | Progetto Fedora]]</div>
 <br />
 <div class="principale">'''Le più gettonate...'''
-* [[Guide d'installation de Fedora en images|Installation de Fedora]]
-* [[Au secours je suis perdu…]]
-* [[YUM : Configuration du gestionnaire de paquets | Installer facilement des logiciels : yum]]
-* [[Dual_boot_Windows_-_Fedora | Dual boot WIndows - Fedora]]
-* [[GRUB_:_Les_bases_pour_Fedora | GRUB : les bases pour Fedora]]
+* [[FAQ Fol | FAQ Fol]]
+* [[Pizzata 2010 | Pizzata 2010]]
+* [[La comunità italiana | La comunità italiana]]
+* [[Partecipare al Fedora Project | Partecipare al Fedora Project]]
+* [[FAQ Fedora | FAQ Fedora]]
 </div></div>
 
 </div>
