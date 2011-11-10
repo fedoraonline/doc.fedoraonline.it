@@ -3,7 +3,9 @@ Questa guida si propone di trattare l'installazione della release '''''Fedora 16
 * CD per l'istallazione da rete;
 * CD live desktop; 
 Tutte queste versioni sono liberamente scaricabili e messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
+
 {{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kmv che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' come nei dischi non virtualizzati.<br />
+
 Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento con capacità di certo soddisfacente per qualsiasi utilizzo.}} 
 
 {{Warning|Tutti e tre i metodi di installazione richiedo l'avvio da DVD/CD rom con il disco inserito.<br />
@@ -17,17 +19,20 @@ A parte il countdown, che stavolta non viene interrotto premendo un tasto, perme
 [[File:Install_f16_1.png|thumb| right|Schermata di avvio]]
 Salta subito all'occhio la voce ''Troubleshooting'', per la quale, selezionandola e premendo invio, vengono proposte queste azioni:
 
-* ''Install fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (di sotto compare la descrizione breve), userà i driver vesa; 
-* ''Rescue a fedora system'' (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente);
+* ''Install Fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (di sotto compare la descrizione breve), userà i driver vesa; 
+* ''Rescue a Fedora system'' (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente);
 * ''Run a memory test'' (per controllare la memoria del sistema);
 * ''Boot from local drive'';
 * ''Return to main menù'' (per ritornare al menù principale).
 
 In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera di colore diverso rispetto al resto del testo.<br />
+Con il tasto "esc", invece, si torna al riquadro precedente.<br />
+Selezionando "Install or upgrade Fedora" e premndo invio comincia l'installazione, dopo la richiesta di verifica del supporto utilizzato.<br />
 
-E' sempre meglio fare il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto la sistemazione diventerebbe molto complicata se non impossibile, lasciando spazio solamente ad una nuova procedura di installazione da capo.
+{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura di installazione.}}
 
-Come consuetudine, Anaconda provvede a chiedere la lingua di istallazione e scegliendo l'italiano saremo sicuri che sia la tastire che l'orario verranno proposti già correttamente, salvo nostre disposizioni differenti.
+Come consuetudine, Anaconda provvede a chiedere la lingua di istallazione e, scegliendo l'italiano, sia la tastiera che l'orario verranno proposti già correttamente, salvo disposizioni differenti.
+[[File:Install_f16_2.png|thumb| left|Impostazione locale]]
 
 Come da qualche versione a questa parte, ci viene richiesto di qualificare il tipo di utilizzo dei dischi della nostra macchina e le opzioni sono due:
 - dispositivi di storage comuni
