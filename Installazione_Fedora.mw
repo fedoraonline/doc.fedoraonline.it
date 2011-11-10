@@ -32,12 +32,12 @@ Selezionando "Install or upgrade Fedora" e premndo invio comincia l'installazion
 {{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura di installazione.}}
 
 Anaconda provvede a chiedere la lingua di istallazione e, scegliendo, per esempio, l'italiano, sia la tastiera che l'orario verranno impostati già correttamente nelle successive selezioni, salvo si voglia impostare l'ambiente in maniera differente.<br />
-
+[[File:Install_f16_3.png|thumb|left|E' necessario definire la destinazione d'uso dei dischi]]
 Come da qualche versione a questa parte, l'installer richiede di qualificare il tipo di utilizzo del disco (o dei dischi) della nostra macchina; le opzioni che vengono proposte sono due:
 * dispositivi di storage comuni;
 * dispositivi di storage speciale.
 Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.
-[[File:Install_f16_3.png|200px|E' necessario definire la destinazione d'uso dei dischi]]
+
 
 Per cui selezioniamo il primo (già selezionato di default).
 
