@@ -15,25 +15,17 @@ Come da avviso occorre inserire il disco ed eseguire il boot da DVD,<br />
 All'avvio ci si presenta subito una delle novità di questa versione di Fedora, cioè una scelta di opzioni differenti dalle "storiche".<br /> 
 A parte il countdown, che stavolta non viene interrotto premendo un tasto, permettendo solo di farlo ripartire da 60 secondi, ma può essere fermato premendo le frecce (su e giù) che permettono altresì di scorrere tra le selezioni.<br />
 [[File:Install_f16_1.png|thumb| right|Schermata di avvio]]
+Salta subito all'occhio la voce ''Troubleshooting'', per la quale, selezionandola e premendo invio, vengono proposte queste azioni:
 
+* ''Install fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (di sotto compare la descrizione breve), userà i driver vesa; 
+* ''Rescue a fedora system'' (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente);
+* ''Run a memory test'' (per controllare la memoria del sistema);
+* ''Boot from local drive'';
+* ''Return to main menù'' (per ritornare al menù principale).
 
-premendo un tasto, ricomincia il count down, mentre premendo la freccia in basso
-ci si posiziona su troubleshooting (premendo invio si avvia l'impostazione di default, cioè l'installazione),
-(si può tornare all'installazione premendo il tasto freccia-su).
-In troubleshooting premendo invio vengono proposte le opzioni:
+In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera di colore diverso rispetto al resto del testo.<br />
 
-- Install fedora in basic graphics mode, per chi avesse problemi hardware, in particolare sulla scheda video (di sotto compare la descrizione breve); 
-- rescue a fedora system (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente), userà i driver vesa.
-
-- Run a memory test (per controllare la memoria del sistema)
-
--Boot from local drive
-
-- Return to main menù (per ritornare al menù principale)
-
-In tutte le selezioni di grub2 è possibile premere il tasto tab per inserire eventuali opzioni, e tutte le selezioni sono selezionabili, oltre che con le freccie su e giù), premendo la lettera di colore diverso rispetto al resto del testo (il che significa che anche se siete posizionati sun una selezione diversa, evidenziata dal fatto che il testo diventa bianco, potete premere la lettera di colore diverso che identifica una selezione) ad esempio, nella figura F16_9 si è posizionati su trouble shooting (vedere il testo in bianco) mentre vogliamo far partire l'installazione, per cui premo la lettera I (in bianco rispetto all'azzurrino del resto del testo), e mi torna su quella selezione che posso ora fare partire dando l'invio.
-
-Eè sempre meglio fare il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto la sistemazione diventerebbe molto complicata se non impossibile, lasciando spazio solamente ad una nuova procedura di installazione da capo.
+E' sempre meglio fare il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto la sistemazione diventerebbe molto complicata se non impossibile, lasciando spazio solamente ad una nuova procedura di installazione da capo.
 
 Come consuetudine, Anaconda provvede a chiedere la lingua di istallazione e scegliendo l'italiano saremo sicuri che sia la tastire che l'orario verranno proposti già correttamente, salvo nostre disposizioni differenti.
 
