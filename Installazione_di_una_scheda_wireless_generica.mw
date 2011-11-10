@@ -17,9 +17,9 @@ Oltre alla propria scheda e al computer dove si vuole installarla, si ha la nece
 Questa ipotesi è particolarmente utile ed efficiente pertanto se il proprio computer non è dotato di connessione via cavo si invito a dotarlo di un simile dispositivo almeno temporaneamente, e assumeremo nel prosieguo che si avrà risolto questo problema.
 
 ==Convenzioni==
-Quando incontrate il simbolo $ vuol dire che le operazioni possono essere eseguite da terminale utente.<br />
-Quando incontrate il simbolo # le operazioni corrispondenti devono essere eseguite in terminale root ovvero con poteri superutente:<br />
-per ottenerli da interfaccia grafica -> strumenti di sistema -> terminale
+{{Scrittura|Il simbolo '''$''' vuol dire che le operazioni possono essere eseguite da terminale utente.<br />
+il simbolo '''#''' vuol dire che le operazioni devono essere eseguite in terminale root ovvero con poteri superutente.}}
+Per ottenerli da interfaccia grafica -> strumenti di sistema -> terminale
  $ su -
  password:(inserite la password di root)
 non dimenticare il - "trattino" dopo "su" altrimenti si avranno i poteri root ma ambiente utente.
