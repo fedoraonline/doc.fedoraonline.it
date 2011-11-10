@@ -4,7 +4,7 @@ Questa guida si propone di trattare l'installazione della release '''''Fedora 16
 * CD live desktop; 
 Tutte queste versioni sono liberamente scaricabili e messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
 
-{{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kmv che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' come nei dischi non virtualizzati.<br />
+{{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kmv che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' dei sistemi non virtualizzati.<br />
 
 Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento con capacità di certo soddisfacente per qualsiasi utilizzo.}} 
 
@@ -36,13 +36,11 @@ Anaconda provvede a chiedere la lingua di istallazione e, scegliendo, per esempi
 Come da qualche versione a questa parte, l'installer richiede di qualificare il tipo di utilizzo del disco (o dei dischi) della nostra macchina; le opzioni che vengono proposte sono due:
 * dispositivi di storage comuni;
 * dispositivi di storage speciale.
-Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.
-
-
-Per cui selezioniamo il primo (già selezionato di default).
-
-Dopo il controllo dei dispositivi, anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi).
-Premere Configure network e proprio cone fareste in network manager occorre aggiungere la propria connessione wireless, compresa la password.
+Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />
+Per cui l'opzione più probabile è la prima (già selezionato di default).<br />
+[[File:Install_f16_4.png|thumb|center|NetworkManager presente in Anaconda]]
+[[File:Install_f16_5.png|thumb|center|configurare la rete]]
+Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità di Network Manager.
 
 La schermata successiva ci richiede il fuso orario, preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato. Qualora sulla vostra macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di Windows.
 
