@@ -1,19 +1,15 @@
 {{Obsoleto}}
-Guida semplice ed efficace per configurare la propria webcam Sonix USB 2.0 su portatile Asus F5N
+Guida semplice ed efficace per configurare la propria webcam Sonix USB 2.0 su portatile Asus F5N.<br />
+Il dispostivo webcam è identificato da lsusb con il codice: '''174f:5a35'''
 
-Il nostro dispostivo webcam è identificato da lsusb con il codice: 174f:5a35
-
-Poiché i moduli per gestire questo dispositivo non sono inclusi nel kernel si farà uso di un pacchetto tarball di sorgenti, per la loro installazione si seguirà questa guida:
-
-http://www.linuxlove.org/2007/11/12/linux-webcam-microsoft-lifecam-nx-6000-on-ubuntu-and-fedora/
-
-Fare attenzione perché i file non sono più presenti sul server o comunque non accessibili, pertanto si troveranno seguendo questo link:
-
+Poiché i moduli per gestire questo dispositivo non sono inclusi nel kernel si farà uso di un pacchetto tarball di sorgenti, per la loro installazione si seguirà questa guida:<br />
+http://www.linuxlove.org/2007/11/12/linux-webcam-microsoft-lifecam-nx-6000-on-ubuntu-and-fedora/<br />
+Fare attenzione perché i file non sono più presenti sul server o comunque non accessibili, pertanto si troveranno seguendo questo link:<br />
 http://svn.berlios.de/svnroot/repos/linux-uvc/linux-uvc/trunk/
 
-la procedura creerà i moduli di gestione della webcam, i quali, dopo un riavvio, creeranno una interfaccia denominata /dev/video0 mediante i servizi hal e udev, interfaccia che le singole applicazione utilizzeranno a loro piacimento.
+La procedura creerà i moduli di gestione della webcam, i quali, dopo un riavvio, creeranno una interfaccia denominata ''/dev/video0'' mediante i servizi hal e udev, interfaccia che le singole applicazioni utilizzeranno a loro piacimento.
 
-Probabilmente ci saranno dei problemi al momento dell'esecuzione (almeno nel mio caso è stato così) del programma di test ovvero al comando:
+Probabilmente ci saranno dei problemi al momento dell'esecuzione del programma di test, ovvero al comando:
  $ ./luvcview
  luvcview version 0.2.1
  Video driver: x11
@@ -33,9 +29,9 @@ ora ridare il comando:
 
 se tutto è filato liscio si dovrebbe avere le immagini che provengono dalla propria webcam, ma sono al contrario, cioè si vedranno sottosopra!
 
-Non allarmasi, poniamo subito rimedio.<br />
+Non allarmarsi, poniamo subito rimedio.<br />
 Si userà mplayer e non altri software come Cheese e/o Camstream perchè essi non sono in grado di raggiungere l'alto grado di configurazione di mplayer.<br />
-Prima di tutto installarlo (se non lo si è già fatto):
+Prima di tutto installarlo (se non è già presente):
 
  # yum install mplayer
 
@@ -43,17 +39,13 @@ Poi dare il comando:
  
  $ mplayer -flip tv:// -tv driver=v4l2:device=/dev/video0:outfmt=yv12:width=160:height=120:fps=50
 
-l'immagine ora è perfetta.
-     
+L'immagine ora è perfetta.<br />
 Si può ora registrare dalla web-cam usando il comando mencoder con le stesse opzioni di mplayer cioè:
 
  mencoder -flip tv:// -tv driver=v4l2:device=/dev/video0:noaudio:outfmt=yv12:width=160:height=120:fps=50 -ovc lavc -o prova.avi
 
 Ora però non tutto è posto infatti pur correttamente riconosciuta da amsn...essa sarà probabilmente al contrario...<br />
-Ma questo sarà oggetto della mia  prossima guida....<br />
+Ma questo sarà oggetto della prossima guida....<br />
 Buon divertimento
 
-Un saluto a Paky mio compagno di ventura. :-)
-
-[[Categoria:Hardware]]
 [[Categoria:Webcam]]
