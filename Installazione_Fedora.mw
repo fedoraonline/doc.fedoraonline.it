@@ -1,0 +1,85 @@
+Installazione da dvd
+
+Partire con l'avvio da dvd ed il dvd inserito
+
+Parte il grub che, a differenza di altre versioni propone delle alternative
+diverse;
+
+premendo un tasto, ricomincia il count down, mentre premendo la freccia in basso
+ci si posiziona su troubleshooting (premendo invio si avvia l'impostazione di default, cioè l'installazione),
+(si può tornare all'installazione premendo il tasto freccia-su).
+In troubleshooting premendo invio vengono proposte le opzioni:
+
+- Install fedora in basic graphics mode, per chi avesse problemi hardware, in particolare sulla scheda video (di sotto compare la descrizione breve); 
+- rescue a fedora system (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente), userà i driver vesa.
+
+- Run a memory test (per controllare la memoria del sistema)
+
+-Boot from local drive
+
+- Return to main menù (per ritornare al menù principale)
+
+In tutte le selezioni di grub2 è possibile premere il tasto tab per inserire eventuali opzioni, e tutte le selezioni sono selezionabili, oltre che con le freccie su e giù), premendo la lettera di colore diverso rispetto al resto del testo (il che significa che anche se siete posizionati sun una selezione diversa, evidenziata dal fatto che il testo diventa bianco, potete premere la lettera di colore diverso che identifica una selezione) ad esempio, nella figura F16_9 si è posizionati su trouble shooting (vedere il testo in bianco) mentre vogliamo far partire l'installazione, per cui premo la lettera I (in bianco rispetto all'azzurrino del resto del testo), e mi torna su quella selezione che posso ora fare partire dando l'invio.
+
+Eè sempre meglio fare il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto la sistemazione diventerebbe molto complicata se non impossibile, lasciando spazio solamente ad una nuova procedura di installazione da capo.
+
+Come consuetudine, Anaconda provvede a chiedere la lingua di istallazione e scegliendo l'italiano saremo sicuri che sia la tastire che l'orario verranno proposti già correttamente, salvo nostre disposizioni differenti.
+
+Come da qualche versione a questa parte, ci viene richiesto di qualificare il tipo di utilizzo dei dischi della nostra macchina e le opzioni sono due:
+- dispositivi di storage comuni
+- dispositivi di storage speciale.
+Senza addentrarci molto sulle differenziazioni, sappiate che la seconda opzione va utilizzata qualora ci fosse un amministratore di sistema in azienda che gestisce vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.
+
+Per cui selezioniamo il primo (già selezionato di default).
+
+Dopo il controllo dei dispositivi, anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi).
+Premere Configure network e proprio cone fareste in network manager occorre aggiungere la propria connessione wireless, compresa la password.
+
+La schermata successiva ci richiede il fuso orario, preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato. Qualora sulla vostra macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di Windows.
+
+Attenzione alla password di root che viene richiesta, perchè c'è un controllo sulla forza della pw, seppur non ostativo. Più è forte la password, più sicurezza si ha.
+
+Ecco ora la parte relativa al partizionamento, con diverse opzioni:
+- Usare tutto lo spazio (rimuove qualsiasi altro sistema operativo nel sistema)
+- sostituire il sistema linux esistenze (rimuove qualsiasi sistema operativo linux presente, non altri)
+- ridurre il sistema attuale (effettua il ridimensionamento delle partizioni per ricavare nuovo spazio)
+- usare lo spazio libero (non elimina ne riduce nulla, usa l'eventuale spazio libero presente nel sistema)
+- creare una struttura personalizzata (attenzione alla partizione bios da creare, a differenza di versioni precedenti dove essa non era presente, qualora non si avesse un sistema EFI)
+
+La stessa schermata prevede la selezione di defafault per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, specie per quelle automatiche.
+
+Usiamo il primo selezione, usare tutto lo spazio e selezioniamo di rivedere le partizioni, usando LVM.
+
+Ecco le mie partizioni, con il Logical Volume Management (LVM).
+
+Nota bene: ho utilizzato una macchina virtuale qemu/kmv per creare le casistiche ivi trattate, per cui le dimensioni dei dischi sono puramente indicative e la loro nomenclatura è vdx anzichè sdx come nei sistemi non virtualizzati.
+
+Da notare la partizione BIOS boot, divenuta necessaria (attenzione al partizionamento manuale). Per il resto, è possibile modificare le partizioni selezionandole e premendo il tasto modifica. 
+Visto che grub2 interpreta anche il filesystem btrfs sulla partizione di boot (attenzione al partizionamento manuale, deve essere di almeno 500 megabyte), decidiamo di utilizzare quato filesystem sia sulla /boot che su / che su /home (che voglio creare). Riducendo a 3000 mb la partizione di root e ricavando 2656 mb da riservare a lv_home, creandola dallo spazio libero dovuta alla riduzione di lv_root.
+Sarà un volume logico all'interno del volume vg_mailga, punto di montaggio /home, file system abbiamo detto brtfs e nome del volume lv_home (potete dare quel che volete, io uso sempre questo per coerenza con lv_root). Dimensioni pari allo spazio che abbiamo tolto a lv_root.
+Fine della nostra partizionamento un po' automatico ed un po' manuale.
+
+Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura.
+
+Siamo arrivati quasi alla fine della nostra preparazione, ma c'è una ultima cosa da selezionare, dove installare il bootloader (grub2), la selezione presenta già sul MBR del disco dev/sda, ma premendo cambia dispositivo è possibile modificare le opzioni come anzichè installarlo sul MBR (/dev/sda) nel primo settore della partizione di boot, nel caso in esempio è /dev/sda2, ma nel caso si fosse scelto di installare in un secondo disco fedora (perchè nel disco di avvio c'è win), si può decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione BIOS drive order.
+
+Eventualmente si può decidere di istituire una pw per il bootloader.
+
+Anaconda ora chiederà il tipo di utilizzo del computer e l'eventuale inserimento di repo aggiuntivi (come rpm fusion free e non free http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/ ) e di modificare i pacchetti selezionandone in aggiunta, dopodichè si può lanciare l'installazione del software. Selezionando tra le varie categorie ed gli eventuali pacchetti opzionali.
+Controllo delle dipendenze e parte la installazione sw.
+
+Terminata la fase di installazione, viene chiesto il riavvio (ecco al boot il grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser era già stato impostato nella fase precedente).  Considerare di spedire il profilo perchè è molto utile per il debug e ricordate di usare una password decisamente robusta per il vostro utente. Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, al posto di root.
+
+Enjoy.
+
+Installazione con netinstall
+
+avvio da dvd con dvd inserito, non c'è il controllo del supporto per l'integrità.
+stessa per il grub, ma poi la configurazione della lingua e della ,tastiera è in formato testuale, in grafica poi c'è la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione (assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti), è possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente. Configurazione ora, anche in questo caso è da deselezionare la casella L'orologio di sistema usa UTC se è presente windows, inserire la password di root, con verifica della robustezza.
+
+Attenzione nel caso fossero presenti 2 dischi fissi, talvolta si crea confusione,
+nella sezione a sinistra, occorre inserire i dischi in cui sono presenti dati (ad esempio windows, o partizioni fat o ntfs o altro di interscambio), quello di destra sarà o saranno invece il/i disco/chi che verrà/anno utilizzato/i per l'installazione di fedora e che verrà contrassegnato come disco con il bootloader.
+Attenzione, anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne lo spazio libero per il LVM, non verranno comunque formattati sefile:///home/gabri/Scaricati/Fedora-16-i386-netinst.iso non espressamente richiesto dall'utente. Per cui i propri dati sono comunque preservati.
+E' consigliabile fare un dischetto di ripristino qualora fosse presente la aprtizione di ripristino a scanso di eventuali problemi futuri e di fare comunque un backup dei propri dati importanti. Qui presenta selezionato il repo fedora ed updates e non esiste il repo disco di installazione.
+
+Il resto tutto uguale solo che scarica dalla rete. Sistema aggiornato.
