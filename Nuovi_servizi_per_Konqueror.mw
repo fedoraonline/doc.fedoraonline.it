@@ -1,9 +1,13 @@
+__TOC__
 {{Obsoleto}}
-I servizi offerti da Konqueror sono semplici file con estensione .desktop e vanno posizionati nella cartella /usr/share/apps/konqueror/servicemenus se si vuole che il servizio sia acessibile a tutti gli utenti, oppure in /home/nomeutente/.kde/share/apps/konqueror/servicemenus se si vuole che il servizio sia accessibile ad un solo utente.<br />
-I servizi che si andranno a creare sono: [[#Copia sul floppy|Copia sul floppy]], [[#Edita come root|edita come root]] e [[#Apri cartella come root|apri cartella come root]].
+I servizi offerti da Konqueror sono semplici file con estensione .desktop e vanno posizionati nella cartella ''/usr/share/apps/konqueror/servicemenus'' se si vuole che il servizio sia acessibile a tutti gli utenti, oppure in ''/home/nomeutente/.kde/share/apps/konqueror/servicemenus'' se si vuole che il servizio sia accessibile ad un solo utente.<br />
+I servizi che si andranno a creare sono:
+* [[#Copia sul floppy|Copia sul floppy]]
+* [[#Edita come root|Edita come root]]
+* [[#Apri come root|Apri cartella come root]].
 
 ==Copia sul floppy==
-Spostarsi nella cartella desiderata (se si sceglie /usr/share/apps/konqueror/servicemenus bisogna essere root) modificare il file copiafloppy.desktop e inserire:
+Spostarsi nella cartella desiderata (se si sceglie ''/usr/share/apps/konqueror/servicemenus'' bisogna essere root) modificare il file ''copiafloppy.desktop'' e inserire:
 
  [Desktop Entry]
  Comment=Invio della risorsa al floppy
@@ -31,7 +35,6 @@ Il testo è abbastanza comprensibile, si potrebbe aggiungere:
  Icon=kcmsystem
  Exec=kdesu "konqueror --profile filemanagement &U"
 
-
 ==Edita come root==
 
  Comment=Edita un file come utente root
@@ -44,4 +47,5 @@ Il testo è abbastanza comprensibile, si potrebbe aggiungere:
  Icon=kedit
  Exec=kdesu "kedit" "%U"
 
-[[Categoria:Sistema]]
+[[Categoria:Internet]]
+[[Categoria:Ambiente Desktop]]
