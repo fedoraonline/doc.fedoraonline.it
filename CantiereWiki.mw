@@ -54,7 +54,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=USB D-Link DWL-G122 Ver. C1|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=USB D-Link DWL-G122 Ver. C1|autore=MarioSantagiuliana|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
@@ -62,7 +62,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=SDL_gfx risoluzione conflitto tra i repo dries e core|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=ATI Mobility Radeon 9600 M10|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Folio|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Folio|autore=RobertMayr|stato=DaFare}}
 |}
 
 == Rilettura in corso ==
@@ -87,8 +87,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Fedora su PowerBook G3 Pismo|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Installazione di una scheda wireless generica|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=D-Link DWL G122 ver. B kernel 2.16 o superiore|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Nuovi servizi per Konqueror|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
