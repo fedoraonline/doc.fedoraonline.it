@@ -44,7 +44,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Openbox|autore=CristianPozzessere|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pirelli w-gate Alice|autore=GabrieleTrombini|stato=DaFare}}
@@ -88,10 +87,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Samba: condivisione tra Fedora e Windows|autore=MarioSantagiuliana|rilettore=RobertMayr|data=08/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Webcam Sonix USB 2.0 Camera|autore=MarioSantagiuliana|rilettore=RobertMayr|data=08/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Chip DVB - T USB realtek 2831U|autore=MarioSantagiuliana|rilettore=RobertMayr|data=08/11/2011|stato=InCorso}}
-{{RiletturaArticolo|fonte=|articolo=Wifi wpa2-psk con Acer Aspire 5315, chipset AR5006EG|autore=MarioSantagiuliana|rilettore=RobertMayr|data=08/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Fedora su PowerBook G3 Pismo|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Installazione di una scheda wireless generica|autore=MarioSantagiuliana|rilettore=?|data=05/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=[http://www.fedoraonline.it/modules/smartsection/item.php?page=0&itemid=140 link]|articolo=ABC Linux|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
