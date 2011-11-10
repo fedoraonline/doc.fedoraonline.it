@@ -38,10 +38,9 @@ Come da qualche versione a questa parte, l'installer richiede di qualificare il 
 * dispositivi di storage speciale.
 Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />
 Per cui l'opzione più probabile è la prima (già selezionato di default).<br />
-[[File:Install_f16_4.png|thumb|center|NetworkManager presente in Anaconda]]
-[[File:Install_f16_5.png|thumb|center|configurare la rete]]
-Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità di Network Manager.
 
+Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità di Network Manager.
+[[File:Install_f16_4.png|thumb|center|NetworkManager presente in Anaconda]][[File:Install_f16_5.png|thumb|center|configurare la rete]]
 La schermata successiva ci richiede il fuso orario, preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato. Qualora sulla vostra macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di Windows.
 
 Attenzione alla password di root che viene richiesta, perchè c'è un controllo sulla forza della pw, seppur non ostativo. Più è forte la password, più sicurezza si ha.
