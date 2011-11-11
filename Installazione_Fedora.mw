@@ -43,7 +43,7 @@ Per cui l'opzione più probabile è la prima (già selezionato di default).<br /
 Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità integrata di Network Manager.<br />
 E' possibile, quindi, già in fase di prima installazione, installare i pacchetti più aggiornati prelevati direttamente dai repositori Fedora e, come spiegato successivamente, aggiuntivi.<br />
 
-La schermata successiva ci chiede di calibrare il fuso orario il fuso orario, preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato.<br />
+La schermata successiva ci chiede di calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato.<br />
 
 {{Warning|Qualora sulla vostra macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di detto s.o.}}
 Successivamente occorre definire la password per root, che, come si sa, '''è quella più importante del sistema'''.
