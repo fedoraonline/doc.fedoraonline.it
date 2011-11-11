@@ -29,7 +29,7 @@ A parte il countdown, che stavolta non viene interrotto premendo un tasto, ripar
 
 In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera di colore diverso rispetto al resto del testo.<br />
 Con il tasto "esc", invece, si torna al riquadro precedente.<br />
-Selezionando "Install or upgrade Fedora" e premendo invio, dopo la richiesta di verifica del supporto utilizzato, inizia l'installazione.<br />
+Selezionando ''Install or upgrade Fedora'' e premendo invio, dopo la richiesta di verifica del supporto utilizzato, inizia l'installazione.<br />
 
 {{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura ex-novo.}}
 
