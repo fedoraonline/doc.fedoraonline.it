@@ -5,7 +5,7 @@ Questa guida si propone di trattare l'installazione della release '''''Fedora 16
 * CD per l'istallazione da rete;
 * CD live desktop; 
 Tutte queste versioni sono liberamente scaricabili e messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
-
+__TOC__
 {{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kvm che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' dei sistemi non virtualizzati.<br />
 
 Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento con di certo soddisfacente per qualsiasi utilizzo.}} 
@@ -36,9 +36,8 @@ Anaconda provvede a chiedere la lingua di istallazione e, scegliendo, per esempi
 Come da qualche versione a questa parte, l'installer richiede di qualificare il tipo di utilizzo del disco (o dei dischi) della nostra macchina; le opzioni che vengono proposte sono due:
 * dispositivi di storage comuni;
 * dispositivi di storage speciale.
-Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />
+Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />[[File:Install_f16_5.png|thumb|right|configurare la rete]]
 Per cui l'opzione più probabile è la prima (già selezionato di default).<br />
-[[File:Install_f16_5.png|thumb|right|configurare la rete]]
 Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità di Network Manager.<br />
 
 La schermata successiva ci chiede di calibrare il fuso orario il fuso orario, preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato.<br />
