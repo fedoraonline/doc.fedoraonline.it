@@ -43,24 +43,24 @@ Per cui l'opzione più probabile è la prima (già selezionato di default).<br /
 Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità integrata di Network Manager.<br />
 E' possibile, quindi, già in fase di prima installazione, installare i pacchetti più aggiornati prelevati direttamente dai repositori Fedora e, come spiegato successivamente, aggiuntivi.<br />
 
-La schermata successiva ci chiede di calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato.<br />
+La schermata successiva ci chiede di calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato (per conoscere di più riguardo il tempo coordinato universale, su [http://it.wikipedia.org/wiki/Tempo_coordinato_universale Wikipedia] è possibile trovare una spiegazione esaustiva).<br />
 
-{{Warning|Qualora sulla vostra macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di detto s.o.}}
+{{Warning|Qualora sulla macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di detto s.o.}}
 Successivamente occorre definire la password per root, che, come si sa, '''è quella più importante del sistema'''.
 
 {{suggerimento|Sarebbe bene seguire le indicazioni di controllo del sistema (non ostativo) sulla forza della password di root scelta. Più è forte la password, più sicurezza si ha.}}
 
 Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''<br />
-L'immagine si presenta con diverse opzioni;
+Le scelte possono essere diverse, in base alla tipologia di installazione;
 * Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
 * Sostituire il sistema linux esistenze (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
 * Ridurre il sistema attuale (potranno essere ridimensionate le partizioni per ricavare nuovo spazio);
 * Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
 * Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
 
-{{Warning|Attenzione! Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione. '''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' (partizioni fat o ntfs o altro di interscambio); '''in quella di destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno verrà contrassegnato come disco contenente il bootloader.}}
+{{Warning|Attenzione! Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione. '''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); '''in quella di destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
 
-{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne lo spazio rimasto libero per il LVM, la parte già occupata non verrà comunque formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
+{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
 
 
 ----
