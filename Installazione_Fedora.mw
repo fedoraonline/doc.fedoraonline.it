@@ -8,7 +8,7 @@ Tutte queste versioni sono liberamente scaricabili e messe a disposizione dal [h
 __TOC__
 {{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kvm che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' dei sistemi non virtualizzati.<br />
 
-Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento con di certo soddisfacente per qualsiasi utilizzo.}} 
+Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento di certo soddisfacente per qualsiasi utilizzo.}} 
 
 {{Warning|Tutti e tre i metodi di installazione richiedo l'avvio da DVD/CD rom con il disco inserito.<br />
 L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
