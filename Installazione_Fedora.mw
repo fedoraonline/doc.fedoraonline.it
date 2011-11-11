@@ -58,7 +58,9 @@ Le scelte possono essere diverse, in base alla tipologia di installazione;
 * Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
 * Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
 
-{{Warning|Attenzione! Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione. '''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); '''in quella di destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
+{{Warning|Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione:
+*'''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); 
+*'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
 
 {{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
 
