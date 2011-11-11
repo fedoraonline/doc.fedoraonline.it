@@ -18,7 +18,7 @@ L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato
 Come da avviso occorre inserire il disco ed eseguire il boot da DVD,<br />
 All'avvio ci si presenta subito una delle novità di questa versione di Fedora: una scelta di opzioni differenti dalle "storiche".<br /> 
 A parte il countdown, che stavolta non viene interrotto premendo un tasto, ripartendo invece da 60 secondi, (può essere fermato premendo le frecce, su e giù, che permettono altresì di scorrere tra le selezioni), risulta evidente la voce ''Troubleshooting'', per la quale, selezionandola e premendo invio, vengono proposte queste azioni:
-[[File:Install_f16_1.png|thumb|200px|right|Schermata di avvio]]
+[[File:Install_f16_1.png|thumb|200px|Schermata di avvio]]
 * ''Install Fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (al di sotto compare la descrizione breve), userà i driver vesa; 
 * ''Rescue a Fedora system'' (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente);
 * ''Run a memory test'' (per controllare la memoria del sistema);
