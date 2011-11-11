@@ -13,7 +13,7 @@ Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativ
 {{Warning|Tutti e tre i metodi di installazione richiedo l'avvio da DVD/CD rom con il disco inserito.<br />
 L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
 
-{{Warning|E' consigliabile creare un dischetto a partire dalla partizione di ripristino qualora fosse presente il sistema operativo Windows,a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+{{Warning|E' consigliabile creare un dischetto a valere sulla partizione di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
 
 ==Installazione da DVD==
 
