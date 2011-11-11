@@ -35,7 +35,7 @@ Anaconda provvede a chiedere la lingua di istallazione e, scegliendo, per esempi
 [[File:Install_f16_3.png|thumb|250px|left|E' necessario definire la destinazione d'uso dei dischi]]
 Come da qualche versione a questa parte, l'installer richiede di qualificare il tipo di utilizzo del disco (o dei dischi) della nostra macchina; le opzioni che vengono proposte sono due:
 * dispositivi di storage comuni;
-* dispositivi di storage speciale.[[File:Install_f16_5.png|thumb|right|configurare la rete]]
+* dispositivi di storage speciale.[[File:Install_f16_5.png|thumb|250px|right|configurare la rete]]
 Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />
 Per cui l'opzione più probabile è la prima (già selezionato di default).<br />
 Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità di Network Manager.<br />
