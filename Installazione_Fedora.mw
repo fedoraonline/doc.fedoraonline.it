@@ -13,6 +13,8 @@ Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativ
 {{Warning|Tutti e tre i metodi di installazione richiedo l'avvio da DVD/CD rom con il disco inserito.<br />
 L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
 
+{{Warning|Attenzione! E' consigliabile creare un dischetto a partire dalla partizione di ripristino qualora fosse presente il sistema operativo Windows,a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+
 ==Installazione da DVD==
 
 Come da avviso occorre inserire il disco ed eseguire il boot da DVD,<br />
@@ -48,15 +50,21 @@ Successivamente occorre definire la password per root, che, come si sa, '''è qu
 
 {{suggerimento|Sarebbe bene seguire le indicazioni di controllo del sistema (non ostativo) sulla forza della password di root scelta. Più è forte la password, più sicurezza si ha.}}
 
+Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''<br />
+L'immagine si presenta con diverse opzioni;
+* Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
+* Sostituire il sistema linux esistenze (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
+* Ridurre il sistema attuale (potranno essere ridimensionate le partizioni per ricavare nuovo spazio);
+* Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
+* Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
+
+{{Warning|Attenzione! Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione. '''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' (partizioni fat o ntfs o altro di interscambio); '''in quella di destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno verrà contrassegnato come disco contenente il bootloader.}}
+
+{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne lo spazio rimasto libero per il LVM, la parte già occupata non verrà comunque formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
+
+
 ----
 
-
-Ecco ora la parte relativa al partizionamento, con diverse opzioni:
-- Usare tutto lo spazio (rimuove qualsiasi altro sistema operativo nel sistema)
-- sostituire il sistema linux esistenze (rimuove qualsiasi sistema operativo linux presente, non altri)
-- ridurre il sistema attuale (effettua il ridimensionamento delle partizioni per ricavare nuovo spazio)
-- usare lo spazio libero (non elimina ne riduce nulla, usa l'eventuale spazio libero presente nel sistema)
-- creare una struttura personalizzata (attenzione alla partizione bios da creare, a differenza di versioni precedenti dove essa non era presente, qualora non si avesse un sistema EFI)
 
 La stessa schermata prevede la selezione di defafault per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, specie per quelle automatiche.
 
