@@ -2,7 +2,7 @@
 {{Warning|Guida testata su Fedora 7 con kernel è il 2.6.21-1.3194.fc7}}
 Per kernel successivi si potrebbero aggiungere altri moduli in blacklist.
 
-== Introduzione ==
+== Introdizione ==
 * La situazione prevede di configurare la scheda Wireless con IP statico, ed autenticazione WPA.
 * Sono necessari tutti i pacchetti di sviluppo.
 * Per la gestione WPA NON bisogna usare wpa_supplicant, perché tutto il necessario è già compreso nel modulo che si andrà ad installare.
@@ -13,7 +13,7 @@ Scaricare questo driver: http://rt2x00.serialmonkey.com/rt73-cvs-daily.tar.gz e 
 Connettere la penna alla porta USB.
 
 <ol>
-<li>Prima di tutto bisogna mettere alcuni moduli del kernel in blacklist.
+<li>Prima di tutto bisogna mettere alcuni moduli del kernel in blacklist.  </li>
 Loggarsi nel terminale come utente root.
  su -
  password: ****
@@ -37,9 +37,8 @@ Inserire in fondo alla lista:
  blacklist rt73usb
 
 CTRL+O per salvare, CTRL+X per uscire.
-</li>
 
-<li>Installazione del driver.
+<li>Installazione del driver.  </li>
 
  cd /home/rob
  tar -xfv rt73-cvs*
@@ -49,18 +48,16 @@ CTRL+O per salvare, CTRL+X per uscire.
  strip -S rt73.ko
  make install
  modprobe rt73
-</li>
 
-<li>Fermare i servizi:<br />
+<li>Fermare i servizi: </li>
 Fermare i servizi di networking:
 
  service NetworkManager stop
  service NetworkManagerDispatcher stop
 
 Per la disattivazione in modo permanente andare sul menù di sistema ''Amministrazione -> Impostazioni server -> services'' e dalla interfaccia deselezionare i servizi suddetti, salvare e chiudere.
-</li>
 
-<li>Reperire informazioni e configurare la scheda Wi-Fi.<br />
+<li>Reperire informazioni e configurare la scheda Wi-Fi.</li>
 Sempre da terminale, come utente root:
 
  ifconfig wlan0 up
@@ -87,8 +84,8 @@ Risultato (se tutto funziona)
 HELL è l'ESSID della rete!<br />
 Il suo indirizzo fisico è: 00:19:5B:23:D0:C2<br />
 Questo indirizzo serve per connettersi direttamente all'access point.
-</li>
 </ol>
+
 ==Configurazione==
 Non si vuole usare il DHCP per la gestione dell'IP, ma si vuole un IP statico.<br />
 In questo caso, l'IP assegnato alla macchina è 192.168.1.3<br />
