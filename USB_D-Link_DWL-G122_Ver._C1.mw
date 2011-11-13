@@ -1,0 +1,200 @@
+{{Obsoleto}}
+{{Warning|Guida testata su Fedora 7 con kernel è il 2.6.21-1.3194.fc7}}
+Per kernel successivi si potrebbero aggiungere altri moduli in blacklist.
+
+== Introduzione ==
+* La situazione prevede di configurare la scheda Wireless con IP statico, ed autenticazione WPA.
+* Sono necessari tutti i pacchetti di sviluppo.
+* Per la gestione WPA NON bisogna usare wpa_supplicant, perché tutto il necessario è già compreso nel modulo che si andrà ad installare.
+* La penna in questione, come molte schede di rete USB, può avere dei problemi legati direttamente all'hub USB che si usa. In questo caso si è risolto il problema collegando la penna ad un hub esterno USB alimentato.
+
+== Installazione ==
+Scaricare questo driver: http://rt2x00.serialmonkey.com/rt73-cvs-daily.tar.gz e salvarlo in /home/nomeutente. D'ora in poi si farà riferimento ad /home/rob.<br />
+Connettere la penna alla porta USB.
+
+<ol>
+<li>Prima di tutto bisogna mettere alcuni moduli del kernel in blacklist.
+Loggarsi nel terminale come utente root.
+ su -
+ password: ****
+
+Modificare il file /etc/modprobe.d/blacklist con l'editor nano.
+
+ nano /etc/modprobe.d/blacklist
+
+Inserire in fondo alla lista:
+
+ blacklist rt2570
+ blacklist rt2x00lib.ko
+ blacklist rt2x00pci.ko
+ blacklist rt2x00usb.ko
+ blacklist rt61pci.ko
+ blacklist rt73usb.ko
+ blacklist rt2400pci.ko
+ blacklist rt2500pci.ko
+ blacklist rt2x00lib
+ blacklist rt2x00pci
+ blacklist rt73usb
+
+CTRL+O per salvare, CTRL+X per uscire.
+</li>
+
+<li>Installazione del driver.
+
+ cd /home/rob
+ tar -xfv rt73-cvs*
+ cd rt73-cvs-2007100302 // Il numero varia con la data del pacchetto
+ cd Module
+ make
+ strip -S rt73.ko
+ make install
+ modprobe rt73
+</li>
+
+<li>Fermare i servizi:<br />
+Fermare i servizi di networking:
+
+ service NetworkManager stop
+ service NetworkManagerDispatcher stop
+
+Per la disattivazione in modo permanente andare sul menù di sistema ''Amministrazione -> Impostazioni server -> services'' e dalla interfaccia deselezionare i servizi suddetti, salvare e chiudere.
+</li>
+
+<li>Reperire informazioni e configurare la scheda Wi-Fi.<br />
+Sempre da terminale, come utente root:
+
+ ifconfig wlan0 up
+ iwlist wlan0 scan
+
+wlan0 è il nuovo driver di rete.<br />
+Con la seconda istruzione si ha un report delle reti wireless a cui possiamo accedere.<br />
+Risultato (se tutto funziona)
+
+ wlan0     Scan completed :
+           Cell 01 - Address: 00:19:5B:23:D0:C2
+                     ESSID:"HELL"
+                     Mode:Managed
+                     Channel:6
+                     Encryption key:on
+                     Bit Rates:0 kb/s
+           Cell 02 - Address: 00:0C:F6:2D:AC:29
+                     ESSID:"lazzarus"
+                     Mode:Managed
+                     Channel:11
+                     Encryption key:off
+                     Bit Rates:0 kb/s
+
+HELL è l'ESSID della rete!<br />
+Il suo indirizzo fisico è: 00:19:5B:23:D0:C2<br />
+Questo indirizzo serve per connettersi direttamente all'access point.
+</li>
+</ol>
+==Configurazione==
+Non si vuole usare il DHCP per la gestione dell'IP, ma si vuole un IP statico.<br />
+In questo caso, l'IP assegnato alla macchina è 192.168.1.3<br />
+Mentre l'ip del gateway è 192.168.1.1
+
+Procurarsi inoltre DNS primario, DNS secondario, password WPA.
+
+Serve infine il MAC address della scheda wireless usb.
+
+Da terminale come root:
+
+ ifconfig -a
+
+Si vedrà:
+
+ wlan0     Link encap:Ethernet  HWaddr 00:19:5B:78:ED:47
+           inet addr:192.168.1.3  Bcast:192.168.1.255  Mask:255.255.255.0
+           inet6 addr: fe80::219:5bff:fe78:ed47/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:17368 errors:0 dropped:4 overruns:4 frame:4
+           TX packets:5017 errors:0 dropped:203 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000
+           RX bytes:5903840 (5.6 MiB)  TX bytes:683974 (667.9 KiB)
+
+Allora l'indirizzo MAC che serve è l'HWaddr: 00:19:5B:78:ED:47<br />
+Alle volte il MAC è scritto anche sul retro della chiavetta.
+
+===Creazione del network-script ===
+(vedere http://tinyurl.com/2lrtku).
+
+Prima di tutto creare un network-script.<br />
+Sempre come utente root:
+
+ nano /etc/sysconfig/network-scripts/ifcfg-wlan0
+
+Inserire le seguenti linee:
+
+ # rt73
+ DEVICE=wlan0
+ BOOTPROTO=static
+ ONBOOT=yes
+ HWADDR=00:19:5B:78:ED:47
+ IPADDR=192.168.1.3
+ NETMASK=255.255.255.0
+ GATEWAY=192.168.1.1
+ BROADCAST=192.168.1.255 
+
+In HWADDR si è copiato il MAC della penna, in IPADDR il proprio IP statico.<br />
+Le ultime due voci dipendono dal router.<br />
+Salvare il file.
+
+=== Script di configurazione per l'avvio===
+Da terminale come utente root:
+
+ nano /etc/resolv.conf
+
+Aggiungere le righe:
+
+ nameserver 192.168.1.1
+ nameserver 212.216.112.112
+ nameserver 212.216.172.62
+
+Sono rispettivamente l'indirizzo del gateway e i due DNS.
+
+Sempre da terminale come utente root:
+
+ nano /etc/rc.local 
+
+Aggiungere le seguenti righe:
+
+ ifconfig wlan0 up
+ iwconfig wlan0 mode managed
+ ifconfig wlan0 192.168.1.3 netmask 255.255.255.0
+ iwconfig wlan0 ap 00:19:5B:23:D0:C2
+ iwpriv wlan0 set AuthMode=WPAPSK
+ iwpriv wlan0 set WPAPSK=tearsoftechnology
+ iwpriv wlan0 set EncrypType=TKIP
+ route add default gw 192.168.1.1
+
+La prima riga specifica che non è una connessione ad-hoc ma normale managed.<br />
+La seconda attiva il driver.<br />
+La terza specifica il nostro IP.<br />
+Quarta riga: indirizzo fisico dell'access point.<br />
+Righe 5,6,7: riguardano la gestione del WPA<br />
+La riga finale comunica il gateway.
+
+Riavviare la macchina e si dovrebbe essere in grado di navigare.
+
+==Risoluzione di problemi==
+Nell'eventualità che la penna si blocchi, e si voglia ripristinarla senza dover riavviare il sistema, basta creare uno script eseguibile. In questo caso chiamato "dlink.sh".
+
+Creare un file di testo dlink.sh e copiare le seguenti istruzioni:
+
+ #!/bin/sh
+ ifconfig wlan0 down
+ ifconfig wlan0 up
+ iwconfig wlan0 mode managed
+ ifconfig wlan0 192.168.1.3 netmask 255.255.255.0
+ iwconfig wlan0 ap 00:19:5B:23:D0:C2
+ iwpriv wlan0 set AuthMode=WPAPSK
+ iwpriv wlan0 set WPAPSK=tearsoftechnology
+ iwpriv wlan0 set EncrypType=TKIP
+ route add default gw 192.168.1.1
+
+Salvare in /home/rob con i permessi di esecuzione. 
+
+Questo script non fa altro che spegnere la penna e riavviarla con tutti i parametri contenuti anche nello script di boot.
+
+[[Categoria:Hardware]]
