@@ -1,8 +1,7 @@
 {{Obsoleto}}
 Vista la diffusione del problema e le frequenti domande a proposito, ho pensato di raccogliere le varie informazioni sparpagliate per il forum inerenti all'installazione del boot-loader Grub nel Master Boot Record del disco.
 
-Procurarsi il cd/dvd di Fedora Core ed inserirlo nel drive e impostare dal bios (se già non è settato) il boot dal drive in questione.
-
+Procurarsi il cd/dvd di Fedora Core ed inserirlo nel drive e impostare dal bios (se già non è settato) il boot dal drive in questione.<br />
 Alla prima opportunità di scelta, premere il tasto "F5" ed al successivo prompt digitare:
 
  linux rescue 
@@ -29,7 +28,5 @@ Digitare quindi
 
 e riavviare il sistema.
 
-Qualsiasi aggiunta/correzione/suggerimento è più che benvenuto!
-
-[[Categoria:Sistema]]
+[[Categoria:Grub]]
 [[Categoria:Installazione]]
