@@ -54,7 +54,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=USB D-Link DWL-G122 Ver. C1|autore=MarioSantagiuliana|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
@@ -99,16 +98,16 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Leggere i floppy da terminale|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Stampare le pagine man|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Cancellare allegati da "mail evolution"|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Primi passi nel terminale|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Connessione ADSL con il driver cxacru|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Reinstallare Grub|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Modem USB Adsl Trust MD-3100|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Avviare Linux in meno di 20 Secondi|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Compilare i file sorgente|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Cambiare il prompt del terminale|autore=MarioSantagiuliana|rilettore=?|data=07/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Primi passi nel terminale|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Connessione ADSL con il driver cxacru|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Reinstallare Grub|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Modem USB Adsl Trust MD-3100|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Avviare Linux in meno di 20 Secondi|autore=MarioSantagiuliana|rilettore=RobertMayr|data=07/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Compilare i file sorgente|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Cambiare il prompt del terminale|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Configurazione di una rete wifi|autore=RobertMayr|rilettore=?|data=08/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Personal Fedora 16 Installation Guide di Mauriat Miranda|autore=RobertMayr|rilettore=?|data=09/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=USB D-Link DWL-G122 Ver. C1|autore=MarioSantagiuliana|rilettore=?|data=13/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=USB D-Link DWL-G122 Ver. C1|autore=MarioSantagiuliana|rilettore=RobertMayr|data=15/11/2011|stato=Terminato}}
 |}
 
 
