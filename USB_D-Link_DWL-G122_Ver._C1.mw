@@ -1,8 +1,8 @@
 {{Obsoleto}}
-{{Warning|Guida testata su Fedora 7 con kernel è il 2.6.21-1.3194.fc7}}
-Per kernel successivi si potrebbero aggiungere altri moduli in blacklist.
+{{Warning|Guida testata su Fedora 7 con kernel 2.6.21-1.3194.fc7}}
+Per kernel successivi potrebbe essere necessario aggiungere altri moduli in blacklist.
 
-== Introdizione ==
+== Introduzione ==
 * La situazione prevede di configurare la scheda Wireless con IP statico, ed autenticazione WPA.
 * Sono necessari tutti i pacchetti di sviluppo.
 * Per la gestione WPA NON bisogna usare wpa_supplicant, perché tutto il necessario è già compreso nel modulo che si andrà ad installare.
@@ -194,4 +194,4 @@ Salvare in /home/rob con i permessi di esecuzione.
 
 Questo script non fa altro che spegnere la penna e riavviarla con tutti i parametri contenuti anche nello script di boot.
 
-[[Categoria:Hardware]]
+[[Categoria:Wi-Fi]]
