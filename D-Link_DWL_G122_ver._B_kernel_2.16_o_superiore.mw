@@ -1,17 +1,21 @@
+== Introduzione ==
+
 Guida all'installazione della wireless pen D-Link DWL-G122 ver.B su kernel >= 2.16<br />
 Requisiti:
 * Header del kernel serie >= 2.16
 * Gruppo pacchetti sviluppo (gcc, cpp, automake, make..)
 * wpa_supplicant (opzionale: per usare l'autenticazione WPA).
 
-Da utente "root"
+== Installazione ==
+
+Da utente "root":
 <ol>
 <li>Scaricare il sorgente del modulo per il kernel</li>
 
 http://rt2x00.serialmonkey.com/rt2570-cvs-daily.tar.gz
 
 <li>Scompattare il codice</li>
-Entriamo nella directory dove abbiamo memorizzato il file e digitiamo
+Entrare nella directory dove è memorizzato il file e digitare:
  tar -xvzf rt2570-cvs-daily.tar.gz
 
 <li>Posizionarsi nella directory Module</li>
@@ -29,7 +33,7 @@ Entriamo nella directory dove abbiamo memorizzato il file e digitiamo
  service NetworkManager stop
  service NetworkManagerDispatcher stop
 
-Per la disattivazione in modo permanente andare sul menù di sistema Amministrazione -> Impostazioni server -> services e dalla comoda interfaccia deselezionare i servizi suddetti, salvare e chiudere.
+Per la disattivazione in modo permanente andare sul menù di sistema ''Amministrazione > Impostazioni server > services'' e dalla comoda interfaccia deselezionare i servizi suddetti, salvare e chiudere.
 
 <li>Configurazione e Attivazione della wireless</li>
 Identificare il dispositivo
@@ -48,9 +52,10 @@ che produce
  
  Eth0      no wireless extensions.
 
-il dispositivo in questione e rausb0 (ma potrebbe essere rausb1 o altro, per cui considerare da ora in poi il vostro dispositivo)
+Il dispositivo in questione e ''rausb0'' (ma potrebbe essere rausb1 o altro, per cui considerare da ora in poi il vostro dispositivo)
 
-Configurazione
+== Configurazione ==
+
  ifconfig rausb0 down
  ifconfig rausb0 indirizzo_ip
  route add default gw indirizzo_gateway
@@ -65,8 +70,7 @@ Per chi vuole usare una rete aperta
  iwpriv rausb0 enc 1
  ifconfig rausb0 up
 
-E la connessione è subito disponibile
-
+E la connessione è subito disponibile.<br />
 Per chi vuole usare WEP invece
  iwpriv rausb0 auth 1
  iwpriv rausb0 enc 2
@@ -117,11 +121,11 @@ Per chi usa WPA
  ifconfig rausb0 up
  wpa_supplicant -Bw -Dwext -irausb0
 
-e disattivare il lancio automatico del servizio wpa_supplicant, ovvero dal menù di sistema -> amministrazione -> impostazioni server -> services  e deselezionare la casella corrispondente, salvare e chiudere
+e disattivare il lancio automatico del servizio wpa_supplicant, ovvero dal menù di ''sistema > amministrazione > impostazioni server > services''  e deselezionare la casella corrispondente, salvare e chiudere
 </ol>
 
-Un ringraziamento particolare a "virus" perché è il vero suggeritore di questa guida che si può leggere anche su http://rt2x00.serialmonkey.com/fc4howto/rt2570_fc4_howto.html
-
+== Riferimenti ==
+* [http://rt2x00.serialmonkey.com/fc4howto/rt2570_fc4_howto.html]
 {{Warning|La guida funziona anche per Fedora 8, con qualche piccolo accorgimento: bisogna introdurre un piccolo ritardo tra i comandi (il perché non lo so ma funziona).}}
 Personalmente ho creato il seguente script posizionato in /bin con nome wireless.sh (con permessi di esecuzione), che richiamo come ultimo comando in rc.local.
 
@@ -148,6 +152,4 @@ Personalmente ho creato il seguente script posizionato in /bin con nome wireless
  sleep 1
  echo connessione effettuata.
  
-Ciao da Zeus  8-)
-
 [[Categoria:Wi-Fi]]
