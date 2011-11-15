@@ -182,7 +182,4 @@ Il file '''/etc/resolv.conf''' viene modificato automaticamente dagli script di 
 Ho avuto qualche problema con le applet di configurazione, in quanto a volte riportano inaspettatamente i parametri impostati ai rispettivi valori di default (in particolare quelli con la selezione a tendina).<br />
 '''Soluzione:''' controllare sempre tutte le impostazioni prima di salvare la configurazione.
 
-Buon divertimento con Fedora
-ergosum
-
 [[Categoria:Hardware]]
