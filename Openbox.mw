@@ -1,9 +1,9 @@
 __TOC__
 == Introduzione ==
 
-Questa guida è scritta per tutti coloro che vorranno utilizzare Openbox sulla loro Fedora. Non si tratta di una installazione "pura", nel senso che Openbox viene installato successivamente all'installazione, ad esempio di Gnome.<br />
-Per tale motivo Openbox avrà già tutti gli applicativi pronti all'uso nel suo menù (attivabile con tasto destro del mouse).<br />
-Infine c'è da dire che Openbox non è un Desktop Manager, bensì un Windows Manager!
+Questa guida è scritta per tutti coloro che vorranno utilizzare openbox sulla loro Fedora. Non si tratta di una installazione "pura", nel senso che openbox viene installato successivamente all'installazione, ad esempio di Gnome.<br />
+Per tale motivo openbox avrà già tutti gli applicativi pronti all'uso nel suo menù (attivabile con tasto destro del mouse).<br />
+Infine c'è da dire che openbox non è un desktop manager, bensì un Windows Manager!
 
 == Installazione ==
 
@@ -40,9 +40,9 @@ tint2 è un ottimo pannello e vassoio di sistema.
 
  # yum install xcompmgr
 
-E' importante sapere che non esiste compiz per openbox, ma questo programmino aiuta a gestire ombre, trasparenze ed effettini per ridurre le finestre ad icona.
+E' importante sapere che non esiste compiz per openbox, ma questo programmino vi aiuta a gestire ombre, trasparenze ed effettini per ridurre le finestre ad icona.
 
-L'installazione è terminata, rimangono due o tre consigli per eventuali settaggi e/o configurazioni, si noterà anche che Openbox è un Windows Manager leggerissimo.<br />
+L'installazione è terminata, rimangono due o tre consigli per eventuali settaggi e/o configurazioni, si noteranno anche che Openbox è un Windows Manager leggerissimo.<br />
 
 == Configurazione ==
 
@@ -53,7 +53,7 @@ http://git.silverirc.com/cgit.cgi/screenfetch-dev.git/ e scaricare il tar più a
 
 Modificare il proprio ''.bashrc'' come segue (non da root!)
 
- $ /percorso_del_file/screenfetch-dev
+ /percorso_del_file/screenfetch-dev
 
 (ES: nel caso descritto è /home/feddy/screenfetch-dev)
 Quando si apre il terminale ci sarà il tuo bel screenfetch:
@@ -62,7 +62,7 @@ modificare ora il file ''.autostart.ch'' per inserire i processi desiderati all'
  # nano /etc/xdg/openbox/autostart.sh
 
 Alla fine del file aggiungere:
-
+{{Nota|Nota|La '''&''' al termine del comando è importante altrimenti le applicazioni potrebbero non apparire dopo il login.}}
  conky &
  tint2 &
  xcompmgr &
@@ -70,7 +70,6 @@ Alla fine del file aggiungere:
  # My wallpaper
  eval `cat $HOME/.fehbg` &
 
-{{Nota|Nota|La '''&''' al termine del comando è importante altrimenti le applicazioni potrebbero non apparire dopo il login.}}
 Per impostare uno sfondo, dato che ora è installato ''feh'':
 
  $ feh --bg-scale /pathtoyourbackgroundimage.jpg
