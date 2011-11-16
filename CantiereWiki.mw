@@ -40,8 +40,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Articolo
 ! Autore
 ! Stato
-{{AggiungiArticolo|fonte=-|articolo=Installazione Covergloobus|autore=CristianPozzessere|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Openbox|autore=CristianPozzessere|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
@@ -50,7 +48,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Impostazione driver vesa e creazione xorg.conf|autore=CristianPozzessere|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
@@ -86,11 +83,9 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=FAQ Fol|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=FAQ Fedora Project|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Tutti i tag RPM|autore=RobertMayr|rilettore=GabrieleTrombini|data=18/10/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Impostare un RAID software|autore=MarioSantagiuliana|rilettore=RobertMayr|data=16/11/2011|stato=Terminato}}
-{{RiletturaArticolo|fonte=|articolo=Dischi e partizioni: le basi|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=VMware|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
-{{RiletturaArticolo|fonte=|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|rilettore=?|data=06/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=VMware|autore=MarioSantagiuliana|rilettore=RobertMayr|data=16/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=Ricompilare il kernel di Fedora core 6 a 32 bit|autore=MarioSantagiuliana|rilettore=RobertMayr|data=16/11/2011|stato=InCorso}}
+{{RiletturaArticolo|fonte=|articolo=NAT, Gateway e Firewall per uscire sul web|autore=MarioSantagiuliana|rilettore=RobertMayr|data=16/11/2011|stato=InCorso}}
 {{RiletturaArticolo|fonte=|articolo=Modificare il numero di Kernel presenti in Grub|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Cambiare l'immagine di grub|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Modem Speedtouch 330 su Fedora Core|autore=RobertMayr|rilettore=?|data=06/11/2011|stato=DaFare}}
