@@ -22,7 +22,7 @@ A così:
     Driver      "vesa"</pre>
 <pre># reboot</pre>
 </li>
-<li> Se ancora si ahnno problemi con il login grafico, ripetere i primi 7 passaggi e una volta loggati come root dare i seguenti comandi:
+<li> Se ancora si hanno problemi con il login grafico, ripetere i primi 7 passaggi e una volta loggati come root dare i seguenti comandi:
 <pre># mv /etc/X11/xorg.conf /etc/X11/xorg.conf.vecchio
 # X -configure
 # mv /root/xorg.conf.new /etc/X11/xorg.conf
