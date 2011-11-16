@@ -11,15 +11,13 @@ Dato che non esiste il pacchetto ''Rpm'' bisogna installarlo da terminale.
 (in questo caso " /home/ilnanny/Scaricati/covergloobus-1.6 ")
 * Da terminale:
 
- $ su -
- password
- # ./autogen.sh && make && make install  
+ su -
+ ./autogen.sh && make && make install  
 
 Se si ottengono errori di compilazione, sarà necessario installare :
 
- $ su -
- password
- # yum install @development-tools @development-libs  
+ su -
+ yum install @development-tools @development-libs  
 
 
 Ora si possono cambiare anche le skin, se non piace quello di default, basta andare su Deviantart e scegliere quello che si preferisce: Un esempio potrebbe essere questo: [http://naf1971.deviantart.com/art/Corner-nowplaying-217140274 Corner nowplaying]
