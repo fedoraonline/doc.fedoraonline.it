@@ -1,6 +1,6 @@
 Questi pochi passaggi descrivono come settare i driver generici ''vesa'' o eventualmente costruire da zero il proprio ''/etc/X11/xorg.conf'', nel caso si avesse difficoltà ad accedere correttamente all'ambiente grafico.
 # Avviare la propria macchina;
-# Alla schermata di Grub interrompere il conto alla rovescia digitando un tasto qualsiasi;
+# Alla schermata di Grub interrompereo il conto alla rovescia digitando un tasto qualsiasi;
 # Usando le frecce direzionali spostarsi sulla riga del kernel e digitare la lettera '''e''';
 # Sempre con le frecce direzionali spostarsi in fondo alla riga del kernel, lasciare uno spazio e digitare il numero '''3''';
 # Dare Invio;
@@ -22,7 +22,7 @@ A così:
     Driver      "vesa"</pre>
 <pre># reboot</pre>
 </li>
-<li> Se ancora si hanno problemi con il login grafico, ripetere i primi 7 passaggi e una volta loggati come root dare i seguenti comandi:
+<li> Se ancora si ahnno problemi con il login grafico, ripetere i primi 7 passaggi e una volta loggati come root dare i seguenti comandi:
 <pre># mv /etc/X11/xorg.conf /etc/X11/xorg.conf.vecchio
 # X -configure
 # mv /root/xorg.conf.new /etc/X11/xorg.conf
