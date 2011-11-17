@@ -43,8 +43,8 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Pirelli w-gate Alice|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=GabrieleTrombini|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Pirelli w-gate Alice|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
@@ -94,6 +94,8 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Installazione Covergloobus|autore=RobertMayr|rilettore=?|data=16/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Openbox|autore=RobertMayr|rilettore=?|data=16/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Impostazione driver vesa e creazione xorg.conf|autore=RobertMayr|rilettore=?|data=16/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Pirelli w-gate Alice|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
 |}
 
 
@@ -115,7 +117,6 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Responsabile della modifica
 ! Data
 ! Stato
-{{ModificaArticolo|articolo=Convenzioni di scrittura|autore=GabrieleTrombini|responsabile=GabrieleTrombini|data=26/10/2011|stato=InCorso}}
 {{ModificaArticolo|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
 {{ModificaArticolo|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
 {{ModificaArticolo|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
