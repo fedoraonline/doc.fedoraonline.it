@@ -45,10 +45,10 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Aggiungere utenti confinati con SELinux|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Pirelli w-gate Alice|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Monitoraggio processi Linux tramite file descriptors|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
@@ -96,6 +96,9 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Impostazione driver vesa e creazione xorg.conf|autore=RobertMayr|rilettore=?|data=16/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Pidgin: cambiare le finestre di conversazione in "stile Adium"|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Pirelli w-gate Alice|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Monitoraggio processi Linux tramite file descriptors|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=PXE Boot|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
 |}
 
 
