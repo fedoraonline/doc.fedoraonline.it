@@ -1,4 +1,3 @@
-__TOC__
 == Introduzione ==
 
 Queste sono le operazioni primarie per poter "utilizzare" il modem Pirelli di Alice, visto che ancora oggi molti utenti hanno difficoltà nella sua "configurazione".<br />
@@ -14,7 +13,7 @@ Creare una connessione di tipo xDSL come segue:
 
  # system-config-network
 
-Creare una nuova connessione: '''Nuovo --> Collegamento xDSL'''
+Crea una nuova connessione: '''Nuovo --> Collegamento xDSL'''
 
  Nome fornitore accesso : Alice
  User : aliceadsl
@@ -22,7 +21,7 @@ Creare una nuova connessione: '''Nuovo --> Collegamento xDSL'''
 
 Una volta creata, mettere la spunta sulla nuova connessione e verrà avviata in automatico ad ogni riavvio del sistema.<br />
 Se ancora persistono problemi si può procedere in questo modo:<br />
-Aggiungere 2 stringhe ad un file di configurazione, ma prima di renderlo permanente testare se in questo modo si risolvono i problemi. Per testarlo digitare i seguenti comandi da root:
+Aggiungere 2 stringhe ad un file di configurazione, ma prima di renderlo permanente testare se in questo modo si risolvono i problemi.Per testarlo digitare i seguenti comandi da root:
 
  $ su - (ricorda il trattino)
  # echo 0 > /proc/sys/net/ipv4/tcp_window_scaling
