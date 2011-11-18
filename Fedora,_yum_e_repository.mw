@@ -1,0 +1,110 @@
+==Introduzione==
+
+Con la presente guida si vuole solamente aggiornare ed integrare le precedenti redatte sull'uso di yum e sulla configurazione dei repositories per la gestione dei pacchetti rpm in Fedora.<br />
+Yum è l'acronimo di Yellow dog Updater, Modified ed è il sistema di gestione dei pacchetti, ormai standard in Fedora, che si affianca ed integra con l'ottimo rpm. Esso si appoggia a dei repository esterni (mantenuti dal Fedora Project e da terze parti), contenenti i programmi per l'uso del sistema operativo e per le più disparate applicazioni aggiuntive.<br />
+Tenendo presente l'esistenza di interfacce grafiche per l'utilizzo di yum mediante GUI (es. kyum, yumex ecc.), si farà riferimento all'uso del programma da terminale.
+
+== Yum ==
+
+Principalmente yum ha il vantaggio (rispetto ad rpm) di poter risolvere le dipendenze senza intervento da parte dell'utente e, nel caso non riuscisse a soddisfarle con i repository al momento attivi, uscire dal programma con un errore ben leggibile, dichiarando le dipendenze non trovate o i conflitti rilevati, agevolando così le ricerche della soluzione da parte dell'utente.
+
+Non è nelle intenzioni di questa guida fare una mera traduzione delle pagine man del comando yum, alle quali chiunque può accedere semplicemente digitando, da terminale:
+
+man yum
+
+==Principali comandi==
+
+E' bene comunque avere ben chiari i principali comandi ed il fine a cui possono essere rivolti, pertanto di seguito si vedrà una breve panoramica.<br />
+{{Warning|Yum deve essere eseguito con i '''permessi di root''', ottenuti con il comando
+ $ su
+ password
+ #}}
+
+===Installazione di programmi===
+Eseguendo il comando:
+
+ # yum install nome_programma
+
+Yum cercherà nei repository attivati dall'utente, il programma passato come argomento e, se trovato, lo proporrà per l'installazione; basterà digitare "y" o "n" per eseguirla o meno. Esiste anche l'opzione "-y" da passare al comando:
+
+ # yum -y install nome_programma 
+
+che permette di bypassare la richiesta di procedere o meno. Per esperienza, questa opzione è da usare con cautela in quanto non permette, salvo provvedimenti drastici, di intervenire in caso di situazioni anomale.
+
+===Aggiornamento di programmi===
+Eseguendo il comando:
+
+ # yum update nome_programma 
+
+Yum cercherà nei repository attivati dall'utente, versioni più aggiornate del programma passato come argomento. Anche in questo caso è utilizzabile l'opzione "-y" per la quale si rinnova, anche con più pertinenza, l'avviso precedente sul suo utilizzo.<br />
+E' possibile utilizzare il comando senza argomenti per l'aggiornamento completo del sistema in relazione ai soli programmi installati, ovviamente:
+
+ # yum update
+
+ed, in questo caso, si sconsiglia vivamente l'utilizzo dell'opzione "-y"; meglio controllare ciò che ci si appresta a fare.
+
+===Rimozione di programmi===
+Eseguendo il comando:
+
+ # yum remove nome_programma
+
+Yum rimuoverà il programma definito e le relative dipendenze dirette.<br />
+Yum non è solo quello visto finora, alcuni suoi comandi sono molto utili per potersi districare da laboriose installazioni.
+
+===Ricerca di pacchetti===
+Per avere un'idea di quanti e quali pacchetti sono stati aggiornati dall'ultimo update eseguito, è necessario solamente digitare:
+
+ # yum check-update
+
+Verrà proposta una lista degli aggiornamenti per ciascun pacchetto e da quale repository proviene.<br />
+Talvolta non si sa a quale pacchetto occorre riferirsi per la ricerca di una data libreria o di qualsiasi file presente negli rpm; anche in questo caso yum ci soccorre con il comando:
+
+ # yum provides nome_file
+
+proponendo, in base ai repository attivati dall'utente, i pacchetti all'interno dei quali tale file risulta essere presente. A quel punto basta eseguire lo yum install dell'rpm.
+
+===Gestione gruppi di programmi===
+
+
+PAUSA
+
+
+
+Volendo installare un gruppo di programmi che avremmo dovuto/voluto avere, ma che non abbiamo selezionato in fase di prima installazione di Fedora, possiamo utilizzare yum per porvi rimedio.
+Ad esempio, con
+
+# yum grouplist
+
+
+potrete vedere a terminale un elenco per gruppi anzichè per programmi singoli. Per capirci, se volessi installare KDE, non avendolo ancora installato, si potrebbe, anzichè perdersi nell'installazione di tutti i programmi di KDE (oltre al DM stesso), semplicemente digitare:
+
+# yum groupinstall 'KDE (K Desktop Environment)'
+
+
+prestando attenzione alle virgolette, e tutto il desktop environment verrà proposto per l'installazione. Parimenti il discorso è valido anche per tutti i gruppi risultanti dal "grouplist".
+Allo stesso modo, i comandi groupupdate e groupremove agiscono su tali gruppi:
+
+# yum groupupdate 'KDE (K Desktop Environment)'
+
+
+aggiorna KDE e
+
+# yum groupremove 'KDE (K Desktop Environment)'
+
+
+lo rimuove.
+
+6) installazione in locale
+
+Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato sul nostro hard disk e volendolo installare con l'ausilio di yum per la ricerca delle dipendenze online, occorre digitare (posizionandosi nella directory dove è presente l'rpm da installare):
+
+# yum localinstall nome_programma
+
+
+Il comando localinstall risulta essere molto utile se usato in combinazione con checkinstall.
+
+7) plugins per yum
+
+Esistono anche dei plugin per yum, quelli più interessanti che ho rilevato sono i seguenti (tutti installabili con yum, presenti nel repo Fedora):
+a) yum-fastestmirror: plugin che prima di iniziare il download effettua una ricerca del mirror con una migliore velocità di connessione;
+b) yum-presto: plugin che permette la risoluzione delle dipendenze in locale anzichè in remoto, principale problema di yum, che è una soluzione allo studio anche del Fedora Project per una eventuale integrazione nativa in yum stesso. Questo plugin, appoggiandosi a dei metadati, richiede la configurazione dei mirrors seguendo i links degli autori del progetto.
