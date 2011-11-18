@@ -49,8 +49,8 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=Terminato}}
+{{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
@@ -99,6 +99,8 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Monitoraggio processi Linux tramite file descriptors|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Installazione USB DVB-T Hauppauge! WinTV Aero|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=PXE Boot|autore=RobertMayr|rilettore=?|data=17/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Convertire file .ps (postscript) in file .pdf|autore=RobertMayr|rilettore=?|data=18/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Ricevere le email di sistema|autore=RobertMayr|rilettore=?|data=18/11/2011|stato=DaFare}}
 |}
 
 
