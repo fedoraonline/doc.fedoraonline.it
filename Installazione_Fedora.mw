@@ -57,7 +57,7 @@ Proseguendo con l'installazione occorre prestare particolare attenzione alla par
 *'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
 
 [[File:Install_f16_7.png|502px|left|presenza di più dischi fissi]][[File:Install_f16_6.png|502px|right|selezione in presenza di più dischi fissi]]<br  />
-I dischi selezionati per l'installazione, saranno quelli interessati al contenimento del filesystem di Fedora, non necessariamente da formattare perchè solo nella fase successiva verrà richiesto di specificare il tipo di partizionamento e la formattazione.
+I dischi selezionati per l'installazione, saranno quelli interessati al contenimento del filesystem di Fedora, non necessariamente da formattare perchè solo successivamente verrà richiesto di specificare il tipo di partizionamento e la formattazione.
 
 {{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
 
@@ -69,11 +69,10 @@ Le scelte possono essere diverse, in base alla tipologia di installazione;
 * Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
 * Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
 
-La stessa schermata prevede la selezione di defafault per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, specie per quelle automatiche.
+La stessa schermata prevede la selezione di default per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, consigliabile specialmente per quelle automatiche.<br />
 
-Usiamo il primo selezione, usare tutto lo spazio e selezioniamo di rivedere le partizioni, usando LVM.
-
-Ecco le mie partizioni, con il Logical Volume Management (LVM).
+In questa guida verrà utilizzata la prima selezione, ''usare tutto lo spazio'' (che imposta in automatico LVM) e, come detto, di rivederle.
+[[File:Install_f16_8.png|thaumb|450px|left|creazione automatica di partizioni con LVM]]
 
 Nota bene: ho utilizzato una macchina virtuale qemu/kmv per creare le casistiche ivi trattate, per cui le dimensioni dei dischi sono puramente indicative e la loro nomenclatura è vdx anzichè sdx come nei sistemi non virtualizzati.
 
