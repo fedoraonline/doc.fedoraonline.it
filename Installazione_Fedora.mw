@@ -56,7 +56,7 @@ Proseguendo con l'installazione occorre prestare particolare attenzione alla par
 *'''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); 
 *'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
 
-[[File:Install_f16_7.png|509px|left|presenza di più dischi fissi]][[File:Install_f16_6.png|509px|right|selezione in presenza di più dischi fissi]]<br  />
+[[File:Install_f16_7.png|505px|left|presenza di più dischi fissi]][[File:Install_f16_6.png|505px|right|selezione in presenza di più dischi fissi]]<br  />
 I dischi selezionati per l'installazione, saranno quelli interessati al contenimento del filesystem di Fedora, non necessariamente da formattare perchè solo nella fase successiva verrà richiesto di specificare il tipo di partizionamento e la formattazione.
 
 {{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
