@@ -79,23 +79,29 @@ In questa guida verrà utilizzata la prima selezione, ''usare tutto lo spazio'' 
 Da notare la necessaria partizione ''BIOS boot'', pertanto, che occorre ricordarsi nel caso di partizionamento manuale.<br />
 E' possibile, come sempre, modificare le partizioni selezionando il tasto modifica.<br />
 
-Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''btrfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
+Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''brtfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
 
-Nel caso qui riportato ''btrfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br /> <br />
+Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br /> <br />
 
 
 [[File:Install_f16_9.png|thumb|600px|center|riduzione partizione ''/'']]
 [[File:Install_f16_10.png|thumb|600px|center|selezione spazio libero ricavato]]
 [[File:Install_f16_11.png|thumb|600px|center|creazione partizione ''/home'' da spazio libero]]<br />
 
-Sarà un volume logico all'interno del volume vg_mailga, punto di montaggio /home, file system abbiamo detto brtfs e nome del volume lv_home (potete dare quel che volete, io uso sempre questo per coerenza con lv_root). Dimensioni pari allo spazio che abbiamo tolto a lv_root.
-Fine della nostra partizionamento un po' automatico ed un po' manuale.
+Il punto di montaggio della ''/home'', a cui è stato assegnato il nome ''"lv_home"'' (il nome potrebbe essere qualsiasi si possa immaginare, nell'esempio è stato usato questo per coerenza con lv_root) , quindi, sarà un volume logico all'interno del volume vg_mailga, il cui file system abbiamo detto essere ''brtfs''. Le dimensioni sono pari allo spazio che è stato tolto a lv_root.<br />
 
-Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura.
+Nell'esempio in esame, per impossibilità di elencazione delle possibili alternative, è stato eseguito un partizionamento in cui si è cercato di spiegare sia l'automatismo che la modifica del risultato, comprendendo di fatto come poter fare in entrambi i casi automatico e manuale.<br />
 
-Siamo arrivati quasi alla fine della nostra preparazione, ma c'è una ultima cosa da selezionare, dove installare il bootloader (grub2), la selezione presenta già sul MBR del disco dev/sda, ma premendo cambia dispositivo è possibile modificare le opzioni come anzichè installarlo sul MBR (/dev/sda) nel primo settore della partizione di boot, nel caso in esempio è /dev/sda2, ma nel caso si fosse scelto di installare in un secondo disco fedora (perchè nel disco di avvio c'è win), si può decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione BIOS drive order.
+Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura.<br />
 
-Eventualmente si può decidere di istituire una pw per il bootloader.
+[[File:Install_f16_12.png|thumb|600px|center|autorizzazione alla formattazione del filesystem]]
+
+Al termine della formattazione, rimane una ultima cosa da selezionare; e cioè dove installare il bootloader (grub2).<br />
+
+Automaticamente Anaconda propone l'MBR del disco dev/sda ma, premendo ''"cambia dispositivo"'' è possibile modificare le opzioni e anzichè installarlo sul MBR, si può inserirlo nel primo settore della partizione di boot che, nel caso in esempio è /dev/sda2. Ma se si fosse scelto di installare su un secondo disco Fedora perchè nel disco di avvio, ad esempio, è presente Windows, è possibile decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione ''BIOS drive order''.<br />
+
+[[File:Install_f16_13.png|thumb|250px|left|opzioni installazione grub2]]
+Eventualmente si può decidere di istituire una pw per il bootloader.<br />
 
 Anaconda ora chiederà il tipo di utilizzo del computer e l'eventuale inserimento di repo aggiuntivi (come rpm fusion free e non free http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/ ) e di modificare i pacchetti selezionandone in aggiunta, dopodichè si può lanciare l'installazione del software. Selezionando tra le varie categorie ed gli eventuali pacchetti opzionali.
 Controllo delle dipendenze e parte la installazione sw.
