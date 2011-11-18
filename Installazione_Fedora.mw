@@ -61,7 +61,9 @@ Le scelte possono essere diverse, in base alla tipologia di installazione;
 {{Warning|Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione:
 *'''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); 
 *'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
-[[File:Install_f16_7.png|500px|left|presenza di più dischi fissi]][[File:Install_f16_6.png|500px|right|selezione in presenza di più dischi fissi]]
+
+[[File:Install_f16_7.png|500px|left|presenza di più dischi fissi]][[File:Install_f16_6.png|500px|right|selezione in presenza di più dischi fissi]]<br  />
+
 {{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
 
 La stessa schermata prevede la selezione di defafault per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, specie per quelle automatiche.
