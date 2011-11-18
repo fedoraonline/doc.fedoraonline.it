@@ -72,12 +72,12 @@ Le scelte possono essere diverse, in base alla tipologia di installazione;
 La stessa schermata prevede la selezione di default per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, consigliabile specialmente per quelle automatiche.<br />
 
 In questa guida verrà utilizzata la prima selezione, ''usare tutto lo spazio'' (che imposta in automatico LVM) e, come detto, di rivederle utilizzando un unico disco fisso; chiaramente avendone a disposizione più di uno, si potrà distribuire il filesystem su tutti.
-[[File:Install_f16_8.png|thumb|450px|left|creazione automatica di partizioni con LVM]]
+[[File:Install_f16_8.png|thumb|250px|left|creazione automatica di partizioni con LVM]]
 
 '''Nota bene:''' la diversa nomenclatura e l'esigua capacità dei dischi sono state già spiegate in testa al presente documento.<br />
 
 Da notare la necessaria partizione ''BIOS boot'', pertanto, che occorre ricordarsi nel caso di partizionamento manuale.<br />
-E'possibile modificare le partizioni selezionando il tasto modifica.<br />
+E' possibile, come sempre, modificare le partizioni selezionando il tasto modifica.<br />
 
 Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''btrfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
 
