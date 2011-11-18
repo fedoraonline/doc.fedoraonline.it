@@ -90,17 +90,18 @@ Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che 
 
 Il punto di montaggio della ''/home'', a cui è stato assegnato il nome ''"lv_home"'' (il nome potrebbe essere qualsiasi si possa immaginare, nell'esempio è stato usato questo per coerenza con lv_root) , quindi, sarà un volume logico all'interno del volume vg_mailga, il cui file system abbiamo detto essere ''brtfs''. Le dimensioni sono pari allo spazio che è stato tolto a lv_root.<br />
 
+[[File:Install_f16_12.png|thumb|250px|left|autorizzazione alla formattazione del filesystem]]
+
 Nell'esempio in esame, per impossibilità di elencazione delle possibili alternative, è stato eseguito un partizionamento in cui si è cercato di spiegare sia l'automatismo che la modifica del risultato, comprendendo di fatto come poter fare in entrambi i casi automatico e manuale.<br />
 
 Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura.<br />
 
-[[File:Install_f16_12.png|thumb|600px|center|autorizzazione alla formattazione del filesystem]]
-
 Al termine della formattazione, rimane una ultima cosa da selezionare; e cioè dove installare il bootloader (grub2).<br />
+
+[[File:Install_f16_13.png|thumb|250px|right|opzioni installazione grub2]]
 
 Automaticamente Anaconda propone l'MBR del disco dev/sda ma, premendo ''"cambia dispositivo"'' è possibile modificare le opzioni e anzichè installarlo sul MBR, si può inserirlo nel primo settore della partizione di boot che, nel caso in esempio è /dev/sda2. Ma se si fosse scelto di installare su un secondo disco Fedora perchè nel disco di avvio, ad esempio, è presente Windows, è possibile decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione ''BIOS drive order''.<br />
 
-[[File:Install_f16_13.png|thumb|250px|left|opzioni installazione grub2]]
 Eventualmente si può decidere di istituire una pw per il bootloader.<br />
 
 Anaconda ora chiederà il tipo di utilizzo del computer e l'eventuale inserimento di repo aggiuntivi (come rpm fusion free e non free http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/ ) e di modificare i pacchetti selezionandone in aggiunta, dopodichè si può lanciare l'installazione del software. Selezionando tra le varie categorie ed gli eventuali pacchetti opzionali.
