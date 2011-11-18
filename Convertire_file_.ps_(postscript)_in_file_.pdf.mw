@@ -1,0 +1,41 @@
+Questo piccolo articolo è stato creato dalle pagine man di ''ps2pdf'', visualizzabile col comando:
+
+ $ man ps2pdf 
+
+Il comando ''ps2pdf'' si occupa di convertire dei file ''.ps'' (postscript) in file pdf usando ghostscript. Otre al comando ''ps2pdf'' o ''ps2pdf14'', esistono ''ps2pdf12'' e ''ps2pdf13'' che si differenziano dal primo dal fatto che creano file pdf compatibili rispettivamente con Acrobat 3 (e superiori) e Acrobat 4 (e superiori). E' consigliabile comunque specificare la versione finale, cioè usare ''ps2pdf14'' o il "comando + opzione":
+
+ $  ps2pdf -dCompatibilityLevel=1.x figura.ps figura2.pdf
+
+dove figura.ps è il file che si vuole convertire.
+
+E' importante ricordare che se il filename finale scelto non viene indicato, si otterrà un file con estensione .pdf che ha lo stesso nome.
+
+Da terminale si entra nella directory dove è presente il file .ps , ad esempio la cartella Documents :
+
+ $ cd /home/.../Documents
+
+Ora, per convertire ad esempio il file "figura.ps" in "figura.pdf", il comando sarà:
+
+ $  ps2pdf figura.ps
+
+Se si vuole dare delle specifiche indicazioni, allora
+
+ $  ps2pdf -dPDFSETTINGS=/screen figura.ps figura.pdf
+
+L'output sarà un pdf a bassa risoluzione, adatto per essere visualizzato al pc.
+
+ $  ps2pdf -dPDFSETTINGS=/printer figura.ps figura.pdf
+
+L'output sarà un pdf ottimizzato per la stampa.
+
+ $  ps2pdf -dPDFSETTINGS=/default figura.ps figura.pdf
+
+L'output sarà un pdf per svariati usi, però a discapito delle dimensioni del file finale.<br />
+Se volessimo invece il manuale in pdf del comando rpm di Fedora, il comando da dare sarebbe:
+
+ $ man -t rpm | ps2pdf14 - rpm.pdf
+
+La stessa cosa la si potrebbe fare per il manuale di ''yum'' (yellowdog updater modified), ''chmod'' (change file mode bits), ''ls'' (list directory content),... che tutti dovrebbero leggere attentamente.<br />
+Il file pdf si troverà nella stessa directory dove è presente quello iniziale.
+
+[[Categoria:Ufficio]]
