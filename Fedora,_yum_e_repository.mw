@@ -180,7 +180,7 @@ oppure posizionando la chiave all'interno della cartella etc/pki/rpm-gpg/
 
 e indicando il percorso all'interno del file repo.
 
-==Creazione e utilizzo dei repositories==
+==Creazione e utilizzo dei repository==
 
 {{Scrittura|I seguenti passaggi sono da eseguire come utente '''root'''!}}
 1) Aprire un terminale e con l'editor che si preferisce (gedit, kedit ecc.), digitare quanto segue:
@@ -198,8 +198,7 @@ e indicando il percorso all'interno del file repo.
 3) Salvarlo con il nome livna.repo ed uscire (con nano ctrl+o e ctrl+x).
 
 Scaricando questo pacchetto ed installandolo con il comando rpm -ivh si avranno i repository già configurati e pronti per l'uso, aggiornabile con l'update di yum.
-{{Nota|Nota|Al momento di stesura di questa guida, il repository livna è attivo provvisoriamente (causa rottura dei dischi del server), per cui la chiave gpg risulta irraggiungibile. Per averla si deve copiare il seguente testo con un editor così come è e salvarlo nella cartella /etc/pki/prm-gpg/ con il nome di RPM-GPG-KEY-livna e sostituire la riga sopra riportata “gpgkey=http://rpm.livna.org/RPM-GPG-KEY-livna” con la seguente: gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-livna.<br />
-Non appena il sito verrà ripristinato si potrà riutilizzare il link sopra riportato.}}
+{{Nota|Nota bene:|Al momento di stesura di questa guida, il repository livna è attivo provvisoriamente (causa rottura dei dischi del server), per cui la chiave gpg risulta irraggiungibile. Per averla si deve copiare il seguente testo con un editor così com'è e salvarlo nella cartella <nowiki>/etc/pki/prm-gpg/</nowiki> con il nome di RPM-GPG-KEY-livna e sostituire la riga sopra riportata ''<nowiki>gpgkey=http://rpm.livna.org/RPM-GPG-KEY-livna</nowiki>'' con la seguente: ''<nowiki>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-livna</nowiki>''.}}
 
 Chiave repo livna:
 <pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
