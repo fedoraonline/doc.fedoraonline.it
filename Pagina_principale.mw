@@ -51,7 +51,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 <div style="width:49%;float:left;margin-top:8px;margin-right:2%">
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
-[[Image:Primipassi_icona.png|70px|left]]
+[[Image:Primipassi_icona.png|left]]
 <div style="text-align:center"><big>'''Primi passi su Fedora''' </big><br>
 [[:Categoria:Sistema | Sistema]] | [[:Categoria:Installazione | Installazione]] | [[:Categoria:Repository|Repository]] | [[:Categoria:Ambiente_Desktop|Desktop]]</div>
 <br />
@@ -64,7 +64,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
-[[Image:Software_icona.png|70px|left]]
+[[Image:Software_icona.png|left]]
 <div style="text-align:center"><big>'''Software''' </big><br>
 [[:Categoria:Grafica | Grafica]] | [[:Categoria:Ufficio | Ufficio]] | [[:Categoria:Multimedia | Multimedia]] | [[:Categoria:Giochi | Giochi]] | [[:Categoria:Internet | Internet]]</div>
 <br />
@@ -77,7 +77,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
-[[Image:Altradoc_icona.png|70px|left]]
+[[Image:Altradoc_icona.png|left]]
 <div style="text-align:center"><big>'''Altra documentazione''' </big><br>
 [[:Categoria:Fedoraserver | Fedoraserver]] | [[:Categoria:Fedora Legacy | Fedora Legacy]]</div>
 <br />
@@ -95,7 +95,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 <div style="width:49%; float:left;margin-top:8px">
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
-[[Image:Configurazione_icona.png|70px|left]]
+[[Image:Configurazione_icona.png|left]]
 <div style="text-align:center"><big>'''Configurazione Hardware''' </big><br>
 [[:Categoria:Hardware | Hardware]]</div>
 <br />
@@ -108,7 +108,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
-[[Image:Avanzati_icona.png|70px|left]]
+[[Image:Avanzati_icona.png|left]]
 <div style="text-align:center"><big>'''Per utenti avanzati''' </big><br>
 [[:Categoria:Rete e Server | Rete e Server]] | [[:Categoria:Programmazione e Sviluppo | Prog. e Sviluppo]] | [[:Categoria:Sicurezza | Sicurezza]]</div>
 <br />
@@ -121,7 +121,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 </div></div>
 
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
-[[Image:infinity.jpg|70px|left]]
+[[Image:infinity.jpg|left]]
 <div style="text-align:center"><big>'''Il mondo Fol e il Fedora Project''' </big><br>
 [[:Categoria:FAQ | FAQ]] | [[:Categoria:FedoraOnline | Fedora Online]] | [[:Categoria:Progetto Fedora | Progetto Fedora]]</div>
 <br />
