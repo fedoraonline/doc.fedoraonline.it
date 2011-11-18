@@ -80,7 +80,7 @@ Da notare la necessaria partizione ''BIOS boot'', pertanto, che occorre ricordar
 E'possibile modificare le partizioni selezionando il tasto modifica.<br />
 
 Visto che grub2 interpreta anche il filesystem btrfs sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte), potrebbe essere utilizzato  sia su '''''/boot'''''  che su '''''/''''' che su '''''/home''''' (quest'ultima è da creare riducendo la partizione di ''lv_root'' ricavando quindi lo spazio da riservare a ''lv_home'').<br />
-[[File:Install_f16_10.png|thumb|330px|left|riduzione partizione ''/'']][[File:Install_f16_11.png|thumb|330|center|selezione spazio libero ricavato]][[File:Install_f16_12.png|thumb|330|center|creazione partizione ''/home'' da spazio libero]]
+[[File:Install_f16_9.png|thumb|330px|left|riduzione partizione ''/'']][[File:Install_f16_10.png|thumb|330|center|selezione spazio libero ricavato]][[File:Install_f16_11.png|thumb|330|center|creazione partizione ''/home'' da spazio libero]]
 
 Sarà un volume logico all'interno del volume vg_mailga, punto di montaggio /home, file system abbiamo detto brtfs e nome del volume lv_home (potete dare quel che volete, io uso sempre questo per coerenza con lv_root). Dimensioni pari allo spazio che abbiamo tolto a lv_root.
 Fine della nostra partizionamento un po' automatico ed un po' manuale.
