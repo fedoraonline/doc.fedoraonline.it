@@ -81,9 +81,11 @@ E' possibile, come sempre, modificare le partizioni selezionando il tasto modifi
 
 Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''btrfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
 
-Nel caso qui riportato ''btrfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; quest'ultima è da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br />
+Nel caso qui riportato ''btrfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br />
 
-[[File:Install_f16_9.png|thumb|250px|left|riduzione partizione ''/'']][[File:Install_f16_10.png|thumb|250px|center|selezione spazio libero ricavato]][[File:Install_f16_11.png|thumb|250px|right|creazione partizione ''/home'' da spazio libero]]<br />
+[[File:Install_f16_9.png|thumb|500px|center|riduzione partizione ''/'']]
+[[File:Install_f16_10.png|thumb|500px|center|selezione spazio libero ricavato]]
+[[File:Install_f16_11.png|thumb|500px|center|creazione partizione ''/home'' da spazio libero]]<br />
 
 Sarà un volume logico all'interno del volume vg_mailga, punto di montaggio /home, file system abbiamo detto brtfs e nome del volume lv_home (potete dare quel che volete, io uso sempre questo per coerenza con lv_root). Dimensioni pari allo spazio che abbiamo tolto a lv_root.
 Fine della nostra partizionamento un po' automatico ed un po' manuale.
