@@ -83,7 +83,7 @@ Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', 
 
 Nel caso qui riportato ''btrfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; quest'ultima è da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br />
 
-[[File:Install_f16_9.png|thumb|330px|left|riduzione partizione ''/'']][[File:Install_f16_10.png|thumb|330px|center|selezione spazio libero ricavato]][[File:Install_f16_11.png|thumb|330px|right|creazione partizione ''/home'' da spazio libero]]
+[[File:Install_f16_9.png|thumb|250px|left|riduzione partizione ''/'']][[File:Install_f16_10.png|thumb|250px|center|selezione spazio libero ricavato]][[File:Install_f16_11.png|thumb|250px|right|creazione partizione ''/home'' da spazio libero]]<br />
 
 Sarà un volume logico all'interno del volume vg_mailga, punto di montaggio /home, file system abbiamo detto brtfs e nome del volume lv_home (potete dare quel che volete, io uso sempre questo per coerenza con lv_root). Dimensioni pari allo spazio che abbiamo tolto a lv_root.
 Fine della nostra partizionamento un po' automatico ed un po' manuale.
