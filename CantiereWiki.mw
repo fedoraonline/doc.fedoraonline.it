@@ -43,9 +43,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HS|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=SDL_gfx risoluzione conflitto tra i repo dries e core|autore=GabrieleTrombini|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=ATI Mobility Radeon 9600 M10|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Folio|autore=RobertMayr|stato=DaFare}}
 |}
 
@@ -94,6 +91,9 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=RobertMayr|rilettore=?|data=19/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Runlevel dei servizi|autore=RobertMayr|rilettore=?|data=19/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Webcam TRUST WB-1400T|autore=RobertMayr|rilettore=?|data=19/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=RobertMayr|rilettore=?|data=19/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=SDL_gfx risoluzione conflitto tra i repo dries e core|autore=RobertMayr|rilettore=?|data=19/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=ATI Mobility Radeon 9600 M10|autore=RobertMayr|rilettore=?|data=19/11/2011|stato=DaFare}}
 |}
 
 
