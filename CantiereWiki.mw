@@ -51,7 +51,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=PXE Boot|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Convertire file .ps (postscript) in file .pdf|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Ricevere le email di sistema|autore=GabrieleTrombini|stato=Terminato}}
-{{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Fedora, yum e repository|autore=GabrieleTrombini|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione JDK 1.6Update 1 32 bit e configurazione del plugin|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Runlevel dei servizi|autore=GabrieleTrombini|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Webcam TRUST WB-1400T|autore=GabrieleTrombini|stato=DaFare}}
@@ -102,6 +102,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Convertire file .ps (postscript) in file .pdf|autore=RobertMayr|rilettore=?|data=18/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Ricevere le email di sistema|autore=RobertMayr|rilettore=?|data=18/11/2011|stato=DaFare}}
 {{RiletturaArticolo|fonte=|articolo=Aggiungere utenti confinati con SELinux|autore=RobertMayr|rilettore=?|data=18/11/2011|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Fedora, yum e repository|autore=RobertMayr|rilettore=?|data=18/11/2011|stato=DaFare}}
 |}
 
 
