@@ -103,15 +103,17 @@ Automaticamente Anaconda propone l'MBR del disco dev/sda ma, premendo ''"cambia 
 E' possibile decidere di inserire una password a livello di bootloader, cosa che aumenterebbe la sicurezza.<br />
 
 Veniamo, infine, alla richiesta dell'installer circa il tipo di utilizzo del computer e l'eventuale inserimento di repositori aggiuntivi (come gli [http://rpmfusion.org rpmfusion] free e non free), i link ai quali sono da riportare all'interno della stessa schermata premendo ''Add additonal software repository'' e scrivendo all'interno della richiesta che appare:
-* per gli rpmfusion-free l'indirizzo http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os
-* per gli rpmfusion-nonfree l'indirizzo http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/
+* per gli rpmfusion-free l'indirizzo <nowiki>http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os</nowiki>
+* per gli rpmfusion-nonfree l'indirizzo <nowiki>http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/</nowiki>
 I repository ''Fedora'' ed ''Updates'' sono invece già presenti dando così la possibilità, attivandoli, di avere una istallazione fresca e già aggiornata.<br />
 [[File:Install_f16_14.png|thumb|600px|center|inserimento repositori aggiuntivi]]
 E' possibile, inoltre, attivare la richiesta  di modifica dei pacchetti selezionandone in aggiunta o deselezionandone altri scegliendo sia le categorie che pacchetti opzionali.<br />
 
+[[File:Install_f16_15.png|thumb|250px|left|creazione account utente]]
+
 Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser era già stato impostato nella fase precedente).<br />
-E' importante considerare di spedire il profilo, molto utile per il debug e ricordarsi di usare una password decisamente robusta anche per l'utente. Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root.
-[[File:Install_f16_14.png|thumb|250px|center|creazione account utente]]
+E' importante considerare di spedire il profilo, molto utile per il debug e ricordarsi di usare una password decisamente robusta anche per l'utente. Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root.<br />
+
 That's all folks, enjoy.
 
 
@@ -119,7 +121,7 @@ That's all folks, enjoy.
 
 
 
-Installazione con netinstall
+==Installazione con netinstall==
 
 avvio da dvd con dvd inserito, non c'è il controllo del supporto per l'integrità.
 stessa per il grub, ma poi la configurazione della lingua e della ,tastiera è in formato testuale, in grafica poi c'è la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione (assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti), è possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente. Configurazione ora, anche in questo caso è da deselezionare la casella L'orologio di sistema usa UTC se è presente windows, inserire la password di root, con verifica della robustezza.
