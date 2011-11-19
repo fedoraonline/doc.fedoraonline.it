@@ -35,7 +35,7 @@ A differenza delle versioni precedenti, il file di configurazione di '''X''' in 
     EndSubSection
     EndSection</pre>
 Essendo la TNT2 una scheda datata, non viene supporata che dai driver della serie 7 (siano essi proprietari che presenti nel repo livna), con grande disappunto perchè non si può utilizzare freshrpms che offre una gestione dei moduli del kernel meno "impegnativa" con dkms.<br />
-Tant'è che, per comodità, non si farà uso in questa miniguida dei moduli proprietari dal sito NVidia, bensì quelli presenti su ''livna''.
+Tant'è che, per comodità, non si farà uso in questa miniguida dei moduli proprietari dal sito nvidia, bensì quelli presenti su ''livna''.
 <ol>
 <li> Fare una copia di backup del xorg.conf originale, secondo il solito sistema:
 <pre>cp /etc/X11/xorg.conf /etc/X11/xorg.confBKP</pre></li>
@@ -57,7 +57,7 @@ Available Packages
 kmod-nvidia-legacy.i686                  1.0.7184-3.2.6.19_1.28 livna</pre>
 per cui si installano con:
 <pre># yum install kmod-nvidia-legacy</pre>
-Attendere ovviamente che yum faccia il suo lavoro installando sia i driver che le relative dipendenze.</li>
+Attendiere ovviamente che yum faccia il suo lavoro installando sia i driver che le relative dipendenze.</li>
 <li> Se si dovesse provare adesso ad uscire e rientrare in '''X''', ci si troverebbe con la spiacevolissima sorpresa che non funzioni più nulla, per cui bisogna andare a modificare il file xorg.conf per fare in modo che non succeda.<br />
 Ecco il file xorg.conf modificato:
 <pre>
