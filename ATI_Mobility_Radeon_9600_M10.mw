@@ -1,5 +1,5 @@
 {{Obsoleto}}
-Si vogliono installare i driver per la scheda video in oggetto in modo da avere l'accellerazione 3D. Ovviamente prima bisogna sapere  quale essa sia.<br />
+Si vuole installare i driver per la scheda video in oggetto in modo da avere l'accellerazione 3D. Ovviamente prima bisogna sapere qual'è.<br />
 Il comando per ottenere tale informazione è:
 
  # lspci 
@@ -11,7 +11,7 @@ che restituisce:
 
 ==Configurazione==
 
-Prima di tutto, eseguire:
+Prima di tutto con il comando:
 
  # system-config-display 
 
@@ -34,11 +34,11 @@ Il driver ATI non è attivo, per cui bisogna modificare il file xorg.conf in que
     Driver "radeon"<<<<<------- al posto di radeon metto fglrx
  EndSection 
 
-Riavviare, ma al login eseguendo:
+Riavviare, ma al login il comando;
 
  $ fgl_glxgears
 
-non farà partire il classico cubo rotante con dentro gli ingranaggi che girano. Allora è necessario aggiungere nel file xorg.conf quanto segue:
+non fa partire il classico cubo rotante con dentro gli ingranaggi che girano. Allora è necessario aggiungere nel file xorg.conf quanto segue:
 <pre>
 Section "ServerFlags"
    Option   "AIGLX"  "off"
@@ -56,7 +56,7 @@ Section "Module"
    Load   "dri"
 EndSection</pre>
 
-E riavviare nuovamente. Poi si impartisce in ordine:
+E riavviare nuovamente. Poi si impartiscono i seguenti comandi:
 
  # aticonfig --initial
  # service ati-fglrx restart
