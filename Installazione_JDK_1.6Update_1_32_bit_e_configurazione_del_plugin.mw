@@ -41,6 +41,8 @@ Parola dordine:</pre></li>
 <li> Appena digitato il "yes" per la licenza, parte l'installazione.<br />
 Al termine dell'installazione viene creata la cartella cartella jdk 1.6.0_01 nella directory /opt.</li></ol>
 
+==Configurazione==
+
 Adesso si passa alla configurazione del PATH e del plugin.
 <ol>
 <li> Aprire il file ''/etc/profile''
@@ -55,40 +57,42 @@ Sulla versione di fedora utilizzata, è installato Firefox 2, per cui bisogna sp
 
 e provvedere al link simbolico:
 
-ln -s /opt/jdk1.6.0_01/jre/plugin/i386/ns7/libjavaplugin_oji.so libjavaplugin_oji.so
+ # ln -s /opt/jdk1.6.0_01/jre/plugin/i386/ns7/libjavaplugin_oji.so libjavaplugin_oji.so
 
-Se avevamo firefox aperto, lo chiudiamo e lo riavviamo.
-Digitiamo sulla barra degli indirizzi:
+Eventualmente chiudere e riavviare Firefox.<br />
+Digitare sulla barra degli indirizzi di Firefox:
 
-about:plugins
+ about:plugins
 
-e verifichiamo che ci sia il plugin installato.
-L'ultima cosa da fare è selezionare il java di nostro interesse:
+e verificare che ci sia il plugin installato.
 
-$ /usr/sbin/alternatives --install /usr/bin/java java /opt/jdk1.6.0_01/bin/java 2
+==Selezione Java con alternatives==
 
-Con questo "creiamo" le opzioni che adesso vedremo.
+L'ultima cosa da fare è selezionare il java che si vuole utilizzare:
 
-$ /usr/sbin/alternatives --config java
+ $ /usr/sbin/alternatives --install /usr/bin/java java /opt/jdk1.6.0_01/bin/java 2
 
-e ci deve comparire la possibilità di selezionare il java da usare, come segue:
+Con questo "si creano" le opzioni che sono descritte successivamente:
 
-Ci sono i programmi 2 che restituiscono 'java'.
+ $ /usr/sbin/alternatives --config java
 
+deve comparire la possibilità di selezionare il java da usare, come segue:<br />
+Ci sono i programmi, 2 che restituiscono 'java'.
+<pre>
   Selezione    Comando
 -----------------------------------------------
 *  1           /usr/lib/jvm/jre-1.5.0-gcj/bin/java
- + 2           /opt/jdk1.6.0_01/bin/java
+ + 2           /opt/jdk1.6.0_01/bin/java</pre>
 
-Invio per mantenere lattuale selezione[+], o inserire il numero di selezione:
+Premere <Invio> per mantenere l'attuale selezione[+], o inserire il numero di selezione:
 
-Come vedete mantengo la versione GNU di java, non si infastidiscono. Selezionare 2 con la tastiera numerica e dare invio... Il gioco è fatto.
-Infatti se noi digitiamo:
+Come si può vedere si mantiene la versione GNU di java, non si infastidiscono. Selezionare 2 con la tastiera numerica e dare invio... Il gioco è fatto.<br />
+Infatti digitando:
 
-$ /usr/sbin/alternatives --display java
+ $ /usr/sbin/alternatives --display java
 
 deve risultare:
-
+<pre>
 java - status - manuale.
  il link attualmente punta su /opt/jdk1.6.0_01/bin/java
 /usr/lib/jvm/jre-1.5.0-gcj/bin/java - priorità 1500
@@ -100,17 +104,15 @@ java - status - manuale.
  slave keytool: (null)
  slave rmiregistry: (null)
  slave jre_exports: (null)
- slave jre: (null)
-La migliore versione attuale é /usr/lib/jvm/jre-1.5.0-gcj/bin/java.
+ slave jre: (null)</pre>
+La migliore versione attuale é ''/usr/lib/jvm/jre-1.5.0-gcj/bin/java''.<br />
+Per essere sicuri della versione:
 
-e se vogliamo essere sicuri:
+ $ java -version
+ 
+ java version "1.6.0_01"
+ Java(TM) SE Runtime Environment (build 1.6.0_01-b06)
+ Java HotSpot(TM) Client VM (build 1.6.0_01-b06, mixed mode, sharing)
 
-$ java -version
-
-risulta essere:
-
-java version "1.6.0_01"
-Java(TM) SE Runtime Environment (build 1.6.0_01-b06)
-Java HotSpot(TM) Client VM (build 1.6.0_01-b06, mixed mode, sharing)
-
-Bye.
+[[Categoria:Internet]]
+[[Categoria:Sistema]]
