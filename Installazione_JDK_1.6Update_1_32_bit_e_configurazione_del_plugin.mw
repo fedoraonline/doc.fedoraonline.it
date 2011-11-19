@@ -1,13 +1,13 @@
 {{Obsoleto}}
 ==Introduzione==
 
-Di seguito spiegherò i passaggi per una corretta installazione dell'ambiente di sviluppo java su Fedora Core 7 a 32 bit.
+Di seguito Vi spiego i passaggi per una corretta installazione dell'ambiente di sviluppo java su Fedora Core 7 a 32 bit.
 Partiamo da due considerazioni:
 <ol>
 <li> Secondo quanto consigliato in vari testi in rete, occorre installare le librerie ''compat-libstdc++-33'' e ''compact-libstc++-296''; io le avevo già installate per cui non ho verificato la veridicità della nota. In ogni caso:
 <pre># yum install compat-libstdc++-33 compat-libstdc++-296</pre>
 </li>
-<li> Ora bisogna aggiornare la cache delle librerie dopo la suddetta installazione; io non l'ho fatto perchè, come detto, le avevo già installate:
+<li> Secondo quanto consigliato in vari testi in rete, occorre aggiornare la cache delle librerie dopo la suddetta installazione; io non l'ho fatto perchè, come detto, le avevo già installate:
 <pre>$ /sbin/ldconfig</pre>
 </li></ol>
 
@@ -15,7 +15,7 @@ Partiamo da due considerazioni:
 
 Dopo queste operazioni preventive si può cominciare l'installazione vera e propria.<br />
 Andare sul [http://java.sun.com/javase/downloads/index.jsp sito di download della Sun] e scaricare il JDK6u1 (jdk-6u1-linux-i586.bin) di 59.86 MB, precisamente il file binario autoestraente (non l'rpm.bin)<br />
-Successivamente spostarsi dove è stato scaricato, spostando il file dove più è comodo:<br/>
+Successivamente spostarsi dove è stato scaricato, spostando il file dove più è comodo:
 a) Creare la directory jdk 1.6 all'interno di "Sorgenti":
 
  $ mkdir /home/gabri/Sorgenti/jdk1.6
@@ -33,15 +33,13 @@ Adesso è tutto pronto per l'installazione:
 <li> Diventare root
 <pre>$ su -
 Parola dordine:</pre></li>
-<li> Spostarsi nella directory ''/opt'' (lì mediamente vanno messi i programmi opzionali installati da sorgenti, come infatti recita qualsiasi testo sul filesystem linux):
+<li> Spostarsi nella directory ''/opt'' (lì mediamente vanno i programmi ozionali installati da sorgenti, come infatti recita qualsiasi testo sul filesystem linux):
 <pre># cd /opt</pre></li>
 <li> Lanciare l'installazione:
 <pre># sh /home/gabri/Sorgenti/jdk1.6/jdk-6u1-linux-i586.bin</pre></li>
 <li> Accettare la licenza d'uso</li>
 <li> Appena digitato il "yes" per la licenza, parte l'installazione.<br />
 Al termine dell'installazione viene creata la cartella cartella jdk 1.6.0_01 nella directory /opt.</li></ol>
-
-==Configurazione==
 
 Adesso si passa alla configurazione del PATH e del plugin.
 <ol>
@@ -57,42 +55,40 @@ Sulla versione di fedora utilizzata, è installato Firefox 2, per cui bisogna sp
 
 e provvedere al link simbolico:
 
- # ln -s /opt/jdk1.6.0_01/jre/plugin/i386/ns7/libjavaplugin_oji.so libjavaplugin_oji.so
+ln -s /opt/jdk1.6.0_01/jre/plugin/i386/ns7/libjavaplugin_oji.so libjavaplugin_oji.so
 
-Eventualmente chiudere e riavviare Firefox.<br />
-Digitare sulla barra degli indirizzi di Firefox:
+Se avevamo firefox aperto, lo chiudiamo e lo riavviamo.
+Digitiamo sulla barra degli indirizzi:
 
- about:plugins
+about:plugins
 
-e verificare che ci sia il plugin installato.
+e verifichiamo che ci sia il plugin installato.
+L'ultima cosa da fare è selezionare il java di nostro interesse:
 
-==Selezione Java con alternatives==
+$ /usr/sbin/alternatives --install /usr/bin/java java /opt/jdk1.6.0_01/bin/java 2
 
-L'ultima cosa da fare è selezionare il java che si vuole utilizzare:
+Con questo "creiamo" le opzioni che adesso vedremo.
 
- $ /usr/sbin/alternatives --install /usr/bin/java java /opt/jdk1.6.0_01/bin/java 2
+$ /usr/sbin/alternatives --config java
 
-Con questo "si creano" le opzioni che sono descritte successivamente:
+e ci deve comparire la possibilità di selezionare il java da usare, come segue:
 
- $ /usr/sbin/alternatives --config java
+Ci sono i programmi 2 che restituiscono 'java'.
 
-deve comparire la possibilità di selezionare il java da usare, come segue:<br />
-Ci sono i programmi, 2 che restituiscono 'java'.
-<pre>
   Selezione    Comando
 -----------------------------------------------
 *  1           /usr/lib/jvm/jre-1.5.0-gcj/bin/java
- + 2           /opt/jdk1.6.0_01/bin/java</pre>
+ + 2           /opt/jdk1.6.0_01/bin/java
 
-Premere <Invio> per mantenere l'attuale selezione[+], o inserire il numero di selezione:
+Invio per mantenere lattuale selezione[+], o inserire il numero di selezione:
 
-Come si può vedere si mantiene la versione GNU di java, non si infastidiscono. Selezionare 2 con la tastiera numerica e dare invio... Il gioco è fatto.<br />
-Infatti digitando:
+Come vedete mantengo la versione GNU di java, non si infastidiscono. Selezionare 2 con la tastiera numerica e dare invio... Il gioco è fatto.
+Infatti se noi digitiamo:
 
- $ /usr/sbin/alternatives --display java
+$ /usr/sbin/alternatives --display java
 
 deve risultare:
-<pre>
+
 java - status - manuale.
  il link attualmente punta su /opt/jdk1.6.0_01/bin/java
 /usr/lib/jvm/jre-1.5.0-gcj/bin/java - priorità 1500
@@ -104,15 +100,17 @@ java - status - manuale.
  slave keytool: (null)
  slave rmiregistry: (null)
  slave jre_exports: (null)
- slave jre: (null)</pre>
-La migliore versione attuale é ''/usr/lib/jvm/jre-1.5.0-gcj/bin/java''.<br />
-Per essere sicuri della versione:
+ slave jre: (null)
+La migliore versione attuale é /usr/lib/jvm/jre-1.5.0-gcj/bin/java.
 
- $ java -version
- 
- java version "1.6.0_01"
- Java(TM) SE Runtime Environment (build 1.6.0_01-b06)
- Java HotSpot(TM) Client VM (build 1.6.0_01-b06, mixed mode, sharing)
+e se vogliamo essere sicuri:
 
-[[Categoria:Internet]]
-[[Categoria:Sistema]]
+$ java -version
+
+risulta essere:
+
+java version "1.6.0_01"
+Java(TM) SE Runtime Environment (build 1.6.0_01-b06)
+Java HotSpot(TM) Client VM (build 1.6.0_01-b06, mixed mode, sharing)
+
+Bye.
