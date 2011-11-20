@@ -2,7 +2,6 @@
 <div style="width:100%; float:left">
 
 <div style="margin-bottom:8px; border:2px solid #dfdfdf; padding: 1em; background-color:#bacef8; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:80px;">
-[[Image:Nuvola_apps_filetypes.svg|40px|left]]
 
 Il wiki di Fedora Online contiene una serie di guide e tutorial utili per un corretto utilizzo di Fedora.<br />
 Tuttavia ogni wiki è realizzato e può esistere solo se i suoi utenti vi partecipano attivamente, per cui anche il tuo contributo è benvenuto. Segui le [[Contribuisci| '''linee guida per contribuire al nostro wiki''']] per aiutare, tramite la tua esperienza, altri utenti nell'uso quotidiano di Fedora.
@@ -15,7 +14,7 @@ Tuttavia ogni wiki è realizzato e può esistere solo se i suoi utenti vi partec
 
 <div style="margin-bottom:8px; border:2px solid #dfdfdf; padding:1em; background-color:#dfdfdf; -moz-border-radius:15px; -webkit-border-radius:15px;min-height:100px;">
 
-[[Image:Nuvola_apps_edu_languages.svg|40px|left]]
+[[Image:Mappa.png|left]]
 <big>'''Sei nuovo da queste parti?'''</big>
 
 
@@ -28,7 +27,7 @@ Benvenuto, leggi come [[Contribuisci|'''contribuire''']] e scopri le nostre rego
 <div style="width:32.5%; float:left;margin-right:1%">
 
 <div class="metadata plainlinks" style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#d7c5e2; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[File:Crystal Clear app xmag.svg|40px|left]]
+[[File:Lente.png|left]]
 <big>'''Dove trovo le informazioni?'''</big>
 
 Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext=Ricerca}} '''Ricerca'''] per parole-chiave, consultare le varie categorie che vedi in prima pagina oppure utilizzare l'indice delle pagine
@@ -40,7 +39,7 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 <div style="width:32.5%; float:left;">
 
 <div style="margin-bottom:8px; border: 2px solid #dfdfdf; padding: 1em; background-color:#f5f4ab; -moz-border-radius:15px;-webkit-border-radius:15px;min-height:100px;">
-[[Image:Nuvola_apps_edu_miscellaneous.svg|40px|left]]
+[[Image:Salvagente.png|left]]
 <big>'''Cosa devo fare per inviare o modificare una guida: ?''' </big>
 
 [[Contribuisci|'''Registrati''']] e scopri la nostra Mailing List. Puoi anche imparare le [[Convenzioni_di_scrittura|'''Convenzioni di scrittura''']].</div>
