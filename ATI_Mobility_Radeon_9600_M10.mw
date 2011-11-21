@@ -1,5 +1,5 @@
 {{Obsoleto}}
-Si vuole installare i driver per la scheda video in oggetto in modo da avere l'accellerazione 3D. Ovviamente prima bisogna sapere qual'è.<br />
+Si vogliono installare i driver per la scheda video in oggetto in modo da avere l'accellerazione 3D. Ovviamente prima bisogna sapere  quale essa sia.<br />
 Il comando per ottenere tale informazione è:
 
  # lspci 
