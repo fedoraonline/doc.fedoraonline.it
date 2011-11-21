@@ -115,10 +115,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Responsabile della modifica
 ! Data
 ! Stato
-{{ModificaArticolo|articolo=Formati di compressione e decompressione|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
-{{ModificaArticolo|articolo=Montare una ISO senza permessi di root|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
-{{ModificaArticolo|articolo=Partizione ext4 criptata su harddisk esterno|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
-{{ModificaArticolo|articolo=Vim Ide per PHP|autore=MarioSantagiuliana|responsabile=MarioSantagiuliana|data=07/11/2011|stato=Terminato}}
+{{ModificaArticolo|articolo=Titolo|autore=NomeAutore|responsabile=NomeResponsabile|data=gg/mm/aaaa|stato=DaFare}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
