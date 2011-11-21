@@ -6,7 +6,7 @@ Per conoscere lo stato di attivazione di un particolare servizio nei vari runlev
 
  # chkconfig --list nome_servizio
 
-Per attivare,disattivare o "resettare" un servizio su vari livelli:
+Per attivare, disattivare o "resettare" un servizio su vari livelli:
 
  # chkconfig --level (3456) nome_servizio on|off|reset
 
