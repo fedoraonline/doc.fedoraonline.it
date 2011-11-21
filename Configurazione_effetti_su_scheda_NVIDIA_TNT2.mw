@@ -57,7 +57,7 @@ Available Packages
 kmod-nvidia-legacy.i686                  1.0.7184-3.2.6.19_1.28 livna</pre>
 per cui si installano con:
 <pre># yum install kmod-nvidia-legacy</pre>
-Attendiere ovviamente che yum faccia il suo lavoro installando sia i driver che le relative dipendenze.</li>
+Attendere ovviamente che yum faccia il suo lavoro installando sia i driver che le relative dipendenze.</li>
 <li> Se si dovesse provare adesso ad uscire e rientrare in '''X''', ci si troverebbe con la spiacevolissima sorpresa che non funzioni più nulla, per cui bisogna andare a modificare il file xorg.conf per fare in modo che non succeda.<br />
 Ecco il file xorg.conf modificato:
 <pre>
