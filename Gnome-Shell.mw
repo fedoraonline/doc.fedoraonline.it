@@ -13,7 +13,7 @@ Per utilizzare Gnome-shell invece si necessita dell'accelerazione grafica, contr
  $ glxinfo | grep direct
  direct rendering: Yes
 
-Se la risposta è un sì, allora il problema non è la scheda grafica, se invece la risposta è ''No'' si legga come installare i driver della propria scheda video in [[:Categoria:Schede_Video| questa categoria]].<br />
+Se la risposta è un sì, allora il problema non è la scheda grafica, se invece la risposta è ''No'' si legga come installare i driver della propria scheda video in [[:Categoria:Schede grafiche| questa categoria]].<br />
 Una volta installato il driver corretto si vedrà che al prossimo avvio del server X partirà gnome-shell.
 
 == Considerazioni ==
