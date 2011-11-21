@@ -1,6 +1,5 @@
-Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: 8 novembre 2011).<br />
-Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f16.html questo riferimento].
-
+{{Nota|Nota introduttiva:|Guida alla configurazione di un sistema desktop su Fedora 16. Traduzione dell'originale di Mauriat Miranda, pubblicato il 7 novembre 2011 (aggiornamento: ''8 novembre 2011'').<br />
+Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f16.html questo riferimento].}}
 Questa è una guida <i>personale</i> alla configurazione di Fedora 16.<br />
 Questa pagina fornisce delle informazioni che qualcuno potrebbe trovare utili. Ricorda che quanto segue ha funzionato per <i>me</i>, e assicurati di avere effettuato copie di backup dei tuoi file critici nel caso in cui tu dovessi provare ad eseguire quanto qui riportato. Questa guida è stata testata dall'autore utilizzando entrambe le versioni a 32bit e a 64bit su un AMD64 Desktop. I sistemi descritti si avviano correttamente anche in dual-boot con Windows 7.
 
@@ -60,7 +59,7 @@ Se NON è stato selezionato '''Configura la rete durante l'installazione da CD/D
 Option 1: EDITARE:
 
  /etc/sysconfig/network-scripts/ifcfg-pXpY
-and change ''ONBOOT=no'' to ''ONBOOT=yes''.
+e cambiare ''ONBOOT=no'' in ''ONBOOT=yes''.
 
 Option 2: In Gnome, [Click-Destro] sull'icona Network in alto a destra sulla toolbar.
 Selezionare ''Modifica connessioni''
@@ -106,7 +105,7 @@ Fedora usa ''yum'' per installare ed aggiornare il proprio software. Quando è c
 Fedora ha due repository abilitati come impostazione predefinita: ''fedora'' (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed ''updates'' (pacchetti di aggiornamento, più recenti di fedora). 
 
 ===YUM Plugins===
-Yum ha disponiile molti plugins. Fedora 12 e successive abilitano di default ''yum-presto'', che durante il processo di update dovrebbe scaricare soltanto le porzioni nuove del pacchetto stesso. Inoltre molti utenti attivano ''fastestmirror'', il plugin che accelera il download cercando collegamenti più veloci.<br />
+Yum ha disponibile molti plugins. Fedora 12 e successive abilitano di default ''yum-presto'', che durante il processo di update dovrebbe scaricare soltanto le porzioni nuove del pacchetto stesso. Inoltre molti utenti attivano ''fastestmirror'', il plugin che accelera il download cercando collegamenti più veloci.<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror
@@ -191,7 +190,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
  [mirandam@charon ~]$ sudo yum install mplayer mplayer-gui gecko-mediaplayer mencoder
 
 * Da notare che mencoder è opzionale ma fornisce molte opzioni di decodifica.
-* '''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
+* '''Binary Codecs:''' Per favore installa i [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
 * MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
 
 ===Xine===
@@ -200,7 +199,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld
 
-'''Binary Codecs:''' Per favore installa I [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che Xine non supporta in maniera nativa.
+'''Binary Codecs:''' Per favore installa i [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che Xine non supporta in maniera nativa.
 '''DVD Playback:''' Per riprodurre correttamente i DVD leggi DVD Playback poche righe più giù.
 
 ===Banshee===
@@ -213,7 +212,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 MPlayer projects mantiene un package complete di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
 {{Nota|Nota|C'è una significativa variazione, in relazione alla architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
 * Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/ http://www.mplayerhq.hu/MPlayer/releases/codecs]
-* Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20071007.tar.bz2 all-20071007.tar.bz2]<br />
+* Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20110131.tar.bz2 all-20110131.tar.bz2]<br />
 * Installare i codecs:
 
  [mirandam@charon Download]$ sudo mkdir -p /usr/lib/codecs
@@ -236,7 +235,8 @@ Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository d
 * Installare il pacchetto:
 
 [mirandam@charon ~]$ sudo yum --enablerepo=atrpms install libdvdcss
-{{Suggerimento|per l'incompatibilità di ATrpms e RPMFusion è necessario tenere questo repository disabilitato. Precedentemente si utilizzava il repo Livna, che però è diventato irraggioungibile}}
+{{Suggerimento|Per l'incompatibilità tra ATrpms e RPMFusion è necessario tenere questo repository disabilitato.<br />
+Precedentemente si utilizzava il repo Livna, che però è diventato irraggiungibile.}}
 
 ==Installare i font TrueType di Microsoft==
 
@@ -261,7 +261,7 @@ Il plugin per Adobe Flash può essere installato dal sito web di Adobe.<br />
  [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
  [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 
-===Installare il Flsh Plugin===
+===Installare il Flash Plugin===
  [mirandam@charon Download]$ sudo yum install flash-plugin
 Riavviare Firefox o altri browser Mozilla.<Br />
 Ulteriori informazioni sono disponibili sul [https://fedoraproject.org/wiki/Flash Fedora Wiki].
@@ -316,7 +316,7 @@ Potrebbe essere necessario riavviare Firefox.<br />
  (or for 64-bit)
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
 
-''Per fare l'update:'' se fai l'update del pacchetto JRE, scarica sempplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte.
+''Per fare l'update:'' se fai l'update del pacchetto JRE, scarica semplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte.
 
 Ulteriori informazioni: [http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html Install Documentation for Linux]
 
