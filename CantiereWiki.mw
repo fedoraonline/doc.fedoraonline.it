@@ -41,7 +41,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Autore
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Folio|autore=RobertMayr|stato=DaFare}}
 |}
 
@@ -86,6 +85,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=|articolo=Configurazione effetti su scheda NVIDIA TNT2|autore=RobertMayr|rilettore=SimoneZaminga|data=21/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=SDL_gfx risoluzione conflitto tra i repo dries e core|autore=RobertMayr|rilettore=SimoneZaminga|data=21/11/2011|stato=Terminato}}
 {{RiletturaArticolo|fonte=|articolo=ATI Mobility Radeon 9600 M10|autore=RobertMayr|rilettore=SimoneZaminga|data=21/11/2011|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=Internet Key Onda MT503HSA|autore=GabrieleTrombini|rilettore=?|data=21/11/2011|stato=DaFare}}
 |}
 
 
