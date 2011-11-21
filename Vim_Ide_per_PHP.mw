@@ -7,8 +7,6 @@ Nella presente guida verranno presentati i passi per poter tramutare l'editor di
 L'articolo si rivolge principalmente ad un utente che utilizza come sistema operativo Fedora. Ciò non significa che i passi proposti non possano essere seguiti su di un altra distribuzione Linux o simil Unix, bisognerà solo fare attenzione ad alcune piccole differenze.<br />
 La guida è perfettamente funzionante sulla serie 7 di Vim installato su fedora 12 a 64 bit.<br />
 
-__TOC__
-
 == Installare Vim ==
 
 Per incominciare bisogna installare Vim, aprendo un terminale basta digitare in Fedora:
