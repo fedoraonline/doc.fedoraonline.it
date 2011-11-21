@@ -17,7 +17,7 @@ Prima di addentrarci in alcuni aspetti fondamentali del tuo nuovo sistema operat
 Spesso quando si parla di Linux si intende un sistema operativo completo, come nel nostro caso Fedora. Questo, però, non è del tutto esatto, perchè con Linux si intende solamente il kernel (cuore) del sistema, ovvero la parte che si occupa della gestione del processore, della memoria e delle componenti hardware. Per comunicare con il sistema invece si ha bisogno di un'interfaccia utente, che può essere testuale (una shell) oppure grafica (la cosiddetta GUI – Graphic User Interface).
 
 === GNU/Linux ===
-Tutte le distribuzioni che troviamo in circolazione e che permettono un avvicinamento meno difficoltoso all'ambiente Desktop, devono gran parte del loro successo al progetto GNU, che poi ha trovato in GNU/Linux il binomio perfetto. GNU (che significa “GNU is not Unix” - GNU non è Unix) nasce come sistema operativo completamente libero, utilizzando la licenza GPL (General Public Licence) che sancisce e protegge le libertà fondamentali che permettono l'uso e lo sviluppo collettivo e naturale del software.<br />
+Tutte le distribuzioni che si trovano in circolazione e che permettono un avvicinamento meno difficoltoso all'ambiente Desktop, devono gran parte del loro successo al progetto GNU, che poi ha trovato in GNU/Linux il binomio perfetto. GNU (che significa “GNU is not Unix” - GNU non è Unix) nasce come sistema operativo completamente libero, utilizzando la licenza GPL (General Public Licence) che sancisce e protegge le libertà fondamentali che permettono l'uso e lo sviluppo collettivo e naturale del software.<br />
 Vengono creati programmi per ogni necessità informatica, ma per diventare un sistema operativo vero e proprio mancava ancora una parte importante, un kernel che potesse gestire la parte “hardware”. Quando nel 1991 Linus Torvalds scrisse il primo kernel e lo rilasciò liberamente era arrivato il momento della nascita di un nuovo sistema operativo, che venne chiamato GNU/Linux; finalmente si era aperta la strada per entrare nel mercato Desktop.
 
 === Il software libero ===
@@ -35,36 +35,36 @@ Il progetto Fedora cerca di seguire 2 principi fondamentali:
 
 Il ciclo di vita di una release (versione) di Fedora è di 6 mesi, il che significa che ci sono due rilasci stabili ogni anno e che di conseguenza Fedora è una delle distribuzioni Linux più all'avanguardia per quanto riguarda il software a bordo. Allo stesso modo, quindi sempre per un anno, una versione ''n'' viene supportata e mantenuta dalla comunità. Dopodichè il mantenimento si sposta alla release ''n+1''.
 
-Fedora fuziona su tutti i tipi di hardware e può essere utilizzata nei più svariati modi, sia esso Desktop, Netbook, Laptop o un Server.<br />
+Fedora funziona su tutti i tipi di hardware e può essere utilizzata nei più svariati modi, sia esso Desktop, Netbook, Laptop o un Server.<br />
 Infine c'è da sottolineare che Fedora come desktop predefinito utilizza GNOME. (vedi capitolo successivo)
 
 == Il Desktop di default: GNOME ==
 
 {{nota|Installazione|Per una guida di installazione passo passo scegli una delle guide di installazione che trovi nella categoria apposita.}}
 
-L'installazione è stata terminata con successo e al primo login ti trovi davanti una scrivania nuova: GNOME ('''G'''NU '''N'''etwork '''O'''bject '''M'''odel '''E'''nvironment). Un Desktop Environment sconosciuto, che già dal primo impatto è molto diverso rispetto alle interfacce grafiche alle quali probabilmente sei abituato.
+L'installazione è stata terminata con successo e al primo login ci si trova davanti una scrivania nuova: GNOME ('''G'''NU '''N'''etwork '''O'''bject '''M'''odel '''E'''nvironment). Un Desktop Environment sconosciuto, che già dal primo impatto è molto diverso rispetto alle interfacce grafiche alle quali probabilmente si era abituato.
 [[Image:gnome_base.jpg|center|thumb|400px|Gnome dopo la prima installazione si presenta così.<br>
-Se così non fosse verifica il corretto funzionamento dei driver grafici, trovi un suggerimento più avanti]]
+Se così non fosse, verificare il corretto funzionamento dei driver grafici, c'è un suggerimento più avanti]]
 
-{{nota|Desktop Environment|Verrà trattato solamente il Desktop di default, ma è importante sapere che si possono usare molti altri DE: KDE, Xfce, Lxde, Fluxbox e molti altri.}}
+{{nota|Desktop Environment|Verrà trattato solamente il Desktop di default, ma è importante sapere che si possono usare molti altri DE: KDE, Xfce, Lxde, Fluxbox ecc.}}
 [[Image:gnome_app.jpg|left|thumb|400px|Le applicazioni presenti possono essere visualizzati anche per categoria]]
-Si nota fin da subito che è un Desktop pulito, privo di icone e menu. Quello che vedi si chiama Gnome-Shell, una scrivania interattiva, e portando il mouse in alto a sinistra noterai subito perchè.<br />
-Toccare l'angolo superiore sinistro equivale al click su "Attività"; le finestre aperte verranno minimizzate e sul Desktop compariranno al centro. A sinistra avrai un menu di avvio veloce, altamente configurabile, a destra ci saranno le aree di lavoro. Cliccando in alto su "Applicazioni potrai vedere e scegliere le applicazioni installate sul tuo sistema, come nell'immagine a sinistra.<br />
-Riportando il mouse nell'angolo superiore sinistro potrai tornare alle finestre aperte o, se non ne avessi, alla schermata iniziale.<br />
+Si nota fin da subito che è un Desktop pulito, privo di icone e menu. Quello che si vede si chiama '''Gnome-Shell''', una scrivania interattiva, e portando il mouse in alto a sinistra si capirà subito perchè.<br />
+Toccare l'angolo superiore sinistro equivale al click su "Attività"; le finestre aperte verranno minimizzate e sul Desktop compariranno al centro. A sinistra si avrà un menu di avvio veloce, altamente configurabile, a destra ci saranno le aree di lavoro. Cliccando in alto su "Applicazioni si potranno vedere e scegliere le applicazioni installate sul proprio sistema, come nell'immagine a sinistra.<br />
+Riportando il mouse nell'angolo superiore sinistro si potrà tornare alle finestre aperte o, se non ci fossero, alla schermata iniziale.<br />
 Come per il cosiddetto "hot corner" in alto a sinistra, esiste un altro "angolo magnetico" in basso a destra. Portando il mouse in quella posizione apparirà una barra inferiore di sfondo nero, sulla quale potrai leggere le applicazioni in background, i messaggi di sistema oppure le funzionalità chat.
 [[Image:gnome_utente.jpg|right|thumb|250px|Il menu utente sembra non avere il pulsante per spegnere la macchina]]
-Tornando sul pannello superiore noterai delle icone a destra, tra cui il volume, la rete e la gestione della batteria. Segue il tuo nome utente, che con un click apre il menu indicato a destra.<br />
-A prima vista sembra non esserci il pulsante per spegnere la macchina, ma premendo il tasto <ALT> noterai che la voce "Sospendi" cambia in "Spegni". In alternativa esiste un'estensione che fa apparire in modo permanente e senza premere il tasto ALT le voci "Iberna" e "Spegni".<br />
+Tornando sul pannello superiore si noteranno delle icone a destra, tra cui il volume, la rete e la gestione della batteria. Seguendo il proprio nome utente, con un click si apre il menu indicato a destra.<br />
+A prima vista sembra non esserci il pulsante per spegnere la macchina, ma premendo il tasto <ALT> si vedrà che la voce "Sospendi" cambia in "Spegni". In alternativa esiste un'estensione che fa apparire in modo permanente e senza premere il tasto ALT le voci "Iberna" e "Spegni".<br />
 Alcune particolarità nell'utilizzo di Gnome-Shell:
 * '''Tasto "Win":''' Equivale al hot corner in alto a sinistra dello schermo
 * '''ALT+F2:''' si aprirà una linea di comando, inserendo "r" e premendo <Invio> per esempio si riavvia Gnome-Shell
 * '''Ctrl+Alt+Freccia su/giù:''' si passa da un Desktop virtuale (area) all'altro
 [[Image:gnome_sistema.jpg|left|thumb|250px|Molte cose si possono configurare direttamente da qui]]
-All'interno del menu utente troverai un'altra voce importante, le Impostazioni di Sistema, dove potrai impostare lo schermo, la rete, il mouse, tastiera, la stampante e molto altro.
-Queste sono, a grandi linee, le cose basilari del Desktop di default. Naturalmente c'è molto altro da sapere su Gnome, dalle personalizzazioni alle estensioni disponibili, ma è possibile anche installare ulteriori pacchetti di amministrazione. Piano piano imparerai a modificare l'aspetto di Gnome lavorando semplicemente sui file CSS e a tal proposito puoi trovare un supporto nella [[Gnome-Shell e le sue estensioni| guida avanzata sulla configurazione di Gnome]].
+All'interno del menu utente esiste un'altra voce importante, le ''Impostazioni di Sistema'', dove si possono impostare lo schermo, la rete, il mouse, tastiera, la stampante e molto altro.
+Queste sono, a grandi linee, le cose basilari del Desktop di default. Naturalmente c'è molto altro da sapere su Gnome, dalle personalizzazioni alle estensioni disponibili, ma è possibile anche installare ulteriori pacchetti di amministrazione. Piano piano si imparerà a modificare l'aspetto di Gnome lavorando semplicemente sui file CSS e a tal proposito si può trovare un supporto nella [[Gnome-Shell e le sue estensioni| guida avanzata sulla configurazione di Gnome]].
 
-Per adesso cerca di esplorare il più possibile il tuo nuovo Desktop, ricordandoti che finchè sei loggato come utente normale non potrai arrecare danni al sistema. Quando invece ti viene chiesta la password di root (=amministratore) devi prestare molta attenzione, perchè ogni cambiamento fatto da amministratore è potenzialmente pericoloso per la stabilità del sistema stesso.<br />
-Noterai come alcuni aspetti, come Nautilus, il file manager, ti saranno familiari, altri invece necessitano di un po' più di tempo per essere assimilati. Il file system, per esempio, è sicuramente molto diverso da tutti gli altri sistemi operativi, ma non per questo nasconde ostacoli insormontabili. A tal proposito ti potrai leggere l'[[Il File System| apposita guida]].
+Per adesso è bene esplorare il più possibile il nuovo Desktop, ricordando che finchè si è loggati come utente normale non si potranno arrecare danni al sistema. Quando invece viene chiesta la password di root (=amministratore) biogna prestare molta attenzione, perchè ogni cambiamento fatto da amministratore è potenzialmente pericoloso per la stabilità del sistema stesso.<br />
+Alcuni aspetti, come Nautilus, il file manager, saranno familiari, altri invece necessiteranno di un po' più di tempo per essere assimilati. Il file system, per esempio, è sicuramente molto diverso da tutti gli altri sistemi operativi, ma non per questo nasconde ostacoli insormontabili.
 
 == Strumenti di sistema: primi dubbi ==
 
@@ -72,60 +72,61 @@ Noterai come alcuni aspetti, come Nautilus, il file manager, ti saranno familiar
 Fedora, come tutte le distribuzioni Linux, è un vero sistema multi-utente, nel senso che è in grado di gestire un'infinità di utenti, attribuendo al solo amministratore (root) i permessi di installazione di applicativi, di modifiche su file di configurazione ecc.<br />
 Detto questo la prima differenza rispetto alle macchine con sistemi operativi Microsoft sta proprio in questa distinzione netta tra utente e amministratore, che di fatto su Windows spesso sono la stessa persona. Non è solo una necessità di un sistema multi-utente, ma chiude le porte a moltissimi malware e cavalli di troia, che non avendo i permessi di root non riescono ad arrecare danni significativi al sistema.
 
-{{Nota|Password di root!|E' la chiave per il tuo sistema, '''conservala bene''' e non darla mai, per nessun motivo, a terzi. Inoltre non dovresti mai attuare meccanismi che aggirano l'inserimento della password di root!}}
+{{Nota|Password di root!|E' la chiave per il tuo sistema, '''conservala bene''' e non darla mai, per nessun motivo, a terzi. Inoltre non bisognerebbe '''mai''' attuare meccanismi che aggirano l'inserimento della password di root!}}
 
 Fedora è un sistema rpm-based, il che vuol dire che per l'installazione di pacchetti software si avvale di formati RPM ('''R'''ed Hat '''P'''ackage '''M'''anager).
 [[Image:PackageKit.jpg|right|thumb|300px|PackageKit è il gestore grafico di pacchetti RPM di Fedora]]
-Per gestire il processo di installazione/disinstallazione Fedora si avvale di PackageKit, uno strumento grafico che potrai trovare in ''Applicazioni > Srumenti di Sistema > Aggiungi/rimuovi software''.<br />
+Per gestire il processo di installazione/disinstallazione Fedora si avvale di PackageKit, uno strumento grafico che si trova in ''Applicazioni > Srumenti di Sistema > Aggiungi/rimuovi software''.<br />
 L'utilizzo di PackageKit è molto intuitivo:
 * A sinistra si può cercare il pacchetto o farsi elencare un gruppo di applicazioni
 * Sulla destra verranno visualizzati i songoli pacchetti del gruppo e il loro stato (installato o no)
 
-Se fai click su un pacchetto, in basso ti verrà visualizzata una breve descrizione e la sua dimensione. Potrai selezionare o deselezionare il pacchetto mettendo o togliendo il classico "baffo" verde. Questa operazione può essere ripetuta per tutte le applicazione che desideri installare o disinstallare.<br />
-Terminata questa operazione devi solo confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero i pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa.<br />
-Alla fine di tutti i controlli ti verrà chiesta la ''password di root'' e l'operazione comincerà, elencandoti le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica vedrai presto che installare applicazioni nuove con PackageKit è davvero molto facile.<br />
-Le applicazioni installate saranno disponibili immediatamente nel menu ''Applicazioni'' che abbiamo visto durante il piccolo excursus su Gnome. Verranno automaticamente inserite nella categoria di competenza, da dove li potrai lanciare con un semplice click.
+Se si fa click su un pacchetto, in basso verrà visualizzata una breve descrizione e la sua dimensione. si potrà selezionare o deselezionare il pacchetto mettendo o togliendo il classico "baffo" verde. Questa operazione può essere ripetuta per tutte le applicazione che si desidera installare o disinstallare qualcosa.<br />
+Terminata questa operazione bisogna soltanto confermare tutto con "Applica". Il sistema a questo punto verifica tutte le dipendenze, ovvero i pacchetti aggiuntivi che sono necessari per il corretto funzionamento dell'applicazione stessa.<br />
+Alla fine di tutti i controlli verrà chiesta la ''password di root'' e l'operazione comincerà, elencando le applicazioni e le dipendenze che sono state installate o disinstallate. Con un po' di pratica si vedrà presto che installare applicazioni nuove con PackageKit è davvero molto facile.<br />
+Le applicazioni installate saranno disponibili immediatamente nel menu ''Applicazioni'' visto durante il piccolo excursus su Gnome. Verranno automaticamente inserite nella categoria di competenza, da dove si possono lanciare con un semplice click.
 
 === I Repository, ovvero, la banca dati ===
-Tutti i pacchetti RPM disponibili per Fedora sono raccolti in una specie di grande banca dati, i cosiddetti repository. Sono questi server che Fedora tramite la GUI PackageKit interroga per reperire informazioni su un determinato pacchetto o gruppo di applicazioni, e allo stesso modo verifica se sono disponibili degli aggiornamenti. Infatti, forse lo hai già notato, il sistema è preimpostato per verificare giornalmente la disponibilità di aggiornamenti e di comunicarteli tramite la barra inferiore. Se lo vorrai potrai installarli con un semplice click. Questa impostazione potrà essere modificata da ''Sistema > Preferenze > Aggiornamento Software''.<br />
+Tutti i pacchetti RPM disponibili per Fedora sono raccolti in una specie di grande banca dati, i cosiddetti [[:Categoria:Repository|repository]]. Sono questi server che Fedora, tramite la GUI PackageKit, interroga per reperire informazioni su un determinato pacchetto o gruppo di applicazioni, e allo stesso modo verifica se sono disponibili degli aggiornamenti. Infatti, forse lo si avrà già notato, il sistema è preimpostato per verificare giornalmente la disponibilità di aggiornamenti e di comunicarli tramite la barra inferiore. Se si vorrà si potranno installare con un semplice click. Questa impostazione può essere modificata da ''Sistema > Preferenze > Aggiornamento Software''.<br />
 Fedora ha già a bordo i repository "ufficiali", ma ne esistono molti altri. Il motivo per cui Fedora fornisce solo i suoi repository è facile intuirlo:<br />
-Fedora, come già detto prima, utilizza solamente software libero e privo di licenza proprietaria. Motivo per cui molti plugin o applicativi non sono presenti. Ecco il motivo per cui vale la pena installare almeno altri due repository.
+Fedora, come già detto prima, utilizza solamente software libero e privo di licenza proprietaria. Motivo per cui molti plugin o applicativi non sono presenti. Ecco perchè cui vale la pena installare almeno altri due repository.
 
 ==== RPMFusion ====
 Questi repository, che si distinguono in ''free'' e ''non-free'', rappresentano l'unione di alcuni repository già molto forniti precedentemente, motivo per cui dopo questa fusione contengono un'infinità di software.<br />
-Per installarli si può seguire la pagina di [http://rpmfusion.org/Configuration | RPMFusion], ma potete anche consultare la nostra guida dedicata all'installazione dei repository [[RPMFusion|RPMFusion]].
+Per installarli si può seguire la pagina di [http://rpmfusion.org/Configuration | RPMFusion], ma si può anche consultare la nostra guida dedicata all'installazione dei repository [[RPMFusion|RPMFusion]].
 
 === Articoli consigliati ===
-Non è possibile inserire tutte le informazioni in un'unica guida, per cui ti consigliamo fortemente, oltre alle guide già citate, di leggere anche gli articoli sulle seguenti tematiche:
+Non è possibile inserire tutte le informazioni in un'unica guida, per cui si consiglia fortemente, oltre alle guide già citate, di leggere anche gli articoli sulle seguenti tematiche:
 * [[Installazione Driver ATI| Driver video per la scheda grafica ATI]]
 * [[Installazione Driver NVidia| Driver video per la scheda grafica NVidia]]
 * [[Flash plugin| Installazione del plugin Flash]]
 * [[Multimedia Player e codecs| Installazione dei codec audio e video (mp3, avi, wma, DivX,...)]]
 * e molto altro...
 
-{{Warning|Prima di seguire le guide appena citate assicurati di aver installato il repository [[RPMFusion|RPMFusion]] descritto sopra!}}
+{{Warning|Prima di seguire le guide appena citate assicurarsi di aver installato il repository [[RPMFusion|RPMFusion]] descritto sopra!}}
 
-{{Nota|A proposito di schede grafiche|Gnome-shell per un corretto funzionamento necessita dell'accelerazione grafica. Questo vuol dire che molto probabilmente, se hai delle schede Intel o NVidia, il sistema riconoscerà in autonomia la tua scheda e caricherà il driver libero necessario.<br>Altrimenti, ma sicuramente per le schede ATI, dovrai installare il driver corretto per la tua scheda grafica.<br />
-Per le indicazioni sull'installazione dei driver per la tua specifica scheda grafica consulta la guida adatta in [[:Categoria:Schede grafiche| questa categoria]]}}
+{{Nota|A proposito di schede grafiche|Gnome-shell per un corretto funzionamento necessita dell'accelerazione grafica. Questo vuol dire che molto probabilmente, se si hanno delle schede Intel o NVidia, il sistema riconoscerà in autonomia la propria scheda e caricherà il driver libero necessario.<br />
+Altrimenti, ma sicuramente per le schede ATI, si dovranno installare i driver corretti per la propria scheda grafica.<br />
+Per le indicazioni sull'installazione dei driver per la specifica scheda grafica consultare la guida adatta in [[:Categoria:Schede grafiche| questa categoria]]}}
 
 == Il Terminale ==
 
-Avrai notato che fino ad ora, volutamente, non abbiamo ancora toccato il cosiddetto terminale, un emulatore di shell presente in ''Applicazioni > Strumenti di Sistema > Terminale''.<br />
-E' importante sapere che con il terminale è possibile eseguire qualsiasi operazione, ma per semplicità d'uso all'inizio spesso si privilegia l'ambiente grafico per muoversi e per controllare il sistema. Nelle pagine del wiki, però, troverai spesso dei richiami a output o input in un terminale, motivo per cui è utile confrontarsi fin dall'inizio con questo strumento.<br />
+Fino ad ora, volutamente, non si è ancora toccato il cosiddetto ''terminale'', un emulatore di shell presente in ''Applicazioni > Strumenti di Sistema > Terminale''.<br />
+E' importante sapere che con il terminale è possibile eseguire qualsiasi tipo di operazione, ma per semplicità d'uso all'inizio spesso si privilegia l'ambiente grafico per muoversi e per controllare il sistema. Nelle pagine del wiki, però, si troveranno spesso dei richiami a output o input in un terminale, motivo per cui è utile confrontarsi fin dall'inizio con questo strumento.<br />
 Una volta aperto, il terminale si presenta così:
 
  [fol@localhost ~]$
 
-Il terminale indica il nome utente (fol), il nome della macchina (localhost), la posizione in cui ti trovi (~ equivale alla tua home directory) e infine ti dice come sei loggato ($ indica che sei loggato come utente).<br />
-Vediamo qualche esempio:
+Il terminale indica il nome utente (fol), il nome della macchina (localhost), la posizione in cui ci si trova ('''~''' equivale alla propria home directory) e infine dice come si è loggati ('''$''' indica che si è loggati come utente normale).<br />
+Qualche esempio:
 
  # yum install firefox
 
 oppure
 
-$ lspci
+ $ lspci
 
-* il simbolo '''#''' indica che l'operazione deve essere eseguita come '''root''' (amministratore).
+* il simbolo '''#''' indica che l'operazione deve essere eseguita come '''root''' (amministratore);
 * il simbolo '''$''' indica che l'operazione deve essere eseguita come '''utente'''.
 
 Per passare, subito dopo l'apertura del terminale, da utente normale a root, basterà digitare:
@@ -134,7 +135,7 @@ Per passare, subito dopo l'apertura del terminale, da utente normale a root, bas
  password di root
  [root@localhost ~]#
 
-{{Warning|Da questo momento hai pieno potere sulla macchina, stai molto attento alle operazioni che fai!<br />
+{{Warning|Da questo momento si ha pieno potere sulla macchina, stare molto attento alle operazioni che si fanno!<br />
 Una volta finita l'operazione per la quale erano necessari i permessi di root, è buona norma riprendere l'utenza normale. Per farlo ti basterà digitare:
 
  [root@localhost ~]# exit
@@ -142,7 +143,7 @@ Una volta finita l'operazione per la quale erano necessari i permessi di root, �
 
 == Conclusioni ==
 
-Hai appena visto una piccolissima parte di quello che è Fedora, ma ora sei in grado di affrontare le guide presenti sul wiki per approfondire gli argomenti che più ti interessano. Continua a leggere il wiki e in caso di dubbi o problemi chiedi aiuto sul Forum.<br />
+Hai appena visto una piccolissima parte di quello che è Fedora, ma ora sei in grado di affrontare le guide presenti sul wiki per approfondire gli argomenti che più ti interessano. Continua a leggere il wiki e in caso di dubbi o problemi chiedi aiuto sul [http://forum.fedoraonline.it/ Forum].<br />
 Non tutto filerà sempre liscio all'inizio, ma non demordere, perchè l'esperienza che acquisisci, anche nei momenti di difficoltà, è enorme.<br />
 In bocca al lupo e '''Benvenuto su Fedora Online!''' 
 
