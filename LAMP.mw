@@ -2,11 +2,11 @@
 
 LAMP e' un acronimo che indica la piu' famosa piattaforma per lo sviluppo di applicazioni web e che prende il nome dalle iniziali dei componenti software con cui e' realizzata, ovvero: ('''L'''inux, '''A'''pache, '''M'''ySQL, '''P'''HP).
 
-{{nota|Avviso|Tutti i comandi di questa guida devono essere dati con permessi di root}} 
+{{nota|Avviso|Tutti i comandi di questa guida devono essere dati con permessi di root 
 
  $ su -
  password di root
- #
+ #}}
 
 === Installazione del server Mysql ===
  # yum install myql mysql-server
@@ -15,18 +15,17 @@ LAMP e' un acronimo che indica la piu' famosa piattaforma per lo sviluppo di app
  # yum install httpd php php-common
 
 === Supporti ===
-Per far sì che il server Apache funzioni anche per i supporti più comuni, installa i seguenti pacchetti:
+Per far sì che il server Apache funzioni anche per i supporti più comuni, installare i seguenti pacchetti:
 
  # yum install php-pear php-pdo php-mysql php-pgsql php-pecl-memcache php-gd php-mbstring php-mcrypt php-xml
 
 === Il web server Apache ===
-A questo punto l'ambiente LAMP e' pronto per l'uso. La cartella /var/www/html e' la location di default, detta anche "root document path", per i tuoi file web.
-
-Con un piccolo script in Php puoi facilmente verificare la versione e i supporti installati. A questo scopo crea un file di test:
+A questo punto l'ambiente LAMP e' pronto per l'uso. La cartella ''/var/www/html'' e' la location di default, detta anche "root document path", per i propri file web.<br />
+Con un piccolo script in Php si può facilmente verificare la versione e i supporti installati. A questo scopo si crea un file di test:
 
  # gedit /var/www/html/test.php
 
-all'interno del quale inserisci:
+all'interno del quale si inserisce:
 
  <?php
      phpinfo();
@@ -36,7 +35,7 @@ E' il momento di lanciare il server Apache:
 
  # systemctl start httpd.service
 
-Potrai subito verificare se il server funziona correttamente, inserendo il seguente indirizzo nella barra degli indirizzi del tuo browser:<br>
+Si potrà subito verificare se il server funziona correttamente, inserendo il seguente indirizzo nella barra degli indirizzi del tuo browser:<br />
 http://localhost/test.php
 
 === Mysql ===
@@ -44,7 +43,7 @@ Come per Apache è necessario avviare il server Mysql:
 
   # systemctl start mysqld.service
 
-Per una facile gestione dei tuoi database MySQL puoi utilizzare una semplice interfaccia web, phpmyadmin:
+Per una facile gestione dei database MySQL si può utilizzare una semplice interfaccia web, phpmyadmin:
 
  # yum install phpmyadmin
 
@@ -52,12 +51,12 @@ Per poter utilizzare questo tool è necessario impostare una password per l'ammi
 
  # mysqladmin -u root password TUA_PASSWORD
 
-Al posto di TUA_PASSWORD devi naturalmente inserire una tua parola chiave a scelta.<br>
-Ora puoi utilizzare phpmyadmin, digitando nella barra degli indirizzi del tuo browser l'indirizzo:<br>
+Al posto di TUA_PASSWORD inserire una parola chiave a scelta.<br>
+Ora si può utilizzare phpmyadmin, digitando nella barra degli indirizzi del browser l'indirizzo:<br />
 http://localhost/phpmyadmin
 
-Per accedere dovrai inserire l'utente (=root) e la password che hai scelto un attimo fa.
-Infine, se tutto funziona, puoi fare in modo che i servizi httpd e mysqld vengano avviati in automatico ad ogni avvio della macchina:
+Per accedere si dovrà inserire l'utente (=root) e la password scelta un attimo fa.<br />
+Infine, se tutto funziona, si può fare in modo che i servizi ''httpd'' e ''mysqld'' vengano avviati in automatico ad ogni avvio della macchina:
 
  # chkconfig --add httpd
  # chkconfig httpd on
