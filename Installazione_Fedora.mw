@@ -61,7 +61,7 @@ I dischi selezionati per l'installazione, saranno quelli interessati al contenim
 
 {{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
 
-Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''<br />
+Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''.<br />
 Le scelte possono essere diverse, in base alla tipologia di installazione;
 * Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
 * Sostituire il sistema linux esistenze (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
@@ -138,7 +138,7 @@ Proseguendo con l'installazione occorre prestare particolare attenzione alla par
 *'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
 {{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
 
-Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''<br />
+Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''.<br />
 Le scelte possono essere diverse, in base alla tipologia di installazione;
 * Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
 * Sostituire il sistema linux esistenze (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
