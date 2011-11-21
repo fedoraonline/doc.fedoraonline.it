@@ -33,7 +33,7 @@ Adesso è tutto pronto per l'installazione:
 <li> Diventare root
 <pre>$ su -
 Parola dordine:</pre></li>
-<li> Spostarsi nella directory ''/opt'' (lì mediamente vanno i programmi ozionali installati da sorgenti, come infatti recita qualsiasi testo sul filesystem linux):
+<li> Spostarsi nella directory ''/opt'' (lì mediamente vanno messi i programmi opzionali installati da sorgenti, come infatti recita qualsiasi testo sul filesystem linux):
 <pre># cd /opt</pre></li>
 <li> Lanciare l'installazione:
 <pre># sh /home/gabri/Sorgenti/jdk1.6/jdk-6u1-linux-i586.bin</pre></li>
