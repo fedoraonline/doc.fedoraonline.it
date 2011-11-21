@@ -3,7 +3,7 @@
 
 Questa guida nasce per chi, come me, non è riuscito a configurare il proprio modem ADSL usb Speedtouch 330 su Fedora Core 6.<br />
 Per prima cosa voglio dire che non sono un utente esperto (uso Linux da poco più di una settimana), quindi se ci sono riuscito io, ci possono riuscire tutti.<br />
-Voglio premettere inoltre di non prendere quello che scrivo come verità sacrosanta, primo perché ci possono essere errori o sviste (che sarei grato mi segnalaste), secondo perché è sempre possibile (per svariate cause) le istruzioni che scrivo non vadano bene per il vostro sistema hardware e/o software. In sintesi qui espongo la procedura da me seguita per risolvere il problema di connettermi con questo modem; siccome è parecchio diffuso, altri nuovi utenti possono incappare nello stesso problema e possono provare a risolverlo come ho fatto io.
+Voglio premettere inoltre di non prendere quello che scrivo come verità sacrosanta, primo perché ci possono essere errori o sviste, secondo perché è sempre possibile (per svariate cause) che le istruzioni che scrivo non vadano bene per il vostro sistema hardware e/o software. In sintesi qui espongo la procedura da me seguita per risolvere il problema di connettermi con questo modem; siccome è parecchio diffuso, altri nuovi utenti possono incappare nello stesso problema e possono provare a risolverlo come ho fatto io.
 
 ==Requisiti==
 
@@ -62,7 +62,7 @@ USER='username@isp'
 VPI=8
 VCI=35
 LINUX_PLUGIN=pppoatm.so</pre>
-Di nuovo al posto di ''username'' sostituire il proprio nome utente e al posto di ''isp'' sostituire il proprio ISP. Salvare il file con il nome di '''ifcfg-ppp0'''.<br />
+Di nuovo, al posto di ''username'', sostituire il proprio nome utente e al posto di ''isp'' sostituire il proprio ISP. Salvare il file con il nome di '''ifcfg-ppp0'''.<br />
 Ora da root si digiterà nel terminale:
 
  # cp speedtch-{1,2}.bin /lib/firmware
