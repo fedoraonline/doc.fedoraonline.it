@@ -144,7 +144,7 @@ Riavviando Gnome-Shell (ALT+F2 > r > Invio) si avranno le finestre come indicato
 [[Image:Gnome-barra.jpg|center|thumb|350px|Fallback: L'esempio descritto farebbe apparire le finestre così.]]
 Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x:
 
- # yum localinstall --nogpgcheck [ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.5-1.noarch.rpm copia/incolla l'indirizzo]
+ # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.5-1.noarch.rpm
 [[Image:Gnome_gnome2.jpg|center|thumb|350px|Fallback: Nostalgia di Gnome 2? No problem.]]
 Utile per comprendere Gnome-Shell è sicuramente una letta alla [https://fedoraproject.org/wiki/Features/Gnome3/it documentazione del fedoraproject], che contiene anche vari link, tra cui quello alla documentazione ufficiale.
 
