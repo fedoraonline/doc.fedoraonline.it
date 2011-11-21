@@ -1,6 +1,6 @@
 Questi pochi passaggi descrivono come settare i driver generici ''vesa'' o eventualmente costruire da zero il proprio ''/etc/X11/xorg.conf'', nel caso si avesse difficoltà ad accedere correttamente all'ambiente grafico.
 # Avviare la propria macchina;
-# Alla schermata di Grub interrompereo il conto alla rovescia digitando un tasto qualsiasi;
+# Alla schermata di Grub interrompere il conto alla rovescia digitando un tasto qualsiasi;
 # Usando le frecce direzionali spostarsi sulla riga del kernel e digitare la lettera '''e''';
 # Sempre con le frecce direzionali spostarsi in fondo alla riga del kernel, lasciare uno spazio e digitare il numero '''3''';
 # Dare Invio;
