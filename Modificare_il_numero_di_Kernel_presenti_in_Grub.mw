@@ -1,7 +1,7 @@
 {{Obsoleto}}
 == Introduzione ==
 
-Quando si avvia un computer sul quale Fedora è il sistema operativo prescelto, dopo il boot compare ''GRUB'', nel quale c'è almeno una riga che indica il kernel che sta per essere lanciato (di solito parte in automatico dopo pochi secondi).br />
+Quando si avvia un computer sul quale Fedora è il sistema operativo prescelto, dopo il boot compare ''GRUB'', nel quale c'è almeno una riga che indica il kernel che sta per essere lanciato (di solito parte in automatico dopo pochi secondi).<br />
 In seguito le righe aumenteranno (anche perché GRUB è un semplice file di testo configurabile a piacere dall'utente, ma l'impostazione standard di Fedora prevede soltanto 2 kernel disponibili contemporaneamente.
 
 == Verifica e procedura ==
