@@ -128,7 +128,7 @@ Ovviamente questa guida tratterà una installazione "fresh" del sistema operativ
 
 E' possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente, utilizzando il NetworkManager integrato in Anaconda.<br />
 
-[[File:Net_install_f16_3.png|502px|left|configurazione della rete]]
+[[File:Install_f16_5.png|502px|left|configurazione della rete]]
 
 Come in tutte le istallazioni in dual boot con sistemi Windows, anche in questo caso è necessario deselezionare la casella "L'orologio di sistema usa UTC" per evitare sfasature di orario se dovesse esserci la necessità di un cambio di sistema operativo.<br />
 
