@@ -124,11 +124,11 @@ Procedendo con l'installazione non viene richiesto il controllo dell'integrità 
 
 Ovviamente questa guida tratterà una installazione "fresh" del sistema operativo, perciò è necessario selezionare la prima voce.Fino ad ora le due installazioni (con netinstall e con DVD) possono essere parificate, tuttavia, nel prosieguo, la scelta di lingua e tastiera viene richiesta in formato testualeper poi tornare in modalità grafica per la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione ('''''assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti''''').<br />
 
-[[File:Net_install_f16_1.png|502px|left|richiesta lingua in formato testuale]][[File:Net_install_f16_2.png|502px|right|selezione tipologia di dischi in formato grafico]]
+[[File:Net_install_f16_1.png|thumb|502px|left|richiesta lingua in formato testuale]][[File:Net_install_f16_2.png|thumb|502px|right|selezione tipologia di dischi in formato grafico]]
 
 E' possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente, utilizzando il NetworkManager integrato in Anaconda.<br />
 
-[[File:Install_f16_5.png|502px|left|configurazione della rete]]
+[[File:Install_f16_5.png|thumb|250px|left|configurazione della rete]]
 
 Come in tutte le istallazioni in dual boot con sistemi Windows, anche in questo caso è necessario deselezionare la casella "L'orologio di sistema usa UTC" per evitare sfasature di orario se dovesse esserci la necessità di un cambio di sistema operativo.<br />
 
