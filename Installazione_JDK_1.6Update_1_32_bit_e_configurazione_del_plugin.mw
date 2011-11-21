@@ -7,7 +7,7 @@ Partiamo da due considerazioni:
 <li> Secondo quanto consigliato in vari testi in rete, occorre installare le librerie ''compat-libstdc++-33'' e ''compact-libstc++-296''; io le avevo già installate per cui non ho verificato la veridicità della nota. In ogni caso:
 <pre># yum install compat-libstdc++-33 compat-libstdc++-296</pre>
 </li>
-<li> Ora occorre aggiornare la cache delle librerie dopo la suddetta installazione; io non l'ho fatto perchè, come detto, le avevo già installate:
+<li> Ora bisogna aggiornare la cache delle librerie dopo la suddetta installazione; io non l'ho fatto perchè, come detto, le avevo già installate:
 <pre>$ /sbin/ldconfig</pre>
 </li></ol>
 
