@@ -64,7 +64,7 @@ __TOC__
 * Al menù successivo verrà mostrato un wizard per la creazione della nuova connessione con NM. Cliccare su "Forward" e poi dall'elenco delle nazioni selezionare "Italy" e poi cliccare su "Forward".<br />
 * Al menù successivo verrà richiesto l'operatore che fornisce la connessione. Nel nostro caso selezionare "Tim" poi su "Forward". Alla finestrà successiva lasciare il default e cliccare su "Forward". Al termine cliccare su "Apply" e la connessione verrà aperta da NM in automatico.
 
-==Internet key Onda MT503HSA con NetworkManager==
+==Internet key Onda MT503HSA con wvdial==
 
 * Per prima cosa verificare che la versione di OS sia una Fedora 12 e che il kernel usato sia un 2.6.xxx. 
 
