@@ -114,19 +114,76 @@ E' importante considerare di spedire il profilo, molto utile per il debug e rico
 
 That's all folks, enjoy.
 
-
-----
-
-
-
 ==Installazione con netinstall==
 
-avvio da dvd con dvd inserito, non c'è il controllo del supporto per l'integrità.
-stessa per il grub, ma poi la configurazione della lingua e della ,tastiera è in formato testuale, in grafica poi c'è la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione (assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti), è possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente. Configurazione ora, anche in questo caso è da deselezionare la casella L'orologio di sistema usa UTC se è presente windows, inserire la password di root, con verifica della robustezza.
+{{Warning|Con questa tipologia di installazione '''''è necessario''''' che il proprio personal computer sia connesso alla rete.}}
 
-Attenzione nel caso fossero presenti 2 dischi fissi, talvolta si crea confusione,
-nella sezione a sinistra, occorre inserire i dischi in cui sono presenti dati (ad esempio windows, o partizioni fat o ntfs o altro di interscambio), quello di destra sarà o saranno invece il/i disco/chi che verrà/anno utilizzato/i per l'installazione di fedora e che verrà contrassegnato come disco con il bootloader.
-Attenzione, anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne lo spazio libero per il LVM, non verranno comunque formattati sefile:///home/gabri/Scaricati/Fedora-16-i386-netinst.iso non espressamente richiesto dall'utente. Per cui i propri dati sono comunque preservati.
-E' consigliabile fare un dischetto di ripristino qualora fosse presente la aprtizione di ripristino a scanso di eventuali problemi futuri e di fare comunque un backup dei propri dati importanti. Qui presenta selezionato il repo fedora ed updates e non esiste il repo disco di installazione.
+Anche in questo caso è necessario l'avvio da supporto magnetico.<br />
 
-Il resto tutto uguale solo che scarica dalla rete. Sistema aggiornato.
+Procedendo con l'installazione non viene richiesto il controllo dell'integrità del disco, a differenza della versione DVD, mentre il menù per l'installazione è il medesimo per entrambe e presenta le stesse voci sia nel menù principale che in quello secondario.<br />
+
+Ovviamente questa guida tratterà una installazione "fresh" del sistema operativo, perciò è necessario selezionare la prima voce.Fino ad ora le due installazioni (con netinstall e con DVD) possono essere parificate, tuttavia, nel prosieguo, la scelta di lingua e tastiera viene richiesta in formato testualeper poi tornare in modalità grafica per la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione ('''''assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti''''').<br />
+
+[[File:Net_install_f16_1.png|502px|left|richiesta lingua in formato testuale]][[File:Net_install_f16_2.png|502px|right|selezione tipologia di dischi in formato grafico]]
+
+E' possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente, utilizzando il NetworkManager integrato in Anaconda.<br />
+
+[[File:Net_install_f16_3.png|502px|left|configurazione della rete]]
+
+Come in tutte le istallazioni in dual boot con sistemi Windows, anche in questo caso è necessario deselezionare la casella "L'orologio di sistema usa UTC" per evitare sfasature di orario se dovesse esserci la necessità di un cambio di sistema operativo.<br />
+
+Viene richiesta, quindi, la password di root, per la quale verrà verificata la relativa robustezza.<br />
+
+Proseguendo con l'installazione occorre prestare particolare attenzione alla parte successiva che è quella riguardante il partizionamento del disco.<br />
+
+{{Warning|Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione:
+*'''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); 
+*'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
+{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
+
+Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''<br />
+Le scelte possono essere diverse, in base alla tipologia di installazione;
+* Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
+* Sostituire il sistema linux esistenze (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
+* Ridurre il sistema attuale (potranno essere ridimensionate le partizioni per ricavare nuovo spazio);
+* Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
+* Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
+
+La stessa schermata prevede la selezione di default per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, consigliabile specialmente per quelle automatiche.<br />
+
+In questa guida verrà utilizzata la prima selezione, ''usare tutto lo spazio'' (che imposta in automatico LVM) e, come detto, di rivederle utilizzando un unico disco fisso; chiaramente avendone a disposizione più di uno, si potrà distribuire il filesystem su tutti.
+
+'''Nota bene:''' la diversa nomenclatura e l'esigua capacità dei dischi sono state già spiegate in testa al presente documento.<br />
+
+Da notare la necessaria partizione ''BIOS boot'', che occorre ricordarsi nel caso di partizionamento manuale.<br />
+E' possibile, come sempre, modificare le partizioni selezionando il tasto modifica.<br />
+
+Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''brtfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
+
+Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br /> <br />
+
+[[File:Install_f16_11.png|thumb|600px|center|creazione partizione ''/home'' da spazio libero]]<br />
+
+Il punto di montaggio della ''/home'', a cui è stato assegnato il nome ''"lv_home"'' (il nome potrebbe essere qualsiasi si possa immaginare, nell'esempio è stato usato questo per coerenza con lv_root) , quindi, sarà un volume logico all'interno del volume vg_mailga, il cui file system abbiamo detto essere ''brtfs''. Le dimensioni sono pari allo spazio che è stato tolto a lv_root.<br />
+
+Nell'esempio in esame, per impossibilità di elencazione delle possibili alternative, è stato eseguito un partizionamento in cui si è cercato di spiegare sia l'automatismo che la modifica del risultato, comprendendo di fatto come poter fare nei casi automatico e manuale.<br />
+
+Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura, la richiesta di autorizzazione alla creazione ed alla formattazione del filesystem.<br />
+{{Warning|Dal momento in cui si acconsente a questa operazione, non c'è più possibilità di tornare allo stato originario del nostro disco.}}
+Al termine della formattazione viene chiesto dove installare il bootloader (grub2).<br />
+
+Automaticamente Anaconda propone l'MBR del disco dev/sda ma, premendo ''"cambia dispositivo"'' è possibile modificare le opzioni e anzichè installarlo sul MBR, si può inserirlo nel primo settore della partizione di boot che, nel caso in esempio è /dev/sda2. Ma se si fosse scelto di installare su un secondo disco Fedora perchè nel disco di avvio, ad esempio, è presente Windows, è possibile decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione ''BIOS drive order''.<br />
+
+E' possibile decidere di inserire una password a livello di bootloader, cosa che aumenterebbe la sicurezza.<br />
+
+Veniamo, infine, alla richiesta dell'installer circa il tipo di utilizzo del computer e l'eventuale inserimento di repositori aggiuntivi (come gli [http://rpmfusion.org rpmfusion] free e non free), i link ai quali sono da riportare all'interno della stessa schermata premendo ''Add additonal software repository'' e scrivendo all'interno della richiesta che appare:
+* per gli rpmfusion-free l'indirizzo <nowiki>http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os</nowiki>
+* per gli rpmfusion-nonfree l'indirizzo <nowiki>http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/</nowiki>
+I repository ''Fedora'' ed ''Updates'' sono invece già presenti dando così la possibilità, attivandoli, di avere una istallazione fresca e già aggiornata.<br />
+[[File:Install_f16_14.png|thumb|600px|center|inserimento repositori aggiuntivi]]
+E' possibile, inoltre, attivare la richiesta  di modifica dei pacchetti selezionandone in aggiunta o deselezionandone altri scegliendo sia le categorie che pacchetti opzionali.<br />
+
+Proseguendo, l'installer si connetterà alla rete e preleverà i pacchetti direttamente dai repositori per l'installaizone dei pacchetti più aggiornati in quel momento. '''Nessun pacchetto verrà prelevato dal cd'''<br />
+
+Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser era già stato impostato nella fase precedente).<br />
+E' importante considerare di spedire il profilo, molto utile per il debug e ricordarsi di usare una password decisamente robusta anche per l'utente. Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root.<br />
