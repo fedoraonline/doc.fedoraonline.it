@@ -1,7 +1,7 @@
 {{Obsoleto}}
 ==Introduzione==
 
-Di seguito Vi spiego i passaggi per una corretta installazione dell'ambiente di sviluppo java su Fedora Core 7 a 32 bit.
+Di seguito spiegherò i passaggi per una corretta installazione dell'ambiente di sviluppo java su Fedora Core 7 a 32 bit.
 Partiamo da due considerazioni:
 <ol>
 <li> Secondo quanto consigliato in vari testi in rete, occorre installare le librerie ''compat-libstdc++-33'' e ''compact-libstc++-296''; io le avevo già installate per cui non ho verificato la veridicità della nota. In ogni caso:
