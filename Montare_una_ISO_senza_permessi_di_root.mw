@@ -24,8 +24,7 @@ Altre informazioni sulle opzioni di fuseiso si possono ottenere lanciandolo con 
 
  $ fuseiso -h
 
-
-==Riferimenti e documentazione==
+==Riferimenti==
 * Articolo pubblicato precedentemente su [http://blog.marionline.it/linux/fedora/montare-alcuni-file-immagine-senza-i-privilegi-di-root/ marionline.it].
 * [http://www.thegeekstuff.com/2009/06/how-to-mount-view-iso-file-as-root-and-non-root-user-in-unix/#more-553 How To Mount and View ISO File as Root and Regular User in Linux] (in Inglese).
 
