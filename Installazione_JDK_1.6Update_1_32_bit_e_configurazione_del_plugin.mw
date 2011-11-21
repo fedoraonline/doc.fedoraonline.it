@@ -15,8 +15,8 @@ Partiamo da due considerazioni:
 
 Dopo queste operazioni preventive si può cominciare l'installazione vera e propria.<br />
 Andare sul [http://java.sun.com/javase/downloads/index.jsp sito di download della Sun] e scaricare il JDK6u1 (jdk-6u1-linux-i586.bin) di 59.86 MB, precisamente il file binario autoestraente (non l'rpm.bin)<br />
-Successivamente spostarsi dove è stato scaricato, spostando il file dove più è comodo:
-a) Creare la directory jdk 1.6 all'interno di "Sorgenti":<br/>
+Successivamente spostarsi dove è stato scaricato, spostando il file dove più è comodo:<br/>
+a) Creare la directory jdk 1.6 all'interno di "Sorgenti":
 
  $ mkdir /home/gabri/Sorgenti/jdk1.6
 
