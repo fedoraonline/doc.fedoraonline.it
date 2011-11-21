@@ -27,7 +27,7 @@ In grassetto è evidenziata la riga che interessa, nel caso specifico ora si sa 
 <pre># lspci -n
 00:00.0 0600: 1106:3189 (rev 80)
 00:01.0 0604: 1106:b198
-[b][color=000000]00:0a.0 0200: 168c:0013 (rev 01)[/b][/color]
+'''00:0a.0 0200: 168c:0013 (rev 01)'''
 00:0f.0 0101: 1106:0571 (rev 06)
 00:10.0 0c03: 1106:3038 (rev 81)
 00:10.1 0c03: 1106:3038 (rev 81)
@@ -63,7 +63,7 @@ Salvare e chiudere tornando nel terminale e caricare il driver (per la scheda PC
 
  # modprobe ath_pci
 
-E' giunto il momento di configurazione della scheda, andare quindi in ''amministrazione > rete'' e aggiungeren nuovo dispositivo wireless che si nominerà, selezionandolo dal menu dei dispositivi, come da output di iwconfig, nel caso specifico ath0.<br />
+E' giunto il momento di configurazione della scheda, andare quindi in ''amministrazione > rete'' e aggiungere un nuovo dispositivo wireless che si nominerà, selezionandolo dal menu dei dispositivi, come da output di iwconfig, nel caso specifico ath0.<br />
 Scegliere se usare un IP fisso o il DHCP (consigliato), salvare e uscire. Non preoccuparsi se prima del salvataggio verrà detto che non è possibile attivare la scheda o prendere un IP dal Router o Access Point, lo si risolverà successivamente.<br />
 Tornando nel terminale si tenterà di tirare su la propria scheda, dopodichè si può fare uno scan della propria rete:
 
@@ -126,8 +126,8 @@ Il programma è molto piccolo e lo si troverà nel menu di amministrazione del s
 
 [[Image:Wlass2.jpg|center]]
 Si aprirà una schermata di configurazione della propria rete, nella quale bisogna digitare il nome della rete (ESSID) e la configurazione IP o DHCP. Nella scheda di sicurezza si sceglierà una rete aperta e si confermano le impostazioni cliccando su OK.<br />
-Ora si sceglie la rete con il tasto destro e ci si connette al router o al nostro access point.<br />
-Per connettere la scheda wifi al boot è necessario soltanto che in ''amministrazione > reti'' sia attivato il flag su "connetti all'avvio del sistema".
+Ora si sceglie la rete con il tasto destro e ci si connette al router o all'access point.<br />
+Per connettere la scheda wifi al boot è necessario che in ''amministrazione > reti'' sia attivato il flag su "connetti all'avvio del sistema".
 [[Image:Wlass3.jpg|center]]
 == Configurazione della connessione wifi in un sistema protetto con chiave WEP ==
 
@@ -213,6 +213,6 @@ wpa_supplicant -Bw -Dwext -iath0 -c/etc/wpa_supplicant/wpa_supplicant.conf -qq
 # Chiede al dhcp server del router un indirizzo ip
 dhclient ath0</pre>
 
-Ci siamo, ora non solo si potrà navigare ma ogni volta che si avvia il PC esso si connetterà automaticamente al proprio router o all'access point.
+Ora non solo si potrà navigare ma ogni volta che si avvia il PC esso si connetterà automaticamente al proprio router o all'access point.
 
 [[Categoria:Wi-Fi]]
