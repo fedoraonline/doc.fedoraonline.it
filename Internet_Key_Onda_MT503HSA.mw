@@ -31,7 +31,7 @@ __TOC__
  	initrd /initramfs-2.6.31.6-145.fc12.i686.img 
  [root@cellopc ~]# reboot
 
-* Ora bisognerà installare i pacchetti necessari alla compilazione dei driver forniti con la chiavetta, e ulteriori pacchetti presenti sul cd (ma sono per fedora core 8).<br />
+* Ora bisognerà installare i pacchetti necessari alla compilazione dei driver forniti con la chiavetta, e ulteriori pacchetti presenti sul cd (ma sono per Fedora core 8).<br />
 
  [root@cellopc ~]# yum install -y make gcc wvdial automake glibc ppp qt3 ncurses-devel
 
