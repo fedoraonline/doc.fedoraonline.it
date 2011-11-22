@@ -82,7 +82,7 @@ __TOC__
  <nowiki>#</nowiki> Note that you do not have to rerun grub after making changes to this file
  <nowiki>#</nowiki> NOTICE:  You have a /boot partition.  This means that
  <nowiki>#</nowiki>          all kernel and initrd paths are relative to /boot/, eg.
-<nowiki> #</nowiki>          root (hd0,0)
+ <nowiki> #</nowiki>          root (hd0,0)
  <nowiki>#</nowiki>          kernel /vmlinuz-version ro root=/dev/mapper/vg_root-lv_root
  <nowiki>#</nowiki>          initrd /initrd-version.img
  <nowiki>#</nowiki>boot=/dev/sda
