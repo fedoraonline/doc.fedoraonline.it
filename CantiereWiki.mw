@@ -41,7 +41,9 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Autore
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora|autore=GabrieleTrombini|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Netinstall: installazione Fedora da rete|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Folio|autore=RobertMayr|stato=DaFare}}
+{{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 |}
 
 == Rilettura in corso ==
