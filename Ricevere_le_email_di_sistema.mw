@@ -26,6 +26,6 @@ E' possibile fare in modo che il proprio programma di posta (ad esempio mail evo
 # Nella finestra ''Gestione degli account'' scegliere un nome mnemonico per il nuovo account (esempio "mail locale") e cliccare su '''avanti''';
 # Nella finestra ''Completato'' cliccare su '''applica'''.
 
-Da questo momento in poi le email originariamente destinante al superuser arriveranno alL'utente "user_che_deve_ricevere_le_email_di_root" su mail evolution.
+Da questo momento in poi le email originariamente destinante al superuser arriveranno all'utente "user_che_deve_ricevere_le_email_di_root" su mail evolution.
 
 [[Categoria:Sistema]]
