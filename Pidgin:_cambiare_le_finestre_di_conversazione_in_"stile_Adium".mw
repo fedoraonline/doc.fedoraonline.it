@@ -6,7 +6,7 @@ Condivido qui quel poco che ho trovato, con il mio personale adattamento per i s
 == Installazione ==
 
 Per poter usufruire dei temi di Adium, è necessaria la compilazione di un plugin chiamato ''Pidgin-webkit'', ma è più semplice di quanto si immagini.<br />
-Prima di tutto bisogna installare i pacchetti necessari a compilare il tutto, da root digitate:
+Prima di tutto bisogna installare i pacchetti necessari per compilare il tutto, da root digitare:
 
  # yum -y install wget bzr webkitgtk webkitgtk-devel pidgin-devel
 
@@ -18,11 +18,11 @@ e selezionare la cartella con i sorgenti:
 
  $ cd pidgin-webkit
 
-Per il corretto funzionamento del plugin si avrà bisogno di una patch, che si scdarica con il comando:
+Per il corretto funzionamento del plugin si avrà bisogno di una patch, che si scarica con il comando:
 
  $ wget http://launchpadlibrarian.net/23856598/pidgin-webkit-tempfile-2.patch
 
-e si applica con questo comando:
+e si applica con:
 
  $ patch -i pidgin-webkit-tempfile-2.patch
 
