@@ -1,5 +1,30 @@
 {{Warning|Con questa tipologia di installazione '''''è necessario''''' che il proprio personal computer sia connesso alla rete.}}
 
+Questa guida si propone di trattare l'installazione della release '''''Fedora 16 "Verne"''''', su un personal computer con architettura a 32 bit utilizzando l'installazione utilizzando il CD netinstall.<br />
+Tutte le versioni di Fedora sono liberamente scaricabili e vengono messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
+
+{{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kvm che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' dei sistemi non virtualizzati.<br />
+
+Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento di certo soddisfacente per qualsiasi utilizzo.}} 
+
+{{Warning|L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
+
+{{Warning|E' consigliabile creare un dischetto a valere sulla partizione di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+
+Per l'installazione occorre inserire il disco ed eseguire il boot da DVD.<br />
+All'avvio si presenta subito una delle novità di questa versione di Fedora: una scelta di opzioni differenti dalle "storiche".<br /> 
+A parte il countdown, che stavolta non viene interrotto premendo un tasto, ripartendo invece da 60 secondi, (può essere fermato premendo le frecce, su e giù, che permettono altresì di scorrere tra le selezioni), risulta evidente la voce ''Troubleshooting'', per la quale, selezionandola e premendo invio, vengono proposte queste azioni:
+[[File:Install_f16_1.png|thumb|250px|Schermata di avvio]]
+* ''Install Fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (al di sotto compare la descrizione breve), userà i driver vesa; 
+* ''Rescue a Fedora system'' (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente);
+* ''Run a memory test'' (per controllare la memoria del sistema);
+* ''Boot from local drive'';
+* ''Return to main menù'' (per ritornare al menù principale).
+
+In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera di colore diverso rispetto al resto del testo.<br />
+Con il tasto "esc", invece, si torna al riquadro precedente.<br />
+Selezionando ''Install or upgrade Fedora'' e premendo invio, dopo la richiesta di verifica del supporto utilizzato, inizia l'installazione.<br />
+
 Anche in questo caso l'avvio deve avvenire da supporto magnetico.<br />
 
 Procedendo con l'installazione non viene richiesto il controllo dell'integrità del disco, a differenza della versione DVD, mentre il menù per l'installazione è il medesimo per entrambe e presenta le stesse voci sia nel menù principale che in quello secondario.<br />
@@ -64,5 +89,8 @@ E' possibile, inoltre, attivare la richiesta  di modifica dei pacchetti selezion
 
 Proseguendo, l'installer si connetterà alla rete e preleverà direttamente dai repositori i pacchetti più aggiornati in quel momento. '''Nessun pacchetto verrà prelevato dal cd'''.<br />
 
-Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser era già stato impostato nella fase precedente).<br />
-E' importante considerare di spedire il profilo, molto utile per il debug e ricordarsi di usare una password decisamente robusta anche per l'utente. Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root.<br />
+Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser era già stato impostato nella fase precedente).Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root. E' possibile inserire già in questa fase altri utenti senza doverlo fare successivamente dal proprio Desktop Environment<br />
+[[File:Install_f16_15.png|thumb|600px|center|inserimento utenti da Anaconda]]
+E' importante considerare di spedire il profilo, molto utile per il debug e ricordarsi di usare una password decisamente robusta anche per l'utente. <br />
+
+That's all folks, enjoy.
