@@ -51,7 +51,7 @@ __TOC__
   No default device found. Is it connected? Bye.
  [root@cellopc ~]# eject /dev/sr1
 
-* La chiavetta ora viene vista come modem in modo corretto
+* La chiavetta ora viene vista come modem in modo corretto.
 
  [root@cellopc ~]# lsusb  | grep -i onda
  Bus 001 Device 012: ID 19d2:0037 ONDA Communication S.p.A. 
