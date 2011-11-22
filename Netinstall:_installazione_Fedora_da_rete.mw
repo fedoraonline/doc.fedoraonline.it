@@ -25,8 +25,6 @@ In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzi
 Con il tasto "esc", invece, si torna al riquadro precedente.<br />
 Selezionando ''Install or upgrade Fedora'' e premendo invio, dopo la richiesta di verifica del supporto utilizzato, inizia l'installazione.<br />
 
-Anche in questo caso l'avvio deve avvenire da supporto magnetico.<br />
-
 Procedendo con l'installazione non viene richiesto il controllo dell'integrità del disco, a differenza della versione DVD, mentre il menù per l'installazione è il medesimo per entrambe e presenta le stesse voci sia nel menù principale che in quello secondario.<br />
 
 Ovviamente questa guida tratterà una installazione "fresh" del sistema operativo, perciò è necessario selezionare la prima voce.Fino ad ora le due installazioni (con netinstall e con DVD) possono essere parificate, tuttavia, nel prosieguo, la scelta di lingua e tastiera viene richiesta in formato testuale [[File:Net_install_f16_1.png|thumb|250px|right|richiesta lingua in formato testuale]]per poi tornare in modalità grafica per la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione ('''''assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti''''').
