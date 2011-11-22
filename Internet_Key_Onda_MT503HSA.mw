@@ -62,7 +62,7 @@ __TOC__
 
 * Cliccando poi con il tasto sinistro del mouse sull'icona di NM si vedrà una nuova voce selezionabile sotto "Mobile Broadband" denominata "New Mobile Broadband (GSM) connection...". Selezionare dunque questa voce del menù.<br />
 * Al menù successivo verrà mostrato un wizard per la creazione della nuova connessione con NM. Cliccare su "Forward" e poi dall'elenco delle nazioni selezionare "Italy" e poi cliccare su "Forward".<br />
-* Al menù successivo verrà richiesto l'operatore che fornisce la connessione. Nel nostro caso selezionare "Tim" poi su "Forward". Alla finestrà successiva lasciare il default e cliccare su "Forward". Al termine cliccare su "Apply" e la connessione verrà aperta da NM in automatico.
+* Al menù successivo verrà richiesto l'operatore che fornisce la connessione. Nel nostro caso selezionare "Tim" poi su "Forward". Alla finestra successiva lasciare il default e cliccare su "Forward". Al termine cliccare su "Apply" e la connessione verrà aperta da NM in automatico.
 
 ==Internet key Onda MT503HSA con wvdial==
 
