@@ -19,26 +19,26 @@ A parte il countdown, che stavolta non viene interrotto premendo un tasto, ripar
 * ''Boot from local drive'';
 * ''Return to main menù'' (per ritornare al menù principale).
 
-In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera di colore diverso rispetto al resto del testo.<br />
+In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera che sullo schermo viene indicata di colore diverso rispetto al resto del testo.<br />
 Con il tasto "esc", invece, si torna al riquadro precedente.<br />
 Selezionando ''Install or upgrade Fedora'' e premendo invio, dopo la richiesta di verifica del supporto utilizzato, inizia l'installazione.<br />
 
-{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer, perchè se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura ex-novo.}}
+{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer (Anaconda), perchè se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura ex-novo.}}
 
-Anaconda provvede a chiedere la lingua di istallazione e, scegliendo, per esempio, l'italiano, sia la tastiera che l'orario verranno impostati già correttamente nelle successive selezioni, salvo si voglia differentemente.<br />
+Anaconda provvede a chiedere la lingua di installazione e, scegliendo, per esempio, l'italiano, sia la tastiera che l'orario verranno impostati già correttamente nelle successive selezioni, salvo si voglia farlo differentemente.<br />
 [[File:Install_f16_3.png|thumb|250px|left|E' necessario definire la destinazione d'uso dei dischi]]
-Come da qualche versione a questa parte, l'installer richiede di qualificare il tipo di utilizzo del disco (o dei dischi) della nostra macchina; le opzioni che vengono proposte sono due:
+Come da qualche versione a questa parte, l'installer richiede di qualificare il tipo di utilizzo del disco (o dei dischi) della macchina; le opzioni che vengono proposte sono due:
 * ''dispositivi di storage comuni'';
 * ''dispositivi di storage speciale''.
-Senza addentrarsi molto sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in una azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />[[File:Install_f16_5.png|thumb|250px|right|configurare la rete]]
+Senza addentrarsi troppo sulla differenziazione, la discriminante è data dal fatto che la seconda deve essere sicuramente utilizzata qualora, in un'azienda, fosse presente un amministratore di sistema addetto alla gestione di vari volumi di tipo differente interconnessi fra loro, e non è il caso di utenti desktop.<br />[[File:Install_f16_5.png|thumb|250px|right|configurare la rete]]
 Per cui l'opzione selezionata di default, con tutta probabilità, è quella che più risponde alle caratteristiche di un sistema desktop ad uso personale.<br />
 Dopo il controllo dei dispositivi, Anaconda richiede di impostare l'hostname, e di configurare la rete (anche wifi) e premendo ''Configure network'' è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità integrata di Network Manager.<br />
-E' possibile, quindi, già in fase di prima installazione, installare i pacchetti più aggiornati prelevati direttamente dai repositori Fedora e, come spiegato successivamente, aggiuntivi.<br />
+E' possibile, quindi, già in fase di prima installazione, installare i pacchetti più aggiornati prelevati direttamente dai repositori Fedora e quelli aggiuntivi, come spiegato successivamente.<br />
 
-La schermata successiva ci chiede di calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato (per conoscere di più riguardo il tempo coordinato universale, su [http://it.wikipedia.org/wiki/Tempo_coordinato_universale Wikipedia] è possibile trovare una spiegazione esaustiva).<br />
+La schermata successiva chiede di calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato (per conoscere di più riguardo il tempo coordinato universale, su [http://it.wikipedia.org/wiki/Tempo_coordinato_universale Wikipedia] è possibile trovare una spiegazione esaustiva).<br />
 
 {{Warning|Qualora sulla macchina fosse presente il sistema Windows, è necessario disattivare questa casella (UTC), in quanto l'orario verrebbe sfasato ad ogni avvio di detto s.o.}}
-Successivamente occorre definire la password per root, che, come si sa, '''è quella più importante del sistema'''.
+Successivamente occorre definire la password per l'utente root, che, come si sa, '''è quella più importante del sistema'''.
 
 {{suggerimento|Sarebbe bene seguire le indicazioni di controllo del sistema (non ostativo) sulla forza della password di root scelta. Più è forte la password, più sicurezza si ha.}}
 
@@ -48,20 +48,21 @@ Proseguendo con l'installazione occorre prestare particolare attenzione alla par
 *'''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); 
 *'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
 
-[[File:Install_f16_7.png|502px|left|presenza di più dischi fissi]][[File:Install_f16_6.png|502px|right|selezione in presenza di più dischi fissi]]<br  />
+[[File:Install_f16_7.png|thumb|500px|center|presenza di più dischi fissi]]
+[[File:Install_f16_6.png|thumb|500px|center|selezione in presenza di più dischi fissi]]
 I dischi selezionati per l'installazione, saranno quelli interessati al contenimento del filesystem di Fedora, non necessariamente da formattare perchè solo successivamente verrà richiesto di specificare il tipo di partizionamento e la formattazione.
 
-{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati e lo si vuole considerare per utilizzarne nel LVM lo spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati..}} 
+{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati, ma lo si vuole considerare per comprenderlonella creazione di un LVM dello spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati.}} 
 
 Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''.<br />
 Le scelte possono essere diverse, in base alla tipologia di installazione;
 * Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
-* Sostituire il sistema linux esistenze (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
+* Sostituire un sistema Linux esistente (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
 * Ridurre il sistema attuale (potranno essere ridimensionate le partizioni per ricavare nuovo spazio);
 * Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
 * Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
 
-La stessa schermata prevede la selezione di default per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, consigliabile specialmente per quelle automatiche.<br />
+La stessa schermata prevede la selezione di default per l'uso di LVM, l'eventuale crittografia del sistema e l'eventuale revisione e modifica delle partizioni, consigliabile specialmente per quelle automatiche.<br />
 
 In questa guida verrà utilizzata la prima selezione, ''usare tutto lo spazio'' (che imposta in automatico LVM) e, come detto, di rivederle utilizzando un unico disco fisso; chiaramente avendone a disposizione più di uno, si potrà distribuire il filesystem su tutti.
 [[File:Install_f16_8.png|thumb|250px|left|creazione automatica di partizioni con LVM]]
@@ -73,7 +74,7 @@ E' possibile, come sempre, modificare le partizioni selezionando il tasto modifi
 
 Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''brtfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
 
-Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br /> <br />
+Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home''.<br /> <br />
 
 
 [[File:Install_f16_9.png|thumb|600px|center|riduzione partizione ''/'']]
@@ -82,27 +83,29 @@ Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che 
 
 Il punto di montaggio della ''/home'', a cui è stato assegnato il nome ''"lv_home"'' (il nome potrebbe essere qualsiasi si possa immaginare, nell'esempio è stato usato questo per coerenza con lv_root) , quindi, sarà un volume logico all'interno del volume vg_mailga, il cui file system abbiamo detto essere ''brtfs''. Le dimensioni sono pari allo spazio che è stato tolto a lv_root.<br />
 
-Nell'esempio in esame, per impossibilità di elencazione delle possibili alternative, è stato eseguito un partizionamento in cui si è cercato di spiegare sia l'automatismo che la modifica del risultato, comprendendo di fatto come poter fare nei casi automatico e manuale.<br />
+Nell'esempio in esame, per impossibilità di elencazione delle possibili alternative, è stato eseguito un partizionamento in cui si è cercato di spiegare sia l'automatismo che la modifica del risultato, comprendendo di fatto come poter fare nei casi di partizionamento automatico e manuale.<br />
 
 Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura, la richiesta di autorizzazione alla creazione ed alla formattazione del filesystem.<br />
-{{Warning|Dal momento in cui si acconsente a questa operazione, non c'è più possibilità di tornare allo stato originario del nostro disco.}}
+{{Warning|Dal momento in cui si acconsente a questa operazione, non c'è più possibilità di tornare allo stato originario del disco.}}
 Al termine della formattazione viene chiesto dove installare il bootloader (grub2).<br />
 
 [[File:Install_f16_13.png|thumb|250px|right|opzioni installazione grub2]]
 
-Automaticamente Anaconda propone l'MBR del disco dev/sda ma, premendo ''"cambia dispositivo"'' è possibile modificare le opzioni e anzichè installarlo sul MBR, si può inserirlo nel primo settore della partizione di boot che, nel caso in esempio è /dev/sda2. Ma se si fosse scelto di installare su un secondo disco Fedora perchè nel disco di avvio, ad esempio, è presente Windows, è possibile decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione ''BIOS drive order''.<br />
+Automaticamente Anaconda propone l'MBR del disco ''dev/sda'' ma, premendo ''"cambia dispositivo"'' è possibile modificare le opzioni e anzichè installarlo sul MBR, si può inserirlo nel primo settore della partizione di boot che, nel caso in esempio è /dev/sda2. Ma se fosse stato scelto di installare su un secondo disco Fedora perchè nel disco di avvio, ad esempio, è presente Windows, è possibile decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi con l'opzione ''BIOS drive order''.<br />
 
 E' possibile decidere di inserire una password a livello di bootloader, cosa che aumenterebbe la sicurezza.<br />
 
-Veniamo, infine, alla richiesta dell'installer circa il tipo di utilizzo del computer e l'eventuale inserimento di repositori aggiuntivi (come gli [http://rpmfusion.org rpmfusion] free e non free), i link ai quali sono da riportare all'interno della stessa schermata premendo ''Add additonal software repository'' e scrivendo all'interno della richiesta che appare:
+Si arriva, infine, alla richiesta dell'installer circa il tipo di utilizzo del computer e l'eventuale inserimento di repository aggiuntivi (come gli [http://rpmfusion.org rpmfusion] free e non free), i link ai quali sono da riportare all'interno della stessa schermata premendo ''Add additonal software repository'' e scrivendo all'interno della richiesta che appare:
 * per gli rpmfusion-free l'indirizzo <nowiki>http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os</nowiki>
 * per gli rpmfusion-nonfree l'indirizzo <nowiki>http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/</nowiki>
 I repository ''Fedora'' ed ''Updates'' sono invece già presenti dando così la possibilità, attivandoli, di avere una istallazione fresca e già aggiornata.<br />
 [[File:Install_f16_14.png|thumb|600px|center|inserimento repositori aggiuntivi]]
-E' possibile, inoltre, attivare la richiesta  di modifica dei pacchetti selezionandone in aggiunta o deselezionandone altri scegliendo sia le categorie che quelli opzionali singolarmente.<br />
+E' possibile, inoltre, attivare la richiesta  di modifica dei pacchetti, selezionandone in aggiunta o deselezionandone altri, scegliendo sia le categorie che i pacchetti singoli.<br />
 
-Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser era già stato impostato nella fase precedente).Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root. E' possibile inserire già in questa fase altri utenti senza doverlo fare successivamente dal proprio Desktop Environment<br />
+Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser root era già stato impostato nella fase precedente).Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root. E' possibile inserire già in questa fase altri utenti, senza doverlo fare successivamente dal proprio Desktop Environment<br />
 [[File:Install_f16_15.png|thumb|600px|center|inserimento utenti da Anaconda]]
-E' importante considerare di spedire il profilo, molto utile per il debug e ricordarsi di usare una password decisamente robusta anche per l'utente. <br />
+E' importante considerare di spedire il profilo, molto utile per il debugging, e di ricordarsi di usare una password decisamente robusta anche per l'utente normale.
 
 That's all folks, enjoy.
+
+[[Categoria:Installazione]]
