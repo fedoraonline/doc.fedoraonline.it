@@ -7,7 +7,7 @@ Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativ
 
 {{Warning|L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
 
-{{Warning|E' consigliabile creare un dischetto a valere sulla partizione di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+{{Warning|E' consigliabile creare un dischetto di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
 
 Per l'installazione occorre inserire il disco ed eseguire il boot da DVD.<br />
 All'avvio si presenta subito una delle novità di questa versione di Fedora: una scelta di opzioni differenti dalle "storiche".<br /> 
@@ -52,7 +52,7 @@ Proseguendo con l'installazione occorre prestare particolare attenzione alla par
 [[File:Install_f16_6.png|thumb|500px|center|selezione in presenza di più dischi fissi]]
 I dischi selezionati per l'installazione, saranno quelli interessati al contenimento del filesystem di Fedora, non necessariamente da formattare perchè solo successivamente verrà richiesto di specificare il tipo di partizionamento e la formattazione.
 
-{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati, ma lo si vuole considerare per comprenderlonella creazione di un LVM dello spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati.}} 
+{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati, ma lo si vuole considerare per comprenderlo nella creazione di un LVM dello spazio rimasto libero, la parte già occupata non verrà  formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati.}} 
 
 Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''.<br />
 Le scelte possono essere diverse, in base alla tipologia di installazione;
