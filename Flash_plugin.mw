@@ -4,7 +4,7 @@ Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti
 
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Adobe|Adobe]].}}
-===Installazione su Firefox (motore WebKit)===
+=== Installazione su Firefox ===
 {{Nota|Flash plugin a 64bit|Recentemente Adobe ha rilasciato il plugin per processori a 64bit. Non esite più nessuna differenza nell'installazione tra 32 e 64bit, tranne per l'attivazione del repo.}}
 <ol>
 <li>32 bit</li>
