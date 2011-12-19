@@ -6,10 +6,29 @@ __TOC__
 Installare come prima cosa i pacchetti sviluppo:
  # yum groupinstall "strumenti di sviluppo"
  # yum install kernel-devel
-scaricare il pacchetto [http://linuxtv.org/hg/v4l-dvb/archive/tip.tar.gz uvc-video] e scompattarlo in $HOME/Scaricati.
+ # exit
+ $ git clone git://linuxtv.org/media_build.git
+ $ cd media_build
+ $ gedit build
+
+modificare le linee:
+
+system ("make allyesconfig") == 0 or die "can't select all drivers";
+
+system ("make") == 0 or die "build failed";
+
+in:
+
+#system ("make allyesconfig") == 0 or die "can't select all drivers";
+
+#system ("make") == 0 or die "build failed";
+
+salvare chiudere, poi:
+
+$ ./build
 
 ==Modificare il sorgente==
- $ gedit $HOME/Scaricati/v4l-dvb-abd3aac6644e/linux/drivers/media/video/uvc/uvc_video.c
+ $ gedit linux/drivers/media/video/uvc/uvc_video.c
 sosituire questa sezione:
  static void uvc_video_decode_data(struct uvc_streaming *stream,
          struct uvc_buffer *buf, const __u8 *data, int len)
