@@ -19,13 +19,13 @@ system ("make") == 0 or die "build failed";
 
 in:
 
-#system ("make allyesconfig") == 0 or die "can't select all drivers";
+ #system ("make allyesconfig") == 0 or die "can't select all drivers";
 
-#system ("make") == 0 or die "build failed";
+ #system ("make") == 0 or die "build failed";
 
 salvare chiudere, poi:
 
-$ ./build
+ $ ./build
 
 ==Modificare il sorgente==
  $ gedit linux/drivers/media/video/uvc/uvc_video.c
