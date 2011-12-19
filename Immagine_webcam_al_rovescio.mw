@@ -123,7 +123,6 @@ con questa sezione:
 salvare, chiudere.
 ==Compilare ed installare il modulo==
 Sempre da utente procedere con la compilazione:
- $ cd $HOME/Scaricati/v4l-dvb-abd3aac6644e/
  $ make
 poi da root :
  $ su
@@ -132,6 +131,7 @@ poi da root :
  # mv /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.old
  # cp $HOME/Scaricati/v4l-dvb-abd3aac6644e/v4l/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko
  # depmod -a
+
 ==Terminare==
 Dare un reboot e godersi la propria cam.
 
