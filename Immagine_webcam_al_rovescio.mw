@@ -127,10 +127,7 @@ Sempre da utente procedere con la compilazione:
 poi da root :
  $ su
  password_di_root
- # modprobe -r uvcvideo
- # mv /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.old
- # cp $HOME/Scaricati/v4l-dvb-abd3aac6644e/v4l/uvcvideo.ko /lib/modules/`uname -r`/kernel/drivers/media/video/uvc/uvcvideo.ko
- # depmod -a
+ # make install
 
 ==Terminare==
 Dare un reboot e godersi la propria cam.
