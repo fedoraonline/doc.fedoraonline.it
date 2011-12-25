@@ -3,11 +3,34 @@
 
 == Introduzione ==
 
-== Titolo 1 ==
-Scrivi qui il contenuto dell’articolo.
+Fedora-Chromium-Stable fa parte dei repository di '''''terze parti'''''. L'installazione è necessaria se si sceglie di utilizzare il browser open source Chromium.
+
+== Installazione ==
+
+Si può facilmente creare un file ''/etc/yum.repos.d/fedora-chromium-stable.repo'' digitando da root:
+
+ # gedit /etc/yum.repos.d/fedora-chromium-stable.repo
+
+e inserire le seguenti righe:
+
+ [fedora-chromium-stable]
+ name=Builds of the "stable" tag of the Chromium Web Browser
+ baseurl=http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-$releasever/$basearch/
+ enabled=1
+ skip_if_unavailable=1
+ gpgcheck=0
+ 
+ [fedora-chromium-stable-source]
+ name=Builds of the "stable" tag of the Chromium Web Browser - Source
+ baseurl=http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-$releasever/SRPMS
+ enabled=0
+ skip_if_unavailable=1
+ gpgcheck=0
+
+Salvare e chiudere.<br />
+
+Il repo è così pronto per l'uso.
 
 == Riferimenti ==
-* riferimento 1;
-* riferimento 2.
-
+* [http://fedoraproject.org/wiki/Chromium Chromium su fedoraproject.org].
 [[Categoria:Scrittura in corso]]
