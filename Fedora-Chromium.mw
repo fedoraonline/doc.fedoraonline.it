@@ -1,4 +1,3 @@
-{{InCorso|autore=NicolaPoli}}
 {{Autore|NicolaPoli}}
 
 == Introduzione ==
@@ -16,7 +15,7 @@ e inserire le seguenti righe:
  [fedora-chromium-stable]
  name=Builds of the "stable" tag of the Chromium Web Browser
  baseurl=http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-$releasever/$basearch/
- enabled=1
+ enabled=0
  skip_if_unavailable=1
  gpgcheck=0
  
@@ -28,10 +27,9 @@ e inserire le seguenti righe:
  gpgcheck=0
 
 Salvare e chiudere.<br />
-
 Il repo è così pronto per l'uso.
 
 == Riferimenti ==
 * http://fedoraproject.org/wiki/Chromium
 
-[[Categoria:Rilettura in corso]]
+[[Categoria:Repository]]
