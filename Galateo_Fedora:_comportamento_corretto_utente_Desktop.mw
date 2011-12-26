@@ -14,7 +14,7 @@ Esso è basato sull' analisi statistica dei contenuti del forum di Fedoraonline 
 
 == Installazione ==
 
-Cominciamo dall'installazione. Supponiamo che state eseguendo l'installazione dal [http://fedoraproject.org/it/get-fedora-all DVD] e non da una live.
+Cominciamo dall'installazione. Supponiamo che stiate eseguendo l'installazione dal [http://fedoraproject.org/it/get-fedora-all DVD] e non da una live.
 
 Gli errori che si commettono più frequentemente sono:
 
@@ -23,7 +23,6 @@ Gli errori che si commettono più frequentemente sono:
 * accettare che il proprio utente sia aggregato al gruppo wheel
 * accettare l'orario UTC
 * non indicare un Desktop Environment alternativo
-
 
 == Configurazione ==
 * accettare la configurazione di default del sistema
