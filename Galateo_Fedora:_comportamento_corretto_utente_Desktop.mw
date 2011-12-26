@@ -18,6 +18,7 @@ Cominciamo dall'installazione. Supponiamo che stiate eseguendo l'installazione d
 
 Gli errori che si commettono più frequentemente sono:
 
+* usare il partizionatore automatico
 * non scegliere il filesystem della propria installazione
 * indicare password, root ed utenti, deboli
 * accettare che il proprio utente sia aggregato al gruppo wheel
