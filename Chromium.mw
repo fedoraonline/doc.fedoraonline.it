@@ -2,7 +2,9 @@
 {{Autore|NicolaPoli}}
 
 == Introduzione ==
-Chromium è un moderno browser open source basato su webkit.
+Chromium è un moderno browser open source basato su webkit. 
+
+E' molto simile a [https://www.google.com/chrome/index.html?hl=it "google chrome"], che infatti si basa sul codice sorgente di Chromium, ma con aggiunte di software non libero (flash player, un visualizzatore di pdf integrato, video e audio tags html5 per ACC e MP3).
 
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Fedora-Chromium|Fedora-Chromium]].}}
