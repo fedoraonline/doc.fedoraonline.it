@@ -33,6 +33,10 @@ Gli errori che si commettono più frequentemente sono:
 
 == Hardware ==
 
+* credere che il dispositivo hardware non sia riconosciuto
+* essere convinti che vi manca un driver
+* inoculare driver nel kernel
+
 == Connessioni rete ==
 
 == Installazione software ==
