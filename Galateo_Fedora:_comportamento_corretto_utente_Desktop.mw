@@ -7,7 +7,7 @@
 Molti utenti, provenienti da altri sistemi, trasferiscono il proprio comportamento, adottato precedentemente, al loro sistema Fedora.
 Essi attribuiscono al sistema le proprie difficoltà e i loro problemi, senza rendersi conto che sono stati i propri atteggiamenti la causa.<br />
 Questo articolo '''non''' vuole proporre cose da fare da parte di un nuovo utente di un sistema Fedora per risolvere i propri problemi.<br />
-Questo articolo vuole proporre cose da '''non''' fare da parte di un nuovo utente di un sistema Fedora per risolvere i propri problemi.
+Questo articolo vuole proporre cose da '''non''' fare da parte di un nuovo utente di un sistema Fedora per risolvere i propri problemi.<br />
 Esso è basato sull' analisi statistica dei contenuti del forum di Fedoraonline e degli errori comuni che si commettono nella gestione del sistema.
 
 {{Scrittura|Il simbolo '''$''' vuol dire che le operazioni possono essere eseguite da terminale utente.<br />il simbolo '''#''' vuol dire che le operazioni devono essere eseguite in terminale root ovvero con poteri superutente.}}
