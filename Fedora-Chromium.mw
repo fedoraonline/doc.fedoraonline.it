@@ -27,7 +27,9 @@ e inserire le seguenti righe:
  gpgcheck=0
 
 Salvare e chiudere.<br />
-Il repo è così pronto per l'uso.
+Il repo è così pronto per l'uso, ma bisogna abilitarlo con l'opzione ''--enablerepo=fedora-chromium-stable'' se si vuole installare un pacchetto da esso. Per esempio:
+
+ # yum install --enablerepo=fedora-chromium-stable nome_pacchetto
 
 == Riferimenti ==
 * http://fedoraproject.org/wiki/Chromium
