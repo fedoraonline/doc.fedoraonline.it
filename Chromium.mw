@@ -15,8 +15,8 @@ Questa guida spiega come installare Chromium seguendo la seconda modalità.
 
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Fedora-Chromium|Fedora-Chromium]].}}
-Per l'installazione è necessario installare i seguenti pacchetti:
- # yum install chromium
+L'installazione è semplice:
+ # yum install chromium chromium-ffmpegsumo
 
 == Riferimenti ==
 * http://fedoraproject.org/wiki/Chromium
