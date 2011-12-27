@@ -9,7 +9,7 @@ E' molto simile a [https://www.google.com/chrome/index.html?hl=it "google chrome
 
 Per [http://ostatic.com/blog/making-projects-easier-to-package-why-chromium-isnt-in-fedora vari motivi] Chromium non può essere ancora incluso nei repository ufficiali Fedora. 
 
-Per installarlo si può quindi procedere alla compilazione [http://code.google.com/p/chromium/ dei sorgenti], o utilizzare il repository offerto da Tom 'spot' Callaway. 
+Per installarlo si può quindi procedere alla compilazione [http://www.chromium.org/Home dei sorgenti], o utilizzare il repository offerto da Tom 'spot' Callaway. 
 
 Questa guida spiega come installare Chromium seguendo la seconda modalità.
 
