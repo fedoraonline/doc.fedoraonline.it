@@ -22,8 +22,6 @@ Questo articolo si propone di "arginare" comportamenti che possano essere causa 
 
 Cominciamo dall'installazione. Supponiamo che stiate eseguendo l'installazione dal [http://fedoraproject.org/it/get-fedora-all DVD] e non da una live.
 
-Gli errori che si commettono più frequentemente sono:
-
 * usare il partizionatore automatico
 * non scegliere il filesystem della propria installazione
 * indicare password, root ed utenti, deboli
