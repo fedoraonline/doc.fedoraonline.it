@@ -18,6 +18,8 @@ Questo articolo si propone di "arginare" comportamenti che possano essere causa 
 
 {{Scrittura|Il simbolo '''$''' vuol dire che le operazioni possono essere eseguite da terminale utente.<br />il simbolo '''#''' vuol dire che le operazioni devono essere eseguite in terminale root ovvero con poteri superutente.}}
 
+Vediamo quali errori si commettono più frequentemente durante :
+
 == Installazione ==
 
 Cominciamo dall'installazione. Supponiamo che stiate eseguendo l'installazione dal [http://fedoraproject.org/it/get-fedora-all DVD] e non da una live.
