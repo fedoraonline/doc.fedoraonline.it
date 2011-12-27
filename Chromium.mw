@@ -16,9 +16,11 @@ Questa guida spiega come installare Chromium seguendo la seconda modalità.
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Fedora-Chromium|Fedora-Chromium]].}}
 L'installazione è semplice:
- # yum --enablerepo=fedora-chromium-stable install chromium chromium-ffmpegsumo
+ # yum --enablerepo=fedora-chromium-stable install chromium chromium-ffmpegsumo libjingle v8
 
 Per utilizzare il plugin ''Adobe Flash Player'' con Chromium, bisogna seguire anche  [http://doc.fedoraonline.it/Flash_plugin#Installazione_su_Chromium questa guida]
+
+Gli altri plugin non richiedono configurazioni aggiuntive.
 
 == Riferimenti ==
 * http://fedoraproject.org/wiki/Chromium
