@@ -1,14 +1,10 @@
-{{InCorso|autore=NicolaPoli}}
 {{Autore|NicolaPoli}}
 
 == Introduzione ==
-Chromium è un progetto per lo sviluppo di moderno browser open source basato su webkit. 
-
+Chromium è un progetto per lo sviluppo di un moderno browser open source basato su webkit.<br />
 Dal codice sorgente di Chromium viene prodotto anche [https://www.google.com/chrome/index.html?hl=it "google chrome"], che ne è quasi del tutto identico, ma con aggiunte di software non libero (flash player, un visualizzatore di pdf integrato, video e audio tags html5 per ACC e MP3).
 
-
-Per [http://ostatic.com/blog/making-projects-easier-to-package-why-chromium-isnt-in-fedora vari motivi] Chromium non può essere ancora incluso nei repository ufficiali Fedora. 
-
+Per [http://ostatic.com/blog/making-projects-easier-to-package-why-chromium-isnt-in-fedora vari motivi] Chromium non può essere ancora incluso nei repository ufficiali Fedora.<br />
 Per installarlo si può quindi procedere alla compilazione [http://www.chromium.org/Home dei sorgenti], o utilizzare il repository offerto da Tom 'spot' Callaway. 
 
 Questa guida spiega come installare Chromium seguendo la seconda modalità.
@@ -16,14 +12,14 @@ Questa guida spiega come installare Chromium seguendo la seconda modalità.
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Fedora-Chromium|Fedora-Chromium]].}}
 L'installazione è semplice:
+
  # yum --enablerepo=fedora-chromium-stable install chromium chromium-ffmpegsumo libjingle v8
 
-Per utilizzare il plugin ''Adobe Flash Player'' con Chromium, bisogna seguire anche  [http://doc.fedoraonline.it/Flash_plugin#Installazione_su_Chromium questa guida]
-
+Per utilizzare il plugin ''Adobe Flash Player'' con Chromium, bisogna seguire anche [http://doc.fedoraonline.it/Flash_plugin#Installazione_su_Chromium questa guida].<br />
 Gli altri plugin non richiedono configurazioni aggiuntive.
 
 == Riferimenti ==
 * http://fedoraproject.org/wiki/Chromium
 * http://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome
 
-[[Categoria:Scrittura in corso]]
+[[Categoria:Internet]]
