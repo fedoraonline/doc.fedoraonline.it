@@ -1,7 +1,7 @@
 ==Introduzione==
 {{Nota|Guida in parte obsoleta:|Benchè non si può parlare di una guida completamente obsoleta, alcuni comandi specifici non sono più validi sulle attuali versioni di Fedora.}}
 Con la presente guida si vuole solamente aggiornare ed integrare le precedenti redatte sull'uso di yum e sulla configurazione dei repositories per la gestione dei pacchetti rpm in Fedora.<br />
-Yum è l'acronimo di Yellow dog Updater, Modified ed è il sistema di gestione dei pacchetti, ormai standard in Fedora, che si affianca ed integra con l'ottimo rpm. Esso si appoggia a dei repository esterni (mantenuti dal Fedora Project e da terze parti), contenenti i programmi per l'uso del sistema operativo e per le più disparate applicazioni aggiuntive.<br />
+Yum è l'acronimo di Yellow dog Updater Modified ed è il sistema di gestione dei pacchetti, ormai standard in Fedora, che si affianca ed integra con l'ottimo rpm. Esso si appoggia a dei repository esterni (mantenuti dal Fedora Project e da terze parti), contenenti i programmi per l'uso del sistema operativo e per le più disparate applicazioni aggiuntive.<br />
 Tenendo presente l'esistenza di interfacce grafiche per l'utilizzo di yum mediante GUI (es. kyum, yumex ecc.), si farà riferimento all'uso del programma da terminale.
 
 == Yum ==
