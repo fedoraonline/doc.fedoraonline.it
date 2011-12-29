@@ -5,7 +5,7 @@ Ora è disponibile un RPM a 64bit, anche se per un corretto funzionamento l'inst
 
 ==Installazione==
 
-Il pacchetto obbligatrio per Google Earth è:
+Il pacchetto obbligatorio per Google Earth è:
 
  # yum install redhat-lsb.i686
 
