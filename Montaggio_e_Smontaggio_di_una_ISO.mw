@@ -30,7 +30,7 @@ Per smontare una iso caricata precedentemente basta eseguire il comando:
 
 Per creare un link simbolico alla directory dell'iso in modo da mettertelo sul desktop basta eseguire questo comando:
 
- $ ln -s /media/iso /home/spyrotsk/Desktop/
+ $ ln -s /media/iso /home/NOME_UTENTE/Scrivania/
 
 [[Categoria:Sistema]]
 [[Categoria:Multimedia]]
