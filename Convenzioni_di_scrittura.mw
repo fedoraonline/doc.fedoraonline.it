@@ -490,7 +490,7 @@ Oltre al messaggio per l’utente che legge, verrà creato un link alla pagina p
 <nowiki>{{InCorso|autore=NomeAutore}}</nowiki>
 
 Esempio:
-{{InCorso|autore=NomAuteur}}
+{{InCorso|autore=NomeAutore}}
 
 ===Nota===
 Per inserire una nota all’interno di un articolo occorre utilizzare questo template:
