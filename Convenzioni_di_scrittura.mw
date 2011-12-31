@@ -487,7 +487,7 @@ Ogni nuova guida in corso di stesura o in corso di modifica deve essere distinta
 
 Oltre al messaggio per l’utente che legge, verrà creato un link alla pagina personale dell’autore della stesura o modifica.
 
-<nowiki>{{InCorso|autore=NomAuteur}}</nowiki>
+<nowiki>{{InCorso|autore=NomeAutore}}</nowiki>
 
 Esempio:
 {{InCorso|autore=NomAuteur}}
