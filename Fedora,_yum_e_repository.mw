@@ -1,3 +1,5 @@
+{{InCorso|autore=AlbertoChiusole}}
+{{Autore|AlbertoChiusole}}
 ==Introduzione==
 {{Nota|Guida in parte obsoleta:|Benchè non si può parlare di una guida completamente obsoleta, alcuni comandi specifici non sono più validi sulle attuali versioni di Fedora.}}
 Con la presente guida si vuole solamente aggiornare ed integrare le precedenti redatte sull'uso di yum e sulla configurazione dei repositories per la gestione dei pacchetti rpm in Fedora.<br />
@@ -362,3 +364,4 @@ Oppure se si volesse disattivare livna e attivare freshrpms:
 
 [[Categoria:Yum]]
 [[Categoria:Repository]]
+[[Categoria:Modifica in corso]]
