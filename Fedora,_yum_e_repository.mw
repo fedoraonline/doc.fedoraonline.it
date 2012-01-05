@@ -11,7 +11,7 @@ Principalmente yum ha il vantaggio (rispetto ad rpm) di poter risolvere le dipen
 
 Non è nelle intenzioni di questa guida fare una mera traduzione delle pagine man del comando yum, alle quali chiunque può accedere semplicemente digitando, da terminale:
 
-man yum
+'''man yum'''
 
 ==Principali comandi==
 
