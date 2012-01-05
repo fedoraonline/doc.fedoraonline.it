@@ -6,6 +6,14 @@ L'installazione CCRMA è utile per l'ottimizzazione audio del sistema. Il repo �
 == Installazione ==
 
 Per l'installazione è necessario specificare sempre, all'interno del link, la propria versione di Fedora.
+* Installazione per Fedora 16
+ # yum install --nogpgcheck http://mirrors.ircam.fr/pub/planetccrma/mirror/fedora/linux/planetccrma/16/i386/planetccrma-repo-1.1-2.fc14.ccrma.noarch.rpm
+ # yum install --nogpgcheck http://mirrors.ircam.fr/pub/planetccrma/mirror/fedora/linux/planetccrma/16/i386/planetccrma-repo-testing-1.1-2.fc14.ccrma.noarch.rpm
+
+* Installazione per Fedora 15
+ # yum install --nogpgcheck http://mirrors.ircam.fr/pub/planetccrma/mirror/fedora/linux/planetccrma/15/i386/planetccrma-repo-1.1-2.fc14.ccrma.noarch.rpm
+ # yum install --nogpgcheck http://mirrors.ircam.fr/pub/planetccrma/mirror/fedora/linux/planetccrma/15/i386/planetccrma-repo-testing-1.1-2.fc14.ccrma.noarch.rpm
+
 * Installazione per Fedora 14
  # yum install --nogpgcheck http://mirrors.ircam.fr/pub/planetccrma/mirror/fedora/linux/planetccrma/14/i386/planetccrma-repo-1.1-2.fc14.ccrma.noarch.rpm
  # yum install --nogpgcheck http://mirrors.ircam.fr/pub/planetccrma/mirror/fedora/linux/planetccrma/14/i386/planetccrma-repo-testing-1.1-2.fc14.ccrma.noarch.rpm
