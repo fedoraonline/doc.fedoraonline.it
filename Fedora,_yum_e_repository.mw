@@ -91,8 +91,6 @@ Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato s
 
  # yum localinstall nome_programma
 
-Il comando ''localinstall'' risulta essere molto utile se usato in combinazione con ''checkinstall''.
-
 ===Plugins per yum===
 Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti (tutti installabili con yum, presenti nel repo Fedora):
 * '''yum-fastestmirror''': plugin che prima di iniziare il download effettua una ricerca del mirror con una migliore velocità di connessione;
