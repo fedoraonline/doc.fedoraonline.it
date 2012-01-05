@@ -1,6 +1,7 @@
 {{Obsoleto}}
 {{Warning|Per Fedora 9 e kernel della serie 2.6.25 la procedura descritta non funziona.}}
-== Introduzione ==Il chip realtek 2831U su dispositivo USB non è riconosciuto dai moduli dei kernel attuali e non è inserito nei tarball aggiornati di v4l-dvb del progetto linux-tv ( almeno per il momento ). Il chip è identificato da lsusb come:<br />
+== Introduzione ==
+Il chip realtek 2831U su dispositivo USB non è riconosciuto dai moduli dei kernel attuali e non è inserito nei tarball aggiornati di v4l-dvb del progetto linux-tv ( almeno per il momento ). Il chip è identificato da lsusb come:<br />
 '''Bus 001 Device 004: ID 0bda:2831 Realtek Semiconductor Corp.'''. <br />
 Il dispositivo è da poco in commercio su molte varietà di penne prodotte da diverse marche.<br />
 Pertanto volendo utilizzare immediatamente tale periferica, senza dover aspettare, occorre far uso di sorgenti per la costruzione del modulo.<br />
