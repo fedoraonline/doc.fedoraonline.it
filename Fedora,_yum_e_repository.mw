@@ -92,9 +92,13 @@ Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato s
  # yum localinstall nome_programma
 
 ===Plugins per yum===
-Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti (tutti installabili con yum, presenti nel repo Fedora):
-* '''yum-fastestmirror''': plugin che prima di iniziare il download effettua una ricerca del mirror con una migliore velocità di connessione;
-* '''yum-presto''': plugin che permette la risoluzione delle dipendenze in locale anzichè in remoto, principale problema di yum, che è una soluzione allo studio anche del Fedora Project per una eventuale integrazione nativa in yum stesso. Questo plugin, appoggiandosi a dei metadati, richiede la configurazione dei mirrors seguendo i links degli autori del progetto.
+Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti (questi plugin dovrebbero essere stati installati di base nel sistema, nel caso che non lo fossero basta installarli comodamente con yum):
+
+* '''yum-presto''': plugin che permette la risoluzione delle dipendenze in locale anzichè in remoto. Questo plugin, appoggiandosi a dei metadati (drpm), permette di scaricare solo le porzioni di pacchetti che differiscono dalla versione installata del programma, riducendo quindi la dimensione dei file da scaricare;
+* '''yum-fastestmirror''': plugin che prima di iniziare il download effettua una ricerca del mirror con una migliore velocità di connessione.
+
+
+Per altri plugin di yum, da terminale: '''yum search yum-plugin'''
 
 ==Repositories e spiegazione==
 
