@@ -102,11 +102,11 @@ Per altri plugin di yum, da terminale: '''yum search yum-plugin'''
 ==Configurazione dei Repositories==
 
 Tutto quanto sopra detto, senza un ulteriore intervento, è applicabile per i soli repository installati di default da Fedora.
-I repository di terze parti di più frequente utilizzo, e che soddisfano al 99% le proprie esigenze (probabilmente se non si trova il pacchetto rpm in questi repos si dovrà scaricare i sorgenti e procedere alla compilazione manuale del programma perdendo la possibilità di gestirlo tramite yum o rpm in quanto esso non verrebbe “censito” nel database dei programmi installati, a meno che si sia utilizzato checkinstall) sono:
+I repository di terze parti di più frequente utilizzo, e che soddisfano al 99% le proprie esigenze (probabilmente se non si trova il pacchetto rpm in questi repos si dovrà scaricare i sorgenti e procedere alla compilazione manuale del programma perdendo la possibilità di gestirlo tramite yum o rpm in quanto esso non verrebbe “censito” nel database dei programmi installati) sono:
 
-# '''livna''', che è mantenuto anche da alcuni sviluppatori del Fedora Project e che io ritengo utile per i moduli del kernel (ad esempio i driver delle schede video);
+# '''livna''', che è mantenuto anche da alcuni sviluppatori del Fedora Project, utile per i moduli del kernel (ad esempio i driver delle schede video);
 # '''freshrpms''', che è mantenuto da un componente di RPMforge;
-# '''atrpms''' che collabora con i repos appartenenti a RPMforge ed ad altri;
+# '''ATrpms''' che collabora con i repos appartenenti a RPMforge ed ad altri;
 # '''kde-redhat''', un repository dedicato a KDE;
 
 Innanzitutto andiamo ad analizzare il contenuto di un file .repo all'interno di /etc/yum.repos.d. In questo caso apriamo il file /etc/yum.repos.d/fedora.repo:
