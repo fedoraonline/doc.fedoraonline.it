@@ -99,19 +99,17 @@ Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti (que
 
 Per altri plugin di yum, da terminale: '''yum search yum-plugin'''
 
-==Installazione e configurazione dei Repositories==
+==Configurazione dei Repositories==
 
 Tutto quanto sopra detto, senza un ulteriore intervento, è applicabile per i soli repository installati di default da Fedora.
 I repository di terze parti di più frequente utilizzo, e che soddisfano al 99% le proprie esigenze (probabilmente se non si trova il pacchetto rpm in questi repos si dovrà scaricare i sorgenti e procedere alla compilazione manuale del programma perdendo la possibilità di gestirlo tramite yum o rpm in quanto esso non verrebbe “censito” nel database dei programmi installati, a meno che si sia utilizzato checkinstall) sono:
 
 # '''livna''', che è mantenuto anche da alcuni sviluppatori del Fedora Project e che io ritengo utile per i moduli del kernel (ad esempio i driver delle schede video);
 # '''freshrpms''', che è mantenuto da un componente di RPMforge;
-# '''dries''', che è mantenuto da un componente di RPMforge;
 # '''atrpms''' che collabora con i repos appartenenti a RPMforge ed ad altri;
 # '''kde-redhat''', un repository dedicato a KDE;
-# '''macromedia''', relativamente al plugin flash.
 
-Innanzitutto andiamo ad analizzare il contenuto di un file .repo all'interno di /etc/yum.repos.d. In questo caso apriamo il file /etc/yum.repos.d/fedora.repo (che, in F7 ha unito i repo core ed extras ancora presenti fino alla versione 6 del sistema operativo):
+Innanzitutto andiamo ad analizzare il contenuto di un file .repo all'interno di /etc/yum.repos.d. In questo caso apriamo il file /etc/yum.repos.d/fedora.repo:
 
  # cat /etc/yum.repos.d/fedora.repo
 
@@ -183,185 +181,8 @@ oppure posizionando la chiave all'interno della cartella etc/pki/rpm-gpg/
 
 e indicando il percorso all'interno del file repo.
 
-==Creazione e utilizzo dei repository==
-
-{{Scrittura|I seguenti passaggi sono da eseguire come utente '''root'''!}}
-1) Aprire un terminale e con l'editor che si preferisce (gedit, kedit ecc.), digitare quanto segue:
-
- # nano /etc/yum.repos.d/livna.repo
-
-2) nella pagina bianca che vi appare digitate quanto segue:
-<pre>    [livna]
-    name=Livna for Fedora Core $releasever - $basearch - Base
-    baseurl= http://rpm.livna.org/fedora/$releasever/$basearch/
-    enabled=0
-    gpgcheck=1
-    gpgkey=http://rpm.livna.org/RPM-GPG-KEY-livna</pre>
-
-3) Salvarlo con il nome livna.repo ed uscire (con nano ctrl+o e ctrl+x).
-
-Scaricando questo pacchetto ed installandolo con il comando rpm -ivh si avranno i repository già configurati e pronti per l'uso, aggiornabile con l'update di yum.
-{{Nota|Nota bene:|Al momento di stesura di questa guida, il repository livna è attivo provvisoriamente (causa rottura dei dischi del server), per cui la chiave gpg risulta irraggiungibile. Per averla si deve copiare il seguente testo con un editor così com'è e salvarlo nella cartella <nowiki>/etc/pki/prm-gpg/</nowiki> con il nome di RPM-GPG-KEY-livna e sostituire la riga sopra riportata ''<nowiki>gpgkey=http://rpm.livna.org/RPM-GPG-KEY-livna</nowiki>'' con la seguente: ''<nowiki>gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-livna</nowiki>''.}}
-
-Chiave repo livna:
-<pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v1.2.3 (GNU/Linux)
-
-mQGiBD9uKNURBAD9LSuQNt6yzZ4Zvs1eRit7qnEXxptel30kSX5pFT4+e3NwLAr6
-Krlw8Ieo7w4o+kaHL1likVLCAZzBnz9X6l5C2LtUcKX772ieRZUnLd93wWRQiRYj
-u8QRD5CFS7sgT0xG6KZV1GJ13BjqBb3VRHJXw2lQn9JrQkhzuRF+YItW+wCgpFKN
-VMWJQXjSy87RLOELulEA7YEEAOCvbVSB/yfm2VByB9yb3S2OOEDyeQpx75xzW1tK
-5paC6qmu6ptCN7MvBOlIPqJtJzk9dxcJIQrOeCkmm4rUhuNIujr+1h+vOwtm158K
-IahJMGirDJjXxAKJdAU/OCo6z54TLR9WkiNieZhcMvHNeVwgcmSv5o0lBwzYnsvN
-U9JIBACaXi6fQ3yFeoUhCXYQUku9SDKgEnjbNWRn+7LPAVRYIHLTrs8nhZm7eKBA
-oUPtam96zhEU8LWkgP9OzgJrFeScaBsuoOStsFHBUALs9y6n274e7ITXOtd/bRZU
-2fCV3Jo0MR6Y27tDRMqhEHNfkqFn7aOdQcTTPoDP0Z5pkVVsjbQiTGl2bmEub3Jn
-IHJwbXMgPHJwbS1rZXlAbGl2bmEub3JnPohbBBMRAgAbBQI/bijVBgsJCAcDAgMV
-AgMDFgIBAh4BAheAAAoJEHEpVEGhCbHsytIAn1FrK/66lNuHSe9DalzCT5aHSBhM
-AKCcDE77KF+b7/uyeujjY0dBOdODJYhGBBARAgAGBQI/bimuAAoJEFv/iQKOJ5Ah
-Kf4AoIFEBNeQLA3SJhawlZMVFOM4X2o0AJ9Q1x/2iJjmW65A4Wfy5U63fp58q7kB
-DQQ/bijWEAQArpxAXvjCHNQxiKPHagpx/OgDBRvN/eseZzHz3N+c8iglwTSkNjcV
-LiH2Bdz7+RxdRVvgjq4PUgs1+mNnY5H8Gptb0brvvW6BQHKNSE8y/rwYil3jzW6l
-HruhOuYr4uiGUNbOBsJYCFpccDi2w0Z72NtPgLcUrBtNiiybHs6HPh8AAwUEAJt/
-dwOOUbfDF0EodRmDJs9Brkq2TBoT/9ylxGTVH+j+1tkDOs5ByX/MoGhYyBnTbN0/
-lgGq85nQgFq23hvHDZDAUfZDIArMOjYJIwP2dS7E+UTsSNgnv0/lCJ6qfgo76Rn0
-fWkGyRpUKjrdvfRkCNpQu5RWxQ5ZC/hRwBrI/5guiEYEGBECAAYFAj9uKNYACgkQ
-cSlUQaEJsewfJwCfWjWmrNyMVtz2MRUIqgM93sXHuUUAn2l9FUDpSPnLII1G25Sm
-abfgX6Wq
-=7Wqv
------END PGP PUBLIC KEY BLOCK-----</pre>
-
-Il file repo è stato creato ed è pronto per l'uso con yum (in questo caso livna è disabilitato mediante l'opzione enabled=0).
-Allo stesso modo si possono creare tutti i repo che si vogliono, mantenendo i punti 1) e 2) elencati in precedenza in occasione della creazione del repo livna sostituendo invece i punti 3) e 4) con quanto segue:
-
-----
-
-3) '''Repo freshrpms''':
-<pre>    [freshrpms]
-    name=Fedora Core $releasever - $basearch - Freshrpms
-    baseurl=http://ayo.freshrpms.net/fedora/linux/$releasever/$basearch/freshrpms/
-    enabled=1
-    gpgkey=http://freshrpms.net/RPM-GPG-KEY-freshrpms
-    gpgcheck=1</pre>
-
-4) salvare con il nome di freshrpms.repo;
-
-Scaricando questo pacchetto ed installandolo con il comando rpm -ivh si avranno i repository già configurati e pronti per l'uso, aggiornabile con l'update di yum
-
-----
-
-3) '''Repo dries''':
-<pre>    [dries]
-    name=Extra Fedora rpms dries - $releasever - $basearch
-    baseurl=http://ftp.belnet.be/packages/dries.ulyssis.org/fedora/fc$releasever/$basearch/RPMS.dries/
-    gpgkey=http://dries.ulyssis.org/rpm/RPM-GPG-KEY.dries.txt
-    gpgcheck=1
-    enabled=1</pre>
-
-4)salvare con il nome di dries.repo;
-
-----
-
-3) '''Repo Atrpms''':
-<pre>    [atrpms]
-    name=Fedora Core $releasever - $basearch - ATrpms
-    baseurl=http://dl.atrpms.net/f$releasever-$basearch/atrpms/stable
-    gpgcheck=1
-    gpgkey=http://atrpms.net/RPM-GPG-KEY.atrpms
-    enabled=1</pre>
-
-4)salvare con il nome di atrpms.repo
-
-Scaricando questo pacchetto ed installandolo con il comando rpm -ivh si avranno i repository già configurati e pronti per l'uso.
-
-----
-
-3) '''Repo KDE-redhat''':
-<pre>    [kde]
-    name=kde
-    mirrorlist=http://apt.kde-redhat.org/apt/kde-redhat/fedora/mirrors-stable
-    gpgkey=http://apt.kde-redhat.org/apt/kde-redhat/kde-redhat.RPM-GPG-KEY
-    enabled=0
-
-    [kde-all]
-    name=kde-all
-    mirrorlist=http://apt.kde-redhat.org/apt/kde-redhat/all/stable/mirrors
-    gpgkey=http://apt.kde-redhat.org/apt/kde-redhat/kde-redhat.RPM-GPG-KEY
-    enabled=0</pre>
-
-4)Salvare con il nome di kde.repo
-
-----
-
-3) '''Repo macromedia''':
-<pre>    [macromedia]
-    name=Macromedia for i386 Linux
-    baseurl=http://macromedia.rediris.es/rpm/
-    enabled=0
-    gpgcheck=1
-    gpgkey=http://macromedia.mplug.org/FEDORA-GPG-KEY</pre>
-
-4)Salvare con il nome di macromedia.repo
-
-{{Nota|Nota del 19/07/2007:|A seguito dell'acquisizione di Macromedia da parte di Adobe, il repository sopra indicato verrà "dismesso" a favore di un repo Adobe.}}
-----
-
-3) '''Repo adobe-linux''':
-<pre>    [adobe-linux]
-    name=Adobe Systems Incorporated
-    baseurl=http://linuxdownload.adobe.com/linux/$basearch/
-    enabled=1
-    gpgcheck=1
-    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux</pre>
-
-4) Salvare con il nome di adobe-linux.repo
-
-La chiave gpg per chi dovesse inserire il repo a mano, come già per livna è la seguente:
-<pre>    -----BEGIN PGP PUBLIC KEY BLOCK-----
-    Version: GnuPG v1.2.6 (GNU/Linux)
-
-    mQGiBEXlsbkRBACdGA0PaNHSYxn9K5SPo5e7mEsVpl37Xm7F2m1nTIMLq2v/IT8Z
-    bhLhVXTCR9amFRR4qV+AN6SJeXEYeMrZW/7TiMkULfkoThrtTF/spUK5/HvTGgqh
-    iGVbBQfqx65mboeXNQwLGXSBCtA7zA2PM/E0oLwpEuJidAodsQLKNQIKWwCgxDq8
-    wz0/jcqyIULCYasHmz56dFsD/2Ye27k52I1TRT3EvBIjOkmNfic8rkkoJfuTFRFM
-    Ivb+jot1Y6JltCHjqgwGmBi3hPJjOxti0yO1s82m9RKBKzKNGl4/yp4QI6mftK0x
-    F0U8RW5kD7oKD5jYGU6ZZuivZ9SpBg7PdEFXzTTYXwrBD3/W0AkXB/mGSlO4cA9f
-    GsUuA/97tCsspIJKTuKLrt82heu9BUk7Uq56fB2HGjrwAlPgKAR9ajuXjdNwfEOS
-    928kKP544YE5U3pL1J4INEjgzeAiKjtK7npxOVj7clXvO8bi1D3IjJe1NtF2gGbt
-    +gmi38fDqj8iox43ihNbiib3od8GFu30wmr0uJCQC2cEF+paw7RFQWRvYmUgU3lz
-    dGVtcyBJbmNvcnBvcmF0ZWQgKExpbnV4IFJQTSBTaWduaW5nIEtleSkgPHNlY3Vy
-    ZUBhZG9iZS5jb20+iF4EExECAB4FAkXlsbkCGwMGCwkIBwMCAxUCAwMWAgECHgEC
-    F4AACgkQOmm9JPZ3fGe6bgCfRyDO0U8iQM5kHs6kesgio556JPUAoJw5ta+DACp2
-    SbHaG7wwEVOZQBdeuQINBEXlsb4QCACPQRsfdoPMxwACfGh9hc6toEctrLNbzmz0
-    W6tDKBWmbUm5c0RMKSBOHWBQtVhtS6XI2eIPB8XPKoz0uXaeqSYoZaG/vol1mUVz
-    ovVQa16yOHjzwK9VaQ1OxwF2UQ77amI1mT06FBuvu9xw/qyzCQiEqv6mXHp3yw8p
-    yU4n99Jc+B5M3Qs2Ppx8DRu31uM+jW6WIxP5uFWwFty1zftqTFrfbU6DXsJsAdto
-    FnzcbUaweK7Ibd03jdLzibkztrXKb4VasW92RlkCucJU2CaYXpW8CCBJnZ+hzvJp
-    RMp1YKBCcgWCm743pjpRtY5aPMl+5hBAuBsAJ+odLNM2LlWeWbzjAAMFB/44U5sJ
-    WDveeN1drH+WCCMNO83Ixv3i8YAxJgtArQZ36MHauRrAQQLjzjC78YHzeydixoeM
-    iBPvCpqz+kggxl2Nk2YyLIzzuP4BkZuusb46QvEO3FVHGeMNJnF7phbyg5/wE8gS
-    /KjlbiAQ8sDQ/ddDQbJfpgxQT5dBou3lcjrD7L5xJokDFJUoQ3w9N0Wnk96YgtFY
-    rdw0qXm/s5bnes4udSmwheGsKyvaP0r+ahfznQGJlNOxsqNWLGESyA79lnf3Hs79
-    8Tr3n4rqBkecRVdHzLFtzI+mRmwRtQETMr7SL6vRD4c1Vq7aZMuRQ0kgeDP38v7z
-    D+Er8IEvnKgfHdMIiEkEGBECAAkFAkXlsb4CGwwACgkQOmm9JPZ3fGcL8QCgwyz3
-    RWeAGeteAaS6ksAkKtLti/IAoKU5fzzgfcGUfIuyWqPIUAu906XA
-    =QO07
-    -----END PGP PUBLIC KEY BLOCK-----</pre>
-
-Da salvare nel file di testo /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux<br />
-Scaricando questo pacchetto ed installandolo con il comando rpm -ivh si avranno i repository già configurati e pronti per l'uso.
-
-----
-
-I repos sono attivabili e disattivabili dinamicamente mediante l'utilizzo di yum, usando le opzioni ''--enablerepo'' e ''--disablerepo''; facendo un esempio, se si volesse attivare solo il repo livna e disattivare tutti gli altri tranne il repo fedora dovremmo usare il seguente comando:
-
- # yum –disablerepo=* --enablerepo=livna –enablerepo=fedora update
-
-Oppure se si volesse disattivare livna e attivare freshrpms:
-
- # yum –disablerepo=livna –enablerepo=freshrpms update
-
-{{Warning|NON USATE IN CONTEMPORANEA O PER I MEDESIMI PACCHETTI IL REPOSITORY LIVNA E I REPOSITORI RPMFORGE (FRESHRPMS/DRIES/ATRPMS), A CAUSA DELLA LORO INCOMPATIBILITA' CORRERESTE IL RISCHIO DI COMPROMETTERE IL SISTEMA E/O LE APPLICAZIONI}}
+==Aggiungere repository==
+Qualora aveste bisogno di aggiungere altri repository al vostro sistema visitate la categoria [http://doc.fedoraonline.it/Categoria:Repository Repository] e seguite le informazioni riportate.
 
 [[Categoria:Yum]]
 [[Categoria:Repository]]
