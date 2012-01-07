@@ -1,3 +1,5 @@
+{{InCorso|autore=NicolaPoli}}
+{{Autore|NicolaPoli}}
 __TOC__
 Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi. Di
 seguito verranno descritti  entrambi:
@@ -99,3 +101,4 @@ backup
 Nel secondo metodo descritto, si avrà lo svantaggio di dover ad ogni aggiornamento dei drivers, procurarsi l'ultima versione e reinstallarli.
 Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 [[Categoria:Schede grafiche]]
+[[Categoria:Modifica in corso]]
