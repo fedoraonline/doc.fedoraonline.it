@@ -31,7 +31,12 @@ si potrà scegliere i drivers corretti per il proprio sistema:
  # yum install akmod-nvidia-173xx
 *Per una serie 4
  # yum install akmod-nvidia-96xx
-Riavviare il sistema. Terminato.
+Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un ultimo passaggio:
+ # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
+ # dracut /boot/initramfs-$(uname -r).img $(uname -r)
+Terminato.
+
+
 Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata
 dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
 Occorrono i permessi di root, quindi:
