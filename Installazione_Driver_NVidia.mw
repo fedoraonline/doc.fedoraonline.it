@@ -30,7 +30,7 @@ si potrà scegliere i drivers corretti per il proprio sistema:
 Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un ultimo passaggio:
  # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
  # dracut /boot/initramfs-$(uname -r).img $(uname -r)
-L'installazione è terminata.
+L'installazione essenziale del driver Nvidia è terminata.
 
 
 
@@ -41,6 +41,11 @@ Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video 
  # yum install xorg-x11-drv-nvidia-173xx-libs.i686
 *Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
  # yum install xorg-x11-drv-nvidia-96xx-libs.i686
+
+
+
+Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere i seguenti pacchetti:
+ # yum install vdpau-video-freeworld libva-freeworld 
 
 
 
