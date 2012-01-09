@@ -30,7 +30,18 @@ si potrà scegliere i drivers corretti per il proprio sistema:
 Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un ultimo passaggio:
  # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
  # dracut /boot/initramfs-$(uname -r).img $(uname -r)
-Terminato.
+L'installazione è terminata.
+
+
+
+Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
+*Per una serie 6 o superiore 
+ # yum install xorg-x11-drv-nvidia-libs.i686
+*Per una serie 5 (non ancora disponibili per Fedora 16)
+ # yum install xorg-x11-drv-nvidia-173xx-libs.i686
+*Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
+ # yum install xorg-x11-drv-nvidia-96xx-libs.i686
+
 
 
 Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata
