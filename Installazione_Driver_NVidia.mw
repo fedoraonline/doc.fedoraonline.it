@@ -23,9 +23,9 @@ comando:
 si potrà scegliere i drivers corretti per il proprio sistema:
 *Se si possiede una nVidia GeForce serie 6 o superiore, fare
  # yum install akmod-nvidia
-*Per una serie 5
+*Per una serie 5 (non ancora disponibili per Fedora 16)
  # yum install akmod-nvidia-173xx
-*Per una serie 4
+*Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
  # yum install akmod-nvidia-96xx
 Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un ultimo passaggio:
  # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
