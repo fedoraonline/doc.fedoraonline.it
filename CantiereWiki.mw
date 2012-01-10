@@ -59,7 +59,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
-{{RiletturaArticolo|fonte=|articolo=Titolo|autore=NomeAutore|rilettore=?|data=gg/mm/aaaa|stato=DaFare}}
+{{RiletturaArticolo|fonte=|articolo=Installazione Driver NVidia|autore=NicolaPoli|rilettore=?|data=10/01/2012|stato=DaFare}}
 |}
 
 
@@ -82,7 +82,6 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 {{ModificaArticolo|articolo=Fedora, yum e repository|autore=AlbertoChiusole|responsabile=AlbertoChiusole|data=03/01/2012|stato=DaFare}}
-{{ModificaArticolo|articolo=Installazione Driver NVidia|autore=NicolaPoli|responsabile=NicolaPoli|data=07/01/2012|stato=DaFare}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
