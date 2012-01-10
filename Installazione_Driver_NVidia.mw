@@ -32,9 +32,6 @@ Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un
  # dracut /boot/initramfs-$(uname -r).img $(uname -r)
 L'installazione essenziale del driver Nvidia è terminata.
 
-
-
-
 In alcuni casi può esser utile effettuare dei passaggi ulteriori:
 
 *Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
@@ -45,12 +42,8 @@ In alcuni casi può esser utile effettuare dei passaggi ulteriori:
 **Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
  # yum install xorg-x11-drv-nvidia-96xx-libs.i686
 
-
-
 *Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere i seguenti pacchetti:
  # yum install vdpau-video-freeworld libva-freeworld 
-
-
 
 *Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
 Occorrono i permessi di root, quindi:
@@ -124,4 +117,4 @@ Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 * http://rpmfusion.org/Howto/nVidia
 
 [[Categoria:Schede grafiche]]
-[[Categoria:Modifica in corso]]
+[[Categoria:Rilettura in corso]]
