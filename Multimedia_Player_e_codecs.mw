@@ -6,7 +6,7 @@ Prima di cominciare è bene sapere che il Fedora Project '''NON INCLUDE''' tra i
 * software gravato da contenziosi legali;
 * software che viola le leggi degli Stati Uniti.
 
-Per questi motivi, molti programmi e codecs devo essere installati prelevandoli dai repositori di terze parti (es. [RPMFusion|RPMFusion]).<br />
+Per questi motivi, molti programmi e codecs devo essere installati prelevandoli dai repositori di terze parti (es. [[RPMFusion|RPMFusion]]).<br />
 Peculiarità dei riproduttori multimediali è data dal fatto che taluni tra essi condividono plugins, codecs o librerie, per cui è difficile stabilire una procedura univoca di installazione, per cui le dipendenze potrebbero essere soddisfatte anche da altri programmi o dalla diversa sequenza di installazione.
 In linea di massima è utile procedere secondo la seguente logica:
 
