@@ -142,7 +142,7 @@ Lasciando perdere la parte ''fedora-debuginfo'' e ''fedora-source'' che devono v
 
  [fedora]
 
-è il nome di riferimento per l'attivazione o disattivazione a linea di comando (vedremo poi come utilizzarli), del repo.
+è il nome di riferimento per l'attivazione o disattivazione a linea di comando del repo.
 
  name=Fedora $releasever - $basearch
 
