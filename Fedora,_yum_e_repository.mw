@@ -86,9 +86,13 @@ aggiorna KDE e
 lo rimuove.
 
 ===Installazione in locale===
-Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato sul proprio hard disk e volendolo installare con l'ausilio di yum per la ricerca delle dipendenze online, occorre digitare (posizionandosi nella directory dove è presente l'rpm da installare):
+Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato sul proprio hard disk e volendolo installare con l'ausilio di yum per la ricerca delle dipendenze mancanti, occorre digitare (posizionandosi nella directory dove è presente l'rpm da installare):
 
  # yum localinstall nome_programma
+
+Questa opzione può essere usata anche per installare localmente un rpm proveniente dalla rete: la sintassi è simile al precedente
+
+ # yum localinstall indirizzo_dove_è_presente_il_file.rpm
 
 ===Plugins per yum===
 Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti:
