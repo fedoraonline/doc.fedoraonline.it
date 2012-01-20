@@ -36,7 +36,7 @@ Questo comando si occupa di controllare il volume indicato.
 
  # resize2fs -p /dev/mapper/VolGroup00-LogVol00 225G 
 
-Con resize2fs si ridimensiona il filesystem fino alle dimensioni indicate (225GB). Questo comando funziona sia con ext2/ext3 sia con il nuovo ext4 di Fedora 11.
+Con resize2fs si ridimensiona il filesystem fino alle dimensioni indicate (225GB). Questo comando funziona sia con ext2/ext3 sia con l'ext4 introdotto a partire da Fedora 11.
 
  # lvm lvreduce -L 250G /dev/mapper/VolGroup00-LogVol00  
 
