@@ -91,13 +91,13 @@ Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato s
  # yum localinstall nome_programma
 
 ===Plugins per yum===
-Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti (questi plugin dovrebbero essere stati installati di base nel sistema, nel caso che non lo fossero basta installarli comodamente con yum):
+Esistono anche dei plugin per yum, quelli più interessanti sono i seguenti:
 
-* '''yum-presto''': plugin che permette la risoluzione delle dipendenze in locale anzichè in remoto. Questo plugin, appoggiandosi a dei metadati (drpm), permette di scaricare solo le porzioni di pacchetti che differiscono dalla versione installata del programma, riducendo quindi la dimensione dei file da scaricare;
-* '''yum-fastestmirror''': plugin che prima di iniziare il download effettua una ricerca del mirror con una migliore velocità di connessione.
+* '''yum-presto''': plugin che permette la risoluzione delle dipendenze in locale anzichè in remoto. Questo plugin, appoggiandosi a dei metadati (drpm), permette di scaricare solo le porzioni di pacchetti che differiscono dalla versione installata del programma a quella a cui si sta facendo l'aggiornamento, riducendo quindi la dimensione dei file da scaricare e ovviamente il nostro tempo (questo plugin dovrebbe essere già integrato di base nella nostra installazione, nel caso che non lo fosse basta installarlo tranquillamente da yum o gestore grafico);
+* '''yum-plugin-fastestmirror''': plugin molto utile che prima di iniziare il download effettua una ricerca dei mirror con una migliore velocità di connessione.
 
 
-Per altri plugin di yum, da terminale: '''yum search yum-plugin'''
+Per altri plugin di yum, digitare da terminale: '''yum search yum-plugin'''
 
 ==Configurazione dei Repositories==
 
