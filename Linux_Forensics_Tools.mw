@@ -13,18 +13,4 @@ si può verificare la corretta presenza del repository ''forensics'' e ''forensi
 Il repository offre, inoltre, un metapacchetto apposito per installare in un colpo solo tutti i software forniti:
  # yum install CERT-Forensics-Tools
 
-== Accortezza: disabilitare il repo ==
-Come per tutti i repository non ufficiali di Fedora si consiglia di tenere disabilitato il repository yum ed abilitarlo solo all'occorrenza.
-
-Aprire con il proprio editor di testo preferito il file di configurazione:
- # vim /etc/yum.repos.d/cert-forensics-tools.repo
-
-modificare la/le voce/i
- enabled=1
-in 
- enabled=0
-
-Salvare e chiudere. Da yum si potrà abilitare il repo con l'opzione enablerepo, per aggiornare i pacchetti precedentemente installati, per esempio dare:
- # yum --enablerepo=forensics --enablerepo=forensics-splunk update
-
-[[Categoria:Repository]]
+[[:Categoria:Scrittura in corso]]
