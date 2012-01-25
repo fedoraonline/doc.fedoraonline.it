@@ -7,15 +7,40 @@ seguito verranno descritti  entrambi:
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 Per sicurezza dare un:
  # yum update rpmfusion*
+
+=== Per versioni di Fedora 16 ===
+Installare i driver akmod-nvidia:
+ # yum install akmod-nvidia
+
+Accertare corretta riconfigurazione di grub2, con il proprio editor di testo (nell'esempio vim) aprire il seguente file:
+ # vim /etc/default/grub
+Controllare che la riga contenente la variabile '''GRUB_CMDLINE_LINUX=''' contenga alla fine queste stringhe ''nouveau.modeset=0 rd.driver.blacklist=nouveau'' come il file di esempio qui di seguito:
+ # cat /etc/default/grub
+ GRUB_TIMEOUT=5
+ GRUB_DISTRIBUTOR="Fedora"
+ GRUB_DEFAULT=saved
+ GRUB_CMDLINE_LINUX="rd.md=0 rd.lvm=0 rd.dm=0 quiet SYSFONT=latarcyrheb-sun16 rhgb rd.luks=0  KEYTABLE=it LANG=en_US.UTF-8 nouveau.modeset=0 rd.driver.blacklist=nouveau"
+
+Fare una copia di backup del file di configurazione di grub2:
+ # cp /boot/grub2/grub.cfg /boot/grub2/grub.cfg.backup
+
+Ricreare la configurazione di grub2:
+ # grub2-mkconfig -o /boot/grub2/grub.cfg
+
+Riavviare la macchina e controllare eventuali errori.
+
+=== Per versioni precedenti a Fedora 16 ===
 Ora occorre installare il pacchetto sviluppo del kernel:
  # yum install kernel-devel
+
 Oppure '''kernel-PAE-devel''' se si usa il kernel-PAE; inoltre verificare che le
 versioni di kernel e kernel-devel (o kernel-PAE-devel) "collìmino", cioè
 corrispondano perfettamente:
  $ rpm -qa|grep kernel
 e
  $ rpm -q kernel-devel
-Mi raccomando di verificare che la versione di kernel che si utilizza
+
+Verificare che la versione di kernel che si utilizza
 corrisponda alla versione del kernel-devel.
 In base al modello di videocard posseduta che si potrà evidenziare con il
 comando:
@@ -30,11 +55,11 @@ si potrà scegliere i drivers corretti per il proprio sistema:
 Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un ultimo passaggio:
  # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
  # dracut /boot/initramfs-$(uname -r).img $(uname -r)
+
 L'installazione essenziale del driver Nvidia è terminata.
 
-In alcuni casi può esser utile effettuare dei passaggi ulteriori:
-
-*Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
+== Accelarazione video per applicazioni a 32 bit ==
+Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
 **Per una serie 6 o superiore 
  # yum install xorg-x11-drv-nvidia-libs.i686
 **Per una serie 5 (non ancora disponibili per Fedora 16)
@@ -45,11 +70,13 @@ In alcuni casi può esser utile effettuare dei passaggi ulteriori:
 *Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere i seguenti pacchetti:
  # yum install vdpau-video-freeworld libva-freeworld 
 
-*Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
+== Risoluzione problemi monitor ==
+Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
 Occorrono i permessi di root, quindi:
  $ su
  password
  # nvidia-settings
+
 Da "X Server Display configuration" impostare la risoluzione e la frequenza a 60hz
 e salvare il file nel xorg.conf con il bottone che è visualizzato nella GUI. 
 Dopodichè aprire il file xorg.conf ed inserire le modifiche:
@@ -64,6 +91,7 @@ Dopodichè aprire il file xorg.conf ed inserire le modifiche:
     VertRefresh     56.0 - 75.0
     Option         "DPMS"
  EndSection
+
 Da notare che la sovrascrittura da parte di nvidia-settings ha tolto il
 path per il driver stesso, per cui non si avrà più il direct rendering attivo.
 Inserite, quindi, nel "file section" quanto necessario:
@@ -73,7 +101,9 @@ Inserite, quindi, nel "file section" quanto necessario:
      '''ModulePath   "/usr/lib/xorg/modules/extensions/nvidia"'''
      '''ModulePath   "/usr/lib/xorg/modules"'''
  EndSection
-Salvare il proprio xorg.conf e riavviare il server X con <code>Ctrl+Alt+Backspace</code>.
+
+Da Fedora 16 questa modifica non dovrebbe essere necessaria.<br />
+Salvare il proprio xorg.conf e riavviare il server X con <code>Ctrl+Alt+Backspace</code>.<br />
 Verificare ora se tutto è andato come desiderato:
 
  $ glxgears
@@ -84,9 +114,9 @@ Verificare ora se tutto è andato come desiderato:
  29894 frames in 5.0 seconds = 5978.601 FPS
 Volendo si può anche abilitare gli effetti Desktop, ora tutto il necessario è stato attivato.
 
-Dopo l'uso dell'utility come root
+Dopo l'uso di:
  # nvidia-settings
-controllare che in /etc/X11/xorg.conf sia presente la Section "Files"
+con versioni di Fedora precedenti alla 16 di controllare che in /etc/X11/xorg.conf sia presente la Section "Files"
 
 ==Utilizzo dell'installer scaricabile dal sito di nvidia==
 Una volta scaricato il package per la propria videocard, occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
