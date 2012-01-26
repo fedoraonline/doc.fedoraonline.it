@@ -1,3 +1,5 @@
+I driver ati sono proprietari, è software chiuso e non libero, sconsigliamo di installare questo software comunque.
+
 Tutte le operazioni vanno fatte da root.
 Se si hanno installati i driver ati proprietari non rpm,  dare prima di tutto:
  # yum reinstall mesa-libGL
@@ -13,11 +15,6 @@ Se si possiede un kernel '''non PAE''' procedere così:
  # yum install kmod-catalyst xorg-x11-drv-catalyst xorg-x11-drv-catalyst-libs.i686
 Se, invece, si possiede un kernel PAE:
  # yum install kmod-catalyst-PAE xorg-x11-drv-catalyst-libs.i686 xorg-x11-drv-catalyst 
-Poi dare:
- # sed -i '/root=/s|$| nomodeset|' /boot/grub/grub.conf
- # cd /boot
- # mv initramfs-`uname -r`.img initramfs-`uname -r`.img-original
- # dracut -v /boot/initramfs-`uname -r`.img `uname -r`[/code]
 infine un:
  # reboot 
 finito.
