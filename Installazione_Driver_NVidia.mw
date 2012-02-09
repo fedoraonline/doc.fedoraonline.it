@@ -1,7 +1,5 @@
-{{InCorso|autore=NicolaPoli}}
-{{Autore|NicolaPoli}}
 __TOC__
-Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi. Di
+Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi: tramite pacchetto rpm o tramite installer ufficiale. Di
 seguito verranno descritti  entrambi:
 ==Installazione dei drivers usando akmod-nvidia==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
@@ -147,4 +145,3 @@ Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 * http://rpmfusion.org/Howto/nVidia
 
 [[Categoria:Schede grafiche]]
-[[Categoria:Rilettura in corso]]
