@@ -42,7 +42,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Linux Forensics Tools|autore=MarioSantagiuliana|stato=InCorso}}
 |}
 
 == Rilettura in corso ==
@@ -60,7 +59,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
-{{RiletturaArticolo|fonte=|articolo=Installazione Driver NVidia|autore=NicolaPoli|rilettore=MarioSantagiuliana|data=10/01/2012|stato=Terminato}}
+{{RiletturaArticolo|fonte=|articolo=titolo|autore=NomeAutore|rilettore=NomeRilettore|data=gg/mm/aaa|stato=DaFare}}
 |}
 
 
