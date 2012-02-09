@@ -27,4 +27,4 @@ in
 Salvare e chiudere. Da yum si potrà abilitare il repo con l'opzione enablerepo, per aggiornare i pacchetti precedentemente installati, per esempio dare:
  # yum --enablerepo=forensics --enablerepo=forensics-splunk update
 
-[[:Categoria:Scrittura in corso]]
+[[Categoria:Repository]]
