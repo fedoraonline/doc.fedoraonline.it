@@ -156,19 +156,19 @@ Lasciando perdere la parte ''fedora-debuginfo'' e ''fedora-source'' che devono v
 
  name=Fedora $releasever - $basearch
 
-non è altro che la definizione del nome comprendente la versione (risultato della variabile $releasever che può essere il numero 6 per Fedora Core 6, il numero 7 per Fedora 7 ecc...) e l'architettura del sistema (risultato della variabile $basearch che può essere i386 per i processori a 32 bit , x86_64 per i processori a 64 bit ecc.)
+non è altro che la definizione del nome comprendente la versione (risultato della variabile $releasever che può essere il numero 15 per Fedora 15, il numero 16 per Fedora 16, ecc...) e l'architettura del sistema (risultato della variabile $basearch che può essere i386 per i processori a 32 bit, x86_64 per i processori a 64 bit ecc.)
 
- #baseurl=http://download.fedora.redhat.com/pub/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
+ #baseurl=http://download.fedoraproject.org/pub/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
 
-invece è il link pricipale da cui scaricare i pacchetti, in questo caso è commentato (si noti il '''#''' all'inizio della riga), per cui il programma salta la lettura di questa riga, in quanto sono attivi i mirrors che risultano dalla lista data da questo indirizzo:
+Questo invece è il link pricipale da cui scaricare i pacchetti. In questo caso è commentato (si noti il '''#''' all'inizio della riga), per cui il programma salta la lettura di questa riga, in quanto sono attivi i mirrors che risultano dalla lista data da questo indirizzo:
 
  mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
 
-per cui yum scorre la lista dei mirrors del link e, al primo trovato libero, scarica i pacchetti
+per cui yum scorre la lista dei mirrors del link e, al primo trovato disponibile, scarica i pacchetti. '''''Nelle versioni più recenti di fedora si è introdotto il metalink, cioè il download diretto della lista di mirror disponibile.'''''
 
  enabled=1
 
-questa opzione è molto importante perchè permette, staticamente, di attivare o disattivare un repo, cioè di poterlo comprendere o meno nell'utilizzo di yum. In questo caso il repo è attivo (enabled=1) mentre se si volesse disattivarlo occorrerebbe impostare l'opzione a 0 (enabled=0)
+questa opzione è molto importante perchè permette, staticamente, di attivare o disattivare un repo, cioè di poterlo comprendere o meno nell'utilizzo di yum. In questo caso il repo è attivo (enabled=1) mentre se si volesse disattivarlo occorrerebbe impostare l'opzione a 0 (enabled=0), come ad esempio è impostato di default nei repo debuginfo e source per evitare problemi di incongruenze con pacchetti installati.
 
  gpgcheck=1
 
@@ -177,19 +177,22 @@ Questa è l'opzione che permette di verificare la validità del pacchetto confro
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora file:///etc/pki/rpm-gpg/RPM-GPG-KEY
 
 che significa che la chiave è all'interno della directory /etc/pki/rpm-gpg/.
-La chiave la si può importare anche con il comando rpm --import:
+Per indicare dove è situata la chiave di validità esistono te metodi.
+* Importazione con il comando rpm --import:
 
  # rpm --import http://percorso_della_chiave
 
-definendo il percorso internet direttamente nel repo:
+* Definendo il percorso internet direttamente nel repo:
 
+ ...
  gpgkey=http://percorso_della_chiave
 
-oppure posizionando la chiave all'interno della cartella etc/pki/rpm-gpg/
+* Posizionando la chiave all'interno della cartella etc/pki/rpm-gpg/
 
+ # cd /etc/pki/rpm-gpg/
  # wget http://percorso_della_chiave
 
-e indicando il percorso all'interno del file repo.
+e indicando il percorso del file all'interno del file repo.
 
 ==Aggiungere repository==
 Qualora aveste bisogno di aggiungere altri repository al vostro sistema visitate la categoria [http://doc.fedoraonline.it/Categoria:Repository Repository] e seguite le informazioni riportate.
