@@ -83,15 +83,35 @@ Per utilizzarla è necessario aggiungere un'altra estensione, la selezione temi,
 
  # yum install gnome-shell-extensions-user-theme  
  # yum install --nogpg http://timlau.fedorapeople.org/files/packages/theme-selector/gnome-shell-extensions-theme-selector-0.9-1.fc15.noarch.rpm
-
+[[Image:Gnome-themes.jpg|right|thumb|350px|Fallback: L'estensione per selezionare i tuoi temi personali.]]
 A questo punto è necessario linkare i temi all'utente, per cui digitare, da utente normale:
 
  $ theme-selector-setup
  User themes are now linked into /home/nome_utente/.themes
-[[Image:Gnome-themes.jpg|right|thumb|350px|Fallback: L'estensione per selezionare i tuoi temi personali.]]
+
 Riavviare Gnome-Shell:<br>
 Premere ALT+F2 e alla richiesta di comando inserire la lettera "r" seguita da <invio>.<br />
 Fatto, ora oltre alle Finestre e Applicazioni si avrà la possibilità di selezionare i temi personali.
+
+===Google-Search===
+Questa applicazione permette di fare una ricerca su google di una selezione precedentemente fatta. In breve, si seleziona il testo che si vuole cercare su google > lo si copia o taglia > si clicca sulla [https://extensions.gnome.org/static/extension-data/screenshots/screenshot_176_1.png lente di ingrandimento] (il secondo simbolo dell'immagine nel link) sulla barra superiore e si aprirà automaticamente firefox o il browser di fiducia con la ricerca effettuata su google.
+Per chi avesse avuto problemi con l'estensione [https://extensions.gnome.org/extension/176/google-search/ Google Search] si può ovviare con questo metodo.
+
+Prima di tutto cloniamo il repo git con il seguente comando:
+ $ cd && git clone git://github.com/sciancio/websearch
+Adesso sono disponibili due strade:
+* Se volete che l'estensione sia utilizzata solo dal vostro account create una cartella così:
+ $ mkdir $HOME/.local/share/gnome-shell/extensions/websearch@ciancio.net
+e lo spostiamo nella cartella che abbiamo creato precedentemente:
+ $ cd && mv $HOME/websearch $HOME/.local/share/gnome-shell/extensions/websearch@ciancio.net
+* Altrimenti se volete che sia disponibile per tutti gli utenti:
+ $ su -c 'mkdir /usr/share/gnome-shell/extensions/websearch@ciancio.net'
+e quindi spostiamo il repo git:
+ $ su -c 'mv /home/NOME_ACCOUNT/websearch mv /usr/share/gnome-shell/extensions/websearch@ciancio.net
+inserendo al posto di NOME_ACCOUNT il nome dell'account nel quale avete scaricato il repository git.
+
+Quindi un bel Alt+F2 e '''r''' e verrà riavviata la gnome-shell, andate su gnome-tweak-tool e avviate l'estensione.
+L'estensione (alla versione 0.1) è stata testata su fedora16 ma dovrebbe funzionare anche su fedora15.
 
 ==Altri esempi di personalizzazione==
 
