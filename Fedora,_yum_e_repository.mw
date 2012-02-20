@@ -154,6 +154,9 @@ Lasciando perdere la parte ''fedora-debuginfo'' e ''fedora-source'' che devono v
 
 non è altro che la definizione del nome comprendente la versione (risultato della variabile $releasever che può essere il numero 15 per Fedora 15, il numero 16 per Fedora 16, ecc...) e l'architettura del sistema (risultato della variabile $basearch che può essere i386 per i processori a 32 bit, x86_64 per i processori a 64 bit ecc.)
 
+ failovermethod=priority
+Questa opzione dice a yum (in caso di mirror non disponibile, non corretto o per problemi vari) di usare il mirror seguente nell'ordine ricevuto nel file mirrorlist (vedi sotto); è disponibile eventualmente l'opzione ''roundrobin'' che seleziona un url a caso dalla lista ed esegue il comando dato a yum nel mirror scelto. 
+
  #baseurl=http://download.fedoraproject.org/pub/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
 
 Questo invece è il link pricipale da cui scaricare i pacchetti. In questo caso è commentato (si noti il '''#''' all'inizio della riga), per cui il programma salta la lettura di questa riga, in quanto sono attivi i mirrors che risultano dalla lista data da questo indirizzo:
