@@ -198,7 +198,7 @@ Per indicare dove è situata la chiave di validità esistono te metodi.
 e indicando il percorso del file all'interno del file repo.
 
 
-Per una lista più completa e dettagliata di tutte le funzioni e le potenzialità di yum si consiglia una ricerca dettagliata all'interno del manuale di yum e di yum.conf.
+Per una lista più completa e dettagliata di tutte le funzioni e le potenzialità di yum si consiglia una ricerca dettagliata all'interno del manuale di yum e di yum.conf:
  man yum
  man yum.conf
 
