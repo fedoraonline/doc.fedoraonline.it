@@ -106,12 +106,8 @@ Per altri plugin di yum, digitare da terminale: '''yum search yum-plugin'''
 ==Configurazione dei Repositories==
 
 Tutto quanto sopra detto, senza un ulteriore intervento, è applicabile per i soli repository installati di default da Fedora.
-I repository di terze parti di più frequente utilizzo, e che soddisfano al 99% le proprie esigenze (probabilmente se non si trova il pacchetto rpm in questi repos si dovrà scaricare i sorgenti e procedere alla compilazione manuale del programma perdendo la possibilità di gestirlo tramite yum o rpm in quanto esso non verrebbe “censito” nel database dei programmi installati) sono:
-
-# '''livna''', che è mantenuto anche da alcuni sviluppatori del Fedora Project, utile per i moduli del kernel (ad esempio i driver delle schede video);
-# '''freshrpms''', che è mantenuto da un componente di RPMforge;
-# '''ATrpms''' che collabora con i repos appartenenti a RPMforge ed ad altri;
-# '''kde-redhat''', un repository dedicato a KDE;
+Ma spieghiamo cosa è un repository. Tutti i pacchetti RPM disponibili per Fedora sono raccolti in una specie di grande banca dati, i cosiddetti '''repository'''. Sono questi server che Fedora, tramite la GUI PackageKit o il nostro yum da terminale, interroga per reperire informazioni su un determinato pacchetto o gruppo di applicazioni, e allo stesso modo verifica se sono disponibili degli aggiornamenti.
+Fedora ha già a bordo i repository "ufficiali", ma ne esistono molti altri. Il motivo per cui Fedora fornisce solo i suoi repository è facile intuirlo: Fedora è una distribuzione progettata per usare meno possibile software proprietario o con restrizioni quindi i repo consigliati dal fedoraproject sono quelli installati di default con fedora (fedora.repo, fedora-updates.repo, fedora-updates-testing.repo); se avete bisogno di programmi al di fuori di questi repo visitate la [http://doc.fedoraonline.it/Categoria:Repository Pagina dei Repository] e le varie guide per ottimizzare la nostra fedora [http://doc.fedoraonline.it/Fedora_-_Missione_possibile#Articoli_consigliati qui]
 
 Innanzitutto andiamo ad analizzare il contenuto di un file .repo all'interno di /etc/yum.repos.d. In questo caso apriamo il file /etc/yum.repos.d/fedora.repo:
 
@@ -164,11 +160,14 @@ Questo invece è il link pricipale da cui scaricare i pacchetti. In questo caso 
 
  mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&arch=$basearch
 
-per cui yum scorre la lista dei mirrors del link e, al primo trovato disponibile, scarica i pacchetti. '''''Nelle versioni più recenti di fedora si è introdotto il metalink, cioè il download diretto della lista di mirror disponibile.'''''
+per cui yum scarica la lista dei mirrors dal link e, al primo trovato disponibile, scarica i pacchetti.
 
  enabled=1
 
 questa opzione è molto importante perchè permette, staticamente, di attivare o disattivare un repo, cioè di poterlo comprendere o meno nell'utilizzo di yum. In questo caso il repo è attivo (enabled=1) mentre se si volesse disattivarlo occorrerebbe impostare l'opzione a 0 (enabled=0), come ad esempio è impostato di default nei repo debuginfo e source per evitare problemi di incongruenze con pacchetti installati.
+
+ metadata_expire=7d
+con questa opzione yum mantiene in memoria il metadata contenente l'elenco dei pacchetti per il tempo impostato dall'utente, senza riscaricarlo ad ogni aggiornamento: in questo caso il tempo è 7d ossia 7 giorni. Si possono impostare diversi periodi di tempo, utilizzando '''s''' (per i secondi), '''m''' (per i minuti), '''h''' (per le ore), '''d''' (per i giorni) oppure si può usare '''never''', che significa che il metadata del repository non verrà eliminato.
 
  gpgcheck=1
 
@@ -194,6 +193,11 @@ Per indicare dove è situata la chiave di validità esistono te metodi.
  # wget http://percorso_della_chiave
 
 e indicando il percorso del file all'interno del file repo.
+
+
+Per una lista più completa e dettagliata di tutte le funzioni e le potenzialità di yum si consiglia una ricerca dettagliata all'interno del manuale di yum e di yum.conf.
+ man yum
+ man yum.conf
 
 ==Aggiungere repository==
 Qualora aveste bisogno di aggiungere altri repository al vostro sistema visitate la categoria [http://doc.fedoraonline.it/Categoria:Repository Repository] e seguite le informazioni riportate.
