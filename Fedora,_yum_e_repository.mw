@@ -184,7 +184,8 @@ Per indicare dove è situata la chiave di validità esistono te metodi.
 
 * Definendo il percorso internet direttamente nel repo:
 
- ...
+ ..
+ 
  gpgkey=http://percorso_della_chiave
 
 * Posizionando la chiave all'interno della cartella etc/pki/rpm-gpg/
