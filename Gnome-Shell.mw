@@ -93,6 +93,7 @@ Riavviare Gnome-Shell:<br>
 Premere ALT+F2 e alla richiesta di comando inserire la lettera "r" seguita da <invio>.<br />
 Fatto, ora oltre alle Finestre e Applicazioni si avrà la possibilità di selezionare i temi personali.
 
+
 ===Google-Search===
 Questa applicazione permette di fare una ricerca su google di una selezione precedentemente fatta. In breve, si seleziona il testo che si vuole cercare su google > lo si copia o taglia > si clicca sulla [https://extensions.gnome.org/static/extension-data/screenshots/screenshot_176_1.png lente di ingrandimento] (il secondo simbolo dell'immagine nel link) sulla barra superiore e si aprirà automaticamente firefox o il browser di fiducia con la ricerca effettuata su google.
 Per chi avesse avuto problemi con l'estensione [https://extensions.gnome.org/extension/176/google-search/ Google Search] si può ovviare con questo metodo.
