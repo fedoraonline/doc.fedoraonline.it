@@ -21,7 +21,7 @@ La partizione di swap non ha bisogno di un punto di mount.
 
 ==Dimensione e funzione delle partizioni==
 
-La partizione di '''boot''' deve trovarsi fisicamente nei primi settori del disco (deve partire dal settore 1) e basta che sia grande 500Mb. Conterrà i file necessari alle prime fasi di avvio del sistema.
+La partizione di '''boot''' deve trovarsi fisicamente nei primi settori del disco (deve partire dal settore 1) e basta che sia grande 500Mb: è però consigliabile impostare la boot ad almeno 1Gb per evitare problemi delle ultime versioni di fedora al momento del preupgrade. Conterrà i file necessari alle prime fasi di avvio del sistema.
 
 La partizione di '''swap''' serve come contenitore temporaneo per dati che il sistema sta utilizzando, ma che non riesce a immagazzinare nella memoria RAM. Sui sistemi più vecchi, con meno di 32 Mb di RAM era consigliabile creare una partizione di swap di dimensioni doppie rispetto alla quantità di RAM, mentre con le macchine attuali, che hanno grandi quantità di RAM è possibile lavorare bene anche con una partizione di swap delle stesse dimensioni della RAM fisica.
 
