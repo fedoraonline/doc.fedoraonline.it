@@ -81,8 +81,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Responsabile della modifica
 ! Data
 ! Stato
-{{ModificaArticolo|articolo=Fedora, yum e repository|autore=AlbertoChiusole|responsabile=AlbertoChiusole|data=03/01/2012|stato=InCorso}}
-{{ModificaArticolo|articolo=Gnome-Shell e le sue estensioni|autore=AlbertoChiusole|responsabile=AlbertoChiusole|data=20/02/2012|stato=InCorso}}
+{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
