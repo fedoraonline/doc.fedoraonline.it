@@ -1,4 +1,4 @@
-{{InCorso|autore=AlbertoChiusole}}
+{{Autore|AlbertoChiusole}}
 == Introduzione ==
 
 Quello che attualmente si vede come Gnome-shell non è, e non sarà, la versione finale; molte funzioni non sono attive in questo momento e verranno implementate solo strada facendo, il che ha permesso al team di Fedora di compiere un atterraggio morbido, in seguito anche all'esperienza e lo scotto pagato con l'uscita di KDE 4.0 qualche anno fa.<br />
@@ -94,26 +94,25 @@ Riavviare Gnome-Shell:<br>
 Premere ALT+F2 e alla richiesta di comando inserire la lettera "r" seguita da <invio>.<br />
 Fatto, ora oltre alle Finestre e Applicazioni si avrà la possibilità di selezionare i temi personali.
 
-
 ===Google-Search===
 Questa applicazione permette di fare una ricerca su google di una selezione precedentemente fatta. In breve, si seleziona il testo che si vuole cercare su google > lo si copia o taglia > si clicca sulla [https://extensions.gnome.org/static/extension-data/screenshots/screenshot_176_1.png lente di ingrandimento] (il secondo simbolo dell'immagine nel link) sulla barra superiore e si aprirà automaticamente firefox o il browser di fiducia con la ricerca effettuata su google.
 Per chi avesse avuto problemi con l'estensione [https://extensions.gnome.org/extension/176/google-search/ Google Search] si può ovviare con questo metodo.
 
-Prima di tutto cloniamo il repo git con il seguente comando:
+Prima di tutto è necessario clonare il repo git con il seguente comando:
  $ cd && git clone git://github.com/sciancio/websearch
 Adesso sono disponibili due strade:
-* Se volete che l'estensione sia utilizzata solo dal vostro account create una cartella così:
+* Se si vuole che l'estensione sia utilizzata solo dal proprio account si crea una cartella così:
  $ mkdir $HOME/.local/share/gnome-shell/extensions/websearch@ciancio.net
-e lo spostiamo nella cartella che abbiamo creato precedentemente:
+e lo si sposta nella cartella che è stata creata precedentemente:
  $ cd && mv $HOME/websearch $HOME/.local/share/gnome-shell/extensions/websearch@ciancio.net
-* Altrimenti se volete che sia disponibile per tutti gli utenti:
+* Altrimenti, se si vuole che sia disponibile per tutti gli utenti:
  $ su -c 'mkdir /usr/share/gnome-shell/extensions/websearch@ciancio.net'
-e quindi spostiamo il repo git:
+e quindi si sposta il repo git:
  $ su -c 'mv /home/NOME_ACCOUNT/websearch mv /usr/share/gnome-shell/extensions/websearch@ciancio.net
-inserendo al posto di NOME_ACCOUNT il nome dell'account nel quale avete scaricato il repository git.
+inserendo al posto di NOME_ACCOUNT il nome dell'account nel quale il repository git è stato scaricato.
 
-Quindi un bel Alt+F2 e '''r''' e verrà riavviata la gnome-shell, andate su gnome-tweak-tool e avviate l'estensione.
-L'estensione (alla versione 0.1) è stata testata su fedora16 ma dovrebbe funzionare anche su fedora15.
+Premendo '''Alt+F2''' e '''r''' verrà riavviata gnome-shell, andare su gnome-tweak-tool e avviare l'estensione.
+L'estensione (alla versione 0.1) è stata testata su Fedora 16 ma dovrebbe funzionare anche su Fedora 15.
 
 ==Altri esempi di personalizzazione==
 
@@ -176,4 +175,3 @@ Utile per comprendere Gnome-Shell è sicuramente una letta alla [https://fedorap
 * [http://fedora.rasmil.dk/blog/?p=238 Timlau]
 
 [[Categoria:Ambiente Desktop]]
-[[Categoria:Modifica in corso]]
