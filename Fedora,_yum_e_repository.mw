@@ -1,4 +1,3 @@
-{{InCorso|autore=AlbertoChiusole}}
 {{Autore|AlbertoChiusole}}
 ==Introduzione==
 Con la presente guida si vuole solamente aggiornare ed integrare le precedenti redatte sull'uso di yum e sulla configurazione dei repositories per la gestione dei pacchetti rpm in Fedora.<br />
@@ -26,7 +25,7 @@ Eseguendo il comando:
 
  # yum install nome_programma
 
-Yum cercherà nei repository attivati dall'utente, il programma passato come argomento e, se trovato, lo proporrà per l'installazione; basterà digitare "y" o "n" per eseguirla o meno. Esiste anche l'opzione "-y" da passare al comando:
+Yum cercherà nei repository attivati dall'utente, il programma passato come argomento e, se trovato, lo proporrà per l'installazione; basterà digitare "s" o "n" per eseguirla o meno. Esiste anche l'opzione "-y" da passare al comando:
 
  # yum -y install nome_programma 
 
@@ -62,7 +61,7 @@ Talvolta non si sa a quale pacchetto occorre riferirsi per la ricerca di una dat
 
  # yum provides nome_file
 
-proponendo, in base ai repository attivati dall'utente, i pacchetti all'interno dei quali tale file risulta essere presente. A quel punto basta eseguire lo yum install dell'rpm.
+proponendo, in base ai repository attivati dall'utente, i pacchetti all'interno dei quali tale file risulta essere presente. A quel punto basta eseguire l'installazione dell'rpm indicato.
 
 ===Gestione gruppi di programmi===
 Per installare un gruppo di programmi che si sarebbe dovuto/voluto avere, ma che non si è selezionato in fase di prima installazione di Fedora, si può utilizzare yum per porvi rimedio.
@@ -107,9 +106,9 @@ Per altri plugin di yum, digitare da terminale: '''yum search yum-plugin'''
 
 Tutto quanto sopra detto, senza un ulteriore intervento, è applicabile per i soli repository installati di default da Fedora.
 Ma spieghiamo cosa è un repository. Tutti i pacchetti RPM disponibili per Fedora sono raccolti in una specie di grande banca dati, i cosiddetti '''repository'''. Sono questi server che Fedora, tramite la GUI PackageKit o il nostro yum da terminale, interroga per reperire informazioni su un determinato pacchetto o gruppo di applicazioni, e allo stesso modo verifica se sono disponibili degli aggiornamenti.
-Fedora ha già a bordo i repository "ufficiali", ma ne esistono molti altri. Il motivo per cui Fedora fornisce solo i suoi repository è facile intuirlo: Fedora è una distribuzione progettata per usare meno possibile software proprietario o con restrizioni quindi i repo consigliati dal fedoraproject sono quelli installati di default con fedora (fedora.repo, fedora-updates.repo, fedora-updates-testing.repo); se avete bisogno di programmi al di fuori di questi repo visitate la [http://doc.fedoraonline.it/Categoria:Repository Pagina dei Repository] e le varie guide per ottimizzare la nostra fedora [http://doc.fedoraonline.it/Fedora_-_Missione_possibile#Articoli_consigliati qui]
+Fedora ha già a bordo i repository "ufficiali", ma ne esistono molti altri. Il motivo per cui Fedora fornisce solo i suoi repository è facile intuirlo: Fedora è una distribuzione progettata per usare il meno possibile software proprietario o con restrizioni, quindi i repo consigliati dal fedoraproject sono quelli installati di default con Fedora (fedora.repo, fedora-updates.repo, fedora-updates-testing.repo); se si ha bisogno di programmi al di fuori di questi repo basta andare sulla [http://doc.fedoraonline.it/Categoria:Repository Pagina dei Repository] e le varie guide per ottimizzare Fedora [http://doc.fedoraonline.it/Fedora_-_Missione_possibile#Articoli_consigliati qui].
 
-Innanzitutto andiamo ad analizzare il contenuto di un file .repo all'interno di /etc/yum.repos.d. In questo caso apriamo il file /etc/yum.repos.d/fedora.repo:
+Per maggiore chiarezza segue un'analisi del contenuto di un file .repo all'interno di /etc/yum.repos.d. In questo caso aprire il file /etc/yum.repos.d/fedora.repo:
 
  cat /etc/yum.repos.d/fedora.repo
 
@@ -144,7 +143,7 @@ metadata_expire=7d
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch</pre>
 
-Lasciando perdere la parte ''fedora-debuginfo'' e ''fedora-source'' che devono venire utilizzati solo ed esclusivamente in casi speciali (vale a dire, praticamente mai), ci si concentra sulla prima configurazione dove:
+Lasciando perdere la parte ''fedora-debuginfo'' e ''fedora-source'' che devono venire utilizzati solo ed esclusivamente in casi speciali, ci si concentra sulla prima configurazione dove:
 
  [fedora]
 
@@ -179,12 +178,12 @@ Questa è l'opzione che permette di verificare la validità del pacchetto confro
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora file:///etc/pki/rpm-gpg/RPM-GPG-KEY
 
 che significa che la chiave è all'interno della directory /etc/pki/rpm-gpg/.
-Per indicare dove è situata la chiave di validità esistono te metodi.
+Per indicare dove è situata la chiave di validità esistono tre metodi.
 * Importazione con il comando rpm --import:
 
  # rpm --import http://percorso_della_chiave
 
-* Definendo il percorso internet direttamente nel repo:
+* Definendo il percorso http direttamente nel repo:
 
  ..
  
@@ -197,14 +196,12 @@ Per indicare dove è situata la chiave di validità esistono te metodi.
 
 e indicando il percorso del file all'interno del file repo.
 
-
 Per una lista più completa e dettagliata di tutte le funzioni e le potenzialità di yum si consiglia una ricerca dettagliata all'interno del manuale di yum e di yum.conf:
  man yum
  man yum.conf
 
 ==Aggiungere repository==
-Qualora aveste bisogno di aggiungere altri repository al vostro sistema visitate la categoria [http://doc.fedoraonline.it/Categoria:Repository Repository] e seguite le informazioni riportate.
+Qualora si ha necessità di aggiungere altri repository al proprio sistema si rimanda alla categoria [http://doc.fedoraonline.it/Categoria:Repository Repository] seguendo le informazioni ivi riportate.
 
 [[Categoria:Yum]]
 [[Categoria:Repository]]
-[[Categoria:Modifica in corso]]
