@@ -66,6 +66,9 @@ Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shel
 Tra gli aspetti più innovativi di Gnome rientra sicuramente la facilità di personalizzazione. Le varie sezioni del Desktop, le icone, la barra ecc. si possono modificare semplicemente tramite i fogli di stile (CSS).<br />
 Inoltre esistono alcune estensioni, e nel tempo ce ne saranno sempre di più, che rendono il Desktop ancora più immediato nel suo utilizzo. Essi sono gestibili, oltre che da terminale, tramite Gnome-Tweak-Tool, visto in precedenza.
 
+Le estensioni attualmente disponibili possono essere viste e installate tramite il sito https://extensions.gnome.org/.
+Alcune di esse sono anche presenti nel repo fedora.
+
 Di seguito alcuni approfondimenti su qualche estensione:
 
 ===Alternative-status-menu===
