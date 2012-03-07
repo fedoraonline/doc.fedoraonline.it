@@ -117,7 +117,7 @@ inserendo al posto di NOME_ACCOUNT il nome dell'account nel quale il repository 
 Premendo '''Alt+F2''' e '''r''' verrà riavviata gnome-shell, andare su gnome-tweak-tool e avviare l'estensione.
 L'estensione (alla versione 0.1) è stata testata su Fedora 16 ma dovrebbe funzionare anche su Fedora 15.
 
-==Rendere Gnome-Shell simile a gnome 2.x==
+==Rendere Gnome-Shell simile a Gnome 2.x==
 
 Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x.
 
@@ -130,7 +130,9 @@ per Fedora 16:
  # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.6-1.noarch.rpm
 [[Image:Gnome_gnome2.jpg|center|thumb|350px|Nostalgia di Gnome 2? No problem.]]
 
-Il tutto si completa con il Gnome Tweak Tool, attivando tutte le opzioni nella scheda "Scrivania", così da avere disponibili le icone sul desktop.
+Il tutto si completa con il Gnome Tweak Tool: 
+*nella scheda "Scrivania", attivando tutte le opzioni così da avere disponibili le icone sul desktop;
+*nella scheda "Shell", selezionando "all" nell'opzione "Arrangement of buttons on the titlebar" così da non avere solo il tasto di chiusura nelle finestre delle applicazioni.
 
 ==Altri esempi di personalizzazione==
 
