@@ -58,14 +58,15 @@ L'installazione essenziale del driver Nvidia è terminata.
 
 == Accelarazione video per applicazioni a 32 bit in Fedora 64 bit ==
 Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
-**Per una serie 6 o superiore 
+*Per una serie 6 o superiore 
  # yum install xorg-x11-drv-nvidia-libs.i686
-**Per una serie 5 (non ancora disponibili per Fedora 16)
+*Per una serie 5 (non ancora disponibili per Fedora 16)
  # yum install xorg-x11-drv-nvidia-173xx-libs.i686
-**Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
+*Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
  # yum install xorg-x11-drv-nvidia-96xx-libs.i686
 
-*Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere i seguenti pacchetti:
+== Decodifica filmati su gpu ==
+Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere i seguenti pacchetti:
  # yum install vdpau-video-freeworld libva-freeworld
 
 == Risoluzione problemi monitor ==
