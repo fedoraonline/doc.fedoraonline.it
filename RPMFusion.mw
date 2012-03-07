@@ -1,11 +1,19 @@
-Questo documento tratta, anche per Fedora 12, dei principali repositori di terze parti, '''RPMFusion'''.<br />
-Anche se non cambia nulla rispetto alla release precedente, viene proposta la guida per l'installazione dei principali repositori di software di terze parti.<br />
+== Introduzione ==
+Questo documento tratta dei principali repositori di terze parti, '''RPMFusion'''.<br />
+
 RPMFusion distingue i programmi tra i free ed i nonfree, ciascuno con una locazione propria.<br />
-Per i free, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm questo].<br />
-Qualora non si volesse installare in locale è possibile farlo direttamente attingendo al link usando il comando rpm:
+
+La guida espone due metodi differenti per la sua installazione.
+
+== Installazione tramite pacchetto rpm ==
+Per i free, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm questo]. Si possono poi installare semplicemente tramite doppio clic su tali files.
+
+In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale, è possibile farlo direttamente attingendo al link usando il comando rpm:
 
  $ su -c 'rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm</nowiki> <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm</nowiki>'
 {{Warning|Il comando va digitato su una unica riga}} 
+
+== Installazione manuale ==
 E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
 Usando nano (o qualsiasi editor si preferisca):
 
@@ -118,6 +126,9 @@ con le seguenti istruzioni:
  enabled=0
  gpgcheck=1
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever-$basearch<br />
+
+== Riferimenti ==
+* http://www.rpmfusion.org/
  
 [[Categoria:Repository]]
 [[Categoria:Yum]]
