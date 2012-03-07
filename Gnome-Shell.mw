@@ -117,6 +117,21 @@ inserendo al posto di NOME_ACCOUNT il nome dell'account nel quale il repository 
 Premendo '''Alt+F2''' e '''r''' verrà riavviata gnome-shell, andare su gnome-tweak-tool e avviare l'estensione.
 L'estensione (alla versione 0.1) è stata testata su Fedora 16 ma dovrebbe funzionare anche su Fedora 15.
 
+==Rendere Gnome-Shell simile a gnome 2.x==
+
+Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x.
+
+Si può installare semplicemente con, per Fedora 15:
+
+ # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.8-1.noarch.rpm
+
+per Fedora 16:
+
+ # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.6-1.noarch.rpm
+[[Image:Gnome_gnome2.jpg|center|thumb|350px|Nostalgia di Gnome 2? No problem.]]
+
+Il tutto si completa con il Gnome Tweak Tool, attivando tutte le opzioni nella scheda "Scrivania", così da avere disponibili le icone sul desktop.
+
 ==Altri esempi di personalizzazione==
 
 Come già detto, di personalizzazioni se ne possono fare tantissime e per fortuna ognuno ha le sue preferenze. Quello descritto in seguito è soltanto un esempio per dimostrare cosa si può ottenere con minimi sforzi.<br />
@@ -166,16 +181,7 @@ La sezione d'esempio diventerebbe così:
 
 Riavviando Gnome-Shell (ALT+F2 > r > Invio) si avranno le finestre come indicato nell'immagine successiva.
 [[Image:Gnome-barra.jpg|center|thumb|350px|L'esempio descritto farebbe apparire le finestre così.]]
-Per i più malinconici è disponibile anche un pacchetto che non fa del tutto dimenticare Gnome 2.x.
 
-Si può installare semplicemente con, per Fedora 15:
-
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.8-1.noarch.rpm
-
-per Fedora 16:
-
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.6-1.noarch.rpm
-[[Image:Gnome_gnome2.jpg|center|thumb|350px|Nostalgia di Gnome 2? No problem.]]
 Utile per comprendere Gnome-Shell è sicuramente una letta alla [https://fedoraproject.org/wiki/Features/Gnome3/it documentazione del fedoraproject], che contiene anche vari link, tra cui quello alla documentazione ufficiale.
 
 ==Riferimenti==
