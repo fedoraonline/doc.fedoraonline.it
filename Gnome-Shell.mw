@@ -84,7 +84,7 @@ Per utilizzarla è necessario aggiungere un'altra estensione, la selezione temi,
 
  # yum install gnome-shell-extensions-user-theme  
  # yum install --nogpg http://timlau.fedorapeople.org/files/packages/theme-selector/gnome-shell-extensions-theme-selector-0.9-1.fc15.noarch.rpm
-[[Image:Gnome-themes.jpg|right|thumb|350px|Fallback: L'estensione per selezionare i tuoi temi personali.]]
+[[Image:Gnome-themes.jpg|right|thumb|350px|L'estensione per selezionare i tuoi temi personali.]]
 A questo punto è necessario linkare i temi all'utente, per cui digitare, da utente normale:
 
  $ theme-selector-setup
