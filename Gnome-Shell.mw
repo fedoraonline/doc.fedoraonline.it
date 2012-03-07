@@ -57,7 +57,7 @@ E' un concetto che risulta difficile da digerire, ma porta l'utente a fare quell
 
  # yum install gnome-tweak-tool 
 
-Una volta installato si trova in ''Applicazioni > Accessori''; è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool.
+Una volta installato si trova in ''Applicazioni > Accessori > Impostazioni Avanzate''; è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool.
 [[Image:Tweak_Tool.png|right|thumb|300px|Gnome Tweak Tool è davvero potente e non dovrebbe mancare sul proprio Desktop.]]
 Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shell, di cui si parlerà nel prossimo capitolo.
 
