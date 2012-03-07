@@ -128,6 +128,15 @@ Si può installare semplicemente con, per Fedora 15:
 per Fedora 16:
 
  # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.6-1.noarch.rpm
+
+Questo pacchetto installa sei estensioni, eventualmente attivabili anche singolarmente:
+*''Bottom Panel'': aggiunge un pannello inferiore, con funzionalità simili a quello di gnome 2.x
+*''Shut Down Menu'': sostituisce la voce "sospendi" con "arresta", che apre una finestra con tutte le opzioni di spegnimento, sospensione e ibernazione (similmente all'estensione "Alternative-status-menu")
+*''Move Clock'': sposta l'orologio a destra
+*''Panel Favorites'': aggiunge al pannello superiore le icone per avviare direttamente le applicazione preferite
+*''Applications Menu'': sostituisce il tasto "attività" in alto a sinistra con un menu "applicazioni" come quello di gnome 2.x. L'hot corner in alto a sinistra può essere disattivato o no tramite opzione selezionabile con clic destro
+*''Static Workspaces'': permette di avere un numero fisso di aree di lavoro
+
 [[Image:Gnome_gnome2.jpg|center|thumb|350px|Nostalgia di Gnome 2? No problem.]]
 
 Il tutto si completa con il Gnome Tweak Tool: 
