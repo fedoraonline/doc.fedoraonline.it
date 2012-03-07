@@ -15,6 +15,8 @@ In caso di problemi in quest'ultimo passaggio, se non si volesse installare in l
 
 == Installazione manuale ==
 E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
+
+=== RPMFusion-free ===
 Usando nano (o qualsiasi editor si preferisca):
 
  $ su -c 'nano /etc/yum.repos.d/rpmfusion-free.repo'
@@ -70,6 +72,8 @@ da popolare così:
  enabled=0
  gpgcheck=1
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever-$basearch<br />
+
+=== RPMFusion-nonfree ===
 I repositori nonfree e nonfree-updates, rispettivamente devono essere creati così (al pari dei precedenti):
 
  $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree.repo'
