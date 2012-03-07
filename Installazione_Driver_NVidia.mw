@@ -1,6 +1,7 @@
 __TOC__
-Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi: tramite pacchetto rpm o tramite installer ufficiale. Di
-seguito verranno descritti  entrambi:
+Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi: tramite pacchetto rpm o tramite installer ufficiale.
+{{Warning|Non usare mai i due metodi contemporaneamente, nel senso esclusivo della parola: o l'uno oppure l'altro.}}
+Di seguito verranno descritti  entrambi:
 ==Installazione dei drivers usando akmod-nvidia==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 Per sicurezza dare un:
@@ -56,7 +57,10 @@ Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un
 
 L'installazione essenziale del driver Nvidia è terminata.
 
-== Accelarazione video per applicazioni a 32 bit in Fedora 64 bit ==
+=== Ulteriori configurazioni ===
+In alcuni casi, può essere utile effettuare ulteriori operazioni, che vengono spiegate in questo paragrafo.
+
+==== Accelarazione video per applicazioni a 32 bit in Fedora 64 bit ====
 Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
 *Per una serie 6 o superiore 
  # yum install xorg-x11-drv-nvidia-libs.i686
@@ -65,11 +69,11 @@ Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video 
 *Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
  # yum install xorg-x11-drv-nvidia-96xx-libs.i686
 
-== Decodifica filmati su gpu ==
+==== Decodifica filmati su gpu ====
 Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere i seguenti pacchetti:
  # yum install vdpau-video-freeworld libva-freeworld
 
-== Risoluzione problemi monitor ==
+==== Risoluzione problemi monitor ====
 Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
 Occorrono i permessi di root, quindi:
  $ su
@@ -138,7 +142,7 @@ Se si avrà la necessità, l'utility
  # nvidia-xconfig 
 genererà un nuovo xorg.conf creando automaticamente anche una copia di
 backup
-{{Warning|Non usare mai i due metodi contemporaneamente, nel senso esclusivo della parola: o l'uno oppure l'altro.}}
+
 Nel secondo metodo descritto, si avrà lo svantaggio di dover ad ogni aggiornamento dei drivers, procurarsi l'ultima versione e reinstallarli.
 Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 
