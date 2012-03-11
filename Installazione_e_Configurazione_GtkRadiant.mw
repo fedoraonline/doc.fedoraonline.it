@@ -38,6 +38,11 @@ Eliminiamo quindi i dati ormai inutili:
 Se volete essere estremamente pignoli o avete seri problemi di spazio potete rimuovere anche i rimasugli di download di svn:
  find ZeroRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
+==Configurazione UrbanTerror=
+Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor. Scaricate quindi il file da [ftp://ftp.snt.utwente.nl/pub/games/urbanterror/full_install/linux_or_mac/ qui]
+
+
+
 
 == Riferimenti ==
 * http://daffy.nerius.com/radiant/
