@@ -31,9 +31,12 @@ Ed ora possiamo procedere alla compilazione vera e propria:
 La compilazione è finita; qualora aveste problemi controllate attentamente i punti superiori.
 
 ===Pulizia dei Pacchetti inutili===
-Spostiamo la cartella install che è l'unica parte che ci interessa 
-
-
+Spostiamo la cartella '''install''' che è l'unica parte che ci interessa nella home e la rinominiamo:
+ mv ~/ZeroRadiant-src/install/ ~/ZeroRadiant
+Eliminiamo quindi i dati ormai inutili:
+ cd && rm -rf ZeroRadiant-src/
+Se volete essere estremamente pignoli o avete seri problemi di spazio potete rimuovere anche i rimasugli di download di svn:
+ find ZeroRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
 
 == Riferimenti ==
