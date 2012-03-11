@@ -1,14 +1,15 @@
 I driver ati sono proprietari, è software chiuso e non libero, sconsigliamo di installare questo software comunque.
 
+{{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
+
 Tutte le operazioni vanno fatte da root.
+
 Se si hanno installati i driver ati proprietari non rpm,  dare prima di tutto:
  # yum reinstall mesa-libGL
 Cominciare con un:
  # yum update kernel
 per aggiornare il kernel.<br />
-Installare i repository rpm-fusion se non lo si è già fatto:
- # rpm -Uvh <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm</nowiki>
- # rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm</nowiki>
+
 Ora controllare che tipo di kernel si possiede:
  # uname -a
 Se si possiede un kernel '''non PAE''' procedere così:
