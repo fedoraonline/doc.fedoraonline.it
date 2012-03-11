@@ -1,5 +1,14 @@
 I driver ati sono proprietari, è software chiuso e non libero, sconsigliamo di installare questo software comunque.
 
+== Schede video supportate ==
+
+I driver ati supportano solo schede video di [http://en.wikipedia.org/wiki/AMD_Radeon#Processor_generations generazione R600] (serie "radeon hd 2000") e successive.
+
+Per sapere se la propria scheda video è supportata si può confrontare l'output del comando
+ # lspci|grep -i vga
+con [http://en.wikipedia.org/wiki/Comparison_of_AMD_graphics_processing_units questa pagina di wikipedia], che elenca le gpu suddivise per serie.
+
+== Installazione del driver ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 
 Tutte le operazioni vanno fatte da root.
