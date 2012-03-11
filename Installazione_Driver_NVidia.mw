@@ -8,7 +8,7 @@ Per sicurezza dare un:
  # yum update rpmfusion*
 
 === Per versioni di Fedora 16 ===
-Installare i driver akmod-nvidia:
+Installare i driver akmod-nvidia (per GeForce serie 6 e superiori):
  # yum install akmod-nvidia
 
 Accertare corretta riconfigurazione di grub2, con il proprio editor di testo (nell'esempio vim) aprire il seguente file:
