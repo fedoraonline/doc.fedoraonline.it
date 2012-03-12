@@ -134,7 +134,9 @@ con versioni di Fedora precedenti alla 16 di controllare che in /etc/X11/xorg.co
 ==== Ripristinare Plymouth all'avvio del pc ====
 Il driver proprietario NVidia non ha il KernelModeSetting, quindi la sua installazione disattiva il boot grafico Plymouth. Il problema è esclusivamente estetico, e solo per quei pochi secondi di avvio di Fedora (tra la schermata di grub e quella del login utente). Tuttavia è possibile ripristinare l'avvio di Plymouth [http://doc.fedoraonline.it/Plymouth#Risoluzioni impostando manualmente la risoluzione video desiderata]
 
-==Utilizzo dell'installer scaricabile dal sito di nvidia==
+==Installazione dei drivers usando l'installer scaricabile dal sito di nvidia==
+Questa procedura non è consigliata agli utenti meno esperti.
+
 Una volta scaricato il package per la propria videocard [http://www.nvidia.it/Download/indexsg.aspx?lang=it dal sito di NVidia], occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
  # init 3
 Quindi far partire l'installer con
