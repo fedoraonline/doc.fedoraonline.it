@@ -1,14 +1,26 @@
 __TOC__
+== Introduzione ==
+Fedora utilizza per le schede video NVidia (tra cui le GeForce) di default, senza necessità di configurazioni aggiuntive, il driver libero "[http://nouveau.freedesktop.org/wiki/ nouveau]. Si possono tuttavia utilizzare, al suo posto, il driver proprietario (non libero) ufficialmente fornito da Nvidia stessa. Questa guida spiega come installare quest'ultimo.
+
 Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi: tramite pacchetto rpm o tramite installer ufficiale.
 {{Warning|Non usare mai i due metodi contemporaneamente, nel senso esclusivo della parola: o l'uno oppure l'altro.}}
-Di seguito verranno descritti  entrambi:
+Di seguito verranno descritti  entrambi.
+
+=== Serie di schede video NVidia supportate ===
+Come primo passo, bisogna sapere a quale [http://en.wikipedia.org/wiki/GeForce#Generations serie] appartiene la nostra scheda video. Per far ciò si può per esempio confrontare l'output del comando:
+ # lspci|grep -i vga
+con [http://en.wikipedia.org/wiki/Comparison_of_Nvidia_graphics_processing_units questa pagina di wikipedia], che elenca le gpu suddivise per serie. 
+{{Warning|Se con pc portatile, al comando precedente vi evidenzia la presenza sia di una gpu nvidia che di una integrata intel, vuol dire che ha la tecnologia [http://en.wikipedia.org/wiki/Nvidia_Optimus Nvidia Optimus]che '''non''' è supportata dai driver NVidia per Linux.}} 
+
 ==Installazione dei drivers usando akmod-nvidia==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 Per sicurezza dare un:
  # yum update rpmfusion*
 
 === Per versioni di Fedora 16 ===
-Installare i driver akmod-nvidia (per GeForce serie 6 e superiori):
+Per Fedora 16 attualmente sono disponibili driver proprietari Nvidia compatibili solo per GeForce serie 6 e superiori. La procedura di installazione è la seguente:
+
+Installare i driver akmod-nvidia:
  # yum install akmod-nvidia
 
 Accertare corretta riconfigurazione di grub2, con il proprio editor di testo (nell'esempio vim) aprire il seguente file:
@@ -41,10 +53,8 @@ e
 
 Verificare che la versione di kernel che si utilizza
 corrisponda alla versione del kernel-devel.
-In base al modello di videocard posseduta che si potrà evidenziare con il
-comando:
- # lspci|grep -i vga
-si potrà scegliere i drivers corretti per il proprio sistema:
+
+In base al modello di videocard posseduta si potrà scegliere i drivers corretti per il proprio sistema:
 *Se si possiede una nVidia GeForce serie 6 o superiore, fare
  # yum install akmod-nvidia
 *Per una serie 5 (non ancora disponibili per Fedora 16)
@@ -122,7 +132,7 @@ Dopo l'uso di:
 con versioni di Fedora precedenti alla 16 di controllare che in /etc/X11/xorg.conf sia presente la Section "Files"
 
 ==Utilizzo dell'installer scaricabile dal sito di nvidia==
-Una volta scaricato il package per la propria videocard, occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
+Una volta scaricato il package per la propria videocard [http://www.nvidia.it/Download/indexsg.aspx?lang=it dal sito di NVidia], occorrerà procedere in runlevel 3, avviando Fedora in tale stato oppure dando:
  # init 3
 Quindi far partire l'installer con
  # sh NVIDIA-Linux-<arch>-<version>-pkgX.run
@@ -148,7 +158,5 @@ Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 
 == Riferimenti ==
 * http://rpmfusion.org/Howto/nVidia
-*[http://en.wikipedia.org/wiki/GeForce#Generations Descrizione delle serie Nvidia GeForce]
-*[http://en.wikipedia.org/wiki/Comparison_of_Nvidia_graphics_processing_units Nomi delle schede GeForce divisi per serie]
 
 [[Categoria:Schede grafiche]]
