@@ -7,11 +7,11 @@ Dopo questa introduzione passiamo alla fase pratica.
 
 ==Installazione Dipendenze==
 Questa installazione è stata testata su Fedora16 ma dovrebbe andare bene anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.<br> Per la nostra Fedora diamo quindi:
- su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel <br>
- gtk-devel gtkglextl-devel jpeg-devel'
+ su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel'        //// questi sono sicuramente necessari <br>
+ gtk-devel gtkglextl-devel jpeg-devel             //// questi sono da controllare singolarmente se influiscono sull'installazione o meno
 ''(da controllare le dipendenze necessarie)''
 
-==Installazione e Configurazione GtkRadiant==
+==Installazione GtkRadiant==
 Posizioniamoci nella directory home del vostro utente:
  cd
 
@@ -40,9 +40,15 @@ Se volete essere estremamente pignoli o avete seri problemi di spazio potete rim
  find ZeroRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
 ==Configurazione UrbanTerror==
-Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor, al fine di evitare spiacevoli problemi come il non poter più giocare perché avete "mischiato" mappe vostre, eccetera...<br> Scaricate quindi il file '''.zip''' dalla pagina di download [http://www.urbanterror.info/downloads/ qui] (consiglio personalmente di scaricare dal server ftp con un gestore di download al fine di incrementare la velocità).<br> Scaricato il pacchetto nella vostra Home date i seguenti comandi
- cd && mkdir UrbanTerror && mv UrbanTerror411.zip
- unzip UrbanTerror411.zip 
+Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor, al fine di evitare spiacevoli problemi come il non poter più giocare perché avete "mischiato" mappe vostre, eccetera...<br> Scaricate quindi il file '''.zip''' dalla pagina di download [http://www.urbanterror.info/downloads/ qui] (consiglio personalmente di scaricare dal server ftp con un gestore di download al fine di incrementare la velocità).<br> Scaricato il pacchetto nella vostra Home (in questa parte di guida ipotizziamo che il pacchetto si chiami UrbanTerror411.zip, se così non fosse rinominatelo con il nome corretto), date il seguente comando:
+ unzip UrbanTerror411.zip
+Rendiamo eseguibili i pacchetti necessari:
+ cd UrbanTerror/
+ chmod +x ioUrbanTerror.* ioUrTded.*
+
+==Configurazione GtkRadiant ottimizzata per UrbanTerror==
+
+ 
 
 
 
