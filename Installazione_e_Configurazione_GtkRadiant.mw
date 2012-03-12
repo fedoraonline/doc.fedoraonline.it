@@ -49,8 +49,14 @@ Rendiamo eseguibili i pacchetti necessari:
 ==Configurazione GtkRadiant ottimizzata per UrbanTerror==
 A questo punto finalmente lanciamo e configuriamo GtkRadiant:
  /home/$USER/ZeroRadiant/radiant.bin
-Ci comparirà questa finestra [[File:http://dl.dropbox.com/u/62048973/radiant1.png]] [[File:Esempio.jpg|thumb|50px| nome_da_mostrare]]
- 
+Ci comparirà questa finestra. [[File:http://dl.dropbox.com/u/62048973/radiant1.png]] [[File:blabla.png|thumb|50px|Prima schermata]] <br>
+Nella casella '''Game to configure''' scegliamo ''UrbanTerror (standalone)'', nella casella '''Name''' lasciamo anche lì ''UrbanTerror (standalone)'' e nella casella '''Engine directory''' dovete inserire le coordinate della cartella UrbanTerror precedentemente creata, quindi '''/home/''nome_utente''/UrbanTerror''', infine premiamo su ok.<br>
+Fatto anche questo ci comparirà una seconda finestra come questa. <br>
+Lasciate anche qui come è già impostato '''UrbanTerror (standalone)''' e poi scegliete a piacere vostro se volete che all'avvio del programma parta in automatico con il gioco impostato (primo box) e se volete che salvi la console in un file radiant.log (secondo box).<br>
+A questo punto potete crearvi, a vostra discrezione, un collegamento al desktop del file radiant.bin per una maggiore usabilità.
+
+
+
 
 
 
