@@ -6,8 +6,9 @@ Per chi ancora non lo conoscesse GtkRadiant (conosciuto anche come ZeroRadiant) 
 Dopo questa introduzione passiamo alla fase pratica.
 
 ==Installazione Dipendenze==
-Installiamo le dipendenze necessarie:
- su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel ////// gtk-devel gtkglextl-devel jpeg-devel'
+Questa installazione è stata testata su Fedora16 ma dovrebbe andare bene anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.<br> Per la nostra Fedora diamo quindi:
+ su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel <br>
+ gtk-devel gtkglextl-devel jpeg-devel'
 ''(da controllare le dipendenze necessarie)''
 
 ==Installazione e Configurazione GtkRadiant==
@@ -39,8 +40,9 @@ Se volete essere estremamente pignoli o avete seri problemi di spazio potete rim
  find ZeroRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
 ==Configurazione UrbanTerror==
-Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor, al fine di evitare spiacevoli problemi come . Scaricate quindi il file '''.zip''' dalla pagina di download [http://www.urbanterror.info/downloads/ qui] (consiglio personalmente di scaricare dal server ftp con un gestore di download al fine di incrementare la velocità). Scaricato il pacchetto nella vostra Home date i seguenti comandi
-
+Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor, al fine di evitare spiacevoli problemi come il non poter più giocare perché avete "mischiato" mappe vostre, eccetera...<br> Scaricate quindi il file '''.zip''' dalla pagina di download [http://www.urbanterror.info/downloads/ qui] (consiglio personalmente di scaricare dal server ftp con un gestore di download al fine di incrementare la velocità).<br> Scaricato il pacchetto nella vostra Home date i seguenti comandi
+ cd && mkdir UrbanTerror && mv UrbanTerror411.zip
+ unzip UrbanTerror411.zip 
 
 
 
