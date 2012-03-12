@@ -53,22 +53,29 @@ A questo punto finalmente lanciamo e configuriamo GtkRadiant:
 [[File:GtkRadiant1.png|150px|right|thumb|Prima schermata GtkRadiant]]
 
 Ci comparirà una finestra come questa a destra.<br />
-Nella casella '''Game to configure''' scegliamo ''UrbanTerror (standalone)'', nella casella '''Name''' lasciamo anche lì ''UrbanTerror (standalone)'' e nella casella '''Engine directory''' dovete inserire le coordinate della cartella UrbanTerror precedentemente creata, quindi '''/home/''nome_utente''/UrbanTerror''', infine premiamo su ok.<br>
+Nella casella ''Game to configure'' scegliamo '''UrbanTerror (standalone)''', nella casella ''Name'' lasciamo anche lì '''UrbanTerror (standalone)''' e nella casella ''Engine directory'' inserite le coordinate della cartella UrbanTerror precedentemente creata, quindi '''/home/''NOME_UTENTE''/UrbanTerror''' (inserendo il nome del vostro utente), infine premiamo su Ok.<br>
 
 
 [[File:GtkRadiant2.png|left|thumb|Seconda schermata GtkRadiant]]
 
 Fatto anche questo ci comparirà una seconda finestra come questa. <br />
 
-Lasciate anche qui come è già impostato '''UrbanTerror (standalone)''' e poi scegliete a piacere vostro se volete che all'avvio del programma parta in automatico con il gioco impostato (primo box) e se volete che salvi la console in un file radiant.log (secondo box).<br>
+Lasciate anche qui come è già impostato '''UrbanTerror (standalone)''' e scegliete poi a piacere vostro se volete che all'avvio del programma parta in automatico con il gioco impostato (primo box) e se volete che salvi la console in un file radiant.log (secondo box); fatte le vostre scelte premete ok.<br>
 A questo punto potete crearvi, a vostra discrezione, un collegamento al desktop del file radiant.bin per una maggiore usabilità.
 
 
+==Perché separare le Mappe dal Gioco==
+Abbiamo scaricato 
 
+
+
+==Creazione Mappe==
+La creazione delle mappe esula dallo scopo di questa guida. Se vorrete creare mappe visitate il seguente [http://daffy.nerius.com/radiant/#first-map link], fonte base per questa guida.
 
 
 
 == Riferimenti ==
+* [http://radiant.robotrenegade.com/ Home del progetto]
 * http://daffy.nerius.com/radiant/
 * http://en.wikipedia.org/wiki/GtkRadiant
 
