@@ -17,8 +17,12 @@ Posizioniamoci nella directory home del vostro utente:
 
 ===Scarichiamo i Sorgenti===
 Per scaricare i sorgenti useremo un utile strumento chiamato subversion, installato precedentemente. Quindi daremo il seguente comando:
- svn checkout svn://svn.icculus.org/gtkradiant/GtkRadiant/trunk ZeroRadiant-src/ 
-Qualora il server non rispondesse potete scaricare il pacchetto da [http://dl.dropbox.com/u/62048973/ZeroRadiant-src.tar.gz qui] e scompattarlo in una directory chiamata '''ZeroRadiant-src''' nella vostra home. Per automatizzare anche questa procedura potete dare il seguente comando (è tutto su un'unica riga):
+ svn checkout svn://svn.icculus.org/gtkradiant/GtkRadiant/trunk ZeroRadiant-src/ <br />
+
+
+'''DA CONTROLLARE SE è UN'ALTERNATIVA VALIDA'''
+
+''Qualora il server non rispondesse potete scaricare il pacchetto da [http://dl.dropbox.com/u/62048973/ZeroRadiant-src.tar.gz qui] e scompattarlo in una directory chiamata '''ZeroRadiant-src''' nella vostra home. Per automatizzare questa procedura potete dare il seguente comando (è tutto su un'unica riga):''
  cd && mkdir ZeroRadiant-src && wget http://dl.dropbox.com/u/62048973/ZeroRadiant-src.tar.gz -P /home/$USER/ZeroRadiant-src && cd ZeroRadiant-src && tar -xvf ZeroRadiant-src.tar.gz && rm -f ZeroRadiant-src.tar.gz && cd
 
 ===Download Mappe Base e Compilazione dei Sorgenti===
