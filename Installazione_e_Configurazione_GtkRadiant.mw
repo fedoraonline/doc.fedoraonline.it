@@ -7,8 +7,8 @@ Dopo questa introduzione passiamo alla fase pratica.
 
 ==Installazione Dipendenze==
 Questa installazione è stata testata su Fedora16 ma dovrebbe andare bene anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.<br> Per la nostra Fedora diamo quindi:
- su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel'        //// questi sono sicuramente necessari <br>
- gtk-devel gtkglextl-devel jpeg-devel             //// questi sono da controllare singolarmente se influiscono sull'installazione o meno
+ su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel'     //// questi sono sicuramente necessari <br>
+ gtk-devel gtkglextl-devel jpeg-devel          //// questi sono da controllare singolarmente se influiscono sull'installazione o meno
 ''(da controllare le dipendenze necessarie)''
 
 ==Installazione GtkRadiant==
@@ -47,7 +47,9 @@ Rendiamo eseguibili i pacchetti necessari:
  chmod +x ioUrbanTerror.* ioUrTded.*
 
 ==Configurazione GtkRadiant ottimizzata per UrbanTerror==
-
+A questo punto finalmente lanciamo e configuriamo GtkRadiant:
+ /home/$USER/ZeroRadiant/radiant.bin
+Ci comparirà questa finestra[[File:http://dl.dropbox.com/u/62048973/radiant1.png]] 
  
 
 
