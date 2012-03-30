@@ -63,13 +63,14 @@ A questo punto potete crearvi, a vostra discrezione, un collegamento al desktop 
 
 
 ==Creazione Mappe==
-La creazione delle mappe esula dallo scopo di questa guida. Se vorrete creare mappe visitate il seguente [http://daffy.nerius.com/radiant/#first-map link], fonte base per questa guida, [http://radiant.robotrenegade.com/manual/ qui] il manuale ufficiale di GtkRadiant e [http://www.urbanterror.info/support/tutorials/leveldesign/ qui] la sezione del manuale di UrbanTerror per la creazione di mappe.
+La creazione delle mappe esula dallo scopo di questa guida. Se vorrete creare mappe visitate il seguente [http://daffy.nerius.com/radiant/#first-map link], fonte base per questa guida, [http://radiant.robotrenegade.com/manual/ qui] il manuale ufficiale di GtkRadiant e [http://www.urbanterror.info/support/tutorials/leveldesign/ qui] la sezione del manuale di UrbanTerror per la creazione di mappe.<br />
+Create le vostre mappe posizionatele dentro la Home nella cartella ''UrbanTerror/q3ut4/''
 
 ==Perché separare le Mappe dal Gioco==
 Abbiamo scaricato e configurato UrbanTerror in un'altra directory per mantenere separato il gioco su server pubblici da quello per creare le mappe. Per provare la vostra mappa date questi comandi da terminale:
  cd ~/UrbanTerror/
- ./ioUrbanTerror.i386 +set sv_pure 0 +set g_gametype 0 +devmap NOME_VOSTRA_MAPPA
-Questa operazione lancerà UrbanTerror (se avete Fedora a 64bit sostituite '''i386''' con '''x86_64''') e vi lancerà automaticamente la mappa che avete scelto. <br />
+ ./ioUrbanTerror.i386 +set sv_pure 0 +set g_gametype X +devmap NOME_VOSTRA_MAPPA
+Questa operazione lancerà UrbanTerror (se avete Fedora a 64bit sostituite '''i386''' con '''x86_64'''), selezionate la modalità di gioco che volete guardando l'elenco sotto, e vi lancerà automaticamente la mappa che avete scelto. <br />
 Potete crearvi dei piccoli script con un qualunque editor di testi vogliate per testare le vostre mappe in diverse modalità di gioco. Un esempio può essere questo:
  #! /bin/bash
  UrT="/home/NOME_UTENTE/UrbanTerror/ioUrbanTerror.i386"
@@ -82,6 +83,11 @@ Bisogna fare attenzione ad alcuni dettagli, come l'inserire il vostro nome utent
 * Capture and Hold > 6
 * Capture The Flag (CTF) > 7
 * Bombmode > 8
+Salvate con un nome a vostra scelta, chiudete e da terminale posizionatevi nella cartella dove avete salvato i vostri script e dategli i permessi di esecuzione:
+ chmod +x NOME_SCRIPT
+Ora esegitelo
+ ./NOME_SCRIPT NOME_MAPPA
+
 
 
 That's that, enjoy it! :D
