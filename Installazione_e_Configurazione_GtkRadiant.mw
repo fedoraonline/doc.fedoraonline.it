@@ -1,6 +1,6 @@
 {{InCorso|autore=AlbertoChiusole}}
 {{Autore|AlbertoChiusole}}
-{{nota|GtkRadiant per Fedora|Questa installazione è stata testata su Fedora15 e 16, ma dovrebbe funzionare anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.}}
+{{nota|GtkRadiant per Fedora|Questa installazione è stata testata su Fedora15 e 16 ma, con le dovute accortezze, dovrebbe funzionare anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.}}
 
 
 == Introduzione ==
@@ -87,7 +87,7 @@ Bisogna fare attenzione ad alcuni dettagli, come l'inserire il vostro nome utent
 
 Salvate con un nome a vostra scelta, chiudete e da terminale posizionatevi nella cartella dove avete salvato i vostri script e dategli i permessi di esecuzione:
  chmod +x NOME_SCRIPT
-Ora esegitelo
+Ora eseguitelo
  ./NOME_SCRIPT NOME_MAPPA
 
 
