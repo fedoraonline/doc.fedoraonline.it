@@ -69,7 +69,7 @@ La creazione delle mappe esula dallo scopo di questa guida. Se vorrete creare ma
 Create le vostre mappe posizionatele dentro la Home nella cartella ''UrbanTerror/q3ut4/''
 
 ==Perché separare le Mappe dal Gioco==
-Abbiamo scaricato e configurato UrbanTerror in un'altra directory per mantenere separato il gioco su server pubblici da quello per creare le mappe. Per provare la vostra mappa date questi comandi da terminale:
+Abbiamo scaricato e configurato UrbanTerror in un'altra directory per mantenere separato il gioco su server pubblici da quello per creare le mappe. Per provare la vostra mappa in formato pk3 inseritela nella vostra home nella cartella UrbanTerror/q3ut4/ e date questi comandi da terminale:
  cd ~/UrbanTerror/
  ./ioUrbanTerror.i386 +set sv_pure 0 +set g_gametype X +devmap NOME_VOSTRA_MAPPA
 Questa operazione lancerà UrbanTerror (se avete Fedora a 64bit sostituite '''i386''' con '''x86_64'''), selezionate la modalità di gioco che volete guardando l'elenco sotto, e vi lancerà automaticamente la mappa che avete scelto. <br />
