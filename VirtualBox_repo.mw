@@ -1,0 +1,24 @@
+{{InCorso|autore=AlbertoChiusole}} 
+__TOC__
+
+==Introduzione==
+VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle.
+
+==Installazione==
+Scarichiamo il repo e lo posizioniamo nella cartella /etc/yum.repos.d/ da root
+ su
+ curl http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -o /etc/yum.repos.d/virtualbox.repo
+Il repository è attivo di default ma bisogna installare alcune dipendenze necessarie per far girare VirtualBox:
+ yum install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel
+Quindi a questo punto possiamo installare l'ultima versione di VirtualBox (attualmente la 4.1.12):
+ yum install VirtualBox-4.1
+Aggiungiamo il nostro utente al gruppo vboxusers (sostituire nome_utente con il vostro con cui userete VirtualBox):
+ usermod -a -G vboxusers nome_utente
+Se avete appena aggiornato il kernel date un reboot al sistema prima di lanciare VirtualBox.
+
+==Riferimenti==
+[[https://www.virtualbox.org/ Sito ufficiale VirtualBox]]
+
+[[Categoria:Yum]]
+[[Categoria:Repository]]
+[[Categoria:Virtualizzazione]]
