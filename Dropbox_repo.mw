@@ -14,8 +14,9 @@ con queste righe:
  gpgkey=http://linux.dropbox.com/fedora/rpm-public-key.asc
 Il repository è ora configurato, essendo però un repository di terze parti è mantenuto disabilitato.
 Per installare o aggiornare nautilus-dropbox bisogna quindi attivare singolarmente il repository. Ad esempio:
- yum install --enablerepo=dropbox nautilus-dropbox
+ yum install --enablerepo=Dropbox nautilus-dropbox
 Bisognerà poi aprire Dropbox (Applicazioni >> Internet >> Dropbox) e seguire la guida iniziale per la gestione del proprio account.
+
 
 [[Categoria:Repository]]
 [[Categoria:Yum]]
