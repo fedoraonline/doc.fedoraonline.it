@@ -17,7 +17,7 @@ Aggiungiamo il nostro utente al gruppo vboxusers (sostituire nome_utente con il 
 Se avete appena aggiornato il kernel date un reboot al sistema prima di lanciare VirtualBox.
 
 ==Riferimenti==
-[[https://www.virtualbox.org/ Sito ufficiale VirtualBox]]
+[https://www.virtualbox.org/ Sito ufficiale VirtualBox]
 
 [[Categoria:Yum]]
 [[Categoria:Repository]]
