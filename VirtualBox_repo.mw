@@ -1,27 +1,23 @@
-{{Autore|AlbertoChiusole}} 
+{{InCorso|autore=AlbertoChiusole}} 
 __TOC__
-{{nota|Premessa|La seguente guida tratta l'installazione di VirtualBox tramite il repo di Oracle. E' consigliato utilizzare l'installazione da RPMFusion, come descritto in [[Installare e configurare Virtualbox]].<br />
-Tuttavia anche questa installazione alternativa è corretta e funzionante.}}
+
 ==Introduzione==
-VirtualBox è un applicativo proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il repo è disponibile dalla versione Fedora 14 in poi.
+VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle.
 
 ==Installazione==
-Si scarica il repo e lo si posiziona nella cartella /etc/yum.repos.d/, da root:
- # curl http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -o /etc/yum.repos.d/virtualbox.repo
+Scarichiamo il repo e lo posizioniamo nella cartella /etc/yum.repos.d/ da root
+ su
+ curl http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -o /etc/yum.repos.d/virtualbox.repo
 Il repository è attivo di default ma bisogna installare alcune dipendenze necessarie per far girare VirtualBox:
- # yum install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel
-A questo punto si può installare l'ultima versione di VirtualBox (attualmente la 4.2.x):
- # yum install VirtualBox-4.2
-
-==Configurazione==
-VirtualBox può essere configurato seguendo le istruzioni della guida [[Installare e configurare Virtualbox]]
-
-==Risoluzione problemi==
-Può capitare che dopo un aggiornamento generico del sistema, VirtualBox non parta e lanci un pannello di allarme. Questo succede perché non sono stati aggiornati i moduli di VirtualBox (vboxdrv, vboxnetflt e vboxnetadp) dopo l'aggiornamento al nuovo kernel. Questa situazione può essere risolta installando il pacchetto ''dkms''
- # yum install dkms
+ yum install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel
+Quindi a questo punto possiamo installare l'ultima versione di VirtualBox (attualmente la 4.1.12):
+ yum install VirtualBox-4.1
+Aggiungiamo il nostro utente al gruppo vboxusers (sostituire nome_utente con il vostro con cui userete VirtualBox):
+ usermod -a -G vboxusers nome_utente
+Se avete appena aggiornato il kernel date un reboot al sistema prima di lanciare VirtualBox.
 
 ==Riferimenti==
-[https://www.virtualbox.org/ Sito ufficiale VirtualBox]
+[[https://www.virtualbox.org/ Sito ufficiale VirtualBox]]
 
 [[Categoria:Yum]]
 [[Categoria:Repository]]
