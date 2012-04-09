@@ -18,7 +18,7 @@ Posizioniamoci nella directory home del vostro utente:
 
 ===Scarichiamo i Sorgenti===
 Per scaricare i sorgenti useremo un utile strumento chiamato subversion, installato precedentemente. Quindi scarichiamo gli ultimi pacchetti disponibili dal server di sviluppo di GtkRadiant:
- svn checkout svn://svn.icculus.org/gtkradiant/GtkRadiant/trunk ZeroRadiant-src/ <br />
+ svn checkout svn://svn.icculus.org/gtkradiant/GtkRadiant/trunk ZeroRadiant-src/
 
 ===Download Mappe Base e Compilazione dei Sorgenti===
 Spostiamoci nella directory creata:
@@ -89,7 +89,10 @@ Salvate gli script con un nome a vostra scelta, chiudete e da terminale posizion
  chmod +x NOME_SCRIPT
 Ora eseguitelo
  ./NOME_SCRIPT NOME_MAPPA
- 
+Ad esempio:
+ ./Urt_FFA ut4_algiers
+e in questo modo avvio la mappa ut4_algiers in modalità FFA.
+
 
 That's that, enjoy it! :D
 
@@ -101,4 +104,3 @@ That's that, enjoy it! :D
 
 [[Categoria:Giochi]]
 [[Categoria:Sistema]]
-[[Categoria:Scrittura in corso]]
