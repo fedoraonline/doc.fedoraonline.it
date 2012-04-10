@@ -64,23 +64,23 @@ Talvolta non si sa a quale pacchetto occorre riferirsi per la ricerca di una dat
 proponendo, in base ai repository attivati dall'utente, i pacchetti all'interno dei quali tale file risulta essere presente. A quel punto basta eseguire l'installazione dell'rpm indicato.
 
 ===Gestione gruppi di programmi===
-Per installare un gruppo di programmi che si sarebbe dovuto/voluto avere, ma che non si è selezionato in fase di prima installazione di Fedora, si può utilizzare yum per porvi rimedio.
+Per installare un gruppo di programmi che si sarebbe dovuto/voluto avere, ma che non si è selezionato in fase di prima installazione di Fedora da DVD, si può utilizzare yum per porvi rimedio.
 Ad esempio, con;
 
  # yum grouplist
 
-si potrà vedere a terminale un elenco per gruppi anzichè per programmi singoli. Per capirci, se si volesse installare KDE, non avendolo ancora installato, si potrebbe, anzichè perdersi nell'installazione di tutti i programmi di KDE (oltre al DM stesso), semplicemente digitare:
+si potrà vedere a terminale un elenco dei gruppi e delle lingue disponibili e di quelle già installate sul proprio sistema. Per capirci, se si volesse installare GNOME, non avendolo ancora installato, si potrebbe, anziché perdersi nell'installazione di tutti i programmi di GNOME (oltre al DM stesso), semplicemente digitare:
 
- # yum groupinstall 'KDE (K Desktop Environment)'
+ # yum groupinstall 'Ambiente desktop GNOME'
 
 prestando attenzione alle virgolette, e tutto il desktop environment verrà proposto per l'installazione. Parimenti il discorso è valido anche per tutti i gruppi risultanti dal "grouplist".
 Allo stesso modo, i comandi ''groupupdate'' e ''groupremove'' agiscono su tali gruppi:
 
- # yum groupupdate 'KDE (K Desktop Environment)'
+ # yum groupupdate 'Ambiente desktop GNOME'
 
-aggiorna KDE e
+aggiorna GNOME e
 
- # yum groupremove 'KDE (K Desktop Environment)'
+ # yum groupremove 'Ambiente desktop GNOME'
 
 lo rimuove.
 
@@ -89,7 +89,7 @@ Il programa yum agisce su tutti gli rpm e, avendo un programma in tale formato s
 
  # yum localinstall nome_programma
 
-Questa opzione può essere usata anche per installare localmente un rpm proveniente dalla rete: la sintassi è simile al precedente
+Questa opzione può essere usata anche per installare localmente un rpm proveniente dalla rete: la sintassi è simile alla precedente
 
  # yum localinstall indirizzo_dove_è_presente_il_file.rpm
 
