@@ -34,7 +34,7 @@ Dopo che avrà macinato un bel po' la compilazione sarà finita, qualora aveste 
 Spostiamo la cartella '''install''', che è l'unica parte che ci interesserà d'ora in avanti, nella home e la rinominiamo:
  mv ~/GtkRadiant-src/install/ ~/GtkRadiant
 Eliminiamo quindi i dati ormai inutili:
- cd && rm -rf GtkRadiant-src/ <br />
+ cd && rm -rf GtkRadiant-src/
 Se volete essere estremamente pignoli o avete seri problemi di spazio potete rimuovere anche i rimasugli di download di svn:
  find GtkRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
