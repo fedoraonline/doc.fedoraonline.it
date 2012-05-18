@@ -72,11 +72,16 @@ Abbiamo scaricato e configurato UrbanTerror in un'altra directory per mantenere 
  cd ~/UrbanTerror/
  ./ioUrbanTerror.i386 +set sv_pure 0 +set g_gametype X +devmap NOME_VOSTRA_MAPPA
 Questa operazione lancerà UrbanTerror (se avete Fedora a 64bit sostituite '''i386''' con '''x86_64'''), selezionate la modalità di gioco che volete guardando l'elenco sotto, e vi lancerà automaticamente la mappa che avete scelto. <br />
-Potete crearvi dei piccoli script con un qualunque editor di testi vogliate per testare le vostre mappe in diverse modalità di gioco. Un esempio può essere questo:
+Potete crearvi dei piccoli script con un qualunque editor di testi vogliate da inserire nella cartella UrbanTerror per testare le vostre mappe in diverse modalità di gioco. Un esempio può essere questo:
  #! /bin/bash
- UrT="/home/NOME_UTENTE/UrbanTerror/ioUrbanTerror.i386"
- "$UrT" +set sv_pure 0 +set g_gametype X +devmap $*
-Bisogna fare attenzione ad alcuni dettagli, come l'inserire il vostro nome utente, la versione dell'eseguibile adatta (al posto di '''i386''' inserite '''x86_64''' se usate Fedora a 64bit) e infine il tipo di gioco al posto della X, seguendo questo elenco:
+ ARC1=`uname -p`
+ if [ $ARC1 = 'i686' ]; then
+ 	ARC2=i386
+ else
+ 	ARC2=$ARC1
+ fi
+ ./ioUrbanTerror.$ARC2 +set sv_pure 0 +set g_gametype 3 +devmap $*
+Bisogna fare attenzione ad il tipo di gioco da inserire al posto della X, seguendo questo elenco:
 * Free For All (FFA) > 0
 * Team DeatMatch (TDM) > 3
 * Team Survivor (TS) > 4
@@ -85,13 +90,13 @@ Bisogna fare attenzione ad alcuni dettagli, come l'inserire il vostro nome utent
 * Capture The Flag (CTF) > 7
 * Bombmode > 8
 
-Salvate gli script con un nome a vostra scelta, chiudete e da terminale posizionatevi nella cartella dove li avete salvati e dategli i permessi di esecuzione:
+Salvate gli script con un nome a vostra scelta, chiudete e da terminale posizionatevi nella cartella UrbanTerror e dategli i permessi di esecuzione:
  chmod +x NOME_SCRIPT
 Ora eseguitelo
  ./NOME_SCRIPT NOME_MAPPA
 Ad esempio:
  ./Urt_FFA ut4_algiers
-e in questo modo avvio la mappa ut4_algiers in modalità FFA.
+In questo modo darete avvio alla mappa '''ut4_algiers''' in modalità FFA.
 
 
 That's that, enjoy it! :D
