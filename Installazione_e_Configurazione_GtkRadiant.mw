@@ -10,19 +10,19 @@ Dopo questa introduzione passiamo alla fase pratica.
 
 ==Installazione Dipendenze==
 Installiamo le dipendenze per la nostra Fedora:
- su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel gtkglext-devel scons subversion'
+ su -c 'yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel gtkglext-devel scons subversion git'
 
 ==Installazione GtkRadiant==
 Posizioniamoci nella directory home del vostro utente:
  cd
 
 ===Scarichiamo i Sorgenti===
-Per scaricare i sorgenti useremo un utile strumento chiamato subversion, installato precedentemente. Quindi scarichiamo gli ultimi pacchetti disponibili dal server di sviluppo di GtkRadiant:
- svn checkout svn://svn.icculus.org/gtkradiant/GtkRadiant/trunk ZeroRadiant-src/
+Per scaricare i sorgenti useremo un utile strumento chiamato git, installato precedentemente. Quindi scarichiamo gli ultimi pacchetti disponibili dal server di sviluppo di GtkRadiant:
+ git clone https://github.com/TTimo/GtkRadiant ./GtkRadiant-src
 
 ===Download Mappe Base e Compilazione dei Sorgenti===
 Spostiamoci nella directory creata:
- cd ~/ZeroRadiant-src
+ cd ~/GtkRadiant-src
 Ora scaricheremo dei dati extra per la creazione di mappe per vari videogame (tra cui il nostro UrbanTerror):
  scons target=setup
 Ed ora possiamo procedere alla compilazione vera e propria:
@@ -32,11 +32,11 @@ Dopo che avrà macinato un bel po' la compilazione sarà finita, qualora aveste 
 
 ===Pulizia dei Pacchetti inutili===
 Spostiamo la cartella '''install''', che è l'unica parte che ci interesserà d'ora in avanti, nella home e la rinominiamo:
- mv ~/ZeroRadiant-src/install/ ~/ZeroRadiant
+ mv ~/GtkRadiant-src/install/ ~/GtkRadiant
 Eliminiamo quindi i dati ormai inutili:
- cd && rm -rf ZeroRadiant-src/ <br />
+ cd && rm -rf GtkRadiant-src/ <br />
 Se volete essere estremamente pignoli o avete seri problemi di spazio potete rimuovere anche i rimasugli di download di svn:
- find ZeroRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
+ find GtkRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
 ==Configurazione UrbanTerror==
 Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor, al fine di evitare spiacevoli problemi come il non poter più giocare perché avete "mischiato" mappe vostre, eccetera...<br /> Scaricate quindi il file '''.zip''' dalla pagina di download [http://www.urbanterror.info/downloads/ qui] (consiglio personalmente di scaricare dal server ftp con un gestore di download al fine di incrementare la velocità).<br /> Scaricato il pacchetto nella vostra Home (in questa parte di guida ipotizziamo che il pacchetto si chiami UrbanTerror411.zip, se così non fosse rinominatelo con il nome corretto), date il seguente comando:
@@ -47,7 +47,7 @@ Rendiamo eseguibili i pacchetti necessari:
 
 ==Configurazione GtkRadiant ottimizzata per UrbanTerror==
 A questo punto finalmente lanciamo e configuriamo GtkRadiant:
- ~/ZeroRadiant/radiant.bin
+ ~/GtkRadiant/radiant.bin
 
 [[File:GtkRadiant1.png|150px|right|thumb|Prima schermata GtkRadiant]]
 
