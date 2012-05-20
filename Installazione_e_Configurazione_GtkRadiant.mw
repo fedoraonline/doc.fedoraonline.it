@@ -35,8 +35,6 @@ Spostiamo la cartella '''install''', che è l'unica parte che ci interesserà d'
  mv ~/GtkRadiant-src/install/ ~/GtkRadiant
 Eliminiamo quindi i dati ormai inutili:
  cd && rm -rf GtkRadiant-src/
-Se volete essere estremamente pignoli o avete seri problemi di spazio potete rimuovere anche i rimasugli di download di svn:
- find GtkRadiant/ -type d -name '\.svn' -print0 | xargs -0 rm -rf
 
 ==Configurazione UrbanTerror==
 Qualora voleste provare le mappe direttamente sul vostro pc è consigliato non usare la directory di installazione normale ma crearvi una directory urbanterror solo per il map editor, al fine di evitare spiacevoli problemi come il non poter più giocare perché avete "mischiato" mappe vostre, eccetera...<br /> Scaricate quindi il file '''.zip''' dalla pagina di download [http://www.urbanterror.info/downloads/ qui] (consiglio personalmente di scaricare dal server ftp con un gestore di download al fine di incrementare la velocità).<br /> Scaricato il pacchetto nella vostra Home (in questa parte di guida ipotizziamo che il pacchetto si chiami UrbanTerror411.zip, se così non fosse rinominatelo con il nome corretto), date il seguente comando:
@@ -80,7 +78,7 @@ Potete crearvi dei piccoli script con un qualunque editor di testi vogliate da i
  else
  	ARC2=$ARC1
  fi
- ./ioUrbanTerror.$ARC2 +set sv_pure 0 +set g_gametype 3 +devmap $*
+ ./ioUrbanTerror.$ARC2 +set sv_pure 0 +set g_gametype X +devmap $*
 Bisogna fare attenzione ad il tipo di gioco da inserire al posto della X, seguendo questo elenco:
 * Free For All (FFA) > 0
 * Team DeatMatch (TDM) > 3
