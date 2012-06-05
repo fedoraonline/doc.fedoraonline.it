@@ -126,11 +126,11 @@ Si può installare semplicemente con, per Fedora 15:
 
 per Fedora 16:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.7-1.noarch.rpm
+ # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.8-1.noarch.rpm
 
 per Fedora 17:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/17/tigress-utils/i386/gnome-shell-frippery-0.4.0-1.noarch.rpm
+ # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/17/tigress-utils/i386/gnome-shell-frippery-0.4.1-1.noarch.rpm
 
 Questo pacchetto installa sei estensioni, eventualmente attivabili anche singolarmente:
 *''Bottom Panel'': aggiunge un pannello inferiore, con funzionalità simili a quello di gnome 2.x
