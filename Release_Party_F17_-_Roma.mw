@@ -69,12 +69,24 @@ Era stato quindi predisposto un tavolo con pc e l'interesse da parte di coloro c
 La serata quindi ha preso il volo, riuscendo nell'intento di creare una, seppur piccola, comunità di persone che si conoscono e che vogliono condividere la passione per l'open source e per il free software. Fedora, appunto.
 E alla fine della pizzata... Torta! Per festeggiare '''''Fedora 17 Beefy Miracle'''''.
 
-
-
-
-
 ----
+{|border="1"
 
+|-
+|[[File:giallu_mailga.jpg|thumb|Giallu e Mailga, allo scambio di opinioni]]
+|[[File:torta_gruppo.jpg|thumb|Foto con la torta]]
+|[[File:gruppo1.jpg|thumb| Foto di gruppo]] 
+|[File:gruppo2.jpg|thumb|Foto di gruppo]]
+|-
+!sorgente
+|riga 2 colonna 1
+|riga 2 colonna 2
+|riga 2 colonna 3
+|-
+!visualizzato
+|colspan="2" align="center"| riga 3 colonna 1 e 2
+|riga 3 colonna 3
+|} 
 Un po' di foto.....
 [[File:giallu_mailga.jpg|thumb|Giallu e Mailga, allo scambio di opinioni]]
 [[File:torta_gruppo.jpg|thumb|Foto con la torta]]
