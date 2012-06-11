@@ -40,6 +40,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Articolo
 ! Autore
 ! Stato
+{{AggiungiArticolo|fonte=-|articolo=Release Party F17 - Roma|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione e Configurazione GtkRadiant|autore=AlbertoChiusole|stato=Terminato}}
