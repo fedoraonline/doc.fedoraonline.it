@@ -40,7 +40,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Articolo
 ! Autore
 ! Stato
-{{AggiungiArticolo|fonte=-|articolo=Release Party F17 - Roma|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione e Configurazione GtkRadiant|autore=AlbertoChiusole|stato=Terminato}}
@@ -67,7 +66,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
-{{RiletturaArticolo|fonte=|articolo=titolo|autore=NomeAutore|rilettore=NomeRilettore|data=gg/mm/aaa|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=Release Party F17 - Roma|autore=GabrieleTrombini|rilettore=RobertMayr|stato=DaFare}}
 |}
 
 
