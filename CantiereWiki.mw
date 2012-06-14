@@ -41,7 +41,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Autore
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Release Party F17 - Roma 09 Giugno 2012 - L'Evento|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Installazione e Configurazione GtkRadiant|autore=AlbertoChiusole|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Dropbox_repo|autore=AlbertoChiusole|stato=Terminato}}
@@ -67,6 +66,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
+{{RiletturaArticolo|fonte=-|articolo=Release Party F17 - Roma 09 Giugno 2012 - L'Evento|autore=GabrieleTrombini|rilettore=RobertMayr|data=14/06/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Titolo|autore=NomeCognome|rilettore=NomeCognome|data=gg/mm/aaaa| stato=DaFare}}
 |}
 
