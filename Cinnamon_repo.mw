@@ -1,7 +1,7 @@
 {{Autore|AlbertoChiusole}} 
 __TOC__
 ==Introduzione==
-Per chi è veramente nostalgico del vecchio Gnome 2.x è nato un fork chiamato '''Cinnamon''' che, a detta degli svilppatori, dovrà portare il DE a essere maggiormente ''user-friendly''.
+Per chi è veramente nostalgico del vecchio Gnome 2.x è nato un fork chiamato '''Cinnamon''' che, a detta degli svilppatori, dovrà portare il DE a essere maggiormente ''user-friendly''. Il repo è disponibile per le versioni dalla 16 in poi.
 
 ==Installazione==
 Da utente root si scarica il file repo per fedora e lo si posiziona nella cartella /etc/yum.repos.d/
