@@ -1,15 +1,14 @@
-{{InCorso|autore=AlbertoChiusole}} 
+{{Autore=AlbertoChiusole}} 
 __TOC__
 ==Introduzione==
 Per chi è veramente nostalgico del vecchio Gnome 2.x è nato un fork chiamato '''Cinnamon''' che, a detta degli svilppatori, dovrà portare il DE a essere maggiormente ''user-friendly''.
 
 ==Installazione==
 Da utente root si scarica il file repo per fedora e lo si posiziona nella cartella /etc/yum.repos.d/
- su
- curl http://repos.fedorapeople.org/repos/leigh123linux/cinnamon/fedora-cinnamon.repo -o /etc/yum.repos.d/fedora-cinnamon.repo
+ # curl http://repos.fedorapeople.org/repos/leigh123linux/cinnamon/fedora-cinnamon.repo -o /etc/yum.repos.d/fedora-cinnamon.repo
 Il repository è attivo di default, quindi basta semplicemente installare cinnamon tramite yum:
- yum install cinnamon
-Ora effettuare un logout e potrete scegliere Cinnamon dalla lista dei DE disponibili.
+ # yum install cinnamon
+Ora effettuare un logout e si potrà scegliere Cinnamon dalla lista dei DE disponibili.
 
 ==Riferimenti==
 [http://cinnamon.linuxmint.com/ Sito ufficiale Cinnamon]
