@@ -56,7 +56,9 @@ Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dov
 
 Fedora, come tutte le altre distribuzioni Linux, ha un utente root ed ha anche utenti individuali. L'utente root è il "superutente", al pari di "Amministratore" in Windows.
 
-Occorre usare il proprio account personale per gli usi correnti e root solo per le operazioni di amministrazione/configurazione. Per diventare 'root' si può usare su o sudo. Comunque sudo richiede delle operazioni di configurazione. Si avvii, da root:
+Occorre usare il proprio account personale per gli usi quotidiani. Per l'account che amministra il sistema invece si dovrebbe selezionare ''Aggiungi al gruppo amministratori''. Questo permette di utilizzare l'utente normale come 'root', utilizzando il comando ''sudo''.
+
+Se si è configurato sudo al primo boot, è in ordine così. Altrimenti si può configurare ''sudo'' manualmente, digitando come root:
 
  echo 'loginname ALL=(ALL) ALL' >> /etc/sudoers
  
@@ -89,7 +91,7 @@ Fedora usa ''yum'' per installare ed aggiornare il proprio software. Quando è c
 Fedora ha due repository abilitati come impostazione predefinita: ''fedora'' (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed ''updates'' (pacchetti di aggiornamento, più recenti di fedora). 
 
 ===YUM Plugins===
-Yum ha disponibile molti plugins. Fedora 12 e successive abilitano di default ''yum-presto'', che durante il processo di update dovrebbe scaricare soltanto le porzioni nuove del pacchetto stesso. Inoltre molti utenti attivano ''fastestmirror'', il plugin che accelera il download cercando collegamenti più veloci.<br />
+Yum ha disponibile molti plugins. Molti utenti trovano utile ''fastestmirror'', il plugin che accelera il download cercando collegamenti più veloci.<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror
@@ -104,7 +106,7 @@ Per installare RPM-Fusion digitate:
 
 == Ambienti Desktop alternativi ==
 
-Molti utenti trovano Gnome 3 difficile da usare e dovrebbero provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora 16. Da notare che sono tutti opzionali. Utilizzate yum se volete installarli:
+Molti utenti trovano Gnome 3 difficile da usare e dovrebbero provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora. Da notare che sono tutti opzionali. Utilizzate yum se volete installarli:
 
 [http://www.mjmwired.net/resources/mjm-fedora-f16.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
 Per installarlo:
@@ -131,7 +133,7 @@ Fedora viene distribuita senza alcuna forma di supporto ai file di tipo MP3. Per
 Semplice, vecchia GUI, opzioni minimalistiche (ma molto popolari).<br />
 Installazione, con yum:
 
- [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-pulse xmms-skins
+ [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-flac xmms-pulse xmms-skins
 
 ===Audacious===
 Un player in versione base, ma un po' meglio di XMMS.<br />
@@ -145,7 +147,7 @@ Una semplice applicazione audio simile al layout di iTunes.<br />
 Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere già installati durante l'installazione di Gnome (sopra citata). I componenti che non vengono installati sono quelli relativi all'MP3 (e ad altri formati).<br />
 Installazione, con yum:
 
- [mirandam@charon ~]$ sudo yum install rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg
+ [mirandam@charon ~]$ sudo yum install rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg gstreamer-plugins-bad-nonfree
 
 ===Amarok===
 Una moderna applicazione ricca di opzioni aggiuntive.<br />
@@ -157,10 +159,10 @@ Installazione, yum:
 ===Comando combinato===
 Per chi volesse '''TUTTO''', seguire questo comando:
 
- [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-pulse xmms-skins \
- audacious audacious-plugins-freeworld* \
- rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
- amarok xine-lib-extras-freeworld
+ [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-flac xmms-pulse \
+xmms-skins audacious audacious-plugins-freeworld* rhythmbox \
+gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
+gstreamer-plugins-bad-nonfree amarok xine-lib-extras-freeworld
 
 ==Installare i Media Players==
 
@@ -174,7 +176,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
  [mirandam@charon ~]$ sudo yum install mplayer mplayer-gui gecko-mediaplayer mencoder
 
 * Da notare che mencoder è opzionale ma fornisce molte opzioni di decodifica.
-* '''Binary Codecs:''' Per favore installa i [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
+* '''Binary Codecs:''' Per favore installa i [http://www.mjmwired.net/resources/mjm-fedora-f17.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
 * MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
 
 ===Xine===
@@ -183,7 +185,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld
 
-'''Binary Codecs:''' Per favore installa i [http://www.mjmwired.net/resources/mjm-fedora-f8.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che Xine non supporta in maniera nativa.
+'''Binary Codecs:''' Per favore installa i [http://www.mjmwired.net/resources/mjm-fedora-f17.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che Xine non supporta in maniera nativa.
 '''DVD Playback:''' Per riprodurre correttamente i DVD leggi DVD Playback poche righe più giù.
 
 ===Banshee===
@@ -193,7 +195,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
  [mirandam@charon ~]$ sudo yum install banshee gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg
 
 ===Binary Codecs===
-MPlayer projects mantiene un package complete di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
+MPlayer projects mantiene un package completo di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
 {{Nota|Nota|C'è una significativa variazione, in relazione alla architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
 * Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/ http://www.mplayerhq.hu/MPlayer/releases/codecs]
 * Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20110131.tar.bz2 all-20110131.tar.bz2]<br />
@@ -219,8 +221,7 @@ Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository d
 * Installare il pacchetto:
 
 [mirandam@charon ~]$ sudo yum --enablerepo=atrpms install libdvdcss
-{{Suggerimento|Per l'incompatibilità tra ATrpms e RPMFusion è necessario tenere questo repository disabilitato.<br />
-Precedentemente si utilizzava il repo Livna, che però è diventato irraggiungibile.}}
+{{Suggerimento|Per l'incompatibilità tra ATrpms e RPMFusion è necessario tenere questo repository disabilitato.}}
 
 ==Installare i font TrueType di Microsoft==
 
@@ -232,6 +233,31 @@ Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.0-3.noarch.rpm (''n
  [mirandam@charon Download]$ sudo rpm -ivh msttcore-fonts-2.0-3.noarch.rpm
 
 Fedora incoraggia l'uso dei [https://www.redhat.com/promo/fonts/ Liberation Fonts]. Tali font dovrebbero essere già installati come impostazione predefinita (e inclusi nel DVD).
+
+== Installare Google Chrome ==
+
+ [mirandam@charon Download]$ sudo yum install google-chrome-stable
+
+Per utenti che necessitano di una versione più nuova, instabile o beta, il comando precedente può essere modificato con ''beta'' o ''unstable''. '''Questo NON è raccomandato'''.
+
+'''ALTERNATIVA: Open Source Google Chrome: Chromium'''
+
+Some users may prefer to use the fully open source version of Chrome: Chromium. Chromium is built specifically for Fedora so it may run faster, use more shared components of the system and be tweaked with improved settings. This version however may not always be the latest. It is not recommended for all users.
+
+Both Chrome and Chromium can coexist on the same system without trouble.
+
+1. Install spot's Chromium YUM Repository
+
+[mirandam@charon Download]$ wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
+[mirandam@charon Download]$ sudo cp ./fedora-chromium-stable.repo /etc/yum.repos.d/fedora-chromium-stable.repo
+
+2. Install Chromium
+
+[mirandam@charon Download]$ sudo yum install chromium
+
+More information about Chromium is available on the Fedora Wiki. Chromium can coexist with Google Chrome.
+
+
 
 == Adobe Flash Plugin ==
 
