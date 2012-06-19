@@ -52,24 +52,6 @@ Dopo il primo avvio di Fedora seguire le istruzioni sullo schermo.
 
 Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dovrà essere anche ''ammnistratore'', selezionare ''aggiungi al gruppo degli amministratori''.
 
-== Network Management ==
-
-'''Rete Offline'''
-
-Se NON è stato selezionato '''Configura la rete durante l'installazione da CD/DVD'', la rete non sarà attiva di default. Per risolvere questo, seguire i seguenti passaggi:
-
-Option 1: EDITARE:
-
- /etc/sysconfig/network-scripts/ifcfg-pXpY
-e cambiare ''ONBOOT=no'' in ''ONBOOT=yes''.
-
-Option 2: In Gnome, [Click-Destro] sull'icona Network in alto a destra sulla toolbar.
-Selezionare ''Modifica connessioni''
-Selezionare ''System pXpY'' e cliccare ''Modifica''
-Selezionare ''Connetti automaticamente'' e confermare con ''Applica''
-Inserire la password di 'root' quando richiesta.
-{{Nota|Nota|A causa degli ultimi cambiamenti in Fedora, i dispositivi di rete non sono più nominati come ''eth''. Verrà utilizzato ''pXpY'', dove le lettere X e Y corrispondono alla porta PCI e al numero della porta. Di conseguenza i nomi dei dispositivi possono essere diversi su hardware diverso.}}
-
 == Configurare sudo ==
 
 Fedora, come tutte le altre distribuzioni Linux, ha un utente root ed ha anche utenti individuali. L'utente root è il "superutente", al pari di "Amministratore" in Windows.
