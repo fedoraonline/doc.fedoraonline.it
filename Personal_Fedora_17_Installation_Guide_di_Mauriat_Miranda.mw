@@ -20,32 +20,32 @@ Scaricare il file immagine del DVD di Fedora 17 da un [http://mirrors.fedoraproj
 Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f17.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
 {{Nota|Nota|L'installer di Fedora (anaconda) è ridotto al minimo e molte delle configurazioni si dovranno eseguire dopo l'installazione.<br />
 Con qualche eccezione l'installer di Fedora è molto semplice e la gran parte dei settaggi di default sono corretti. Le opzioni più ''critiche'' invece sono il ''partizionamento'' e il ''bootloader''.}}
-Se si vuole fare la '''Configurazione della rete''' durante l'installazione, assicurarsi di selezionare ''Configura Rete'' quando si è al prompt per il proprio hostname. Per le impostazioni delle '''connessioni di rete''' selezionare ''modifica'' per System pXpY ('X' e 'Y' sono numeri) e assicurarsi di selezionare di connettersi automaticamente. Modificare anche le altre impostazioni se necessario.
+Se si vuole fare la '''Configurazione della rete''' durante l'installazione, assicurarsi di selezionare ''Configura Rete'' quando si è al prompt per il proprio hostname. Per le impostazioni delle '''connessioni di rete''' selezionare ''modifica'' per impostae la propria rete di default e assicurarsi di selezionare di connettersi automaticamente. Modificare anche le altre impostazioni se necessario. Per [http://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/sn-Netconfig-x86.html#sn-Netconfig-x86-edit ulteriori informazioni].
 
 ===Partizionare===
 * Se si ha un disco fisso vuoto o si desidera cancellare l'intero contenuto del disco fisso, si può lasciare che l'installer ''usi l'intero spazio disponibile'';
-* Se si desidera avviare in dual-boot o salvare dei dati contenuti nel disco fisso, bisogna selezionare o ''diminuire il sistema corrente'' oppure ''Usa lo sapzio libero'';
+* Se si desidera avviare in dual-boot o salvare dei dati contenuti nel disco fisso, bisogna selezionare o ''diminuire il sistema corrente'' oppure ''Usa lo spazio libero'';
 * Per i miei sistemi seleziono: Crea un layout personalizzato.
-In questo caso raccomando almeno 3 partizioni: una partizione primaria / di root di 8-12GB, una partizione /home di 10GB+ e una partizione swap di 1-2GB. La partizione principale è quella dove saranno installate le applicazioni. La partizione /home conterrà tutti i dati personali (meglio se la si può definire di grandi dimensioni). La partizione di swap dovrebbe essere almeno pari alla dimensione della memoria fisica del proprio sistema, sistemi con grandi dimensioni di memoria comunque non hanno bisogno di grandi spazi per lo swap.
+In questo caso raccomando almeno 3 partizioni: una partizione primaria / di root di 8-12GB, una partizione /home di 10GB+ e una partizione swap di 2GB. La partizione principale è quella dove saranno installate le applicazioni. La partizione /home conterrà tutti i dati personali (meglio se la si può definire di grandi dimensioni). La partizione di swap dovrebbe essere almeno pari alla dimensione della memoria fisica del proprio sistema (1GB, 2GB, 4GB), sistemi con grandi dimensioni di memoria comunque non hanno bisogno di grandi spazi per lo swap. ([http://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/s2-diskpartrecommend-x86.html Per sapere di più]).
 
 ===Boot Loader===
-* Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio ''Sistema Operativo Principale'', si possono lasciare le opzioni predefinite.
-* Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, '''NON nell'MBR'''. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel ''First sector of boot partition''. Gli utenti '''Windows 7''' (o '''Vista''') possono usare [http://neosmart.net/dl.php?id=1 EasyBCD] (freeware download per Windows). Se si sta ancora utilizzando Windows XP (o 2000) si può utilizzare [http://www.winimage.com/bootpart.htm Bootparte]per avviare Linux. Un´alternativa a Bootpart è descritta nel [http://www.tldp.org/HOWTO/Linux+NT-Loader.html" NT OS Loader + Linux mini-HOWTO] (o anche nel [http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html Grub Win2K Howto]). Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. '''Questa opzione richiede del lavoro in più, e si tenga presente che funziona anche l'opzione predefinita di installazione sull'MBR.'''
+* Se si possiede un disco fisso vuoto o si desidera che Fedora sia il proprio ''Sistema Operativo Principale'', si possono lasciare le opzioni predefinite. Questo funziona anche per sistemi in dual boot con altri sistemi operativi (p.e. Windows).
+* Se si desidera mantenere Windows come sistema operativo principale, bisogna installare Grub sulla partizione /, '''NON nell'MBR'''. Per fare questo, selezionare Configure Advanced Boot Loader Options per poi installare Grub nel ''First sector of boot partition''. Gli utenti '''Windows 7''' (o '''Vista''') possono usare [http://neosmart.net/dl.php?id=1 EasyBCD] (freeware download per Windows). Se si sta ancora utilizzando Windows XP (o 2000) si può utilizzare [http://www.winimage.com/bootpart.htm Bootparte]per avviare Linux. Un´alternativa a Bootpart è descritta nel [http://www.tldp.org/HOWTO/Linux+NT-Loader.html" NT OS Loader + Linux mini-HOWTO] o nel [http://www.geocities.com/epark/linux/grub-w2k-HOWTO.html Grub Win2K Howto]. Io raccomando di fare come me, così non si correrà il rischio di danneggiare la propria installazione di Windows in un ambiente Dual-Boot. '''Questa opzione richiede del lavoro in più. Si tenga presente che anche l'opzione predefinita di installazione sull'MBR funziona.'''
 
 ===Selezione dei pacchetti'''===
-Se si possiede una connessione veloce ad Internet, non è necessario installare nulla in fase di installazione. Fedora può facilmente aggiungere altro software in un secondo momento. La selezione di default dei pacchetti da installare è in genere accettabile. La maggior parte degli utenti dovrebbe installare Fedora con l'opzione Desktop.
+Se si possiede una connessione veloce ad Internet, non è necessario installare nulla in fase di installazione. Fedora può facilmente aggiungere altro software in un secondo momento. La selezione di default dei pacchetti da installare è in genere accettabile. La maggior parte degli utenti dovrebbe installare Fedora con l'opzione Desktop Grafico.
 {{Nota|Nota|A causa dei cambiamenti di Gnome nelle ultime versioni di Fedora è consigliabile installare almeno un ulteriore ambiente Desktop.}}
 I seguenti DE sono installabili attraverso l'opzione "personalizza ora":
 * Sotto la voce ''Ambienti Desktop'' selezionare almeno uno di:
-** KDE
+** KDE Software Compilation
 ** LXDE
 ** Xfce
 
-Possono essere anche installati successivamente se si desidera. Per ulteriori informazioni leggere [http://www.mjmwired.net/resources/mjm-fedora-f16.html#desktops Desktop alternativi].
+Possono essere anche installati successivamente se si desidera. Per ulteriori informazioni leggere [http://www.mjmwired.net/resources/mjm-fedora-f17.html#desktops Desktop alternativi].
 
 Installare i pacchetti selezionati e riavviare.
 
-Per coloro che hanno optato per installare grub sul primo settore della partizione / invece che nell'MBR, è necessario seguire una delle guide sopra citate per avviare Fedora.
+Per coloro che hanno optato per installare grub sul primo settore della partizione / invece che nell'MBR, è necessario seguire una delle guide sopra citate per avviare Fedora e configurando Windows//Vista o XP/2000.
 
 Dopo il '''primo avvio''':
 Dopo il primo avvio di Fedora seguire le istruzioni sullo schermo.
