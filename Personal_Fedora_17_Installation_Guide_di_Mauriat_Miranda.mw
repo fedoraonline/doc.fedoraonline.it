@@ -238,16 +238,16 @@ Fedora incoraggia l'uso dei [https://www.redhat.com/promo/fonts/ Liberation Font
 
 Google Chrome è un browser ben mantenuto e aggiornato. Lo consiglio fortemente. Uno dei vantaggi di Chrome è che non è strettamente integrato a una versione specifica di Fedora (come per esempio lo è Firefox).
 
-# Installare il repository di Google Chrome
+<ol><li>Installare il repository di Google Chrome</li>
 
  [mirandam@charon Download]$ wget http://www.mjmwired.net/resources/files/google-chrome.repo
  [mirandam@charon Download]$ sudo cp ./google-chrome.repo /etc/yum.repos.d/google-chrome.repo
  [mirandam@charon Download]$ sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
 
-# Installare Google Chrome
+<li>Installare Google Chrome</li>
 
  [mirandam@charon Download]$ sudo yum install google-chrome-stable
-
+</ol>
 Per utenti che necessitano di una versione più nuova, instabile o beta, il comando precedente può essere modificato con ''beta'' o ''unstable''. '''Questo NON è raccomandato'''.
 
 '''ALTERNATIVA: Open Source Google Chrome: Chromium'''
@@ -256,15 +256,15 @@ Alcuni utenti probabilmente preferiscono una versione completamente open source 
 
 Sia Chrome che Chromium possono coesistere sullo stesso sistema senza andare in conflitto.
 
-#* Installare il repository Chromium di "Spot"
+<ol><li>Installare il repository Chromium di "Spot"</li>
 
  [mirandam@charon Download]$ wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
  [mirandam@charon Download]$ sudo cp ./fedora-chromium-stable.repo /etc/yum.repos.d/fedora-chromium-stable.repo
 
-#* Installare Chromium
+<li>Installare Chromium</li>
 
  [mirandam@charon Download]$ sudo yum install chromium
-
+</ol>
 Ulteriori informazioni su Chromium sono disponibili sul [http://fedoraproject.org/wiki/Chromium Fedora Wiki]. Chromium può coesistere con Google Chrome.
 
 == Adobe Flash Plugin ==
