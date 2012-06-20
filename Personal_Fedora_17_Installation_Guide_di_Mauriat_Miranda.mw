@@ -395,7 +395,7 @@ Tali parametri SARANNO il nome utente e la password da usare per il login '''da 
  Retype new SMB password:
  Added user username.
 {{Nota|Nota|''nomeutente'' deve essere un account valido sulla macchina.}}
-==Avviare il servizio Samba==
+===Avviare il servizio Samba===
  [mirandam@charon ~]$ sudo systemctl start smb.service nmb.service
 
 Rendere effettivo l'avvio di Samba ad ogni avvio di Fedora.
