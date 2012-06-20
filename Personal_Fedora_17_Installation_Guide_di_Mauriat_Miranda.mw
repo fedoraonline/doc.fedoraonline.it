@@ -269,8 +269,8 @@ Ulteriori informazioni su Chromium sono disponibili sul [http://fedoraproject.or
 
 == Adobe Flash Plugin ==
 
-Il plugin per Adobe Flash può essere installato dal sito web di Adobe.<br />
-===Installare il repository di Adobe===
+Il plugin per Adobe Flash può essere installato dal sito web di Adobe. Gli utenti dovrebbero utilizzare il repository YUM di Adobe. (raccomandato)<br />
+<ol><li>'''Installare il repository di Adobe'''</li>
 '''32-bit'''
  [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
  [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
@@ -279,35 +279,35 @@ Il plugin per Adobe Flash può essere installato dal sito web di Adobe.<br />
  [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-x86_64-1.0-1.noarch.rpm
  [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
 
-===Installare il Flash Plugin===
+<li>'''Installare il Flash Plugin'''</li>
  [mirandam@charon Download]$ sudo yum install flash-plugin
-Riavviare Firefox o altri browser Mozilla.<Br />
+Riavviare Firefox o altri browser Mozilla.</ol><br />
 Ulteriori informazioni sono disponibili sul [https://fedoraproject.org/wiki/Flash Fedora Wiki].
 
-==Installare il Plugin Java==
+==Java Runtime Environment==
 
-L'installazione standard di Fedora installerà ''OpenJDK'' (basato su Sun Java). In caso contrario può essere installato con yum:
+Fedora dovrebbe supportare Java con ''OpenJDK'' (basato su Sun Java) e il web plugin Icedtea. In caso contrario può essere installato con yum:
 
- [mirandam@charon ~]$ sudo yum install java-1.6.0-openjdk java-1.6.0-openjdk-plugin
+ [mirandam@charon ~]$ sudo yum install java-1.7.0-openjdk icedtea-web
 
-Con OpenJDK installato, le applicazioni e le applet Java dovrebbero funzionare automaticamente! Potrebbe essere che alcuni applet non funzionano correttamente, proprio perchè OpenJDK ha ancora qualche limite.''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
+Con OpenJDK installato, le applicazioni e le applet Java dovrebbero funzionare automaticamente. Potrebbe essere che alcuni applet non funzionano correttamente, proprio perchè OpenJDK ha ancora qualche limite.''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
 
 ===Usare invece Sun Java===
 Se preferisci il ''Sun Java'' o se OpenJDK non funziona correttamente, puoi scaricare Sun Java ed usarlo con Fedora.<br />
-Download del pacchetto Java da: [http://java.sun.com/javase/downloads/index.jsp http://java.sun.com/javase/downloads/index.jsp]<br />
-Seleziona: ''Java Runtime Environment (JRE) 6 Update 17'' (JDK è per sviluppatori)br />
-Alla pagina successiva accetta l'accordo di Licenza ed selziona "continue":
+Download del pacchetto Java da: [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html]<br />
+Sotto ''Java Platform, Standard Edition'' seleziona: '''Download JRE''' (JDK è per sviluppatori)br />
+Alla pagina successiva accetta l'accordo di Licenza:
 
 Per utenti 32-bit: seleziona "Linux '''x86'''"<br />
-jre-7u1-linux-i586.'''rpm'''
+jre-7u5-linux-i586.'''rpm'''
 
 Per utenti 64-bit: seleziona "Linux '''x64'''"<br />
-jre-7u1-linux-x64.'''rpm'''
+jre-7u5-linux-x64.'''rpm'''
 
 Installazione:
- [mirandam@charon Download]$ sudo rpm -ivh jre-7u1-linux-i586.rpm
- -OR-
- [mirandam@charon Download]$ sudo rpm -ivh jre-7u1-linux-x64.rpm
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u5-linux-i586.rpm
+ -O-
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u5-linux-x64.rpm
 
 Quando si esegue un comando ''java'', Fedora preferisce usare OpenJDK, per usare il Sun Java si usi il comando ''alternatives'':
 
@@ -326,23 +326,25 @@ Per '''sistemi a 64 bit'''
 libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 20000
 
 Potrebbe essere necessario riavviare Firefox.<br />
-'''Nota''': Se desideri ritornare ad ''OpenJDK'' puoi eseguire i seguenti comandi per passare da un Sun a OpenJDK.
+'''Nota''': Se desideri ritornare ad ''OpenJDK'' puoi eseguire i seguenti comandi per passare da Sun a OpenJDK.
 
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config java
  
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so
- (or for 64-bit)
+ (o per 64-bit)
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
 
-''Per fare l'update:'' se fai l'update del pacchetto JRE, scarica semplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte.
+''Per fare l'update:'' se fai l'update del pacchetto JRE, scarica semplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte. Il comando seguente contiene tutto quello che servirà:
+
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u6-linux-x64.rpm
 
 Ulteriori informazioni: [http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html Install Documentation for Linux]
 
 ==Installare Adobe Acrobat==
 
-Per visualizzare i file PDF, Fedora include ''evince'' o ''okular''. Il seguente è indirizzato a utenti che necessitano di Adobe Acrobat Reader.<br />
+Per visualizzare i file PDF, Fedora raccomanda l'utilizzo di ''evince'' o ''okular''. Il seguente è indirizzato a utenti che necessitano di Adobe Acrobat Reader.<br />
 Per utenti Yum:<br />
-Installate il repository di adobe e poi il Reader:
+Installare il repository di Adobe e poi il Reader:
 
  [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
  [mirandam@charon Download]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
@@ -354,6 +356,8 @@ Installate il repository di adobe e poi il Reader:
 Per altre lingue l'installazione è simile: AdobeReader_fra
 Se non sei sicuro del nome esatto cercalo con:<br />
 ''yum info AdobeReader_fra''<br />
+Altrimenti installalo manualmente.
+('''NOTA''': utenti 64 bit dovrebbero sempre usare yum per risolvere tutte le dipendenze necessarie 32 bit)
 La versione corrente di Adobe Acrobat è la 9.x e il file da scaricare varia in funzione della lingua. Non tutte le lingue sono supportate nella versione per Linux.
 
 == Configurare Samba - Condividere file con Windows ==
@@ -378,7 +382,7 @@ Aggiungere le shares alla fine del file. Ad esempio:
    path = /data/
    public = yes
    writable = yes</pre>
-Se si definisce come 'writable' (scrivibile), la risorsa '''deve essere''' scrivibile prima su Linux. I permessi addizionali devono corrispondere (esempio: ''drw-rw-rw'').<br />
+Se si definisce come 'writable' (scrivibile), la risorsa '''deve essere''' scrivibile prima su Linux. I permessi addizionali devono corrispondere (esempio: ''drwxrw-rw'').<br />
 Se i dati della directory home (tutti i file personali sotto ''/home/nomeutente'') devono essere accessibili, bisogna indicare 'browseable = yes' sotto [homes] (~riga 279).<br />
 Il file di configurazione è ''molto descrittivo'', occorre leggerlo da cima a fondo per avere maggiori idee o informazioni.
 
@@ -421,7 +425,11 @@ SELinux ha un ''controllo significativo'' su Samba e ne limita differenti parti.
 
  [mirandam@charon ~]$ system-config-selinux
 
-Selezionare ''Boolean'' e digitare ''Samba'' nel filtro. (Si utilizzerà ''Yum'' per installare ''policycoreutils-gui'')<br />
+Selezionare ''Boolean'' e digitare ''Samba'' nel filtro.<br />
+Se si ottiene il seguente errore:
+ bash: system-config-selinux: command not found...
+prima bisogna eseguire:
+ $ sudo yum install policycoreutils-gui
 Per attivare ogni cambiamento apportato alla configurazione di SELinux o di smb.conf, è raccomandato riavviare Samba.
 
 ==Ulteriori informazioni==
@@ -429,7 +437,7 @@ Per attivare ogni cambiamento apportato alla configurazione di SELinux o di smb.
 ----
 Commenti, suggerimenti, domande o qualunque altro contributo a questa o a una qualunque delle [http://www.mjmwired.net/resources.php altre mie pagine] sono ben accetti. Per favore usate il seguente [http://www.mjmwired.net/contact.php link] per contattarmi.<br />
 Aiutatemi: se avete trovato questa guida o ogni altra risorsa collegata utile, per favore considerate di aiutare il mio sito raccomandando questa pagina ad altri o linkandola. Io apprezzo tutto il supporto che posso ricevere. Grazie in anticipo.<br />
-Potete anche scegliere di donare qualcosa per supportare l'hosting per il mio sito.
+Potete anche scegliere di donare qualcosa con [http://www.amazon.com/gp/registry/registry.html/ref=wlem-si-ht_gotowl/103-7306043-1450224?id=2EPXY2P66KUM1 Amazon.com wishlist]
 
 '''Disclaimer:''' The author makes no claim to the accuracy of the information provided. This information is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY. There is no implied support from referencing this guide. Any help that is provided is at will. Use this information at your own risk. Always make proper backups and use caution when modifying critical system files.<br />
 '''PER FAVORE NON''' fate copie in mirror, traducete o copiate questa pagina ''senza'' contattarmi. Io ho speso diverse ore di lavoro personalmente per ricercare e verificare quanto è qui riportato.
@@ -437,4 +445,4 @@ Potete anche scegliere di donare qualcosa per supportare l'hosting per il mio si
 [http://www.mjmwired.net/about.php#copyright '''Copyright © 2003-2011'''] '''by Mauriat Miranda''' (mjmwired.net).
 
 [[Categoria:Traduzioni]]
-[[Categoria:Scrittura in corso]]
+[[Categoria:Rilettura in corso]]
