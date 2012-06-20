@@ -236,28 +236,36 @@ Fedora incoraggia l'uso dei [https://www.redhat.com/promo/fonts/ Liberation Font
 
 == Installare Google Chrome ==
 
+Google Chrome è un browser ben mantenuto e aggiornato. Lo consiglio fortemente. Uno dei vantaggi di Chrome è che non è strettamente integrato a una versione specifica di Fedora (come per esempio lo è Firefox).
+
+# Installare il repository di Google Chrome
+
+ [mirandam@charon Download]$ wget http://www.mjmwired.net/resources/files/google-chrome.repo
+ [mirandam@charon Download]$ sudo cp ./google-chrome.repo /etc/yum.repos.d/google-chrome.repo
+ [mirandam@charon Download]$ sudo rpm --import https://dl-ssl.google.com/linux/linux_signing_key.pub
+
+# Installare Google Chrome
+
  [mirandam@charon Download]$ sudo yum install google-chrome-stable
 
 Per utenti che necessitano di una versione più nuova, instabile o beta, il comando precedente può essere modificato con ''beta'' o ''unstable''. '''Questo NON è raccomandato'''.
 
 '''ALTERNATIVA: Open Source Google Chrome: Chromium'''
 
-Some users may prefer to use the fully open source version of Chrome: Chromium. Chromium is built specifically for Fedora so it may run faster, use more shared components of the system and be tweaked with improved settings. This version however may not always be the latest. It is not recommended for all users.
+Alcuni utenti probabilmente preferiscono una versione completamente open source di Chrome: Chromium. Chromium è prodotto specificatamente per Fedora, per cui sarà più veloce, utilizzerà più componenti condivisi del sistema e potrà essere ottimizzato con impostazioni migliori. ''Questa versione, comunque, non sempre è l'ultima. Potrebbe non essere raccomandata per tutti gli utenti''.
 
-Both Chrome and Chromium can coexist on the same system without trouble.
+Sia Chrome che Chromium possono coesistere sullo stesso sistema senza andare in conflitto.
 
-1. Install spot's Chromium YUM Repository
+#* Installare il repository Chromium di "Spot"
 
-[mirandam@charon Download]$ wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
-[mirandam@charon Download]$ sudo cp ./fedora-chromium-stable.repo /etc/yum.repos.d/fedora-chromium-stable.repo
+ [mirandam@charon Download]$ wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
+ [mirandam@charon Download]$ sudo cp ./fedora-chromium-stable.repo /etc/yum.repos.d/fedora-chromium-stable.repo
 
-2. Install Chromium
+#* Installare Chromium
 
-[mirandam@charon Download]$ sudo yum install chromium
+ [mirandam@charon Download]$ sudo yum install chromium
 
-More information about Chromium is available on the Fedora Wiki. Chromium can coexist with Google Chrome.
-
-
+Ulteriori informazioni su Chromium sono disponibili sul [http://fedoraproject.org/wiki/Chromium Fedora Wiki]. Chromium può coesistere con Google Chrome.
 
 == Adobe Flash Plugin ==
 
