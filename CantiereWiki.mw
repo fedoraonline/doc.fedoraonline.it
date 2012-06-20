@@ -42,7 +42,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Personal Fedora 17 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Personal Fedora 17 Installation Guide di Mauriat Miranda|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Reinstallare Grub|autore=?|stato=DaFare}}
 |}
@@ -64,6 +64,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Stato
 {{RiletturaArticolo|fonte=-|articolo=Release Party F17 - Roma 09 Giugno 2012 - L'Evento|autore=GabrieleTrombini|rilettore=RobertMayr|data=14/06/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installazione e Configurazione GtkRadiant|autore=AlbertoChiusole|rilettore=RobertMayr|data=18/06/2012| stato=InCorso}}
+{{RiletturaArticolo|fonte=-|articolo=Personal Fedora 17 Installation Guide di Mauriat Miranda|autore=RobertMayr|rilettore=?|data=20/06/2012| stato=DaFare}}
 |}
 
 
