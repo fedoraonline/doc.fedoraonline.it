@@ -1,0 +1,31 @@
+== Riunioni degli utenti Fedora ==
+
+Gli incontri degli utenti italiani Fedora si svolgono regolarmente, con l'obiettivo di rendere partecipe tutti alle azioni della comunità. I meeting sono aperti a tutti, ma vista la breve durata delle riunioni, è necessario attenersi alle tematiche in agenda e non divagare troppo. In presenza di molti utenti verrà attuato il protocollo standard per chiedere la parola o fare domande.
+
+== Luogo ==
+
+I meeting della comunità italiana si svolgono periodicamente nel canale '''#fedora-it''' sul server [http://freenode.net/ freenode].
+
+== Agenda e luogo della prossima riunione ==
+
+Non è ancora stata fissata la data del prossimo meeting. <br />
+Torna prossimamente per tenerti informato, tuttavia in questa prima fase le informazioni verranno pubblicate anche sul Forum, sul Planet, su Facebook e Twitter.
+
+== Richieste di inserimento in agenda ==
+
+Ogni utente può suggerire dei punti da inserire in agenda nei prossimi meeting, e lo può fare tramite il forum nella sezione dei [http://forum.fedoraonline.it/viewforum.php?id=10 Suggerimenti e critiche].
+
+== Archivi ==
+
+E' possibile consultare tutti i meeting archiviati da meetbot cliccando [http://meetbot.fedoraproject.org/fedora-it/ qui].<br />
+Ogni singolo meeting può essere consultato anche direttamente dalla seguente tabella:
+{|
+|- style=" color: #fff; background-color: #3074c2;" tablewidth="98%" 
+| '''Meetings''' || '''Log''' || '''Note'''
+|-
+| Meeting del 21-06-2012|| [http://meetbot.fedoraproject.org/fedora-it/2012-06-21/fedora-it.2012-06-21-20.06.log.html logged] || 
+|-
+| LATAM || [https://fedorahosted.org/fedora-latam/ LATAM Trac] || Tasks tracking for Latin America region.
+|}
+
+[[Categoria: FedoraOnline]]
