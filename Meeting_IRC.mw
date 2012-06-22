@@ -20,12 +20,10 @@ Ogni utente può suggerire dei punti da inserire in agenda nei prossimi meeting,
 E' possibile consultare tutti i meeting archiviati da meetbot cliccando [http://meetbot.fedoraproject.org/fedora-it/ qui].<br />
 Ogni singolo meeting può essere consultato anche direttamente dalla seguente tabella:
 {| {{TabellaBase}}
-|- style=" color: #fff; background-color: #3074c2;" tablewidth="98%; border:solid 1px #000" 
+|-  style=" background-color: #3074c2;"
 | '''Meetings''' || '''Log''' || '''Note'''
 |-
-| Meeting del 21-06-2012|| [http://meetbot.fedoraproject.org/fedora-it/2012-06-21/fedora-it.2012-06-21-20.06.log.html logged] || 
-|-
-| LATAM || [https://fedorahosted.org/fedora-latam/ LATAM Trac] || Tasks tracking for Latin America region.
+| Meeting del 21-06-2012 || [http://meetbot.fedoraproject.org/fedora-it/2012-06-21/fedora-it.2012-06-21-20.06.log.html logged] || 
 |}
 
 [[Categoria: FedoraOnline]]
