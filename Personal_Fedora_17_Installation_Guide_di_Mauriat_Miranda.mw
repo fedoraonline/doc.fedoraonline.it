@@ -196,7 +196,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
 ===Binary Codecs===
 MPlayer projects mantiene un package completo di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
-{{Nota|Nota|C'è una significativa variazione, in relazione alla architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
+{{Nota|Nota|C'è una significativa variazione, in relazione all'architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
 * Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/ http://www.mplayerhq.hu/MPlayer/releases/codecs]
 * Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20110131.tar.bz2 all-20110131.tar.bz2]<br />
 * Installare i codecs:
