@@ -160,9 +160,9 @@ Installazione, yum:
 Per chi volesse '''TUTTO''', seguire questo comando:
 
  [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-flac xmms-pulse \
-xmms-skins audacious audacious-plugins-freeworld* rhythmbox \
-gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
-gstreamer-plugins-bad-nonfree amarok xine-lib-extras-freeworld
+ xmms-skins audacious audacious-plugins-freeworld* rhythmbox \
+ gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
+ gstreamer-plugins-bad-nonfree amarok xine-lib-extras-freeworld
 
 ==Installare i Media Players==
 
