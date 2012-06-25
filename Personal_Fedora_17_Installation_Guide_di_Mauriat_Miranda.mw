@@ -295,7 +295,7 @@ Con OpenJDK installato, le applicazioni e le applet Java dovrebbero funzionare a
 ===Usare invece Sun Java===
 Se preferisci il ''Sun Java'' o se OpenJDK non funziona correttamente, puoi scaricare Sun Java ed usarlo con Fedora.<br />
 Download del pacchetto Java da: [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html]<br />
-Sotto ''Java Platform, Standard Edition'' seleziona: '''Download JRE''' (JDK è per sviluppatori)br />
+Sotto ''Java Platform, Standard Edition'' seleziona: '''Download JRE''' (JDK è per sviluppatori)<br />
 Alla pagina successiva accetta l'accordo di Licenza:
 
 Per utenti 32-bit: seleziona "Linux '''x86'''"<br />
@@ -318,12 +318,12 @@ Lo stesso è da applicare al Mozilla/Firefox Plugin:
 Per '''sistemi a 32 bit'''
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so \
-libjavaplugin.so /usr/java/default/lib/i386/libnpjp2.so 20000
+ libjavaplugin.so /usr/java/default/lib/i386/libnpjp2.so 20000
 
 Per '''sistemi a 64 bit'''
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so \
-libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 20000
+ libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 20000
 
 Potrebbe essere necessario riavviare Firefox.<br />
 '''Nota''': Se desideri ritornare ad ''OpenJDK'' puoi eseguire i seguenti comandi per passare da Sun a OpenJDK.
