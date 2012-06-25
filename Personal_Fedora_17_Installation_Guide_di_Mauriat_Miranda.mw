@@ -362,7 +362,7 @@ La versione corrente di Adobe Acrobat è la 9.x e il file da scaricare varia in 
 
 == Configurare Samba - Condividere file con Windows ==
 
-Se si possiedono computer con Windows installato o una Lan e si vuole condividere file tra macchine con Windows e con Linux, bisogna configurare Samba. Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
+Se si possiedono computer con Windows installato o una Lan e si vuole condividere file tra macchine Windows e Linux, bisogna configurare Samba. Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
 
 ===Installare Samba===
  [mirandam@charon ~]$ sudo yum install samba samba-client cifs-utils
