@@ -36,12 +36,12 @@ In questo caso raccomando almeno 3 partizioni: una partizione primaria / di root
 Se si possiede una connessione veloce ad Internet, non è necessario installare nulla in fase di installazione. Fedora può facilmente aggiungere altro software in un secondo momento. La selezione di default dei pacchetti da installare è in genere accettabile. La maggior parte degli utenti dovrebbe installare Fedora con l'opzione Desktop Grafico.
 {{Nota|Nota|A causa dei cambiamenti di Gnome nelle ultime versioni di Fedora è consigliabile installare almeno un ulteriore ambiente Desktop.}}
 I seguenti DE sono installabili attraverso l'opzione "personalizza ora":
-* Sotto la voce ''Ambienti Desktop'' selezionare almeno uno di:
+* Sotto la voce ''Ambienti Desktop'' selezionare almeno uno tra:
 ** KDE Software Compilation
 ** LXDE
 ** Xfce
 
-Possono essere anche installati successivamente se si desidera. Per ulteriori informazioni leggere [http://www.mjmwired.net/resources/mjm-fedora-f17.html#desktops Desktop alternativi].
+Possono essere installati anche successivamente se si desidera. Per ulteriori informazioni leggere [http://www.mjmwired.net/resources/mjm-fedora-f17.html#desktops Desktop alternativi].
 
 Installare i pacchetti selezionati e riavviare.
 
