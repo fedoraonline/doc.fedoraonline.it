@@ -357,7 +357,7 @@ Per altre lingue l'installazione è simile: AdobeReader_fra
 Se non sei sicuro del nome esatto cercalo con:<br />
 ''yum info AdobeReader_fra''<br />
 Altrimenti installalo manualmente.
-('''NOTA''': utenti 64 bit dovrebbero sempre usare yum per risolvere tutte le dipendenze necessarie 32 bit)
+('''NOTA''': utenti 64 bit dovrebbero sempre usare yum per risolvere tutte le dipendenze necessarie 32 bit).<br />
 La versione corrente di Adobe Acrobat è la 9.x e il file da scaricare varia in funzione della lingua. Non tutte le lingue sono supportate nella versione per Linux.
 
 == Configurare Samba - Condividere file con Windows ==
