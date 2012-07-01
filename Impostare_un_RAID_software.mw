@@ -7,7 +7,7 @@ Questa guida descrive come '''preparare un RAID software per utilizzare due disc
 Gli esempi si riferiscono a dei dischi sata (sda e sdb), ma il tutto vale anche per dischi eide, basta sostituire a sda e sdb le sigle hda e hdb.<br />
 Tutte le operazioni per la preparazione del RAID andranno fatte al momento dell'installazione di Fedora, cancellando la struttura di partizioni proposta dall'installazione guidata e impostando a mano il RAID.
 
-Per notizie di base su dischi e partizioni, e sull'utilizzo di alcuni comandi per la gestione dei dischi vedere la guida [http://www.fedoraonline.it/modules/wfsection/article.php?articleid=115 Dischi e partizioni: le basi ]
+Per notizie di base su dischi e partizioni, e sull'utilizzo di alcuni comandi per la gestione dei dischi vedere la guida [http://doc.fedoraonline.it/Dischi_e_partizioni:_le_basi Dischi e partizioni: le basi ]
 
 ==Creazione del set RAID==
 <ol>
@@ -69,7 +69,7 @@ aggiunge la partizione ''sdb1'' di un nuovo disco al device ''md'' di un set RAI
 Dopo l'aggiunta della nuova partizione inizia la duplicazione automatica dei dati (E' possibile seguirla con '''cat /proc/mdstat''' ).<br />
 E' possibile aggiungere tutte le partizioni senza attendere che la ricostruzione della prima sia terminata: le partizioni verranno messe in coda (si vede DELAYED con ''cat /proc/mdstat''), ma in questo caso ''la macchina NON VA RIAVVIATA'' finché non è finita la ricostruzione di tutte le partizioni, altrimenti i dati non vengono duplicati.
 
-{{Nota|Note:|(*): il carattere <nowiki>|</nowiki> è un pipe. Sulla tastiera italiana il carattere pipe si ottiene premendo MAIUSCOLO e contemporaneamente <nowiki>\</nowiki> ( "backslash" si trova in alto a sinistra, subito prima del numero 1)}}
+{{Nota|Note:|(*): il carattere <nowiki>|</nowiki> è un pipe. Sulla tastiera italiana il carattere pipe si ottiene premendo MAIUSC e contemporaneamente <nowiki>\</nowiki> ( "backslash" si trova in alto a sinistra, subito prima del numero 1)}}
 
 Se i comandi dati come utente root non funzionano subito (appare un messaggio che dice che il comando non esiste) ridare lo stesso comando facendolo precedere da '''/sbin/'''
 
