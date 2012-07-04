@@ -43,7 +43,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Reinstallare Grub|autore=?|stato=DaFare}}
 |}
 
 == Rilettura in corso ==
@@ -85,6 +84,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 {{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}}
+{{ModificaArticolo|articolo=Reinstallare Grub|autore=/|responsabile=AlbertoChiusole|data=-/-/-|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
