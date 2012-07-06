@@ -1,32 +1,58 @@
 {{InCorso|autore=AlbertoChiusole}}
-Vista la diffusione del problema e le frequenti domande a proposito, ho pensato di raccogliere le varie informazioni sparpagliate per il forum inerenti all'installazione del boot-loader Grub nel Master Boot Record del disco.
 
-Procurarsi il cd/dvd di Fedora Core ed inserirlo nel drive e impostare dal bios (se già non è settato) il boot dal drive in questione.<br />
+
+__TOC__
+
+==Introduzione==
+'''GRUB''' (GRand Unified Bootloader) è un ''boot loader'' usato da molte distribuzioni Linux, tra cui Fedora. Lo scopo di un boot loader è caricare il kernel di un sistema operativo e permetterne l'avvio.
+Dalla versione '''15''' di fedora si è passati alla versione 1.99 di grub, gergalmente definita Grub2; per questo motivo chi volesse reinstallare Grub per fedora 15 o superiore dovrà attenersi alla seconda parte di questa guida.
+
+==Ricavare le informazioni necessarie==
+Prima di procedere alla reinstallazione vera e propria di Grub bisognerà accedere da una live o da un DVD per recuperare le informazioni necessarie ai passaggi seguenti. Una volta avuto accesso ad un terminale con permessi root, si cerca la partizione sulla quale reinstallare Grub con:
+ # fdisk -l
+e bisogna riconoscere il device in cui sovrascrivere il MBR (Master Boot Record). In questo caso si possono utilizzare anche tool grafici, come può essere GParted, per trovare la partizione esatta.
+
+===Grub Legacy===
+In questa parte della guida si andrà a resettare Grub, versione ''Legacy'', per fedora 14 o precedenti.
+
+Procurarsi il dvd di Fedora e impostare dal bios (se già non è settato) il boot dal drive in questione.<br />
 Alla prima opportunità di scelta, premere il tasto "F5" ed al successivo prompt digitare:
-
- linux rescue 
-
+ # linux rescue
 Seguito dal tasto enter. A questo punto digitare:
-
- chroot /mnt/sysimage  
-
+ # chroot /mnt/sysimage  
 e premere enter. 
 
 Quindi dare un'occhiata al contenuto del file device.map:
+ # cat /boot/grub/device.map 
+Verificare siano presenti i dischi necessari e annotare la loro posizione. Nel caso ne manchi uno, lo si aggiunge con un editor di testo.<br />
+A questo punto:
+ # grub-install /dev/hda
+e premere nuovamente enter.
 
- cat /boot/grub/device.map 
-
-E verificare siano presenti i dischi necessari e corretta la loro posizione. Nel caso ne manchi uno, lo si aggiunge con un editor di testo. A questo punto:
-
- grub-install /dev/hda 
-
-e premere nuovamente enter. Ovviamente il device "hda" permette l'installazione nel mbr del primo disco ata, in caso di differenti esigenze, specificare il device appropriato!
-
+Scegliendo '''hda''' Grub andrà a installarsi nel MBR del primo disco ata, in caso di differenti esigenze, specificare il device appropriato.
 Digitare quindi 
+ # exit
+e riavviare il sistema, togliendo ovviamente il DVD dal drive.
 
- exit  
 
-e riavviare il sistema.
+===Grub2===
+Questa parte della guida invece è riservata ai possessori di fedora 15 o superiori, in quanto Grub è aggiornato alla versione 1.99.
+
+Una volta trovata la partizione esatta, inserire il DVD di fedora nel drive e recarsi nella sezione ''Troubleshootings'' dal menù di avvio, e poi ''Rescue a Fedora system''.
+[[File:XXXXXXXXXXXXX.png|thumb|250px|YYYYYYYYYYYY]]
+Dopo aver scelto la lingua di sistema e della tastiera il menù contestuale cercherà eventuali sistemi fedora già presenti e chiederà se montarli direttamente in automatico: acconsentite.
+Ora da terminale in root si eseguono questi passaggi:
+ # chroot /mnt/sysimage
+ # grub2-install /dev/sdX
+Inserire al posto della X il disco su cui installare il boot-loader (generalmente è ''sda''). <br />
+Si passa ora ad aggiornare l'elenco dei sistemi operativi e dei kernel presenti con:
+ # grub2-mkconfig -o /boot/grub2/grub.cfg
+Fatto anche questo si esce da chroot con un semplice
+ # exit
+e si riavvia la macchina, togliendo ovviamente il DVD dal drive.
+
+
 
 [[Categoria:Grub]]
 [[Categoria:Installazione]]
+[[Categoria:Sistema]]
