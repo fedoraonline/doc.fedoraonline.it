@@ -83,7 +83,6 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 {{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}}
-{{ModificaArticolo|articolo=Reinstallare Grub|autore=/|responsabile=AlbertoChiusole|data=-/-/-|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
