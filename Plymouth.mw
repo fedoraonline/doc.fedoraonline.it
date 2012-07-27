@@ -30,9 +30,9 @@ Se si volesse modificarlo occorrere conoscere il nome con il quale viene richiam
 
  $ plymouth-set-default-theme --list
 
-per poi lanciare il comando (in questo caso per il tema spinfinity):
+per poi lanciare il comando da root (in questo caso per il tema spinfinity):
 
- $ su -c 'plymouth-set-default-theme spinfinity --rebuild-initrd'
+ # plymouth-set-default-theme spinfinity -R
 
 == Risoluzioni ==
 
