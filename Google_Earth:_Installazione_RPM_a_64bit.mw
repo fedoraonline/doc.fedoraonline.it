@@ -13,7 +13,7 @@ Dopodichè:
 {{Warning|'''SOLO per chi avesse installato il driver Nvidia proprietario''', bisogna aggiungere:
   # yum install gtk2.i686 mesa-libGL.i686 libSM.i686}}
 
-Installati questi pacchetti è possibile installare [http://www.google.co.uk/intl/en_uk/earth/download/ge/agree.html Google Earth]. Occorre scegliere tra la versione a 32 bit e quella 64 bit e, una volta scaricato il file è possibile installarlo, spostandosi nella cartella in cui si trova, con:
+Installati questi pacchetti è possibile installare [http://www.google.it/intl/it/earth/download/ge/agree.html Google Earth]. Occorre scegliere tra la versione a 32 bit e quella 64 bit e, una volta scaricato il file è possibile installarlo, spostandosi nella cartella in cui si trova, con:
 
  # yum localinstall google-earth-stable_current_*.rpm
 
