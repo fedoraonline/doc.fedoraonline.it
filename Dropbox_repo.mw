@@ -1,6 +1,5 @@
 {{Autore|AlbertoChiusole}} 
 __TOC__
-
 ==Introduzione==
 [https://www.dropbox.com/ Dropbox] è un servizio di file-hosting multipiattaforma che rende disponibile un proprio repository per Fedora. L'installazione è necessaria per installare il pacchetto '''nautilus-dropbox''', che permette la gestione dei dati del proprio account direttamente da Nautilus. Il repo è disponibile per tutti le versioni di Fedora dalla 10 in poi.
 
