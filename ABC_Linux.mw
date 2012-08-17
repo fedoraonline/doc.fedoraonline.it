@@ -125,7 +125,7 @@ Per fare la prova e vedere se l'ambiente grafico esiste, prima di modificare la 
 
 ===Ho una doppia installazione Fedora/Windows===
 Chi installa Fedora e Windows sullo stesso disco, potrebbe avere problemi all'avvio nella scelta tra i sue sistemi operativi. In questo caso una soluzione può essere quella di ripristinare il '''bootloader''' grub e/o la sua configurazione (tramite il file /boot/grub/grub.conf). Il bootloader è un codice che risiede in una particolare zona del disco, viene eseguito nelle prime fasi di avvio e permette il caricamento del resto del sistema.<br />
-Qui nel forum esistono già vari post in cui si è trattato di problemi di bootloader, basta cercarli inserendo "bootloader" o "grub" come parola di ricerca.
+Per ripristinare e aggiornare grub seguire l'apposita [[Reinstallare_Grub|guida]].
 
 Se si è installato Fedora su un hard disk e si vuole tornare a Windows, bisogna cancellare l'hard disk da Fedora e rimuovere le partizioni Linux, prima che il cd/dvd di installazione di Windows sia in grado di riconoscere il disco di nuovo.<br />
 Per fare questo si usa il comando '''fdisk''', di cui si parla nella guida dischi e partizioni, le basi.<br />
