@@ -1,4 +1,5 @@
-{{Obsoleto}}
+__TOC__
+
 Di default Fedora disabilita il tapping sul touchpad. Nel caso si utilizzi KDE, per disabilitare completamente il touchpad si può fare come segue:
 
  $ synclient TouchpadOff=1
@@ -15,10 +16,12 @@ Per verificare le opzioni del comando synclient:
 
  $ synclient -l
 
-Ovviamente le modifiche di cui sopra non sono permanenti e terminata la sessione si perderanno le modifiche, perciò è possibile intervenire in (almeno) due modi per renderle definitive:
+Ovviamente i comandi di qui sopra non sono permanenti e terminata la sessione si perderanno le modifiche, perciò è possibile intervenire in (almeno) due modi per renderle definitive:
 # script bash da inserire in autostart;
 # modifica della policy di HAL.
 La prima soluzione non è molto elegante, per cui si procede con la seconda.
+
+==Modifica della policy di HAL==
 Installiamo il pacchetto necessario, da root:
  # yum install xorg-x11-drv-synaptics
 
