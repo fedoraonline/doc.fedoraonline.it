@@ -1,3 +1,4 @@
+__TOC__
 == Introduzione ==
 LibreOffice, dalla release di Fedora 15, è incluso nei [[:Categoria:Repository|repository]], come specificato su [http://fedoraproject.org fedoraproject.org]. Questa guida prevede l'installazione da sorgenti su rilasci di fedora precedenti alla 15.
 
@@ -34,12 +35,15 @@ La conclusione dell'operazione porterà al compimento dell'installazione di Libr
  $ /opt/libreoffice/program/scalc
  $ /opt/libreoffice/program/smath
 
+==Integrazione con il menù di sistema==
 Se si vuole integrare libreoffice nel menù di sistema (testato con gnome) si può fare così. Entrare nella cartella desktop-integration:
  $ cd LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz/en-US/RPMS/desktop-integration/
 ed installate tutti gli rpm da root:
  # yum localinstall --nogpgcheck *.rpm
 
+==Installazione lingua italiana==
 Per installare la lingua italiana estrarre dall'archivio scaricato all'inizio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima. Seguire queste istruzioni:
+ $ cd $HOME/Scaricati/
  $ tar -xzvf LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz
  $ cd LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz/RPMS/
  # yum localinstall --nogpgcheck *.rpm
