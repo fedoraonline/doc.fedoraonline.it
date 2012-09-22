@@ -1,27 +1,31 @@
 {{Obsoleto}}
 == Introduzione ==
-LibreOffice dalla release di Fedora 15 è incluso nei [[:Categoria:Repository|repository]], come specificato su [http://fedoraproject.org fedoraproject.org]. Questa guida prevede l'installazione da sorgenti su rilasci precedenti alla 15.
+LibreOffice, dalla release di Fedora 15, è incluso nei [[:Categoria:Repository|repository]], come specificato su [http://fedoraproject.org fedoraproject.org]. Questa guida prevede l'installazione da sorgenti su rilasci di fedora precedenti alla 15.
 
 == Installazione di LibreOffice ==
 
 Per eseguire un'installazione, procedere nel modo seguente:
-<ol><li> Scaricare i seguenti pacchetti dal Sito Ufficiale, scegliendo l'architettura del sistema di riferimento:</li>
+<ol><li> Scaricare i seguenti pacchetti dal [http://it.libreoffice.org/download/ Sito Ufficiale], scegliendo l'architettura del sistema di riferimento. Se volete effettuare un download avendo la certezza di scaricare un file non corrotto utilizzate il download via torrent.</li>
 
-* archivio del programma;
-* language pack italiano.
+* archivio del programma, che avrà un nome simile a questo '''LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz''';
+* language pack italiano, con un nome simile a questo '''LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz'''.
 
-<li> Una volta scaricato, aprire il terminale e recarsi nella cartella dove sono scaricati i file:</li>
+<li> Una volta scaricato, aprire il terminale e recarsi nella cartella dove sono scaricati i file. Supponiamo per esempio li abbiate scaricati nella vostra home nella cartella Scaricati. Per entrarci si farà così:</li>
 
- $ cd  /percorso/
+ $ cd $HOME/Scaricati/
 
-<li> Nella posizione indicata, estrarre i file con il seguente comando:</li>
+<li> Nella posizione indicata, estrarre i file con il seguente comando (utilizzate Tab per il completamento automatico):</li>
 
- $ tar -xzvf nome_del_pacchetto.tar.gz
+ $ tar -xzvf LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz
 
-<li> Posizionarsi, sempre da terminale, nella cartella RPMS che contiene tutti i file per l'installazione e digitare da root:</li>
+<li> Entrare nella cartella contenente gli rpm:</li>
+
+ $ cd LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz/en-US/RPMS/
+
+<li> Digitare da root:</li>
 
  # yum localinstall --nogpgcheck *.rpm
-
+</ol>
 La conclusione dell'operazione porterà al compimento dell'installazione di LibreOffice su Fedora; per avviare le singole suite, basterà lanciare da terminale:
 
  $ /opt/libreoffice/program/swriter
@@ -31,8 +35,14 @@ La conclusione dell'operazione porterà al compimento dell'installazione di Libr
  $ /opt/libreoffice/program/scalc
  $ /opt/libreoffice/program/smath
 
-<li>Per installare la lingua italiana estrarre dall'archivio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima.</li>
-
+Se si vuole integrare libreoffice nel menù di sistema (testato con gnome) si può fare così. Entrare nella cartella desktop-integration:
+ $ cd LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz/en-US/RPMS/desktop-integration/
+ed installate tutti gli rpm da root:
  # yum localinstall --nogpgcheck *.rpm
-</ol>
+
+Per installare la lingua italiana estrarre dall'archivio scaricato all'inizio il Language Pack. Posizionarsi nella cartella RPMS e ridare lo stesso comando di prima. Seguire queste istruzioni:
+ $ tar -xzvf LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz
+ $ cd LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz/RPMS/
+ # yum localinstall --nogpgcheck *.rpm
+
 [[Categoria:Ufficio]]
