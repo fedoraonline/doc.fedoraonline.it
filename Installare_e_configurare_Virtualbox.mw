@@ -1,8 +1,10 @@
-{{Obsoleto}}
-Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
-Nelle nostre prove, abbiamo riscontrato i soliti problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, e allora ecco come procedere!
+{{nota|Articolo obsoleto|Dalla versione 14 di fedora esiste un repository specifico per VirtualBox sia a 32 che a 64 bit. Seguire [VirtualBox_repo |queste] istruzioni per installare VirtualBox su Fedora.
+I passaggi sottostanti non dovrebbero essere quindi più necessari con le ultime release di fedora.}}
 
-Il problema è ovviamente dato dalla configurazione dei permessi: per prima cosa, bisogna aggiungere la propria utenza al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico lanciando il comando groups), con il seguente comando:
+Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
+Si possono riscontrarealcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
+
+Il problema è ovviamente dato dalla configurazione dei permessi: per prima cosa, bisogna aggiungere la propria utenza al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico, usando il comando groups), con il seguente comando:
 
  # gpasswd -a $(logname) vboxusers
 
@@ -20,23 +22,22 @@ che specifica appunto che sul proprio sistema l'id del gruppo (gid) "vboxusers" 
 
  # mkdir /mnt/usbfs
 
-Il prossimo passo è la modifica del file /etc/fstab per "montare" una copia di "usbfs" in /root/usbfs. Editiamo quindi il file, ad esempio con vi, e alla fine di questo aggiungiamo le seguenti righe:
+Il prossimo passo è la modifica del file /etc/fstab per "montare" una copia di "usbfs" in /root/usbfs. Editiamo quindi il file con un editor a piacimento 
+ # nano /etc/fstab
+e alla fine di aggiungiamo le seguenti righe:
+ /mnt/usbfs usbfs rw,devgid=501,devmode=664 0 0
 
- # gedit /etc/fstab
- riga da aggiungere:
- none /mnt/usbfs usbfs rw,devgid=501,devmode=664 0 0
-
-Ovviamente, se nel sistema il gid del gruppo "vboxusers" è differente da 501, si dovrà sostituirlo con quello appropriato. Per applicare i cambiamenti, lanciare il comando di "mount":
+Ovviamente, se nel sistema il gid del gruppo "vboxusers" è differente da '''501''', si dovrà sostituirlo con quello appropriato. Per applicare i cambiamenti, lanciare il comando di "mount":
 
  #  mount -a
 
-installare:
+Bisogna poi installare:
 
  # yum install kernel-devel
  # yum install kernel-headers
  # yum install dkms
 
-poi dare il comando:
+Ed infine dare il comando:
 
  # /etc/init.d/vboxdrv setup
 
