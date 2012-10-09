@@ -9,7 +9,7 @@ LAMP e' un acronimo che indica la piu' famosa piattaforma per lo sviluppo di app
  #}}
 
 === Installazione del server Mysql ===
- # yum install myql mysql-server
+ # yum install mysql mysql-server
 
 === Installazione del server Apache e di Php ===
  # yum install httpd php php-common
