@@ -1,13 +1,6 @@
 {{InCorso|autore=LucioMilone}}
 {{Autore|LucioMilone}}
 
-
-
-
-[[Categoria:Internet]]
-[[Categoria:Programmazione e Sviluppo]]
-
-
 Premessa: La miniguida fa riferimento a Gedit come editor ma è possibile utilizzare anche il proprio editor preferito in alternativa.
 
 
@@ -42,3 +35,7 @@ xml /usr/bin/gedit
 php /usr/bin/gedit
 css /usr/bin/gedit
 txt /usr/bin/gedit
+
+[[Categoria:Internet]]
+[[Categoria:Programmazione e Sviluppo]]
+[[Categoria:Scrittura in corso]]
