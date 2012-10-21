@@ -49,5 +49,52 @@ Installiamo la macchina virtuale con l'interfaccia grafica Virt-manager
 
 
 
+[[File:vm1.png]]
+
+
+
+Cliccando sul primo pulsante a sinistra si apre la seguente finestra.
+
+
+
+[[File:vm2.png]]
+
+
+
+Inseriamo il nome che vogliamo attribuire alla nuova macchina virtuale e se abbiamo una immagine  iso o un cd di installazione lasciamo invariata la modalità di installazione e procediamo. Cliccando su avanti compare la seguente finestra.
+
+
+
+[[File:vm3.png]]
+
+
+
+Selezioniamo il supporto di installazione con il percorso corretto, e in “Tipo OS” indichiamo 'Windows' e in “Versione” nel nostro caso 'Microsoft Windows XP'.
+La schermata successiva ci chiede di indicare al sistema quanta RAM vogliamo dedicare alla macchina virtuale e quante cpu. La RAM massima gestibile da kvm/qemu è di 2048 MB, mentre per le cpu è consigliabile inserire tutte quelle disponibili.
+
+
+
+[[File:vm4.png]]
+
+
+
+Nel passo successivo dovremo creare lo spazio sul disco che sarà utilizzato dalla macchina virtuale.
+Indichiamo la quantità di spazio che riteniamo opportuna, e se lasciamo le impostazioni come si presentano lo spazio verrà creato nella partizione di sistema dell'host.
+È consigliabile marcare l'opzione “Alloca l'intero disco ora”. Questo significa che verrà creato immediatamente tutto lo spazio indicato. In caso contrario verrà creato solo lo spazio necessario all'installazione e il restante verrà allocato dinamicamente al bisogno, rallentando però il funzionamento della macchina virtuale.
+Qualora fosse già presente uno spazio dedicato ad una macchina virtuale precedente che si volesse utilizzare per la nuova installazione, oppure se desideriamo ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host, è sufficioente indicarlo cliccando su”Selezionare managed o altro storage esistente” e indicare il percorso. Se stiamo creando un nuovo storage la sua dimensione sarà comunque quella indicata nel campo precedente dove abbiamo scelto di inserire “13 GB”.
+
+
+
+[[File:vm5.png]]
+
+
+
+Nell'ultimo passo viene visualizzato un riepilogo dei dati che abbiamo inserito (i nomi attribuiti e evidenziati nella finestra sono puramente indicativi) e ci viene offerta la possibilità di effettuare delle scelte:
+“Customize configuration before install”: se clicchiamo sopra ci verrà data la possibilità di effettuare delle configurazioni aggiuntive che al momento non ci interessano per cui possiamo lasciare deselezionato
+nelle “Opzioni avanzate” lasciamo tutto come di default, facendo attenzione a non modificare il campo “Tipo virt”. Questo campo deve rimanere 'kvm', perchè in caso contrario non potremo ottimizzare successivamente il nostro disco configurandolo come Virtio.
+
+
+
+[[File:vm6.png]]
 [[Categoria:Virtualizzazione]]
 [[Categoria:Scrittura in corso]]
