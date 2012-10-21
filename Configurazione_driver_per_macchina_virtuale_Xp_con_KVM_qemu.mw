@@ -1,6 +1,51 @@
 {{InCorso|autore=VirgilioAgostinelli}}
 {{Autore|VirgilioAgostinelli}}
 
+==Introduzione==
+
+L'utilizzo delle macchine virtuali è sempre più diffuso per gli innumerevoli vantaggi che questo può comportare. Innanzitutto l'elevata compatibilità hardware consente l'installazione di una macchina virtuale su qualsiasi sistema x86. Inoltre è possibile compiere test su differenti sistemi operativi senza dover dedicare un computer per ciascun sistema operativo o senza dover riavviare il sistema operativo in caso di dual boot.. Infatti è possibile installare più macchine virtuali all'interno di un unico sistema operativo host.
+Può a volte anche essere inevitabile utilizzare sistemi proprietari per lo svolgimento di alcune operazioni e l'installazione di questi sistemi in una macchina virtuale costituisce una valida soluzione.
+In questa guida mostreremo i passaggi necessari ad installare un sistema operativo guest XP nel sistema operativo host Fedora 17.
+
+==Preparazione del sistema==
+
+Verificare che il proprio processore supporti la virtualizzazione dell'hardware
+
+	$ grep -E 'svm|vmx' /proc/cpuinfo
+
+Se l'output di questo comando non presenta nulla allora il processore non supporta la virtualizzazione dell'hardware oppure tale virtualizzazione non è stata abilitata. In questo secondo caso è possibile accedere al bios all'avvio del pc e attivare l'opzione.
+
+Qualora invece il processori supporti la virtualizzazione si visualizzeranno vari flags, e a seconda dei casi avremo 'vmx' se il nostro processore è intel, oppure 'svm' se il nostro processore è un amd.
+
+Se il processore è intel dovremo caricare i reltivi moduli con i comandi
+
+	# modprobe kvm
+	# modprobe kvm_intel
+
+Se invece abbiamo un processore amd
+
+	# modprobe kvm
+	# modprobe kvm_amd
+
+Se tutto è andato a buon fine dovremmo poter verificare una situazione di questo tipo
+
+	$ lsmod | grep kvm 
+	  kvm_intel             126707  0 
+	  kvm                   363507  1 kvm_intel
+
+Possiamo proseguire...
+
+==Installazione==
+
+Installiamo i pacchetti necessari per la virtualizzazione
+	
+	# yum groupinstall @virtualization
+
+	(vorrei inserire i pacchetti che questo comando installa, ma avendoli già installati non so come recuperarli)
+
+Installiamo la macchina virtuale con l'interfaccia grafica Virt-manager
+
+	A questo punto nel menu Applicazioni => Strumenti di Sistema dovrebbe essere comparsa l'icona di Virtual Machine Manager e avviamola, inserendo la password di root quando richiesto.
 
 
 
