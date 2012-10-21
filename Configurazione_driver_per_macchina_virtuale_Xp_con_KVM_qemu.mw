@@ -30,8 +30,8 @@ Se invece abbiamo un processore amd
 Se tutto è andato a buon fine dovremmo poter verificare una situazione di questo tipo
 
  $ lsmod | grep kvm 
-	  kvm_intel             126707  0 
-	  kvm                   363507  1 kvm_intel
+ kvm_intel             126707  0 
+ kvm                   363507  1 kvm_intel
 
 Possiamo proseguire...
 
