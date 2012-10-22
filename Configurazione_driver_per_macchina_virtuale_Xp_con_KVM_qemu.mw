@@ -9,7 +9,7 @@ In questa guida mostreremo i passaggi necessari ad installare un sistema operati
 
 ==Preparazione del sistema==
 
-Verificare che il proprio processore supporti la virtualizzazione dell'hardware
+Il primo passo è verificare che il proprio processore supporti la virtualizzazione dell'hardware
 
  $ grep -E 'svm|vmx' /proc/cpuinfo
 
