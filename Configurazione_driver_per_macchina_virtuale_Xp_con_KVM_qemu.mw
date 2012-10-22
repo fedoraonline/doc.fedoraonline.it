@@ -5,7 +5,7 @@
 
 L'utilizzo delle macchine virtuali è sempre più diffuso per gli innumerevoli vantaggi che questo può comportare. Innanzitutto l'elevata compatibilità hardware consente l'installazione di una macchina virtuale su qualsiasi sistema x86. Inoltre è possibile compiere test su differenti sistemi operativi senza dover dedicare un computer per ciascun sistema operativo o senza dover riavviare il sistema operativo in caso di dual boot.. Infatti è possibile installare più macchine virtuali all'interno di un unico sistema operativo host.
 Può a volte anche essere inevitabile utilizzare sistemi proprietari per lo svolgimento di alcune operazioni e l'installazione di questi sistemi in una macchina virtuale costituisce una valida soluzione.
-In questa guida mostreremo i passaggi necessari ad installare un sistema operativo guest XP nel sistema operativo host Fedora 17.
+In questa guida mostreremo i passaggi necessari ad installare un sistema operativo guest XP nel sistema operativo host Fedora 17 attraverso l'utilizzo di kvm, qemu e l'interfaccia grafica virt-manager.
 
 ==Preparazione del sistema==
 
