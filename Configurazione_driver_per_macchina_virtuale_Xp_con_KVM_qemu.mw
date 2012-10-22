@@ -81,7 +81,7 @@ La schermata successiva ci chiede di indicare al sistema quanta RAM vogliamo ded
 Nel passo successivo dovremo creare lo spazio sul disco che sarà utilizzato dalla macchina virtuale.
 Indichiamo la quantità di spazio che riteniamo opportuna, e se lasciamo le impostazioni come si presentano lo spazio verrà creato nella partizione di sistema dell'host.
 È consigliabile marcare l'opzione “Alloca l'intero disco ora”. Questo significa che verrà creato immediatamente tutto lo spazio indicato. In caso contrario verrà creato solo lo spazio necessario all'installazione e il restante verrà allocato dinamicamente al bisogno, rallentando però il funzionamento della macchina virtuale.
-Qualora fosse già presente uno spazio dedicato ad una macchina virtuale precedente che si volesse utilizzare per la nuova installazione, oppure se desideriamo ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host, è sufficioente indicarlo cliccando su”Selezionare managed o altro storage esistente” e indicare il percorso. Se stiamo creando un nuovo storage la sua dimensione sarà comunque quella indicata nel campo precedente dove abbiamo scelto di inserire “13 GB”.
+Qualora fosse già presente uno spazio dedicato ad una macchina virtuale precedente che si volesse utilizzare per la nuova installazione, oppure se desideriamo ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host, è sufficiente indicarlo cliccando su ”Selezionare managed o altro storage esistente” e indicare il percorso. Se stiamo creando un nuovo storage la sua dimensione sarà comunque quella indicata nel campo precedente dove abbiamo scelto di inserire “13 GB”.
 
 
 
