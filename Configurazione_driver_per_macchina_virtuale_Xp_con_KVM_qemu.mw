@@ -93,9 +93,9 @@ Se stiamo creando un nuovo storage la sua dimensione sarà sempre quella indicat
 
 Nell'ultimo passo viene visualizzato un riepilogo dei dati che abbiamo inserito (i nomi attribuiti e evidenziati nella finestra sono puramente indicativi) e ci viene offerta la possibilità di effettuare delle scelte:
 
-“Customize configuration before install”: se clicchiamo sopra ci verrà data la possibilità di effettuare delle configurazioni aggiuntive che al momento non ci interessano per cui possiamo lasciare deselezionato
+- “Customize configuration before install”: se clicchiamo sopra ci verrà data la possibilità di effettuare delle configurazioni aggiuntive che al momento non ci interessano per cui possiamo lasciare deselezionato
 
-nelle “Opzioni avanzate” lasciamo tutto come di default, facendo attenzione a non modificare il campo “Tipo virt”. Questo campo deve rimanere con l'indicazione 'kvm', perchè in caso contrario non potremo ottimizzare successivamente il nostro disco configurandolo come Virtio.
+- nelle “Opzioni avanzate” lasciamo tutto come di default, facendo attenzione a non modificare il campo “Tipo virt”. Questo campo deve rimanere con l'indicazione 'kvm', perchè in caso contrario non potremo ottimizzare successivamente il nostro disco configurandolo come Virtio.
 
 
 
