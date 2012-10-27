@@ -152,9 +152,12 @@ Dopo queste operazioni la finestra dei dettagli della MV si presenterà come seg
 
 A questo punto avviamo la MV sul pulsante con il triangolo “Play”.
 
-Al termine del boot il sistema guest chiederà i driver di installazione del nuovo disco aprendo automaticamente la consueta finestra guida. Scegliamo di installare i driver manualmente e indichiamo il percorso dove trovarli, cioè nella iso che abbiamo aggiunto poc'anzi, la quale viene rilevata come un cdrom. Indichiamo di cercare i driver nella cartella WXP > X86 e clicchiamo su “Avanti”. Al termine della procedura di installazione clicchiamo du “Fine” e i driver virtio sono installati. A questo punto spegniamo il sistema guest, e siccome il piccolo disco virtio non ci è più necessario andiamo nel menu Visualizza > Dettagli, clicchiamo con il tasto destro su “VirtIO Disk 1” e clicchiamo su “Remove hardware”.
+Al termine del boot il sistema guest chiederà i driver di installazione del nuovo disco aprendo automaticamente la consueta finestra guida. Scegliamo di installare i driver manualmente e indichiamo il percorso dove trovarli, cioè nella iso che abbiamo aggiunto poc'anzi, la quale viene rilevata come un cdrom.
+
+Indichiamo di cercare i driver nella cartella WXP > X86 e clicchiamo su “Avanti”. Al termine della procedura di installazione clicchiamo du “Fine” e i driver virtio sono installati. A questo punto spegniamo il sistema guest, e siccome il piccolo disco virtio non ci è più necessario andiamo nel menu Visualizza > Dettagli, clicchiamo con il tasto destro su “VirtIO Disk 1” e clicchiamo su “Remove hardware”.
 
 Se vogliamo possiamo mantenere annessa la iso dei driver per configurare la rete con i driver virtio, ma non è indispensabile al buon funzionamento del sistema. Per farlo comunque basterebbe a macchina spenta definire la rete come virtio nei dettagli della MV, avviare il sistema guest e fornire i driver di rete quando richiesti che si trovano nella cartella XP del cdrom con i driver virtio.
+
 Qualora non ci interesassero i driver virtio per la rete, possiamo rimuovere anche la iso oltre al disco virtio.
 
 La finestra dei dettagli della MV dovrebbe presentarsi in questo modo
