@@ -160,7 +160,7 @@ Se vogliamo possiamo mantenere annessa la iso dei driver per configurare la rete
 
 Qualora non ci interesassero i driver virtio per la rete, possiamo rimuovere anche la iso oltre al disco virtio.
 
-A questo punto Clicchiamo su "IDE Disk 1" e modifichiamo il tipo di disco selezionando in "Disk bus" il tipo 'Virtio'. Al prossimo avvio il disco sarà configuato come disco VirtIO e riconosciuto dai driver che abbiamo già installato.
+Clicchiamo ora su "IDE Disk 1" e modifichiamo il tipo di disco selezionando in "Disk bus" il tipo 'Virtio'. Al prossimo avvio il disco sarà configuato come disco VirtIO e riconosciuto dai driver che abbiamo già installato.
 
 La finestra dei dettagli della MV dovrebbe presentarsi in questo modo:
 
