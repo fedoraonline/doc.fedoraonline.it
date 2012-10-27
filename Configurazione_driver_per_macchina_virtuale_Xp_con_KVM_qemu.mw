@@ -41,7 +41,7 @@ Possiamo proseguire...
 
 Installiamo i pacchetti necessari per la virtualizzazione
 	
-	# yum groupinstall @virtualization
+ # yum groupinstall @virtualization
 
 Installiamo la macchina virtuale con l'interfaccia grafica Virt-manager. A questo punto infatti nel menu Applicazioni => Strumenti di sistema dovrebbe essere comparsa l'icona di Virtual Machine Manager. All'avvio ci verrà chiesta la password di root.
 
