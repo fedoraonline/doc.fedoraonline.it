@@ -165,5 +165,14 @@ La finestra dei dettagli della MV dovrebbe presentarsi in questo modo
 [[File:vm12.png]]
 
 
+===Installazione driver spice===
+
+La gestione delle periferiche video risulta abbastanza pesante per l'emulatore qemu-kvm, i filmati vengono visualizzati a scatti, sia in locale sia in streaming, quindi è necessario installare i driver spice per ovviare a questa difficoltà. In questo caso la procedura è molto più semplice.
+
+A macchina spenta andiamo in Visualizza > Dettagli e nell'opzione “Schermo Spice” verifichiamo che nel campo “Tipo” sia impostato 'Spice'.
+Avviamo la MV e scarichiamo i driver spice per windows da qui ( http://spice-space.org/download/binaries/spice-guest-tools-0.1.exe ). La rete dovrebbe già essere configurata automaticamente e dovrebbe essere funzionante.
+Installiamo i driver con l'eseguibile scaricato e  riavviamo la MV. La gestione delle periferiche video non dovrebbero più rappresentare un problema.
+
+
 [[Categoria:Virtualizzazione]]
 [[Categoria:Scrittura in corso]]
