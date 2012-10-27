@@ -158,7 +158,7 @@ Indichiamo di cercare i driver nella cartella WXP > X86 e clicchiamo su “Avant
 
 Se vogliamo possiamo mantenere annessa la iso dei driver per configurare la rete con i driver virtio, ma non è indispensabile al buon funzionamento del sistema. Per farlo comunque basterebbe a macchina spenta definire la rete come virtio nei dettagli della MV, avviare il sistema guest e fornire i driver di rete quando richiesti che si trovano nella cartella XP del cdrom con i driver virtio.
 
-Qualora non ci interesassero i driver virtio per la rete, possiamo rimuovere anche la iso oltre al disco virtio.
+Qualora non ci interessassero i driver virtio per la rete, possiamo rimuovere anche la iso oltre al disco virtio.
 
 Clicchiamo ora su "IDE Disk 1" e modifichiamo il tipo di disco selezionando in "Disk bus" il tipo 'Virtio'. Al prossimo avvio il disco sarà configuato come disco VirtIO e riconosciuto dai driver che abbiamo già installato.
 
