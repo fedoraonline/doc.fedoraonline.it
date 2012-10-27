@@ -118,7 +118,7 @@ Dalla finestra principale di virt-manager andiamo con il mouse sui menu Modifica
 [[File:vm7.png]]
 
 
-===Installazione driver VirtIO==
+===Installazione driver VirtIO===
 
 In primo luogo ci occupiamo della gestione del disco virtuale. I driver virtio offrono un controller per il disco virtuale che incrementa la velocità di accesso ai dati contenuti nel disco stesso.
 Nella schermata precedente compare una voce, indicata con 'IDE Disk 1' che è il disco dove è installato il nostro sistema operativo. Selezionando questa opzione si visualizza la seguente finestra. 
