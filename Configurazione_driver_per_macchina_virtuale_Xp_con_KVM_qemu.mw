@@ -45,9 +45,7 @@ Installiamo i pacchetti necessari per la virtualizzazione
 
 	(vorrei inserire i pacchetti che questo comando installa, ma avendoli già installati non so come recuperarli)
 
-Installiamo la macchina virtuale con l'interfaccia grafica Virt-manager
-
-	A questo punto nel menu Applicazioni => Strumenti di Sistema dovrebbe essere comparsa l'icona di Virtual Machine Manager e avviamola, inserendo la password di root quando richiesto.
+Installiamo la macchina virtuale con l'interfaccia grafica Virt-manager. A questo punto infatti nel menu Applicazioni => Strumenti di sistema dovrebbe essere comparsa l'icona di Virtual Machine Manager. All'avvio ci verrà chiesta la password di root.
 
 
 
