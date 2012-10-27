@@ -104,11 +104,54 @@ nelle “Opzioni avanzate” lasciamo tutto come di default, facendo attenzione 
 
 
 [[File:vm6.png]]
-[[Categoria:Virtualizzazione]]
-[[Categoria:Scrittura in corso]]
-
-
 
 Cliccando sul tasto "Fine" si avvierà l'installazione del sistema operativo attraverso il supporto (cd o iso) che abbiamo scelto inizialmente.
 
 ==Configurazione driver virtio e spice==
+
+Una volta terminata l'installazione del sistema operativo guest, possiamo procedere con l'installazione dei driver per rendere il nostro sistema più veloce ed efficiente nella gestione delle risorse hardware disponibili.
+
+Dalla finestra principale di virt-manager andiamo con il mouse sui menu Modifica > Dettagli virtual machine e nella finestra che si apre scegliamo dal menu Visualizza > Dettagli. Nella schermata seguente abbiamo la possibilità di configurare molti aspetti riguardo al modo in cui la nostra MV si interfaccia con il sistema host.
+
+
+
+[[File:vm7.png]]
+
+
+In primo luogo ci occupiamo della gestione del disco virtuale. I driver virtio offrono un controller per il disco virtuale che incrementa la velocità di accesso ai dati contenuti nel disco stesso.
+Nella schermata precedente compare una voce, indicata con 'IDE Disk 1' che è il disco dove è installato il nostro sistema operativo. Selezionando questa opzione si visualizza la seguente finestra. 
+
+
+[[File:vm8.png]]
+
+
+In “Opzioni avanzate” nel campo 'Disk bus'  possiamo scegliere il tipo di disco con cui desideriamo operare: ide, sata, scsi, usb o virtio.
+Potremmo scegliere subito virtio, ma al riavvio della nostra MV il sistema operativo non partirebbe, perché non ha i driver per riconoscere tale tipo di disco. Quindi, fino a che non verrà resa disponibile qualche altra soluzione dovremo utilizzare un work-around .
+
+Installazione driver virtio
+
+Procediamo scaricando da qui ( http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/virtio-win-0.1-30.iso ) l'immagine iso che contiene i driver virtio per windows e aggiungiamo tale disco alla MV nel seguente modo.
+
+Clicchiamo su “Aggiungi hardware” e si aprirà la seguente finestra
+
+
+[[File:vm9.png]]
+
+
+Clicchiamo su “Selezionare managed o altro storage esistente”, poi su “Sfoglia”, poi “Sfoglia in locale”, cerchiamo la iso nella posizione in cui l'abbiamo salvata e clicchiamo su “Apri”. Il campo “Alloca l'intero disco ora” conviene che sia sempre selezionato. In “Tipo dispositivo” selezioniamo 'IDE cdrom' e clicchiamo sul pulsante “Fine”.
+
+Nei dettagli della MV comparirà un nuovo disco “IDE CDROM 1”
+
+Nuovamente clicchiamo sul pulsante “Aggiungi hardware”, clicchiamo su “Selezionare managed o altro storage esistente”, clicchiamo su “Sfoglia”, poi “Sfoglia in locale” e scegliamo la cartella in cui creare un piccolo disco virtio, chiamiamolo in questo esempio VirtDisk. Clicchiamo ora su “Apri” e torniamo alla precedente finestra.
+
+Nel campo delle dimensioni del disco “GB” scriviamo 1,0. In “Tipo dispositivo” selezioniamo 'Virtio Disk' e in “Storage format” scegliamo 'raw'. Cliccando su "Fine" si dovrà attendere qualche istante per la creazione del piccolo disco virtio che si aggiungerà alla MV con il nome “VirtIO Disk 1”.
+
+Dopo queste operazioni la finestra dei dettagli della MV si presenterà come segue.
+
+
+[[File:vm10.png]]
+
+
+
+[[Categoria:Virtualizzazione]]
+[[Categoria:Scrittura in corso]]
