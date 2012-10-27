@@ -167,6 +167,8 @@ La finestra dei dettagli della MV dovrebbe presentarsi in questo modo:
 
 [[File:vm12.png]]
 
+
+
 ===Installazione driver Spice===
 
 La gestione delle periferiche video risulta abbastanza pesante per l'emulatore qemu-kvm, i filmati vengono visualizzati a scatti, sia in locale sia in streaming, quindi è necessario installare i driver spice per ovviare a questa difficoltà. In questo caso la procedura è molto più semplice.
