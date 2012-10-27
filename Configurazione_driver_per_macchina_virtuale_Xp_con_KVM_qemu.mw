@@ -173,7 +173,7 @@ La gestione delle periferiche video risulta abbastanza pesante per l'emulatore q
 
 A macchina spenta andiamo in Visualizza > Dettagli e nell'opzione “Schermo Spice” verifichiamo che nel campo “Tipo” sia impostato 'Spice'.
 Avviamo la MV e scarichiamo i driver spice per windows da [http://spice-space.org/download/binaries/spice-guest-tools-0.1.exe qui]. La rete dovrebbe già essere configurata automaticamente e dovrebbe essere funzionante.
-Installiamo i driver con l'eseguibile scaricato e  riavviamo la MV. La gestione delle periferiche video non dovrebbero più rappresentare un problema.
+Installiamo i driver con l'eseguibile scaricato e  riavviamo la MV. La gestione delle periferiche video non dovrebbe più rappresentare un problema.
 
 
 [[Categoria:Virtualizzazione]]
