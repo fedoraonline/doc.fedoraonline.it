@@ -68,7 +68,7 @@ Inseriamo il nome che vogliamo attribuire alla nuova macchina virtuale e se abbi
 
 
 Selezioniamo il supporto di installazione con il percorso corretto, e in “Tipo OS” indichiamo 'Windows' e in “Versione” nel nostro caso 'Microsoft Windows XP'.
-La schermata successiva ci chiede di indicare al sistema quanta RAM vogliamo dedicare alla macchina virtuale e quante cpu. La RAM massima gestibile da kvm/qemu è di 2048 MB, mentre per le cpu è consigliabile inserire tutte quelle disponibili.
+La schermata successiva ci chiede di indicare al sistema quanta RAM vogliamo dedicare alla macchina virtuale e quante cpu. La RAM massima gestibile da qemu-kvm è di 2048 MB, mentre per le cpu è consigliabile inserire tutte quelle disponibili.
 
 
 
@@ -81,7 +81,7 @@ Indichiamo la quantità di spazio che riteniamo opportuna, e se lasciamo le impo
 
 È consigliabile marcare l'opzione “Alloca l'intero disco ora”. Questo significa che verrà creato immediatamente tutto lo spazio indicato. In caso contrario verrà creato solo lo spazio necessario all'installazione e il restante verrà allocato dinamicamente al bisogno, rallentando però il funzionamento della macchina virtuale.
 
-Qualora fosse già presente uno spazio dedicato ad una macchina virtuale precedente che si volesse utilizzare per la nuova installazione, oppure se desideriamo ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host, è sufficiente indicarlo cliccando su ”Selezionare managed o altro storage esistente” e indicare il percorso.
+Qualora fosse già presente uno spazio dedicato ad una macchina virtuale precedente che si volesse utilizzare per la nuova installazione, oppure se si desiderasse ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host, è sufficiente cliccare su ”Selezionare managed o altro storage esistente” e indicare il percorso.
 
 Se stiamo creando un nuovo storage la sua dimensione sarà sempre quella indicata nel campo dove abbiamo scelto di inserire “13 GB”.
 
