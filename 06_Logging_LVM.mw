@@ -1,9 +1,10 @@
+{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
-E' possibile modificare il logging che viene svolto da LVM2 in modo da monitorare eventuali attività o errori dal sistema. Nel file di configurazione /etc/lvm/lvm.conf è possibile definire il livello di logging di LVM2 che di default è impostato a 0 (con un valore massimo di 7). Sempre nel file di configurazione è possibile specificare se inviare i messaggi al syslogd e definire un log di riferimento (che solitamente non è definito).
+E' possiibile modificare il logging che viene svolto da LVM2 in modo da monitorare eventuali attività o errori dal sistema. Nel file di configurazione /etc/lvm/lvm.conf è possibile definire il livello di logging di LVM2 che di default è impostato a 0 (con un valore massimo di 7). Sempre nel file di configurazione è possibile specificare se inviare i messaggi al syslogd e definire un log di riferimento (che solitamente non è definito).
 <pre>
-[root@pc ~]# vgcfgbackup
-[root@pc log]# tail -100 /var/log/lvm2.log 
+[root@cellopc ~]# vgcfgbackup
+[root@cellopc log]# tail -100 /var/log/lvm2.log 
 commands/toolcontext.c:189   Logging initialised at Wed Mar  3 22:00:30 2010
 commands/toolcontext.c:210   Set umask to 0077
 toollib.c:523   Finding all volume groups
@@ -15,9 +16,9 @@ format_text/archiver.c:384   Creating volume group backup "/etc/lvm/backup/vg_ro
 vgcfgbackup.c:84   Volume group "vg_root" successfully backed up.
 cache/lvmcache.c:1284   Wiping internal VG cache
 </pre>
-Sarà possibile aumentare il verbose che verrà mostrato in stdout o stderr, che solitamente è disabilitato. È possibile aumentarlo fino ad un livello di 3 (molto verboso) per operazioni di debug.
+Sarà possibile aumentare il verbose che verrà mostrato in stdout o stderr, che solitamente è disabilitato, ma è possibile aumentarlo fino ad un livello di 3 (molto verboso) per operazioni di debug.
 <pre>
-[root@pc ~]# vgcfgbackup
+[root@cellopc ~]# vgcfgbackup
     Logging initialised at Wed Mar  3 21:57:57 2010
     Set umask to 0077
 vgcfgbackup    Finding all volume groups
@@ -29,7 +30,7 @@ vgcfgbackup    Creating volume group backup "/etc/lvm/backup/vg_root" (seqno 3).
 vgcfgbackup  Volume group "vg_root" successfully backed up.
 vgcfgbackup    Wiping internal VG cache
 </pre>
-Qui sotto è riportata la parte di configurazione relativa al logging di LVM2 contenuto nel file di configurazione /etc/lvm/lvm.conf. Si ricorda che ad ogni modifica del file di configurazione, bisognerà ricreare manualmente il ram-disk tramite dracut per apportare le modifiche.
+Qui sotto è riportata la parte di configurazione relativa al logging di LVM2 contenuto nel file di configurazione /etc/lvm/lvm.conf. Si ricorda che ad ogni modifica del file di configurazione, bisognerà ricreare manualmente il file initrd per apportare le modifiche.
 <pre>
 # This section that allows you to configure the nature of the
 # information that LVM2 reports.
@@ -79,5 +80,6 @@ log {
 }
 </pre>
 
+[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|05_Backup_Metadata_LVM|05 Backup Metadata LVM}}{{Link/succ|07_Creare_un_linear_Logical_Volume|07 Creare un linear Logical Volume}}
