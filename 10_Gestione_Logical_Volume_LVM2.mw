@@ -1,7 +1,8 @@
+{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 === Visualizzare LV attivi ===
-Per visualizzare la lista di tutti i LV attivi basterà utilizzare il comando lvs o lvscan (per far rieseguire il check della lista in precedenza in cache).
+Per visualizzare la lista di tutti i LV attivi basterà utilizzare il comando lvs o lvsca (per far rieseguire il check della lista in precedenza in cache).
 <pre>
 [root@cellopc ~]# lvs
   LV      VG      Attr   LSize  Origin Snap%  Move Log Copy%  Convert
@@ -59,7 +60,7 @@ Per visualizzare informazioni sul tipo di gestione dei LE basterà utilizzare l'
     Physical extents	0 to 15991
 </pre>
 === Creare un LV ===
-Per poter creare un LV verificare che sul VG che ci sia dello spazio disponibile. Successivamente, passare il nome del VG dove creare il LV con l'opzione "-n". Per la dimensione del LV si potrà utilizzare l'opzione "-L" specificando la dimensione in MB, GB, KB o TB, mentre con l'opzione "-l" si potrà specificare la dimensione in percentuale.
+Per poter creare un LV verificare che sul VG sia disponibile dello spazio disponbile. Dopo di che passare il nome del VG dove creare il LV, il nome del LV con l'opzione "-n". Per la dimensione del LV si potrà utilizzare l'opzione "-L" specificando la dimensione in MB, GB, KB o TB, mentre con l'opzione "-l" si potrà specificare la dimensione in percentuale.
 <pre>
 [root@localhost ~]# lvcreate -L 1024M vg_test -n lv_test1
   Logical volume "lv_test1" created
@@ -69,20 +70,20 @@ Per poter creare un LV verificare che sul VG che ci sia dello spazio disponibile
   Logical volume "lv_test2" created
 </pre>
 === Eliminare un LV ===
-Per eliminare un LV si dovrà invocare il comando lvremove, ricordandosi prima di eliminare di spostare i dati utili in esso contenuti.
+Per eliminare un LV si dovrà invocare il comando lvremove, ricordandosi prima di eliminare o spostari i dati utili in esso contenuti.
 <pre>
 [root@localhost ~]# lvremove /dev/vg_test/lv_test2
   Logical volume "lv_test2" removed
 </pre>
 === Espandere un LV ===
-Per poter espandere un LV per prima cosa verificare che ci sia dello spazio disponibile su un VG. In seguito, utilizzare il comando lvextend utilizzando le opzioni "-l" e "-L" come nel comando lvcreate. È possibile utilizzare anche il comando lvresize.
+Per poter espandere un LV per prima cosa verificare che ci sia dello spazio disponibile su un VG. Dopo di che passare utilizzare il comando lvextend utilizzando le opzione "-l" e "-L" come nel comando lvcreate. E'possibile utilizzare anche il comando lvresize.
 <pre>
 [root@vrhel5 ~]# lvextend -l +100%FREE /dev/VolGroup00/LogVol02
   Extending logical volume LogVol02 to 1.97 GB
   Logical volume LogVol02 successfully resized
 </pre>
 === Ridurre un LV ===
-Per poter ridurre un LV per prima cosa verificare che sia stato ridimensionato l'eventuale filesystem contenuto. Successivamente, utilizzare il comando lvreduce con le opzioni "-l" e "-L" come nel comando lvcreate. È possibile utilizzare anche il comando lvresize.
+Per poter ridurre un LV per prima cosa verificare che sia stato ridimensionato l'eventuale filesystem contenuto. Dopo di che passare utilizzare il comando lvreduce utilizzando le opzione "-l" e "-L" come nel comando lvcreate. E'possibile utilizzare anche il comando lvresize.
 <pre>
 [root@vrhel5 ~]# lvreduce -L 1G /dev/VolGroup00/LogVol02
   WARNING: Reducing active logical volume to 1.00 GB
@@ -97,5 +98,6 @@ Per ricaricare a caldo i metadata di un LV basterà lanciare il comando lvchange
 [root@cellopc ~]# lvchange --refresh /dev/vg_data/lv_data 
 </pre>
 
+[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|09_Creare_uno_striped_Logical_Volume|09 Creare uno striped Logical Volume}}{{Link/succ|11_Gestione_Physical_Volume_LVM2|11 Gestione Physical Volume LVM2}}
