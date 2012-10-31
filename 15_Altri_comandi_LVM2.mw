@@ -1,7 +1,8 @@
+{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
-== LVMDUMP ==
-Il comando lvmdump permette di collezionare dati utili su LVM in caso di problemi.<br>Verranno raccolte tutte le informazioni e salvate in un file .tgz creato nella cartella da dove si invoca il comando.<br>È possibile specificare l'opzione "-a" per aumentare la verbosità e il numero di file collezionati. Questa opzione è utile in caso di freeze (stallo) di LVM, per approfondire il debug di problemi.
+=== LVMDUMP ===
+Il comando lvmdump permette di collezionare dati utili su LVM in caso di problemi. Verranno raccolte tutte le informazioni e salvate in un file tgz creato sotto il direttorio da dove si sta invocando il comando. E' possibile specificare l'opzione "-a" per aumentare la verbosità e numero di file collezionati. Questa opzione è utile in caso di hang di LVM, per approfondire il debug dei problemi.
 <pre>
 [root@cellopc ~]# lvmdump -a
 Creating dump directory: /root/lvmdump-cellopc-20100316150828
@@ -21,7 +22,7 @@ Gathering /dev listing...
 Gathering /sys/block listing...
 Creating report tarball in /root/lvmdump-cellopc-20100316150828.tgz...
 </pre>
-Il file conterrà questo tipo di files:
+Il file conterrà questo tipo di files
 <pre>
 [root@cellopc ~]# tar tvfz /root/lvmdump-cellopc-20100316150828.tgz
 drwxr-xr-x root/root         0 2010-03-16 16:08 lvmdump-cellopc-20100316150828/
@@ -63,7 +64,7 @@ drwx------ root/root         0 2010-03-16 16:08 lvmdump-cellopc-20100316150828/l
 -rw-r--r-- root/root      2366 2010-03-16 16:08 lvmdump-cellopc-20100316150828/lvmdump.log
 -rw-r--r-- root/root       538 2010-03-16 16:08 lvmdump-cellopc-20100316150828/versions
 </pre>
-Aggiungendo l'opzione "-m" verranno collezionati anche i metadata di tutti i PV (Volumi Fisici) in uso:
+Aggiungendo l'opzione "-m" verranno collezionati anche i metadata di tutti i PV in uso
 <pre>
 [root@cellopc ~]# lvmdump -am
 Creating dump directory: /root/lvmdump-cellopc-20100316151008
@@ -86,8 +87,9 @@ Gathering LVM metadata from Physical Volumes...
   /dev/sda3
 Creating report tarball in /root/lvmdump-cellopc-20100316151008.tgz...
 </pre>
-== LVMDISKSCAN ==
-Questo comando permette di avere una lista di tutti i volumi gestiti da LVM sulla macchina:
+=== LVMDISKSCAN ===
+Questo comando permette di avere una lista di tutti i volumi gestita LVM su una macchina.
+
 <pre>
 [root@node02 rules.d]# lvmdiskscan -l
   WARNING: only considering LVM devices
@@ -96,13 +98,13 @@ Questo comando permette di avere una lista di tutti i volumi gestiti da LVM sull
   0 LVM physical volume whole disks
   2 LVM physical volumes
 </pre>
-== LVMSAR ==
-Non ancora implementato in LVM2.
-== LVMSADC ==
-Non ancora implementato in LVM2.
-== LVMCHANGE ==
-Non ancora implementato in LVM2.
+=== LVMSAR ===
+Non ancora implementato in LVM2
+=== LVMSADC ===
+Non ancora implementato in LVM2
+=== LVMCHANGE ===
+Non ancora implementato in LVM2
 
-
+[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|14_Configurazione_LVM2_per_funzionamento_con_device_multipathed|14 Configurazione LVM2 per funzionamento con device multipathed}}
