@@ -56,4 +56,4 @@ E' un bug riportato https://bugzilla.redhat.com/show_bug.cgi?id=525100 e corrett
 
 [[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
-{{Link/prec|01_Introduzione_a_LVM|01 Introduzione a LVM}}{{Link/succ|02_Ampliare_un_filesystem_con_LVM|02 Ampliare un filesystem con LVM}}
+{{Link/prec|01_Introduzione_a_LVM|01 Introduzione a LVM}}{{Link/succ|03_Ridurre_un_filesystem_con_LVM|03 Ridurre un filesystem con LVM}}
