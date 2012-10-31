@@ -1,8 +1,7 @@
+{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
-__TOC__
-== Introduzione ==
-Se si utilizza ISCSI per esportare alcune LUN (Logical Unit Number) verso un initiator, si potranno avere problemi di attivazione dei LV configurati; questo perché gli init script non gestiscono l'abilitazione dei VG presenti sulle LUN ISCSI ed a fronte di un reboot non avverrà un mount automatico dei filesystems.<br>Il problema non si presenta se si usano le LUN in un cluster RHCS. perchè l'attivazione delle LUN viene svolta dal cluster stesso.
+Se si utilizza ISCSI per esportare alcune LUN verso un initiator, si potranno avere problemi di attivazione dei LV configurati. Infatti gli init script non gestiscono l'abilitazione dei VG presenti sulle LUN ISCSI ed a fronte di un reboot non avverà un mount automatico dei fs. Il problema non si presenta se si usano le LUN in un cluster RHCS. perchè l'attivazione delle LUN viene svolta da cluster stesso. 
 
 <pre>
 [root@node01 ~]# reboot
@@ -13,10 +12,7 @@ Se si utilizza ISCSI per esportare alcune LUN (Logical Unit Number) verso un ini
   lv_svn  vg_svn  -wi----- 968.00m    
 </pre>
 
-La problematica è tracciata anche su bugzilla al link https://bugzilla.redhat.com/show_bug.cgi?id=474833.
-
-== Soluzione temporanea ==
-È possibile applicare un workaround, sfruttando il servizio netfs, che eseguirà l'abilitazione dei nostri LV dopo aver fatto partire il demone ISCSI.<br>La parte del codice dell'init script netfs interessata all'abilitazione tramite il comando vgchange è la seguente:
+La problematica è tracciata anche su bugzilla al link https://bugzilla.redhat.com/show_bug.cgi?id=474833. E' possibile applicare però un workaround, sfruttando il servizio netfs, che eseguirà l'abilitazione dei nostri LV dopo aver startato il demone ISCSI. La parte del codice dell'init script netfs interessata all'abilitazione tramite il comando vgchange è la seguente:
 
 <pre>
 [root@node01 ~]# vim /etc/init.d/netfs 
@@ -29,7 +25,7 @@ La problematica è tracciata anche su bugzilla al link https://bugzilla.redhat.c
 ...
 </pre>
 
-Si potrà quindi associare per le entry di tutte le device ISCSI nel file /etc/fstab, la direttiva '''_netdev''', in modo da indicare a netfs di gestire i block device come network share, e quindi attivando il VG associato.
+Si potrà quindi associare per le entry di tutte le device ISCSI nel file /etc/fstab, la direttiva "_netdev", in modo da indicare a netfs di gestire le block device come network share, e quindi attivando il VG associato.
 
 <pre>
 [root@node01 ~]# vim /etc/fstab
@@ -43,7 +39,7 @@ Abilitare il servizio netfs al boot ed eseguire il reboot del nodo, in modo da v
 [root@node01 ~]# init 6
 </pre>
 
-Al termine della sequenza di boot verificare che il VG e i LV risultino attivi.
+Al termine della boot sequence verificare che il VG e i LV risultino attivi.
 
 <pre>
 [root@node01 ~]# uptime
@@ -57,5 +53,6 @@ Al termine della sequenza di boot verificare che il VG e i LV risultino attivi.
 lrwxrwxrwx 1 root root 7 Oct 11 13:59 /dev/vg_svn/lv_svn -> ../dm-4
 </pre>
 
+[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|12_Creazione_di_un_LV_su_cluster_RCHS|12 Creazione di un LV su cluster RCHS}}{{Link/succ|14_Configurazione_LVM2_per_funzionamento_con_device_multipathed|14 Configurazione LVM2 per funzionamento con device multipathed}}
