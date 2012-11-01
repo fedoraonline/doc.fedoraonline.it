@@ -12,7 +12,7 @@ Filesystem            Size  Used Avail Use% Mounted on
 /dev/hda1              99M   12M   82M  13% /boot     
 tmpfs                 125M     0  125M   0% /dev/shm  
 /dev/mapper/VolGroup00-LogVol02   2.0G   35M  1.9G   2% /prova 
-[root@vrhel5 ~]# umount /prova
+[root@pc ~]# umount /prova
 </pre>
 
 * Ora bisognerà ridurre la dimensione del filesystem con il comando resize2fs. Ricordarsi di ridurre il filesystem in modo corretto, non restringere un filesystem in una dimensione più piccola dello spazio già occupato, altrimenti si compromette il filesystem con relativa perdita di dati. Passare quindi la dimensione del nuovo filesystem al comando resize2fs.
