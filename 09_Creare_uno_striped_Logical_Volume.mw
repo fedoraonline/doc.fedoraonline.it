@@ -160,7 +160,7 @@ Setting maximal mount count to -1
 Setting interval between checks to 0 seconds
 </pre>
 
-Creare il mount point ed eseguire il mount manualmente. Se necesario fissare la modifica nel file /etc/fstab.
+Creare il mount point ed eseguire il mount manualmente. Se necessario fissare la modifica nel file /etc/fstab.
 
 <pre>
 [root@localhost tmp]# mkdir -p /mnt/test
