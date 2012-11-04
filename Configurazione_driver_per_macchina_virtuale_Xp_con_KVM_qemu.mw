@@ -143,7 +143,7 @@ Nei dettagli della MV comparirà un nuovo disco “IDE CDROM 1”
 
 Nuovamente clicchiamo sul pulsante “Aggiungi hardware”, clicchiamo su “Selezionare managed o altro storage esistente”, clicchiamo su “Sfoglia”, poi “Sfoglia in locale” e scegliamo la cartella in cui creare un piccolo disco virtio, chiamiamolo in questo esempio VirtDisk. Clicchiamo ora su “Apri” e torniamo alla precedente finestra.
 
-Nel campo delle dimensioni del disco “GB” scriviamo 1,0. In “Tipo dispositivo” selezioniamo 'Virtio Disk' e in “Storage format” scegliamo 'raw'. Cliccando su "Fine" si dovrà attendere qualche istante per la creazione del piccolo disco virtio che si aggiungerà alla MV con il nome “VirtIO Disk 1”.
+Nel campo delle dimensioni del disco “GB” scriviamo 1,0. In “Tipo dispositivo” selezioniamo 'Virtio Disk' e in “Storage format” scegliamo 'raw' oppure 'qcow2' che a parità di prestazioni permette un risparmio di spazio occupato sul disco. Cliccando su "Fine" si dovrà attendere qualche istante per la creazione del piccolo disco virtio che si aggiungerà alla MV con il nome “VirtIO Disk 1”.
 
 Dopo queste operazioni la finestra dei dettagli della MV si presenterà come segue:
 
@@ -167,8 +167,6 @@ La finestra dei dettagli della MV dovrebbe presentarsi in questo modo:
 
 
 [[File:vm12.png]]
-
-
 
 ===Installazione driver Spice===
 
