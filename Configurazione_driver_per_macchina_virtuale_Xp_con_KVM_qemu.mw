@@ -102,7 +102,7 @@ Nell'ultimo passo viene visualizzato un riepilogo dei dati che abbiamo inserito 
 [[File:vm6.png]]
 
 
-Nella configurazione generale della macchina si è rivelato opportuno scegliere nella opzione "Sound" la scheda virtuale 'ac97', nella opzione "Schermo Spice" scegliere 'Tipo Spice' e nella opzione "Schermo" scegliere 'Modello qxl'. Tali impostazioni possono essere modificate subito (selezionando "Customize configuration before install" o dopo il primo avvio della MV.
+Nella configurazione generale della macchina si è rivelato opportuno scegliere nella opzione "Sound" la scheda virtuale 'ac97', nella opzione "Schermo Spice" scegliere 'Tipo Spice' e nella opzione "Schermo" scegliere 'Modello qxl'. Tali impostazioni possono essere modificate subito (selezionando "Customize configuration before install") o dopo il primo avvio della MV.
 
 Cliccando sul tasto "Fine" si avvierà l'installazione del sistema operativo attraverso il supporto (cd o iso) che abbiamo scelto inizialmente.
 
