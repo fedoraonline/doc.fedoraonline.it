@@ -2,7 +2,7 @@
 {{Autore|RobertMayr}}
 
 === Visualizzare LV attivi ===
-Per visualizzare la lista di tutti i LV attivi basterà utilizzare il comando lvs o lvsca (per far rieseguire il check della lista in precedenza in cache).
+Per visualizzare la lista di tutti i LV attivi basterà utilizzare il comando lvs o lvscan (per far rieseguire il check della lista in precedenza in cache).
 <pre>
 [root@cellopc ~]# lvs
   LV      VG      Attr   LSize  Origin Snap%  Move Log Copy%  Convert
