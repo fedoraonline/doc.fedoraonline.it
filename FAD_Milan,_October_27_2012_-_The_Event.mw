@@ -31,21 +31,21 @@ Many people came in and out, but we didn't counted them.
 
 == Presentations ==
 
-The first speech was the introduction to the Project by [http://fedoraproject.org/wiki/User:Deneb Marina Latini] which invited all the attendants to contribute talkin about the groups of interest.
-She submitted the activities within The Fedora Project and in particular the ones will be explained in the session.
+The first speech was the introduction to the Project by [http://fedoraproject.org/wiki/User:Deneb Marina Latini] which invited all the attendants to contribute, talkin about the groups of interest.
+She submitted the activities within The Fedora Project and in particular the ones will be explained in the session.<br/>
 
-The second speech was held by [http://fedoraproject.org/wiki/User:Giallu Gianlica Sforna] who treated the packaging (a very interesting session for those who wish understand rpms), explaining how to start making their own rpm and which items are  required to completely agree the Fedora guidelines. He was really clear and the session understandable to all. Then Gianluca moved to the second room where he started the pratical session, clear as in the theoric part.
-First he recommended the devolopment tools installation, then he proceeded to illustrate the voices, and their meaning, of the section inside the .spec file, focusing about the importance to have a very well done .spec file, with all the dependencies, following the right Fedora Project rules as well.
-Once tuned the .spec file, Gianluca started with the compiling test, helping those who were in trouble and explaining their errors.
+The second speech was held by [http://fedoraproject.org/wiki/User:Giallu Gianluca Sforna] who treated the packaging (a very interesting session for those who wish understand rpms), explaining how to start making their own rpm and which items are  required to completely agree the Fedora guidelines. He was really clear and the session understandable at all.<br/>
+Then Gianluca moved to the second room where he started the pratical session, clear as in the theoric part.<br/>
+First he recommended the devolopment tools installation, then he proceeded to illustrate the voices, and their meaning, of the section inside the .spec file, focusing about the importance to have a very well done .spec file, with all the dependencies, following the right Fedora Project rules as well.<br/>
+Once tuned the .spec file, Gianluca started with the compiling test, helping those who were in trouble explaining the mistakes they made.<br/>
 
+Then was time for [http://fedoraproject.org/wiki/User:Robyduck Robert Mayr] to explain the websites group, telling us which kind of software we need to work with them, which knowledge we must have and wichi tools, as git, we must use.<br/>
+He specified the ticketing system on trac to coordinate the workgroup.
 
+The work of the infrastructure team has been treated by [http://fedoraproject.org/wiki/User:Averi Andrea Veri], which demonstrated the workflow of this group very interesting.<br/>
+He spoke about the software, the operations and the importance of the documentation.<br/>. 
 
-
-websites
-
-infrastructure
-
-design
+Design group was explained by Samuel Iuri, a young contributor in this team. He told us that design team 
 
 L10n
 
