@@ -7,6 +7,27 @@ Gli incontri degli utenti italiani Fedora si svolgono regolarmente, con l'obiett
 I meeting della comunità italiana si svolgono ogni secondo martedì alle ore 22:00 CEST nel canale '''#fedora-it''' sul server [http://freenode.net/ freenode]. Idealmente si alternano i meeting Ambassador con i meeting degli utenti italiani di Fedora. In ogni caso i meeting sono pubblici e possono essere frequentati da tutti, la distinzione viene fatta più per avere un ordine del giorno differenziato.<br />
 Per maggiori informazioni su come collegarsi [[La_comunità_italiana#Canale_IRC|leggere qui]].
 
+== Regole ==
+
+Le regole da seguire sono poche ma servono a mantenere i meeting ordinati in modo da rispettare la durata prevista delle riunioni ed evitare argomenti Off Topic.
+* Osserva cosa fanno gli altri senza interrompere
+* Se hai una domanda da fare, digita "?"
+* Se hai bisogno di parlare, digita "!"
+* Quando hai finito di parlare, digita "eof"
+* Se sei d'accordo su un argomento o per votare sì, digita "+1"
+* Se non sei d'accordo su un argomento o per votare no, digita "+0"
+
+== Comandi base ==
+
+La chat sui canali IRC è regolata da comandi testuali inseriti direttamente nella casella di testo della chat, di seguito alcuni comandi base:
+* /help - Visualizza tutti i comandi
+* /nick ''NewNickName'' - Cambia il nickname corrente (massimo 9 caratteri)
+* /names - Mostra tutti gli utenti in quel canale
+* /whois ''NickName'' - Mostra le informazioni di base per un determinato nickname
+* /away ''AwayMessage'' - Mostra un messaggio quando ci si allontana dal canale. Usare il comando /away quando si ritorna
+* /quit ''QuitMessage'' - Mostra un messaggio uscendo dal canale IRC
+Per maggiori informazioni sui comandi IRC consultare [http://www.irchelp.org/irchelp/irctutorial.html#cmds questa pagina]
+
 == Agenda e luogo della prossima riunione ==
 Il prossimo meeting è fissato per '''martedì 27 novembre 2012 alle ore 22:00'''. <br />
 
