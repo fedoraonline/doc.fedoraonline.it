@@ -10,7 +10,7 @@ Per creare una nuova struttura LVM bisognerà seguire alcuni passi specifici:
 * Creare i filesystem ove necessario sui LV
 * Creare i mount point e montare i nuovi filesystems.
 
-Di seguito vengono spiegati alcuni passi su come creare una semplice struttura LVM su un disco interno di un sistema RHEL.
+Di seguito vengono spiegati alcuni passi su come creare una semplice struttura LVM su un disco interno di un sistema Fedora.
 
 * Verificare che il disco venga riconosciuto dal sistema non appena connesso.
 
