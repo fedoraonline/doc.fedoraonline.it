@@ -126,7 +126,7 @@ Nella schermata precedente compare una voce, indicata con 'IDE Disk 1' che è il
 
 
 In “Opzioni avanzate” nel campo 'Disk bus' è possibile scegliere il tipo di disco con cui operare: ide, sata, scsi, usb o virtio.
-Scegliendo subito Virtio al riavvio della nostra MV il sistema operativo non partirà, perché non ha i driver per riconoscere tale tipo di disco. Quindi, fino a che non verrà resa disponibile qualche altra soluzione dovremo utilizzare un ''work-around''.
+Scegliendo subito Virtio al riavvio della nostra MV il sistema operativo non partirà, perché non ha i driver per riconoscere tale tipo di disco. Quindi, fino a che non verrà resa disponibile qualche altra soluzione dovremo utilizzare un ''workaround''.
 
 Si proceda scaricando da [http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/virtio-win-0.1-30.iso qui] l'immagine iso che contiene i driver virtio per windows e si aggiunga tale disco alla MV come segue.
 Cliccando su “Aggiungi hardware” e si aprirà la seguente finestra
