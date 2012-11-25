@@ -17,19 +17,19 @@ Il primo passo è verificare che il proprio processore supporti la virtualizzazi
 
 Se l'output di questo comando non presenta nulla allora il processore non supporta la virtualizzazione dell'hardware oppure tale virtualizzazione non è stata abilitata. In questo secondo caso è possibile accedere al bios all'avvio del pc e attivare l'opzione.
 
-Qualora invece il processore supporti la virtualizzazione si visualizzeranno vari flags, e a seconda dei casi avremo 'vmx' se il nostro processore è intel, oppure 'svm' se il nostro processore è un amd.
+Qualora invece il processore supporti la virtualizzazione si visualizzeranno vari flags, e a seconda dei casi si troverà 'vmx' se il nostro processore è intel, oppure 'svm' se il nostro processore è un amd.
 
-Se il processore è intel dovremo caricare i reltivi moduli con i comandi
+Se il processore è intel sarà necessario caricare i reltivi moduli con i comandi
 
  # modprobe kvm
  # modprobe kvm_intel
 
-Se invece abbiamo un processore amd
+Se invece è un processore amd
 
  # modprobe kvm
  # modprobe kvm_amd
 
-Se tutto è andato a buon fine dovremmo poter verificare una situazione di questo tipo
+Se tutto è andato a buon fine si verificherà una situazione di questo tipo
 
  $ lsmod | grep kvm 
  kvm_intel             126707  0 
