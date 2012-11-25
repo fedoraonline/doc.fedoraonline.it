@@ -154,7 +154,7 @@ Al termine del boot il sistema guest chiederà i driver di installazione del nuo
 
 Si trovino i driver nella cartella WXP > X86 e si clicchi su ''Avanti'' e al termine della procedura su ''Fine''.
 
-A questo punto si spenga il sistema guest. Il piccolo disco virtio non è più necessario, per cui nel menu ''Visualizza'' -> ''Dettagli'' si clicchi con il tasto destro su ''VirtIO Disk 1'' e ''Remove hardware''.{{nota|Nota|L'iso dei driver potrebbe essere utile per configurare la rete con i driver virtio, ma non è indispensabile al buon funzionamento del sistema. Per farlo comunque basterebbe a macchina spenta definire la rete come virtio nei dettagli della MV, avviare il sistema guest e fornire i driver di rete quando richiesti indicandone il percorso. Qualora non interesino i driver virtio per la rete, si rimuova anche la iso oltre al disco virtio.}}
+A questo punto si spenga il sistema guest. Il piccolo disco virtio non è più necessario, per cui nel menu ''Visualizza'' -> ''Dettagli'' si clicchi con il tasto destro su ''VirtIO Disk 1'' e ''Remove hardware''.{{nota|Nota|L'iso dei driver potrebbe essere utile per configurare la rete con i driver virtio, ma non è indispensabile al buon funzionamento del sistema. Per farlo comunque basterebbe a macchina spenta definire la rete come virtio nei dettagli della MV, avviare il sistema guest e fornire i driver di rete quando richiesti indicandone il percorso. Qualora non interessino i driver virtio per la rete, si rimuova anche la iso oltre al disco virtio.}}
 
 Si selezioni ora 'IDE Disk 1' e si modifichi il tipo di disco selezionando in ''Disk bus'' il tipo 'Virtio'. Al prossimo avvio il disco sarà configuato come disco VirtIO e riconosciuto dai driver già installati.
 
