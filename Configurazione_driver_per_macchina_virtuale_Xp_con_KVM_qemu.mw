@@ -113,7 +113,7 @@ Dalla finestra principale di virt-manager si clicchi sui menu Modifica > Dettagl
 
 
 
-[[File:vm7.png]]
+[[File:vm7.png|center|thumb|310px]]
 
 
 ===Installazione driver VirtIO===
@@ -122,7 +122,7 @@ I driver virtio offrono un controller per il disco virtuale che incrementa la ve
 Nella schermata precedente compare una voce, indicata con 'IDE Disk 1' che è il disco dove è installato il sistema operativo guest. Selezionando questa opzione si visualizza la seguente finestra. 
 
 
-[[File:vm8.png]]
+[[File:vm8.png|center|thumb|310px]]
 
 
 In “Opzioni avanzate” nel campo 'Disk bus' è possibile scegliere il tipo di disco con cui operare: ide, sata, scsi, usb o virtio.
@@ -132,7 +132,7 @@ Si proceda scaricando da [http://alt.fedoraproject.org/pub/alt/virtio-win/latest
 Cliccando su “Aggiungi hardware” e si aprirà la seguente finestra
 
 
-[[File:vm9.png]]
+[[File:vm9.png|center|thumb|310px]]
 
 
 Si scelga “Selezionare managed o altro storage esistente”, poi “Sfoglia”, poi “Sfoglia in locale” e si cerchi la iso nella posizione in cui è stata salvata e si clicchi su “Apri”. Il campo “Alloca l'intero disco ora” conviene che sia sempre selezionato. In “Tipo dispositivo” si selezioni 'IDE cdrom' e poi “Fine”.
@@ -146,7 +146,7 @@ Nel campo delle dimensioni del disco “GB” si scriva 1,0 o una qualsiasi dime
 Dopo queste operazioni la finestra dei dettagli della MV si presenterà più o meno come segue:
 
 
-[[File:vm11.png]]
+[[File:vm11.png|center|thumb|310px]]
 
 
 Avviamo la MV sul pulsante con il triangolo “Play”.
@@ -164,7 +164,7 @@ Si selezioni ora su "IDE Disk 1" e si modifichi il tipo di disco selezionando in
 La finestra dei dettagli della MV dovrebbe presentarsi in questo modo:
 
 
-[[File:vm12.png]]
+[[File:vm12.png|center|thumb|310px]]
 
 ===Installazione driver Spice===
 
