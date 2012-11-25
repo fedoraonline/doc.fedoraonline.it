@@ -68,7 +68,7 @@ Inserire il nome da attribuire alla nuova macchina virtuale. Qualora per l'insta
 
 
 Scegliere il supporto di installazione con il percorso corretto. In “Tipo OS” si scelga 'Windows' e in “Versione” 'Microsoft Windows XP'.
-La schermata successiva chiede di indicare al sistema quanta RAM vogliamo dedicare alla macchina virtuale e quante cpu. La RAM massima gestibile da qemu-kvm è di 2048 MB, mentre per le cpu è consigliabile inserire tutte quelle disponibili.
+La schermata successiva chiede di indicare al sistema quanta RAM dedicare alla macchina virtuale e quante cpu. La RAM massima gestibile da qemu-kvm è di 2048 MB, mentre per le cpu è consigliabile inserire tutte quelle disponibili.
 
 
 
