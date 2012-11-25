@@ -47,7 +47,7 @@ Si installi ora la macchina virtuale con l'interfaccia grafica Virt-manager. A q
 
 
 
-[[File:vm1.png|center|thumb|300px]]
+[[File:vm1.png|center|thumb|310px]]
 
 
 
@@ -55,7 +55,7 @@ Cliccando sul primo pulsante a sinistra si apre la seguente finestra.
 
 
 
-[[File:vm2.png]]
+[[File:vm2.png|center|thumb|310px]]
 
 
 
@@ -63,7 +63,7 @@ Inserire il nome da attribuire alla nuova macchina virtuale. Qualora per l'insta
 
 
 
-[[File:vm3.png]]
+[[File:vm3.png|center|thumb|310px]]
 
 
 
@@ -72,7 +72,7 @@ La schermata successiva chiede di indicare al sistema quanta RAM dedicare alla m
 
 
 
-[[File:vm4.png]]
+[[File:vm4.png|center|thumb|310px]]
 
 
 
@@ -87,7 +87,7 @@ Nella creazione di un nuovo storage la dimensione sarà sempre quella indicata n
 
 
 
-[[File:vm5.png]]
+[[File:vm5.png|center|thumb|310px]]
 
 
 
@@ -98,7 +98,7 @@ Nell'ultimo passo sarà visualizzato un riepilogo dei dati inseriti (i nomi attr
 
 
 
-[[File:vm6.png]]
+[[File:vm6.png|center|thumb|310px]]
 
 
 Nella configurazione generale della macchina si è rivelato opportuno scegliere nella opzione "Sound" la scheda virtuale 'ac97', nella opzione "Schermo Spice" -> 'Tipo Spice' e nella opzione "Schermo" -> 'Modello qxl'. Tali impostazioni possono essere modificate subito (selezionando "Customize configuration before install" e cliccando su "Fine") o dopo il primo avvio della MV.
