@@ -65,7 +65,7 @@ Inserire il nome da attribuire alla nuova macchina virtuale. Qualora per l'insta
 
 
 
-Scegliere il supporto di installazione con il percorso corretto. In “Tipo OS” si scelga 'Windows' e in “Versione” 'Microsoft Windows XP'.
+Scegliere il supporto di installazione con il percorso corretto. In ''Tipo OS'' si scelga 'Windows' e in ''Versione'' 'Microsoft Windows XP'.
 La schermata successiva chiede di indicare al sistema quanta RAM dedicare alla macchina virtuale e quante cpu. La RAM massima gestibile da qemu-kvm è di 2048 MB, mentre per le cpu è consigliabile inserire tutte quelle disponibili.
 
 
@@ -77,9 +77,9 @@ La schermata successiva chiede di indicare al sistema quanta RAM dedicare alla m
 Nel passo successivo si creerà lo spazio sul disco che sarà utilizzato dalla macchina virtuale.
 Si indichi la quantità di spazio opportuna: lasciando invariate le impostazioni predefinite lo spazio verrà creato nella partizione di sistema dell'host.
 
-È consigliabile marcare l'opzione “Alloca l'intero disco ora”. Questo significa che verrà creato immediatamente tutto lo spazio indicato. In caso contrario verrà creato solo lo spazio necessario all'installazione e il restante verrà allocato dinamicamente al bisogno. Questa possibilità rallenterà però il funzionamento della macchina virtuale.
+È consigliabile marcare l'opzione ''Alloca l'intero disco ora''. Questo significa che verrà creato immediatamente tutto lo spazio indicato. In caso contrario verrà creato solo lo spazio necessario all'installazione e il restante verrà allocato dinamicamente al bisogno. Questa possibilità rallenterà però il funzionamento della macchina virtuale.
 
-Potrebbe essere presente già uno spazio dedicato ad una macchina virtuale, oppure si potrebbe ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host. In questi casi sarà sufficiente cliccare su ”Selezionare managed o altro storage esistente” e indicare il percorso.
+Potrebbe essere presente già uno spazio dedicato ad una macchina virtuale, oppure si potrebbe ricavare lo spazio per la macchina virtuale in una posizione diversa da quella del file system dell'host. In questi casi sarà sufficiente cliccare su ''Selezionare managed o altro storage esistente'' e indicare il percorso.
 
 Nella creazione di un nuovo storage la dimensione sarà sempre quella indicata nel campo della dimensione, nell'esempio “13 GB”.
 
@@ -91,17 +91,17 @@ Nella creazione di un nuovo storage la dimensione sarà sempre quella indicata n
 
 Nell'ultimo passo sarà visualizzato un riepilogo dei dati inseriti (i nomi attribuiti e evidenziati nella finestra sono puramente indicativi) e si presenteranno alcune opzioni:
 
-- “Customize configuration before install”: offre la possibilità di effettuare delle configurazioni aggiuntive prima dell'avvio della MV;
-- nelle “Opzioni avanzate” si lasci tutto come di default, facendo attenzione a non modificare il campo “Tipo virt”. Questo campo deve rimanere con l'indicazione 'kvm', perchè in caso contrario sarà impossibile ottimizzare successivamente il disco configurandolo come Virtio.
+- ''Customize configuration before install'': offre la possibilità di effettuare delle configurazioni aggiuntive prima dell'avvio della MV;
+- nelle ''Opzioni avanzate'' si lasci tutto come di default, facendo attenzione a non modificare il campo ''Tipo virt''. Questo campo deve rimanere con l'indicazione 'kvm', perchè in caso contrario sarà impossibile ottimizzare successivamente il disco configurandolo come Virtio.
 
 
 
 [[File:vm6.png|center|thumb|310px]]
 
 
-Nella configurazione generale della macchina si è rivelato opportuno scegliere nella opzione "Sound" la scheda virtuale 'ac97', nella opzione "Schermo Spice" -> 'Tipo Spice' e nella opzione "Schermo" -> 'Modello qxl'. Tali impostazioni possono essere modificate subito (selezionando "Customize configuration before install" e cliccando su "Fine") o dopo il primo avvio della MV.
+Nella configurazione generale della macchina si è rivelato opportuno scegliere nella opzione ''Sound'' la scheda virtuale 'ac97', nella opzione ''Schermo Spice'' -> 'Tipo Spice' e nella opzione ''Schermo'' -> 'Modello qxl'. Tali impostazioni possono essere modificate subito (selezionando ''Customize configuration before install'' e cliccando su ''Fine'') o dopo il primo avvio della MV.
 
-Cliccando sul tasto "Fine" si avvierà l'installazione del sistema operativo attraverso il supporto (cd o iso) scelto inizialmente.
+Cliccando sul tasto ''Fine'' si avvierà l'installazione del sistema operativo attraverso il supporto (cd o iso) scelto inizialmente.
 
 ==Configurazione driver virtio e spice==
 
