@@ -77,7 +77,7 @@ La schermata successiva chiede di indicare al sistema quanta RAM dedicare alla m
 
 
 Nel passo successivo si creerà lo spazio sul disco che sarà utilizzato dalla macchina virtuale.
-Si indichi la quantità di spazio che riteniamo opportuna, e lasciando invariate le impostazioni predefinite lo spazio verrà creato nella partizione di sistema dell'host.
+Si indichi la quantità di spazio opportuna: lasciando invariate le impostazioni predefinite lo spazio verrà creato nella partizione di sistema dell'host.
 
 È consigliabile marcare l'opzione “Alloca l'intero disco ora”. Questo significa che verrà creato immediatamente tutto lo spazio indicato. In caso contrario verrà creato solo lo spazio necessario all'installazione e il restante verrà allocato dinamicamente al bisogno. Questa possibilità rallenterà però il funzionamento della macchina virtuale.
 
@@ -91,7 +91,7 @@ Nella creazione di un nuovo storage la dimensione sarà sempre quella indicata n
 
 
 
-Nell'ultimo passo sarà visualizzato un riepilogo dei dati che abbiamo inserito (i nomi attribuiti e evidenziati nella finestra sono puramente indicativi) e si presenteranno alcune opzioni:
+Nell'ultimo passo sarà visualizzato un riepilogo dei dati inseriti (i nomi attribuiti e evidenziati nella finestra sono puramente indicativi) e si presenteranno alcune opzioni:
 
 - “Customize configuration before install”: offre la possibilità di effettuare delle configurazioni aggiuntive prima dell'avvio della MV;
 - nelle “Opzioni avanzate” si lasci tutto come di default, facendo attenzione a non modificare il campo “Tipo virt”. Questo campo deve rimanere con l'indicazione 'kvm', perchè in caso contrario sarà impossibile ottimizzare successivamente il disco configurandolo come Virtio.
