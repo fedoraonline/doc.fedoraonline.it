@@ -92,6 +92,7 @@ Nella creazione di un nuovo storage la dimensione sarà sempre quella indicata n
 Nell'ultimo passo sarà visualizzato un riepilogo dei dati inseriti (i nomi attribuiti e evidenziati nella finestra sono puramente indicativi) e si presenteranno alcune opzioni:
 
 - ''Customize configuration before install'': offre la possibilità di effettuare delle configurazioni aggiuntive prima dell'avvio della MV;
+
 - nelle ''Opzioni avanzate'' si lasci tutto come di default, facendo attenzione a non modificare il campo ''Tipo virt''. Questo campo deve rimanere con l'indicazione 'kvm', perchè in caso contrario sarà impossibile ottimizzare successivamente il disco configurandolo come Virtio.
 
 
