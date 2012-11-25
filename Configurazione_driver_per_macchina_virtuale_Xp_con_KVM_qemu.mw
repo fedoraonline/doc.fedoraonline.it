@@ -107,9 +107,9 @@ Cliccando sul tasto "Fine" si avvierà l'installazione del sistema operativo att
 
 ==Configurazione driver virtio e spice==
 
-Una volta terminata l'installazione del sistema operativo guest, possiamo procedere con l'installazione dei driver per rendere il nostro sistema più veloce ed efficiente nella gestione delle risorse hardware disponibili.
+Una volta terminata l'installazione del sistema operativo guest, si proceda con l'installazione dei driver per rendere il sistema più veloce ed efficiente nella gestione delle risorse hardware disponibili.
 
-Dalla finestra principale di virt-manager andiamo con il mouse sui menu Modifica > Dettagli virtual machine e nella finestra che si apre scegliamo dal menu Visualizza > Dettagli. Nella schermata seguente abbiamo la possibilità di configurare molti aspetti riguardo al modo in cui la nostra MV si interfaccia con il sistema host.
+Dalla finestra principale di virt-manager si clicchi sui menu Modifica > Dettagli virtual machine e nella finestra che si apre si vada su Visualizza > Dettagli. La schermata seguente permette di configurare molti aspetti riguardo al modo in cui la MV si interfaccia con il sistema host.
 
 
 
@@ -118,49 +118,48 @@ Dalla finestra principale di virt-manager andiamo con il mouse sui menu Modifica
 
 ===Installazione driver VirtIO===
 
-In primo luogo ci occupiamo della gestione del disco virtuale. I driver virtio offrono un controller per il disco virtuale che incrementa la velocità di accesso ai dati contenuti nel disco stesso.
-Nella schermata precedente compare una voce, indicata con 'IDE Disk 1' che è il disco dove è installato il nostro sistema operativo. Selezionando questa opzione si visualizza la seguente finestra. 
+I driver virtio offrono un controller per il disco virtuale che incrementa la velocità di accesso ai dati contenuti nel disco stesso.
+Nella schermata precedente compare una voce, indicata con 'IDE Disk 1' che è il disco dove è installato il sistema operativo guest. Selezionando questa opzione si visualizza la seguente finestra. 
 
 
 [[File:vm8.png]]
 
 
-In “Opzioni avanzate” nel campo 'Disk bus'  possiamo scegliere il tipo di disco con cui desideriamo operare: ide, sata, scsi, usb o virtio.
-Potremmo scegliere subito virtio, ma al riavvio della nostra MV il sistema operativo non partirebbe, perché non ha i driver per riconoscere tale tipo di disco. Quindi, fino a che non verrà resa disponibile qualche altra soluzione dovremo utilizzare un ''work-around''.
+In “Opzioni avanzate” nel campo 'Disk bus' è possibile scegliere il tipo di disco con cui operare: ide, sata, scsi, usb o virtio.
+Scegliendo subito Virtio al riavvio della nostra MV il sistema operativo non partirà, perché non ha i driver per riconoscere tale tipo di disco. Quindi, fino a che non verrà resa disponibile qualche altra soluzione dovremo utilizzare un ''work-around''.
 
-Procediamo scaricando da [http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/virtio-win-0.1-30.iso qui] l'immagine iso che contiene i driver virtio per windows e aggiungiamo tale disco alla MV nel seguente modo.
-
-Clicchiamo su “Aggiungi hardware” e si aprirà la seguente finestra
+Si proceda scaricando da [http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/virtio-win-0.1-30.iso qui] l'immagine iso che contiene i driver virtio per windows e si aggiunga tale disco alla MV come segue.
+Cliccando su “Aggiungi hardware” e si aprirà la seguente finestra
 
 
 [[File:vm9.png]]
 
 
-Clicchiamo su “Selezionare managed o altro storage esistente”, poi su “Sfoglia”, poi “Sfoglia in locale”, cerchiamo la iso nella posizione in cui l'abbiamo salvata e clicchiamo su “Apri”. Il campo “Alloca l'intero disco ora” conviene che sia sempre selezionato. In “Tipo dispositivo” selezioniamo 'IDE cdrom' e clicchiamo sul pulsante “Fine”.
+Si scelga “Selezionare managed o altro storage esistente”, poi “Sfoglia”, poi “Sfoglia in locale” e si cerchi la iso nella posizione in cui è stata salvata e si clicchi su “Apri”. Il campo “Alloca l'intero disco ora” conviene che sia sempre selezionato. In “Tipo dispositivo” si selezioni 'IDE cdrom' e poi “Fine”.
 
-Nei dettagli della MV comparirà un nuovo disco “IDE CDROM 1”
+Nei dettagli della MV comparirà il nuovo disco “IDE CDROM 1”.
 
-Nuovamente clicchiamo sul pulsante “Aggiungi hardware”, clicchiamo su “Selezionare managed o altro storage esistente”, clicchiamo su “Sfoglia”, poi “Sfoglia in locale” e scegliamo la cartella in cui creare un piccolo disco virtio, chiamiamolo in questo esempio VirtDisk. Clicchiamo ora su “Apri” e torniamo alla precedente finestra.
+Nuovamente si clicchi sul pulsante “Aggiungi hardware”, poi su “Selezionare managed o altro storage esistente” -> “Sfoglia” -> “Sfoglia in locale” e si scelga la cartella in cui creare un piccolo disco virtio, chiamato in questo esempio VirtDisk. Cliccando su “Apri” si torni alla precedente finestra.
 
-Nel campo delle dimensioni del disco “GB” scriviamo 1,0. In “Tipo dispositivo” selezioniamo 'Virtio Disk' e in “Storage format” scegliamo 'raw' oppure 'qcow2' che a parità di prestazioni permette un risparmio di spazio occupato sul disco. Cliccando su "Fine" si dovrà attendere qualche istante per la creazione del piccolo disco virtio che si aggiungerà alla MV con il nome “VirtIO Disk 1”.
+Nel campo delle dimensioni del disco “GB” si scriva 1,0 o una qualsiasi dimensione, ma non serve che sia molto grande. In “Tipo dispositivo” si selezioni 'Virtio Disk' e in “Storage format” si scelga 'raw' oppure 'qcow2' che a parità di prestazioni permette un risparmio di spazio occupato sul disco. Cliccando su "Fine" si dovrà attendere qualche istante per la creazione del piccolo disco virtio. Il nuovo disco si aggiungerà alla MV con il nome “VirtIO Disk 1”.
 
-Dopo queste operazioni la finestra dei dettagli della MV si presenterà come segue:
+Dopo queste operazioni la finestra dei dettagli della MV si presenterà più o meno come segue:
 
 
 [[File:vm11.png]]
 
 
-A questo punto avviamo la MV sul pulsante con il triangolo “Play”.
+Avviamo la MV sul pulsante con il triangolo “Play”.
 
-Al termine del boot il sistema guest chiederà i driver di installazione del nuovo disco aprendo automaticamente la consueta finestra guida. Scegliamo di installare i driver manualmente e indichiamo il percorso dove trovarli, cioè nella iso che abbiamo aggiunto poc'anzi, la quale viene rilevata come un cdrom.
+Al termine del boot il sistema guest chiederà i driver di installazione del nuovo disco aprendo automaticamente la consueta finestra guida. Si scelga di installare i driver manualmente e si indichi il percorso dove trovarli, cioè nella iso che aggiunta poc'anzi, rilevata come un cdrom.
 
-Indichiamo di cercare i driver nella cartella WXP > X86 e clicchiamo su “Avanti”. Al termine della procedura di installazione clicchiamo du “Fine” e i driver virtio sono installati. A questo punto spegniamo il sistema guest, e siccome il piccolo disco virtio non ci è più necessario andiamo nel menu Visualizza > Dettagli, clicchiamo con il tasto destro su “VirtIO Disk 1” e clicchiamo su “Remove hardware”.
+Si trovino i driver nella cartella WXP > X86 e si clicchi su “Avanti” e al termine della procedura su “Fine”.
 
-Se vogliamo possiamo mantenere annessa la iso dei driver per configurare la rete con i driver virtio, ma non è indispensabile al buon funzionamento del sistema. Per farlo comunque basterebbe a macchina spenta definire la rete come virtio nei dettagli della MV, avviare il sistema guest e fornire i driver di rete quando richiesti che si trovano nella cartella XP del cdrom con i driver virtio.
+A questo punto si spenga il sistema guest. Il piccolo disco virtio non è più necessario, per cui nel menu Visualizza > Dettagli si clicchi con il tasto destro su “VirtIO Disk 1” e “Remove hardware”.
 
-Qualora non ci interessassero i driver virtio per la rete, possiamo rimuovere anche la iso oltre al disco virtio.
+(L'iso dei driver potrebbe essere utile per configurare la rete con i driver virtio, ma non è indispensabile al buon funzionamento del sistema. Per farlo comunque basterebbe a macchina spenta definire la rete come virtio nei dettagli della MV, avviare il sistema guest e fornire i driver di rete quando richiesti indicandone il percorso. Qualora non interesino i driver virtio per la rete, si rimuova anche la iso oltre al disco virtio).
 
-Clicchiamo ora su "IDE Disk 1" e modifichiamo il tipo di disco selezionando in "Disk bus" il tipo 'Virtio'. Al prossimo avvio il disco sarà configuato come disco VirtIO e riconosciuto dai driver che abbiamo già installato.
+Si selezioni ora su "IDE Disk 1" e si modifichi il tipo di disco selezionando in "Disk bus" il tipo 'Virtio'. Al prossimo avvio il disco sarà configuato come disco VirtIO e riconosciuto dai driver già installati.
 
 La finestra dei dettagli della MV dovrebbe presentarsi in questo modo:
 
@@ -169,11 +168,13 @@ La finestra dei dettagli della MV dovrebbe presentarsi in questo modo:
 
 ===Installazione driver Spice===
 
-La gestione delle periferiche video risulta abbastanza pesante per l'emulatore qemu-kvm, i filmati vengono visualizzati a scatti, sia in locale sia in streaming, quindi è necessario installare i driver spice per ovviare a questa difficoltà. In questo caso la procedura è molto più semplice.
+La gestione delle periferiche video risulta abbastanza pesante per l'emulatore qemu-kvm, i filmati vengono a volte visualizzati a scatti, sia in locale che in streaming, quindi è necessario installare i driver spice per ovviare a questa difficoltà. In questo caso la procedura è molto più semplice.
 
-A macchina spenta andiamo in Visualizza > Dettagli e nell'opzione “Schermo Spice” verifichiamo che nel campo “Tipo” sia impostato 'Spice'.
-Avviamo la MV e scarichiamo i driver spice per windows da [http://spice-space.org/download/binaries/spice-guest-tools-0.1.exe qui]. La rete dovrebbe già essere configurata automaticamente e dovrebbe essere funzionante.
-Installiamo i driver con l'eseguibile scaricato e  riavviamo la MV. La gestione delle periferiche video non dovrebbe più rappresentare un problema.
+Con la MV spenta si vada in Visualizza > Dettagli e nell'opzione “Schermo Spice” si controlli che nel campo “Tipo” sia impostato 'Spice'.
+Si avvii la MV e si faccia il download dei driver spice per windows da [http://spice-space.org/download/binaries/spice-guest-tools-0.1.exe qui]. La rete dovrebbe già essere configurata automaticamente e dovrebbe essere funzionante.
+Si installino i driver con l'eseguibile scaricato e si riavvii la MV. La gestione delle periferiche video non dovrebbe più rappresentare un problema.
+
+Le ultime versioni dell'eseguibile di installazione dei driver Spice, compresa quella sopra indicata, contengono anche i driver VirtIO per il disco virtuale. È possibile quindi scaricare l'eseguibile e procedere con lo stesso "work-around" visto sopra per la configurazione del disco. In questo caso i driver saranno già presenti nel sistema e quando richiesti si potrà utilizzare l'installazione automatica.
 
 
 [[Categoria:Virtualizzazione]]
