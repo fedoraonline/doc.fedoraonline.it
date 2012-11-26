@@ -171,7 +171,7 @@ Con la MV spenta si vada in ''Visualizza'' -> ''Dettagli'' e nell'opzione ''Sche
 Si avvii la MV e si faccia il download dei driver spice per windows da [http://spice-space.org/download/binaries/spice-guest-tools-0.1.exe qui]. La rete dovrebbe già essere configurata automaticamente e dovrebbe essere funzionante.
 Si installino i driver con l'eseguibile scaricato e si riavvii la MV. La gestione delle periferiche video non dovrebbe più rappresentare un problema.
 
-Le ultime versioni dell'eseguibile di installazione dei driver Spice, compresa quella sopra indicata, contengono anche i driver VirtIO per il disco virtuale. È possibile quindi scaricare l'eseguibile e procedere con lo stesso ''workaround'' visto sopra per la configurazione del disco. In questo caso i driver saranno già presenti nel sistema e quando richiesti si potrà utilizzare l'installazione automatica.
+{{nota|Nota|Le ultime versioni dell'eseguibile di installazione dei driver Spice, compresa quella sopra indicata, contengono anche i driver VirtIO per il disco virtuale. È possibile quindi scaricare l'eseguibile e procedere con lo stesso ''workaround'' visto sopra per la configurazione del disco. In questo caso i driver saranno già presenti nel sistema e quando richiesti si potrà utilizzare l'installazione automatica.}}
 
 
 [[Categoria:Virtualizzazione]]
