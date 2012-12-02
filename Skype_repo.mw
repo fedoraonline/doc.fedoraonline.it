@@ -1,16 +1,26 @@
-{{InCorso|autore=AlbertoChiusole}}
 __TOC__
+
 == Introduzione ==
 
 Skype fa parte dei repository di '''''terze parti'''''. L'installazione è necessaria se si sceglie di utilizzare Skype piuttosto che una soluzione non proprietaria come [[Ekiga|Ekiga]]. Il repo è disponibile attualmente per le versioni da Fedora 12 compresa in poi.
 
-== Installazione ==
+== Risoluzione dipendenze ==
+
+Skype essendo, come già detto, software proprietario, mette a disposizione un RPM per fedora, ma questo binario necessita di librerie a 32bit; gli utenti che usano quindi versioni di fedora differenti sono costretti ad installare le dipendenze a 32bit.
+Si digita da root:
+ # yum install libXScrnSaver.i686 libX11.i686 libXv.i686 libv4l.i686 alsa-plugins-pulseaudio.i686 qt-x11.i686
+
+Per versioni precedenti alla release 12 digitare invece:
+ # yum install libXScrnSaver.i?86 libX11.i?86 libXv.i?86 libv4l.i?86 alsa-plugins-pulseaudio.i?86 qt-x11.i?86
+
+== Configurazione Repository Skype ==
 
 Si può facilmente creare un file ''/etc/yum.repos.d/skype.repo'' digitando da root:
 
- # gedit /etc/yum.repos.d/skype.repo
+ # nano /etc/yum.repos.d/skype.repo
 
-e inserire le seguenti righe:
+(in caso non abbiate nano installato utilizzate gedit, emacs, vim o quello che avete)
+ed inserite le seguenti righe:
 
  [skype]
  name=Skype Repository
@@ -19,14 +29,22 @@ e inserire le seguenti righe:
  enabled=0
  gpgcheck=0
 
-Salvare e chiudere.<br />
-Il repo è pronto per l'uso, ma non è attivo di default (consigliato). Se si volesse installare i pacchetti di Skype è necessario attivarlo per la singola operazione:
+Quindi salvare e chiudere.<br />
+Nel caso non vogliate passare per editor di testi si può dare il seguente comando, che non fa altro che mandare l'output del terminale nel file:
+ echo -e '[skype]\nname=Skype Repository\nbaseurl=http://download.skype.com/linux/repos/fedora/updates/i586/\ngpgkey=http://www.skype.com/products/skype/linux/rpm-public-key.asc\nenabled=0\ngpgcheck=0' > /etc/yum.repos.d/skype.repo
 
- # yum --enablerepo=skype install nome_pacchetto
+Il repo è pronto per l'uso, ma non è attivo di default (consigliato). Se si volesse installare i pacchetti di Skype è necessario attivarlo per la singola operazione.
+
+== Installazione effettiva pacchetto Skype ==
+
+Per installare skype ora basta semplicemente dare un:
+ # yum --enablerepo=skype install skype
+
+Per aggiornare il pacchetto skype bisognerà sempre attivare il singolo repo, come consigliato per tutti i repository di '''terze parti'''; dare quindi:
+ # yum --enablerepo=skype update
 
 == Riferimenti ==
 * [http://www.skype.com/intl/it/welcomeback/?intcmp=wlogo Sito ufficiale Skype]
 
 [[Categoria:Repository]]
 [[Categoria:Yum]]
-[[Categoria:Modifica in corso]]
