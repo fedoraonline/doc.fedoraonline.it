@@ -44,7 +44,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Configurazione driver per macchina virtuale Xp con KVM qemu|autore=VirgilioAgostinelli|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=01 Introduzione a LVM|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=02 Ampliare un filesystem con LVM|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=03 Ridurre un filesystem con LVM|autore=RobertMayr|stato=Terminato}}
@@ -94,7 +93,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=13 Configurazioe LVM2 su ISCSI initiator|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=14 Configurazione LVM2 per funzionamento con device multipathed|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=15 Altri comandi LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Configurazione driver per macchina virtuale Xp con KVM qemu|autore=VirgilioAgostinelli|rilettore=RobertMayr|data=16/12/2012|stato=InCorso}}
 |}
 
 
