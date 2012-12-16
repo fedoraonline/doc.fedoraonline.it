@@ -1,17 +1,16 @@
-{{InCorso|autore=VirgilioAgostinelli}}
 {{Autore|VirgilioAgostinelli}}
 
 ==Introduzione==
 
 L'utilizzo delle macchine virtuali è sempre più diffuso per gli innumerevoli vantaggi che questo comporta. Innanzitutto l'elevata compatibilità hardware consente l'installazione di una macchina virtuale su qualsiasi sistema x86. Inoltre è possibile compiere test su differenti sistemi operativi senza dover dedicare un computer per ciascun sistema operativo o senza dover riavviare il sistema operativo in caso di dual boot. Infatti è possibile installare più macchine virtuali all'interno di un unico sistema operativo host, grazie alle elevate prestazioni dei componenti hardware più recenti con costi relativamente contenuti. Può a volte anche essere inevitabile utilizzare sistemi proprietari per lo svolgimento di alcune operazioni e l'installazione di questi sistemi in una macchina virtuale costituisce una valida soluzione.
 
-In questa guida si indicheranno i passaggi necessari ad installare un sistema operativo guest XP nel sistema operativo host Fedora 17 attraverso l'utilizzo di qemu-kvm e l'interfaccia grafica virt-manager.
+In questa guida si indicheranno i passaggi necessari ad installare un sistema operativo guest XP nel sistema operativo host Fedora 17 attraverso l'utilizzo di ''qemu-kvm'' e l'interfaccia grafica ''virt-manager''.
 
-La virtualizzazione attraverso qemu-kvm è una scelta interessante perchè nasce da un progetto legato al kernel linux e questo lo rende una piattaforma economica, flessibile e performante. Qemu-kvm può essere considerato una "base" che se associata con i driver virtio e spice può offrire prestazioni notevoli. Il suo utilizzo non è ancora diffuso come quello di altre soluzioni, ma in futuro si rivelerà certamente uno strumento sempre più apprezzato.
+La virtualizzazione attraverso ''qemu-kvm'' è una scelta interessante perchè nasce da un progetto legato al kernel linux e questo lo rende una piattaforma economica, flessibile e performante. ''Qemu-kvm'' può essere considerato una "base" che se associata con i driver ''virtio'' e ''spice'' può offrire prestazioni notevoli. Il suo utilizzo non è ancora diffuso come quello di altre soluzioni, ma in futuro si rivelerà certamente uno strumento sempre più apprezzato.
 
 ==Preparazione del sistema==
 
-Il primo passo è verificare che il proprio processore supporti la virtualizzazione dell'hardware
+Il primo passo è verificare che il proprio processore supporti la virtualizzazione dell'hardware:
 
  $ grep -E 'svm|vmx' /proc/cpuinfo
 
@@ -19,17 +18,17 @@ Se l'output di questo comando non presenta nulla allora il processore non suppor
 
 Qualora invece il processore supporti la virtualizzazione si visualizzeranno vari flags, e a seconda dei casi si troverà ''vmx'' se il nostro processore è intel, oppure ''svm'' se il nostro processore è un amd.
 
-Se il processore è intel sarà necessario caricare i reltivi moduli con i comandi
+Se il processore è intel sarà necessario caricare i reltivi moduli con i comandi:
 
  # modprobe kvm
  # modprobe kvm_intel
 
-Se invece è un processore amd
+Se invece è un processore amd:
 
  # modprobe kvm
  # modprobe kvm_amd
 
-Se tutto è andato a buon fine si verificherà una situazione di questo tipo
+Se tutto è andato a buon fine si verificherà una situazione di questo tipo:
 
  $ lsmod | grep kvm 
  kvm_intel             126707  0 
@@ -37,11 +36,11 @@ Se tutto è andato a buon fine si verificherà una situazione di questo tipo
 
 ==Installazione==
 
-Si installino i pacchetti necessari per la virtualizzazione
+Si installino i pacchetti necessari per la virtualizzazione:
 	
  # yum groupinstall @virtualization
 
-Si installi ora la macchina virtuale con l'interfaccia grafica Virt-manager. A questo punto infatti nel menu Applicazioni => Strumenti di sistema dovrebbe essere comparsa l'icona di Virtual Machine Manager. All'avvio sarà richiesta la password di root.
+Si installi ora la macchina virtuale con l'interfaccia grafica Virt-manager. A questo punto infatti nel menu ''Applicazioni => Strumenti di sistema'' dovrebbe essere comparsa l'icona di Virtual Machine Manager. All'avvio sarà richiesta la password di root.
 
 
 
@@ -128,7 +127,7 @@ In ''Opzioni avanzate'' nel campo 'Disk bus' è possibile scegliere il tipo di d
 Scegliendo subito Virtio al riavvio della nostra MV il sistema operativo non partirà, perché non ha i driver per riconoscere tale tipo di disco. Quindi, fino a che non verrà resa disponibile qualche altra soluzione dovremo utilizzare un ''workaround''.
 
 Si proceda scaricando da [http://alt.fedoraproject.org/pub/alt/virtio-win/latest/images/bin/virtio-win-0.1-30.iso qui] l'immagine iso che contiene i driver virtio per windows e si aggiunga tale disco alla MV come segue.
-Cliccando su ''Aggiungi hardware'' e si aprirà la seguente finestra
+Cliccando su ''Aggiungi hardware'' e si aprirà la seguente finestra:
 
 
 [[File:vm9.png|center|thumb|310px]]
@@ -175,4 +174,3 @@ Si installino i driver con l'eseguibile scaricato e si riavvii la MV. La gestion
 
 
 [[Categoria:Virtualizzazione]]
-[[Categoria:Rilettura in corso]]
