@@ -1,3 +1,6 @@
+{{InCorso|autore=AlessandroBugliazzini}}
+{{Autore|AlessandroBugliazzini}}
+
 Questa guida si propone di trattare l'installazione della release '''''Fedora 18 "Spherical Cow"''''', su un personal computer con architettura a 32 bit utilizzando l'installazione da DVD.<br />
 Tutte le versioni di Fedora sono liberamente scaricabili e vengono messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
 
@@ -114,3 +117,6 @@ Se viene spuntata la casella ''Aggiungi al gruppo Administrators'' l'utente appe
 [[File:Install_f18_14.png|thumb|center|800px|Creazione Utente]]<br />
 
 Cliccando ancora una volta sul pulsante ''avanti'' in basso a destra verrà creato il nostro utente e avviata Fedora 18.
+
+--[[Utente:AlessandroBugliazzini|AlessandroBugliazzini]] 12:15, 4 gen 2013 (UTC)
+[[Categoria:Scrittura in corso]]
