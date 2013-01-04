@@ -26,13 +26,13 @@ In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzi
 Con il tasto "esc", invece, si torna al riquadro precedente.<br />
 
 
-{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer (Anaconda), perchè se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura ex-novo.}}
+{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer (Anaconda), perché se il dvd fosse corrotto, la sistemazione diventerebbe spesso impossibile, lasciando spazio solamente ad una nuova procedura ex-novo.}}
 
 Dopo il caricamento Anaconda provvede a chiedere la lingua di installazione, che nel nostro caso potrebbe essere la lingua italiana;<br />
 
 Nella schermata successiva entriamo nella nuova veste grafica di Anaconda che si presenta con il Sommario di Installazione formato da tre categorie principali e le relative sottocategorie: '''Localizzazione''', '''Software''', '''Storage'''.<br />
 
-Notiamo subito che in alcune sottocategorie ci possono essere dei triangoli gialli che avvertono di comletare i vari passaggi prima di procedere con l'installazione. Normalmente l'unico segnale di avvertenza è nella Destinazione di installazione.<br />
+Notiamo subito che in alcune sottocategorie ci possono essere dei triangoli gialli che avvertono di completare i vari passaggi prima di procedere con l'installazione. Normalmente l'unico segnale di avvertenza è nella Destinazione di installazione.<br />
 <br />
 
 [[File:Install_f18_03.png|thumb|center|800px|Sommario installazione con avvertenza]]
@@ -44,7 +44,7 @@ Notiamo subito che in alcune sottocategorie ci possono essere dei triangoli gial
 In questa sezione è possibile calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato e scegliere di impostare l'orario dalla rete utilizzando un server NTP<br />
 
 *''Tastiera''<br />
-Qui è possibile scegliere il layout della tastiera selezionando la lingua desiderata e posizionandola alla prima posizione attraverso il pulsante con le freccette posto in basso al riquadro, sempre dagli stessi comandi è possibile aggingere o togliere un determinato layout lingua tastiera.
+Qui è possibile scegliere il layout della tastiera selezionando la lingua desiderata e posizionandola alla prima posizione attraverso il pulsante con le freccette posto in basso al riquadro, sempre dagli stessi comandi è possibile aggiungere o togliere un determinato layout lingua tastiera.
 Dopo aver scelto la lingua della tastiera che si desidera si devono premere i pulsanti ''Alt+Shift'' per confermare il layout.<br />
 
 [[File:Install_f18_04.png|thumb|center|800px|Selezione Layout Tastiera]]
@@ -58,7 +58,7 @@ La sorgente di installazione è di default il cd/dvd, modificando le opzioni di 
 In questa sezione è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità integrata di Network Manager.<br />
 
 *''Selezione del Software''
-Qui è possibile scegliere quale ambiente Desktop installare (Gnome, Kde, XFCE, LXDE, ecc.) e tra diversi add-ons già presentoi nel cd/dvd di installazione da poter aggiungere in fase di installazione (per es. Libreoffice). Per quanto riguarda gli add-ons è anche possibile aggiungere dei pacchetti aggiuntivi personalizzati scegliendo dai Repository Fedora people oppure da un repository Standard yum.
+Qui è possibile scegliere quale ambiente Desktop installare (Gnome, Kde, XFCE, LXDE, ecc.) e tra diversi add-ons già presenti nel cd/dvd di installazione da poter aggiungere in fase di installazione (per es. Libreoffice). Per quanto riguarda gli add-ons è anche possibile aggiungere dei pacchetti aggiuntivi personalizzati scegliendo dai Repository Fedora people oppure da un repository Standard yum.
 
 [[File:Install_f18_06.png|thumb|center|800px|Selezione del software]]<br />
 <br />
@@ -98,7 +98,7 @@ Quando il Sommario di Installazione non presenta più nessun triangolo giallo di
 {{Warning|Dal momento in cui si acconsente a questa operazione, non c'è più possibilità di tornare allo stato originario del disco.}}
 
 
-All'avvio dell'installazione dobbiamo cliccare nella barra in alto dove ci verrà richiesto di inserire la password di root, è sempre buona regola scegliere una password robusta contente lettere, numeri e simboli speciali.
+All'avvio dell'installazione dobbiamo cliccare nella barra in alto dove ci verrà richiesto di inserire la password di root, è sempre buona regola scegliere una password robusta contenente lettere, numeri e simboli speciali.
 [[File:Install_f18_12.png|center|800px|Password di root]]<br />
 <br />
 
@@ -106,9 +106,9 @@ Se la password di root è stata inserita correttamente avremmo la conferma da qu
 [[File:Install_f18_13.png|center|800px|Password di root ok]]<br />
 <br />
 
-Alla fine dell'installazione il sistema verrà riavviato, si dovrà avere cura di estrarre il supporto cd/dvd e avremmo davanti il primo avvio di Fedora 18 e la creazione dell'utente.
+Alla fine dell'installazione il sistema verrà riavviato, si dovrà avere cura di estrarre il supporto cd/dvd e avremmo davanti il primo avvio di Fedora 18 e dove avverà la creazione dell'utente.
 
-Nella schermata di creazione utente dobbiamo inserire il nostro nome reale, il nome dell'utente, la relativa password utente.
+Nella schermata di creazione utente dobbiamo inserire il nostro nome reale, il nome dell'utente e la relativa password utente.
 Se viene spuntata la casella ''Aggiungi al gruppo Administrators'' l'utente appena creato avrà i privilegi di amministratore tramite il comando ''sudo''.<br />
 
 [[File:Install_f18_14.png|thumb|center|800px|Creazione Utente]]<br />
