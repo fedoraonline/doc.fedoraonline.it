@@ -55,10 +55,19 @@ Un'altra novità che si noterà durante la navigazione è la mancanza dei pulsan
 E' un concetto che risulta difficile da digerire, ma porta l'utente a fare quello che Gnome si pone come obiettivo. Utilizzare le aree di lavoro e le funzionalità che si possono dare a mouse e tastiera per personalizzare il comportamento delle finestre. Questo lo si può raggiungere facilmente dalle impostazioni di sistema, in cui si possono impostare delle combinazioni di tasti per la personalizzazione, ma ancor di più è utile l'utilizzo di Gnome Tweak Tool, che si installa così:
 
  # yum install gnome-tweak-tool 
+[[Image:Gnome-tweak-02.png|right|thumb|400px|Gnome Tweak Tool è davvero potente e non dovrebbe mancare sul proprio Desktop.]]
+Una volta installato si trova in ''Applicazioni > Accessori > Strumento di Personalizzazione'';
+è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool.
 
-Una volta installato si trova in ''Applicazioni > Accessori > Impostazioni Avanzate''; è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool.
-[[Image:Tweak_Tool.png|right|thumb|300px|Gnome Tweak Tool è davvero potente e non dovrebbe mancare sul proprio Desktop.]]
+Alcune funzioni molto interessante aggiunte allo strumento su Fedora 18 sono:
+*La possibilità di aggiungere i pulsanti Minimizza e Massimizza sulla Titlebar, è sufficiente spostarsi su ''Shell > Arrangement of buttons on the titlebar'' e dal menu a tendina è possibile scegliere quali pulsanti visualizzare.
+*Scegliere un'azione per il Pulsante Power, molto utile sui notebook da ''Shell > Power button action'' è possibile scegliere alla pressione del tasto power di spegnere lo schermo, ibernare, sospendere, spegnere il pc, oppure aprire una finestra interattiva per la scelta.
+*Scegliere il tema scuro per le finestre da ''Tema > Abilitare il tema scuro per tutte le applicazioni'' e posizionarlo su ON.
+
+Un'altra caratteristica molto interessante di Gnome Tweak Tool è la possibilità di impostare e personalizzare la visualizzazione dei caratteri per l'ambiente desktop gnome. Nel menu ''Tipi di carattere'' è possibile regolare le impostazioni di ''Hinting'' e ''Antialisiang'', una possibile regolazione che rende una visualizzazione gradevole e uniforme è regolare ''Hinting'' su Slight e ''Antialiasing'' su Rgba. Naturalmente molto dipende dai caratteri scelti per il proprio desktop e le caratteristiche del proprio monitor. 
+
 Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shell, di cui si parlerà nel prossimo capitolo.
+
 
 == Estensioni Gnome-Shell ==
 
