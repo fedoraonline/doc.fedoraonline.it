@@ -1,6 +1,8 @@
 {{InCorso|autore=AlessandroBugliazzini}}
 {{Autore|AlessandroBugliazzini}}
 
+== Introduzione ==
+
 Questa guida si propone di trattare l'installazione della release '''''Fedora 18 "Spherical Cow"''''', su un personal computer con architettura a 32 bit utilizzando l'installazione da DVD.<br />
 Tutte le versioni di Fedora sono liberamente scaricabili e vengono messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
 
@@ -11,6 +13,8 @@ Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativ
 {{Warning|L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
 
 {{Warning|E' consigliabile creare un dischetto di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+
+== Avvio dell'installazione ==
 
 Per l'installazione occorre inserire il disco ed eseguire il boot da DVD.<br />
 L'avvio si presenta simile a quello per l'installazione di Fedora 17.<br /> 
@@ -33,6 +37,8 @@ Con il tasto "esc", invece, si torna al riquadro precedente.<br />
 
 Dopo il caricamento Anaconda provvede a chiedere la lingua di installazione, che nel nostro caso potrebbe essere la lingua italiana;<br />
 
+== Sommario di Installazione ==
+
 Nella schermata successiva entriamo nella nuova veste grafica di Anaconda che si presenta con il Sommario di Installazione formato da tre categorie principali e le relative sottocategorie: '''Localizzazione''', '''Software''', '''Storage'''.<br />
 
 Notiamo subito che in alcune sottocategorie ci possono essere dei triangoli gialli che avvertono di completare i vari passaggi prima di procedere con l'installazione. Normalmente l'unico segnale di avvertenza è nella Destinazione di installazione.<br />
@@ -42,39 +48,46 @@ Notiamo subito che in alcune sottocategorie ci possono essere dei triangoli gial
 <br />
 
 
-'''Localizzazione'''
-*''Data & Ora''<br />
+== Localizzazione ==
+
+===Data & Ora===
 In questa sezione è possibile calibrare il fuso orario preimpostato (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato e scegliere di impostare l'orario dalla rete utilizzando un server NTP<br />
 
-*''Tastiera''<br />
+===Tastiera===
 Qui è possibile scegliere il layout della tastiera selezionando la lingua desiderata e posizionandola alla prima posizione attraverso il pulsante con le freccette posto in basso al riquadro, sempre dagli stessi comandi è possibile aggiungere o togliere un determinato layout lingua tastiera.
 Dopo aver scelto la lingua della tastiera che si desidera si devono premere i pulsanti ''Alt+Shift'' per confermare il layout.<br />
 
 [[File:Install_f18_04.png|thumb|center|800px|Selezione Layout Tastiera]]
 <br />
 
-'''Software'''
-*''Sorgente di Installazione''
+== Software ==
+
+===Sorgente di Installazione===
 La sorgente di installazione è di default il cd/dvd, modificando le opzioni di questa sezione è possibile selezionare come sorgente un file .iso oppure un mirror sulla rete;<br />
 
-*''Configurazione di Rete''
+===Configurazione di Rete===
 In questa sezione è possibile aggiungere la propria connessione, di qualunque tipo essa sia, utilizzando la modalità integrata di Network Manager.<br />
 
-*''Selezione del Software''
+===Selezione del Software===
 Qui è possibile scegliere quale ambiente Desktop installare (Gnome, Kde, XFCE, LXDE, ecc.) e tra diversi add-ons già presenti nel cd/dvd di installazione da poter aggiungere in fase di installazione (per es. Libreoffice). Per quanto riguarda gli add-ons è anche possibile aggiungere dei pacchetti aggiuntivi personalizzati scegliendo dai Repository Fedora people oppure da un repository Standard yum.
 
 [[File:Install_f18_06.png|thumb|center|800px|Selezione del software]]<br />
 <br />
 
-'''Storage'''
-*''Destinazione di Installazione''
+== Storage ==
+
+===Destinazione di Installazione===
 Aprendo la sezione dischi ci verranno mostrati i vari dischi rilevati da Anaconda, scegliamo il disco sul quale vogliamo installare Fedora 18 e clicchiamo sul pulsante ''Continua'' in basso a destra.
 Se vogliamo criptare il nostro disco possiamo selezionare l'opzione ''Encrypt my data. I'll set a passphrase later.''
 
-A questo punto si apre una nuova finestra nella quale abbiamo a diposizione le '''Opzioni di Installazione''', possiamo scegliere il partizionamento automatico oppure il partizionamento manuale con la relativa scelta del tipo di partizione, ovvero ''Partizioni Standard'', ''LVM'' oppure ''BTRFS''<br />
+====Partizionamento Automatico====
+A questo punto si apre una nuova finestra nella quale abbiamo a diposizione le '''Opzioni di Installazione''', nel quale possiamo scegliere il partizionamento automatico con il relativo tipo di partizione, ovvero ''Partizioni Standard'', ''LVM'' oppure ''BTRFS''.<br />
+
+Cliccando poi sul pulsante ''Continua'' posto in basso a destra torniamo alla schermata del Sommario di Installazione.
 [[File:Install_f18_08.png|thumb|center|800px|Opzioni di installazione]]<br />
 
-Scegliendo il partizionamento manuale abbiamo accesso ad un'altra schermata che ci darà la lista di tutte le partizioni già presenti nel disco che abbiamo scelto in precedenza, da qui possiamo scegliere se creare automaticamente un punto di mount cliccando sull'opzione ''Click here to create them automatically'' oppure cliccando nel riquadro in basso il pulsante '''+''' per creare ulteriori punti di muont.
+====Partizionamento Manuale====
+Selezionando sulla spunta ''Passare al partizionamento personalizzato dei dischi'' e cliccando sul pulsante ''Continua'' passiamo al partizionamento manuale trovando accesso ad un'altra schermata che ci darà la lista di tutte le partizioni già presenti nel disco che abbiamo scelto in precedenza, da qui possiamo scegliere se creare automaticamente un punto di mount cliccando sull'opzione ''Click here to create them automatically'' oppure cliccando nel riquadro in basso il pulsante '''+''' per creare ulteriori punti di muont.
 [[File:Install_f18_09.png|thumb|center|800px|Partizionamento Manuale]]<br />
 Per ogni partizione che scegliamo possiamo scegliere manualmente il punto di mount, possiamo riformattare una partizione già esistente e scegliere il tipo di filesystem che preferiamo, possiamo criptare la partizione e cambiarne l'etichetta.
 
@@ -95,7 +108,7 @@ Una volta che abbiamo terminato le modifiche alle nostre partizioni possiamo tor
 [[File:Install_f18_10.png|thumb|center|800px|Partizionamento Manuale 2]]<br />
 
 
-'''Avvio dell'installazione su disco'''
+== Avvio dell'installazione su disco ==
 Quando il Sommario di Installazione non presenta più nessun triangolo giallo di avvertimento è possibile procedere all'installazione vera e propria cliccando sul pulsante ''Begin Installation'' posto in basso a destra.<br />
 [[File:Install_f18_11.png|thumb|center|800px|sommario Installazione ok]]<br />
 {{Warning|Dal momento in cui si acconsente a questa operazione, non c'è più possibilità di tornare allo stato originario del disco.}}
@@ -111,6 +124,8 @@ Se la password di root è stata inserita correttamente avremmo la conferma da qu
 
 Alla fine dell'installazione il sistema verrà riavviato, si dovrà avere cura di estrarre il supporto cd/dvd e avremmo davanti il primo avvio di Fedora 18 e dove avverà la creazione dell'utente.
 
+== Creazione Utente ==
+
 Nella schermata di creazione utente dobbiamo inserire il nostro nome reale, il nome dell'utente e la relativa password utente.
 Se viene spuntata la casella ''Aggiungi al gruppo Administrators'' l'utente appena creato avrà i privilegi di amministratore tramite il comando ''sudo''.<br />
 
@@ -118,5 +133,5 @@ Se viene spuntata la casella ''Aggiungi al gruppo Administrators'' l'utente appe
 
 Cliccando ancora una volta sul pulsante ''avanti'' in basso a destra verrà creato il nostro utente e avviata Fedora 18.
 
---[[Utente:AlessandroBugliazzini|AlessandroBugliazzini]] 12:15, 4 gen 2013 (UTC)
+
 [[Categoria:Scrittura in corso]]
