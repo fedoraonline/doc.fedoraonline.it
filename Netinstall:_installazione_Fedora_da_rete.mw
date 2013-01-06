@@ -1,96 +1,98 @@
-{{Warning|Con questa tipologia di installazione '''''è necessario''''' che il proprio personal computer sia connesso alla rete.}}
+{{InCorso|autore=AlbertoChiusole}}
+{{Autore|AlbertoChiusole}}
 
-Questa guida si propone di trattare l'installazione della release '''''Fedora 16 "Verne"''''', su un personal computer con architettura a 32 bit utilizzando un ''CD netinstall''.<br />
-Tutte le versioni di Fedora sono liberamente scaricabili e vengono messe a disposizione dal [http://fedoraproject.org/it/get-fedora-all FedoraProject].<br />
+__TOC__
 
-{{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale qemu/kvm che utilizza la nomenclatura dei dischi '''''vdx''''' anzichè '''''sdx''''' dei sistemi non virtualizzati.<br />
+{{Warning|Con questa tipologia di installazione '''''è necessario''''' che il proprio personal computer sia connesso alla rete.<br/>
+Se durante il processo di installazione dovesse interrompersi la connessione a internet, dovrete ricominciare tutto da zero.}}
 
-Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativo, gli hard disk attuali permettono un partizionamento di certo soddisfacente per qualsiasi utilizzo.}} 
+Questa guida si propone di trattare l'installazione della release '''''Fedora 18 "Spherical Cow"''''' (versione beta) su personal computer, utilizzando la modalità ''Net-Install''. Questa modalità è indicata per utenti un po' più smaliziati che vogliono provare una nuova strada per installare Fedora.<br />
 
-{{Warning|L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non come dati'''.}}
+=Introduzione=
+La modalità di installazione Net-Install permette di scaricare una quantità di dati inferiore ad un live cd o dvd (poco meno di 200MB contro i più di 700 di un cd o i 4GB di un dvd). Dopo aver masterizzato l'immagine su cd o aver creato una usb bootabile viene caricato l'installer nella ram; questo poi via rete recupera le informazioni e i pacchetti selezionati durante il processo di installazione, da installare poi sul computer. Questa procedura è molto utile se si ha disponibilità di un accesso veloce a internet, in quanto tutti i pacchetti che si scelgono di installare verranno scaricati completamente da internet, quindi più la connessione è veloce, meno tempo impiegherà il processo di installazione.<br/>
 
-{{Warning|E' consigliabile creare un dischetto di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+=Download delle Immagini Iso=
+Tutte le versioni di Fedora sono liberamente scaricabili e vengono messe a disposizione dal [http://fedoraproject.org/it/get-fedora-options#formats FedoraProject]. Assicurarsi di scaricare la versione targata '''CD di installazione da rete Fedora 18'''.<br />
+Per ottenere la versione ''net install'' di fedora è anche possibile "navigare" in uno dei mirror ufficiali. Per fedora 18 (attualmente versione beta, quindi development) l'indirizzo è [http://download.fedoraproject.org/pub/fedora/linux/development/18/x86_64/os/images/boot.iso questo] per la versione a 32bit, mentre [http://download.fedoraproject.org/pub/fedora/linux/development/18/x86_64/os/images/boot.iso questo] è per la versione a 64bit.<br/>
+Per la versione stabile, l'URL è 
+ http://download.fedoraproject.org/pub/fedora/linux/releases/NUMEROVERSIONE/Fedora/ARCHITETTURA/iso/Fedora-NUMEROVERSIONE-ARCHITETTURA-netinst.iso
+oppure 
+ http://download.fedoraproject.org/pub/fedora/linux/releases/NUMEROVERSIONE/Fedora/ARCHITETTURA/os/images/boot.iso
+Modificare NUMEROVERSIONE con il numero della versione che si desidera scaricare (es: 16, 17, 18, ..) e ARCHITETTURA con l'architettura del sistema su cui si andrà a installare (i386 o x86_64). Per comprendere quale architettura supporta il sistema su cui installerete fedora seguire i consigli della [http://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/ch-new-users.html#sn-which-arch documentazione ufficiale].<br/>
 
-Per l'installazione occorre inserire il disco ed eseguire il boot da DVD.<br />
-All'avvio si presenta subito una delle novità di questa versione di Fedora: una scelta di opzioni differenti dalle "storiche".<br /> 
-A parte il countdown, che stavolta non viene interrotto premendo un tasto, ripartendo invece da 60 secondi, (può essere fermato premendo le frecce, su e giù, che permettono altresì di scorrere tra le selezioni), risulta evidente la voce ''Troubleshooting'', per la quale, selezionandola e premendo invio, vengono proposte queste azioni:
-[[File:Install_f16_1.png|thumb|250px|Schermata di avvio]]
+Notare che i file possono essere chiamati con nomi diversi (boot.iso, Fedora-''numero_release''-''architettura''-netinst.iso) ma sono lo stesso identico file, non c'é quindi da allarmarsi.<br/>
+
+=Preparazione all'installazione=
+{{Scrittura|In questa guida, per illustrare il processo di installazione, è stata utilizzata la macchina virtuale VirtualBox, quindi il partizionamento non rispecchia i bisogni reali di un normale utente.<br />
+
+Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativa; gli hard disk odierni permettono un partizionamento di certo soddisfacente per qualsiasi utilizzo.}} 
+
+{{Warning|L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato DEVE essere masterizzata come '''immagine''' e non come '''disco dati'''.<br />
+Per maggiori informazioni su come creare un CD bootabile, consultare la [http://docs.fedoraproject.org/it-IT/Fedora/17/html/Burning_ISO_images_to_disc/index.html documentazione ufficiale del FedoraProject].<br/>
+Per creare invece una Usb bootabile seguire [https://fedoraproject.org/wiki/How_to_create_and_use_Live_USB/it queste] istruzioni.}}
+
+{{nota|Per i possessori di Windows...|È consigliabile creare un dischetto di ripristino, qualora fosse presente, del sistema operativo Windows, a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+
+
+Per l'installazione occorre inserire il disco/usb e da Bios scegliere di eseguire il boot da CD/usb.<br />
+Verrete subito accompagnati ad una schermata nera in cui sono presenti tre voci: '''Install Fedora''', '''Test Media & Install Fedora''' e la voce '''Troubleshooting''', per la quale, selezionandola e premendo invio, vengono proposte queste azioni:
+[[File:IMMAGINE|thumb|250px|Schermata]]
 * ''Install Fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (al di sotto compare la descrizione breve), userà i driver vesa; 
 * ''Rescue a Fedora system'' (per chi avesse problemi di avvio per la mancata installazione, ad esempio, di Grub2 oppure per modificare i files di un'installazione esistente);
 * ''Run a memory test'' (per controllare la memoria del sistema);
-* ''Boot from local drive'';
+* ''Boot from local drive'' (per bootare dall'hard disk già presente);
 * ''Return to main menù'' (per ritornare al menù principale).
 
 In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera di colore diverso rispetto al resto del testo.<br />
 Con il tasto "esc", invece, si torna al riquadro precedente.<br />
-Selezionando ''Install or upgrade Fedora'' e premendo invio, dopo la richiesta di verifica del supporto utilizzato, inizia l'installazione.<br />
 
-Procedendo con l'installazione non viene richiesto il controllo dell'integrità del disco, a differenza della versione DVD, mentre il menù per l'installazione è il medesimo per entrambe e presenta le stesse voci sia nel menù principale che in quello secondario.<br />
+Nella schermata principale è consigliato scegliere '''Test Media & Install Fedora''' (che al boot è l'opzione già evidenziata); verrà eseguito un controllo dell'integrità del supporto e verrete poi introdotti all'installazione vera e propria.<br />
+Se il supporto è integro, potrete scegliere la lingua predefinita per il sistema. Dopo aver selezionato la lingua, selezionate il piccolo riquadro sotto la lista (''Set keyboard to default layout for selected language.'') in modo che si setti anche la tastiera secondo la lingua che avete scelto.<br />
 
-Ovviamente questa guida tratterà una installazione "fresh" del sistema operativo, perciò è necessario selezionare la prima voce.Fino ad ora le due installazioni (netinstall e DVD completo) possono essere parificate, tuttavia, nel prosieguo, la scelta di lingua e tastiera viene richiesta in formato testuale [[File:Net_install_f16_1.png|thumb|250px|right|richiesta lingua in formato testuale]]per poi tornare in modalità grafica per la scelta del dispositivo di storage, la configuarzione dell'host, e la verifica della connessione ('''''assolutamente necessaria perchè nel disco di installazione via rete non ci sono pacchetti residenti''''').
-[[File:Install_f16_5.png|thumb|250px|left|configurazione della rete]]<br />
+Se avete una connessione via cavo dovrebbe essere già tutto configurato, se non l'avete è questo il momento di configurare a dovere la vostra rete.<br/>
 
-E' possibile configuare l'avvio automatico della scheda anche da qui, selezionando la casella Connettere automaticamente, utilizzando il NetworkManager integrato in Anaconda (l'installer).<br />
+=Menù Principale=
+Dopo aver scelto la lingua arriverete al menù principale del nuovo anaconda, in cui sono presenti le voci '''Localizzazione''', '''Software''' e '''Storage'''.
 
-Come in tutte le installazioni in dual boot con sistemi Windows, anche in questo caso è necessario deselezionare la casella "L'orologio di sistema usa UTC" per evitare sfasature di orario se dovesse esserci la necessità di un cambio di sistema operativo.<br />
+[[File:IMMAGINE|thumb|250px|Schermata]]
 
-Viene richiesta, quindi, la password di root, per la quale verrà verificata la relativa robustezza.<br />
+{{nota|Attenzione al nuovo Anaconda|Nel nuovo Anaconda, per salvare le modifiche fatte durante l'installazione, e per tornare al menù precedente, assicurarsi di premere il pulsante '''Fatto''' in alto a sinistra nella pagina, appena sotto al nome del menù.}}
 
-Proseguendo con l'installazione occorre prestare particolare attenzione alla parte successiva che è quella riguardante il partizionamento del disco.<br />
+==Localizzazione==
+[[File:IMMAGINE|thumb|250px|Schermata]]
+Nel sottomenù Localizzazione, sono presenti le voci ''Data & Ora'' e ''Lingua'' (che dovrebbero essere già impostate correttamente se avete scelto correttamente la vostra lingua precedentemente); se le voci non sono corrette cliccateci sopra e modificatele secondo i vostri bisogni.
 
-{{Warning|Nel caso fossero presenti 2 dischi fissi, è possibile che si crei confusione nella schermata di selezione di quelli da destinare all'installazione:
-*'''Nella sezione a sinistra''', occorre inserire i dischi in cui sono '''presenti dati''' solamente da montare all'avvio (partizioni fat o ntfs o altro di interscambio); 
-*'''Nella sezione a destra''' andranno inseriti i dischi che verranno '''utilizzati per l'installazione di fedora''' e di cui uno sarà contrassegnato come disco contenente il bootloader.}}
-{{nota|Presenza contemporanea di Windows|Anche se nel disco che rimane a destra ci sono dei dati, ma lo si vuole considerare per comprenderlo nella creazione di un LVM dello spazio rimasto libero, la parte già occupata non verrà formattata, a meno di indicazioni differenti ad opera dell'utente. Per cui i propri dati sono comunque preservati.}} 
+==Software==
+Nella categoria Software sono presenti tre voci: ''Sorgente di Installazione'', ''Selezione del Software'' e ''Configurazione di Rete''.<br/>
+[[File:IMMAGINE|thumb|250px|Schermata]]
+Se siete connessi a internet via cavo ethernet il riquadro Configurazione di Rete dovrebbe segnalare "Interfaccia wired (p2p1) connessa", se invece volete usare altre impostazioni di rete configuratele ora.<br/>
+Una volta che la connessione via rete è attiva, i due riquadri Sorgente di Installazione e Selezione del Software dovrebbero diventare grigi con un triangolino arancione in alto a destra, segno che sta Anaconda sta scaricando le informazioni e i dati per procedere poi all'installazione del sistema. Una volta che sono stati scaricati i sorgenti di installazione necessari potrete cliccare sulla voce "Sorgente di Installazione" per definire delle voci avanzate:
+* Scegliere se recuperare i pacchetti da un file iso di un dvd precedentemente scaricato e presente su un hard disk o partizione oppure se scaricare i dati dalla rete (questa è l'opzione che ci interessa e che dovrebbe già essere cliccata), con la possibilità di specificare il protocollo di trasmissione (http, https, ftp, nfs) o "Mirror più vicino", che è la scelta migliore, poiché in base alla nostra locazione useremo sempre il server più vicino e quindi più veloce. In caso vogliate specificare un indirizzo server particolare o voleste indicare un indirizzo interno alla vostra rete da usare per installazione tramite nfs (guide ufficiali [http://docs.fedoraproject.org/en-US/Fedora/17/html/Installation_Guide/ch-Installation_Phase_2-x86.html#s1-begininstall-nfs-x86 in inglese] e [http://docs.fedoraproject.org/it-IT/Fedora/11/html/Installation_Guide/ch03s05s02.html in italiano], quest'ultima parzialmente obsoleta), specificatelo nel campo seguente.;
+* L'altra casella selezionabile richiede se scaricare dal server i pacchetti predefiniti al momento del rilascio o se scaricare i pacchetti più aggiornati possibile. Di default dovrebbe essere disabilitata e il consiglio è di mantenerla così, in modo da scaricare tutti i pacchetti già aggiornati ed evitare un aggiornamento in seguito.<br/>
 
-Si arriva, dunque, alla parte relativa al partizionamento che presenta diverse opzioni ed alla quale '''''bisogna prestare particolare attenzione'''.<br />
-Le scelte possono essere diverse, in base alla tipologia di installazione;
-* Usare tutto lo spazio (verrà rimosso qualsiasi altro sistema operativo o dati presenti nel sistema);
-* Sostituire un sistema Linux esistente (verrà rimosso qualsiasi sistema operativo Linux presente, non altri);
-* Ridurre il sistema attuale (potranno essere ridimensionate le partizioni per ricavare nuovo spazio);
-* Usare lo spazio libero (non verrà eliminato nè ridotto nulla, verrà solamente utilizzato l'eventuale spazio libero presente nel sistema);
-* Creare una struttura personalizzata (è la modalità manuale dove, rispetto a versioni precedenti, occorre prestare attenzione alla partizione '''''bios''''' da creare qualora non si avesse un sistema EFI).
+Una volta sistemati i sorgenti di installazione arriviamo alla parte cruciale e più importante del processo: la "Selezione del Software". Cliccando sulla voce si entra in un sottomenù in cui è possibile scegliere quali software installare sul sistema. Nella colonna a sinistra si può scegliere tra i vari ambienti disponibili (Gnome, KDE, Xfce, e molti altri..), mentre nella colonna a destra ci sono i cosidetti "add-on", delle raccolte opzionali di pacchetti per i più disparati usi, si va dalla suite per l'ufficio libreoffice, all'IDE per lo sviluppo di applicazioni Eclipse, a molte altre scelte.<br/>
+Poiché questa vuole essere una guida illustrativa è stato scelto un ambiente minimale senza add-on.<br/>
+Fatte le vostre scelte cliccate sul pulsante '''Fatto''', come spiegato nella nota precedente.<br/>
 
-La stessa schermata prevede la selezione di default per l'uso di LVM, l'eventuale crittazione del sistema e l'eventuale revisione e modifica delle partizioni, consigliabile specialmente per quelle automatiche.<br />
+==Storage==
+[[File:IMMAGINE|thumb|250px|Schermata]]
+Nella sezione Storage verrete introdotti al partizionamento dei dischi su cui installare poi il sistema. Tutti i dispotivi connessi al sistema verranno identificati e potrete selezionarli per l'installazione.<br/>
+Nella parte bassa dello schermo si può selezionare "Sommario completo dei dischi e delle opzioni", che aprirà una finestra in cui sono presenti tutti i dispositivi connessi; in questa finestra è possibile selezionare quali dischi includere nel processo di partizionamento e quali invece ignorare completamente.<br/>
+{{nota|Dispositivi connessi durante l'installazione|Nella finestra "Sommario completo dei dischi e delle opzioni" si possono selezionare i dispositivi da includere nell'installazione. I sistemi operativi presenti sui dispositivi che non verranno inclusi in questa finestra non entreranno a far parte delle voci di grub2 dopo il riavvio (se si sceglie di installare grub2 sul disco rigido).}}
 
-In questa guida verrà utilizzata la prima selezione, ''usare tutto lo spazio'' (che imposta in automatico LVM) e, come detto, di rivederle utilizzando un unico disco fisso; chiaramente avendone a disposizione più di uno, si potrà distribuire il filesystem su tutti.
+Per perplessità e dubbi su come meglio partizionare il proprio hard-disk il consiglio è di consultare la guida all'installazione di fedora, specialmente la sezione dedicata al [[Installazione_Fedora_18#Storage|partizionamento]].<br/>
 
-'''Nota bene:''' la diversa nomenclatura e l'esigua capacità dei dischi sono state già spiegate in testa al presente documento.<br />
+Una volta che avete impostato tutti i parametri necessari nel menù principale, se non ci sono più triangoli arancioni che indicando eventuali problemi, si può procedere con il downlaod e l'installazione dei pacchetti scelti.
 
-Da notare la necessaria partizione ''BIOS boot'', che occorre ricordarsi nel caso di partizionamento manuale.<br />
-E' possibile, come sempre, modificare le partizioni selezionando il tasto ''modifica''.<br />
+=Installazione=
+[[File:IMMAGINE|thumb|250px|Schermata]]
+Cliccando su "Avvia Installazione" in basso a destra si inizierà il download e l'installazione dei pacchetti selezionati precedentemente.
+Durante l'installazione viene richiesto, in alto nella schermata, di inserire la password di root, per la quale verrà verificata la relativa robustezza. Cliccando poi su "Fatto" in alto a sinistra si torna al menù di installazione che intanto continua con l'installazione.<br/>
 
-Tra le novità di questa release, come visto, c'è anche quella di '''grub2''', ed una delle caratteristiche di questo bootloader è quella di interpretare anche il filesystem '''brtfs''' sulla partizione di boot (in caso di partizionamento manuale occorre ricordarsi che deve essere di almeno 500 megabyte).<br />
-
-Nel caso qui riportato ''brtfs'' verrà autilizzato sia su '''''/boot'''''  che su '''''/''''' che su '''''/home'''''; con quest'ultima da creare, se la si volesse utilizzare separatamente, riducendo la partizione di ''lv_root'' e ricavando quindi lo spazio da riservare a ''lv_home'').<br /> <br />
-
-[[File:Install_f16_11.png|thumb|600px|center|creazione partizione ''/home'' da spazio libero]]<br />
-
-Il punto di montaggio della ''/home'', a cui è stato assegnato il nome ''"lv_home"'' (il nome potrebbe essere qualsiasi si possa immaginare, nell'esempio è stato usato questo per coerenza con lv_root) , quindi, sarà un volume logico all'interno del volume vg_mailga, il cui file system abbiamo detto essere ''brtfs''. Le dimensioni sono pari allo spazio che è stato tolto a lv_root.<br />
-
-Nell'esempio in esame, per impossibilità di elencazione delle possibili alternative, è stato eseguito un partizionamento in cui si è cercato di spiegare sia l'automatismo che la modifica del risultato, comprendendo di fatto come poter fare nei casi di partizionamento automatico e manuale.<br />
-
-Premendo avanti, ecco il fatidico avviso che segna l'inizio dell'avventura, la richiesta di autorizzazione alla creazione ed alla formattazione del filesystem.<br />
-{{Warning|Dal momento in cui si acconsente a questa operazione, non c'è più possibilità di tornare allo stato originario del disco.}}
-Al termine della formattazione viene chiesto dove installare il bootloader (grub2).<br />
-
-Automaticamente Anaconda propone l'MBR del disco dev/sda ma, premendo ''"cambia dispositivo"'' è possibile modificare le opzioni e anzichè installarlo sul MBR, si può inserirlo nel primo settore della partizione di boot che, nel caso in esempio è /dev/sda2. Ma se si fosse scelto di installare su un secondo disco Fedora perchè nel disco di avvio, ad esempio, è presente Windows, è possibile decidere di installare grub2 sul primo settore della partizione di /boot (cioè il disco sdb) e poi invertire l'ordine di avvio dei dischi com l'opzione ''BIOS drive order''.<br />
-
-E' possibile decidere di inserire una password a livello di bootloader, cosa che aumenterebbe la sicurezza.<br />
-
-Infine, alla richiesta dell'installer circa il tipo di utilizzo del computer e l'eventuale inserimento di repository aggiuntivi (come gli [http://rpmfusion.org rpmfusion] free e non free), i link da riportare all'interno della stessa schermata premendo ''Add additonal software repository'' e scrivendo all'interno della richiesta, sono:
-* per gli rpmfusion-free l'indirizzo <nowiki>http://download1.rpmfusion.org/free/fedora/releases/16/Everything/i386/os</nowiki>
-* per gli rpmfusion-nonfree l'indirizzo <nowiki>http://download1.rpmfusion.org/nonfree/fedora/releases/16/Everything/i386/os/</nowiki>
-I repository ''Fedora'' ed ''Updates'' sono invece già presenti ed attivati permettendo così di avere una installazione fresca e già aggiornata.<br />
-[[File:Install_f16_14.png|thumb|600px|center|inserimento repository aggiuntivi]]
-E' possibile, inoltre, attivare la richiesta  di modifica dei pacchetti selezionandone in aggiunta o deselezionandone altri, scegliendo sia le categorie che i pacchetti singoli.<br />
-
-Proseguendo, l'installer si connetterà alla rete e preleverà direttamente dai repository i pacchetti più aggiornati in quel momento. '''Nessun pacchetto verrà prelevato dal cd'''!<br />
-
-Terminata la fase di installazione, viene chiesto il riavvio (al boot si potrà vedere grub2) che permette di inserire le informazioni di carattere generale e di impostare l'utenza desktop (il superuser root era già stato impostato nella fase precedente). Occorre anche specificare se si vuole utilizzare il proprio account user per compiti amministrativi, in alternativa a root. E' possibile inserire già in questa fase altri utenti, senza doverlo fare successivamente dal proprio Desktop Environment<br />
-[[File:Install_f16_15.png|thumb|600px|center|inserimento utenti da Anaconda]]
-E' importante considerare di spedire il profilo, molto utile per il debugging, e ricordarsi di usare una password decisamente robusta anche per l'utente normale.
+=Conclusione=
+Per le configurazioni di installazione comuni leggere la documentazione per l'[[Installazione_Fedora_18|installazione di fedora]].<br/>
 
 That's all folks, enjoy.
 
-[[Categoria:Installazione]]
+[[:Categoria:Installazione]]
+[[Categoria:Scrittura in corso]]
