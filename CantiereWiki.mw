@@ -45,7 +45,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=FAD Milan, October 27 2012 - The Event|autore=GabrieleTrombini|stato=InCorso}}
-{{AggiungiArticolo|fonte=|articolo=Installazione Fedora 18|autore=AlessandroBugliazzini|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Installazione Fedora 18|autore=AlessandroBugliazzini|stato=InCorso}}
 {{AggiungiArticolo|fonte=|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|stato=DaFare}}
 |}
 
@@ -108,6 +108,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=Installare e configurare Virtualbox|autore=/|responsabile=AlbertoChiusole|data=11/09/2012|stato=InCorso}}
 {{ModificaArticolo|articolo=Skype_repo|autore=/|responsabile=AlbertoChiusole|data=29/11/2012|stato=InCorso}}
 {{ModificaArticolo|articolo=Netinstall:_installazione_Fedora_da_rete|autore=/|responsabile=AlbertoChiusole|data=4/1/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=Gnome-Shell_e_le_sue_estensioni|autore=/|responsabile=AlessandroBugliazzini|data=8/1/2013|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
