@@ -12,7 +12,7 @@ Inoltre la capacità dei dischi riprodotti nelle immagini è puramente indicativ
 
 {{Warning|L'immagine ISO che è stata scaricata dal link del FedoraProject sopra riportato '''deve essere masterizzata come immagine e non altro'''.}}
 
-{{Warning|E' consigliabile creare un dischetto di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire un backup dei propri dati importanti.}}
+{{Suggerimento|E' consigliabile creare un dischetto di ripristino, qualora fosse presente, del sistema operativo Windows a scanso di eventuali problemi futuri e, comunque, di eseguire sempre un backup dei propri dati importanti.}}
 
 == Avvio dell'installazione ==
 
@@ -107,6 +107,68 @@ Quando tutte le opzioni sulla partizione ci soddisfano possiamo cliccare sul pul
 Una volta che abbiamo terminato le modifiche alle nostre partizioni possiamo tornare al Sommario di Installazione cliccando sul pulsante ''Finish Partitioning'' in basso a destra.<br />
 [[File:Install_f18_10.png|thumb|center|800px|Partizionamento Manuale 2]]<br />
 
+====='''Esempio di Partizionamento Manuale'''=====
+Vediamo un esempio pratico di partizionamento manuale.
+
+{{suggerimento|Nel caso si voglia utilizzare il partizionamento manuale è sempre consigliato effettuare una preparazione della tabella delle partizioni con una Live di Gparted, avendo cura di prendere nota in quale partizioni effetture l'installazione.}}
+
+Partiamo dalla situazione, molto comune, di avere un Dual Boot con un sistema operativo windows in una partizione primaria, un altro sistema GNU/Linux già installato e presente in una partizione logica e una o più partizioni logiche vuote e diponibili ad ospitare una nuova installazione di Fedora.
+
+
+La tabella delle partizioni potrebbe quindi presentarsi in questo modo:
+:- sda1 installazione preesistente di windows;
+:- sda2 partizione di recovery di windows;
+:- sda3 partizione estesa
+:- sda4 partizione di swap
+:- sda5 partizione / di una distro Linux già installata
+:- sda6 partizione vuota
+:- sda7 partizione vuota
+:- sda8 partizione /home (contenente la /home della distro già installata)
+
+Nell'esempio vediamo come installare la directory / di Fedora in sda6 e la /home condivisa in sda8.
+
+Facendo riferimento alla schermata '''Opzioni di Installazione''' selezionare la spunta su ''Passare al partizionamento personalizzato dei dischi'' e cliccare sul pulsante ''Continua'' uscirà la schermata relativa al Partizionamento Manuale con elencate tutte le partizioni presenti sul disco nella colonna a sinistra.
+
+
+''Preparare la partizione /''
+
+Dalla lista delle partizioni cliccare sulla partizione sda6, ci verrà aperta sulla destra una nuova lista di opzioni come da figura ''Partizionamento manuale 2''.
+
+*Nella casella ''Mount Point'' inserire: '''/''' che rappresenta la directory radice del nostro sistema;
+*Nella casella ''Etichetta'' possiamo inserire ad esempio l'etichetta: '''fedora18''' oppure lasciare il campo vuoto;
+*Lasciamo invariato il campo ''Capacità desiderata'' che utilizzerà di default tutto lo spazio disponibile nella partizione
+
+*Espandere il sotto menu ''Personalizza''
+*Nel menu a tendina ''Tipo Dispositivo'' selezionare '''Standard Partition''';
+*Nel menu a tendina ''File system'' selezionare '''ext4''' per avere un filesystem moderno adatto per un sistema desktop tradizionale;
+*Mettere la spunta nella casella ''Reformat'' per formattare nuovamente la partizione nel caso in cui non si fosse sicuri che sia completamente vuota;
+
+*Cliccare sul pulsante ''Apply Changes'' per memorizzare le impostazioni sulle partizioni e procedere con l'impostazione della partizione successiva.
+
+
+''Preparare la partizione /home''
+
+Dalla lista delle partizioni cliccare sulla partizione sda8;
+
+*Nella casella ''Mount Point'' inserire: '''/home''' che rappresenta la directory /home del nostro sistema;
+*Nella casella ''Etichetta'' lasciare il campo vuoto;
+*Lasciamo invariato il campo ''Capacità desiderata'' che utilizzerà di default tutto lo spazio disponibile nella partizione
+
+*Espandere il sotto menu ''Personalizza''
+*Nel menu a tendina ''Tipo Dispositivo'' selezionare '''Standard Partition''';
+*Nel menu a tendina ''File system'' selezionare '''ext4''' per avere un filesystem moderno adatto per un sistema desktop tradizionale;
+*'''Non mettere''' la spunta nella casella ''Reformat'', poiché questo è il caso di una /home condivisa, in caso di riformattazione tutti i dati presenti nella vecchia /home verrebbero irrimediabilmente distrutti;
+
+*Cliccare sul pulsante ''Apply Changes'' per memorizzare le impostazioni sulle partizioni e procedere con l'impostazione della partizione successiva.
+
+
+''Preparare la partizione di swap''
+
+Se abbiamo bisogno della memoria si swap, dalla lista delle partizioni cliccare sulla partizione denominata swap, essa sarà aggiunta in automatico al mount point della nostra nuova installazione.
+
+
+Le modifiche alle nostre partizioni sono terminate, possiamo tornare al Sommario di Installazione cliccando sul pulsante ''Finish Partitioning'' in basso a destra.
+
 
 == Avvio dell'installazione su disco ==
 Quando il Sommario di Installazione non presenta più nessun triangolo giallo di avvertimento è possibile procedere all'installazione vera e propria cliccando sul pulsante ''Begin Installation'' posto in basso a destra.<br />
@@ -124,6 +186,7 @@ Se la password di root è stata inserita correttamente avremmo la conferma da qu
 
 Alla fine dell'installazione il sistema verrà riavviato, si dovrà avere cura di estrarre il supporto cd/dvd e avremmo davanti il primo avvio di Fedora 18 e dove avverà la creazione dell'utente.
 
+
 == Creazione Utente ==
 
 Nella schermata di creazione utente dobbiamo inserire il nostro nome reale, il nome dell'utente e la relativa password utente.
@@ -131,7 +194,7 @@ Se viene spuntata la casella ''Aggiungi al gruppo Administrators'' l'utente appe
 
 [[File:Install_f18_14.png|thumb|center|800px|Creazione Utente]]<br />
 
-Cliccando ancora una volta sul pulsante ''avanti'' in basso a destra verrà creato il nostro utente e avviata Fedora 18.
+Cliccando ancora una volta sul pulsante ''avanti'' in basso a destra verrà creato il nostro utente e avviata la nostra nuova Fedora 18.
 
 
 [[Categoria:Scrittura in corso]]
