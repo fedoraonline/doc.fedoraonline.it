@@ -60,70 +60,40 @@ Una volta installato si trova in ''Applicazioni > Accessori > Strumento di Perso
 è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool.
 
 Alcune funzioni molto interessante aggiunte allo strumento su Fedora 18 sono:
-*La possibilità di aggiungere i pulsanti Minimizza e Massimizza sulla Titlebar, è sufficiente spostarsi su ''Shell > Arrangement of buttons on the titlebar'' e dal menu a tendina è possibile scegliere quali pulsanti visualizzare.
-*Scegliere un'azione per il Pulsante Power, molto utile sui notebook da ''Shell > Power button action'' è possibile scegliere alla pressione del tasto power di spegnere lo schermo, ibernare, sospendere, spegnere il pc, oppure aprire una finestra interattiva per la scelta.
-*Scegliere il tema scuro per le finestre da ''Tema > Abilitare il tema scuro per tutte le applicazioni'' e posizionarlo su ON.
+*La possibilità di aggiungere i pulsanti Minimizza e Massimizza sulla Titlebar; è sufficiente spostarsi su ''Shell > Arrangement of buttons on the titlebar'' e dal menu a tendina è possibile scegliere quali pulsanti visualizzare.
+*Scegliere un'azione per il Pulsante Power; molto utile sui notebook, dal menu ''Shell > Power button action'' è possibile scegliere alla pressione del tasto power di spegnere lo schermo, ibernare, sospendere, spegnere il pc, oppure aprire una finestra interattiva per la scelta.
+*Cambiare il tema delle finestre; dopo aver scaricato i temi che preferiamo da [http://http://gnome-look.org/ gnome-look] e copiandoli nella cartella ''/home/nomeutente/.themes'' possiamo poi selezionarli da gnome tweak trovandoli in ''Tema > Tema Gtk+''
+*Scegliere il tema scuro per le finestre; da ''Tema > Abilitare il tema scuro per tutte le applicazioni'' e posizionarlo su ON.
 
 Un'altra caratteristica molto interessante di Gnome Tweak Tool è la possibilità di impostare e personalizzare la visualizzazione dei caratteri per l'ambiente desktop gnome. Nel menu ''Tipi di carattere'' è possibile regolare le impostazioni di ''Hinting'' e ''Antialisiang'', una possibile regolazione che rende una visualizzazione gradevole e uniforme è regolare ''Hinting'' su Slight e ''Antialiasing'' su Rgba. Naturalmente molto dipende dai caratteri scelti per il proprio desktop e le caratteristiche del proprio monitor. 
 
-Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shell, di cui si parlerà nel prossimo capitolo.
+Tramite questo strumento si potranno inoltre gestire le estensioni di Gnome-Shell, di cui si parlerà nel prossimo capitolo e in maniera più approfondita nella guida dedicata alle Estensioni Gnome Shell.
 
 
 == Estensioni Gnome-Shell ==
 
 Tra gli aspetti più innovativi di Gnome rientra sicuramente la facilità di personalizzazione. Le varie sezioni del Desktop, le icone, la barra ecc. si possono modificare semplicemente tramite i fogli di stile (CSS).<br />
-Inoltre esistono alcune estensioni, e nel tempo ce ne saranno sempre di più, che rendono il Desktop ancora più immediato nel suo utilizzo. Essi sono gestibili, oltre che da terminale, tramite Gnome-Tweak-Tool, visto in precedenza.
+Inoltre esistono alcune estensioni, e nel tempo ce ne saranno sempre di più, che rendono il Desktop ancora più immediato nel suo utilizzo. Esse sono gestibili, oltre che da Gnome-Tweak-Tool visto in precedenza, anche da terminale.
 
-Le estensioni attualmente disponibili possono essere viste e installate tramite il sito https://extensions.gnome.org/.
-Alcune di esse sono anche presenti nel repo fedora.
+Le estensioni attualmente disponibili possono essere viste e installate tramite il sito https://extensions.gnome.org/. e alcune di esse sono presenti nel repo fedora.
 
-Di seguito alcuni approfondimenti su qualche estensione:
+Rimandando l'analisi dettagliata delle estensioni nella guida [http://doc.fedoraonline.it/Estensioni_di_Gnome-Shell Estensioni di Gnome-Shell], di seguito vediamo alcuni approfondimenti su qualche estensione, le quali ricordiamo che possono essre installate sia dal sito extensions gnome sia da repo Fedora:
 
 ===Alternative-status-menu===
 Con questa estensione si rende permanente la visualizzazione della voce "Spegni" nel menu utente, senza dover premere il tasto <ALT> come indicato precedentemente.
 
  # yum install gnome-shell-extensions-alternative-status-menu
 
-===Drive-menu===
-Per avere un accesso più veloce a Nautilus e le cartelle nei segnalibri potrebbe essere utile avere un'icona sul pannello superiore che faccia da scorciatoia.
+===Places-menu===
+Per avere un accesso più veloce a Nautilus e alle cartelle nei segnalibri potrebbe essere utile avere un'icona sul pannello superiore che faccia da scorciatoia.
 
- # yum install gnome-shell-extensions-drivemenu
+ # yum install gnome-shell-extensions-places-menu
 
-===User-Theme===
-In questa fase iniziale di Gnome-Shell non è intenzione del team di Gnome incentivare lo sviluppo di temi alternativi, tuttavia è disponibile un'estensione che già oggi gestisce i temi dell'utente.<br>
-Per utilizzarla è necessario aggiungere un'altra estensione, la selezione temi, come indicato di seguito:
+===Application-menu===
+Con questa estensione è possibile avere un menu delle applicazioni installate direttamente nel pannello superiore divise per categoria in uno stile simile a gnome 2.x
 
- # yum install gnome-shell-extensions-user-theme  
- # yum install --nogpg http://timlau.fedorapeople.org/files/packages/theme-selector/gnome-shell-extensions-theme-selector-0.9-1.fc15.noarch.rpm
-[[Image:Gnome-themes.jpg|right|thumb|350px|L'estensione per selezionare i tuoi temi personali.]]
-A questo punto è necessario linkare i temi all'utente, per cui digitare, da utente normale:
+ # yum install gnome-shell-extensions-apps-menu
 
- $ theme-selector-setup
- User themes are now linked into /home/nome_utente/.themes
-
-Riavviare Gnome-Shell:<br>
-Premere ALT+F2 e alla richiesta di comando inserire la lettera "r" seguita da <invio>.<br />
-Fatto, ora oltre alle Finestre e Applicazioni si avrà la possibilità di selezionare i temi personali.
-
-===Google-Search===
-Questa applicazione permette di fare una ricerca su google di una selezione precedentemente fatta. In breve, si seleziona il testo che si vuole cercare su google > lo si copia o taglia > si clicca sulla [https://extensions.gnome.org/static/extension-data/screenshots/screenshot_176_1.png lente di ingrandimento] (il secondo simbolo dell'immagine nel link) sulla barra superiore e si aprirà automaticamente firefox o il browser di fiducia con la ricerca effettuata su google.
-Per chi avesse avuto problemi con l'estensione [https://extensions.gnome.org/extension/176/google-search/ Google Search] si può ovviare con questo metodo.
-
-Prima di tutto è necessario clonare il repo git con il seguente comando:
- $ cd && git clone git://github.com/sciancio/websearch
-Adesso sono disponibili due strade:
-* Se si vuole che l'estensione sia utilizzata solo dal proprio account si crea una cartella così:
- $ mkdir $HOME/.local/share/gnome-shell/extensions/websearch@ciancio.net
-e lo si sposta nella cartella che è stata creata precedentemente:
- $ cd && mv $HOME/websearch $HOME/.local/share/gnome-shell/extensions/websearch@ciancio.net
-* Altrimenti, se si vuole che sia disponibile per tutti gli utenti:
- $ su -c 'mkdir /usr/share/gnome-shell/extensions/websearch@ciancio.net'
-e quindi si sposta il repo git:
- $ su -c 'mv /home/NOME_ACCOUNT/websearch mv /usr/share/gnome-shell/extensions/websearch@ciancio.net
-inserendo al posto di NOME_ACCOUNT il nome dell'account nel quale il repository git è stato scaricato.
-
-Premendo '''Alt+F2''' e '''r''' verrà riavviata gnome-shell, andare su gnome-tweak-tool e avviare l'estensione.
-L'estensione (alla versione 0.1) è stata testata su Fedora 16 ma dovrebbe funzionare anche su Fedora 15.
 
 ==Rendere Gnome-Shell simile a Gnome 2.x==
 
@@ -159,10 +129,53 @@ Il tutto si completa con il Gnome Tweak Tool:
 *nella scheda "Scrivania", attivando tutte le opzioni così da avere disponibili le icone sul desktop;
 *nella scheda "Shell", selezionando "all" nell'opzione "Arrangement of buttons on the titlebar" così da non avere solo il tasto di chiusura nelle finestre delle applicazioni.
 
+
 ==Altri esempi di personalizzazione==
 
-Come già detto, di personalizzazioni se ne possono fare tantissime e per fortuna ognuno ha le sue preferenze. Quello descritto in seguito è soltanto un esempio per dimostrare cosa si può ottenere con minimi sforzi.<br />
-A proposito di tema, visto poco fa: la barra superiore delle finestre nello stesso colore (bianco/grigio) può non piacere, per cui si può anche colorarla. Inanzitutto è importante sapere che per la gestione di queste impostazioni è responsabile metacity; di conseguenza le modifiche applicate saranno mantenute anche se si cambia tema, proprio perchè il file è il seguente e vale per tutti i temi:<br />
+Come già detto, di personalizzazioni se ne possono fare tantissime e per fortuna ognuno ha le sue preferenze. Vediamo di seguito alcuni esempi per dimostrare cosa si può ottenere con minimi sforzi.
+
+{{suggerimento|è sempre una buona regola per evitare perdite di impostazioni o anche di blocco del sistema in caso di errore nella modifica, effettuare una copia dei file di sistema che stanno per essere modificati salvandoli per esempio nella propria cartella /home.}}
+
+===Ridimensionare icone applicazioni===
+Le icone del menu principale delle applicazioni sono decisamente grandi ed è possibile regolare la loro grandezza in maniera semplice andando a modificare il file ''/usr/share/gnome-shell/theme/gnome-shell.css''. Di seguito una personalizzazione delle dimensioni icone che risulta particolarmente gradevole su monitor 15,6' con risoluzione 1366x768
+ 
+ # gedit /usr/share/gnome-shell/theme/gnome-shell.css
+
+Dopo aver aperto il file cerchiamo l'intestazione '''/* Application Launchers and Grid */''' modificandola in questo modo:
+
+ # /* Application Launchers and Grid */
+   .icon-grid {
+       spacing: 30px;
+       -shell-grid-horizontal-item-size: 85px;
+       -shell-grid-vertical-item-size: 85px;
+   }
+   .icon-grid .overview-icon {
+       icon-size: 72px;
+   }
+
+
+===Togliere icone sul pannello Gnome Shell===
+Un'altra personalizzazione potrebbe essere quella di voler togliere delle icone che non ci interessano dal pannello superiore di Gnome Shell. Per esempio potrebbe essere necessario togliere l'icona ''accessibility menu'' perché non la riteniamo utile, ma l'esempio si può applicare a qualsiasi altra icona presente.
+Vediamo come editando il file /usr/share/gnome-shell/js/ui/panel.js andando a cercare la riga '''const PANEL_ITEM_IMPLEMENTATIONS''' è possibile commentare con i caratteri '''//''' le icone che non ci interessano per eliminarle dal pannello, in questo caso ''a11y: imports.ui.status.accessibility.ATIndicator''.
+
+ # gedit /usr/share/gnome-shell/js/ui/panel.js
+
+ # const PANEL_ITEM_IMPLEMENTATIONS = {
+    'activities': ActivitiesButton,
+    'appMenu': AppMenuButton,
+    'dateMenu': imports.ui.dateMenu.DateMenuButton,
+    //'a11y': imports.ui.status.accessibility.ATIndicator,
+    'volume': imports.ui.status.volume.Indicator,
+    'battery': imports.ui.status.power.Indicator,
+    'lockScreen': imports.ui.status.lockScreenMenu.Indicator,
+    'keyboard': imports.ui.status.keyboard.InputSourceIndicator,
+    'powerMenu': imports.gdm.powerMenu.PowerMenuButton,
+    'userMenu': imports.ui.userMenu.UserMenuButton
+ };
+
+
+===Cambiare tema delle finestre===
+A proposito di tema, visto poco fa: la barra superiore delle finestre nello stesso colore (bianco/grigio) può non piacere, per cui si può anche colorarla. Inanzitutto è importante sapere che per la gestione di queste impostazioni è responsabile metacity; di conseguenza le modifiche applicate saranno mantenute anche se si cambia tema, proprio perchè il file è il seguente e vale per tutti i temi:<br />:<br />
 ''/usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml''
 
 Aprire il file e, dopo aver salvato una copia, andare alla sezione che si occupa dei colori della barra:
