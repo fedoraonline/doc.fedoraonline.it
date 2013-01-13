@@ -50,14 +50,14 @@ Si nota subito che in alcune sottocategorie ci possono essere dei triangoli gial
 <br />
 
 == Localizzazione ==
-Nel sottomenù Localizzazione, sono presenti le voci ''Data & Ora'' e ''Tastiera'' (che dovrebbero essere già impostate correttamente se avete scelto correttamente la vostra lingua precedentemente); se le voci non sono corrette cliccateci sopra e modificatele secondo i vostri bisogni.
+Nel sottomenù Localizzazione, sono presenti le voci ''Data & Ora'' e ''Tastiera'' che dovrebbero essere già impostate correttamente se si è scelta correttamente la propria lingua. Se le voci non sono corrette cliccare sopra e modificarle secondo i propri bisogni.
 
 ===Data & Ora===
-In questa sezione è possibile calibrare il fuso orario (avendo scelto la lingua italiana) su Roma e con l'UTC selezionato e scegliere di impostare l'orario dalla rete utilizzando un server NTP.<br />
+In questa sezione è possibile calibrare il fuso orario (avendo scelto la lingua italiana) su Roma, con l'UTC selezionato e si può scegliere di impostare l'orario dalla rete utilizzando un server NTP.
 
 ===Tastiera===
-Qui è possibile scegliere il layout della tastiera selezionando la lingua desiderata e posizionandola alla prima posizione attraverso il pulsante con le freccette posto in basso al riquadro, sempre dagli stessi comandi è possibile aggiungere o togliere un determinato layout lingua tastiera.
-Dopo aver scelto la lingua della tastiera che si desidera si devono premere i pulsanti ''Alt+Shift'' per confermare il layout.<br />
+Qui è possibile scegliere il layout della tastiera selezionando la lingua desiderata. Dalla stessa schermata è possibile aggiungere o togliere un determinato layout di tastiera.<br />
+Dopo aver scelto la lingua ed il layout della tastiera si possono premere i pulsanti ''Alt+Shift'' per confermare il layout.<br />
 
 [[File:Install_f18_04.png|thumb|center|800px|Selezione Layout Tastiera]]
 <br />
