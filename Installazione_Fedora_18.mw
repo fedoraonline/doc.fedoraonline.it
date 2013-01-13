@@ -23,8 +23,9 @@ L'avvio si presenta simile a quello per l'installazione di Fedora 17.<br />
 Il countdown viene interrotto premendo un tasto qualsiasi e le frecce, su e giù, permettono di scorrere tra le tre selezioni principali,
 * ''Install Fedora'', che permette di iniziare subito l'installazione;
 * ''Test this media & Install Fedora'', che fa un test del supporto prima di iniziare l'installazione
-* ''Troubleshooting'', che permette di selezionare le seguenti azioni:
 [[File:Install_f18_01.png|thumb|400px|Schermata di avvio]]
+* ''Troubleshooting''
+La voce Troubleshootings (in italiano "risoluzione dei problemi"), che permette di selezionare le seguenti azioni:
 * ''Install Fedora in basic graphics mode'', per chi avesse problemi hardware, in particolare sulla scheda video (al di sotto compare la descrizione breve), userà i driver vesa; 
 * ''Rescue a Fedora system'' (per chi avesse problemi di avvio per la mancata istallazione, ad esempio, di Grub2 oppure per modificare i files di una installazione esistente);
 * ''Run a memory test'' (per controllare la memoria del sistema);
@@ -34,8 +35,7 @@ Il countdown viene interrotto premendo un tasto qualsiasi e le frecce, su e giù
 In tutte le azioni è possibile premere il tasto tab per inserire eventuali opzioni, e sono tutte selezionabili, oltre che con le frecce, anche con la lettera che sullo schermo viene indicata di colore diverso rispetto al resto del testo.<br />
 Con il tasto "esc", invece, si torna al riquadro precedente.<br />
 
-
-{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer (Anaconda), perché se il dvd fosse corrotto, la sistemazione del sistema diventa spesso impossibile, lasciando spazio solamente ad una procedura ex-novo.}}
+{{suggerimento|E' sempre utile eseguire il controllo del supporto di installazione, come richiesto dall'installer (Anaconda), perché se il dvd fosse corrotto, la sistemazione del sistema diventerebbe spesso impossibile, lasciando spazio solamente ad una procedura ex-novo.}}
 
 Se il supporto è integro, potrete scegliere la lingua predefinita per il sistema. Dopo aver selezionato la lingua, selezionate il piccolo riquadro sotto la lista (''Set keyboard to default layout for selected language.'') in modo che si setti anche la tastiera secondo la lingua che avete scelto.<br />
 
