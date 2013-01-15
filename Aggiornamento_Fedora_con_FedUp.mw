@@ -1,9 +1,9 @@
-[{Autore|RobertMayr}}
+{{Autore|RobertMayr}}
 
 == Introduzione ==
 
-FedUp (FEDora UPgrader) è il tool di aggiornamento per versioni di Fedora dalla 18 in poi. Esso sostituisce in tutto e per tutto PreUpgrade e l'aggiornamento da DVD, che con il passaggio a Fedora 18 sono divenuti obsoleti.
-{{Nota|Per aggiornare Fedora 16 alla versione 18 è necessario prima passare a Fedora 17 con PreUpgrade e dopo fare l'aggiornamento con FedUp, in quanto questo tool è in grado di aggiornare soltanto le versioni di Fedora dalla 17 in poi!}}
+'''FedUp''' ('''FED'''ora '''UP'''grader) è il tool di aggiornamento per versioni di Fedora dalla 18 in poi. Esso sostituisce in tutto e per tutto [[Aggiornamento_Fedora_con_preupgrade|PreUpgrade]] e l'aggiornamento da DVD, che con il passaggio a Fedora 18 sono divenuti obsoleti.
+{{Nota|Aggiornamento di Fedora 16 o inferiore|Per aggiornare Fedora 16 alla versione 18 è necessario prima passare a Fedora 17 con PreUpgrade e dopo fare l'aggiornamento con FedUp, in quanto questo tool è in grado di aggiornare soltanto le versioni di Fedora dalla 17 in poi!}}
 
 == Funzionamento ==
 
@@ -27,39 +27,52 @@ L'aggiornamento può durare anche parecchio tempo, dipende dallo stato in cui si
 Una volta completato l'update è bene cancellare la cache di yum, per essere certi che non influisca nell'operazione di upgrade.
 
  # yum clean all
-{{Warning|Se durante l'aggiornamento è stato aggiornato anche il kernel è necessario riavviare il sistema, perchè il lancio di preupgrade deve essere eseguito utilizzando l'ultimo kernel disponibile.}}
+{{Warning|Se durante l'aggiornamento è stato aggiornato anche il kernel è necessario riavviare il sistema, perchè il lancio di FedUp deve essere eseguito utilizzando l'ultimo kernel disponibile.}}
 Una volta riavviato ci si rilogga nel terminale come root per proseguire.
 
-== Operazioni preparative ==
+ # yum install fedup 
 
- # yum install preupgrade 
+Esistono tre opzioni per procedere con l'aggiornamento: attraverso la Rete, un'immagine ISO oppure da un altro device.
 
-Siccome l'aggiornamento dalla versione 11 in poi, rispetto agli upgrade precedenti, richiede molto più spazio nella directory /boot, è necessario liberarne il più possibile. Per farlo si possono, a questo punto, eliminare tutti i kernel (se si ha una partizione /boot uguale o inferiore a 300MB) tranne l'ultimo, che si sta utilizzando.<br />
-Per ogni singolo kernel bisogna cancellare i seguenti file: 
-{{Warning|Assicurarsi di cancellare sempre i file relativi al kernel, con la stessa numerazione.<br />Una cancellazione di un file del kernel attuale renderebbe il sistema inutilizzabile}}
- # cd /boot
- # ls
- # rm -rf System.map-2.6.x.x-x.fc15.i586
- # rm -rf vmlinuz-2.6.x.x-x.fc15.i586
- # rm -rf initrd-2.6.x.x-x.fc15.i586.img
+=== Aggiornamento attraverso la Rete ===
 
-Questa operazione va ripetuta per ogni versione di kernel, alla fine dovrebbero rimanere soltanto i file relativi al kernel in uso, ovvero l'ultimo.<br />
-Se non dovesse essere sufficiente liberare spazio cancellando i file inutili si può aumentare la partizione di /boot con [http://gparted.sourceforge.net/ gparted] oppure utilizzando una connessione via cavo (metodo descritto sul sito di [https://fedoraproject.org/wiki/How_to_use_PreUpgrade#Method_2:_Trick_preupgrade_into_downloading_the_installer fedoraproject]).
+Questa è sicuramente l'opzione più consigliata, perchè permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
 
-== L'aggiornamento ==
+Indicare a FedUp il repository dal quale scaricare gli aggiornamenti. Con la dicitura ''<arch>'' si intende l'architettura della propria macchina. Sotituirla con '''i386''' per PC a 32 bit, con '''x86_64''' per Pc a 64 bit.
 
-Completati tutti i preparativi si può partire con l'aggiornamento vero e proprio:
+ # fedup --network 18 --debuglog fedupdebug.log --instrepo http://dl.fedoraproject.org/pub/alt/qa/fedup/f18-RC4/<arch>/ 
 
- # preupgrade
+Finite le operazioni preparative controllare il log ''fedupdebug.log '' per eventuali errori.
 
-Una volta digitato questo comando partirà una GUI che ti seguirà durante l'aggiornamento. Dopo il messaggio di benvenuto verrà chiesto di selezionare la versione da installare dopo l'aggiornamento. (in queste immagini per l'attuale mancanza a F16 viene proposto la Rawhide di Fedora Verne).
-[[Image:Preupgrade1.png|center|thumb|350px|Preupgrade propone le versioni disponibili per l'aggiornamento.]]
-Il sistema eseguirà tutti i controlli necessari per poi partire con il download dei pacchetti. E' bene sapere che durante questa fase un'eventuale uscita dal programma di aggiornamento non comprometterà nulla, e se si vuole si può riprendere il download anche successivamente dal punto in cui è stato interrotto.
-[[Image:Preupgrade2.png|center|thumb|350px|Il controllo dello spazio, dei pacchetti ecc.]]
-Una volta finito il download dei pacchetti viene nuovamente controllato il sistema e lo spazio nella directory ''/boot''. Se tutto va a buon fine verrà chiesto il riavvio del sistema.
-[[Image:Preupgrade3.png|center|thumb|350px|Controllo eseguito con successo, riavviare.]]
-Una volta fatto il reboot viene eseguito l'upgrade vero e proprio. Infatti vengono installati tutti i pacchetti aggiornati alla versione successiva ed è facilmente intuibile che questa fase può durare molto, anche ore...
-[[Image:Preupgrade4.png|center|thumb|350px|Installazione dei pacchetti della nuova release.]]
-Non appena l'aggiornamento sarà terminato ci si ritroverà davanti alla "nuova" schermata di login.
+=== Aggiornamento con un file ISO ===
+
+Per aggiornare Fedora utilizzando un file ISO è necessario che esso risieda sulla macchina da aggiornare. E' possibile attivare il repo ''updates'' se si possiede una connessione di rete attiva. Il file ISO d'esempio sarà in '' /home/user/fedora-18.iso'', che ovviamente va sotituito con il file e la location del proprio file ISO.
+
+ # fedup --iso /home/user/fedora-18.iso --debuglog=fedupdebug.log
+
+Finite le operazioni preparative controllare il log ''fedupdebug.log '' per eventuali errori.
+
+=== Aggiornamento da un altro device ===
+
+E' possibile utilizzare drive ottici o altri device per procedere con l'aggiornamento. Nell'esempio si assume che la sorgente sia posizionata in ''/mnt/fedora''.<br />
+Dopodichè:
+
+ # fedup --device /mnt/fedora --debuglog=fedupdebug.log
+
+Finite le operazioni preparative controllare il log ''fedupdebug.log '' per eventuali errori.
+
+== Aggiornamento ==
+
+Seguire i seguenti passaggi per completare l'aggiornamento:
+# Se ''FedUp'' ha completato le operazioni senza errori riavviare il sistema.
+# Al riavvio dovrebbe apparire in Grub una nuova voce '''System Upgrade'''.
+## E' possibile, per scrupolo, aggiungere la dicitura ''rd.upgrade.debugshell'' alla linea di ''System Upgrade''.
+# Appare uno splashscreen Plymouth in cui appare una barra di avanzamento del processo in corso.
+## Premendo ''ESC'' si può visualizzare più dettagliatamente quanto sta succedendo.
+{{Warning|Nello stato attuale un bug impedisce di visualizzare correttamente lo stato di avanzamento se premendo ESC lo si preme una seconda volta. Il fatto che rimanga a 0% '''NON''' vuol dire che il processo si sia fermato. Attendere in ogni caso la conclusione delle operazioni!}}
+# Completato l'aggiornamento il sistema si riavvia in automatico e farà il boot con la nuova voce della versione di Fedora aggiornata.
+
+{{suggerimento|Aggiornare Grub non dovrebbe essere necessario, ma è consigliato comunque farlo. E' invece '''raccomandato''' farlo per sistemi che utilizzano UEFI per via del passaggio da grub-efi a grub2-efi.}}
+Per aggiornare Grub si può seguire [[Reinstallare_Grub|questa guida]].
 
 [[Categoria:Installazione]]
