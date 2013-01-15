@@ -38,11 +38,12 @@ Esistono tre opzioni per procedere con l'aggiornamento: attraverso la Rete, un'i
 
 Questa è sicuramente l'opzione più consigliata, perchè permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
 
-Indicare a FedUp il repository dal quale scaricare gli aggiornamenti. Con la dicitura ''<arch>'' si intende l'architettura della propria macchina. Sotituirla con '''i386''' per PC a 32 bit, con '''x86_64''' per Pc a 64 bit.
-
  # fedup-cli --network 18 --debuglog fedupdebug.log
 
 Finite le operazioni preparative controllare il log ''fedupdebug.log '' per eventuali errori.
+
+Si può indicare a FedUp il repository dal quale scaricare gli aggiornamenti. Con la dicitura ''<arch>'' si intende l'architettura della propria macchina. Sotituirla con '''i386''' per PC a 32 bit, con '''x86_64''' per Pc a 64 bit. Ad esempio:
+ # fedup-cli --network 18 --debuglog fedupdebug.log --instrepo http://dl.fedoraproject.org/pub/alt/qa/fedup/f18-RC4/<arch>/
 
 === Aggiornamento con un file ISO ===
 
