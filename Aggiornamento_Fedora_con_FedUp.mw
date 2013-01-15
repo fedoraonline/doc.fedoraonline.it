@@ -2,7 +2,7 @@
 
 == Introduzione ==
 
-'''FedUp''' ('''FED'''ora '''UP'''grader) è il tool di aggiornamento per versioni di Fedora dalla 18 in poi. Esso sostituisce in tutto e per tutto [[Aggiornamento_Fedora_con_preupgrade|PreUpgrade]] e l'aggiornamento da DVD, che con il passaggio a Fedora 18 sono divenuti obsoleti.
+'''FedUp''' ('''FED'''ora '''UP'''grader) è il tool di aggiornamento per versioni di Fedora dalla 17 in poi. Esso sostituisce in tutto e per tutto [[Aggiornamento_Fedora_con_preupgrade|PreUpgrade]] e l'aggiornamento da DVD, che con il passaggio a Fedora 18 sono divenuti obsoleti.
 {{Nota|Aggiornamento di Fedora 16 o inferiore|Per aggiornare Fedora 16 alla versione 18 è necessario prima passare a Fedora 17 con PreUpgrade e dopo fare l'aggiornamento con FedUp, in quanto questo tool è in grado di aggiornare soltanto le versioni di Fedora dalla 17 in poi!}}
 
 == Funzionamento ==
