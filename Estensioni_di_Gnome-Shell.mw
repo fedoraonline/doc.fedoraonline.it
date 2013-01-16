@@ -4,7 +4,31 @@ Le estensioni di Gnome Shell sono la vera novità di gnome 3: esattamente com'è
 Scopo di questa guida è appunto quello di sperimentare e recensire le varie estensioni disponibili in rete, per dare un'idea aprioristica di quale potrebbe essere il loro apporto al sistema e soprattutto la loro utilità per l'utenza.
 
 == Case testing ==
+Per fare ciò, le estensioni verranno testate su di un sistema live in usb.
+
+'''''La versione di Fedora attualmente in uso è la 18, con gnome 3.6
+'''''
 
 == Riferimenti ==
+Le diverse fonti da cui verranno scaricate e installate le estensioni saranno le seguenti:
+
+a) I repo ufficiali
+
+I repo di Fedora rappresentano il primo approccio per tutti coloro che vengono a contatto per la prima volta con le estensioni. Tramite Yum o Packagekit è possibile vedere (ed eventualmente installare) un elenco delle estensioni disponibili. In linea di massima, il nome del pacchetto è quasi sempre "gnome-shell-extension-" seguito dall'identificativo dell'estensione. Dunque, per visualizzare la lista completa è sufficente ad esempio digitare da riga di comando "yum list gnome-shell-extension*".
+
+Da segnalare che queste estensioni non sono sempre aggiornate all'ultima versione, in quanto seguono il processo di testing e verifica imposto dai repo. 
+
+b) I repo di RpmFusion
+
+Attualmente, nei repo di RpmFusion è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
+
+Esattamente come per le estensioni presenti nei repo ufficiali, anche per queste vale la considerazione relativa al processo di testing e verifica.
+
+c) Extensions.gnome.org[http://extensions.gnome.org]
+
+Questo è il sito ufficiale di gnome per le estensioni. Tramite esso è possibile installare, abilitare, rimuovere o disabilitare le estensioni con un semplice click del mouse (a patto di usare Firefox o Chrome).
+È inoltre possibile visualizzare un elenco delle estensioni installate nel sistema, comprensivo di quelle non funzionanti ed eventualmente aggiornarle. 
+
+A differenza delle estensioni presenti nei repo, queste vengono aggiornate costantemente. Questa procedura non è però esente da bug o difetti di programmazione e può capitare che un estensione non funzioni, o che non si installi proprio. Prima di installare, dunque, è sempre consigliabile leggere i commenti degli utenti, presenti nelle rispettive pagine. 
 
 == Recensioni ==
