@@ -16,25 +16,25 @@ a) I repo ufficiali
 
 I repo di Fedora rappresentano il primo approccio per tutti coloro che vengono a contatto per la prima volta con le estensioni. Tramite Yum o Packagekit è possibile vedere (ed eventualmente installare) un elenco delle estensioni disponibili. In linea di massima, il nome del pacchetto è quasi sempre "gnome-shell-extension-" seguito dall'identificativo dell'estensione. Dunque, per visualizzare la lista completa è sufficente ad esempio digitare da riga di comando "yum list gnome-shell-extension*".
 
-Da segnalare che queste estensioni non sono sempre aggiornate all'ultima versione, in quanto seguono il processo di testing e verifica imposto dai repo. 
+NOTE: Da segnalare che queste estensioni non sono sempre aggiornate all'ultima versione, in quanto seguono il processo di testing e verifica imposto dai repo. 
 
 b) I repo di RpmFusion
 
 Attualmente, nei repo di RpmFusion è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
 
-Esattamente come per le estensioni presenti nei repo ufficiali, anche per queste vale la considerazione relativa al processo di testing e verifica.
+NOTE: Esattamente come per le estensioni presenti nei repo ufficiali, anche per queste vale la considerazione relativa al processo di testing e verifica.
 
 c) https://extensions.gnome.org
 
 Questo è il sito ufficiale di gnome per le estensioni. Tramite esso è possibile installare, abilitare, rimuovere o disabilitare le estensioni con un semplice click del mouse (a patto di usare Firefox o Chrome).
 È inoltre possibile visualizzare un elenco delle estensioni installate nel sistema, comprensivo di quelle non funzionanti ed eventualmente aggiornarle. 
 
-A differenza delle estensioni presenti nei repo, queste vengono aggiornate costantemente. Questa procedura non è però esente da bug o difetti di programmazione e può capitare che un estensione non funzioni, o che non si installi proprio. Prima di installare, dunque, è sempre consigliabile leggere i commenti degli utenti, presenti nelle rispettive pagine.
+NOTE: A differenza delle estensioni presenti nei repo, queste vengono aggiornate costantemente. Questa procedura non è però esente da bug o difetti di programmazione e può capitare che un estensione non funzioni, o che non si installi proprio. Prima di installare, dunque, è sempre consigliabile leggere i commenti degli utenti, presenti nelle rispettive pagine.
 
 d) http://www.fpmurphy.com/gnome-shell-extensions/
 
 Blog di un esperto programmatore con una sezione dedicata specificamente alle estensioni. Da notare che l'installazione, in questo caso, va effettuata manualmente scaricando il file tar.gz e decomprimendolo all'interno della cartella delle estensioni. 
 
-Aggiornato regolarmente ma non frequentemente, le estensioni in esso presenti sono da considerarsi 'sperimentali'.
+NOTE: Aggiornato regolarmente ma non frequentemente, le estensioni in esso presenti sono da considerarsi 'sperimentali'.
 
 == Recensioni ==
