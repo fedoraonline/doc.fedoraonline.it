@@ -29,6 +29,12 @@ c) Extensions.gnome.org[http://extensions.gnome.org]
 Questo è il sito ufficiale di gnome per le estensioni. Tramite esso è possibile installare, abilitare, rimuovere o disabilitare le estensioni con un semplice click del mouse (a patto di usare Firefox o Chrome).
 È inoltre possibile visualizzare un elenco delle estensioni installate nel sistema, comprensivo di quelle non funzionanti ed eventualmente aggiornarle. 
 
-A differenza delle estensioni presenti nei repo, queste vengono aggiornate costantemente. Questa procedura non è però esente da bug o difetti di programmazione e può capitare che un estensione non funzioni, o che non si installi proprio. Prima di installare, dunque, è sempre consigliabile leggere i commenti degli utenti, presenti nelle rispettive pagine. 
+A differenza delle estensioni presenti nei repo, queste vengono aggiornate costantemente. Questa procedura non è però esente da bug o difetti di programmazione e può capitare che un estensione non funzioni, o che non si installi proprio. Prima di installare, dunque, è sempre consigliabile leggere i commenti degli utenti, presenti nelle rispettive pagine.
+
+d) http://www.fpmurphy.com/gnome-shell-extensions/
+
+Blog di un esperto programmatore con una sezione dedicata specificamente alle estensioni. Da notare che l'installazione, in questo caso, va effettuata manualmente scaricando il file tar.gz e decomprimendolo all'interno della cartella delle estensioni. 
+
+Aggiornato regolarmente ma non frequentemente, le estensioni in esso presenti sono da considerarsi 'sperimentali'.
 
 == Recensioni ==
