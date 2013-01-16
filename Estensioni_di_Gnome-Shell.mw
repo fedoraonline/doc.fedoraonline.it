@@ -24,7 +24,7 @@ Attualmente, nei repo di RpmFusion è presente una sola estensione, ovvero Weath
 
 Esattamente come per le estensioni presenti nei repo ufficiali, anche per queste vale la considerazione relativa al processo di testing e verifica.
 
-c) Extensions.gnome.org[http://extensions.gnome.org]
+c) https://extensions.gnome.org
 
 Questo è il sito ufficiale di gnome per le estensioni. Tramite esso è possibile installare, abilitare, rimuovere o disabilitare le estensioni con un semplice click del mouse (a patto di usare Firefox o Chrome).
 È inoltre possibile visualizzare un elenco delle estensioni installate nel sistema, comprensivo di quelle non funzionanti ed eventualmente aggiornarle. 
