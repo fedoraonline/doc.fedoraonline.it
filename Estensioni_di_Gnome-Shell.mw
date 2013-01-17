@@ -84,6 +84,17 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/568/notes/ Link
 === U ===
 === V ===
 === W ===
+
+----
+'''Weather Broadcast'''
+----
+da Repo RpmFusion (yum install gnome-shell-extension-weather)
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un pulsante che visualizza condizioni meteo e temperatura.
+
+'''Commento''': Di certo non fondamentale, si tratta comunque di un'estensione utile ed altamente configurabile. Allo stato attuale è possibile aggiungere più località tra cui scegliere, impostare le unità di misura desiderate (pressione, temperatura e intensità del vento), scegliere la posizione del pulsante sul pannello (destra, sinistra, centro) e configurare l'aspetto generale del menu. Consigliata.
+
 === X ===
 === Y ===
 === Z ===
