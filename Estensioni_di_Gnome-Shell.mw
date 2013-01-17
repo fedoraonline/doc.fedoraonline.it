@@ -1,3 +1,5 @@
+{{Warning|PAGINA IN COSTRUZIONE}} 
+
 == Introduzione ==
 Le estensioni rappresentano la vera novità di Gnome Shell: esattamente come per Firefox, attraverso esse è possibile aggiungere funzionalità altrimenti non presenti nel sistema. Tutto ciò, va ricordato, senza necessità preliminari di installare pacchetti aggiuntivi (salvo rare eccezioni). Per fare un esempio, quindi, è possibile sia aggiungere un'icona per le previsioni meteo sulla barra superiore, esattamente come con i widget per gnome-panel, xfce e lxde, sia re-implementare l'effetto Coverflow fornito da compiz, alla pressione di alt-tab. Il tutto in pochi secondi, senza necessità di riavviare il sistema.
 
