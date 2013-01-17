@@ -24,11 +24,11 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 
 === Repo di RpmFusion ===
 
-'''Descrizione''': In RpmFusion attualmente è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
+'''Descrizione''': In RpmFusion attualmente è presente una sola estensione, ovvero Weather Broadcast (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
 
 '''Metodo di Installazione''': Lo stesso dei repo ufficiali (Packagekit o Yum), a patto ovviamente di avere preliminarmente installato i repo.
 
-'''Note''': Anche qua vale la stessa precisazione fatta coi repo ufficiali. 
+'''Note''': Anche qua vale la stessa precisazione fatta coi repo ufficiali.
 
 === https://extensions.gnome.org ===
 
