@@ -66,6 +66,17 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 === Q ===
 === R ===
 === S ===
+
+'''Sticky Notes'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/568/notes/ Link])
+
+''Descrizione'': Sostituisce il pulsante 'applicazioni' nell'overview, con un pulsante per creare e gestire note adesive. 
+
+''Commento'': Potrebbe essere un'estensione utile, ma allo stato attuale (17 gennaio) sembra ancora molto acerba. Per andare a capo è necessario premere invio, altrimenti il testo esce dai confini della nota. Le note inoltre sono molto piccole e il font usato non è da meno. Da tenere in considerazione per eventuali aggiornamenti, comunque.
+
+''Note'': Funziona solamente con gnome 3.6 o superiori.
+
 === T ===
 === U ===
 === V ===
