@@ -14,7 +14,7 @@ Allo scopo di testare le varie estensioni, anche su configurazioni di sistema di
 == Fonti di riferimento ==
 In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installabili allo stesso modo, da un'unica fonte. Ma ovviamente non è così: l'utente si trova dunque suo malgrado a doversi barcamenare tra varie fonti e diversi metodi di installazione. Di seguito, i riferimenti usati nelle recensioni, con i rispettivi metodi di installazione
 
-1) I repo di Fedora
+=== I repo di Fedora ===
 
 '''Descrizione''': Rappresentano il primo approccio per tutti coloro che vengono a contatto con le estensioni per la prima volta. Nei repo è possibile reperire un assortimento di estensioni di base, che non modificano radicalmente l'esperienza d'utilizzo.
 
@@ -22,7 +22,7 @@ In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installa
 
 '''Note''': Le estensioni presenti nei repo passano per lo stesso processo di verifica e testing dei pacchetti di Fedora. Dunque non vengono aggiornate su base giornaliera, ma in base alla versione stabile rilasciata. In linea di massima, comunque, sono solitamente le più affidabili (o perlomeno le meno suscettibili di causare crash al sistema)
 
-2) I repo di RpmFusion
+=== I repo di RpmFusion ===
 
 '''Descrizione''': In RpmFusion attualmente è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
 
@@ -30,7 +30,7 @@ In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installa
 
 '''Note''': Anche qua vale la stessa precisazione fatta coi repo ufficiali. 
 
-3) http://extensions.gnome.org
+=== http://extensions.gnome.org ===
 
 '''Descrizione''': Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina degli addon per Firefox. Aggiornato costantemente da centinaia e centinaia di sviluppatori, fornisce estensioni per tutti i gusti, complete di descrizione, commenti ed immagine esplicativa. Inoltre, attraverso di esso è possibile gestire le estensioni installate nel sistema e verificare la presenza di eventuali aggiornamenti.
 
@@ -38,7 +38,7 @@ In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installa
 
 '''Note''': Differentemente dalle estensioni dei repo, queste vengono aggiornate costantemente. Questo ovviamente include sia release stabili che release beta. Inoltre, essendo un sito generico per tutte le distribuzioni che fanno uso di Gnome-Shell, è possibile che alcune estensioni non siano compatibili con Fedora. Si raccomanda, dunque, di leggere sempre attentamente descrizione e commenti per verificare eventuali incompatibilità o bug. 
 
-4) http://www.fpmurphy.com/gnome-shell-extensions/
+=== http://www.fpmurphy.com/gnome-shell-extensions/ ===
 
 '''Descrizione''': Blog di un programmatore, con una sezione dedicata specificamente alle estensioni. 
 
