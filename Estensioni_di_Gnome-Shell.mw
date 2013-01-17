@@ -1,13 +1,12 @@
 == Introduzione ==
-Le estensioni di Gnome Shell sono la vera novità di gnome 3: esattamente com'è possibile con Firefox, tramite un estensione si possono aggiungere funzionalità altrimenti non presenti nel sistema. Tutto ciò, va ricordato, senza necessità preliminari di installare pacchetti aggiuntivi (salvo rare eccezioni). Per fare un esempio, quindi, è possibile sia aggiungere un'icona per le previsioni meteo sulla barra superiore, esattamente come con i widget per gnome-panel, xfce e lxde, sia reimplementare l'effetto Coverflow fornito da compiz, alla pressione di alt-tab. Il tutto tramite un semplice click.
+Le estensioni rappresentano la vera novità di Gnome Shell: esattamente come per Firefox, attraverso esse è possibile aggiungere funzionalità altrimenti non presenti nel sistema. Tutto ciò, va ricordato, senza necessità preliminari di installare pacchetti aggiuntivi (salvo rare eccezioni). Per fare un esempio, quindi, è possibile sia aggiungere un'icona per le previsioni meteo sulla barra superiore, esattamente come con i widget per gnome-panel, xfce e lxde, sia re-implementare l'effetto Coverflow fornito da compiz, alla pressione di alt-tab. Il tutto in pochi secondi, senza necessità di riavviare il sistema.
 
-Scopo di questa guida è appunto quello di sperimentare e recensire le varie estensioni disponibili in rete, per dare un'idea aprioristica di quale potrebbe essere il loro apporto al sistema e soprattutto la loro utilità per l'utenza.
-
+Lo scopo di questa guida, dunque, è di fornire un elenco dettagliato e aggiornato delle varie estensioni disponibili, dettagliandone gli effetti e gli eventuali pregi o difetti.
 == Case testing ==
-Per fare ciò, le estensioni verranno testate su di un sistema live in usb.
 
-'''''La versione di Fedora attualmente in uso è la 18, con gnome 3.6
-'''''
+Allo scopo di testare le varie estensioni, anche su configurazioni di sistema diverse, è stata dunque creata una Live USB. La versione in uso, in linea di massima, verrà aggiornata tempestivamente all'uscita di ogni nuova release. 
+
+VERSIONE ATTUALMENTE IN USO: '''''Fedora 18 / Gnome 3.6'''''
 
 == Riferimenti ==
 Le diverse fonti da cui verranno scaricate e installate le estensioni saranno le seguenti:
