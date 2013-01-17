@@ -14,7 +14,7 @@ Allo scopo di testare le varie estensioni, anche su configurazioni di sistema di
 == Repositories e siti ==
 In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte allo stesso modo, da un'unica fonte. Sfortunatamente non è così: l'utente si trova dunque suo malgrado a doversi barcamenare tra varie fonti e diversi metodi di installazione. Di seguito, un elenco dei repositories e siti da cui è possibile scaricare le estensioni recensite, con rispettivi metodi di installazione
 
-=== I repo di Fedora ===
+=== Repo di Fedora ===
 
 '''Descrizione''': Rappresentano il primo approccio per tutti coloro che vengono a contatto con le estensioni per la prima volta. Nei repo è possibile reperire un assortimento di estensioni di base, che non modificano radicalmente l'esperienza d'utilizzo.
 
@@ -22,7 +22,7 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 
 '''Note''': Le estensioni presenti nei repo passano per lo stesso processo di verifica e testing dei pacchetti di Fedora. Dunque non vengono aggiornate su base giornaliera, ma in base alla versione stabile rilasciata. In linea di massima, comunque, sono solitamente le più affidabili (o perlomeno le meno suscettibili di causare crash al sistema)
 
-=== I repo di RpmFusion ===
+=== Repo di RpmFusion ===
 
 '''Descrizione''': In RpmFusion attualmente è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
 
