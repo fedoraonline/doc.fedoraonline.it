@@ -9,31 +9,38 @@ Allo scopo di testare le varie estensioni, anche su configurazioni di sistema di
 VERSIONE ATTUALMENTE IN USO: '''''Fedora 18 / Gnome 3.6'''''
 
 == Riferimenti ==
-Le diverse fonti da cui verranno scaricate e installate le estensioni saranno le seguenti:
+In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installabili allo stesso modo, da un'unica fonte. Ma ovviamente non è così: l'utente si trova dunque suo malgrado a doversi barcamenare tra varie fonti e diversi metodi di installazione. Di seguito, i riferimenti usati nelle recensioni, con i rispettivi metodi di installazione
 
-a) I repo ufficiali
+1) I repo di Fedora
 
-I repo di Fedora rappresentano il primo approccio per tutti coloro che vengono a contatto per la prima volta con le estensioni. Tramite Yum o Packagekit è possibile vedere (ed eventualmente installare) un elenco delle estensioni disponibili. In linea di massima, il nome del pacchetto è quasi sempre "gnome-shell-extension-" seguito dall'identificativo dell'estensione. Dunque, per visualizzare la lista completa è sufficente ad esempio digitare da riga di comando "yum list gnome-shell-extension*".
+'''Descrizione''': Rappresentano il primo approccio per tutti coloro che vengono a contatto con le estensioni per la prima volta. Nei repo è possibile reperire un assortimento di estensioni di base, che non modificano radicalmente l'esperienza d'utilizzo.
 
-NOTE: Da segnalare che queste estensioni non sono sempre aggiornate all'ultima versione, in quanto seguono il processo di testing e verifica imposto dai repo. 
+'''Metodo di Installazione''': Tramite Packagekit o Yum (il nome di base dei pacchetti è ''gnome-shell-extension-[nome estensione]'').
 
-b) I repo di RpmFusion
+'''Note''': Le estensioni presenti nei repo passano per lo stesso processo di verifica e testing dei pacchetti di Fedora. Dunque non vengono aggiornate su base giornaliera, ma in base alla versione stabile rilasciata. In linea di massima, comunque, sono solitamente le più affidabili (o perlomeno le meno suscettibili di causare crash al sistema)
 
-Attualmente, nei repo di RpmFusion è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
+2) I repo di RpmFusion
 
-NOTE: Esattamente come per le estensioni presenti nei repo ufficiali, anche per queste vale la considerazione relativa al processo di testing e verifica.
+'''Descrizione''': In RpmFusion attualmente è presente una sola estensione, ovvero Weather (che vedremo nel dettaglio più avanti). Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
 
-c) https://extensions.gnome.org
+'''Metodo di Installazione''': Lo stesso dei repo ufficiali (Packagekit o Yum), a patto ovviamente di avere preliminarmente installato i repo.
 
-Questo è il sito ufficiale di gnome per le estensioni. Tramite esso è possibile installare, abilitare, rimuovere o disabilitare le estensioni con un semplice click del mouse (a patto di usare Firefox o Chrome).
-È inoltre possibile visualizzare un elenco delle estensioni installate nel sistema, comprensivo di quelle non funzionanti ed eventualmente aggiornarle. 
+'''Note''': Anche qua vale la stessa precisazione fatta coi repo ufficiali. 
 
-NOTE: A differenza delle estensioni presenti nei repo, queste vengono aggiornate costantemente. Questa procedura non è però esente da bug o difetti di programmazione e può capitare che un estensione non funzioni, o che non si installi proprio. Prima di installare, dunque, è sempre consigliabile leggere i commenti degli utenti, presenti nelle rispettive pagine.
+3) http://extensions.gnome.org
 
-d) http://www.fpmurphy.com/gnome-shell-extensions/
+'''Descrizione''': Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina degli addon per Firefox. Aggiornato costantemente da centinaia e centinaia di sviluppatori, fornisce estensioni per tutti i gusti, complete di descrizione, commenti ed immagine esplicativa. Inoltre, attraverso di esso è possibile gestire le estensioni installate nel sistema e verificare la presenza di eventuali aggiornamenti.
 
-Blog di un esperto programmatore con una sezione dedicata specificamente alle estensioni. Da notare che l'installazione, in questo caso, va effettuata manualmente scaricando il file tar.gz e decomprimendolo all'interno della cartella delle estensioni. 
+'''Metodo di Installazione''': Ogni estensione ha una sua pagina con uno switch on/off. Cliccandovi sopra, a patto di usare Firefox o Chrome, è possibile installare e abilitare le estensioni desiderate in pochi secondi, o disabilitarle. Diverso discorso va fatto per la disinstallazione, al momento possibile solamente dalla pagina di riepilogo delle estensioni installate.
 
-NOTE: Aggiornato regolarmente ma non frequentemente, le estensioni in esso presenti sono da considerarsi 'sperimentali'.
+'''Note''': Differentemente dalle estensioni dei repo, queste vengono aggiornate costantemente. Questo ovviamente include sia release stabili che release beta. Inoltre, essendo un sito generico per tutte le distribuzioni che fanno uso di Gnome-Shell, è possibile che alcune estensioni non siano compatibili con Fedora. Si raccomanda, dunque, di leggere sempre attentamente descrizione e commenti per verificare eventuali incompatibilità o bug. 
+
+4) http://www.fpmurphy.com/gnome-shell-extensions/
+
+'''Descrizione''': Blog di un programmatore, con una sezione dedicata specificamente alle estensioni. 
+
+'''Medodo di Installazione''': In questo caso, l'installazione va effettuata manualmente, scaricando il file tar.gz/zip e decomprimendolo all'interno della cartella delle estensioni (~/.local/share/gnome-shell/extensions) 
+
+'''Note''': Aggiornato regolarmente ma non frequentemente, le estensioni in esso presenti sono da considerarsi 'sperimentali'.
 
 == Recensioni ==
