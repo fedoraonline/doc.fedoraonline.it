@@ -5,10 +5,11 @@ Il fatto che tutti possono contribuire alla crescita del wiki potrebbe rendere c
 I passaggi seguenti spiegheranno le varie fasi del wiki, dalla registrazione come redattore fino al tutorial e su come editare in modo corretto una pagina.
 
 ===Registrarsi alla Mailing List del Wiki===
-La [https://admin.fedoraproject.org/mailman/listinfo/doc-fol Mailing List] è il modo più efficace sia per tenere in contatto i redattori con lo staff di FOL che per ottimizzare le sinergie.<br />
-E' assolutamente necessario, proprio per non perdere traccia delle fasi del processo, che tutte le informazioni contestuali sul lavoro di redazione vengano inoltrate in una Mailing List dedicata (gestita dallo staff).<br />
-Perciò proposte di nuovi documenti, di modifiche a quelli già presenti e tutto ciò che riguarda il lavoro da svolgere sul wiki potranno essere discusse, commentate e approvate in pieno accordo con la redazione e lo staff prima di essere pubblicate.<br />
+La [https://admin.fedoraproject.org/mailman/listinfo/doc-fol Mailing List] è il modo più efficace sia per tenere in contatto i redattori con lo staff di FOL, sia per ottimizzare le sinergie.<br />
+È assolutamente necessario, proprio per non perdere traccia delle fasi del processo, che tutte le informazioni contestuali sul lavoro di redazione vengano inoltrate in una Mailing List dedicata (gestita dallo staff).<br />
+Perciò proposte di nuovi documenti, di modifiche a quelli già presenti e tutto ciò che riguarda il lavoro da svolgere sul wiki potranno e dovranno essere discusse, commentate e approvate in pieno accordo con la redazione e lo staff prima di essere pubblicate.<br />
 Attraverso la ML si potrà chiedere aiuto su formattazione, contenuto o correzione delle guide.<br />
+
 Per modifiche di poca rilevanza, come ad esempio errori di ortografia o di grammatica, non è necessario far intervenire la Mailing List.<br />
 E’ buona norma, per partecipare al wiki, inviare una mail di presentazione, indicando le proprie abilità ed i propri interessi.<br />
 Di seguito alcune informazioni e raccomandazioni utili:
@@ -21,26 +22,37 @@ Di seguito alcune informazioni e raccomandazioni utili:
 
 ===Creazione di un account sul Wiki===
 Per garantire a tutti i frequentatori del wiki la massima qualità delle guide, la registrazione come redattore avviene '''esclusivamente''' attraverso la Mailing List.<br />
-E' sufficiente inviare alla lista una presentazione indicando nell'oggetto della mail che si tratta di una richiesta di registrazione al wiki come redattore. Uno degli amministratori risponderà e creerà l'account.
+È sufficiente inviare alla lista una presentazione indicando nell'oggetto della mail che si tratta di una richiesta di registrazione al wiki come redattore. Uno degli amministratori risponderà e creerà l'account.
 {{Warning|Ricordare sempre di includere nella presentazione via mail il proprio nome e cognome. L'amministratore crea l'account in base a queste informazioni, altrimenti la registrazione non potrà essere effettuata!}}
 
-===Crea la tua pagina personale===
+===Creare la propria pagina personale===
 Una volta registrato il primo passo è quello di creare una pagina personale, cliccando sul proprio nome utente in alto a destra (il fatto che sia evidenziato in rosso significa proprio che la pagina non esiste).<br />
-E' il miglior modo per presentarsi a tutta la comunità, e sarebbe giusto indicare anche i contributi forniti all'interno del wiki.<br />
+È il miglior modo per presentarsi a tutta la comunità, e sarebbe giusto indicare anche i contributi forniti all'interno del wiki.<br />
 La pagina potrà, inoltre, contenere i propri contatti mail, IRC, chiave GPG, oppure gli interessi, gli hobby ecc.<br />
 Nella sezione [[Convenzioni_di_scrittura|convenzioni di scrittura]] si possono trovare tutte le informazioni per un corretto utilizzo degli strumenti a disposizione.
 
 ===Iniziare a contribuire===
-Se si ha già una idea per un nuovo articolo o per l'aggiornamento di uno obsoleto, l'inizio è sempre proporlo in Mailing List dove tutti gli iscritti (redattori) possono analizzare la proposta e, nel caso, discuterla.<br />
-Se, invece è necessario un periodo di apprendistato per acquisire la confidenza nell'utilizzo del wiki e delle convenzioni di scrittura, si può iniziare controllando i lavori in attesa di rilettura per l'approvazione o per il rigetto come spiegato in [[CantiereWiki#Rilettura_in_corso|CantiereWiki]].
+Se si ha già una idea per un nuovo articolo o per l'aggiornamento di uno obsoleto, l'inizio è sempre proporlo in Mailing List dove tutti gli iscritti (i redattori) possono analizzare la proposta e, nel caso, discuterla e proporre modifiche.<br />
+Se, invece è necessario un periodo di apprendistato per acquisire la confidenza nell'utilizzo del wiki e delle convenzioni di scrittura, si può iniziare controllando i lavori in attesa di rilettura per l'approvazione o per il rigetto come spiegato nel [[CantiereWiki#Rilettura_in_corso|CantiereWiki]].
+
+===Creare una pagina di prova===
+Dopo che il nuove redattore ha creato la propria pagina utente potrà, se ne avrà bisogno, creare delle pagine di prova per le sue guide, così da poter scrivere delle bozze per futuri articoli.<br/>
+Per creare nuove pagine basta essere loggati, digitare nel proprio browser il nome che si vuol dare alla pagina di prova e quindi crearla e salvare.<br/>
+Quelli che seguono sono esempi di link a pagine di prova:
+ http://doc.fedoraonline.it/Utente:NomeCognome/prove/prova1
+ http://doc.fedoraonline.it/Utente:NomeCognome/prove/prova2
+ ...
+Creare ovviamente un numero di pagine di prova adeguato ai propri bisogni.
 
 ==Processo per la creazione o la modifica di un nuovo articolo==
 Nel caso di proposta di una nuova guida o di un tutorial, i passi da seguire sono:
-# inviare la proposta alla Mailing List. In questo modo anche altri utenti potranno commentarla;
-# se la guida viene accettata è possibile iniziare a scriverla;
-# inserire la tua guida nella pagina del [[CantiereWiki]], come spiegato nella sezione dedicata agli [[CantiereWiki#Articoli_in_corso_di_stesura|articoli in corso di stesura]]. Questo inserimento automaticamente creerà un link (rosso) alla pagina della  guida;
-# in questa fase non si deve indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (notare i due punti davanti alla parola 'Categoria', che ne indica lo stato di non pubblicazione);
-# tenere sempre presente le nostre [[Convenzioni_di_scrittura|convenzioni di scrittura]];
-# cominciare con il nostro [[CantiereWiki|cantiere wiki]].
+#Inviare la proposta alla Mailing List. In questo modo anche altri utenti potranno commentarla;
+#Se la guida viene accettata è possibile iniziare a scriverla;
+#Inserire la guida nella pagina del [[CantiereWiki]], come spiegato nella sezione dedicata agli [[CantiereWiki#Articoli_in_corso_di_stesura|articoli in corso di stesura]]. Questo inserimento automaticamente creerà un link (rosso) alla pagina della guida;
+#In questa fase non si deve indicare la categoria definitiva di appartenenza della pagina, perchè verrebbe immediatamente pubblicata. E' buona norma invece indicare la categoria finale scrivendo <tt><nowiki>[[:Categoria:Nome Categoria]]</nowiki></tt> (notare i due punti davanti alla parola 'Categoria', che ne indica lo stato di non pubblicazione) ed inserire in fondo, provvisoriamente, una categoria <nowiki>[[Categoria:Scrittura in corso]]</nowiki>;
+#Tenere sempre presente le nostre [[Convenzioni_di_scrittura|convenzioni di scrittura]];
+#Cominciare con il nostro [[CantiereWiki|cantiere wiki]].
+
+Grazie per l'attenzione e buon lavoro!
 
 [[Categoria:FedoraOnline]]
