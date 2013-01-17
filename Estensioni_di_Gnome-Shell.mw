@@ -32,7 +32,7 @@ In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installa
 
 === https://extensions.gnome.org ===
 
-'''Descrizione''': Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina degli addon per Firefox. Aggiornato costantemente da centinaia e centinaia di sviluppatori, fornisce estensioni per tutti i gusti, complete di descrizione, commenti ed immagine esplicativa. Inoltre, attraverso di esso è possibile gestire le estensioni installate nel sistema e verificare la presenza di eventuali aggiornamenti.
+'''Descrizione''': Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina degli addon per Firefox. Aggiornato costantemente da centinaia e centinaia di sviluppatori, fornisce estensioni per tutti i gusti, complete di descrizione, commenti ed immagine esplicativa. Inoltre, attraverso di esso è possibile gestire le estensioni installate nel sistema e verificare la presenza di eventuali aggiornamenti (vedi [https://extensions.gnome.org/local/ qua]).
 
 '''Metodo di Installazione''': Ogni estensione ha una sua pagina con uno switch on/off. Cliccandovi sopra, a patto di usare Firefox o Chrome, è possibile installare e abilitare le estensioni desiderate in pochi secondi, o disabilitarle. Diverso discorso va fatto per la disinstallazione, al momento possibile solamente dalla pagina di riepilogo delle estensioni installate.
 
