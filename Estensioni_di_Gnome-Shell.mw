@@ -50,6 +50,19 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 === A ===
 === B ===
 === C ===
+
+----
+'''Coverflow Alt-Tab'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/97/coverflow-alt-tab/ link])
+----
+
+'''Descrizione''': Sostituisce il task switcher di default (quello che appare alla pressione di alt-tab, appunto) con l'effetto coverflow di Compiz.
+
+'''Commento''': È un estensione difficile da inquadrare. Da un lato ha il pregio di essere molto gradevole a vedersi, ma dall'altro può scombussolare chi sia ormai abituato ad usare il task-switcher di default, soprattutto perchè non raggruppa in automatico le finestre provenienti da una stessa applicazione (anche se è possibile visualizzarle lo stesso premendo alt+tasto presente sopra il tab). Per il resto, la configurazione tasti rimane identica: tenendo premuto alt è possibile navigare tra le preview con le frecce direzionali. In più, premendo "q" (sempre con alt premuto) è possibile chiudere direttamente l'applicazione selezionata. 
+
+'''Note''': L'effetto visivo può essere 'pesante' per il sistema, particolarmente per schede grafiche di nuova generazione prive di drivers abbastanza rodati (o per vecchi chip che proprio 'non ce la fanno')
+
 === D ===
 === E ===
 === F ===
