@@ -30,13 +30,13 @@ In un mondo perfetto le estensioni sarebbero tutte quante scaricabili e installa
 
 '''Note''': Anche qua vale la stessa precisazione fatta coi repo ufficiali. 
 
-=== http://extensions.gnome.org ===
+=== https://extensions.gnome.org ===
 
 '''Descrizione''': Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina degli addon per Firefox. Aggiornato costantemente da centinaia e centinaia di sviluppatori, fornisce estensioni per tutti i gusti, complete di descrizione, commenti ed immagine esplicativa. Inoltre, attraverso di esso è possibile gestire le estensioni installate nel sistema e verificare la presenza di eventuali aggiornamenti.
 
 '''Metodo di Installazione''': Ogni estensione ha una sua pagina con uno switch on/off. Cliccandovi sopra, a patto di usare Firefox o Chrome, è possibile installare e abilitare le estensioni desiderate in pochi secondi, o disabilitarle. Diverso discorso va fatto per la disinstallazione, al momento possibile solamente dalla pagina di riepilogo delle estensioni installate.
 
-'''Note''': Differentemente dalle estensioni dei repo, queste vengono aggiornate costantemente. Questo ovviamente include sia release stabili che release beta. Inoltre, essendo un sito generico per tutte le distribuzioni che fanno uso di Gnome-Shell, è possibile che alcune estensioni non siano compatibili con Fedora. Si raccomanda, dunque, di leggere sempre attentamente descrizione e commenti per verificare eventuali incompatibilità o bug. 
+'''Note''': Differentemente dalle estensioni dei repo, queste vengono aggiornate costantemente. Questo ovviamente include sia release stabili che release beta. Inoltre, essendo un sito generico per tutte le distribuzioni che fanno uso di Gnome-Shell, è possibile che alcune estensioni non siano compatibili con Fedora. Si raccomanda, dunque, di leggere sempre attentamente descrizione e commenti per verificare eventuali incompatibilità o bug.
 
 === http://www.fpmurphy.com/gnome-shell-extensions/ ===
 
