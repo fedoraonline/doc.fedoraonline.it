@@ -70,7 +70,6 @@ da Repo Fedora (yum install gnome-shell-extension-aternate-tab)
  
 '''Commento''': Indispensabile per i nostalgici di Gnome 2, ripristina alt-tab ad una modalità più familiare. Dal menù impostazioni (selezionabile solo tramite Extensions Shortcuts o dal menù impostazioni di un'altra estensione) è possibile impostare la visualizzazione delle anteprime, delle sole icone dei programmi o di un misto di entrambe. Inoltre è possibile selezionare se visualizzare le finestre di tutti i desktop o solamente quelle dello spazio attivo.
 
-
 ----
 '''Applications Menu'''
 ----
