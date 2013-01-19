@@ -91,6 +91,19 @@ da Repo Fedora (yum install gnome-shell-extension-auto-move-windows)
 '''Commento''': Anche in questo caso, si tratta di un'estensione che va a gusti. Se da un lato è utile non dover spostare le applicazioni ogni volta che le si carica, dall'altro può diventare scomodo, ad esempio, se si deve avviare un applicazione impostata per il workspace 5. In quel caso si avranno 4 desktop vuoti, un quinto con un unica applicazione, e un sesto nuovamente vuoto, rendendo così necessario spostarsi fino al workspace necessario. Il menù di impostazioni, comunque, permette di selezionare il numero di workspace, l'unico segreto è quello di non esagerare (ad esempio, impostando un'applicazione per il workspace 25!!)
 
 === B ===
+
+----
+'''Brightness Control'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/231/brightness-control/ link])
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un menù per la regolazione della luminosità dello schermo (ove possibile)
+ 
+'''Commento''': Classico caso di un'estensione semplice ma fondamentale per molti. Tramite il suo pulsante è possibile cambiare in tempo reale la luminosità senza dover per forza entrare nel pannello di controllo o usare le combinazioni di tasti preimpostate. Particolarmente interessante il fatto che sia stata configurata allo stesso modo dell'icona del volume, ragion per cui è possibile aumentare o diminuire la luminosità semplicemente posizionando il puntatore sull'icona e scrollando con la rotellina del mouse / touchpad. Inoltre il menù di configurazione consente di impostare la persistenza delle impostazioni anche in seguito al riavvio del sistema. Consigliata a chiunque abbia avuto noie con il controllo luminosità.
+ 
+'''Note''': Unica pecca, tramite persistenza non è possibile impostare un comportamento diverso a seconda che il sistema sia alimentato a batteria o a corrente (caso per il quale rimane necessaria la modifica di /etc/rc.d/rc.local)
+
 === C ===
 ----
 '''Caffeine'''
