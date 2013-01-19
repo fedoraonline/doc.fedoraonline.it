@@ -63,7 +63,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/299/all-in-one-
 ----
 '''AlternateTab'''
 ----
-da Repo Fedora (yum install gnome-shell-extensions-aternate-tab)
+da Repo Fedora (yum install gnome-shell-extension-aternate-tab)
 ----
 
 '''Descrizione''': Ripristina il funzionamento classico di alt-tab, senza raggruppare le applicazioni
@@ -74,7 +74,7 @@ da Repo Fedora (yum install gnome-shell-extensions-aternate-tab)
 ----
 '''Applications Menu'''
 ----
-da Repo Fedora (yum install gnome-shell-apps-menu)
+da Repo Fedora (yum install gnome-shell-extension-apps-menu)
 ----
 
 '''Descrizione''': Aggiunge a fianco al pulsante "attività" un classico menù applicazioni. 
@@ -84,7 +84,7 @@ da Repo Fedora (yum install gnome-shell-apps-menu)
 ----
 '''Automove Windows'''
 ----
-da Repo Fedora (yum install gnome-shell-extensions-auto-move-windows)
+da Repo Fedora (yum install gnome-shell-extension-auto-move-windows)
 ----
 
 '''Descrizione''': Consente di impostare il workspace di default per ogni applicazione
