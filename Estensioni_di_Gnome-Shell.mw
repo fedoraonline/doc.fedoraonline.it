@@ -94,6 +94,19 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/568/notes/ Link
 '''Note''': Funziona solamente con gnome 3.6 o superiori.
 
 === T ===
+
+----
+'''Touchpad Indicator'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/131/touchpad-indicator/ link])
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un icona per controllare i settaggi delle periferiche di puntamento (mouse / touchpad)
+
+'''Commento''': Estensione molto utile per chi deve passare velocemente da una periferica di puntamento all'altra, specie se su un portatile. Consente di disabilitare in automatico il touchpad non appena viene connesso un mouse. Inoltre, permette di scegliere il client di configurazione usato (xinput / synaptic / gconf). 
+
+'''Note''': Non è esente da alcuni leggeri bug. Al riavvio può capitare, ad esempio, che l'icona di stato non sia aggiornata (sebbene il touchpad sia comunque disabilitato). Nulla di irrisolvibile, comunque
+
 === U ===
 === V ===
 === W ===
