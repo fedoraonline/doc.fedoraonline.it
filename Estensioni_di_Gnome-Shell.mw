@@ -163,7 +163,7 @@ da extension.gnome.org ([https://extensions.gnome.org/extension/525/extension-sh
 
 '''Descrizione''': Aggiunge alla barra superiore un pulsante per gestione e configurazione delle estensioni di Gnome-Shell
 
-'''Commento''': Decisamente fondamentale per chi ama 'smanettare' con le estensioni. Il menù integrato permette di 1) collegarsi alla pagina delle estensioni installate in locale 2) collegarsi ad extensions.gnome.org per cercare nuove estensioni 3) aprire il menù di configurazione delle estensioni 4) aprire gnome-tweak-tool sulla scheda "estensioni" 5) aprire in nautilus la cartella delle estensioni 6) riavviare la shell (ovvero alt+r) 7) avviare looking glass.
+'''Commento''': Decisamente fondamentale per chi ama 'smanettare' con le estensioni. Il menù integrato permette di 1) collegarsi alla pagina delle estensioni installate in locale 2) collegarsi ad extensions.gnome.org per cercare nuove estensioni 3) aprire il menù di configurazione delle estensioni 4) avviare gnome-tweak-tool 5) aprire in nautilus la cartella delle estensioni 6) riavviare la shell (ovvero alt+r) 7) avviare looking glass.
 
 === F ===
 === G ===
