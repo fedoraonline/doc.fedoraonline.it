@@ -104,6 +104,18 @@ da extension.gnome.org ([https://extensions.gnome.org/extension/525/extension-sh
 
 === F ===
 === G ===
+----
+'''gTile'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/28/gtile/ link])
+----
+
+'''Descrizione''': Sintetizzando, consente di impostare lo spazio occupato da una finestra, sullo schermo, secondo una griglia.
+
+'''Commento''': Sicuramente più facile a vedersi che a dirsi. L'installazione aggiunge un pulsante alla barra superiore, alla cui pressione viene visualizzata una griglia. Selezionando un numero di riquadri, di questa griglia, è possibile dire al sistema di ridimensionare la finestra attualmente in focus di tanti riquadri quanti ve ne sarebbero se lo schermo fosse suddiviso secondo la suddetta griglia. Per cui, ad esempio, se la griglia fosse 4x4, selezionando solo i 4 riquadri centrali la finestra verrebbe ridimensionata al centro dello schermo, alta e larga esattamente metà dello spazio disponibile (non tenendo conto della barra superiore). Sono disponibili 4 diverse griglie di default (2x2, 3x2, 4x4, 6x6), un pulsante per suddividere equamente lo schermo in base al numero di finestre e un ultimo per dare un intero lato alla finestra attiva e suddividere le restanti sul lato opposto. Inoltre è possibile selezionare se chiudere automaticamente gTile una volta completato il ridimensionamento e se attivare l'animazione. Purtroppo, al momento le configurazioni di griglia personalizzate sono possibili solamente editando manualmente il file extension.js. 
+
+'''Note''': Al momento l'estensione NON FUNZIONA con gnome 3.6.
+
 === H ===
 === I ===
 === J ===
