@@ -97,11 +97,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/561/desktop-scr
 
 '''Commento''': Oltre ad essere utile, può fungere da "boss-mode" consentendo di passare velocemente da un desktop all'altro senza bisogno di ricorrere all'overview o alle combinazioni di tasti (ctrl+alt+frecce). È configurabile sia per il lato destro che per il lato sinistro, che per entrambi. Funziona anche nell'overview
 
-'''Note''': Non funziona su gnome 3.4, per il quale sono disponibili due diverse versioni, una per il lato destro e una per il lato sinistro (non configurabili). 
-
-https://extensions.gnome.org/extension/136/desktop-scroller/
-
-https://extensions.gnome.org/extension/235/desktop-scroller-left-and-overview-version/
+'''Note''': Non funziona su gnome 3.4, per il quale sono disponibili due diverse versioni, una per il lato destro [https://extensions.gnome.org/extension/136/desktop-scroller/] e una per il lato sinistro [https://extensions.gnome.org/extension/235/desktop-scroller-left-and-overview-version/] (non configurabili).
 
 === E ===
 ----
