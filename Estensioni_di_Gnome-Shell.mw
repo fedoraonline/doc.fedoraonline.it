@@ -50,6 +50,17 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 === A ===
 === B ===
 === C ===
+----
+'''Caffeine'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/517/caffeine/ link])
+----
+
+'''Descrizione''': Aggiunge un pulsante alla barra superiore per abilitare o disabilitare il timeout di screensaver e autosuspend. 
+
+'''Commento''': Considerato che alcuni programmi spesso non supportano correttamente la comunicazione con dbus per informare il sistema che sono attualmente in funzione, caffeine risulta spesso fondamentale per tutti quegli utenti che usano principalmente il sistema per la visione / ascolto di file e flussi multimediali. Ma non solo. Tramite la gui di configurazione è possibile selezionare i programmi per i quali caffeine deve autoavviarsi senza richiedere intervento dell'utenza. Inoltre, caffeine non sovrascrive le impostazioni del sistema, garantendo così al riavvio che screensaver e autosuspend funzionano come prestabilito. 
+
+'''Note''': Su gnome 3.4 c'è un bug riguardante le notifiche: ogni volta che caffeine entra in funzione, alla barra viene aggiunta un icona, che non si disabilita in automatico. Questo può portare la barra notifiche ad assumere una lunghezza spropositata. 
 
 ----
 '''Coverflow Alt-Tab'''
