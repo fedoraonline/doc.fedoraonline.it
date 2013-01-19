@@ -173,7 +173,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/28/gtile/ link]
 ----
 '''Indic onscreen keyboard'''
 ----
-da Repo Fedora (yum install gnome-shell-extensions-iok)
+da Repo Fedora (yum install gnome-shell-extension-iok)
 ----
 
 '''Descrizione''': Aggiunge alla barra superiore un pulsante per abilitare o disabilitare la tastiera a schermo Indic
