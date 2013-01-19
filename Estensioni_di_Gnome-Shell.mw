@@ -368,7 +368,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/549/web-search-
 
 '''Descrizione''': Implementa una finestra di dialogo, richiamabile tramite macro, per effettuare ricerche nel web, con il browser di default.
 
-'''Commento''': Utilissima, permette di velocizzare di molto le operazioni di ricerca. Funziona sia che il browser sia gia in funzione che non (e in questo caso apre un'ulteriore scheda, senza rimpiazzare quelle già presenti). Le possibilità di configurazione sono elevatissime. È possibile impostare il motore di ricerca predefinito, aggiungerne di nuovi (richiamabili tramite l'immissione di parole chiave), aprire direttamente degli indirizzi, visualizzare i suggerimenti di ricerca, modificare la scorciatoia in uso, etc...
+'''Commento''': Utilissima, permette di velocizzare di molto le operazioni di ricerca. Funziona sia che il browser sia gia in funzione che non (e in questo caso apre un'ulteriore scheda, senza rimpiazzare quelle già presenti). Le possibilità di configurazione sono elevatissime. È possibile impostare il motore di ricerca predefinito, aggiungerne di nuovi (richiamabili tramite l'immissione di parole chiave), aprire direttamente degli indirizzi, visualizzare i suggerimenti di ricerca, modificare la scorciatoia in uso, etc... Da segnalare il fatto che la finestra di dialogo sia direttamente a livello di shell (come ad esempio la finestra di alt+f2), quindi è visibile in qualunque caso. 
 
 '''Note''': La scorciatoia di default (super+barra di spazio) può entrare in conflitto con quelle usate da altre estensioni. Fortunatamente è possibile modificarla nelle impostazioni (ad esempio con Alt+f3)
 ----
