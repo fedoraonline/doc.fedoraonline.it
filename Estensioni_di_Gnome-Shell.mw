@@ -126,6 +126,18 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/28/gtile/ link]
 
 === H ===
 === I ===
+----
+'''Inhibit Applet'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/233/inhibit-applet/ link])
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un pulsante per abilitare o disabilitare screensaver e autosuspend
+
+'''Commento''': Molto semplice rispetto alla simile "Caffeine", fa esattamente quello che promette senza fronzoli particolari.
+
+'''Note''': Unico difetto finora riscontrato, l'estensione agisce modificando una chiave di dconf. Il problema è che al riavvio l'impostazione non viene resettata al valore standard, ma rimane impostata. Perciò, se si riavvia il sistema senza disattivare l'applet, questa rimane attiva e bloccherà screensaver e suspend fino a quando non verrà ripremuto il pulsante. Inoltre, crea una strana incompatibilità con i driver Radeon (proprietari o kmod) scambiando le chiavi di controllo della luminosità.
+
 === J ===
 === K ===
 === L ===
