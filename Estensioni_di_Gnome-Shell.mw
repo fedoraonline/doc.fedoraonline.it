@@ -99,6 +99,18 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/561/desktop-scr
 
 '''Note''': Non funziona su gnome 3.4, per il quale sono disponibili due diverse versioni, una per il lato destro [https://extensions.gnome.org/extension/136/desktop-scroller/] e una per il lato sinistro [https://extensions.gnome.org/extension/235/desktop-scroller-left-and-overview-version/] (non configurabili).
 
+----
+'''Dock'''
+----
+da Repo Fedora (yum install gnome-shell-extensions-dock)
+----
+
+'''Descrizione''': Aggiunge un clone del dock sul lato destro dello schermo, a scomparsa
+ 
+'''Commento''': Notevolmente migliorata dalle prime release (che imponevano all'utente di tenersi il dock sul lato destro permanentemente visibile, con corrispettivo perdita di spazio disponibile per le finestre), Dock consente di gestire le applicazioni in modo veloce senza dover ricorrere per forza all'overview. Accorpata con qualche estensione per rimuovere il dock da quest'ultima, può indubbiamente cambiare in maniera radicale la modalità d'uso del sistema, a patto che l'estensione rimanga aggiornata e funzionante ad ogni nuova release di Gnome Shell. Utile, ma opinabile.
+ 
+'''Note''': A differenza di quanto possibile ocn il dock dell'overview, qui non è consentito il riordino delle icone.
+
 === E ===
 ----
 '''Extensions Shortcuts'''
