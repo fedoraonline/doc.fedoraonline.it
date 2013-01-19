@@ -243,7 +243,9 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/8/places-status
 
 '''Descrizione''': Aggiunge alla barra superiore un menù per le cartelle preferite
 
-'''Commento''': Semplice e senza fronzoli, fa esattamente quello che promette. Una versione più avanzata è All-In-One Places, attualmente configurabile (a differenza di questa)
+'''Commento''': Semplice e senza fronzoli, fa esattamente quello che promette. Una versione più avanzata è All-In-One Places, decisamente più configurabile.
+
+'''Note''': Invece di posizionare l'icona a destra come la maggiorparte delle altre estensioni, Places Status Indicator la posiziona a sinistra, a fianco al pulsante attività. Si potesse scegliere dove tenerla (senza dover editare il file dell'estensione) sarebbe meglio. 
 
 ----
 '''Pulseaudio Shortcuts'''
