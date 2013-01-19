@@ -76,6 +76,18 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/97/coverflow-al
 === N ===
 === O ===
 === P ===
+----
+'''Pulseaudio Shortcuts'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/109/pulse-audio-shortcuts/ link])
+----
+
+'''Descrizione''': Aggiunge al pulsante del volume, nella barra superiore, un sottomenù per l'avvio rapido dei programmi di Gestione di Pulseaudio.
+
+'''Commento''': Estensione forse meno utile di quello che possa sembrare. Beneficia realmente solamente coloro che debbono barcamenarsi costantemente tra diverse periferiche audio e livelli di volume variabili. Rimane comunque un aggiunta interessante e altamente configurabile. I programmi attualmente supportati sono Pulseaudio Equalizer, Pulseaudio Volume Control (pavucontrol), Pulseaudio Preferences (paprefs), Pulseaudio Manager (paman), qpaeq (vecchia gui per l'equalizzazione di Pulseaudio) e Gstreamer-Properties
+
+'''Note''': Dalle opzioni è possibile disattivare i collegamenti ai programmi non attualmente installati.
+
 === Q ===
 === R ===
 === S ===
