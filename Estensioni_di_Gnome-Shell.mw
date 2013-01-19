@@ -154,6 +154,18 @@ da Repo RpmFusion (yum install gnome-shell-extension-weather)
 
 '''Commento''': Di certo non fondamentale, si tratta comunque di un'estensione utile ed altamente configurabile. Allo stato attuale è possibile aggiungere più località tra cui scegliere, impostare le unità di misura desiderate (pressione, temperatura e intensità del vento), scegliere la posizione del pulsante sul pannello (destra, sinistra, centro) e configurare l'aspetto generale del menu. Consigliata.
 
+----
+'''Web Search Dialog'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/549/web-search-dialog/ link])
+----
+
+'''Descrizione''': Implementa una finestra di dialogo, richiamabile tramite macro, per effettuare ricerche nel web, con il browser di default.
+
+'''Commento''': Utilissima, permette di velocizzare di molto le operazioni di ricerca. Funziona sia che il browser sia gia in funzione che non (e in questo caso apre un'ulteriore scheda, senza rimpiazzare quelle già presenti). Le possibilità di configurazione sono elevatissime. È possibile impostare il motore di ricerca predefinito, aggiungerne di nuovi (richiamabili tramite l'immissione di parole chiave), aprire direttamente degli indirizzi, visualizzare i suggerimenti di ricerca, modificare la scorciatoia in uso, etc...
+
+'''Note''': La scorciatoia di default (super+barra di spazio) può entrare in conflitto con quelle usate da altre estensioni. Fortunatamente è possibile modificarla nelle impostazioni (ad esempio con Alt+f3)
+
 === X ===
 === Y ===
 === Z ===
