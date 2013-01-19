@@ -292,6 +292,16 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/549/web-search-
 
 '''Note''': La scorciatoia di default (super+barra di spazio) può entrare in conflitto con quelle usate da altre estensioni. Fortunatamente è possibile modificarla nelle impostazioni (ad esempio con Alt+f3)
 
+----
+'''Workspace indicator'''
+----
+da Repo Fedora (yum install gnome-shell-extension-workspace-indicator)
+----
+
+'''Descrizione''': Aggiunge un selettore per i workspace dinamici sulla barra superiore
+ 
+'''Commento''': Estensione molto semplice, nessun fronzolo, fa esattamente quanto promesso. I workspace sono identificati per numero.
+
 === X ===
 === Y ===
 === Z ===
