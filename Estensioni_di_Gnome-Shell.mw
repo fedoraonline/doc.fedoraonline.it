@@ -48,6 +48,18 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 
 == Recensioni ==
 === A ===
+----
+'''All-In-One Places'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/299/all-in-one-places/ link])
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un pulsante per le cartelle preferite
+
+'''Commento''': Fornisce un funzionamento simile a quello dell'estensione Places Menu, ma con delle modifiche interessanti e una maggiore configurabilità. È possibile scegliere quali voci di menù visualizzare, se renderle collegamenti a tendina o già espanse, il numero di documenti recenti da visualizzare, la dimensione dell'icona, l'eventuale etichetta da visualizzare a fianco al pulsante, se posizionare il pulsante a destra o a sinistra, e altre impostazioni. Particolarmente utile se si deve aprire velocemente una posizione (sul sistema o remota) senza dover per forza passare da nautilus, o da una scorciatoia per avviarlo. 
+
+'''Note''': Sfortunatamente, al momento l'estensione funziona solo con Gnome 3.4.
+
 === B ===
 === C ===
 ----
