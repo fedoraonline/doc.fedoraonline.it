@@ -261,7 +261,6 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/109/pulse-audio
 === R ===
 === S ===
 
-
 ----
 '''Sticky Notes'''
 ----
@@ -273,6 +272,16 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/568/notes/ Link
 '''Commento''': Potrebbe essere un'estensione utile, ma allo stato attuale (17 gennaio) sembra ancora acerba. Per andare a capo è necessario premere invio, altrimenti il testo esce dai confini della nota. Le note inoltre sono molto piccole e il font usato non è da meno. E, per finire, l'installazione rende ovviamente inaccessibile il menù applicazioni (resta comunque la possilità di effetuare la ricerca per nome o di accedervi tramite Ctrl+Alt+Tab da overview). Da tenere in considerazione per eventuali aggiornamenti, comunque.
 
 '''Note''': Funziona solamente con gnome 3.6 o superiori.
+
+----
+'''System Monitor'''
+----
+da Repo Fedora (yum install gnome-shell-extension-systemMonitor)
+----
+
+'''Descrizione''': Aggiunge nella parte sinistra della barra notifiche due grafici relativi all'uso di memoria e processore.
+
+'''Commento''': Per i fanatici del controllo è sicuramente un estensione interessante. Cliccando sui grafici è possibile visualizzare la scheda di "Risorse" di Gnome-system-monitor. Non molto comoda per computer dotati di processori multicore e multithread, in quanto il grafico è veramente troppo piccolo per poterci ricavare qualcosa (e a questo punto è meglio farsi una combinazione tasti per avviare gnome-system-monitor). Anche qui, da valutare caso per caso.
 
 === T ===
 
