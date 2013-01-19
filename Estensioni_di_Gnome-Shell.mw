@@ -223,6 +223,16 @@ da Repo Fedora (yum install gnome-shell-extension-xrandr-indicator)
 '''Note''': Da ricordare che la rotazione dello schermo non implica automaticamente la rotazione del touchpad / mouse. Da installare a patto che sia pronti a gestire le periferiche di puntamento in condizioni disagiate. 
 
 === N ===
+----
+'''Native Window Placement'''
+----
+da Repo Fedora (yum install gnome-shell-extension-native-window-placement)
+----
+
+'''Descrizione''': Cambia la disposizione delle finestre nell'overview, organizzandole a seconda della loro dimensione e della loro posizione sul desktop
+
+'''Commento''': Con ogni probabilità, l'intenzione dell'autore/autrice è di fornire un overview che rispetti il posizionamento e la dimensione delle finestre sul desktop. Questo, però, rende l'organizzazione dell'overview meno ordinata, alle volte sovrapponendo le etichette delle finestre alle anteprime stesse. È sicuramente un estensione che va a gusti, ma niente di fondamentale.
+
 === O ===
 === P ===
 ----
