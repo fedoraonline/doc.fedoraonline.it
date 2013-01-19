@@ -133,7 +133,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/561/desktop-scr
 ----
 '''Dock'''
 ----
-da Repo Fedora (yum install gnome-shell-extensions-dock)
+da Repo Fedora (yum install gnome-shell-extension-dock)
 ----
 
 '''Descrizione''': Aggiunge un clone del dock sul lato destro dello schermo, a scomparsa
