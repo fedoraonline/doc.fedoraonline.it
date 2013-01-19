@@ -302,6 +302,18 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/131/touchpad-in
 === W ===
 
 ----
+'''Weather'''
+----
+da blog di FPMurphy ([http://www.fpmurphy.com/gnome-shell-extensions/weather-3.6.0.tar.gz link] - da installare manualmente)
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un pulsante per le condizioni meteo, temperatura, e previsioni fino a 5 giorni dopo.
+
+'''Commento''': Simile a Weather Broadcast (vedi più avanti) ma radicalmente diversa, quest'estensione fa riferimento alle previsioni meteo del sito World Weather Online. Ragion per cui, per poterla usare è necessario avere una chiave API che ci identifichi all'interno del sito. Dalla sua ha comunque il fatto di poter disporre di ben 5 giorni di previsioni meteo. Sarebbe stata però più gradita una maggiore libertà d'uso. Scarsa configurabilità. Utile solo per coloro che necessitano di sapere le condizioni meteo con largo anticipo
+
+'''Note''': In difesa di world Weather Online, va comunque detto che non è difficile ottenere una chiave API con un indirizzo mail temporaneo (ad esempio da "10 minute mail") e che una volta verificato che l'indirizzo esista al momento della registrazione, la chiave diventa permanente. 
+
+----
 '''Weather Broadcast'''
 ----
 da Repo RpmFusion (yum install gnome-shell-extension-weather)
