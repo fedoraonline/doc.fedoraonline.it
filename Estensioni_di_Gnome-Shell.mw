@@ -75,6 +75,20 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/97/coverflow-al
 '''Note''': L'effetto visivo può essere 'pesante' per il sistema, particolarmente per schede grafiche di nuova generazione prive di drivers abbastanza rodati (o per vecchi chip che proprio 'non ce la fanno')
 
 === D ===
+----
+'''Desktop Scroller'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/561/desktop-scroller-all-sides-for-gnome-36/ link])
+----
+
+'''Descrizione''': Consente all'utente di cambiare velocemente spazio di lavoro, semplicemente azionando lo scroll del mouse / touchpad sui lati esterni dello schermo.
+
+'''Commento''': Oltre ad essere utile, può fungere da "boss-mode" consentendo di passare velocemente da un desktop all'altro senza bisogno di ricorrere all'overview o alle combinazioni di tasti (ctrl+alt+frecce). È configurabile sia per il lato destro che per il lato sinistro, che per entrambi. Funziona anche nell'overview
+
+'''Note''': Non funziona su gnome 3.4, per il quale sono disponibili due diverse versioni, una per il lato destro e una per il lato sinistro (non configurabili). 
+https://extensions.gnome.org/extension/136/desktop-scroller/
+https://extensions.gnome.org/extension/235/desktop-scroller-left-and-overview-version/
+
 === E ===
 ----
 '''Extensions Shortcuts'''
