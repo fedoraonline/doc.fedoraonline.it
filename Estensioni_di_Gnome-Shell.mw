@@ -60,6 +60,16 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/299/all-in-one-
 
 '''Note''': Sfortunatamente, al momento l'estensione funziona solo con Gnome 3.4.
 
+----
+'''AlternateTab'''
+----
+da Repo Fedora (yum install gnome-shell-extensions-aternate-tab)
+----
+
+'''Descrizione''': Ripristina il funzionamento classico di alt-tab, senza raggruppare le applicazioni
+ 
+'''Commento''': Indispensabile per i nostalgici di Gnome 2, ripristina alt-tab ad una modalità più familiare. Dal menù impostazioni (selezionabile solo tramite Extensions Shortcuts o dal menù impostazioni di un'altra estensione) è possibile impostare la visualizzazione delle anteprime, delle sole icone dei programmi o di un misto di entrambe. Inoltre è possibile selezionare se visualizzare le finestre di tutti i desktop o solamente quelle dello spazio attivo.
+
 === B ===
 === C ===
 ----
