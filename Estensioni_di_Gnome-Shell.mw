@@ -273,6 +273,18 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/109/pulse-audio
 
 === Q ===
 === R ===
+
+----
+'''Remove User Menu Separators'''
+----
+da Blog di FPMurphy ([http://www.fpmurphy.com/gnome-shell-extensions/removeusermenuseparators-3.6.0.tar.gz link]- da installare manualmente)
+----
+'''Descrizione''': Rimuove i separatori dal menù utente
+
+'''Commento''': Nessuna utilità, se non una semplice precisazione grafica. Rimuove dal menù utente in alto a destra, i tre separatori presenti (sopra e sotto "Impostazioni di sistema" e sopra "Spegni"). Comoda per risparmiare spazio.
+
+'''Note''': Curiosamente gli altri menu adiacenti (ad esempio "Volume") rimangono inalterati
+
 === S ===
 
 ----
