@@ -126,6 +126,18 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/28/gtile/ link]
 
 === H ===
 === I ===
+
+----
+'''Indic onscreen keyboard'''
+----
+da Repo Fedora (yum install gnome-shell-extensions-iok)
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un pulsante per abilitare o disabilitare la tastiera a schermo Indic
+
+'''Commento''': Indic è una tastiera a schermo per le lingue indoarie, quindi non ha molta utilità per l'utente europeo. Tuttavia la completezza della tastiera virtuale (che a differenza di eekboard comprende i tasti funzione) e del layout inglese potrebbero renderla appetibile a qualche 'smanettone'. Ma è un ipotesi alquanto remota. Inoltre da segnalare che, a differenza di eeekboard, non è possibile utilizzare indic come tastiera a scomparsa. La finestra rimane quindi indipendente (anche se preimpostata per essere sempre in primo piano)
+
+'''Note''': Nessun difetto particolare, tranne forse l'icona di stato che non è particolarmente integrata col tema di default.
 ----
 '''Inhibit Applet'''
 ----
@@ -142,6 +154,19 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/233/inhibit-app
 === K ===
 === L ===
 === M ===
+
+----
+'''Monitor Status Indicator'''
+----
+da Repo Fedora (yum install gnome-shell-extension-xrandr-indicator)
+----
+
+'''Descrizione''': Aggiunge alla barra superiore un pulsante per gestire le impostazioni del monitor
+
+'''Commento''': Altra estensione semplicissima, permette di scegliere l'angolo di rotazione del monitor (normale, 90°. 180°. 270° gradi) e fornisce un collegamento rapido alla scheda "Schermo" nel pannello di controllo. Utile per chi abbia un monitor ruotabile o un netbook (a patto che scheda video e drivers supportino la rotazione, ovviamente)
+
+'''Note''': Da ricordare che la rotazione dello schermo non implica automaticamente la rotazione del touchpad / mouse. Da installare a patto che sia pronti a gestire le periferiche di puntamento in condizioni disagiate. 
+
 === N ===
 === O ===
 === P ===
