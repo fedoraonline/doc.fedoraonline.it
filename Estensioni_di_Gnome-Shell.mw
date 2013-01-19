@@ -288,6 +288,17 @@ da Blog di FPMurphy ([http://www.fpmurphy.com/gnome-shell-extensions/removeuserm
 === S ===
 
 ----
+'''Start of week'''
+----
+da blog di FPMurphy ([http://www.fpmurphy.com/gnome-shell-extensions/startofweek-3.6.0.tar.gz Link] - da installare manualmente)
+----
+
+'''Descrizione''': Consente di cambiare il giorno di avvio della settimana, sul calendario nella barra superiore 
+
+'''Commento''': Utilità dubbia, consente di impostare qualunque giorno da domenica a sabato, come primo giorno della settimana nel calendario, indipendentemente dalle impostazioni regionali. Manca di una gui per modificare agilmente le impostazioni.
+
+'''Note''': Per selezionare il giorno d'inizio settimana è necessario editare il file extension.js e modificare la riga "const START_OF_WEEK = [n]", dove [n] è il numero del giorno desiderato. "1" equivale a Domenica, "2" a Lunedì, "3" a Martedì e così via fino a "7", che è Sabato
+----
 '''Sticky Notes'''
 ----
 da extensions.gnome.org ([https://extensions.gnome.org/extension/568/notes/ Link])
