@@ -203,7 +203,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/233/inhibit-app
 
 '''Commento''': Molto semplice rispetto alla simile "Caffeine", fa esattamente quello che promette senza fronzoli particolari.
 
-'''Note''': Unico difetto finora riscontrato, l'estensione agisce modificando una chiave di dconf. Il problema è che al riavvio l'impostazione non viene resettata al valore standard, ma rimane impostata. Perciò, se si riavvia il sistema senza disattivare l'applet, questa rimane attiva e bloccherà screensaver e suspend fino a quando non verrà ripremuto il pulsante. Inoltre, crea una strana incompatibilità con i driver Radeon (proprietari o kmod) scambiando le chiavi di controllo della luminosità.
+'''Note''': Due difetti. Il primo, più grave, è la mancata compatibilità con Gnome 3.6. Il secondo, meno preoccupante, riguarda la persistenza. L'estensione agisce modificando una chiave di dconf. Il problema è che al riavvio l'impostazione non viene resettata al valore standard, ma rimane impostata. Perciò, se si riavvia il sistema senza disattivare l'applet, questa rimane attiva e bloccherà screensaver e suspend fino a quando non verrà ripremuto il pulsante. Inoltre, crea una strana incompatibilità con i driver Radeon (proprietari o kmod) scambiando le chiavi di controllo della luminosità.
 
 === J ===
 === K ===
