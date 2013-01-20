@@ -21,7 +21,7 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 
 '''Metodo di Installazione''': Tramite Packagekit o Yum (il nome di base dei pacchetti è ''gnome-shell-extension-[nome estensione]'').
 
-'''Note''': Le estensioni presenti nei repo passano per lo stesso processo di verifica e testing dei pacchetti di Fedora. Dunque non vengono aggiornate su base giornaliera, ma in base alla versione stabile rilasciata. In linea di massima, comunque, sono solitamente le più affidabili (o perlomeno le meno suscettibili di causare crash al sistema)
+'''Note''': Le estensioni presenti nei repo passano per lo stesso processo di verifica e testing dei pacchetti di Fedora. Dunque non vengono aggiornate su base giornaliera, ma in base alla versione stabile rilasciata. In linea di massima, comunque, sono solitamente le più affidabili (o perlomeno le meno suscettibili di causare crash al sistema). La cartella di default di queste estensioni è /usr/share/gnome-shell/extensions
 
 === Repo di RpmFusion ===
 
