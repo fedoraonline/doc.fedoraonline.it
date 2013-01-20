@@ -43,7 +43,7 @@ In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte al
 
 '''Descrizione''': Sezione di un blog di un programmatore dedicata specificamente alle estensioni. 
 
-'''Medodo di Installazione''': In questo caso, l'installazione va effettuata manualmente, scaricando i file desiderati dal sito e decomprimendoli all'interno della cartella delle estensioni (~/.local/share/gnome-shell/extensions) 
+'''Medodo di Installazione''': In questo caso, l'installazione va effettuata manualmente, scaricando i file desiderati dal sito e decomprimendoli all'interno della cartella estensioni nel profilo utente (~/.local/share/gnome-shell/extensions) 
 
 '''Note''': Aggiornato regolarmente ma non frequentemente, le estensioni in esso presenti sono da considerarsi 'sperimentali'.
 
