@@ -177,6 +177,18 @@ da extension.gnome.org ([https://extensions.gnome.org/extension/525/extension-sh
 '''Commento''': Decisamente fondamentale per chi ama 'smanettare' con le estensioni. Il menù integrato permette di 1) collegarsi alla pagina delle estensioni installate in locale 2) collegarsi ad extensions.gnome.org per cercare nuove estensioni 3) aprire il menù di configurazione delle estensioni 4) avviare gnome-tweak-tool 5) aprire in nautilus la cartella delle estensioni 6) riavviare la shell (ovvero alt+r) 7) avviare looking glass.
 
 === F ===
+
+----
+'''Favorites Menu'''
+----
+da extensions.gnome.org ([https://extensions.gnome.org/extension/115/favorites-menu/ link])
+----
+'''Descrizione''': Aggiunge alla barra superiore un menù con i collegamenti alle applicazioni attualmente nel dash (ma solo le preferite)
+
+'''Commento''': Anche qui, una semplice aggiunta di valore meramente estetico. Fornisce le stesse funzioni dell'estensione Dock, tranne per il comportamento dei collegamenti. Infatti, cliccando sul collegamento di un programma già avviato, l'estensione non rimanda all'istanza attualmente in corso ma ne apre una nuova. Non fornisce collegamenti ai programmi attualmente in corso ma non presenti nei preferiti.   
+
+'''Note''': Tra le opzioni c'è "use gnome-shell-extensions-prefs only". Settare quell'opzione significa che le preferenze non saranno più direttamente disponibili dal menù, ma solamente dal menù impostazioni generale delle estensioni (accessibile solo da gnome-tweak-tool o dall'estensione Extensions-Preferences)
+
 === G ===
 ----
 '''gTile'''
