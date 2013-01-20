@@ -150,7 +150,7 @@ da extensions.gnome.org ([https://extensions.gnome.org/extension/561/desktop-scr
 
 '''Descrizione''': Consente all'utente di cambiare velocemente spazio di lavoro, semplicemente azionando lo scroll del mouse / touchpad sui lati esterni dello schermo.
 
-'''Commento''': Oltre ad essere utile, può fungere da "boss-mode" consentendo di passare velocemente da un desktop all'altro senza bisogno di ricorrere all'overview o alle combinazioni di tasti (ctrl+alt+frecce). È configurabile, direttamente da gnome-tweak-tool, per ognuno dei quattro lati dello schermo e funziona anche nell'overview.
+'''Commento''': Oltre ad essere utile, può fungere da "boss-mode" consentendo di passare velocemente da un desktop all'altro senza bisogno di ricorrere all'overview o a più 'percettibili' combinazioni di tasti (ctrl+alt+frecce). È configurabile, direttamente da gnome-tweak-tool, per ognuno dei quattro lati dello schermo e funziona anche nell'overview.
 
 '''Note''': Non funziona su gnome 3.4, per il quale sono disponibili due diverse versioni, una per il lato destro [https://extensions.gnome.org/extension/136/desktop-scroller/] e una per il lato sinistro [https://extensions.gnome.org/extension/235/desktop-scroller-left-and-overview-version/] (non configurabili).
 
