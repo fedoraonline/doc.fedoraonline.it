@@ -7,31 +7,34 @@ Di conseguenza la configurazione e i consigli che seguono sono da considerare pe
 
 == Modalità Fallback ==
 [[Image:Gnome_fallback.jpg|right|thumb|350px|Fallback: l'ancora di salvataggio se non si ha l'accelerazione grafica.]]
-La modalità chiamata ''fallback'' è una sorta di ancora di salvataggio nel caso Gnome non riesca ad avviare correttamente gnome-shell e debba utilizzare il driver grafico generico. Per chi proviene da Gnome 2.x si troverà di fronte a un desktop familiare, il pannello in alto contiene i menu ''Applicazioni'' e ''Risorse'' e quello in basso le aree di lavoro utilizzate.<br />
+La modalità chiamata ''fallback'' è una sorta di ancora di salvataggio nel caso Gnome non riesca ad avviare correttamente gnome-shell e debba utilizzare il driver grafico generico. Per chi proviene da Gnome 2.x si troverà di fronte un desktop familiare, il pannello in alto contiene i menu ''Applicazioni'' e ''Risorse'' e quello in basso le aree di lavoro utilizzate.<br />
 Per utilizzare Gnome-shell invece si necessita dell'accelerazione grafica, controllare con il comando sottostante se è attiva o no:
 
  $ glxinfo | grep direct
  direct rendering: Yes
 
-Se la risposta è un sì, allora il problema non è la scheda grafica, se invece la risposta è ''No'' si legga come installare i driver della propria scheda video in [[:Categoria:Schede grafiche| questa categoria]].<br/>
+Se la risposta è un ''sì'', allora il problema non è la scheda grafica, se invece la risposta è ''No'' si legga come installare i driver della propria scheda video in [[:Categoria:Schede grafiche| questa categoria]].<br/>
 Una volta installato il driver corretto, se ne avete realmente bisogno, al prossimo avvio del server X GNOME shell verrà avviato.
 
 == Alternative alla Modalità Fallback di Gnome3 ==
-Probabilmente però, la soluzione di installare i driver per la scheda video potrebbe non essere la soluzione, se, come scritto sul [https://live.gnome.org/GnomeShell/FAQ#What_led_to_the_decision_to_make_3D_acceleration_a_requirement_for_GNOME_Shell.3F sito ufficiale del progetto GNOME], la macchina su cui si sta tentando di utilizzare il sistema, ha più di 4-5 anni. In parole povere gli sviluppatori invitano a cambiare desktop; se vi eravate affezionati al caro vecchio gnome 2.x potrebbe essere l'occasione di provare Mate, un fork migliorato di gnome2, già presente nei repo ed installabile così
+Probabilmente però, la soluzione di installare i driver per la scheda video potrebbe non essere la soluzione, se, come scritto sul [https://live.gnome.org/GnomeShell/FAQ#What_led_to_the_decision_to_make_3D_acceleration_a_requirement_for_GNOME_Shell.3F sito ufficiale del progetto GNOME], la macchina su cui si sta tentando di utilizzare il sistema, ha più di 4-5 anni.<br/>
+In parole povere gli sviluppatori invitano a cambiare desktop; se vi eravate affezionati al caro vecchio gnome 2.x potrebbe essere l'occasione di provare Mate, un fork migliorato di gnome2, già presente nei repo ed installabile così
  # yum install @mate-desktop
-quindi un semplice logout e login nel nuovo DE. Altrimenti, se volete provare Cinnamon, un fork che prende le tecnologie introdotte da gnome3, digitate questo da root:
+quindi un semplice logout e login nel nuovo DE.<br/>
+Altrimenti, se volete provare Cinnamon, un fork che prende le tecnologie introdotte da gnome3, digitate questo da root:
  # yum install cinnamon
 e al prossimo login potrete provare cinnamon come desktop.<br />
-Se ancora questi ambienti desktop non vi soddisfano potete provare i sempreverdi lxde, xfce, fluzbox, e molti altri...<br/>
+Se ancora questi ambienti desktop non vi soddisfano potete provare i sempreverdi lxde, xfce, fluxbox, e molti altri...<br/>
 
 == Considerazioni ==
 Fin da subito si nota che si ha di fronte un desktop apparentemente "sconosciuto", nessun legame con Gnome 2.x, ed è proprio questo che spiazza molti utenti in un primo momento. L'abitudine e l'essere tradizionalisti in questo caso possono giocare dei brutti scherzi, perchè dopo un po' di prove ci si convince che questa shell grafica è molto potente e quando avrà tutte le funzionalità si ricorderà Gnome 2.x soltanto con un sorriso sulle labbra, pensando ai "vecchi tempi".<br />
-Gnome 3 mira anche anche a far cambiare le abitudini, nel senso che porterà l'utente ad utilizzare molto di più le aree di lavoro, mentre fino ad ora si lavorava su massimo 2 o forse 3 e si gestiva il tutto con i pulsanti ad icona. L'utilizzo delle aree invece renderà la navigazione più veloce e la lettura più immediata (le finestre potranno rimanere aperte nelle varie aree spostandosi facilmente da un area all'altra con Ctrl+Alt+freccia su o giù).<br />
-Gnome-shell è altamente personalizzabile, e lo sarà ancor di più quando sarà a pieno regime; chi conosce le basi dei fogli di stile CSS non troverà nessuna difficoltà nel modificarli a proprio piacimento. Inoltre nascono sempre più molti temi ed estensioni ad hoc.
+Gnome 3 mira anche a far cambiare le abitudini all'utente, nel senso che porterà ad utilizzare molto di più le aree di lavoro, mentre fino ad ora si lavorava su massimo 2 o forse 3 e si gestiva il tutto con i pulsanti ad icona. L'utilizzo delle aree invece renderà la navigazione più veloce e la lettura più immediata (le finestre potranno rimanere aperte nelle varie aree spostandosi facilmente da un area all'altra con ''Ctrl+Alt+freccia'' su o giù).<br />
+Gnome-shell è altamente personalizzabile, e lo sarà ancor di più quando sarà a pieno regime. Chi conosce le basi dei fogli di stile CSS non troverà nessuna difficoltà nel modificarli a proprio piacimento; inoltre nascono sempre più molti temi ed [[Estensioni_di_Gnome-Shell|estensioni]] ad hoc per personalizzarlo.
 
 == Principali novità ==
 ===Hot corner===
-Esistono due cosiddetti ''hot corner'', angoli del monitor che al passaggio del mouse eseguono una determinata azione. Il primo, quello più importante, è in alto a sinistra, e farà apparire una seconda scrivania, se così la si può chiamare. Tutte le finestre aperte verranno ridotte a miniature, e a sinistra apparirà una barra di avvio veloce, chiamata '''dock''', che si potrà personalizzare a seconda delle proprie esigenze. Sul lato della schermata a destra ci sono, appena visibili, due aree di lavoro, che si amplieranno permettendo all'utente di scegliere in quale area "dirigersi". Noterete, sopra le miniature aperte, due pulsanti: uno, il pulsante ''Finestre'' sarà più marcato, in quanto state visualizzando le miniature. Premendo sul pulsante ''Applicazioni'' si aprirà un elenco di icone di tutti i programmi avviabili, disposti in ordine alfabetico. Nella parte destra è possibile selzionare le applicazioni per "attinenza", visualizzando solo quelle pertinenti a quell'ambito.
+Esistono due cosiddetti ''hot corner'', degli angoli del monitor che al passaggio del mouse eseguono una determinata azione.<br/>
+Il primo, quello più importante, è in alto a sinistra, e farà apparire una seconda scrivania, se così la si può chiamare. Tutte le finestre aperte verranno ridotte a miniature, e a sinistra apparirà una barra di avvio veloce, chiamata '''dock''', che si potrà personalizzare a seconda delle proprie esigenze. Sul lato della schermata a destra ci sono, appena visibili, due aree di lavoro, che si amplieranno permettendo all'utente di scegliere in quale area "dirigersi". Noterete, sopra le miniature aperte, due pulsanti: uno, il pulsante ''Finestre'' sarà più marcato, in quanto state visualizzando le miniature. Premendo sul pulsante ''Applicazioni'' si aprirà un elenco di icone di tutti i programmi grafici avviabili, disposti in ordine alfabetico. Nella parte destra è possibile selzionare le applicazioni per "attinenza", visualizzando solo quelle pertinenti a quell'ambito.
 [[Image:Gnome_base.jpg|center|thumb|400px|Gnome-Shell come appare dopo l'installazione del sistema]]
 Il secondo "Hot Corner" è quello in basso a destra, che farà apparire in trasparenza una barra in basso, dove verranno visualizzati i messaggi di sistema, gli aggiornamenti disponibili, e sostanzialmente è la barra dalla quale si può gestire la chat.
 
