@@ -403,7 +403,7 @@ da Repo Fedora (yum install gnome-shell-extension-windowsNavigator)
 
 '''Descrizione''': Consente di selezionare le finestre in overview tramite tastiera
 
-'''Commento''': Utile in quanto aggiunge una funzionalità non presente, ma forse non comodissima. Una volta entrati nell'overview è possibile premere alt per visualizzare dei numeri a fianco alle preview delle applicazioni. Premendo il numero rispettivo viene dato focus alla finestra in questione. Stessa cosa è possibile fare con i workspace, sostituendo alt con ctrl (perciò ctrl+2 per il secondo workspace, ctrl+3 per il terzo, etc..). Dicevamo non comodissima, perchè a conti fatti è comunque più veloce cliccare col mouse sulla preview desiderata che premere alt, leggere i numeri e selezionare quello desiderato. Comunque, un'estensione che ha la sua utilità a patto di avviare sempre le stesse applicazioni, e che non siano troppe.  
+'''Commento''': Utile in quanto aggiunge una funzionalità non presente, ma forse non comodissima. Una volta entrati nell'overview è possibile premere alt per visualizzare dei numeri a fianco alle preview delle applicazioni. Premendo il numero rispettivo viene dato focus alla finestra in questione. Stessa cosa è possibile fare con i workspace, sostituendo alt con ctrl (perciò ctrl+2 per il secondo workspace, ctrl+3 per il terzo, etc..). Dicevamo non comodissima, perchè a conti fatti è comunque più veloce cliccare col mouse sulla preview desiderata che premere alt, leggere i numeri e selezionare quello desiderato. Comunque, un'estensione che può avere la sua utilità, a patto di trovarsi a gestire un numero limitato di finestre per workspace.  
 
 ----
 '''Workspace indicator'''
