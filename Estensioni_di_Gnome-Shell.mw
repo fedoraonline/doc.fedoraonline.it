@@ -100,7 +100,7 @@ da Repo Fedora (yum install gnome-shell-extension-auto-move-windows)
 
 '''Descrizione''': Consente di impostare il workspace di default per ogni applicazione
  
-'''Commento''': Anche in questo caso, si tratta di un'estensione che va a gusti. Se da un lato è utile non dover spostare le applicazioni ogni volta che le si carica, dall'altro può diventare scomodo, ad esempio, se si deve avviare un applicazione impostata per il workspace 5. In quel caso si avranno 4 desktop vuoti, un quinto con un unica applicazione, e un sesto nuovamente vuoto, rendendo così necessario spostarsi fino al workspace necessario. Il menù di impostazioni, comunque, permette di selezionare il numero di workspace, l'unico segreto è quello di non esagerare (ad esempio, impostando un'applicazione per il workspace 25!!)
+'''Commento''': Anche in questo caso, si tratta di un'estensione che va a gusti. Se da un lato è utile non dover spostare le applicazioni ogni volta che le si carica, dall'altro può diventare scomodo, ad esempio, se si deve avviare solamente un applicazione impostata per il workspace 5. In quel caso si avranno 4 desktop vuoti, un quinto con un unica applicazione, e un sesto nuovamente vuoto, rendendo così necessario spostarsi fino al workspace necessario. Il menù di impostazioni, comunque, permette di selezionare il numero di workspace, l'unico segreto è quello di non esagerare (ad esempio, impostando un'applicazione per il workspace 25!!)
 
 === B ===
 
