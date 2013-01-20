@@ -419,6 +419,20 @@ da Repo Fedora (yum install gnome-shell-extension-workspace-indicator)
 === Y ===
 === Z ===
 
+
+== Consigliate ==
+
+Ovviamente, come s'è potuto vedere, ogni estensione può avere utilità diverse da caso a caso. Tuttavia, esistono alcune estensioni che, per le loro funzionalità, risultano vivamente consigliabili, se non altro per una questione di rapporto pregi-difetti. Di seguito un breve elenco delle estensioni consigliate.
+
+-'''Caffeine'''
+
+-'''Extensions Shortcuts''' 
+
+-'''Places Status indicator''' o '''All-in-one Places'''
+
+-'''Web Search Dialog'''
+
+
 == Riferimenti ==
 * https://extensions.gnome.org/about/; Pagina FAQ del sito ufficiale per le Estensioni.
 * http://blog.fpmurphy.com/; Blog di Finbarr P. Murphy
