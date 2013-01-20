@@ -1,4 +1,4 @@
-{{InCorso|autore=AlessandroBugliazzini}}
+<!--{{InCorso|autore=AlessandroBugliazzini}}-->
 {{Autore|AlessandroBugliazzini}}
 
 == Introduzione ==
@@ -189,7 +189,6 @@ Se la password di root è stata inserita correttamente si avrà la conferma da q
 Alla fine dell'installazione sarà riavviato il computer. Bisognerà estrarre il supporto dvd e si avrà davanti il primo avvio di Fedora 18, dove seguiranno i processi di post-installazione, con la creazione dell'utente.
 
 == Creazione Utente ==
-
 Nella schermata di creazione utente bisogna inserire il nome reale, il nome dell'utente e la relativa password utente.
 Se viene spuntata la casella ''Aggiungi al gruppo Administrators'' l'utente appena creato avrà i privilegi di amministratore, cioè verrà aggiunto al gruppo wheel; sostanzialmente all'utente è permesso l'uso del comando ''sudo''.<br />
 Il comando sudo su fedora è disabilitato di default, dato che permette a qualsiasi utente normale del sistema di operare come fosse root e, questo, è un grave rischio per la sicurezza. È però possibile attivarlo comunque durante l'installazione aggiungendo l'utente che si desidera al gruppo wheel.<br/>
@@ -198,6 +197,5 @@ Il comando sudo su fedora è disabilitato di default, dato che permette a qualsi
 
 Cliccando ancora una volta sul pulsante ''avanti'', in basso a destra, verrà creato il nuovo utente e sarà avviata Fedora 18.<br/>
 
-
-<!--[[:Categoria:Installazione]]-->
-[[Categoria:Rilettura in corso]]
+[[Categoria:Installazione]]
+<!--[[Categoria:Rilettura in corso]]-->
