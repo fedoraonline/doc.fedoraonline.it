@@ -430,7 +430,7 @@ Qualora si avesse la necessità di elencare una lista da non formattare come nel
 
 ==Categorie==
 
-Al fine di poter catalogare e indicizzare correttamente le guide e gli articoli, come visto nell'articolo [[Contribuisci#Impostazione_base_di_un_nuovo_articolo| come contribuire]], è necessario che venga inserita la categoria corretta dell'articolo in fondo alla pagina.<br />
+Al fine di poter catalogare e indicizzare correttamente le guide e gli articoli, come visto nell'articolo [[Contribuisci#Processo_per_la_creazione_o_la_modifica_di_un_nuovo_articolo| come contribuire]], è necessario che venga inserita la categoria corretta dell'articolo in fondo alla pagina.<br />
 Il markup è esattamente quello riportato:
 <pre>
 [[:Categoria:Uno]]
