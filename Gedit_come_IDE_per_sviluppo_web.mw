@@ -1,7 +1,11 @@
 {{InCorso|autore=RobertMayr}}
 
-
 == Introduzione ==
 
+Gedit è l'editor di testo di default per Gnome e spesso viene declassato a un editor di testo qualsiasi. Gedit, però è molto più potente di quello che si pensa se viene configurato correttamente e in base alle proprie esigenze. Soprattutto per chi fa sviluppo di pagine web, per cui utilizza HTML/XHTML, CSS, Javascript, PHP, MySQL, Ruby, etc, Gedit può rappresentare una valida alternativa.<br />
+In questa guida si vuole fare un esempio di come è possibile personalizzare Gedit come IDE.
+
+== Funzionalità ==
+[[Image:Gedit.png|center|thumb|350px|Gedit potrebbe presentarsi anche così.]]
 
 [[Categoria:Scrittura in corso]]
