@@ -21,7 +21,7 @@ Ce ne sono molte altre ed elencarle tutte sarebbe impossibile, un esempio di com
 
 == Preferenze ==
 
-[[Image:gedit_vista.png|center|right|250px|Le preferenze di gedit.]]
+[[Image:gedit_vista.png|right|thumb|250px|Le preferenze di gedit.]]
 Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle impostazioni di default, si va in '''Modifica -> Preferenze'''. Una buona impostazione potrebbe essere:
 * Vista
 ** Mostrare i numeri di riga
@@ -46,7 +46,7 @@ Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle imp
 == Plugin ==
 
 Quasi tutte le funzioni elencate prima non sono disponibili nell'installazione standard di Gedit, ma si possono attivare facilmente con alcuni plugin, attivabili poi dal gestore interno di Gedit.<br />
-I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri.
+I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri. I più importanti si trovano su [http://live.gnome.org/Gedit/Plugins].
 
 === Gedit-plugins ===
 
@@ -56,4 +56,20 @@ La raccolta base di plugin che non deve mancare. Si installa digitando:
 Comprende già una buona base degli strumenti utili, andare in ''Modifica -> Preferenze -> Plugins'' per attivare quelli necessari alle proprie esigenze.
 
 === LaTeX plugin ===
+
+Un altroplugin che non deve mancare se si lavora con LaTeX è il plugin per gedit, con il quale è possibile creare anche direttamente il pdf.
+ # yum install gedit-latex
+
+=== Evidenziazione dei tag ===
+
+Essenziale per la scrittura di qualsiasi codice se uno non vuole perdersi dopo 5 righe.
+ # yum install gtksourceview
+
+=== Autocompletamento ===
+
+Lo si può usare per non dover scrivere sempre tutta la parola o stringa, gedit proporrà le parole digitate nel documento fino a quel momento.
+ # yum install gtksourcecompletion
+
+=== 
+
 [[Categoria:Scrittura in corso]]
