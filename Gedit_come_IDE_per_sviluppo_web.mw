@@ -6,6 +6,45 @@ Gedit è l'editor di testo di default per Gnome e spesso viene declassato a un e
 In questa guida si vuole fare un esempio di come è possibile personalizzare Gedit come IDE.
 
 == Funzionalità ==
+
+Una delle caratteristiche più apprezzate di gedit è la sua stabilità, cosa non da poco se parliamo di un lavoro così dispendioso in termini di tempo come la scrittura di codice. L'evidenziazione dei tag dei singoli linguaggi, l'indicazione delle righe e il margine destro completano un layout gradevole e utile per lo sviluppatore.
+Altre funzionalità sono:
+* Evidenziazione delle coppie di parentesi
+* Libreria Snippet
+* Miglioramento di codice HTML e PHP
+* Personalizzazione di tools esterni
+* Finestra laterale con supporto FTP e SSH, nonchè support HTML, XHTML, CSS e PHP
+* Facile gestione di colori con il color-picker
+
+Ce ne sono molte altre ed elencarle tutte sarebbe impossibile, un esempio di come potrebbe presentarsi gedit è il seguente.
 [[Image:Gedit.png|center|thumb|350px|Gedit potrebbe presentarsi anche così.]]
 
+== Preferenze ==
+
+Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle impostazioni di default, si va in '''Modifica -> Preferenze'''. Una buona impostazione potrebbe essere:
+* 
+**
+**
+**
+*
+**
+**
+**
+*
+**
+**
+
+== Plugin ==
+
+Quasi tutte le funzioni elencate prima non sono disponibili nell'installazione standard di Gedit, ma si possono attivare facilmente con alcuni plugin, attivabili poi dal gestore interno di Gedit.<br />
+I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri.
+
+=== Gedit-plugins ===
+
+La raccolta base di plugin che non deve mancare. Si installa digitando:
+ # yum install gedit-plugins
+
+Comprende già una buona base degli strumenti utili, andare in ''Modifica -> Preferenze -> Plugins'' per attivare quelli necessari alle proprie esigenze.
+
+=== LaTeX plugin ===
 [[Categoria:Scrittura in corso]]
