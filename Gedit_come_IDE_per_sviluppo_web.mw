@@ -21,18 +21,27 @@ Ce ne sono molte altre ed elencarle tutte sarebbe impossibile, un esempio di com
 
 == Preferenze ==
 
+[[Image:gedit_vista.png|center|right|250px|Le preferenze di gedit.]]
 Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle impostazioni di default, si va in '''Modifica -> Preferenze'''. Una buona impostazione potrebbe essere:
-* 
-**
-**
-**
-*
-**
-**
-**
-*
-**
-**
+* Vista
+** Mostrare i numeri di riga
+** Mostrare il margine destro alla colonna 80 (che è un valore di default ma va bene)
+** Attivare a capo automatico
+** Dicidere le parole su due righe (togliere la spunta)
+** Evidenziare la riga corrente
+** Evidenziare le parentesi corrispondenti
+
+* Editor
+** Ampiezza tabulazione: 4
+** Inserire gli spazi invece delle tabulazioni
+** Attivare rientro automatico
+** Non salvare alcuna copia di backup
+
+* Caratteri
+** Monospace 10
+** Schema colore a piacimento (Cobalt è quello della schermata sopra)
+
+* Plugin: da qui si attivano o disattivano i plugin installati.
 
 == Plugin ==
 
