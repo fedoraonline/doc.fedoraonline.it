@@ -47,6 +47,7 @@ Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle imp
 
 Quasi tutte le funzioni elencate prima non sono disponibili nell'installazione standard di Gedit, ma si possono attivare facilmente con alcuni plugin, attivabili poi dal gestore interno di Gedit.<br />
 I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri. I più importanti si trovano su [http://live.gnome.org/Gedit/Plugins].
+Tutti i seguenti plugin hanno solitamente più di una funzione, che va attivata attraverso la gestione dei plugin che si trova nelle ''Preferenze'' come descritto sopra.
 
 === Gedit-plugins ===
 
@@ -65,11 +66,36 @@ Un altroplugin che non deve mancare se si lavora con LaTeX è il plugin per gedi
 Essenziale per la scrittura di qualsiasi codice se uno non vuole perdersi dopo 5 righe.
  # yum install gtksourceview
 
+=== Syntax Highlighting ===
+L'evidenziazione dei tag ha dei colori standard, si possono però personalizzare ulteriormente. Un pacchetto che da al codice PHP il colore caratteristico, è [http://www.micahcarrick.com/files/gedit_php_highlight.xml questo].
+Si può applicare facilmente digitando:
+
+ $ gconftool-2 --load=gedit_php_highlight.xml /apps/gedit-2/preferences/syntax_highlighting/PHP
+
 === Autocompletamento ===
 
 Lo si può usare per non dover scrivere sempre tutta la parola o stringa, gedit proporrà le parole digitate nel documento fino a quel momento.
  # yum install gtksourcecompletion
 
-=== 
+=== Lista Tag ===
+
+La lista dei Tag appare nel pannello laterale e suggerisce, per ogni linguaggio inserito, i tag. Cliccando su uno di essi, questo viene inserito nel documento. Il pacchetto che viene suggerito contiene i tag di:
+* PHP
+* CSS
+* XHTML
+
+Per utilizzarlo basta [http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.tar.gz scaricare il pacchetto], scompattarlo nella directory desiderata, per esempio /Scaricati, e copiare le estensioni nella taglist:
+ $ tar -xzf gedit_webdev_tags-0.1.tar.gz
+ $ cd gedit_webdev_tags-0.1/
+ $ cp *.tags /usr/share/gedit/plugins/taglist/
+
+=== Tools esterni ===
+
+Un'altra raccolta di tools utili sono i '''Tools esterni''', che, una volta attivati dalle Preferenze, propongo molte altre funzioni utili, come il Php beautifier oppure rimuovere gli spazi di fine riga.
+Scaricare il [http://www.micahcarrick.com/files/gedit_external_tools.tar.gz pacchetto dei tools esterni] e, dopo averlo scompattato, copiarlo nella directory locale dell'utente.
+Se non fosse presente la directory indicata, procedere prima con la creazione manuale della stessa.
+ $ tar -xzf gedit_external_tools.tar.gz
+ $ cp gedit_external_tools/ ~/.gnome2/gedit/
+
 
 [[Categoria:Scrittura in corso]]
