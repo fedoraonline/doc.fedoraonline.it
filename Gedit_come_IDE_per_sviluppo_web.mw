@@ -98,7 +98,7 @@ Se non fosse presente la directory indicata, procedere prima con la creazione ma
  $ cp gedit_external_tools/ ~/.gnome2/gedit/
 Ai tools esterni si accede tramite il menu ''Strumenti -> External tools''.
 
-== Fonte ==
+== Riferimenti ==
 * [http://www.micahcarrick.com/gedit-html-editor.html Blog di Micah Carrick]
 
 
