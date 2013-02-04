@@ -96,6 +96,10 @@ Scaricare il [http://www.micahcarrick.com/files/gedit_external_tools.tar.gz pacc
 Se non fosse presente la directory indicata, procedere prima con la creazione manuale della stessa.
  $ tar -xzf gedit_external_tools.tar.gz
  $ cp gedit_external_tools/ ~/.gnome2/gedit/
+Ai tools esterni si accede tramite il menu ''Strumenti -> External tools''.
+
+== Fonte ==
+* [http://www.micahcarrick.com/gedit-html-editor.html Blog di Micah Carrick]
 
 
 [[Categoria:Scrittura in corso]]
