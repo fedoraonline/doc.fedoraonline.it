@@ -14,25 +14,17 @@ Per i comandi da terminale, il simbolo $ rappresenta l'utente corrente senza dir
 
 Partiamo quindi col dare un'occhiata alle preferenze di Nautilus, a cui è possibile accedere dal pannello superiore di ''gnome-shell'', facendo click col tasto dx sulla voce ''File'' che compare quando la finestra di Nautilus è attiva, come mostrato in ''figura 1''.
 
-[[File:nautilus_3.6-fig_1.png|thumb|center|800px|'''Figura 1.''' Preferenze di Nautilus 3.6]]
+[[File:nautilus_3.6-fig_1.png|thumb|center|420px|'''Figura 1.''' Preferenze di Nautilus 3.6]]
 
 
 
 Le impostazioni mostrate nelle successive ''figure 2-6'' sono personalizzabili, e non richiedono grossi commenti:
 
-[[File:nautilus_3.6-fig_2.png|thumb|left|400px|'''Figura 2.''' Preferenze di Nautilus 3.6 - Scheda Viste]][[File:nautilus_3.6-fig_3.png|thumb|right|400px|'''Figura 3.''' Preferenze di Nautilus 3.6 - Scheda Comportamento]][[File:nautilus_3.6-fig_4.png|thumb|left|400px|'''Figura 4.''' Preferenze di Nautilus 3.6 - Scheda Visualizzazione]][[File:nautilus_3.6-fig_5.png|thumb|right|400px|'''Figura 5.''' Preferenze di Nautilus 3.6 - Scheda Colonne dell'elenco]]
-
-
-
-
-
-
-
-
-
-
-[[File:nautilus_3.6-fig_6.png|thumb|center|400px|'''Figura 6.''' Preferenze di Nautilus 3.6 - Scheda Anteprima]]
-
+ [[File:nautilus_3.6-fig_2.png|thumb|left|420px|'''Figura 2.''' Preferenze di Nautilus 3.6 - Scheda Viste]]
+ [[File:nautilus_3.6-fig_3.png|thumb|right|420px|'''Figura 3.''' Preferenze di Nautilus 3.6 - Scheda Comportamento]]
+ [[File:nautilus_3.6-fig_4.png|thumb|left|420px|'''Figura 4.''' Preferenze di Nautilus 3.6 - Scheda Visualizzazione]]
+ [[File:nautilus_3.6-fig_5.png|thumb|right|420px|'''Figura 5.''' Preferenze di Nautilus 3.6 - Scheda Colonne dell'elenco]]
+ [[File:nautilus_3.6-fig_6.png|thumb|center|420px|'''Figura 6.''' Preferenze di Nautilus 3.6 - Scheda Anteprima]]
 
 Da notare solamente, nella scheda ''Comportamento'' (''figura 3''), la scelta dell'azione da eseguire al click doppio (o singolo, a seconda di quanto scelto alla voce ''Comportamento'', nella stessa scheda) di un file reso eseguibile: la scelta, personalmente, l'ho impostata sulla diretta esecuzione; se fosse indicato di mostrare il file, esso verrebbe invece aperto con l'applicazione di ''default'' (predefinita) per la lettura dei files di testo, mentre, se si scegliesse di ''Chiedere ogni volta'', si avrebbe un pop-up che interrogherebbe ogni volta sull'azione da eseguire, quale appunto l'esecuzione in un terminale o l'apertura come semplice file di testo o l'esecuzione normale.
 
