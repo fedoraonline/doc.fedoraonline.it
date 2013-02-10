@@ -26,7 +26,7 @@ Le impostazioni mostrate nelle successive ''figure 2-6'' sono personalizzabili, 
  [[File:nautilus_3.6-fig_6.png|thumb|center|400px|'''Figura 6.''' Preferenze di Nautilus 3.6 - Scheda Anteprima]]
 
 
-Da notare solamente, nella scheda ''Comportamento'' (''figura 3''), la scelta dell'azione da eseguire al click doppio (o singolo, a seconda di quanto scelto alla voce ''Comportamento'', nella stessa scheda) di un file reso eseguibile: la scelta, personalmente, l'ho impostata sulla diretta esecuzione; se fosse indicato di mostrare il file, esso verrebbe invece aperto con l'applicazione di ''default'' (predefinita) per la lettura di files di testo, mentre, se si scegliesse di ''Chiedere ogni volta'', si avrebbe un pop-up che interrogherebbe ogni volta sull'azione da eseguire, quale appunto l'esecuzione in un terminale o l'esecuzione normale o l'apertura come semplice file di testo.
+Da notare solamente, nella scheda ''Comportamento'' (''figura 3''), la scelta dell'azione da eseguire al click doppio (o singolo, a seconda di quanto scelto alla voce ''Comportamento'', nella stessa scheda) di un file reso eseguibile: la scelta, personalmente, l'ho impostata sulla diretta esecuzione; se fosse indicato di mostrare il file, esso verrebbe invece aperto con l'applicazione di ''default'' (predefinita) per la lettura dei files di testo, mentre, se si scegliesse di ''Chiedere ogni volta'', si avrebbe un pop-up che interrogherebbe ogni volta sull'azione da eseguire, quale appunto l'esecuzione in un terminale o l'esecuzione normale o l'apertura come semplice file di testo.
 
 Per rendere eseguibile un file si può operare in due modalità:
 
