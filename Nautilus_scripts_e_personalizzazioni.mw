@@ -8,7 +8,7 @@ Questa guida nasce dalla [http://forum.fedoraonline.it/viewtopic.php?pid=202930 
 
 {{Scrittura|Sempre per evitare di dare le cose per scontate e considerando che probabilmente ci sarà un frequente riferimento al menu che compare alla pressione del tasto destro del mouse all'interno di una cartella di Nautilus, indicherò con ''tasto dx'' il tasto destro del mouse e con ''tasto sx'' quello sinistro.
 
-Per i comandi da terminale, il simbolo $ rappresenta l'utente corrente senza diritti amministrativi o eventualmente con diritti amministrativi se premesso ''sudo'' davanti al comando (qualora l'utente in uso fosse abilitato nel file ''/etc/sudoers''); il simbolo #, invece, indica la shell da root, ovvero l'amministratore del sistema.}}
+Per i comandi da terminale, il simbolo $ rappresenta l'utente corrente senza diritti amministrativi o eventualmente con diritti amministrativi se premesso ''sudo'' davanti al comando (qualora l'utente in uso fosse abilitato nel file ''/etc/sudoers''); il simbolo #, invece, indica la shell da root, ovvero da amministratore del sistema.}}
 
 == Configurazione ==
 
