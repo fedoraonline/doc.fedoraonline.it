@@ -16,13 +16,74 @@ Partiamo quindi col dare una occhiata alle preferenze di Nautilus, a cui è poss
 
 [[File:nautilus_3.6-fig_1.png|thumb|center|800px|'''Figura 1.''' Preferenze di Nautilus 3.6]]
 
-Le impostazioni mostrate nelle successive figure 2-6 sono personalizzabili, e non richiedono grossi commenti:
 
-[[File:nautilus_3.6-fig_1.png|thumb|left|320px|'''Figura 2.''' Preferenze di Nautilus 3.6 - Scheda Viste]] [[File:nautilus_3.6-fig_1.png|thumb|right|320px|'''Figura 3.''' Preferenze di Nautilus 3.6 - Scheda Comportamento]]
-[[File:nautilus_3.6-fig_1.png|thumb|left|320px|'''Figura 4.''' Preferenze di Nautilus 3.6 - Scheda Visualizzazione]] [[File:nautilus_3.6-fig_1.png|thumb|right|320px|'''Figura 5.''' Preferenze di Nautilus 3.6 - Scheda Colonne dell'elenco]]
-[[File:nautilus_3.6-fig_1.png|thumb|center|320px|'''Figura 6.''' Preferenze di Nautilus 3.6 - Scheda Anteprima]]
 
-Da notare solamente, nella scheda ''Comportamento'' (''figura 3''), la scelta dell'azione da eseguire al click doppio (o singolo, a seconda di quanto scelto alla voce ''Comportamento'', nella stessa scheda) di un file reso eseguibile, come uno script: la scelta l'ho impostata sulla diretta esecuzione; se fosse indicato di mostrare il file, esso verrebbe invece aperto con l'applicazione di ''default'' (predefinita) per la lettura di files di testo, mentre, se fosse impostato su ''Chiedere ogni volta'', si avrebbe un pop-up che interrogherebbe sull'azione da eseguire, quale appunto l'esecuzione in un terminale o l'esecuzione normale o l'apertura come semplice file di testo.
+Le impostazioni mostrate nelle successive ''figure 2-6'' sono personalizzabili, e non richiedono grossi commenti:
+
+[[File:nautilus_3.6-fig_2.png|thumb|left|400px|'''Figura 2.''' Preferenze di Nautilus 3.6 - Scheda Viste]] [[File:nautilus_3.6-fig_3.png|thumb|right|400px|'''Figura 3.''' Preferenze di Nautilus 3.6 - Scheda Comportamento]] [[File:nautilus_3.6-fig_4.png|thumb|left|400px|'''Figura 4.''' Preferenze di Nautilus 3.6 - Scheda Visualizzazione]] [[File:nautilus_3.6-fig_5.png|thumb|right|400px|'''Figura 5.''' Preferenze di Nautilus 3.6 - Scheda Colonne dell'elenco]]
+[[File:nautilus_3.6-fig_6.png|thumb|left|400px|'''Figura 6.''' Preferenze di Nautilus 3.6 - Scheda Anteprima]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Da notare solamente, nella scheda ''Comportamento'' (''figura 3''), la scelta dell'azione da eseguire al click doppio (o singolo, a seconda di quanto scelto alla voce ''Comportamento'', nella stessa scheda) di un file reso eseguibile, come uno script: la scelta è stata impostata sulla diretta esecuzione; se fosse indicato di mostrare il file, esso verrebbe invece aperto con l'applicazione di ''default'' (predefinita) per la lettura di files di testo, mentre, se fosse impostato su ''Chiedere ogni volta'', si avrebbe un pop-up che interrogherebbe sull'azione da eseguire, quale appunto l'esecuzione in un terminale o l'esecuzione normale o l'apertura come semplice file di testo.
 
 Per rendere eseguibile un file si può operare in due modalità:
 
