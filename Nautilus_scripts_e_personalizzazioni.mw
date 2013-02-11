@@ -42,32 +42,32 @@ Per rendere eseguibile un file si può operare in due modalità:
 
 Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulteriormente il nostro Nautilus, oltre che alcune utili ''estensioni'' che ne aumentano la funzionalità, insieme anche a quella parte discussa nel citato [http://forum.fedoraonline.it/viewtopic.php?pid=202930 ''topic''] che permette di superare alcune delle mancanze presenti nella versione 3.6, togliendo spazio ai rimpianti della precedente 3.4:
 
-* '''Programmi'''
-: 1. '''dconf-editor'''
-:: Le impostazioni indicate nella precedente sezione possono essere addizionate di ulteriori configurazioni tramite l'applicazione ''dconf-editor'', che andremo ad installare con il comando:
+===Programmi===
+===='''dconf-editor'''====
+: Le impostazioni indicate nella precedente sezione possono essere addizionate di ulteriori configurazioni tramite l'applicazione ''dconf-editor'', che andremo ad installare con il comando:
  $ sudo yum install dconf-editor
-:: Avviando rapidamente il programma tramite la combinazione di tasti ''Alt+F2'' e successiva digitazione di ''dconf-editor'' e pressione del tasto ''invio'', ci troveremo davanti una finestra con un menu sulla sinistra. Andando a questo punto nel percorso ''org-->gnome-->nautilus-->preferences'', come indicato nella ''figura 7'', sarà qui possibile controllare ulteriori voci o ritrovare quelle che si sono settate precedentemente. La ''figura 7'', ad esempio, evidenzia la possibilità di scegliere dove aprire le nuove schede create all'interno di Nautilus, se dopo quella correntemente aperta (opzione predefinita) o alla fine di tutte le altre.
+: Avviando rapidamente il programma tramite la combinazione di tasti ''Alt+F2'' e successiva digitazione di ''dconf-editor'' e pressione del tasto ''invio'', ci troveremo davanti una finestra con un menu sulla sinistra. Andando a questo punto nel percorso ''org-->gnome-->nautilus-->preferences'', come indicato nella ''figura 7'', sarà qui possibile controllare ulteriori voci o ritrovare quelle che si sono settate precedentemente. La ''figura 7'', ad esempio, evidenzia la possibilità di scegliere dove aprire le nuove schede create all'interno di Nautilus, se dopo quella correntemente aperta (opzione predefinita) o alla fine di tutte le altre.
 [[File:dconf-editor_Nautilus_preferences-fig_7.png|thumb|center|420px|'''Figura 7.''' Preferenze di Nautilus tramite ''dconf-editor'']]
-:: Il programma ''dconf-editor'' è utile anche per molteplici altre personalizzazioni del nostro desktop, come ad esempio la scelta di quali pulsanti mostrare nella barra del titolo delle finestre, e con quale ordine e posizione: la ''figura 8'', mostra infatti come sia possibile, andando nel percorso ''org-->gnome-->shell-->overrides'', scegliere se mostrare il solo pulsante di chiusura o se mostrare anche quelli per il menu e/o la minimizzazione e/o la massimizzazione di una finestra aperta, oltre che decidere se posizionarli a destra o a sinistra. Nel mio caso specifico, riportato in ''figura 8'', ho deciso di mostrare il solo pulsante di chiusura (''close''), posizionandolo a sinistra (i : posti alla destra di ''close'' danno questo effetto). Il percorso anzidetto (''org-->gnome-->shell-->overrides'') vale quando è in uso [http://doc.fedoraonline.it/Estensioni_di_Gnome-Shell gnome-shell], per cui questa impostazione sostituirà la preferenza settata invece nel percorso ''org-->gnome-->desktop-->wm-->preferences'', mostrata in ''figura 9'':
+: Il programma ''dconf-editor'' è utile anche per molteplici altre personalizzazioni del nostro desktop, come ad esempio la scelta di quali pulsanti mostrare nella barra del titolo delle finestre, e con quale ordine e posizione: la ''figura 8'', mostra infatti come sia possibile, andando nel percorso ''org-->gnome-->shell-->overrides'', scegliere se mostrare il solo pulsante di chiusura o se mostrare anche quelli per il menu e/o la minimizzazione e/o la massimizzazione di una finestra aperta, oltre che decidere se posizionarli a destra o a sinistra. Nel mio caso specifico, riportato in ''figura 8'', ho deciso di mostrare il solo pulsante di chiusura (''close''), posizionandolo a sinistra (i : posti alla destra di ''close'' danno questo effetto). Il percorso anzidetto (''org-->gnome-->shell-->overrides'') vale quando è in uso [http://doc.fedoraonline.it/Estensioni_di_Gnome-Shell gnome-shell], per cui questa impostazione sostituirà la preferenza settata invece nel percorso ''org-->gnome-->desktop-->wm-->preferences'', mostrata in ''figura 9'':
 [[File:dconf-editor_gnome-shell_title_buttons-fig_8.png|thumb|left|420px|'''Figura 8.''' Configurazione dei pulsanti della barra del titolo delle finestre di ''gnome-shell'' tramite ''dconf-editor'']]
 [[File:dconf-editor_title_buttons-fig_9.png|thumb|right|420px|'''Figura 9.''' Configurazione dei pulsanti della barra del titolo delle finestre tramite ''dconf-editor'']]
 [[File:grv_image_spacer_5px.png]]
-: 2. '''beesu'''
-:: Qualora si avesse l'esigenza, per qualche motivo, di eseguire un programma in modalità grafica con i diritti amministrativi, viene incontro il programma ''beesu'', il quale fornisce un comando (''beesu'', appunto) che, anteposto ad un altro comando, esegue quest'ultimo da utente ''root'', previa immissione della sua password. In questa maniera è possibile ad esempio aprire una finestra di Nautilus da ''root'' con il comando:
+===='''beesu'''====
+: Qualora si avesse l'esigenza, per qualche motivo, di eseguire un programma in modalità grafica con i diritti amministrativi, viene incontro il programma ''beesu'', il quale fornisce un comando (''beesu'', appunto) che, anteposto ad un altro comando, esegue quest'ultimo da utente ''root'', previa immissione della sua password. In questa maniera è possibile ad esempio aprire una finestra di Nautilus da ''root'' con il comando:
  $ beesu "nautilus /home"
-:: il che dà vantaggi se si sa cosa si sta facendo, ma in caso contrario può mettere a rischio l'integrità e la stabilità del sistema.
-* '''Estensioni'''
-: 1. '''nautilus-open-terminal'''
-:: Installabile per via grafica tramite il gestore di pacchetti, oppure tramite terminale attraverso il comando:
+: il che dà vantaggi se si sa cosa si sta facendo, ma in caso contrario può mettere a rischio l'integrità e la stabilità del sistema.
+===Estensioni===
+===='''nautilus-open-terminal'''====
+: Installabile per via grafica tramite il gestore di pacchetti, oppure tramite terminale attraverso il comando:
  $ sudo yum install nautilus-open-terminal
-:: questa estensione fornisce l'opzione di apertura del percorso corrente di Nautilus in un terminale, al ''click dx'' del mouse (''figura 10''), una possibilità che ritengo molto utile, da integrare volendo con quella che segue.
+: questa estensione fornisce l'opzione di apertura del percorso corrente di Nautilus in un terminale, al ''click dx'' del mouse (''figura 10''), una possibilità che ritengo molto utile, da integrare volendo con quella che segue.
 [[File:nautilus-open-terminal-fig_10.png|thumb|center|420px|'''Figura 10.''' Estensione ''nautilus-open-terminal'']]
-: 2. '''nautilus-terminal'''
-:: Dopo la sua installazione e il riavvio di Nautilus con ''Alt+F2'' seguito dall'immissione del comando ''nautilus -q'' (''invio''), aprendo Nautilus si vedrà un terminale integrato in maniera permanente che segue il percorso di navigazione tra le cartelle (''figura 11''). Versioni precedenti di questa estensione prevedevano la presenza di un pulsante per chiudere ed aprire il ''terminale integrato'' al click, ma da diverso tempo questa che era un'opzione tra le configurazioni dell'estensione è stata sostituita dalla pressione del ''tasto F4'', come si può leggere sulla sua [http://projects.flogisoft.com/nautilus-terminal/ ''home page''].
+===='''nautilus-terminal'''====
+: Dopo la sua installazione e il riavvio di Nautilus con ''Alt+F2'' seguito dall'immissione del comando ''nautilus -q'' (''invio''), aprendo Nautilus si vedrà un terminale integrato in maniera permanente che segue il percorso di navigazione tra le cartelle (''figura 11''). Versioni precedenti di questa estensione prevedevano la presenza di un pulsante per chiudere ed aprire il ''terminale integrato'' al click, ma da diverso tempo questa che era un'opzione tra le configurazioni dell'estensione è stata sostituita dalla pressione del ''tasto F4'', come si può leggere sulla sua [http://projects.flogisoft.com/nautilus-terminal/ ''home page''].
 [[File:nautilus-terminal-fig_11.png|thumb|center|420px|'''Figura 11.''' Estensione ''nautilus-terminal'']]
-: 3. '''nautilus-action'''
-:: <...da scrivere (''Crea nuovo lanciatore''): vedi topic...>
-* '''Implementazioni'''
+===='''nautilus-action'''====
+: <...da scrivere (''Crea nuovo lanciatore''): vedi topic...>
+===Implementazioni===
 : <...da scrivere (''Crea nuovo documento''): vedi topic...>
 
 == Riferimenti ==
