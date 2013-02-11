@@ -39,6 +39,14 @@ Per rendere eseguibile un file si può operare in due modalità:
 
 == Programmi ed estensioni utili ==
 
+Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulteriormente il nostro Nautilus, oltre che alcune utili ''estensioni'' che ne aumentano la funzionalità, insieme anche a quella parte discussa nel citato [http://forum.fedoraonline.it/viewtopic.php?pid=202930 ''topic''] che permette di superare alcune delle mancanze presenti nella versione 3.6, togliendo spazio ai rimpianti della precedente 3.4:
+
+* '''Programmi'''
+# '''dconf-editor'''
+: Le impostazioni indicate nella precedente sezione possono essere addizionate di ulteriori configurazioni tramite l'applicazione ''dconf-editor'', che andremo ad installare con il comando:
+ $ sudo yum install dconf-editor
+: Avviando rapidamente il programma tramite la combinazione di tasti ''Alt+F2'' e successiva digitazione di ''dconf-editor'' e pressione del tasto ''invio'', ci troveremo davanti una finestra con un menu sulla sinistra. Andando a questo punto nel percorso ''org-->gnome-->nautilus-->preferences'', come indicato nella ''figura 7'', sarà qui possibile controllare ulteriori voci o ritrovare quelle che si sono settate precedentemente. La ''figura 7'', ad esempio, evidenzia la possibilità di scegliere dove aprire le nuove schede create all'interno di Nautilus, se dopo quella correntemente aperta (opzione predefinita) o alla fine di tutte le altre.
+
 == Riferimenti ==
 
 * [http://en.wikipedia.org/wiki/Nautilus_(file_manager) Nautilus su Wikipedia]
