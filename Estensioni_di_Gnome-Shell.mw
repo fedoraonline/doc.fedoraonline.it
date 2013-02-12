@@ -169,6 +169,11 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 *Note: Purtroppo, al momento le configurazioni di griglia personalizzate sono possibili solamente editando manualmente il file extension.js.<br/>Al momento l'estensione NON FUNZIONA con Gnome 3.6 (Fedora 18). 
 <br/>
 ==== I ====
+'''Icon Hider''' ([https://extensions.gnome.org/extension/351/icon-hider/ link])
+*Descrizione: Aggiunge alla barra superiore un pulsante per nascondere/visualizzare le icone in essa presenti.
+*Commento: Utile estensione, che consente di scegliere quali elementi della barra superiore visualizzare. Funziona con ogni icona/menù/pannello/pulsante: è dunque possibile nascondere il menù utente, l'orologio, il pulsante attività, le icone del tray (volume, rete, accesso facilitato, bluetooth, layout di tastiera) ma soprattutto qualunque elemento aggiuntivo fornito da altre estensioni. Consigliata a chi non voglia perdere tempo a cercare più estensioni per nascondere ogni singolo elemento. 
+*Note: Non esente da bug: una volta installata, l'estensione ha impostato di default la visualizzazione di tutte le icone disponibili, comprese quelle che erano state precedentemente disattivate, e stessa cosa è successa alla rimozione. Va comunque detto che per ripristinare la visualizzazione 'regolare' della barra è stato sufficiente riavviare la shell. 
+<br/>
 '''Inhibit Applet''' ([https://extensions.gnome.org/extension/233/inhibit-applet/ link])
 *Descrizione: Aggiunge alla barra superiore un pulsante per abilitare o disabilitare screensaver e autosuspend
 *Commento: Molto semplice rispetto alla simile "Caffeine", fa esattamente quello che promette senza fronzoli particolari.
@@ -192,10 +197,20 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 *Note: Funziona solamente con gnome 3.6 (Fedora 18) o superiori.
 <br/>
 ==== T ====
+'''Text Translator''' ([https://extensions.gnome.org/extension/593/text-translator/ link])
+*Descrizione: Implementa una finestra di dialogo, richiamare tramite dialogo, per effettuare traduzioni istantanee.
+*Commento: Quest'estensione si appoggia a Google translate o Yandex translate per effettuare traduzioni istantanee dei termini e delle frasi immesse dall'utente, senza necessità di avviare un browser. La finestra di dialogo è richiamabile usando il pulsante apposito nella barra superiore, oppure tramite macro. È possibile scegliere sia la lingua di origine che quella di destinazione (contestualmente alla disponibilità del provider di traduzione scelto). Le macro di default disponibili sono super-t per richiamare la finestra di dialogo, super-shift-t per tradurre direttamente dagli appunti e super-alt-t per tradurre da un testo selezionato (funzione che richiede l'installazione del pacchetto xclip, 45kb, disponibile nei repo Fedora). È infine possibile configurare l'estensione tramite un menù apposito. Ottima aggiunta per il sistema, andrebbe forse migliorata permettendo di aggiungere più providers di traduzione. 
+*Note: Le impostazioni di default prevedono l'inglese come lingua d'origine e il russo come lingua di destinazione (e questo spiega l'uso di Yandex).
+<br/>
 '''Touchpad Indicator''' ([https://extensions.gnome.org/extension/131/touchpad-indicator/ link])
 *Descrizione: Aggiunge alla barra superiore un icona per controllare i settaggi delle periferiche di puntamento (mouse / touchpad)
 *Commento: Estensione molto utile per chi deve passare velocemente da una periferica di puntamento all'altra, specie se su un portatile. Consente di disabilitare in automatico il touchpad non appena viene connesso un mouse. Inoltre, permette di scegliere il client di configurazione usato (xinput / synaptic / gconf). 
 *Note: Non è esente da alcuni leggeri bug. Al riavvio può capitare, ad esempio, che l'icona di stato non sia aggiornata (sebbene il touchpad sia comunque disabilitato). Nulla di irrisolvibile, comunque.
+<br/>
+'''Trash''' ([https://extensions.gnome.org/extension/48/trash/ link])
+*Descrizione: Aggiunge alla barra superiore un pulsante per la gestione del cestino.
+*Commento: Estensione semplice ma utile. Dal suo menù è possibile visualizzare il contenuto del cestino, svuotarlo o aprire la cartella in Nautilus. Manca solo di un menù di configurazione.
+*Note: Da segnalare che il pulsante rimane nascosto fino a quando nel cestino non è presente qualche file.
 <br/>
 ==== W ====
 '''Web Search Dialog''' ([https://extensions.gnome.org/extension/549/web-search-dialog/ link])
