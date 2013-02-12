@@ -55,7 +55,8 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 ===='''''beesu'''''====
 : Qualora si avesse l'esigenza, per qualche motivo, di eseguire un programma in modalità grafica con i diritti amministrativi, viene incontro il programma ''beesu'', il quale fornisce un comando (''beesu'', appunto) che, anteposto ad un altro comando, esegue quest'ultimo da utente ''root'', previa immissione della sua password. In questa maniera è possibile ad esempio aprire una finestra di Nautilus da ''root'' con il comando:
  $ beesu "nautilus /home"
-: il che dà vantaggi se si sa cosa si sta facendo, ma in caso contrario può mettere a rischio l'integrità e la stabilità del sistema.
+: il che dà vantaggi se si sa cosa si sta facendo, ma in caso contrario può anche mettere a rischio l'integrità e la stabilità del sistema.
+
 ===Estensioni===
 ===='''''nautilus-open-terminal'''''====
 : Installabile per via grafica tramite il gestore di pacchetti, oppure tramite terminale attraverso il comando:
