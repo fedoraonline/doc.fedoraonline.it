@@ -209,10 +209,11 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 <br/>
 ==== S ====
 '''Sticky Notes''' ([https://extensions.gnome.org/extension/568/notes/ Link])
-*Descrizione: Sostituisce il pulsante 'applicazioni' nell'overview, con un pulsante per creare e gestire note adesive. 
-*Commento: Potrebbe essere un'estensione utile, ma allo stato attuale (17 gennaio) sembra ancora acerba. Per andare a capo è necessario premere invio, altrimenti il testo esce dai confini della nota. Le note inoltre sono molto piccole e il font usato non è da meno. E, per finire, l'installazione rende ovviamente inaccessibile il menù applicazioni (resta comunque la possibilità di effettuare la ricerca per nome o di accedervi tramite Ctrl+Alt+Tab da overview). Da tenere in considerazione per eventuali aggiornamenti, comunque.
+*Descrizione: Aggiunge al dash nell'overview, un pulsante per gestire note adesive. 
+*Commento: Finalmente maturata al punto giusto rispetto alle versioni precedenti, l'estensione aggiunge alla lista applicazioni nel dash un pulsante che permette di creare, visualizzare e modificare piccole note adesive all'interno dell'overview (la cartella di default delle note è ~/.local/share/gnome-shell-notes). Si tratta pur sempre di un'estensione basilare, priva delle funzionalità avanzate di gnote o tomboy, ma può essere utile per salvare rapidamente brevi stringhe di testo. Consigliata.
 *Note: Funziona solamente con gnome 3.6 (Fedora 18) o superiori.
 <br/>
+
 ==== T ====
 '''Text Translator''' ([https://extensions.gnome.org/extension/593/text-translator/ link])
 *Descrizione: Implementa una finestra di dialogo per effettuare traduzioni istantanee.
