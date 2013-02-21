@@ -211,7 +211,7 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 '''Sticky Notes''' ([https://extensions.gnome.org/extension/568/notes/ Link])
 *Descrizione: Aggiunge al dash nell'overview, un pulsante per gestire note adesive. 
 *Commento: Finalmente maturata al punto giusto rispetto alle versioni precedenti, l'estensione aggiunge alla lista applicazioni nel dash un pulsante che permette di creare, visualizzare e modificare piccole note adesive all'interno dell'overview (la cartella di default delle note è ~/.local/share/gnome-shell-notes). Si tratta pur sempre di un'estensione basilare, priva delle funzionalità avanzate di gnote o tomboy, ma può essere utile per salvare rapidamente brevi stringhe di testo. Consigliata.
-*Note: Funziona solamente con gnome 3.6 (Fedora 18) o superiori.
+*Note: Lo scrolling non funziona ancora a dovere; una volta raggiunto il bordo inferiore l'immissione continua 'al di sotto' della nota. Va comunque segnalato che le funzioni taglia-copia-incolla (da tastiera) sono perfettamente utilizzabili. Compatibile solamente con GNOME 3.6 (Fedora 18) o superiori.
 <br/>
 
 ==== T ====
