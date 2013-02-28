@@ -122,7 +122,90 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 ===Implementazioni per la versione 3.6 di Nautilus===
 : Siamo così arrivati alla parte conclusiva di questa guida, nata come si è detto dalla problematica [http://forum.fedoraonline.it/viewtopic.php?pid=202930 discussa] nel forum, che viene qui ripresa ed inserita per completare questa panoramica con tema la versione 3.6 di Nautilus. Si è parlato nell'[[#Introduzione|introduzione]] delle novità di questa versione, ma anche di alcune mancanze che qui si è cercato di colmare. Rimane quindi da reintrodurre la possibilità di creare semplicemente un ''Nuovo documento'' dal menu contestuale del tasto destro del mouse all'interno di Nautilus.
 ===='''''Reintegrazione della voce "Nuovo documento"'''''====
-: <...da scrivere (''Crea nuovo documento''): vedi topic...>
+: Esistono fondamentalmente due approcci, di cui uno estremamente semplice, efficace e versatile, e l'altro un po' più macchinoso ma comunque utile per lo scopo. Cominciamo dal primo:
+
+====='''''Utilizzo della cartella Modelli (o Templates)'''''=====
+: Si tratta di sfruttare il fatto che, inserendo almeno un file nella cartella ''Modelli'' (o ''Templates'', a seconda della lingua di sistema) della ''home'' dell'utente in uso, si abilita la comparsa di un sottomenu ''Nuovo documento'' nel menu contestuale di Nautilus, con in elenco la voce ''Documento vuoto'', insieme al file da noi inserito. Come ben proposto nella [http://forum.fedoraonline.it/viewtopic.php?pid=202930 discussione], un esempio di file da poter inserire nella cartella ''Modelli'' è la base per un ''nuovo script'', da avere così a portata di mano, insieme alla voce ''Documento vuoto''. In pratica, si tratta di aprire un ''terminale'' e dare i seguenti comandi:
+
+:* Nel caso si abbiano le cartelle in italiano:
+ $ cd ~/Modelli
+ $ touch "Bash Script"
+:* Nel caso si abbiano le cartelle in inglese:
+ $ cd ~/Templates
+ $ touch "Bash Script"
+: Il comando ''touch'' crea un file vuoto dal nome ''Bash Script'' nella cartella ''Modelli'' (o ''Templates'') della ''home'' dell'utente in uso; le virgolette servono a permettere lo spazio nel nome attribuito al file; in alternativa si potrebbe scrivere:
+
+:* Nel caso si abbiano le cartelle in italiano:
+ $ cd ~/Modelli
+ $ touch Bash\ Script
+:* Nel caso si abbiano le cartelle in inglese:
+ $ cd ~/Templates
+ $ touch Bash\ Script
+: A questo punto possiamo come al solito procedere per via grafica o via terminale, per editare il file appena creato; da terminale ad esempio diamo:
+ $ gedit Bash\ Script
+: verrà quindi aperto il file con ''gedit'' e in esso, a questo punto, scriviamo semplicemente:
+ #!/bin/sh
+: Salviamo il file, che possiamo successivamente anche rendere eseguibile con il comando:
+ $ chmod +x Bash\ Script
+: In questa maniera, nel sottomenu ''Nuovo documento'' avremo a disposizione la possibilità di creare sia un ''Documento vuoto'' sia la base per un ''nuovo script''.
+
+====='''''Utilizzo di nautilus-python e python3-gi'''''=====
+
+: Come anticipa il titolo, in questo caso sarà necessario installare ''nautilus-python'' e ''python3-gi'', insieme alle relative dipendenze per lo scopo. Procediamo quindi da terminale con i seguenti passi:
+
+: '''a'''.
+ $ sudo yum install nautilus-python
+: '''b'''.
+
+: ''python3-gi'', diversamente dal precedente, non è installabile come pacchetto, ma è reperibile sul web a [http://repo.fedoramd.org/mirrors/cygwin/release/GNOME/python-gi/python3-gi/ questo] indirizzo. Scelta la versione più recente, la scarichiamo come archivio ''tar.bz2'' ed estraiamo per via grafica (col doppio click sul file o dal menu contestuale sul file selezionato col ''click dx'') o via termianle col comando:
+ $ tar xvjf python3-gi-3.4.2-2.tar.bz2
+: Otterremo una cartella ''usr'' con all'interno le sottocartelle ''bin'' e ''lib'', per cui procediamo dando il comando per copiare la cartella estratta (''usr'') nella cartella radice (/):
+ $ sudo cp -r ./usr /
+: '''c'''.
+
+: Sul [http://repo.fedoramd.org/mirrors/cygwin/release/GNOME/python-gi/python3-gi/ sito] è riportato quel file [http://repo.fedoramd.org/mirrors/cygwin/release/GNOME/python-gi/python3-gi/setup.hint setup.hint] che indica come requisiti:
+
+: ''requires: libcairo2 libgirepository1.0_1 libglib2.0_0 python3 python-gi-common python3-cairo girepository-GLib2.0''
+
+: Per conoscere i pacchetti che forniscono quelle dipendenze, diamo il comando:
+ $ sudo yum provides libcairo2 libgirepository1.0_1 libglib2.0_0 python3 python-gi-common python3-cairo girepository-GLib2.0
+: L'output del comando fornirà i pacchetti ''python3-3.3.0-1.fc18.i686'', ''python3-cairo-1.10.0-4.fc18.i686'' e ''python3-3.3.0-1.fc18.i686'', che andremo di seguito ad installare con i comandi:
+ $ sudo yum install python3-3.3.0-1.fc18.i686
+ $ sudo yum install python3-cairo-1.10.0-4.fc18.i686
+ $ sudo yum install python3-3.3.0-1.fc18.i686
+: '''d'''.
+
+: Sempre da terminale, andiamo a crearci una cartella con al suo interno un file nel seguente percorso:
+ $ mkdir -p ~/.local/share/nautilus-python/extensions
+ $ gedit ~/.local/share/nautilus-python/extensions/nautilus-acme.py
+: Apertosi il file ''nautilus-acme.py'' con ''gedit'', andiamo a copiare ed incollare in esso il seguente codice scritto in python:
+ from os.path import join
+ from gi.repository import GObject, Nautilus
+ 
+ class Acme(GObject.GObject, Nautilus.MenuProvider):
+    def __init__(self):
+        pass
+ 
+    def new_empty_file(self, menu, folder):
+        with open(join(folder.get_uri().replace("file://", ""), "Nuovo documento"), 'w') as f:
+            f.write('')
+        return
+ 
+    def get_background_items(self, window, current_folder):
+        AcmeMenuItem = Nautilus.MenuItem(
+            name="Acme::NewEmptyFile",
+            label="Crea file vuoto",
+            tip="Crea un nuovo file vuoto"
+        )
+ 
+        AcmeMenuItem.connect('activate', self.new_empty_file, current_folder)
+ 
+        return [AcmeMenuItem]
+: '''e'''.
+
+: Andiamo quindi a salvare e chiudere il file ''nautilus-acme.py'', riavviando poi Nautilus sempre da ''terminale'' col comando:
+ $ nautilus -q
+: In questa maniera si vedrà comparire, nel menu contestuale del ''tasto dx'' del mouse all'interno di Nautilus, la voce ''Crea file vuoto'', che genererà un file vuoto ''Nuovo documento'' nel percorso in cui si è.
 
 == Riferimenti ==
 
