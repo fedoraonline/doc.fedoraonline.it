@@ -245,8 +245,8 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 : '''f'''.
 
-: Se si volesse eliminare questa voce, basta semplicemente cestinare al cartella creata con all'interno il file e riavviare Nautilus, ovvero dare i comandi:
- $ rm -r ~/.local/share/nautilus-python/extensions
+: Se si volesse eliminare questa voce, basta semplicemente cestinare il file ''nautilus-acme.py'' e riavviare Nautilus, ovvero dare i comandi:
+ $ rm ~/.local/share/nautilus-python/extensions/nautilus-acme.py
  $ nautilus -q
 
 == Riferimenti ==
