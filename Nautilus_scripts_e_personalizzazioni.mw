@@ -207,6 +207,12 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
  $ nautilus -q
 : In questa maniera si vedrà comparire, nel menu contestuale del ''tasto dx'' del mouse all'interno di Nautilus, la voce ''Crea file vuoto'', che genererà un file vuoto ''Nuovo documento'' nel percorso in cui si è.
 
+: '''f'''.
+
+: Se si volesse eliminare questa voce, basta semplicemente cestinare al cartella creata con all'interno il file e riavviare Nautilus, ovvero dare i comandi:
+ $ rm -r ~/.local/share/nautilus-python/extensions
+ $ nautilus -q
+
 == Riferimenti ==
 
 * [http://en.wikipedia.org/wiki/Nautilus_(file_manager) Nautilus su Wikipedia]
