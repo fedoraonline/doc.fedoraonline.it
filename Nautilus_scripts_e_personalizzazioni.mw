@@ -65,7 +65,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 ===='''''nautilus-open-terminal'''''====
 : Installabile per via grafica tramite il gestore di pacchetti, oppure tramite terminale attraverso il comando:
  $ sudo yum install nautilus-open-terminal
-: questa estensione fornisce l'opzione di apertura del percorso corrente di Nautilus in un terminale, al ''click dx'' del mouse (''figura 10''), una possibilità che ritengo molto utile, da integrare volendo con quella che segue.
+: questa estensione fornisce l'opzione di apertura del percorso corrente di Nautilus in un terminale, al ''click dx'' del mouse ([[media:nautilus-open-terminal-fig_10.png|''figura 10'']]), una possibilità che ritengo molto utile, da integrare volendo con quella che segue.
 
 : [[File:nautilus-open-terminal-fig_10.png|thumb|center|420px|'''Figura 10.''' Estensione ''nautilus-open-terminal'']]
 
