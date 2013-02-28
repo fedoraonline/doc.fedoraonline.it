@@ -96,7 +96,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 : Tutto ciò non è stato personalmente testato, in quanto per la masterizzazione preferisco usare programmi appositi, come ''Brasero'', ma lo riporto qui come informazione.
 
 ===='''''nautilus-sendto'''''====
-: Questa estensione fa comparire, nel menu contestuale di Nautilus, una voce per l'invio rapido di files attraverso gli accounts e-mail di [http://it.wikipedia.org/wiki/Evolution_(software)|Evolution] o [http://it.wikipedia.org/wiki/Mozilla_Thunderbird|Thunderbird], oppure ai contatti dei programmi di messaggistica istantanea come [http://it.wikipedia.org/wiki/Pidgin_(software)|Pidgin], [http://it.wikipedia.org/wiki/Gajim|Gajim], ecc.
+: Questa estensione fa comparire, nel menu contestuale di Nautilus, una voce per l'invio rapido di files attraverso gli accounts e-mail di [http://it.wikipedia.org/wiki/Evolution_(software)| Evolution] o [http://it.wikipedia.org/wiki/Mozilla_Thunderbird| Thunderbird], oppure ai contatti dei programmi di messaggistica istantanea come [http://it.wikipedia.org/wiki/Pidgin_(software)| Pidgin], [http://it.wikipedia.org/wiki/Gajim| Gajim], ecc.
 
 : La installiamo da terminale con il comando:
  $ sudo yum install nautilus-sendto
