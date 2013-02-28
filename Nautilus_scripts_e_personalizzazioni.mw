@@ -76,7 +76,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
  $ sudo yum install nautilus-image-converter
 
 ===='''''nautilus-cd-burner'''''====
-: Permette di masterizzare su CD o DVD dei files trascinati e rilasicati (''drag-&-dropped'') nella cartella ''burn:///'' aperta in Nautilus, con successiva pressione del pulsante ''Scrivi su disco''.
+: Permette di masterizzare su CD o DVD dei files trascinati e rilasciati (''drag-&-dropped'') nella cartella ''burn:///'' aperta in Nautilus, con successiva pressione del pulsante ''Scrivi su disco''.
 
 : La installiamo da terminale con il comando:
  $ sudo yum install nautilus-cd-burner
@@ -88,7 +88,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 :* impossibilità di masterizzare un CD audio;
 :* impossibilità di ordinare le tracce.
 
-: Tutto ciò non è stato personalmente testato, in quanto preferisco usare programmi appositi per la masterizzazione, come ''Brasero'', ma lo riporto qui come informazione.
+: Tutto ciò non è stato personalmente testato, in quanto per la masterizzazione preferisco usare programmi appositi, come ''Brasero'', ma lo riporto qui come informazione.
 
 ===='''''nautilus-sendto'''''====
 : Questa estensione fa comparire, nel menu contestuale di Nautilus, una voce per l'invio rapido di files attraverso gli accounts e-mail di Evolution o Thunderbird, oppure ai contatti dei programmi di messaggistica istantanea come Pidgin, Gajim, ecc.
