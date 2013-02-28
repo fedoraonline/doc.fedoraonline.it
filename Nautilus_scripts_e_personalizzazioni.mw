@@ -136,7 +136,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 : Nella [[media:fig_15-nautilus-action_esecuzione.png|figura 15]] è rappresentata la scheda ''Esecuzione'', entro cui si indica il tipo di esecuzione del comando scelto nella scheda ''Comando'' precedente.
 
-: Le ''figure 16-22'', in questo caso, lasciano i valori predefiniti; l'[[#Esempio_-_Aprire_un_pdf_con_Adobe_Reader| esempio che segue]], diversamente, vedrà una specifica per la scheda ''Nomi di base''.
+: Le ''figure 16-22'', in questo caso, lasciano i valori predefiniti; l'[[#Esempio_-_Aprire_un_pdf_con_Adobe_Reader|esempio che segue]], diversamente, vedrà una specifica per la scheda ''Nomi di base''.
 
 : Salvato quindi il tutto con l'apposito pulsante in alto a sx, possiamo chiudere ''nautilus-action''. Riavviamo quindi Nautilus con il comando ''Alt+F2'' seguito dalla digitazione del comando ''nautilus -q'' (''invio''), e riaprendo Nautilus avremo la comparsa della voce ''Nuovo lanciatore'' nel sottomenu ''Nautilus-Actions actions'', come mostrato in [[media:fig_23-nautilus-action_nuovo_lanciatore.png|figura 23]].
 
