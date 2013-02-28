@@ -161,24 +161,24 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 :* Nel caso si abbiano le cartelle in italiano:
  $ cd ~/Modelli
- $ touch "Bash Script"
+ $ touch "Bash script"
 :* Nel caso si abbiano le cartelle in inglese:
  $ cd ~/Templates
- $ touch "Bash Script"
+ $ touch "Bash script"
 : Il comando ''touch'' crea un file vuoto dal nome ''Bash Script'' nella cartella ''Modelli'' (o ''Templates'') della ''home'' dell'utente in uso; le virgolette servono a permettere lo spazio nel nome attribuito al file; in alternativa si potrebbe scrivere:
 
 :* Nel caso si abbiano le cartelle in italiano:
  $ cd ~/Modelli
- $ touch Bash\ Script
+ $ touch Bash\ script
 :* Nel caso si abbiano le cartelle in inglese:
  $ cd ~/Templates
- $ touch Bash\ Script
+ $ touch Bash\ script
 : A questo punto possiamo come al solito procedere per via grafica o via terminale, per editare il file appena creato; da terminale ad esempio diamo:
- $ gedit Bash\ Script
+ $ gedit Bash\ script
 : verrà quindi aperto il file con ''gedit'' e in esso, a questo punto, scriviamo un semplice [http://it.wikipedia.org/wiki/Shabang| shebang]:
  #!/bin/sh
 : Salviamo il file, che possiamo successivamente anche rendere eseguibile con il comando:
- $ chmod +x Bash\ Script
+ $ chmod +x Bash\ script
 : In questa maniera, nel sottomenu ''Nuovo documento'' avremo a disposizione la possibilità di creare sia un ''Documento vuoto'' sia la base per un ''nuovo script'' ([[media:fig_28-cartella_Modelli-Nuovo_documento.png|figura 28]]).
 
 [[File:fig_28-cartella_Modelli-Nuovo_documento.png|thumb|center|420px|'''Figura 28.''' Cartella ''Modelli'' (o ''Templates'') - ''Nuovo Documento vuoto'']]
