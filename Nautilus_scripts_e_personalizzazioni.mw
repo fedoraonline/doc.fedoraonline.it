@@ -67,6 +67,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 ===='''''nautilus-terminal'''''====
 : Dopo la sua installazione e il riavvio di Nautilus con ''Alt+F2'' seguito dall'immissione del comando ''nautilus -q'' (''invio''), aprendo Nautilus si vedrà un terminale integrato in maniera permanente che segue il percorso di navigazione tra le cartelle (''figura 11''). Versioni precedenti di questa estensione prevedevano la presenza di un pulsante per chiudere ed aprire il ''terminale integrato'' al click, ma da diverso tempo questa che era un'opzione tra le configurazioni dell'estensione è stata sostituita dalla pressione del ''tasto F4'', come si può leggere sulla sua [http://projects.flogisoft.com/nautilus-terminal/ ''home page''].
+
 : [[File:nautilus-terminal-fig_11.png|thumb|center|420px|'''Figura 11.''' Estensione ''nautilus-terminal'']]
 
 ===='''''nautilus-image-converter'''''====
