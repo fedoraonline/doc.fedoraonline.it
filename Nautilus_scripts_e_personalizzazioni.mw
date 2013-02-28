@@ -73,11 +73,11 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
  $ sudo yum install nautilus-action nautilus-action-docs nautilus-extensions
 
-Fatto ciò, il programma viene lanciato col comando:
+: Fatto ciò, il programma viene lanciato col comando:
 
  $ nautilus-actions-config-tool
 
-Passiamo quindi ora ad analizzarlo riportando due esempi pratici:
+: Passiamo quindi ora ad analizzarlo riportando due esempi pratici:
 ====='''''Esempio - Reintegrazione della voce "Nuovo lanciatore"'''''=====
 : Da un po' di tempo è scomparsa la possibilità che veniva offerta di creare ''nuovi lanciatori'' di eseguibili sul ''Desktop'' (o ''Scrivania''), ma questo non significa che non fosse sempre possibile farlo tramite ''terminale''. Anche in questo caso, ''nautilus-action'' offre la possibilità di creare una scorciatoia nel menu del ''click dx'' del mouse all'interno di Nautilus, con la possibilità di creare un ''nuovo lanciatore'' non soltanto sul ''Desktop'' ma in qualunque cartella in cui si abbiano i permessi di scrittura o, facendo uso del citato comando [[#beesu| ''beesu'']], direttamente in qualunque cartella di sistema, come ad esempio ''/usr/share/applications'', cui fa riferimento la ''Dash'' di ''gnome-shell''. Vediamo quindi come procedere, aiutandoci con gli ''screenshots'':
 
