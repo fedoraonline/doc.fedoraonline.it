@@ -134,7 +134,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 : Nella [[media:fig_13-nautilus-action_comando_beesu.png|figura 13]] è mostrata la scheda ''Comando'', dov'è possibile indicare il comando che, in questo caso specifico, permetterà di creare un nuovo lanciatore in una qualunque cartella di sistema, grazie ai diritti amministrativi forniti dal comando ''beesu''; in alternativa, la [[media:fig_14-nautilus-action_comando_nobeesu.png|figura 14]] mostra lo stesso comando ma senza ''beesu'', con la possibilità quindi di creare il lanciatore solo nell'ambito della ''home'' dell'utente in uso.
 
-: Nella [[media:fig_15-nautilus-action_esecuzione.png|figura 15]] è rappresentata la scheda ''Esecuzione'', entro cui si indica il tipo di esecuzione del comando scelto nella scheda ''Comando'' precedente.
+: Nella [[media:fig_15-nautilus-action_esecuzione.png|figura 15]] è rappresentata la scheda ''Esecuzione'', dove andrà indicato il tipo di esecuzione del comando scelto nella scheda ''Comando'' precedente.
 
 : Le ''figure 16-22'', in questo caso, lasciano i valori predefiniti; l'[[#Esempio_-_Aprire_un_pdf_con_Adobe_Reader|esempio che segue]], diversamente, vedrà una specifica per la scheda ''Nomi di base''.
 
