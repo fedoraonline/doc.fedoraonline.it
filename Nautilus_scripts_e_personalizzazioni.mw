@@ -69,9 +69,11 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 [[File:nautilus-terminal-fig_11.png|thumb|center|420px|'''Figura 11.''' Estensione ''nautilus-terminal'']]
 
 ===='''''nautilus-action'''''====
-: <...scrivere qui un'introduzione alla sotto-sottosezione, che poi introduce all'esempio...>
+: Questa estensione offre invece la possibilità di aggiungere nuove azioni al menu del ''click dx'' del mouse in Nautilus, attraverso comandi o scripts da lanciare da un apposito sottomenu che è possibile anche personalizzare filtrandone la sua visualizzazione, rendendola permanente (come nel ''primo esempio'' che segue) o visibile alla sola selezione di una data estensione di file (come nel ''secondo esempio'' che segue). Passiamo dunque a due esempi pratici:
 ====='''''Esempio - Reintegrazione della voce "Nuovo lanciatore"'''''=====
 : <...da scrivere (''Crea nuovo lanciatore''): vedi topic...>
+====='''''Esempio - Aprire un pdf con Adobe Reader'''''=====
+: Ho trovato necessaria l'installazione di ''Adobe Reader'' sotto Linux per la visualizzazione di oggetti ''3D'' nel formato ''U3D'', inseriti ad esempio tramite ''LaTeX'' mediante i pacchetti ''movie15'' o ''media9'', ma - non so se è stato solo un [http://forum.fedoraonline.it/viewtopic.php?id=16556 mio problema] - ho notato che, dopo installazione, ''Adobe Reader'' non compare nell'elenco dei programmi proposti per l'apertura di un determinato file, in questo caso un ''pdf'', per renderlo ad esempio anche ''predefinito'', per cui ho personalmente risolto aggiungendo una voce apposita al menu del ''click dx'' di Nautilus attraverso ''nautilus-action'', voce che, in questo caso, diversamente dal [[#|precedente esempio]], non voglio rendere permanente nell'elenco del menu, ma visibile solo quando si esegue il ''click dx'' su un file con estensione pdf; vediamo come:...>
 
 ===Implementazioni per la versione 3.6 di Nautilus===
 : <...scrivere qui un'introduzione alla sezione con riferimento all'argomento del topic e quindi alla successiva sotto-sottosezione...>
