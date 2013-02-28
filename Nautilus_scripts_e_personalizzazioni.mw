@@ -69,7 +69,15 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 [[File:nautilus-terminal-fig_11.png|thumb|center|420px|'''Figura 11.''' Estensione ''nautilus-terminal'']]
 
 ===='''''nautilus-action'''''====
-: Questa estensione offre invece la possibilità di aggiungere nuove azioni al menu del ''click dx'' del mouse in Nautilus, attraverso comandi o scripts da lanciare da un apposito sottomenu che è possibile anche personalizzare filtrandone la sua visualizzazione, rendendola permanente (come nel ''primo esempio'' che segue) o visibile alla sola selezione di una data estensione di file (come nel ''secondo esempio'' che segue). Passiamo dunque a due esempi pratici:
+: Questa estensione offre invece la possibilità di aggiungere nuove azioni al menu del ''click dx'' del mouse in Nautilus, attraverso comandi o scripts da lanciare da un apposito sottomenu che è possibile anche personalizzare filtrandone la sua visualizzazione, rendendola permanente (come nel ''primo esempio'' che segue) o visibile alla sola selezione di una data estensione di file (come nel ''secondo esempio'' che segue). Prima di passare agli esempi pratici, dobbiamo ovviamente installare prima la presente estensione attraverso il pacchetto ''nautilus-action'' a cui poter aggiungere, volendo, anche la relativa documentazione con il pacchetto ''nautilus-action-docs''; personalmente ho anche aggiunto ''nautilus-extensions'', un pacchetto che provvede alle librerie usate dalle estensioni di Nautilus. Tutto ciò può essere fatto come al solito per via grafica (tramite il gestore dei pacchetti) o via terminale, attraverso il comando:
+
+ $ sudo yum install nautilus-action nautilus-action-docs nautilus-extensions
+
+Fatto ciò, il programma viene lanciato col comando:
+
+ $ nautilus-actions-config-tool
+
+Passiamo quindi ora ad analizzarlo riportando due esempi pratici:
 ====='''''Esempio - Reintegrazione della voce "Nuovo lanciatore"'''''=====
 : Da un po' di tempo è scomparsa la possibilità che veniva offerta di creare ''nuovi lanciatori'' di eseguibili sul ''Desktop'' (o ''Scrivania''), ma questo non significa che non fosse sempre possibile farlo tramite ''terminale''. Anche in questo caso, ''nautilus-action'' offre quindi la possibilità di creare una scorciatoia nel menu del ''click dx'' del mouse all'interno di Nautilus, con la possibilità quindi di creare un ''nuovo lanciatore'' non soltanto sul ''Desktop'' ma in qualunque cartella in cui si abbiano i permessi di scrittura o, facendo uso del citato comando [[#beesu| ''beesu'']], direttamente in qualunque cartella di sistema, come ad esempio ''/usr/share/applications'', cui fa riferimento la ''Dash'' di ''gnome-shell''. Vediamo quindi come procedere, aiutandoci con gli ''screenshots'':
 
@@ -86,7 +94,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 [[File:grv_image_spacer_5px.png]]
 [[File:fig_22-nautilus-action_proprietà.png|thumb|center|420px|'''Figura 22.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Proprietà]]
 
-Aperto il programma Nella scheda La figura 12
+Lanciato il programma con l'anzidetto comando ''nautilus-actions-config-tool'', aggiungiamo una nuova voce cliccando sul + inscritto nel rettangolo in alto a sinistra, che attiverà la scheda ''Azione'', dove sarà possibile impostare la scelta se visualizzare la voce alla selezione di un file e/o al click dx di uno spazio vuoto di una cartella di Nautilus, come mostrato in [[media:fig_12-nautilus-action_azione.png|figura 12]]
 
 ====='''''Esempio - Aprire un pdf con Adobe Reader'''''=====
 : Nonostante Linux offra lettori di ''pdf'' leggeri e veloci come ''Evince'', ho trovato necessaria anche l'installazione di ''Adobe Reader'' per la visualizzazione di oggetti ''3D'' nel formato ''U3D'', inseriti nel ''pdf'' per esempio tramite ''LaTeX'', mediante i pacchetti ''movie15'' o ''media9'', ma - non so se è stato solo un [http://forum.fedoraonline.it/viewtopic.php?id=16556 mio problema] - ho notato che, dopo installazione, ''Adobe Reader'' non compare nell'elenco dei programmi proposti per l'apertura di un determinato file (in questo caso il mio ''pdf'') per renderlo ad esempio anche ''predefinito'', per cui ho personalmente risolto aggiungendo una voce apposita al menu del ''click dx'' di Nautilus attraverso ''nautilus-action'', voce che, in questo caso, diversamente dal [[#Esempio_-_Reintegrazione_della_voce_.22Nuovo_lanciatore.22|precedente esempio]], non voglio rendere permanente, ma visibile solo quando si esegue il ''click dx'' su un file con estensione ''pdf''; vediamo come:...>
