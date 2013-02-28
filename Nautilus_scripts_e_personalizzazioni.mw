@@ -69,6 +69,33 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 : Dopo la sua installazione e il riavvio di Nautilus con ''Alt+F2'' seguito dall'immissione del comando ''nautilus -q'' (''invio''), aprendo Nautilus si vedrà un terminale integrato in maniera permanente che segue il percorso di navigazione tra le cartelle (''figura 11''). Versioni precedenti di questa estensione prevedevano la presenza di un pulsante per chiudere ed aprire il ''terminale integrato'' al click, ma da diverso tempo questa che era un'opzione tra le configurazioni dell'estensione è stata sostituita dalla pressione del ''tasto F4'', come si può leggere sulla sua [http://projects.flogisoft.com/nautilus-terminal/ ''home page''].
 : [[File:nautilus-terminal-fig_11.png|thumb|center|420px|'''Figura 11.''' Estensione ''nautilus-terminal'']]
 
+===='''''nautilus-image-converter'''''====
+: Utile per ruotare e ridimensionare al volo files immagine col semplice ''click dx'' sull'immagine selezionata e scelta della voce relativa nel menu contestuale.
+
+: Potremo installare questa estensione da terminale con il comando:
+ $ sudo yum install nautilus-image-converter
+
+===='''''nautilus-cd-burner'''''====
+: Permette di masterizzare su CD o DVD dei files trascinati e rilasicati (''drag-&-dropped'') nella cartella ''burn:///'' aperta in Nautilus, con successiva pressione del pulsante ''Scrivi su disco''.
+
+: La installiamo da terminale con il comando:
+ $ sudo yum install nautilus-cd-burner
+
+: Sembra che ci siano però alcune funzionalità mancanti quali:
+
+:* impossibilità di chiudere il disco;
+:* impossibilità di aggiungere una sessione ad un disco aperto;
+:* impossibilità di masterizzare un CD audio;
+:* impossibilità di ordinare le tracce.
+
+: Tutto ciò non è stato personalmente testato, in quanto preferisco usare programmi appositi per la masterizzazione, come ''Brasero'', ma lo riporto qui come informazione.
+
+===='''''nautilus-sendto'''''====
+: Questa estensione fa comparire, nel menu contestuale di Nautilus, una voce per l'invio rapido di files attraverso gli accounts e-mail di Evolution o Thunderbird, oppure ai contatti dei programmi di messaggistica istantanea come Pidgin, Gajim, ecc.
+
+: La installiamo da terminale con il comando:
+ $ sudo yum install nautilus-sendto
+
 ===='''''nautilus-action'''''====
 : Questa estensione offre invece la possibilità di aggiungere nuove azioni al menu del ''click dx'' del mouse in Nautilus, attraverso comandi o scripts da lanciare da un apposito sottomenu che è possibile anche personalizzare filtrandone la sua visualizzazione, rendendola permanente (come nel ''primo esempio'' che segue) o visibile alla sola selezione di una data estensione di file (come nel ''secondo esempio'' che segue). Prima di passare agli esempi pratici, dobbiamo ovviamente installare prima la presente estensione attraverso il pacchetto ''nautilus-action'' a cui poter aggiungere, volendo, anche la relativa documentazione con il pacchetto ''nautilus-action-docs''; personalmente ho anche aggiunto ''nautilus-extensions'', un pacchetto che provvede alle librerie usate dalle estensioni di Nautilus. Tutto ciò può essere fatto come al solito per via grafica (tramite il gestore dei pacchetti) o via terminale, attraverso il comando:
 
