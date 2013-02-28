@@ -79,22 +79,33 @@ Fatto ciò, il programma viene lanciato col comando:
 
 Passiamo quindi ora ad analizzarlo riportando due esempi pratici:
 ====='''''Esempio - Reintegrazione della voce "Nuovo lanciatore"'''''=====
-: Da un po' di tempo è scomparsa la possibilità che veniva offerta di creare ''nuovi lanciatori'' di eseguibili sul ''Desktop'' (o ''Scrivania''), ma questo non significa che non fosse sempre possibile farlo tramite ''terminale''. Anche in questo caso, ''nautilus-action'' offre quindi la possibilità di creare una scorciatoia nel menu del ''click dx'' del mouse all'interno di Nautilus, con la possibilità quindi di creare un ''nuovo lanciatore'' non soltanto sul ''Desktop'' ma in qualunque cartella in cui si abbiano i permessi di scrittura o, facendo uso del citato comando [[#beesu| ''beesu'']], direttamente in qualunque cartella di sistema, come ad esempio ''/usr/share/applications'', cui fa riferimento la ''Dash'' di ''gnome-shell''. Vediamo quindi come procedere, aiutandoci con gli ''screenshots'':
+: Da un po' di tempo è scomparsa la possibilità che veniva offerta di creare ''nuovi lanciatori'' di eseguibili sul ''Desktop'' (o ''Scrivania''), ma questo non significa che non fosse sempre possibile farlo tramite ''terminale''. Anche in questo caso, ''nautilus-action'' offre la possibilità di creare una scorciatoia nel menu del ''click dx'' del mouse all'interno di Nautilus, con la possibilità di creare un ''nuovo lanciatore'' non soltanto sul ''Desktop'' ma in qualunque cartella in cui si abbiano i permessi di scrittura o, facendo uso del citato comando [[#beesu| ''beesu'']], direttamente in qualunque cartella di sistema, come ad esempio ''/usr/share/applications'', cui fa riferimento la ''Dash'' di ''gnome-shell''. Vediamo quindi come procedere, aiutandoci con gli ''screenshots'':
 
-[[File:fig_12-nautilus-action_azione.png|thumb|left|420px|'''Figura 12.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Azione]]
+: [[File:fig_12-nautilus-action_azione.png|thumb|left|420px|'''Figura 12.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Azione]]
 [[File:fig_13-nautilus-action_comando_beesu.png|thumb|right|420px|'''Figura 13.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Comando con ''beesu'']]
-[[File:fig_14-nautilus-action_comando_nobeesu.png|thumb|left|420px|'''Figura 14.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Comando senza ''beesu'']]
+: [[File:fig_14-nautilus-action_comando_nobeesu.png|thumb|left|420px|'''Figura 14.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Comando senza ''beesu'']]
 [[File:fig_15-nautilus-action_esecuzione.png|thumb|right|420px|'''Figura 15.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Esecuzione]]
-[[File:fig_16-nautilus-action_nomi_di_base.png|thumb|left|420px|'''Figura 16.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Nomi di base]]
+: [[File:fig_16-nautilus-action_nomi_di_base.png|thumb|left|420px|'''Figura 16.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Nomi di base]]
 [[File:fig_17-nautilus-action_tipi_mime.png|thumb|right|420px|'''Figura 17.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Tipi MIME]]
-[[File:fig_18-nautilus-action_cartelle.png|thumb|left|420px|'''Figura 18.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Cartelle]]
+: [[File:fig_18-nautilus-action_cartelle.png|thumb|left|420px|'''Figura 18.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Cartelle]]
 [[File:fig_19-nautilus-action_schemi.png|thumb|right|420px|'''Figura 19.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Schemi]]
-[[File:fig_20-nautilus-action_capacità.png|thumb|left|420px|'''Figura 20.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Capacità]]
+: [[File:fig_20-nautilus-action_capacità.png|thumb|left|420px|'''Figura 20.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Capacità]]
 [[File:fig_21-nautilus-action_ambiente.png|thumb|right|420px|'''Figura 21.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Ambiente]]
+: [[File:fig_22-nautilus-action_proprietà.png|thumb|left|420px|'''Figura 22.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Proprietà]]
+[[File:fig_23-nautilus-action_nuovo_lanciatore.png|thumb|right|420px|'''Figura 23.''' ''nautilus-action'' - ''Nuovo lanciatore'']]
 [[File:grv_image_spacer_5px.png]]
-[[File:fig_22-nautilus-action_proprietà.png|thumb|center|420px|'''Figura 22.''' ''nautilus-action'' - ''Nuovo lanciatore'' - Proprietà]]
+: Lanciato il programma con l'anzidetto comando ''nautilus-actions-config-tool'', aggiungiamo una nuova voce cliccando sul + inscritto nel rettangolo in alto a sinistra, che attiverà la scheda ''Azione'' ([[media:fig_12-nautilus-action_azione.png|figura 12]]), dove sarà possibile:
+:* impostare il nome della voce da far comparire nel menu;
+:* scegliere se visualizzare la voce alla selezione di un file e/o al ''click dx'' in uno spazio vuoto della cartella di Nautilus, nel solo menu contestuale e/o nel menu che compare alla pressione del pulsante in alto a dx di Nautilus (dove compaiono ad esempio anche le voci per l'apertura di una nuova scheda);
+:* scegliere un'icona da associare al comando da mostrare nel menu.
 
-Lanciato il programma con l'anzidetto comando ''nautilus-actions-config-tool'', aggiungiamo una nuova voce cliccando sul + inscritto nel rettangolo in alto a sinistra, che attiverà la scheda ''Azione'', dove sarà possibile impostare la scelta se visualizzare la voce alla selezione di un file e/o al click dx di uno spazio vuoto di una cartella di Nautilus, come mostrato in [[media:fig_12-nautilus-action_azione.png|figura 12]]
+: Nella [[media:fig_13-nautilus-action_comando_beesu.png|figura 13]] è mostrata la scheda ''Comando'', dov'è possibile indicare il comando che, in questo caso specifico, permetterà di creare un nuovo lanciatore in una qualunque cartella di sistema, grazie ai diritti amministrativi forniti dal comando ''beesu''; in alternativa, la [[media:fig_14-nautilus-action_comando_nobeesu.png|figura 14]] mostra lo stesso comando ma senza ''beesu'', con la possibilità quindi di creare il lanciatore solo nell'ambito della ''home'' dell'utente in uso.
+
+: Nella [[media:fig_15-nautilus-action_esecuzione.png|figura 15]] è rappresentata la scheda ''Esecuzione'', entro cui si indica il tipo di esecuzione del comando scelto nella scheda ''Comando'' precedente.
+
+: Le ''figure 16-22'', in questo caso, lasciano i valori predefiniti; l'[[#Esempio_-_Aprire_un_pdf_con_Adobe_Reader| esempio che segue]], diversamente, vedrà una specifica per la scheda ''Nomi di base''.
+
+: Salvato quindi il tutto con l'apposito pulsante in alto a sx, possiamo chiudere ''nautilus-action''. Riavviamo quindi Nautilus con il comando ''Alt+F2'' seguito dalla digitazione del comando ''nautilus -q'' (''invio''), e riaprendo Nautilus avremo la comparsa della voce Nuovo lanciatore nel sottomenu
 
 ====='''''Esempio - Aprire un pdf con Adobe Reader'''''=====
 : Nonostante Linux offra lettori di ''pdf'' leggeri e veloci come ''Evince'', ho trovato necessaria anche l'installazione di ''Adobe Reader'' per la visualizzazione di oggetti ''3D'' nel formato ''U3D'', inseriti nel ''pdf'' per esempio tramite ''LaTeX'', mediante i pacchetti ''movie15'' o ''media9'', ma - non so se è stato solo un [http://forum.fedoraonline.it/viewtopic.php?id=16556 mio problema] - ho notato che, dopo installazione, ''Adobe Reader'' non compare nell'elenco dei programmi proposti per l'apertura di un determinato file (in questo caso il mio ''pdf'') per renderlo ad esempio anche ''predefinito'', per cui ho personalmente risolto aggiungendo una voce apposita al menu del ''click dx'' di Nautilus attraverso ''nautilus-action'', voce che, in questo caso, diversamente dal [[#Esempio_-_Reintegrazione_della_voce_.22Nuovo_lanciatore.22|precedente esempio]], non voglio rendere permanente, ma visibile solo quando si esegue il ''click dx'' su un file con estensione ''pdf''; vediamo come:...>
