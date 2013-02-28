@@ -151,7 +151,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 ====='''''Utilizzo di nautilus-python e python3-gi'''''=====
 
-: Come anticipa il titolo, in questo caso sarà necessario installare ''nautilus-python'' e ''python3-gi'', insieme alle relative dipendenze per lo scopo. Procediamo quindi da terminale con i seguenti passi:
+: Come anticipa il titolo, in questo caso (alterativo al precedente) sarà necessario installare ''nautilus-python'' e ''python3-gi'', insieme alle relative dipendenze per lo scopo. Procediamo quindi da terminale con i seguenti passi:
 
 : '''a'''.
  $ sudo yum install nautilus-python
