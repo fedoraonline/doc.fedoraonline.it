@@ -175,7 +175,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
  $ touch Bash\ Script
 : A questo punto possiamo come al solito procedere per via grafica o via terminale, per editare il file appena creato; da terminale ad esempio diamo:
  $ gedit Bash\ Script
-: verrà quindi aperto il file con ''gedit'' e in esso, a questo punto, scriviamo semplicemente:
+: verrà quindi aperto il file con ''gedit'' e in esso, a questo punto, scriviamo un semplice [http://it.wikipedia.org/wiki/Shabang| shebang]:
  #!/bin/sh
 : Salviamo il file, che possiamo successivamente anche rendere eseguibile con il comando:
  $ chmod +x Bash\ Script
