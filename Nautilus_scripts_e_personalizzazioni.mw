@@ -181,6 +181,8 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
  $ chmod +x Bash\ Script
 : In questa maniera, nel sottomenu ''Nuovo documento'' avremo a disposizione la possibilità di creare sia un ''Documento vuoto'' sia la base per un ''nuovo script''.
 
+[[File:fig_28-cartella_Modelli-Nuovo_documento.png|thumb|center|420px|'''Figura 28.''' Cartella ''Modelli'' (o ''Templates'') - ''Nuovo Documento vuoto'']]
+
 ====='''''Utilizzo di nautilus-python e python3-gi'''''=====
 
 : Come anticipa il titolo, in questo caso (alterativo al precedente) sarà necessario installare ''nautilus-python'' e ''python3-gi'', insieme alle relative dipendenze per lo scopo. Procediamo quindi da terminale con i seguenti passi:
