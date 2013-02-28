@@ -73,18 +73,18 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 ====='''''Esempio - Reintegrazione della voce "Nuovo lanciatore"'''''=====
 : Da un po' di tempo è scomparsa la possibilità che veniva offerta di creare ''nuovi lanciatori'' di eseguibili sul ''Desktop'' (o ''Scrivania''), ma questo non significa che non fosse sempre possibile farlo tramite ''terminale''. Anche in questo caso, ''nautilus-action'' offre quindi la possibilità di creare una scorciatoia nel menu del ''click dx'' del mouse all'interno di Nautilus, con la possibilità quindi di creare un ''nuovo lanciatore'' non soltanto sul ''Desktop'' ma in qualunque cartella in cui si abbiano i permessi di scrittura o, facendo uso del citato comando [[#beesu| ''beesu'']], direttamente in qualunque cartella di sistema, come ad esempio ''/usr/share/applications'', cui fa riferimento la ''Dash'' di ''gnome-shell''. Vediamo quindi come procedere, aiutandoci con gli ''screenshots'':
 
-[[File:fig_12-nautilus-action_azione.png|thumb|left|420px|'''Figura 12.''' ''nautilus-action'' - Crea nuovo lanciatore - Azione]]
-[[File:fig_13-nautilus-action_comando_beesu.png|thumb|right|420px|'''Figura 13.''' ''nautilus-action'' - Crea nuovo lanciatore - Comando con ''beesu'']]
-[[File:fig_14-nautilus-action_comando_nobeesu.png|thumb|left|420px|'''Figura 14.''' ''nautilus-action'' - Crea nuovo lanciatore - Comando senza ''beesu'']]
-[[File:fig_15-nautilus-action_esecuzione.png|thumb|right|420px|'''Figura 15.''' ''nautilus-action'' - Crea nuovo lanciatore - Esecuzione]]
-[[File:fig_16-nautilus-action_nomi_di_base.png|thumb|left|420px|'''Figura 16.''' ''nautilus-action'' - Crea nuovo lanciatore - Nomi di base]]
-[[File:fig_17-nautilus-action_tipi_mime.png|thumb|right|420px|'''Figura 17.''' ''nautilus-action'' - Crea nuovo lanciatore - Tipi MIME]]
-[[File:fig_18-nautilus-action_cartelle.png|thumb|left|420px|'''Figura 18.''' ''nautilus-action'' - Crea nuovo lanciatore - Cartelle]]
-[[File:fig_19-nautilus-action_schemi.png|thumb|right|420px|'''Figura 19.''' ''nautilus-action'' - Crea nuovo lanciatore - Schemi]]
-[[File:fig_20-nautilus-action_capacità.png|thumb|left|420px|'''Figura 20.''' ''nautilus-action'' - Crea nuovo lanciatore - Capacità]]
-[[File:fig_21-nautilus-action_ambiente.png|thumb|right|420px|'''Figura 21.''' ''nautilus-action'' - Crea nuovo lanciatore - Ambiente]]
+[[File:fig_12-nautilus-action_azione.png|thumb|left|420px|'''Figura 12.''' ''nautilus-action'' - Nuovo lanciatore - Azione]]
+[[File:fig_13-nautilus-action_comando_beesu.png|thumb|right|420px|'''Figura 13.''' ''nautilus-action'' - Nuovo lanciatore - Comando con ''beesu'']]
+[[File:fig_14-nautilus-action_comando_nobeesu.png|thumb|left|420px|'''Figura 14.''' ''nautilus-action'' - Nuovo lanciatore - Comando senza ''beesu'']]
+[[File:fig_15-nautilus-action_esecuzione.png|thumb|right|420px|'''Figura 15.''' ''nautilus-action'' - Nuovo lanciatore - Esecuzione]]
+[[File:fig_16-nautilus-action_nomi_di_base.png|thumb|left|420px|'''Figura 16.''' ''nautilus-action'' - Nuovo lanciatore - Nomi di base]]
+[[File:fig_17-nautilus-action_tipi_mime.png|thumb|right|420px|'''Figura 17.''' ''nautilus-action'' - Nuovo lanciatore - Tipi MIME]]
+[[File:fig_18-nautilus-action_cartelle.png|thumb|left|420px|'''Figura 18.''' ''nautilus-action'' - Nuovo lanciatore - Cartelle]]
+[[File:fig_19-nautilus-action_schemi.png|thumb|right|420px|'''Figura 19.''' ''nautilus-action'' - Nuovo lanciatore - Schemi]]
+[[File:fig_20-nautilus-action_capacità.png|thumb|left|420px|'''Figura 20.''' ''nautilus-action'' - Nuovo lanciatore - Capacità]]
+[[File:fig_21-nautilus-action_ambiente.png|thumb|right|420px|'''Figura 21.''' ''nautilus-action'' - Nuovo lanciatore - Ambiente]]
 [[File:grv_image_spacer_5px.png]]
-[[File:fig_22-nautilus-action_proprietà.png|thumb|center|420px|'''Figura 22.''' ''nautilus-action'' - Crea nuovo lanciatore - Proprietà]]
+[[File:fig_22-nautilus-action_proprietà.png|thumb|center|420px|'''Figura 22.''' ''nautilus-action'' - Nuovo lanciatore - Proprietà]]
 
 ====='''''Esempio - Aprire un pdf con Adobe Reader'''''=====
 : Nonostante Linux offra lettori di ''pdf'' leggeri e veloci come ''Evince'', ho trovato necessaria anche l'installazione di ''Adobe Reader'' per la visualizzazione di oggetti ''3D'' nel formato ''U3D'', inseriti nel ''pdf'' per esempio tramite ''LaTeX'', mediante i pacchetti ''movie15'' o ''media9'', ma - non so se è stato solo un [http://forum.fedoraonline.it/viewtopic.php?id=16556 mio problema] - ho notato che, dopo installazione, ''Adobe Reader'' non compare nell'elenco dei programmi proposti per l'apertura di un determinato file (in questo caso il mio ''pdf'') per renderlo ad esempio anche ''predefinito'', per cui ho personalmente risolto aggiungendo una voce apposita al menu del ''click dx'' di Nautilus attraverso ''nautilus-action'', voce che, in questo caso, diversamente dal [[#Esempio_-_Reintegrazione_della_voce_.22Nuovo_lanciatore.22|precedente esempio]], non voglio rendere permanente, ma visibile solo quando si esegue il ''click dx'' su un file con estensione ''pdf''; vediamo come:...>
