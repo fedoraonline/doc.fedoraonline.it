@@ -239,7 +239,9 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
 : Andiamo quindi a salvare e chiudere il file ''nautilus-acme.py'', riavviando poi Nautilus sempre da ''terminale'' col comando:
  $ nautilus -q
-: In questa maniera si vedrà comparire, nel menu contestuale del ''tasto dx'' del mouse all'interno di Nautilus, la voce ''Crea file vuoto'', che genererà un file vuoto ''Nuovo documento'' nel percorso in cui si è.
+: In questa maniera si vedrà comparire, nel menu contestuale del ''tasto dx'' del mouse all'interno di Nautilus, la voce ''Crea file vuoto'', che genererà un file vuoto ''Nuovo documento'' nel percorso in cui si è ([[media:fig_29-nautilus-python-Nuovo_documento.png|figura 29]]).
+
+[[File:fig_29-nautilus-python-Nuovo_documento.png|thumb|center|420px|'''Figura 29.''' ''nautilus-python'' & ''python3-gi'' - ''Nuovo Documento vuoto'']]
 
 : '''f'''.
 
