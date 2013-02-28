@@ -179,7 +179,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
  #!/bin/sh
 : Salviamo il file, che possiamo successivamente anche rendere eseguibile con il comando:
  $ chmod +x Bash\ Script
-: In questa maniera, nel sottomenu ''Nuovo documento'' avremo a disposizione la possibilità di creare sia un ''Documento vuoto'' sia la base per un ''nuovo script''.
+: In questa maniera, nel sottomenu ''Nuovo documento'' avremo a disposizione la possibilità di creare sia un ''Documento vuoto'' sia la base per un ''nuovo script'' ([[media:fig_28-cartella_Modelli-Nuovo_documento.png|figura 28]]).
 
 [[File:fig_28-cartella_Modelli-Nuovo_documento.png|thumb|center|420px|'''Figura 28.''' Cartella ''Modelli'' (o ''Templates'') - ''Nuovo Documento vuoto'']]
 
