@@ -106,7 +106,7 @@ Andiamo ora a vedere alcuni ''programmi'' che permettono di configurare ulterior
 
  $ sudo yum install nautilus-action nautilus-action-docs nautilus-extensions
 
-: Fatto ciò, il programma viene lanciato col comando:
+: Fatto ciò, il programma viene lanciato con il comando:
 
  $ nautilus-actions-config-tool
 
