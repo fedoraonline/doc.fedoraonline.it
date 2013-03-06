@@ -47,7 +47,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=FAD Milan, October 27 2012 - The Event|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|stato=Terminato}}
 {{AggiungiArticolo|fonte=|articolo=Gedit come IDE per sviluppo web|autore=RobertMayr|stato=Terminato}}
-{{AggiungiArticolo|fonte=|articolo=Nautilus scripts e personalizzazioni|autore=RiccardoVolpe|stato=Terminato}}
 {{AggiungiArticolo|fonte=|articolo=Personal Fedora 18 Installation Guide di Mauriat Miranda
 |autore=RobertMayr|stato=InCorso}}
 |}
@@ -84,9 +83,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=15 Altri comandi LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Gedit come IDE per sviluppo web|autore=RobertMayr|rilettore=?|data=20/02/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|rilettore=?|data=20/02/2013|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Nautilus scripts e personalizzazioni|autore=RiccardoVolpe|rilettore=RobertMayr|data=02/03/2013|stato=InCorso}}
 |}
-
 
 [[Categoria:FedoraOnline]]
 
