@@ -356,7 +356,7 @@ Potrebbe essere necessario riavviare Firefox.<br />
 
 ''Per fare l'update:'' se fai l'update del pacchetto JRE, scarica semplicemente il pacchetto RPM e installalo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte. Il comando seguente contiene tutto quello che servirà:
 
- [mirandam@charon Download]$ sudo rpm -ivh jre-7u6-linux-x64.rpm
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u16-linux-x64.rpm
 
 Ulteriori informazioni: [http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html Install Documentation for Linux]
 
@@ -431,13 +431,8 @@ Riavviare Samba per ogni cambiamento a utenti/password od a ''smb.conf'':
 
 Il Firewall di default bloccherà Samba, per permettergli l'accesso digita:
 
- [mirandam@charon ~]$ system-config-firewall
-
-Per abilitare Samba a lavorare attraverso il proprio firewall, bisogna configurare 'Samba' come un 'Servizio fidato' e confermarlo con 'Applica'. In alternativa, e se non si ha accesso a un server grafico bisogna digitare nel terminale:
-
- [mirandam@charon ~]$ sudo system-config-firewall-tui
-
-Per abilitare Samba a lavorare attraverso il proprio firewall, utilizza il tasto <TAB> per scendere fino alla voce ''personalizza''. Nei 'servizi fidati' seleziona 'Samba' e premi il tasto <TAB> fino a poter dare ''OK''.
+ [mirandam@charon ~]$ firewall-config
+Per abilitare Samba a lavorare attraverso il proprio firewall, bisogna configurare 'Samba' come un 'Servizio fidato'. Per farlo bisogna cambiare la ''Visualizzazione corrente'': a ''Configurazione permamente'' ed assicurarsi di essere nella ''zona'' in cui si usa il computer (di norma pubblica). Nella scheda ''Servizi'' selezionare ''Samba''.
 
 '''SELinux'''
 
@@ -462,7 +457,7 @@ Potete anche scegliere di donare qualcosa con [http://www.amazon.com/gp/registry
 '''Disclaimer:''' The author makes no claim to the accuracy of the information provided. This information is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY. There is no implied support from referencing this guide. Any help that is provided is at will. Use this information at your own risk. Always make proper backups and use caution when modifying critical system files.<br />
 '''PER FAVORE NON''' fate copie in mirror, traducete o copiate questa pagina ''senza'' contattarmi. Io ho speso diverse ore di lavoro personalmente per ricercare e verificare quanto è qui riportato.
 
-[http://www.mjmwired.net/about.php#copyright '''Copyright © 2003-2011'''] '''by Mauriat Miranda''' (mjmwired.net).
+[http://www.mjmwired.net/about.php#copyright '''Copyright © 2003-2013'''] '''by Mauriat Miranda''' (mjmwired.net).
 
 [[Categoria:Traduzioni]]
 [[Categoria:Scrittura in corso]]
