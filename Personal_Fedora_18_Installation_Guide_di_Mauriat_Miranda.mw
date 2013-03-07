@@ -116,24 +116,34 @@ Per installare RPM-Fusion digitate:
 
 == Ambienti Desktop alternativi ==
 
-Molti utenti trovano Gnome 3 difficile da usare e dovrebbero provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora. Da notare che sono tutti opzionali. Utilizzate yum se volete installarli:
+Questa guida utilizza Gnome 3.6, ma se questo è difficile da usare si dovrebbero provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora. Da notare che sono tutti opzionali. Utilizzate yum se volete installarli:
 
-[http://www.mjmwired.net/resources/mjm-fedora-f16.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f18.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
- [mirandam@charon ~]$ sudo yum groupinstall "KDE Software Compilation"
+ [mirandam@charon ~]$ sudo yum groupinstall "KDE Plasma Workspaces"
 
-[http://www.mjmwired.net/resources/mjm-fedora-f16.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f18.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall LXDE
 
-[http://www.mjmwired.net/resources/mjm-fedora-f16.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f18.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall XFCE
 
 ''Note: Xfce è la mia scelta personale/raccomandata.''
+
+[http://www.mjmwired.net/resources/mjm-fedora-f18.html#mate MATE] è un ambiente Desktop aggiornato di Gnome 2, che ha preceduto Gnome 3 nelle versioni più vecchie di Fedora. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://mate-desktop.org/ ulteriori informazioni]).<br />
+Per installarlo:
+
+ [mirandam@charon ~]$ sudo yum groupinstall MATE
+
+[http://www.mjmwired.net/resources/mjm-fedora-f18.html#cinnamon Cinnamon] è un ambiente Desktop basato su Gnome 3 che utilizza un layout più simile a Gnome 2.([http://cinnamon.linuxmint.com/ ulteriori informazioni]).<br />
+Per installarlo:
+
+ [mirandam@charon ~]$ sudo yum groupinstall CINNAMON
 
 == Installare lettori MP3 ==
 
@@ -146,7 +156,7 @@ Installazione, con yum:
  [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-flac xmms-pulse xmms-skins
 
 ===Audacious===
-Un player in versione base, ma un po' meglio di XMMS.<br />
+Un player in versione base, ma un po' più moderno di XMMS.<br />
 Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install audacious '''audacious-plugins-freeworld*'''
@@ -235,12 +245,12 @@ Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository d
 
 ==Installare i font TrueType di Microsoft==
 
-Il sito ufficiale per questo pacchetto è [http://corefonts.sourceforge.net/ http://corefonts.sourceforge.net], ma comunque sto utilizzando questo [http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.spec SPEC file].<br />
-Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.0-3.noarch.rpm (''non linkare direttamente a questo link''):
+Il sito ufficiale per questo pacchetto è [http://corefonts.sourceforge.net/ http://corefonts.sourceforge.net].<br />
+E' necessario costruirsi l'RPM utilizzando il file SPEC. Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.5-1.noarch.rpm (''non linkare direttamente a questo link''):
 
-[http://www.mjmwired.net/resources/files/msttcore-fonts-2.0-3.noarch.rpm msttcore-fonts-2.0-3.noarch.rpm]
+[http://www.mjmwired.net/resources/files/msttcore-fonts-2.5-1.noarch.rpm msttcore-fonts-2.5-1.noarch.rpm]
 
- [mirandam@charon Download]$ sudo rpm -ivh msttcore-fonts-2.0-3.noarch.rpm
+ [mirandam@charon Download]$ sudo rpm -ivh msttcore-fonts-2.5-1.noarch.rpm
 
 Fedora incoraggia l'uso dei [https://www.redhat.com/promo/fonts/ Liberation Fonts]. Tali font dovrebbero essere già installati come impostazione predefinita (e inclusi nel DVD).
 
