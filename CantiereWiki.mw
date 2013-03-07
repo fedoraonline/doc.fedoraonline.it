@@ -48,7 +48,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|stato=Terminato}}
 {{AggiungiArticolo|fonte=|articolo=Gedit come IDE per sviluppo web|autore=RobertMayr|stato=Terminato}}
 {{AggiungiArticolo|fonte=|articolo=Personal Fedora 18 Installation Guide di Mauriat Miranda
-|autore=RobertMayr|stato=InCorso}}
+|autore=RobertMayr|stato=Terminato}}
 |}
 
 == Rilettura in corso ==
@@ -83,6 +83,8 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=15 Altri comandi LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Gedit come IDE per sviluppo web|autore=RobertMayr|rilettore=?|data=20/02/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|rilettore=?|data=20/02/2013|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=Personal Fedora 18 Installation Guide di Mauriat Miranda
+|autore=RobertMayr|rilettore=?|data=07/03/2013|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
