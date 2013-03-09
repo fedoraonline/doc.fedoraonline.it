@@ -3,25 +3,25 @@ __TOC__
 LibreOffice, dalla release di Fedora 15, è incluso nei [[:Categoria:Repository|repository]], come specificato [http://fedoraproject.org/wiki/Features/LibreOffice/it qui].<br/>
 Questa guida prevede l'installazione da sorgenti su rilasci di fedora precedenti alla 15.
 
-{{Scrittura|Nel corso di questa guida verranno usati i termini '''VERSIONE''' e '''ARCHITETTURA''' per indicare le caratteristiche del sistema su cui andrà installato libreoffice.<br/>Per VERSIONE si intende il numero di versione che si desidera installare e per ARCHITETTURA una tra x86 (per il 32bit) e x86_64 (per il 64bit), a seconda dell'architettura del sistema su cui si andrà a installare.}} 
+{{Scrittura|Nel corso di questa guida verranno usati i termini '''VERSIONE''' e '''ARCHITETTURA''' per indicare le caratteristiche del sistema su cui andrà installato libreoffice.<br/>Tutte le volte che si troverà scritto VERSIONE o ARCHITETTURA bisognerà sostituirle con il valore appropriato. Per VERSIONE si intende il numero di versione che si desidera installare e per ARCHITETTURA una tra x86 (per il 32bit) e x86_64 (per il 64bit), a seconda del sistema su cui si andrà a installare.}} 
 
 == Installazione di LibreOffice ==
 
-Scaricare i pacchetti dal [http://it.libreoffice.org/download/ sito ufficiale], scegliendo l'architettura del sistema di riferimento, oppure segnarsi il numero dell'ultima versione disponibile (al momento della scrittura di questa guida è stata rilasciata la versione ''4.0.1'') ed usare quindi wget o curl come descritto in seguito.<br/>
+Si possono scaricare i pacchetti dal [http://it.libreoffice.org/download/ sito ufficiale] con il proprio browser, oppure si può usare wget o curl, come descritto in seguito, dopo aver recuperato il numero dell'ultima versione disponibile (al momento della stesura di questa guida è stata rilasciata la versione ''4.0.1'').<br/>
 Per effettuare un download avendo la certezza di scaricare un file non corrotto utilizzare il download via torrent.
 
 * archivio del programma, che avrà un nome simile a questo '''LibreOffice_VERSIONE_Linux_ARCHITETTURA_rpm.tar.gz''';
 * language pack italiano, con un nome simile a questo '''LibreOffice_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz'''.
 <br/>
 
-Per versioni precedenti la 4.0.0 i vari pacchetti hanno invece questa sintassi: ''LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz'' e ''LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz''.<br/>
+Per versioni precedenti la 4.0.0 i pacchetti hanno invece questa sintassi: ''LibO_VERSIONE_Linux_ARCHITETTURA_install-rpm_en-US.tar.gz'' e ''LibO_VERSIONE_Linux_ARCHITETTURA_langpack-rpm_it.tar.gz''.<br/>
 
 Per scaricare i vari pacchetti si può usare wget o curl, così:
  $ wget http://download.documentfoundation.org/libreoffice/stable/VERSIONE/rpm/ARCHITETTURA/LibreOffice_VERSIONE_Linux_ARCHITETTURA_rpm.tar.gz  http://download.documentfoundation.org/libreoffice/stable/VERSIONE/rpm/ARCHITETTURA/LibreOffice_VERSIONE_Linux_ARCHITETTURA_rpm_langpack_it.tar.gz
 Una volta scaricati, aprire il terminale e recarsi nella cartella contenente i file.<br/>
-Supponiamo per esempio si siano scaricati nella propria home. Per entrarci si farà così:
+Supponiamo per esempio si siano scaricati nella propria cartella Scaricati nella home. Per entrarci si farà così:
 
- $ cd ~
+ $ cd ~/Scaricati/
 
 Nella posizione indicata, estrarre i file con il seguente comando (utilizzare il tasto tab per il completamento automatico):
 
@@ -60,7 +60,7 @@ Fatto questo sarà attiva anche la lingua italiana nei vari programmi.
 A causa di [https://bugs.freedesktop.org/show_bug.cgi?id=44203 questo] bug, per le versioni di fedora precedenti la 18 può essere necessario installare il pacchetto ''libpng-compat'', così:
  # yum install libpng-compat
 
-In caso il bordo delle finestre abbia un gusto "retrò" da Windows95, come riportato da qualche utente sul [http://forums.fedoraforum.org/showpost.php?p=1634609&postcount=5 forum di fedoraproject.org] può essere necessario installare:
+In caso il bordo delle finestre abbia un gusto "retrò" da Windows95, come riportato da qualche utente sul [http://forums.fedoraforum.org/showpost.php?p=1634609&postcount=5 forum del fedoraproject.org] può essere necessario installare:
  # yum install pangox-compat
 
 Come detto dalla documentazione stessa di LibreOffice, può essere necessario installare java per far funzionare alcuni componenti.<br/>
