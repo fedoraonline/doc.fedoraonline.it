@@ -6,11 +6,8 @@ Skype fa parte dei repository di '''''terze parti'''''. L'installazione è neces
 
 == Risoluzione dipendenze ==
 
-Skype essendo, come già detto, software proprietario, mette a disposizione un RPM per fedora, ma questo binario necessita di librerie a 32bit; gli utenti che usano quindi versioni di fedora differenti sono costretti ad installare le dipendenze a 32bit.
+Skype essendo, come già detto, software proprietario, mette a disposizione un RPM per fedora, ma questo binario necessita di librerie a 32bit; gli utenti che usano quindi versioni di fedora differenti sono costretti ad installare tutte le dipendenze a 32bit.
 Si digita da root:
- # yum install libXScrnSaver.i686 libX11.i686 libXv.i686 libv4l.i686 alsa-plugins-pulseaudio.i686 qt-x11.i686
-
-Per versioni precedenti alla release 12 digitare invece:
  # yum install libXScrnSaver.i?86 libX11.i?86 libXv.i?86 libv4l.i?86 alsa-plugins-pulseaudio.i?86 qt-x11.i?86
 
 == Configurazione Repository Skype ==
@@ -19,8 +16,7 @@ Si può facilmente creare un file ''/etc/yum.repos.d/skype.repo'' digitando da r
 
  # nano /etc/yum.repos.d/skype.repo
 
-(in caso non abbiate nano installato utilizzate gedit, emacs, vim o quello che avete)
-ed inserite le seguenti righe:
+(in caso nano non sia installato utilizzare gedit, emacs, vim o altro editor di testo) ed inserire le seguenti righe:
 
  [skype]
  name=Skype Repository
@@ -30,6 +26,7 @@ ed inserite le seguenti righe:
  gpgcheck=0
 
 Quindi salvare e chiudere.<br />
+
 Nel caso non vogliate passare per editor di testi si può dare il seguente comando, che non fa altro che mandare l'output del terminale nel file:
  echo -e '[skype]\nname=Skype Repository\nbaseurl=http://download.skype.com/linux/repos/fedora/updates/i586/\ngpgkey=http://www.skype.com/products/skype/linux/rpm-public-key.asc\nenabled=0\ngpgcheck=0' > /etc/yum.repos.d/skype.repo
 
