@@ -207,7 +207,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
  [mirandam@charon ~]$ sudo yum install xine xine-lib-extras xine-lib-extras-freeworld
 
 '''Binary Codecs:''' Per favore installare i [http://www.mjmwired.net/resources/mjm-fedora-f17.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che Xine non supporta in maniera nativa.
-'''DVD Playback:''' Per riprodurre correttamente i DVD leggi [[DVD Playback|DVD Playback]].
+'''DVD Playback:''' Per riprodurre correttamente i DVD leggi [[#DVD Playback|DVD Playback]].
 
 ===Banshee===
 Banshee è un media player simile a iTunes che supporta la sincronizzazione con molti altri dispositivi.<br />
