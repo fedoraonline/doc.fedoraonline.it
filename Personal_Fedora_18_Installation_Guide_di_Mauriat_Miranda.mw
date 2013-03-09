@@ -187,7 +187,7 @@ Per chi volesse '''TUTTO''' ciò di cui sopra, seguire questo comando:
 
 ==Installare i Media Players==
 
-Fedora viene fornita con un numero limitato di lettori sia Audio che Video. Per l'audio occorre leggere la sezione [[Installare lettori MP3|Installare lettori MP3]]. Per il video e altri multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [[RPMFusion|RPMFusion]]. Occorre accertarsi di avere configurato il repository RPMFusion prima di procedere. Notare che molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
+Fedora viene fornita con un numero limitato di lettori sia Audio che Video. Per l'audio occorre leggere la sezione [[#Installare lettori MP3]]. Per il video e altri multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [[RPMFusion|RPMFusion]]. Occorre accertarsi di avere configurato il repository RPMFusion prima di procedere. Notare che molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
 Quella che segue è una lista dei media player più famosi. Ognuno di questi ha i propri punti di forza. Si può installare quello che si preferisce, sebbene almeno ''MPlayer'' e ''VLC'' siano raccomandati.
 
 ===Mplayer===
