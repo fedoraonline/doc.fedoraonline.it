@@ -241,7 +241,7 @@ Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository d
 
 * Installare il pacchetto:
 
-[mirandam@charon ~]$ sudo yum --enablerepo=atrpms install libdvdcss
+ [mirandam@charon ~]$ sudo yum --enablerepo=atrpms install libdvdcss
 {{Suggerimento|Per l'incompatibilità tra ATrpms e RPMFusion è necessario tenere questo repository disabilitato.}}
 
 ==Installare i font TrueType di Microsoft==
