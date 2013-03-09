@@ -63,4 +63,13 @@ A causa di [https://bugs.freedesktop.org/show_bug.cgi?id=44203 questo] bug, per 
 In caso il bordo delle finestre abbia un gusto "retrò" da Windows95, come riportato da qualche utente sul [http://forums.fedoraforum.org/showpost.php?p=1634609&postcount=5 forum di fedoraproject.org] può essere necessario installare:
  # yum install pangox-compat
 
+Come detto dalla documentazione stessa di LibreOffice, può essere necessario installare java per far funzionare alcuni componenti.<br/>
+''Per alcune caratteristiche del software - ma non tutte - è richiesto Java. Java è necessario per Base.''
+
+
+== Riferimenti ==
+* [http://www.documentfoundation.org/ Home della Document Foundation], di cui LibreOffice fa parte.
+* [http://it.libreoffice.org/download/ Pagina di download di LibreOffice.]
+* [http://www.libreoffice.org/get-help/installation/linux/ Documentazione ufficiale.]
+ 
 [[Categoria:Ufficio]]
