@@ -1,13 +1,21 @@
-{{nota|Articolo obsoleto|Dalla versione 14 di fedora esiste un repository specifico per VirtualBox sia a 32 che a 64 bit. Seguire [http://doc.fedoraonline.it/VirtualBox_repo queste] istruzioni per installare VirtualBox su Fedora.
+{{Warning|Dalla versione 14 di fedora esiste un repository specifico per VirtualBox sia a 32 che a 64 bit. Seguire [[VirtualBox_repo|queste]] istruzioni per installare VirtualBox su Fedora.
 I passaggi sottostanti non dovrebbero essere quindi più necessari con le ultime release di fedora.}}
 
-Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
-Si possono riscontrarealcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
 
-Il problema è ovviamente dato dalla configurazione dei permessi: per prima cosa, bisogna aggiungere la propria utenza al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico, usando il comando groups), con il seguente comando:
+__TOC__
+== Introduzione ==
+Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
+Si possono riscontrare alcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
+
+== Configurazioni ==
+Il problema è ovviamente dato dalla configurazione dei permessi e perciò vanno accreditati agli utenti che vogliano usare VirtualBox alcuni diritti.
+
+=== Aggiunta utente al gruppo ===
+Per prima cosa, bisogna aggiungere la propria utenza al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico, usando il comando groups), con il seguente comando:
 
  # gpasswd -a $(logname) vboxusers
 
+=== Creazione FileSystem Fasullo ===
 Ora bisogna garantire i permessi di scrittura e lettura su "usbfs" per gli utenti che appartengono al gruppo "vboxusers".
 
 Su Fedora 10, "usbfs" è accessibile da ''/proc/bus/usb'' che per configurazione di default appartiene all'utente root e al gruppo root. Si potrebbe anche modificare i permessi con il comando chmod, ma ogni qualvolta si riavvia il sistema, si dovrà rifare la medesima procedura. Inoltre non si potrà eseguire a piacimento le operazioni di mount, perché il sistema comunica costantemente con "usbfs", e finché esiste tale comunicazione ( cioè esattamente per tutto il tempo in cui il sistema è running ) il filesystem risulta "busy". Il "trucco" sta nel "montare" una copia di "usbfs" da qualche parte nel sistema, passando gli effetti delle configurazioni anche su /proc/bus/usb. Per fare questo, serve l'id del gruppo "vboxusers", che si ricava con il seguente comando:
@@ -31,16 +39,17 @@ Ovviamente, se nel sistema il gid del gruppo "vboxusers" è differente da '''501
 
  #  mount -a
 
+== Installazione dipendenze ==
 Bisogna poi installare:
 
  # yum install kernel-devel
  # yum install kernel-headers
  # yum install dkms
 
-Ed infine dare il comando:
+Ed infine far partire il servizio di VirtualBox con il comando:
 
  # /etc/init.d/vboxdrv setup
 
-Dopo questa procedura, finalmente i propri sistemi virtuali leggeranno qualsiasi collegamento USB, esattamente come il sistema operativo vero e proprio. Chiaramente è necessario settare, per ogni macchina virtuale, i controller USB che si vuole rendere attivi.
+Dopo questa procedura, finalmente i propri sistemi virtuali leggeranno qualsiasi collegamento USB, esattamente come il sistema operativo vero e proprio. Chiaramente è necessario settare dentro all'applicativo, per ogni macchina virtuale, i controller USB che si vuole rendere attivi.
 
 [[Categoria:Virtualizzazione]]
