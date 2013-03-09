@@ -7,8 +7,6 @@ In seguito le righe aumenteranno man mano che si installeranno nuovi kernel.
 
 == Verifica ==
 
-{{Nota|Nota|Nel conteggio '''NON''' sono ovviamente compresi i vari kernel-devel, kernel-headers ecc. che servono per svolgere compiti particolari ma non possono esistere 'da soli', cioè senza il kernel di base.}}
-
 Dalla versione 8 "Werewolf" di fedora il file da modificare è:
 
  /etc/yum.conf
@@ -28,6 +26,8 @@ Subito dopo l'installazione in genere sono presenti le seguenti righe:
  installonly_limit=3
 
 Il valore da modificare è l'ultima riga, '''installonly_limit=3''', e va modificato con il numero di pacchetti, e quindi anche di kernel, che si vuole avere contemporaneamente. Questo ovviamente influisce su quei pacchetti che permettono di averne più versioni contemporaneamente, come appunto il kernel.<br/>
+
+Nel conteggio '''NON''' sono ovviamente compresi i vari kernel-devel, kernel-headers ecc. che servono per svolgere compiti particolari ma non possono esistere 'da soli', cioè senza il kernel di base.<br/>
 
 == Modifica del file ==
 
