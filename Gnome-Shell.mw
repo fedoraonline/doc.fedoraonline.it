@@ -125,7 +125,7 @@ per Fedora 17:
 
 per Fedora 18:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/18/tigress-utils/i386/gnome-shell-frippery-0.5.1-1.noarch.rpm
+ # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/18/tigress-utils/i386/gnome-shell-frippery-0.5.2-1.noarch.rpm
 
 Questo pacchetto installa sei estensioni, eventualmente attivabili anche singolarmente:
 *''Bottom Panel'': aggiunge un pannello inferiore, con funzionalità simili a quello di gnome 2.x;
@@ -140,7 +140,6 @@ Questo pacchetto installa sei estensioni, eventualmente attivabili anche singola
 Il tutto si completa da Gnome Tweak Tool: 
 *nella scheda "Scrivania", attivando tutte le opzioni così da avere disponibili le icone sul desktop;
 *nella scheda "Shell", selezionando "all" nell'opzione "Arrangement of buttons on the titlebar" così da non avere solo il tasto di chiusura nelle finestre delle applicazioni.
-
 
 ==Altri esempi di personalizzazione==
 
