@@ -42,7 +42,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Stato
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=LuigiTrezzi|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=LuigiTrezzi|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=FAD Milan, October 27 2012 - The Event|autore=GabrieleTrombini|stato=InCorso}}
 {{AggiungiArticolo|fonte=|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|stato=Terminato}}
@@ -86,6 +86,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=Libreoffice|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Gdesklets|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=LuigiTrezzi|rilettore=?|data=17/03/2013|stato=DaFare}}
 |}
 
 [[Categoria:FedoraOnline]]
