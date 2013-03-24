@@ -32,20 +32,21 @@ Per avviare la macchina virtuale:
 oppure, in KDE, ''menù K > Applicazioni > Sistema > Manager della macchina virtuale''.
 
 == Virtualbox ==
-È molto consigliato l'utilizzo del '''repository apposito''' per avere sempre l'ultima versione aggiornata di VirtualBox: seguire quindi la [http://doc.fedoraonline.it/VirtualBox_repo guida].
+È possibile scegliere due strade per installare VirtualBox.
+===Repository===
+È molto consigliato l'utilizzo del [[http://doc.fedoraonline.it/VirtualBox_repo|'''repository apposito''']] per avere sempre l'ultima versione aggiornata di VirtualBox.
 
+===RPM scaricato===
+È possibile scaricare l'RPM e utilizzare un software esterno come VirtualBox, prelevandolo da [http://www.virtualbox.org/wiki/Linux_Downloads qui], oppure digitando:
 
-E' possibile anche utilizzare un software esterno come è VirtualBox, prelevandolo da [http://www.virtualbox.org/wiki/Linux_Downloads qui],
-oppure digitando:
-
- $ cd ~/Scaricati && wget http://download.virtualbox.org/virtualbox/4.1.0/VirtualBox-4.1-4.1.0_73009_fedora15-1.x86_64.rpm
+ $ wget http://download.virtualbox.org/virtualbox/4.1.0/VirtualBox-4.1-4.1.0_73009_fedora15-1.x86_64.rpm
  $ su
  ''password di root''
- # rpm -ivh VirtualBox*
+ # yum install ./VirtualBox*
 
-NB: la versione potrebbe cambiare in futuro.
+'''NB: la versione potrebbe cambiare in futuro.'''
 
-Durante l'installazione il programma non troverà il modulo del kernel e se lo compilerà in piena autonomia.<br />
+Durante l'installazione il programma non troverà il modulo del kernel ma se lo compilerà in piena autonomia.<br />
 Importante sarà poi verificare che il proprio utente sia anche nel gruppo '''''vboxusers''''', cosa che dovrebbe avvenire all'installazione, ma, se non lo fosse, occorre inserirlo; l'una e l'altra cosa si possono fare digitando da terminale:
 
  $ system-config-users
