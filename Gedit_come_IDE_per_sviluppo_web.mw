@@ -2,52 +2,54 @@
 
 == Introduzione ==
 
-Gedit è l'editor di testo di default per Gnome e spesso viene declassato a un editor di testo qualsiasi. Gedit, però è molto più potente di quello che si pensa se viene configurato correttamente e in base alle proprie esigenze. Soprattutto per chi fa sviluppo di pagine web, per cui utilizza HTML/XHTML, CSS, Javascript, PHP, MySQL, Ruby, etc, Gedit può rappresentare una valida alternativa.<br />
+Gedit è l'editor di testo di default per Gnome e spesso viene declassato a un editor di testo qualsiasi. Gedit però, se viene configurato correttamente in base alle proprie esigenze, è molto più potente di quello che si pensa. Soprattutto per chi fa sviluppo di pagine web, che perciò cui utilizza HTML/XHTML, CSS, Javascript, PHP, MySQL, Ruby, etc, Gedit può rappresentare una valida alternativa a molti altri blasonati editor di testi; rimane però un ottimo strumento anche per altri campi della programmazione oltre a quello web.<br />
 In questa guida si vuole fare un esempio di come è possibile personalizzare Gedit come IDE.
 
 == Funzionalità ==
 
-Una delle caratteristiche più apprezzate di gedit è la sua stabilità, cosa non da poco se parliamo di un lavoro così dispendioso in termini di tempo come la scrittura di codice. L'evidenziazione dei tag dei singoli linguaggi, l'indicazione delle righe e il margine destro completano un layout gradevole e utile per lo sviluppatore.
+Una delle caratteristiche più apprezzate di gedit è la sua stabilità, cosa non da poco se parliamo di un lavoro così dispendioso in termini di tempo come la scrittura di codice. L'evidenziazione dei tag dei singoli linguaggi, l'indicazione delle righe e il margine destro completano un layout gradevole e utile per lo sviluppatore.<br/>
 Altre funzionalità sono:
-* Evidenziazione delle coppie di parentesi
-* Libreria Snippet
-* Miglioramento di codice HTML e PHP
-* Personalizzazione di tools esterni
-* Finestra laterale con supporto FTP e SSH, nonchè support HTML, XHTML, CSS e PHP
-* Facile gestione di colori con il color-picker
+* Evidenziazione delle coppie di parentesi;
+* Librerie Snippet;
+* Miglioramento di codice HTML e PHP;
+* Personalizzazione tramite tools esterni;
+* Finestra laterale con supporto FTP e SSH, nonchè supporto HTML, XHTML, CSS e PHP;
+* Facile gestione di colori con il color-picker.
 
-Ce ne sono molte altre ed elencarle tutte sarebbe impossibile, un esempio di come potrebbe presentarsi gedit è il seguente.
+In realtà ce ne sono molte altre ed elencarle tutte sarebbe impossibile, la lista completa dei cambiamenti si trova nella [https://git.gnome.org/browse/gedit/tree/NEWS pagina git] del progetto.<br/>
+Un esempio di come potrebbe presentarsi gedit dopo alcune personalizzazioni è il seguente.
 [[Image:Gedit.png|center|thumb|350px|Gedit potrebbe presentarsi anche così.]]
 
 == Preferenze ==
 
 [[Image:gedit_vista.png|right|thumb|250px|Le preferenze di gedit.]]
-Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle impostazioni di default, si va in '''Modifica -> Preferenze'''. Una buona impostazione potrebbe essere:
-* Vista
+Per dare un po' di verve all'editor e renderlo più funzionale rispetto alle impostazioni di default, si può andare in '''Modifica -> Preferenze''' e modificare le impostazioni.<br/>
+Una buona impostazione potrebbe essere:
+* '''Vista'''
 ** Mostrare i numeri di riga
 ** Mostrare il margine destro alla colonna 80 (che è un valore di default ma va bene)
 ** Attivare a capo automatico
-** Dicidere le parole su due righe (togliere la spunta)
+** Dividere le parole su due righe (togliere la spunta)
 ** Evidenziare la riga corrente
 ** Evidenziare le parentesi corrispondenti
 
-* Editor
-** Ampiezza tabulazione: 4
+* '''Editor'''
+** Ampiezza tabulazione: 4 (ampiezza in caratteri vuoti dello spazio alla pressione del tasto ''tab'')
 ** Inserire gli spazi invece delle tabulazioni
 ** Attivare rientro automatico
 ** Non salvare alcuna copia di backup
 
-* Caratteri
+* '''Caratteri'''
 ** Monospace 10
 ** Schema colore a piacimento (Cobalt è quello della schermata sopra)
 
-* Plugin: da qui si attivano o disattivano i plugin installati.
+* '''Plugin''': da qui si attivano o disattivano i plugin installati.
 
-== Plugin ==
+== Plugins ==
 
-Quasi tutte le funzioni elencate prima non sono disponibili nell'installazione standard di Gedit, ma si possono attivare facilmente con alcuni plugin, attivabili poi dal gestore interno di Gedit.<br />
-I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri. I più importanti si trovano su [http://live.gnome.org/Gedit/Plugins].
-Tutti i seguenti plugin hanno solitamente più di una funzione, che va attivata attraverso la gestione dei plugin che si trova nelle ''Preferenze'' come descritto sopra.
+Quasi tutte le funzioni elencate all'inizio non sono disponibili nell'installazione standard di Gedit, ma si possono attivare facilmente con alcuni plugin, selezionabili e personalizzabili poi dal gestore interno di Gedit.<br />
+I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri. I più importanti si trovano sulla [http://live.gnome.org/Gedit/Plugins pagina dei plugins] del progetto.
+Tutti i seguenti plugin hanno solitamente più di una funzione, attivabile attraverso la gestione dei plugin che si trova nelle ''Preferenze'', come descritto sopra.
 
 === Gedit-plugins ===
 
@@ -58,23 +60,22 @@ Comprende già una buona base degli strumenti utili, andare in ''Modifica -> Pre
 
 === LaTeX plugin ===
 
-Un altroplugin che non deve mancare se si lavora con LaTeX è il plugin per gedit, con il quale è possibile creare anche direttamente il pdf.
+Un altroplugin che non deve mancare se si lavora con LaTeX è il plugin per gedit, con il quale è possibile anche esportare direttamente il pdf.
  # yum install gedit-latex
 
 === Evidenziazione dei tag ===
 
-Essenziale per la scrittura di qualsiasi codice se uno non vuole perdersi dopo 5 righe.
+Essenziale per la scrittura di qualsiasi codice se non ci si vuole perdere dopo 5 righe.
  # yum install gtksourceview
 
 === Syntax Highlighting ===
-L'evidenziazione dei tag ha dei colori standard, si possono però personalizzare ulteriormente. Un pacchetto che da al codice PHP il colore caratteristico, è [http://www.micahcarrick.com/files/gedit_php_highlight.xml questo].
+L'evidenziazione dei tag ha dei colori standard, che si possono però personalizzare ulteriormente. Un pacchetto che da al codice PHP il colore caratteristico, è [http://www.micahcarrick.com/files/gedit_php_highlight.xml questo].
 Si può applicare facilmente digitando:
 
  $ gconftool-2 --load=gedit_php_highlight.xml /apps/gedit-2/preferences/syntax_highlighting/PHP
 
 === Autocompletamento ===
-
-Lo si può usare per non dover scrivere sempre tutta la parola o stringa, gedit proporrà le parole digitate nel documento fino a quel momento.
+Plugin utile per non dover scrivere sempre tutta la parola o stringa, Gedit proporrà le parole digitate nel documento fino a quel momento.
  # yum install gtksourcecompletion
 
 === Lista Tag ===
@@ -84,7 +85,7 @@ La lista dei Tag appare nel pannello laterale e suggerisce, per ogni linguaggio 
 * CSS
 * XHTML
 
-Per utilizzarlo basta [http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.tar.gz scaricare il pacchetto], scompattarlo nella directory desiderata, per esempio /Scaricati, e copiare le estensioni nella taglist:
+Per utilizzarlo basta [http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.tar.gz scaricare il pacchetto], scompattarlo nella directory desiderata, per esempio /Scaricati, e copiare le estensioni nella taglist. Il tutto 
  $ tar -xzf gedit_webdev_tags-0.1.tar.gz
  $ cd gedit_webdev_tags-0.1/
  $ cp *.tags /usr/share/gedit/plugins/taglist/
@@ -99,7 +100,8 @@ Se non fosse presente la directory indicata, procedere prima con la creazione ma
 Ai tools esterni si accede tramite il menu ''Strumenti -> External tools''.
 
 == Riferimenti ==
-* [http://www.micahcarrick.com/gedit-html-editor.html Blog di Micah Carrick]
+* [http://projects.gnome.org/gedit/ Home del progetto Gedit];
+* [http://www.micahcarrick.com/gedit-html-editor.html Blog di Micah Carrick], in particolare la sezione dedicata a gedit.
 
 
 [[Categoria:Scrittura in corso]]
