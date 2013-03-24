@@ -6,7 +6,7 @@ Questo articolo tratta di un piccolo serverino dove si collegano per lavoro una 
 == Operazioni di esempio ==
 
 Alle 7:00 del mattino il demone crond fa partire questo script. Abilita gli utenti solo se non è sabato o domenica:
-<pre>script#!/bin/bash
+<pre>#!/bin/bash
 VARDATA=`date +%a`
 echo $VARDATA
 echo
