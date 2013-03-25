@@ -34,7 +34,7 @@ oppure, in KDE, ''menù K > Applicazioni > Sistema > Manager della macchina virt
 == Virtualbox ==
 È possibile scegliere due strade per installare VirtualBox.
 ===Repository===
-È molto consigliato l'utilizzo del [[http://doc.fedoraonline.it/VirtualBox_repo|'''repository apposito''']] per avere sempre l'ultima versione aggiornata di VirtualBox.
+È molto consigliato l'utilizzo del [[VirtualBox_repo|'''repository apposito''']] per avere sempre l'ultima versione aggiornata di VirtualBox.
 
 ===RPM scaricato===
 È possibile scaricare l'RPM e utilizzare un software esterno come VirtualBox, prelevandolo da [http://www.virtualbox.org/wiki/Linux_Downloads qui], oppure digitando:
