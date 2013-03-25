@@ -1,4 +1,4 @@
-{{InCorso|autore=FrancescoDanieli}}
+__TOC__
 {{Autore|FrancescoDanieli}}
 
 == Introduzione ==
@@ -12,14 +12,14 @@ Lo scopo di questa guida, dunque, è di fornire un elenco dettagliato e aggiorna
 Allo scopo di testare le varie estensioni, anche su configurazioni di sistema diverse, è stata dunque creata una Live USB. La versione in uso, in linea di massima, verrà aggiornata quanto prima all'uscita di ogni nuova release.
 
 La versione di fedora in uso per testare queste estensioni è: 
-<div class="center" style="width:auto; margin-left:auto; margin-right:auto;">'''Fedora 18 / Gnome 3.6 (16 Gennaio 2013)'''</div>
+<div class="center" style="width:auto; margin-left:auto; margin-right:auto;">'''Fedora 18 / Gnome 3.6 (25 marzo 2013)'''</div>
 
 == Repositories e siti ==
 In un mondo perfetto le estensioni sarebbero scaricabili e installabili tutte allo stesso modo, da un'unica fonte.<br/>
 Sfortunatamente però non è così. L'utente si trova dunque, suo malgrado, a doversi barcamenare tra varie fonti e diversi metodi di installazione.
 Di seguito, un elenco dei repositories e siti da cui è possibile scaricare le estensioni recensite, con rispettivi metodi di installazione.<br/>
 
-=== Repo 'Base' di Fedora ===
+=== Repo Ufficiale Fedora ===
 
 I repository rappresentano il primo approccio per tutti coloro che vengono a contatto con le estensioni per la prima volta. Nei repo è possibile reperire un assortimento di estensioni di base, che non modificano radicalmente l'esperienza d'utilizzo.
 *Metodo di Installazione: Tramite Packagekit o Yum (il nome di base dei pacchetti è ''gnome-shell-extension-[nome estensione]'').
@@ -96,7 +96,7 @@ La cartella di default di queste estensioni è ''/usr/share/gnome-shell/extensio
 *Commento: Estensione molto semplice, nessun fronzolo, fa esattamente quanto promesso. I workspace sono identificati per numero.
 
 
-=== Repo di RpmFusion ===
+=== Repo RpmFusion ===
 Nei repository RpmFusion attualmente è presente una sola estensione, ovvero Weather Broadcast. Ciò ovviamente non preclude la possibilità che altre ne vengano aggiunte in futuro. 
 *Metodo di Installazione: Lo stesso dei repo ufficiali (Packagekit o Yum), a patto ovviamente di avere [[RPMFusion|installato precedentemente i repo specifici]].
 *Note: Anche qua vale la stessa precisazione fatta coi repo ufficiali.
@@ -276,8 +276,7 @@ Ovviamente, come s'è potuto vedere, ogni estensione può avere utilità diverse
 *'''Web Search Dialog'''
 
 == Riferimenti ==
-https://extensions.gnome.org/about/; Pagina FAQ del sito ufficiale per le Estensioni.<br/>
-http://blog.fpmurphy.com/; Blog di Finbarr P. Murphy
+* Pagina [https://extensions.gnome.org/about/ FAQ] del sito ufficiale delle Estensioni di gnome-shell.<br/>
+* [http://blog.fpmurphy.com/ Blog] di Finbarr P. Murphy.
 
 [[Categoria:Ambiente Desktop]]
-[[Categoria:Rilettura in corso]]
