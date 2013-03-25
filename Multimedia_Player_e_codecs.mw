@@ -57,6 +57,7 @@ Per poter sfruttare mplayer con tutta la sua potenzialità esistono altri codec 
 
 == Librerie per DVD ==
 
+Librerie necessarie alla visione di dvd con contenuto protetto. Il pacchetto ''libdvdcss'' necessita del repository [[Livna]] installato e configurato.
  # yum --enablerepo=livna install libdvdcss libdvdread libdvdnav lsdvd
 
 [[Categoria:Multimedia]]
