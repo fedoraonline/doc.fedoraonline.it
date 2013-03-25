@@ -49,7 +49,7 @@ Una buona impostazione potrebbe essere:
 == Plugins ==
 
 Quasi tutte le funzioni elencate all'inizio non sono disponibili nell'installazione standard di Gedit, ma si possono attivare facilmente con alcuni plugin, selezionabili e personalizzabili poi dal gestore interno di Gedit.<br />
-I seguenti plugin sono utili per la gran parte dell'utenza, all'occorrenza si possono trovare altri. I più importanti si trovano sulla [http://live.gnome.org/Gedit/Plugins pagina dei plugins] del progetto.
+I seguenti plugin sono utili per la gran parte dell'utenza, ma all'occorrenza se ne possono trovare altri. I più utili si trovano sulla [http://live.gnome.org/Gedit/Plugins pagina ufficiale dei plugins] del progetto.
 Tutti i seguenti plugin hanno solitamente più di una funzione, attivabile attraverso la gestione dei plugin che si trova nelle ''Preferenze'', come descritto sopra.
 
 === Gedit-plugins ===
@@ -72,8 +72,8 @@ Essenziale per la scrittura di qualsiasi codice se non ci si vuole perdere dopo 
 === Syntax Highlighting ===
 L'evidenziazione dei tag ha dei colori standard, che si possono però personalizzare ulteriormente. Un pacchetto che da al codice PHP il colore caratteristico, è [http://www.micahcarrick.com/files/gedit_php_highlight.xml questo].
 Si può applicare facilmente digitando:
-
- $ gconftool-2 --load=gedit_php_highlight.xml /apps/gedit-2/preferences/syntax_highlighting/PHP
+ $ curl -O http://www.micahcarrick.com/files/gedit_php_highlight.xml
+ $ gconftool-2 --load=./gedit_php_highlight.xml /apps/gedit-2/preferences/syntax_highlighting/PHP
 
 === Autocompletamento ===
 Plugin utile per non dover scrivere sempre tutta la parola o stringa, Gedit proporrà le parole digitate nel documento fino a quel momento.
@@ -86,7 +86,7 @@ La lista dei Tag appare nel pannello laterale e suggerisce, per ogni linguaggio 
 * CSS
 * XHTML
 
-Per utilizzarlo basta [http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.tar.gz scaricare il pacchetto], scompattarlo nella directory desiderata, per esempio /Scaricati, e copiare le estensioni nella taglist.<br/>Il tutto da terminale si può ridurre così:
+Per utilizzarlo basta [http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.tar.gz scaricare il pacchetto], scompattarlo nella directory desiderata, e copiare le estensioni nella cartella nascosta taglist nella propria home.<br/>Il tutto da terminale si può ridurre così:
  $ curl -O http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.tar.gz
  $ tar -xzf gedit_webdev_tags-0.1.tar.gz
  $ mkdir -p ~/.local/share/gedit/plugins/taglist/
@@ -94,7 +94,7 @@ Per utilizzarlo basta [http://www.micahcarrick.com/files/gedit_webdev_tags-0.1.t
 
 === Tools esterni ===
 
-Un'altra raccolta di tools utili sono i '''Tools esterni''', che, una volta attivati dalle Preferenze, propongono molte altre funzioni utili, come il Php beautifier oppure la possibilità di rimuovere gli spazi a fine riga.
+Un'altra raccolta di tools utili sono i '''Tools esterni''', che, una volta attivati dalle ''Preferenze'', propongono molte altre funzioni utili, come il Php beautifier oppure la possibilità di rimuovere gli spazi a fine riga.
 Scaricare il [http://www.micahcarrick.com/files/gedit_external_tools.tar.gz pacchetto dei tools esterni] e, dopo averlo scompattato, copiarlo nella directory locale dell'utente.
 Se non fosse presente la directory indicata, procedere prima con la creazione manuale della stessa.
  $ curl -O http://www.micahcarrick.com/files/gedit_external_tools.tar.gz
