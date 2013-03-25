@@ -45,8 +45,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=LuigiTrezzi|stato=Terminato}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=FAD Milan, October 27 2012 - The Event|autore=GabrieleTrombini|stato=InCorso}}
-{{AggiungiArticolo|fonte=|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|stato=Terminato}}
-{{AggiungiArticolo|fonte=|articolo=Gedit come IDE per sviluppo web|autore=RobertMayr|stato=Terminato}}
 |}
 
 == Rilettura in corso ==
@@ -79,8 +77,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=13 Configurazioe LVM2 su ISCSI initiator|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=14 Configurazione LVM2 per funzionamento con device multipathed|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=15 Altri comandi LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Gedit come IDE per sviluppo web|autore=RobertMayr|rilettore=AlbertoChiusole|data=20/02/2013|stato=InCorso}}
-{{RiletturaArticolo|fonte=-|articolo=Estensioni di Gnome-Shell|autore=FrancescoDanieli|rilettore=AlbertoChiusole|data=20/02/2013|stato=InCorso}}
 {{RiletturaArticolo|fonte=-|articolo=Skype_repo|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Modificare il numero di Kernel presenti in Grub|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Libreoffice|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
@@ -88,8 +84,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Servizi: ottimizzazione Desktop|autore=LuigiTrezzi|rilettore=?|data=17/03/2013|stato=DaFare}}
 |}
-
-[[Categoria:FedoraOnline]]
 
 == Articoli in corso di aggiornamento ==
 
@@ -120,3 +114,5 @@ Quando un articolo è pronto per essere pubblicato, il rilettore lo comunica in 
 Solo i componenti dello staff hanno la competenza per togliere l'articolo dagli elenchi di CantiereWiki dopo la sua pubblicazione.
 
 Buon lavoro a tutti e grazie per la collaborazione.
+
+[[Categoria:FedoraOnline]]
