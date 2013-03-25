@@ -1,12 +1,17 @@
+__TOC__
+
+==Introduzione==
 Alcuni produttori hanno pensato bene di montare al contrario la webcam in alcuni modelli di portatili per motivi di spazio.
 Il problema è di facile soluzione quando il modulo di gestione della cam prevede l'opzione "flip" che capovolge l'immagine, ma se il modulo di gestione è uvcvideo, allora si è nei guai, perché questo modulo non prevede il rovesciamento dell'immagine.
 Fortunatamente potete applicare la seguente procedura , testata e verificata su Fedora 14 kernel 2.6.35.
-__TOC__
-==Cominciamo==
+
+==Installazione dipendenze==
 Installare come prima cosa i pacchetti sviluppo:
  # yum groupinstall "strumenti di sviluppo"
  # yum install kernel-devel
- # exit
+
+==Modifica dei Sorgenti==
+Si scarica dal repo git del progetto linuxtv il ramo che ci interessa.
  $ git clone git://linuxtv.org/media_build.git
  $ cd media_build
  $ gedit build
@@ -130,8 +135,12 @@ poi da root :
  # make install
 
 ==Terminare==
-Dare un reboot e godersi la propria cam.
+A questo punto dare un reboot e godersi la propria cam.
 
 Ringrazio l'utente Fedorista per aver testato la procedura.
+
+==Riferimenti==
+* [http://www.linuxtv.org/ Home] del progetto linuxtv.org, che si occupa di mantenere i driver video di webcam, televisori, ecc, per il kernel linux.
+
 
 [[Categoria:Webcam]]
