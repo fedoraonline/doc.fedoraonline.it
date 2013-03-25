@@ -181,11 +181,7 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 *Commento: Utile estensione, che consente di scegliere quali elementi della barra superiore visualizzare. Funziona con ogni icona/menù/pannello/pulsante: è dunque possibile nascondere il menù utente, l'orologio, il pulsante attività, le icone del tray (volume, rete, accesso facilitato, bluetooth, layout di tastiera) ma soprattutto qualunque elemento aggiuntivo fornito da altre estensioni. Consigliata a chi non voglia perdere tempo a cercare più estensioni per nascondere ogni singolo elemento. 
 *Note: Non esente da bug: una volta installata, l'estensione ha impostato di default la visualizzazione di tutte le icone disponibili, comprese quelle che erano state precedentemente disattivate, e stessa cosa è successa alla rimozione. Va comunque detto che per ripristinare la visualizzazione 'regolare' della barra è stato sufficiente riavviare la shell. 
 <br/>
-'''Inhibit Applet''' ([https://extensions.gnome.org/extension/233/inhibit-applet/ link])
-*Descrizione: Aggiunge alla barra superiore un pulsante per abilitare o disabilitare screensaver e autosuspend
-*Commento: Molto semplice rispetto alla simile "Caffeine", fa esattamente quello che promette senza fronzoli particolari.
-*Note: Due difetti. Il primo, più grave, è la mancata compatibilità con Gnome 3.6 (Fedora 18).<br/>Il secondo, meno preoccupante, riguarda la persistenza. L'estensione agisce modificando una chiave di dconf. Il problema è che al riavvio l'impostazione non viene resettata al valore standard, ma rimane impostata. Perciò, se si riavvia il sistema senza disattivare l'applet, questa rimane attiva e bloccherà screensaver e suspend fino a quando non verrà ripremuto il pulsante. Inoltre, crea una strana incompatibilità con i driver Radeon (proprietari o kmod) scambiando le chiavi di controllo della luminosità.
-<br/>
+
 ==== M ====
 '''Maximus''' ([https://extensions.gnome.org/extension/354/maximus/ link])
 *Descrizione: Rimuove la barra del titolo dalle finestre massimizzate (e non solo).
