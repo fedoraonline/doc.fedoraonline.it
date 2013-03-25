@@ -9,11 +9,11 @@ Tutti gli altri contenuti di Livna nel 2008 sono migrati su [[RPMFusion|RPMFusio
 
 L'installazione è molto semplice, perché automatizzata.
 
- # rpm -ivh http://rpm.livna.org/livna-release.rpm
+ # yum install http://rpm.livna.org/livna-release.rpm
 
 Se per qualche motivo il link principale non fosse raggiungibile, si può puntare su uno dei tanti [http://rpm.livna.org/mirrorlist mirror], per esempio:
 
- # rpm -ivh http://ftp-stud.fht-esslingen.de/pub/Mirrors/rpm.livna.org/livna-release.rpm
+ # yum install http://ftp-stud.fht-esslingen.de/pub/Mirrors/rpm.livna.org/livna-release.rpm
 
 == Riferimenti ==
 * [http://rpm.livna.org/ Sito ufficiale Livna]
