@@ -16,6 +16,8 @@ In caso di problemi in quest'ultimo passaggio, se non si volesse installare in l
  $ su -c 'rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 </nowiki> <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</nowiki>'
 {{Warning|Il comando va digitato su una unica riga}}
+{{suggerimento|Può capitare che durante l'installazione non si aggiorni in automatico la chiave GPG. In quel caso basta aggiornare i repo da terminale, questa operazione si porterà dietro anche la chiave più aggiornata:
+ # yum --nogpgcheck update \*release\*}}
 
 == Installazione manuale ==
 E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
