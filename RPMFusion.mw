@@ -1,31 +1,30 @@
 == Introduzione ==
-Questo documento tratta dei principali repository di terze parti, '''RPMFusion'''.<br />
+Questo documento tratta dei principali repository di terze parti di fedora, '''RPMFusion'''.<br />
 
-RPMFusion distingue i programmi tra i free ed i nonfree (nel senso di software "non libero", non nel senso di "non gratuito"), ciascuno con una locazione propria. 
+RPMFusion distingue tra programmi free e nonfree (nel senso di software "non libero", non nel senso di "non gratuito"), ciascuno con una locazione propria. 
 
 Il repo RPMFusion-free non dipende da nessun altro repository (se non quelli predefiniti e ufficiali di Fedora) e quindi può essere utilizzato senza RPMFusion-nonfree. Al contrario, RPMFusion-nonfree dipende anche da RPMFusion-free.
 
-La guida espone due metodi differenti per la loro installazione.
+La guida espone due metodi differenti per l'installazione di tali repository.
 
 == Installazione tramite pacchetto rpm ==
-Per i free di Fedora 18 per esempio, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-18.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-18.noarch.rpm questo]. Si possono poi installare semplicemente tramite doppio clic su tali files.
+Per i free di Fedora 18 per esempio, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-18.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-18.noarch.rpm questo]. Si possono poi installare tramite installatore grafico semplicemente tramite doppio clic su tali files.
 Per altre versioni di Fedora fare riferimento alla [http://rpmfusion.org/Configuration pagina ufficiale].
 
-In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale, è possibile farlo direttamente attingendo al link usando il comando rpm:
+In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale entrambi i repo, è possibile farlo attingendo ai link sfruttando le potenzialità di yum:
 
- $ su -c 'rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-</nowiki> <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</nowiki>'
-{{Warning|Il comando va digitato su una unica riga}}
-{{suggerimento|Può capitare che durante l'installazione non si aggiorni in automatico la chiave GPG. In quel caso basta aggiornare i repo da terminale, questa operazione si porterà dietro anche la chiave più aggiornata:
+ # yum install <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</nowiki>
+<!-- {{Warning|Il comando va digitato su una unica riga}} -->
+{{suggerimento|Può capitare che durante l'installazione non si aggiorni in automatico la chiave GPG.<br/>In questo caso basta aggiornare i repo da terminale; questa operazione si porterà dietro anche la chiave più aggiornata:
  # yum --nogpgcheck update \*release\*}}
 
 == Installazione manuale ==
-E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
+È, ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory ''/etc/yum.repos.d/'', che è esattamente cioè che fa il pacchetto rpm in automatico.
 
 === RPMFusion-free ===
 Usando nano (o qualsiasi editor si preferisca):
 
- $ su -c 'nano /etc/yum.repos.d/rpmfusion-free.repo'
+ # nano /etc/yum.repos.d/rpmfusion-free.repo
 Si apre il documento vuoto che deve essere così popolato:
 
  [rpmfusion-free]
@@ -52,7 +51,7 @@ Si apre il documento vuoto che deve essere così popolato:
  gpgcheck=1
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever<br />
 dopodichè si provvederà a creare il repo free-updates:
- $ su -c 'nano /etc/yum.repos.d/rpmfusion-free-updates.repo'
+ # nano /etc/yum.repos.d/rpmfusion-free-updates.repo
 da popolare così:
 
  [rpmfusion-free-updates]
@@ -82,7 +81,7 @@ da popolare così:
 === RPMFusion-nonfree ===
 I repositori nonfree e nonfree-updates, rispettivamente devono essere creati così (al pari dei precedenti):
 
- $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree.repo'
+ # nano /etc/yum.repos.d/rpmfusion-nonfree.repo
 le cui istruzioni da inserire sono:
 
  [rpmfusion-nonfree]
@@ -108,9 +107,9 @@ le cui istruzioni da inserire sono:
  enabled=0
  gpgcheck=1
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever<br />
-ed il reposotorio nonfree-updates:
+ed il repositorio nonfree-updates:
  
- $ su -c 'nano /etc/yum.repos.d/rpmfusion-nonfree-updates.repo'
+ # nano /etc/yum.repos.d/rpmfusion-nonfree-updates.repo
 con le seguenti istruzioni:
 
  [rpmfusion-nonfree-updates]
@@ -136,6 +135,11 @@ con le seguenti istruzioni:
  enabled=0
  gpgcheck=1
  gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever<br />
+
+==Conclusione==
+Seguite queste istruzioni si potranno installare molti più software non presenti nei normali repo di fedora, ad esempio i [[Multimedia_Player_e_codecs|codec]] per la riproduzione di flussi dati, alcune [[Estensioni_di_Gnome-Shell|estensioni per gnome-shell]] e molti altri programmi.<br/>
+Per una lista completa di tutti i programmi disponibili da tutti i repo rpmfusion (che devono però già essere installati sul computer) si può fare così:
+ $ yum list available --disablerepo=* --enablerepo=rpmfusion-{free,free-updates,nonfree,nonfree-updates} |more
 
 == Riferimenti ==
 * http://www.rpmfusion.org/
