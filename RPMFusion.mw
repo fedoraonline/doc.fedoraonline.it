@@ -8,12 +8,14 @@ Il repo RPMFusion-free non dipende da nessun altro repository (se non quelli pre
 La guida espone due metodi differenti per la loro installazione.
 
 == Installazione tramite pacchetto rpm ==
-Per i free, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm questo]. Si possono poi installare semplicemente tramite doppio clic su tali files.
+Per i free di Fedora 18 per esempio, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-18.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-18.noarch.rpm questo]. Si possono poi installare semplicemente tramite doppio clic su tali files.
+Per altre versioni di Fedora fare riferimento alla [http://rpmfusion.org/Configuration pagina ufficiale].
 
 In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale, è possibile farlo direttamente attingendo al link usando il comando rpm:
 
- $ su -c 'rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm</nowiki> <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm</nowiki>'
-{{Warning|Il comando va digitato su una unica riga}} 
+ $ su -c 'rpm -Uvh <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+</nowiki> <nowiki>http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</nowiki>'
+{{Warning|Il comando va digitato su una unica riga}}
 
 == Installazione manuale ==
 E', ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory /etc/yum.repos.d/
