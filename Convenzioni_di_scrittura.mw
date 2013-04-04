@@ -133,7 +133,7 @@ Nella tabella successiva è riportato qualche esempio di formattazione e il loro
 |align="center" |<nowiki>'''''corsivo e grassetto'''''</nowiki>
 |align="center" | '''''corsivo e grassetto'''''
 |-
-|align="center" | <nowiki><wiki> </nowiki></nowiki>
+|align="center" | <nowiki><nowiki> </nowiki></nowiki>
 |align="center" |<nowiki><nowiki>nessuno stile</nowiki></nowiki>
 |align="center" |<nowiki> nessuno stile</nowiki>
 |-
