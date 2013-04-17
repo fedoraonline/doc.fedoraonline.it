@@ -210,6 +210,10 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 *Commento: Finalmente maturata al punto giusto rispetto alle versioni precedenti, l'estensione aggiunge alla lista applicazioni nel dash un pulsante che permette di creare, visualizzare e modificare piccole note adesive all'interno dell'overview (la cartella di default delle note è ~/.local/share/gnome-shell-notes). Si tratta pur sempre di un'estensione basilare, priva delle funzionalità avanzate di gnote o tomboy, ma può essere utile per salvare rapidamente brevi stringhe di testo. Consigliata.
 *Note: Lo scrolling non funziona ancora a dovere; una volta raggiunto il bordo inferiore l'immissione continua 'al di sotto' della nota. Va comunque segnalato che le funzioni taglia-copia-incolla (da tastiera) sono perfettamente utilizzabili. Compatibile solamente con GNOME 3.6 (Fedora 18) o superiori.
 <br/>
+'''Shade Inactive Windows''' ([https://extensions.gnome.org/extension/650/shade-inactive-windows/ link])
+*Descrizione: Applica un effetto ombreggiato alle finestre inattive.
+*Commento: Altra funzione ereditata dal pesante ma pur sempre compianto Compiz, quest'estensione aggiunge un richiamo visivo alla finestra attiva, rendendo più scure tutte le finestre inattive. Particolarmente utile per chi ha impostato il focus al puntatore (invece che al click del mouse, come sarebbe di default). Difetta, purtroppo, di un menù di impostazioni (utile, ad esempio, per decidere dopo quanto oscurare la finestra, con quale livello di opacità, etc). 
+<br/>
 
 ==== T ====
 '''Text Translator''' ([https://extensions.gnome.org/extension/593/text-translator/ link])
@@ -233,7 +237,13 @@ Il sito ufficiale di Gnome per le estensioni, per certi versi, ricalca la pagina
 *Descrizione: Implementa una finestra di dialogo, richiamabile tramite macro, per effettuare ricerche nel web, con il browser di default.
 *Commento: Molto utile, permette di velocizzare di molto le operazioni di ricerca. Funziona sia che il browser sia gia in funzione che non (e in questo caso apre un'ulteriore scheda, senza rimpiazzare quelle già presenti). Le possibilità di configurazione sono elevatissime. È possibile impostare il motore di ricerca predefinito, aggiungerne di nuovi (richiamabili tramite l'immissione di parole chiave), aprire direttamente degli indirizzi, visualizzare i suggerimenti di ricerca, modificare la scorciatoia in uso, etc...<br/>Da segnalare il fatto che la finestra di dialogo sia direttamente a livello di shell (come ad esempio la finestra di alt+f2), quindi è visibile in qualunque caso.
 *Note: La scorciatoia di default (super+barra di spazio) può entrare in conflitto con quelle usate da altre estensioni. Fortunatamente è possibile modificarla nelle impostazioni (ad esempio con Alt+f3)
+<br/>
 
+==== X ====
+'''Xmenusystem''' ([https://extensions.gnome.org/extension/653/xmenusystem/ link])
+*Descrizione: Aggiunge nell'angolo in alto a sinistra, un menù con numerose opzioni di sistema.
+*Commento: Va dato atto che l'idea non è male. Tuttavia sembrerebbe male implementata, in quanto le opzioni fornite non sono nulla di particolarmente difficile da reperire (Dall'alto verso il basso: Dettagli del sistema, Aggiornamenti, Ubuntu Software Center, Pannello di controllo, Gnome Tweak tool, Monitor di sistema, Forza uscita, Spegni, Logout, Blocca lo schermo). Altamente opinable la scelta di inserire il pulsante per il software center di Ubuntu, senza fornire all'utente la possibilità di configurare quali voci far apparire e quali no. A conti fatti, un'estensione ancora acerba.
+<br/>
 
 === [http://www.fpmurphy.com/gnome-shell-extensions/ Il Blog di Finbarr P. Murphy]===
 
