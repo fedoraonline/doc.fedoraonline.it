@@ -7,7 +7,7 @@ In seguito le righe aumenteranno man mano che si installeranno nuovi kernel.
 
 == Verifica ==
 
-Dalla versione 8 "Werewolf" di fedora il file da modificare è:
+Dalla versione 8 "Werewolf" di Fedora il file da modificare è:
 
  /etc/yum.conf
 
