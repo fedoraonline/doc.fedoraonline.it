@@ -38,7 +38,7 @@ Esistono tre opzioni per procedere con l'aggiornamento: attraverso la Rete, un'i
 
 Questa è sicuramente l'opzione più consigliata, perchè permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
 
- # fedup-cli --network 18 --debuglog fedupdebug.log
+ # fedup-cli --network 19 --debuglog fedupdebug.log
 
 Finite le operazioni preparative controllare il log ''fedupdebug.log '' per eventuali errori.
 
@@ -46,7 +46,7 @@ Finite le operazioni preparative controllare il log ''fedupdebug.log '' per even
 
 Per aggiornare Fedora utilizzando un file ISO è necessario che esso risieda sulla macchina da aggiornare. E' possibile attivare il repo ''updates'' se si possiede una connessione di rete attiva. Il file ISO d'esempio sarà in '' /home/user/fedora-18.iso'', che ovviamente va sotituito con il file e la location del proprio file ISO.
 
- # fedup-cli --iso /home/user/fedora-18.iso --debuglog=fedupdebug.log
+ # fedup-cli --iso /home/user/fedora-19.iso --debuglog=fedupdebug.log
 
 Finite le operazioni preparative controllare il log ''fedupdebug.log '' per eventuali errori.
 
