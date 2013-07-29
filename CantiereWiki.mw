@@ -82,6 +82,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=Gdesklets|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=AlbertoChiusole|rilettore=RiccardoVolpe|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Libreoffice|autore=AlbertoChiusole|rilettore=?|data=27/07/2013|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=Touchpad|autore=AlbertoChiusole|rilettore=?|data=29/07/2013|stato=DaFare}}
 |}
 
 == Articoli in corso di aggiornamento ==
@@ -101,7 +102,6 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 {{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}}
-{{ModificaArticolo|articolo=Touchpad|autore=/|responsabile=AlbertoChiusole|data=11/09/2012|stato=InCorso}}
 {{ModificaArticolo|articolo=Netinstall:_installazione_Fedora_da_rete|autore=/|responsabile=AlbertoChiusole|data=4/1/2013|stato=InCorso}}
 |}
 
