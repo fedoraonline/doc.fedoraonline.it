@@ -6,12 +6,15 @@ Per potersi registrare al sito e poter gestire online le proprie share si può a
 
 == Installazione ==
 
-Dopo aver reperito le informazioni è possibile installare un client sul proprio PC Fedora, che permette la sincronizzazione automatica dei file, senza dover necessariamente accedere via web (http).<br />
-Il pacchetto per la propria distro si può scaricare cliccando su [https://www.dropbox.com/downloading?src=index questo link], dopodichè si installa l'RPM manualmente:
+Per l'installazione di dropbox è consigliata l'utilizzazione del relativo [[Dropbox_repo|repository]], per installare la versione più aggiornata possibile.
 
- [root@cellopc-mini Downloads]# rpm -ivh nautilus-dropbox-0.6.3-1.fedora.i386.rpm 
+===Installazione manuale da pacchetto===
+Per installare comunque dropbox utilizzando il pacchetto servirsi delle istruzioni seguenti.
 
-Ad installazione terminata si può lanciare l'applicazione dal menù delle applicazioni, ovvero ''Internet > DropxBox'' e seguire il wizard che viene proposto per la creazione di un nuovo utente ed il cambio della directory che verrà sincronizzata.<br />
-DropBox crea la directory ''$HOME/Dropbox'', che verrà "syncata" automaticamente se l'applicazione è running, e sposta dei file o crea nuove directory sotto quel path in fase di aggiornamento.
+Per ottenere il pacchetto navigare nella pagina di [https://www.dropbox.com/install?os=lnx download] di dropbox, dopodichè installare l'RPM manualmente:
+ [root@computer ~]# rpm -ivh nautilus-dropbox-1.6.0-1.fedora.x86_64.rpm
+
+Ad installazione terminata si può lanciare l'applicazione dal menù delle applicazioni, ovvero ''Internet > DropxBox'' e seguire il wizard tramite il quale si crea un nuovo utente e si può modificare il percorso della directory che verrà sincronizzata.<br />
+DropBox normalmente crea la directory ''$HOME/Dropbox'', che verrà sincronizzata automaticamente se l'applicazione è in esecuzione, e sposta dei file o crea nuove directory sotto quel path in fase di aggiornamento.
 
 [[Categoria:Internet]]
