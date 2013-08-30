@@ -29,11 +29,14 @@ e inserendo le seguenti righe:
  gpgcheck=0
 
 Salvare e chiudere.<br />
+
+Si può evitare questo passaggio recuperando il file direttamente dal repo, così:
+ # yum-config-manager --add-repo=http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo
+
 Il repo è così pronto per l'uso, ma bisogna abilitarlo singolarmente ad ogni operazione con l'opzione ''--enablerepo=fedora-chromium-stable'' se si vuole installare/aggiornare un pacchetto da esso.<br/>
 
-Per esempio:
-
- # yum install --enablerepo=fedora-chromium-stable chromium
+==Installazione Chromium==
+Per installare il browser di casa google attenersi alla relativa [[Chromium|documentazione]].
 
 == Riferimenti ==
 * http://fedoraproject.org/wiki/Chromium
