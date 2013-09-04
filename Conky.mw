@@ -6,7 +6,7 @@ Conky è un programma di system monitor per X Window System, capace di monitorar
 
 ==Installazione==
 
-Conky si può facilmente installare tramite yum:
+Conky si può facilmente installare tramite yum
 
  # yum install conky
 
