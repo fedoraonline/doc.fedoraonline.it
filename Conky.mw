@@ -138,7 +138,6 @@ Se non dovesse partire con tale comando all'avvio del sistema o al riavvio di X,
 
  /home/nome_utente/conky.sh &
 
-Finito.
 ==Conky su Openbox==
 
 Se si utilizza Openbox et similia basta modificare il proprio /xtc/xdg/openbox/autostart.sh, inserendo tutti processi che si vogliono far partire all'avvio, per esempio:
