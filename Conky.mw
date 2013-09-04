@@ -12,7 +12,7 @@ Conky si può facilmente installare tramite yum
 
 ==Configurazione==
 
-Per creare un monitoraggio conky personalizzato andare nella home e creare un file di testo vuoto nominato .conkyrc; una volta creato copia e incolla un conky, come questo preso da Internet (si può anche crearlo da solo se si ha voglia e tanta pazienza, ma è più facile copiarne uno esistente e adattarlo alle proprie esigenze).<br />
+Per creare un monitoraggio conky personalizzato bisogna creare nella propria home un file di configurazione chiamato ''.conkyrc''. Alcuni esempi possono essere trovati su internet. Di seguito ve ne proponiamo uno che può essere adattato alle vostre esigenze.<br />
 
  #CONKYRC
  #-------------------------------
@@ -115,6 +115,7 @@ Ora che sono stati creati tutti nella home come il primo, dare questi comandi da
 Ovviamente al prossimo riavvio si dovranno ridare questi comandi per farli riapparire, ma si può sempre creare uno script che lo faccia in automatico.
 
 [[Image:Conky.png|thumb|500px|center|Esempio di Conky ottenuto con il file di configurazione suggerito.]]
+
 ==Avvio automatico al boot==
 
 * Andare nella propria home e creare un file vuoto di testo chiamandolo conky.sh. Nello script creato mettere tutti i comandi per far partire i conky, come l'esempio sopra, salvare il file e dare i permessi di esecuzione:
