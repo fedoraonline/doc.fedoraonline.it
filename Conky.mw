@@ -115,7 +115,7 @@ Ora che sono stati creati tutti nella home come il primo, dare questi comandi da
 
 Ovviamente al prossimo riavvio si dovranno ridare questi comandi per farli riapparire, ma si può sempre creare uno script che lo faccia in automatico.
 
-[[Image:Conky.png|center|Esempio di Conky ottenuto con il file di configurazione suggerito.]]
+[[Image:Conky.png|thumb|500px|center|Esempio di Conky ottenuto con il file di configurazione suggerito.]]
 ==Avvio automatico al boot==
 
 * Andare nella propria home e creare un file vuoto di testo chiamandolo conky.sh. Nello script creato mettere tutti i comandi per far partire i conky, come l'esempio sopra, salvare il file e dare i permessi di esecuzione:
