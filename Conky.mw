@@ -12,7 +12,7 @@ Conky si può facilmente installare tramite yum
 
 ==Configurazione==
 
-Per creare un monitoraggio conky personalizzato bisogna creare nella propria home un file di configurazione chiamato ''.conkyrc''. Alcuni esempi possono essere trovati su internet. Di seguito ve ne proponiamo uno che può essere adattato alle vostre esigenze.<br />
+Per avviare un monitoraggio conky personalizzato bisogna creare nella propria home un file di configurazione chiamato ''.conkyrc''. Alcuni esempi possono essere trovati su internet. Di seguito ve ne proponiamo uno che può essere adattato alle proprie esigenze.<br />
 
  #CONKYRC
  #-------------------------------
@@ -94,7 +94,7 @@ Per creare un monitoraggio conky personalizzato bisogna creare nella propria hom
  CPU: ${freq}MHz ${offset 87} HD: ${diskio}
  ${cpugraph 32,150} ${diskiograph 32,150}
 
-Dopo averlo salvato chiudere e digitare nel terminale:
+Per visualizzare il conky, digitare nel terminale:
 
  $ conky
 
@@ -102,42 +102,14 @@ oppure
 
  $ conky -c /PERCORSO/.conkyrc 
 
-per vedere se parte correttamente. Compiz e Emerald, se presenti e attivi, non dovrebbero creare problemi.<br />
-Impostare i parametri cartesiani (x,y) nel caso la posizione del conky non piacesse; si trovano nel .conckyrc e si possono modificare con un editor di testo. Fare la stessa cosa per tutti i conky che si vogliono aggiungere. Il secondo ad esempio lo si chiamerà .conckyrc1, il terzo .conkyrc2, 3, 4, ecc. fino a quanti si vogliono mettere.<br />
-Ora che sono stati creati tutti nella home come il primo, dare questi comandi da terminale per far comparire i conky appena creati:
+Si segnala che la posizione del conky può essere cambiata modificando i valori di ''gap_x'', ''gap_y'' e ''alignment''. Qualora si volessero aggiungere più conky, è sufficiente creare più file di configurazione (ad esempio ''.conckyrc1'', il terzo ''.conkyrc2'', ... ) e inizializzarli da terminale
 
- conky -c /percorso/.conkyrc &
- conky -c /percorso/.conkyrc1 &
- conky -c /percorso/.conkyrc2 &
- conky -c /percorso/.conkyrc3 &
- conky -c /percorso/.conkyrc4 &
-
-Ovviamente al prossimo riavvio si dovranno ridare questi comandi per farli riapparire, ma si può sempre creare uno script che lo faccia in automatico.
+ $ conky -c /percorso/.conkyrc &
+ $ conky -c /percorso/.conkyrc1 &
+ $ conky -c /percorso/.conkyrc2 &
+ ...
 
 [[Image:Conky.png|thumb|500px|center|Esempio di Conky ottenuto con il file di configurazione suggerito.]]
-
-==Avvio automatico al boot==
-
-* Andare nella propria home e creare un file vuoto di testo chiamandolo conky.sh. Nello script creato mettere tutti i comandi per far partire i conky, come l'esempio sopra, salvare il file e dare i permessi di esecuzione:
-
- $ chmod +x /home/nome_utente/conky.sh
-
-* Controllare se tutto funziona:
-
- $ /home/nome_utente/conky.sh
-
-Dovrebbero partire tutti i conky creati.
-
-* Andare in ''Applicazioni di avvio'' e crear un nuovo comando, dandogli il nome che più piace. Su Fedora 15 basterà premere "ALT+F2" e scrivere ''gnome-session-properties'' per arrivare alle Applicazioni di avvio.<br />
-Una volta creato inserire il comando per far partire il tutto:
-
- /home/nome_utente/conky.sh
-
-Salvare e chiudere.<br>
-Se non dovesse partire con tale comando all'avvio del sistema o al riavvio di X, provare con la '&' finale:
-
- /home/nome_utente/conky.sh &
-
 ==Conky su Openbox==
 
 Se si utilizza Openbox et similia basta modificare il proprio /xtc/xdg/openbox/autostart.sh, inserendo tutti processi che si vogliono far partire all'avvio, per esempio:
@@ -149,10 +121,5 @@ Se si utilizza Openbox et similia basta modificare il proprio /xtc/xdg/openbox/a
  conky -c /home/nome_utente/.conkyrc &
  conky -c /home/nome_utente/.conkyrc1 &
  conky -c /home/nome_utente/.conkyrc2 &
- conky -c /home/nome_utente/.conkyrc3 &
- conky -c /home/nome_utente/.conkyrc4 &
  xscreensaver -no-splash &
-
-Non c'è bisogno, in questo WM, dello script descritto sopra per Gnome.
-
 [[Categoria:Ambiente Desktop]]
