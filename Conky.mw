@@ -1,5 +1,3 @@
-{{InCorso|autore=SimoneDresti}}
-
 ==Introduzione==
 
 Conky è un programma di system monitor per X Window System, capace di monitorare diverse variabili di sistema, come la temperatura CPU e Hard Disk, lo spazio del disco e della Ram, il traffico, etc. Questo articolo ha come obiettivo la creazione di più monitoraggi conky all'avvio del sistema, utilizzando Gnome oppure Openbox.
