@@ -10,12 +10,8 @@ Si scarica il repo e lo si posiziona nella cartella /etc/yum.repos.d/, da root:
  # curl http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -o /etc/yum.repos.d/virtualbox.repo
 Il repository è attivo di default ma bisogna installare alcune dipendenze necessarie per far girare VirtualBox:
  # yum install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel
-Quindi a questo punto si può installare l'ultima versione di VirtualBox (attualmente la 4.1.12):
+Quindi a questo punto si può installare l'ultima versione di VirtualBox (attualmente la 4.2.x):
  # yum install VirtualBox-4.2
-Per controllare qual'è l'ultima versione disponibile andare [http://download.virtualbox.org/virtualbox/rpm/fedora/17/i686 qua] (cambiando il 17 nel link con la versione di fedora che usate) e segnatevi qual'è l'RPM più recente da installare (es. '''VirtualBox-4.2'''-4.2.0_80737_fedora17-1.i686.rpm).
-Infine si aggiunge il proprio utente al gruppo vboxusers (sostituire nome_utente con il proprio con cui si userà VirtualBox):
- # usermod -a -G vboxusers nome_utente
-<br />In caso di aggiornamento del kernel dare un reboot al sistema prima di lanciare VirtualBox.
 
 ==Risoluzione problemi==
 
