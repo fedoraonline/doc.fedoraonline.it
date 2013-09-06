@@ -1,4 +1,3 @@
-{{InCorso|autore=NomeRedattore}}
 {{Warning|Dalla versione 14 di fedora esiste un repository specifico per VirtualBox sia a 32 che a 64 bit. Seguire [[VirtualBox_repo|queste]] istruzioni per installare VirtualBox su Fedora.
 I passaggi sottostanti non dovrebbero essere quindi più necessari con le ultime release di fedora.}}
 
