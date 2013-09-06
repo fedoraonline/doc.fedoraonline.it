@@ -15,9 +15,8 @@ Quindi a questo punto si può installare l'ultima versione di VirtualBox (attual
 
 ==Risoluzione problemi==
 
-Può capitare che dopo un aggiornamento generico del sistema, VirtualBox non parta e lanci un pannello di allarme. Questo succede perché non sono stati ricostruiti i moduli di virtualbox dopo l'aggiornamento al nuovo kernel, perché yum rimuove il pacchetto necessario ad ogni aggiornamento del kernel; per ripristinare VirtualBox quindi basterà reinstallare il pacchetto così:
- # yum install kmod-VirtualBox
-Attenzione a installare i pacchetti '''kmod''' insieme agli '''akmod''' perché vanno in conflitto tra di loro e non permettono l'avvio della grafica; in tal caso basta entrare nel sistema da root e rimuovere uno dei due pacchetti.
+Può capitare che dopo un aggiornamento generico del sistema, VirtualBox non parta e lanci un pannello di allarme. Questo succede perché non sono stati aggiornati i moduli di virtualbox (vboxdrv, vboxnetflt e vboxnetadp) dopo l'aggiornamento al nuovo kernel. Questa situazione può essere risolta installando il pacchetto ''dkms''
+ # yum install dkms
 
 ==Riferimenti==
 [https://www.virtualbox.org/ Sito ufficiale VirtualBox]
