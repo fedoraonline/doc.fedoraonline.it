@@ -13,9 +13,11 @@ Il repository è attivo di default ma bisogna installare alcune dipendenze neces
 Quindi a questo punto si può installare l'ultima versione di VirtualBox (attualmente la 4.2.x):
  # yum install VirtualBox-4.2
 
-==Risoluzione problemi==
+==Configurazione==
+VirtualBox può essere configurato seguendo le istruzioni della guida [[Installare e configurare Virtualbox]]
 
-Può capitare che dopo un aggiornamento generico del sistema, VirtualBox non parta e lanci un pannello di allarme. Questo succede perché non sono stati aggiornati i moduli di virtualbox (vboxdrv, vboxnetflt e vboxnetadp) dopo l'aggiornamento al nuovo kernel. Questa situazione può essere risolta installando il pacchetto ''dkms''
+==Risoluzione problemi==
+Può capitare che dopo un aggiornamento generico del sistema, VirtualBox non parta e lanci un pannello di allarme. Questo succede perché non sono stati aggiornati i moduli di VirtualBox (vboxdrv, vboxnetflt e vboxnetadp) dopo l'aggiornamento al nuovo kernel. Questa situazione può essere risolta installando il pacchetto ''dkms''
  # yum install dkms
 
 ==Riferimenti==
