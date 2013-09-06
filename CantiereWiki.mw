@@ -34,7 +34,7 @@ Salvando la pagina, l'articolo verrà inserito tra quelli in stesura, evidenziat
 Ricordarsi di scrivere in fondo alla guida il markup <nowiki>[[:Categoria:Scrittura in corso]]</nowiki> (con i ":" davanti a "Categoria") come unica categoria. Non si deve inserire la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.<br />
 In questa sezione non ci saranno articoli in riscrittura, non occorre aggiornare le guide obsolete (in tutto o in parte), sono da riscrivere ex-novo; tranne in rari casi, concordati comunque in Mailing List da inserire nella categoria [[CantiereWiki#Articoli_in_corso_di_aggiornamento|articoli in corso di aggiornamento]].<br />
 Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' occorrerà inserirlo tra le [[CantiereWiki#Rilettura_in_corso|riletture in corso]].
-
+Installare_e_configurare_Virtualbox
 {| {{TabellaBase}}
 ! Fonte
 ! Articolo
@@ -107,6 +107,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=FAQ_Fol|autore=/|responsabile=AlbertoChiusole|data=03/09/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Cinnamon_repo|autore=/|responsabile=AlbertoChiusole|data=03/09/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=VirtualBox_repo|autore=/|responsabile=SimoneDresti|data=06/09/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=Installare_e_configurare_Virtualbox|autore=/|responsabile=SimoneDresti|data=06/09/2013|stato=DaFare}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
