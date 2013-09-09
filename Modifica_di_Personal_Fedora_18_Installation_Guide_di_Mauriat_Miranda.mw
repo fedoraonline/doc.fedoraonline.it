@@ -1,7 +1,7 @@
-{{InCorso|autore=AlbertoChiusole}}
-{{Nota|Nota introduttiva:|Guida alla configurazione di un sistema desktop su Fedora 19. Traduzione dell'originale di Mauriat Miranda, pubblicato il 9 luglio 2013 (aggiornamento: ''9 luglio 2013'').<br />
-Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f19.html questo riferimento].}}
-Questa è una guida <i>personale</i> alla configurazione di Fedora 19.<br />
+{{Autore|RobertMayr}}
+{{Nota|Nota introduttiva:|Guida alla configurazione di un sistema desktop su Fedora 19. Traduzione dell'originale di Mauriat Miranda, pubblicato il 25 febbraio 2013 (aggiornamento: ''17 marzo 2013'').<br />
+Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f18.html questo riferimento].}}
+Questa è una guida <i>personale</i> alla configurazione di Fedora 18.<br />
 Questa pagina fornisce delle informazioni che qualcuno potrebbe trovare utili. Occorre tenere a mente che quanto segue ha funzionato per <i>me</i>, e assicurati di avere effettuato copie di backup dei tuoi file critici nel caso in cui tu dovessi provare ad eseguire quanto qui riportato. Questa guida è stata scritta principalmente per macchine x86_64 (64bit), tuttavia è stata testata anche su una versione 32bit su Virtual Machine. I sistemi descritti si avviano correttamente anche in dual-boot con Windows 7.
 ==Supporti di installazione==
 
@@ -461,4 +461,4 @@ Potete anche scegliere di donare qualcosa con [http://www.amazon.com/gp/registry
 
 [http://www.mjmwired.net/about.php#copyright '''Copyright © 2003-2013'''] '''by Mauriat Miranda''' (mjmwired.net).
 
-[[Categoria:Scrittura in Corso]]
+[[Categoria:Traduzioni]]
