@@ -107,7 +107,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=Netinstall: installazione Fedora da rete|autore=/|responsabile=AlbertoChiusole|data=4/1/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=FAQ Fol|autore=/|responsabile=AlbertoChiusole|data=03/09/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Cinnamon repo|autore=/|responsabile=AlbertoChiusole|data=03/09/2013|stato=InCorso}}
-{{ModificaArticolo|articolo=Installare e configurare Virtualbox|responsabile=SimoneDresti|data=15/09/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=Installare e configurare Virtualbox|autore=/|responsabile=SimoneDresti|data=15/09/2013|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
