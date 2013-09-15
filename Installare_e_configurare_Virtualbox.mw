@@ -1,11 +1,8 @@
 {{InCorso|autore=SimoneDresti}}
-{{Warning|Dalla versione 14 di fedora esiste un repository specifico per VirtualBox sia a 32 che a 64 bit. Seguire [[VirtualBox_repo|queste]] istruzioni per installare VirtualBox su Fedora.
-I passaggi sottostanti non dovrebbero essere quindi più necessari con le ultime release di fedora.}}
-
 
 __TOC__
 == Introduzione ==
-Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
+VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
 Si possono riscontrare alcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
 
 == Installazione dai repository RPMFusion ==
