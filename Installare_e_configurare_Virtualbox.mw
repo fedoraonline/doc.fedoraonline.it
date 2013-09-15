@@ -4,11 +4,11 @@ __TOC__
 == Introduzione ==
 VirtualBox è un applicativo commerciale proprietario multi-piattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Si possono riscontrare alcuni problemi con il supporto USB: purtroppo ancora non è stata prevista una configurazione totalmente automatica.
 
-== Installazione dai repository RPMFusion ==
+== Installazione tramite repository RPMFusion ==
 VirtualBox è disponibile all'interno dei repository [[RPMFusion]]. Per installarlo è sufficiente eseguire da terminale
  # yum install akmod-VirtualBox VirtualBox
 
-== Installazione dai repository Oracle ==
+== Installazione tramite repository Oracle ==
 L'installazione di VirtualBox utilizzando i repository ufficiali Oracle è descritta nella guida [[VirtualBox repo]].
 
 {{nota|Differenze d'installazione|A partire dalla versione 4.0, le installazione di VirtualBox dai repository Oracle e RPMFusion sono equivalenti e mettono a disposizione la versione base di Virtualbox (rilasciato sotto licenza GPL2). Per maggiori informazioni attenersi alla [https://www.virtualbox.org/wiki/Editions documentazione ufficiale].}} 
