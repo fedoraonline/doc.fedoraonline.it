@@ -25,7 +25,6 @@ L'installazione degli Extension Pack permette di estendere le funzionalità di V
 
 L'Extension Pack può essere scaricato da [https://www.virtualbox.org/wiki/Downloads qui] facendo attenzione a scegliere la versione compatibile con quella di VirtualBox. Per installarlo sarà sufficiente eseguire il pacchetto appena scaricato.
 
-
 === Aggiunta utente al gruppo ===
 Per poter abilitare il controller USB 2.0 (EHCI), bisogna aggiungere il proprio utente al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico, usando il comando groups), con il seguente comando:
 
