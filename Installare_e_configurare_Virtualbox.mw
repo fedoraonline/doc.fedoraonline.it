@@ -2,8 +2,7 @@
 
 __TOC__
 == Introduzione ==
-VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
-Si possono riscontrare alcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
+VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux. Si possono riscontrare alcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
 
 == Installazione dai repository RPMFusion ==
 VirtualBox è disponibile all'interno dei repository [[RPMFusion]]. Per installarlo è sufficiente eseguire da terminale
