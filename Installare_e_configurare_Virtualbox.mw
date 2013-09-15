@@ -8,6 +8,15 @@ __TOC__
 Con l'ultima versione di VirtualBox, il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux.<br />
 Si possono riscontrare alcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
 
+== Installazione dai repository RPMFusion ==
+VirtualBox è disponibile all'interno dei repository [[RPMFusion]]. Per installarlo è sufficiente eseguire da terminale
+ # yum install akmod-VirtualBox VirtualBox
+
+== Installazione dai repository Oracle ==
+L'installazione di VirtualBox utilizzando i repository ufficiali Oracle è descritta nella guida [[VirtualBox repo]].
+
+{{nota|Differenze d'installazione|A partire dalla versione 4.0, l'installazione di VirtualBox dai repository Oracle e RPMFusion sono equivalenti. Per maggiori informazioni attenersi alla [https://www.virtualbox.org/wiki/Editions documentazione ufficiale].}} 
+
 == Configurazioni ==
 Il problema è ovviamente dato dalla configurazione dei permessi e perciò vanno accreditati agli utenti che vogliano usare VirtualBox alcuni diritti.
 
