@@ -1,25 +1,27 @@
 {{InCorso|autore=AlbertoChiusole}}
+{{Autore|AlbertoChiusole}}
+
 {{Nota|Nota introduttiva:|Guida alla configurazione di un sistema desktop su Fedora 19. Traduzione dell'originale di Mauriat Miranda, pubblicato il 9 luglio 2013 (aggiornamento: ''9 luglio 2013'').<br />
 Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f19.html questo riferimento].}}
 Questa è una guida <i>personale</i> alla configurazione di Fedora 19.<br />
 Questa pagina fornisce delle informazioni che qualcuno potrebbe trovare utili. Occorre tenere a mente che quanto segue ha funzionato per <i>me</i>, e assicurati di avere effettuato copie di backup dei tuoi file critici nel caso in cui tu dovessi provare ad eseguire quanto qui riportato. Questa guida è stata scritta principalmente per macchine x86_64 (64bit), tuttavia è stata testata anche su una versione 32bit su Virtual Machine. I sistemi descritti si avviano correttamente anche in dual-boot con Windows 7.
 ==Supporti di installazione==
 
-Fedora 18 viene distribuita in singoli CD-ROM o DVD-ROM per l'installazione. Il disco DVD-ROM è il metodo di installazione utilizzato in questa guida. Facendo il boot dal DVD si farà partire l'installer, il quale farà si che Fedora venga installata o che venga fatto l'upgrade di una versione precedente sulla propria macchina.
+Fedora 19 viene distribuita in singoli CD-ROM o DVD-ROM per l'installazione. Il disco DVD-ROM è il metodo di installazione utilizzato in questa guida. Facendo il boot dal DVD si farà partire l'installer, il quale farà si che Fedora venga installata o che venga fatto l'upgrade di una versione precedente sulla propria macchina.
 
-Esistono anche dei "LiveCD" che possono avviare il sistema ed eseguire una installazione di base di Fedora 18 nella memoria RAM, fornendo inoltre un metodo più semplice di installazione (non completo come quello del DVD o dei multi-CD ). Il LiveCD predefinito rende disponibile Gnome (es: Fedora-18-x86_64-Live-Desktop.iso). Esiste uno specifico LiveCD che rende disponibile KDE. Entrambi forniscono un programma di installazione, ma entrambi rendono disponibile molto meno software che un DVD. Inoltre richiedono più memoria per essere usati. Il LiveCD può essere utile per dimostrazioni.
+Esistono anche dei "LiveCD", che possono avviare il sistema ed eseguire una installazione di base di Fedora 19 nella memoria RAM, fornendo inoltre un metodo più semplice di installazione (non completo come quello del DVD). Il LiveCD predefinito rende disponibile Gnome (es: ''Fedora-Live-Desktop-x86_64-19-1.iso''). Esiste uno specifico LiveCD che rende disponibile KDE. Entrambi forniscono un programma di installazione, ma entrambi rendono disponibile molto meno software che un DVD. Inoltre richiedono più memoria per essere usati. Il LiveCD può essere utile per dimostrazioni.
 {{Nota|Nota|Per fare l'upgrade di una precedente versione di Fedora, non si può usare un LiveCD.}}
 ==Installazione==
 
-E' '''fortemente raccomandata''' la lettura delle [http://docs.fedoraproject.org/release-notes/f18/it-IT/html/ Note di Rilascio di Fedora] e della [http://docs.fedoraproject.org/install-guide/f18/en-US/html/ Guida ufficiale all'Installazione] prima di installare Fedora.<br />
-Un'ulteriore raccomandazione è quella di leggere i [https://fedoraproject.org/wiki/Common_F18_bugs Problemi comuni] prima di installare.<br />
-Fedora 18 ha subito importanti modifiche nell'installer rispetto alla precedente release.<br />
-Scaricare il file immagine del DVD di Fedora 18 da un [http://mirrors.fedoraproject.org/publiclist/Fedora/18/ mirror] di Fedora (o usare [http://torrent.fedoraproject.org torrent]) e masterizzarlo (per ulteriori informazioni su come scaricare i CD o il DVD di [http://www.mjmwired.net/resources/mjm-download-fedora.html Fedora], oltre a [http://docs.fedoraproject.org/en-US/Fedora/18/html/Burning_ISO_images_to_disc/index.html come masterizzare le immagini ISO].
+E' '''fortemente raccomandata''' la lettura delle [http://docs.fedoraproject.org/en-US/Fedora/19/html/Release_Notes/ Note di Rilascio di Fedora] e della [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/ Guida ufficiale all'Installazione] prima di installare Fedora.<br />
+Un'ulteriore raccomandazione è quella di leggere i [https://fedoraproject.org/wiki/Common_F19_bugs Problemi comuni] prima di installare.<br />
+Fedora 19 ha subito importanti modifiche nell'installer rispetto alla precedente release.<br />
+Scaricare il file immagine del DVD di Fedora 19 da uno dei [http://mirrors.fedoraproject.org/publiclist/Fedora/19/ mirror] di Fedora (o usare [http://torrent.fedoraproject.org torrent]) e masterizzarlo (per ulteriori informazioni su come scaricare i CD o il DVD di [http://www.mjmwired.net/resources/mjm-download-fedora.html Fedora], oltre a [http://docs.fedoraproject.org/en-US/Fedora/19/html/Burning_ISO_images_to_disc/ come masterizzare le immagini ISO].
 
-Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f17.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
+Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f19.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
 {{Nota|Nota|L'installer di Fedora (anaconda) è ridotto al minimo e molte delle configurazioni si dovranno eseguire dopo l'installazione.<br />
 Con qualche eccezione l'installer di Fedora è molto semplice e la gran parte dei settaggi di default sono corretti. Le opzioni più ''critiche'' invece sono il ''partizionamento'' e il ''bootloader''.}}
-L'installer di Fedora 18 ha 3 scelte principali (alcune hanno delle opzioni ulteriori):
+L'installer di Fedora 19 ha 3 scelte principali (alcune hanno delle sotto opzioni ulteriori):
 * '''Localizzazione'''
 ** Data e Ora
 ** Tastiera
@@ -32,7 +34,7 @@ L'installer di Fedora 18 ha 3 scelte principali (alcune hanno delle opzioni ulte
 * '''Gestione Dischi'''
 Per il '''SOFTWARE''' seleziona ''SOFTWARE SELECTION''.
 Sulla ''SINISTRA'' si vede ''Scegli ambiente'' in cui si potrà scegliere quale tipo di installazione si vuole fare.
-'''NOTA''': L'installer di Fedora 18 permette di selezionare soltanto un Ambiente Desktop, se ne potranno aggiungere altri successivamente. Questa guida utilizza il ''desktop GNOME'' perchè è quello di default. Raccomando ''Xfce'' oppure ''LXDE'' se il vostro computer è più datato. Se non si hanno problemi di connessione al web è consigliabile selezionare un desktop e aggiungere il software aggiuntivo successivamente.
+'''NOTA''': L'installer di Fedora 19 permette di selezionare soltanto un Ambiente Desktop, se ne potranno aggiungere altri successivamente. Questa guida utilizza il ''desktop GNOME'' perchè è quello di default. Raccomando ''Xfce'' oppure ''LXDE'' se il vostro computer è più datato. Se non si hanno problemi di connessione al web è consigliabile selezionare un desktop e aggiungere il software aggiuntivo successivamente.
 
 Sulla ''DESTRA'' si vede ''Seleziona pacchetti'' in cui è possibile aggiungere software a completamento dell'Ambiente Desktop scelto oppure come nuovo gruppo di pacchetti, indipendenti dal Desktop stesso. Si raccomanda di aggiungere gli ''Strumenti di Sviluppo'', ma non è obbligatorio.
 
@@ -119,29 +121,29 @@ Per installare RPM-Fusion digitate:
 
 Questa guida utilizza Gnome 3.6 di default, ma se questo è difficile da usare si raccomanda di provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora. Da notare che sono tutti opzionali. Utilizzate yum se si vuole installarli:
 
-[http://www.mjmwired.net/resources/mjm-fedora-f18.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall "KDE Plasma Workspaces"
 
-[http://www.mjmwired.net/resources/mjm-fedora-f18.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall LXDE
 
-[http://www.mjmwired.net/resources/mjm-fedora-f18.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall XFCE
 
 ''Note: Xfce è la mia scelta personale/raccomandata.''
 
-[http://www.mjmwired.net/resources/mjm-fedora-f18.html#mate MATE] è un ambiente Desktop aggiornato di Gnome 2, che ha preceduto l'attuale Gnome 3 in Fedora. [http://mate-desktop.org/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#mate MATE] è un ambiente Desktop aggiornato di Gnome 2, che ha preceduto l'attuale Gnome 3 in Fedora. [http://mate-desktop.org/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall MATE
 
-[http://www.mjmwired.net/resources/mjm-fedora-f18.html#cinnamon Cinnamon] è un ambiente Desktop basato su Gnome 3 ma utilizza un layout più tradizionale e simile a Gnome 2.([http://cinnamon.linuxmint.com/ ulteriori informazioni]).<br />
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#cinnamon Cinnamon] è un ambiente Desktop basato su Gnome 3 ma utilizza un layout più tradizionale e simile a Gnome 2.([http://cinnamon.linuxmint.com/ ulteriori informazioni]).<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groupinstall CINNAMON
