@@ -2,7 +2,7 @@
 
 __TOC__
 == Introduzione ==
-VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il prodotto di virtualizzazione di Oracle ha raggiunto davvero ottimi livelli, anche su piattaforma Linux. Si possono riscontrare alcuni problemi con il supporto USB: putroppo ancora non è stata prevista una configurazione totalmente automatica, almeno nelle release di Fedora, ecco quindi alcuni configurazioni e accortezze.
+VirtualBox è un applicativo commerciale proprietario multi-piattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Si possono riscontrare alcuni problemi con il supporto USB: purtroppo ancora non è stata prevista una configurazione totalmente automatica.
 
 == Installazione dai repository RPMFusion ==
 VirtualBox è disponibile all'interno dei repository [[RPMFusion]]. Per installarlo è sufficiente eseguire da terminale
@@ -11,51 +11,24 @@ VirtualBox è disponibile all'interno dei repository [[RPMFusion]]. Per installa
 == Installazione dai repository Oracle ==
 L'installazione di VirtualBox utilizzando i repository ufficiali Oracle è descritta nella guida [[VirtualBox repo]].
 
-{{nota|Differenze d'installazione|A partire dalla versione 4.0, l'installazione di VirtualBox dai repository Oracle e RPMFusion sono equivalenti. Per maggiori informazioni attenersi alla [https://www.virtualbox.org/wiki/Editions documentazione ufficiale].}} 
+{{nota|Differenze d'installazione|A partire dalla versione 4.0, le installazione di VirtualBox dai repository Oracle e RPMFusion sono equivalenti e mettono a disposizione la versione base di Virtualbox (rilasciato sotto licenza GPL2). Per maggiori informazioni attenersi alla [https://www.virtualbox.org/wiki/Editions documentazione ufficiale].}} 
 
 == Configurazioni ==
-Il problema è ovviamente dato dalla configurazione dei permessi e perciò vanno accreditati agli utenti che vogliano usare VirtualBox alcuni diritti.
+In seguito verrà illustrato come abilitare alcune funzionalità non presenti nella versione base di VirtualBox tramite l'installazione degli Extension Pack.
+
+=== Installazione del Extension Pack ===
+L'installazione degli Extension Pack permette di estendere le funzionalità di VirtualBox base aggiungendo le seguenti caratteristiche
+* Supporto per i device virtuali USB 2.0 (EHCI).
+* Supporto per il VirtualBox Remote Desktop Protocol (VRDP)
+* Intel PXE boot ROM con supporto per la scheda di rete E1000
+* Il supporto sperimentale per PCI su host Linux
+
+L'Extension Pack può essere scaricato da [https://www.virtualbox.org/wiki/Downloads qui] facendo attenzione a scegliere la versione compatibile con quella di VirtualBox. Per installarlo sarà sufficiente eseguire il pacchetto appena scaricato.
+
 
 === Aggiunta utente al gruppo ===
-Per prima cosa, bisogna aggiungere la propria utenza al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico, usando il comando groups), con il seguente comando:
+Per poter abilitare il controller USB 2.0 (EHCI), bisogna aggiungere il proprio utente al gruppo ''vboxusers'' (controllare che non sia già stato fatto in automatico, usando il comando groups), con il seguente comando:
 
  # gpasswd -a $(logname) vboxusers
-
-=== Creazione FileSystem Fasullo ===
-Ora bisogna garantire i permessi di scrittura e lettura su "usbfs" per gli utenti che appartengono al gruppo "vboxusers".
-
-Su Fedora 10, "usbfs" è accessibile da ''/proc/bus/usb'' che per configurazione di default appartiene all'utente root e al gruppo root. Si potrebbe anche modificare i permessi con il comando chmod, ma ogni qualvolta si riavvia il sistema, si dovrà rifare la medesima procedura. Inoltre non si potrà eseguire a piacimento le operazioni di mount, perché il sistema comunica costantemente con "usbfs", e finché esiste tale comunicazione ( cioè esattamente per tutto il tempo in cui il sistema è running ) il filesystem risulta "busy". Il "trucco" sta nel "montare" una copia di "usbfs" da qualche parte nel sistema, passando gli effetti delle configurazioni anche su /proc/bus/usb. Per fare questo, serve l'id del gruppo "vboxusers", che si ricava con il seguente comando:
-
- $ cat /etc/group | grep vboxusers
-
-L'output sarà qualcosa di simile a:
-
- vboxusers:x:501:nomeutente
-
-che specifica appunto che sul proprio sistema l'id del gruppo (gid) "vboxusers" è 501. Ora si può procedere nella creazione di un altro punto di mount per "usbfs". In questo esempio lo si crea in ''/root/usbfs'':
-
- # mkdir /mnt/usbfs
-
-Il prossimo passo è la modifica del file /etc/fstab per "montare" una copia di "usbfs" in /root/usbfs. Editiamo quindi il file con un editor a piacimento 
- # nano /etc/fstab
-e alla fine di aggiungiamo le seguenti righe:
- /mnt/usbfs usbfs rw,devgid=501,devmode=664 0 0
-
-Ovviamente, se nel sistema il gid del gruppo "vboxusers" è differente da '''501''', si dovrà sostituirlo con quello appropriato. Per applicare i cambiamenti, lanciare il comando di "mount":
-
- #  mount -a
-
-== Installazione dipendenze ==
-Bisogna poi installare:
-
- # yum install kernel-devel
- # yum install kernel-headers
- # yum install dkms
-
-Ed infine far partire il servizio di VirtualBox con il comando:
-
- # /etc/init.d/vboxdrv setup
-
-Dopo questa procedura, finalmente i propri sistemi virtuali leggeranno qualsiasi collegamento USB, esattamente come il sistema operativo vero e proprio. Chiaramente è necessario settare dentro all'applicativo, per ogni macchina virtuale, i controller USB che si vuole rendere attivi.
 
 [[Categoria:Virtualizzazione]]
