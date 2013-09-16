@@ -1,5 +1,5 @@
 {{Autore|AlbertoChiusole}}
-{{nota|GtkRadiant per Fedora|Questa installazione è stata testata su Fedora 15 e 16 ma, con le dovute accortezze, dovrebbe funzionare anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.}}
+{{nota|GtkRadiant per Fedora|Questa installazione è stata testata su Fedora 15, 16, 17, 18, 19 ma, con le dovute accortezze, dovrebbe funzionare anche per altre versioni e altre distribuzioni che soddisfino le dipendenze necessarie.}}
 
 {{warning|Solo l'installazione delle dipendenze necessità la password di root, tutto il resto del processo si può svolgere da user.}} 
 
@@ -10,7 +10,7 @@ Dopo questa introduzione passiamo alla fase pratica.
 
 ==Installazione Dipendenze==
 Installiamo le dipendenze per la nostra Fedora:
- # yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel gtkglext-devel scons subversion git
+ # yum install libxml2-devel glib-devel zip libjpeg-devel gtk+-devel gtk2-devel gtkglext-devel scons subversion git libjpeg-turbo-devel
 
 ==Installazione GtkRadiant==
 Posizioniamoci nella directory home del vostro utente:
