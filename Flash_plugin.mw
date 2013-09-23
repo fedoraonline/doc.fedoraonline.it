@@ -5,9 +5,9 @@ Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Adobe|Adobe]].}}
 
-<ol>
+
  # yum install flash-plugin
-</ol>
+
 
 ===Verifica Flash Plugin===
 Per verificare la presenza o meno del plugin Flash, basta digitare nella barra degli indirizzi del proprio browser:
