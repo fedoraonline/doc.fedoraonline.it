@@ -4,15 +4,8 @@ Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti
 
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Adobe|Adobe]].}}
-===Installazione su Chromium===
-Per installare il plugin Flash su Chromium si può seguire la procedura per l'installazione del plugin su Firefox.<br />
-{{Nota|Link simbolico|Per far sì che il plugin lavori correttamente, basterà impostare un link simbolico al plugin di Firefox.}}
-Di seguito il link simbolico per le architetture a 32 e 64bit:
 <ol>
-<li>Link 32 bit</li>
- # ln -s /usr/lib/mozilla/plugins/libflashplayer.so /usr/lib/chromium-browser/plugins/libflashplayer.so
-<li>Link 64bit</li>
- # ln -s /usr/lib64/mozilla/plugins/libflashplayer.so /usr/lib64/chromium-browser/plugins/libflashplayer.so
+ # yum install flash-plugin
 </ol>
 
 ===Verifica Flash Plugin===
