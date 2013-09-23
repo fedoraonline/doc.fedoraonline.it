@@ -4,16 +4,6 @@ Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti
 
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Adobe|Adobe]].}}
-=== Installazione su Firefox ===
-{{Nota|Flash plugin a 64bit|Recentemente Adobe ha rilasciato il plugin per processori a 64bit. Non esite più nessuna differenza nell'installazione tra 32 e 64bit, tranne per l'attivazione del repo.}}
-<ol>
-<li>32 bit</li>
- # yum install --enablerepo=adobe-linux-i386 --exclude="AdobeReader\*" flash-plugin nspluginwrapper alsa-plugins-pulseaudio
-<li>64bit</li>
- # yum install --enablerepo=adobe-linux-x86_64 --exclude="AdobeReader\*" flash-plugin nspluginwrapper alsa-plugins-pulseaudio
-</ol>
-Per far funzionare il plugin è necessario il riavvio di Firefox.
-
 ===Installazione su Chromium===
 Per installare il plugin Flash su Chromium si può seguire la procedura per l'installazione del plugin su Firefox.<br />
 {{Nota|Link simbolico|Per far sì che il plugin lavori correttamente, basterà impostare un link simbolico al plugin di Firefox.}}
