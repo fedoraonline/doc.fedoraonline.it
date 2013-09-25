@@ -78,7 +78,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=13 Configurazioe LVM2 su ISCSI initiator|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=14 Configurazione LVM2 per funzionamento con device multipathed|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=15 Altri comandi LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Skype_repo|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Libreoffice|autore=AlbertoChiusole|rilettore=AndreaMalfatti|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Gdesklets|autore=AlbertoChiusole|rilettore=?|data=09/03/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Libreoffice|autore=AlbertoChiusole|rilettore=?|data=27/07/2013|stato=DaFare}}
@@ -108,6 +107,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=FAQ Fol|autore=/|responsabile=AlbertoChiusole|data=03/09/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Cinnamon repo|autore=/|responsabile=AlbertoChiusole|data=03/09/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Installare e configurare Virtualbox|autore=/|responsabile=SimoneDresti|data=15/09/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=Skype_repo|autore=AlbertoChiusole|responsabile=SimoneDresti|data=25/09/2013|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
