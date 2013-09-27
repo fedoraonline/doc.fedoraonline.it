@@ -17,14 +17,15 @@ Innanzitutto bisogna provvedere a scaricare l'ultima versione di skype disponibi
 
 Da terminale raggiungere la cartella dove è stato scaricato il pacchetto (probabilmente $HOME/Scaricati) e installarlo
 
- $ cd /path/to/skype
- $ su
+ # cd /path/to/skype
  # yum install skype-*
 
 {{Warning|Skype ha messo a disposizione un repository come installazione alternativa. Tale procedura è sconsigliata perché installa una versione obsoleta e non funzionante di skype.}} 
 
-== Riferimenti ==
-* [http://www.skype.com/intl/it/welcomeback/?intcmp=wlogo Sito ufficiale Skype]
+== Aggiornamento ==
 
+Skype può essere aggiornato eseguendo da root il seguente comando
+ # TMP=`mktemp`; if [ `wget -nv --spider http://www.skype.com/go/getskype-linux-beta-fc10 -o $TMP; cat $TMP |tr ' ' '\n'| grep '\-fedora.*.rpm' |tee $TMP |rev |cut -d '/' -f 1 |rev |cut -d '-' -f 2` == `rpm -q skype |cut -d '-' -f 2` ]; then echo "Skype già aggiornato all'ultima versione. Niente da fare."; elif [ `rpm -q skype` ]; then yum update $TMP; else exit 1; fi; rm -f $TMP
+Lo script recupera l'ultima versione di skype e lo aggiorna confrontandolo con la versione installata..
 [[Categoria:Repository]]
 [[Categoria:Yum]]
