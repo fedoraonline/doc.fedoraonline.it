@@ -9,7 +9,7 @@ VirtualBox è disponibile all'interno dei repository [[RPMFusion]]. Per installa
 == Installazione tramite repository Oracle ==
 L'installazione di VirtualBox utilizzando i repository ufficiali Oracle è descritta nella guida [[VirtualBox repo]].
 
-{{nota|Differenze d'installazione|A partire dalla versione 4.0, le installazione di VirtualBox dai repository Oracle e RPMFusion sono equivalenti e mettono a disposizione la versione base di Virtualbox (rilasciato sotto licenza GPL2). Per maggiori informazioni attenersi alla [https://www.virtualbox.org/wiki/Editions documentazione ufficiale].}} 
+{{nota|Differenze d'installazione|A partire dalla versione 4.0, l'installazione di VirtualBox dai repository Oracle e RPMFusion sono equivalenti e mettono a disposizione la versione base di Virtualbox (rilasciato sotto licenza GPL2). Per maggiori informazioni attenersi alla [https://www.virtualbox.org/wiki/Editions documentazione ufficiale].}}
 
 == Configurazioni ==
 In seguito verrà illustrato come abilitare alcune funzionalità non presenti nella versione base di VirtualBox tramite l'installazione degli Extension Pack.
