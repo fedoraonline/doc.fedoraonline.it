@@ -24,8 +24,10 @@ Da terminale raggiungere la cartella dove è stato scaricato il pacchetto (proba
 
 == Aggiornamento ==
 
-Skype può essere aggiornato eseguendo da root il seguente comando
- # TMP=`mktemp`; if [ `wget -nv --spider http://www.skype.com/go/getskype-linux-beta-fc10 -o $TMP; cat $TMP |tr ' ' '\n'| grep '\-fedora.*.rpm' |tee $TMP |rev |cut -d '/' -f 1 |rev |cut -d '-' -f 2` == `rpm -q skype |cut -d '-' -f 2` ]; then echo "Skype già aggiornato all'ultima versione. Niente da fare."; elif [ `rpm -q skype` ]; then yum update $TMP; else exit 1; fi; rm -f $TMP
-Lo script recupera l'ultima versione di skype e lo aggiorna confrontandolo con la versione installata..
+Se si posside wget (in alternativa installarlo con ''yum install wget'') si può aggiornare skype eseguendo da root il seguente comando tutto su una riga:
+ # TMP=`mktemp`; if [ ! `which wget 2>/dev/null` ]; then echo -e "Wget non trovato. Installarlo tramite yum: \n\t# yum install wget"; fi; URL="`wget -nv --spider http://www.skype.com/go/getskype-linux-beta-fc10 -o $TMP; cat $TMP |tr ' ' '\n' |grep '\-fedora.*.rpm' |tee $TMP |rev |cut -d '/' -f 1 |rev |cut -d '-' -f 2`"; if [ `rpm -q skype` ] && [ $URL != "`rpm -q skype |cut -d '-' -f 2`" ]; then yum update -y `cat $TMP`; fi; rm -rf $TMP
+Lo script aggiorna skype solo se, confrontandolo la versione online, risulta più nuova della versione installata.
+
 [[Categoria:Repository]]
 [[Categoria:Yum]]
+[[Categoria:Rilettura in corso]]
