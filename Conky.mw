@@ -1,6 +1,7 @@
+{{Autore|SimoneDresti}}
 ==Introduzione==
 
-Conky è un programma di system monitor per X Window System, capace di monitorare diverse variabili di sistema, come la temperatura CPU e Hard Disk, lo spazio del disco e della Ram, il traffico, etc. Questo articolo ha come obiettivo la creazione di più monitoraggi conky all'avvio del sistema, utilizzando Gnome oppure Openbox.
+Conky è un programma di system monitor per X Window System, capace di monitorare diverse variabili di sistema, come la temperatura di CPU e Hard Disk, lo spazio del disco e della Ram, il traffico, etc. Questo articolo ha come obiettivo la creazione di più monitoraggi conky all'avvio del sistema, utilizzando Gnome oppure Openbox.
 
 ==Installazione==
 
@@ -10,7 +11,8 @@ Conky si può facilmente installare tramite yum
 
 ==Configurazione==
 
-Per avviare un monitoraggio conky personalizzato bisogna creare nella propria home un file di configurazione chiamato ''.conkyrc''. Alcuni esempi possono essere trovati su internet. Di seguito ve ne proponiamo uno che può essere adattato alle proprie esigenze.<br />
+Per avviare un monitoraggio conky personalizzato bisogna creare nella propria home un file di configurazione chiamato ''.conkyrc''.<br/>
+Alcuni esempi possono essere trovati su internet. Di seguito ne viene proposto uno che può essere adattato alle proprie esigenze.<br />
 
  #CONKYRC
  #-------------------------------
@@ -100,14 +102,15 @@ oppure
 
  $ conky -c /PERCORSO/.conkyrc 
 
-Si segnala che la posizione del conky può essere cambiata modificando i valori di ''gap_x'', ''gap_y'' e ''alignment''. Qualora si volessero aggiungere più conky, è sufficiente creare più file di configurazione (ad esempio ''.conckyrc1'', il terzo ''.conkyrc2'', ... ) e inizializzarli da terminale
+===Configurare più conky contemporaneamente===
+Si segnala che la posizione del conky può essere cambiata modificando i valori di ''gap_x'', ''gap_y'' e ''alignment''. Qualora si volessero aggiungere più conky, è sufficiente creare più file di configurazione (ad esempio ''.conckyrc1'', il terzo ''.conkyrc2'', ... ) e inizializzarli da terminale:
 
  $ conky -c /percorso/.conkyrc &
  $ conky -c /percorso/.conkyrc1 &
  $ conky -c /percorso/.conkyrc2 &
  ...
 
-[[Image:Conky.png|thumb|500px|center|Esempio di Conky ottenuto con il file di configurazione suggerito.]]
+[[Image:Conky.png|thumb|500px|center|Esempio di Conky ottenuto con il file di configurazione suggerito con Gnome 3.8 come DE.]]
 ==Conky su Openbox==
 
 Se si utilizza Openbox et similia basta modificare il proprio /xtc/xdg/openbox/autostart.sh, inserendo tutti processi che si vogliono far partire all'avvio, per esempio:
@@ -120,6 +123,6 @@ Se si utilizza Openbox et similia basta modificare il proprio /xtc/xdg/openbox/a
  conky -c /home/nome_utente/.conkyrc1 &
  conky -c /home/nome_utente/.conkyrc2 &
  xscreensaver -no-splash &
-<br/>
+
+
 [[Categoria:Ambiente Desktop]]
-[[Categoria:Rilettura in corso]]
