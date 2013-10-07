@@ -1,4 +1,4 @@
-{{InCorso|autore=AlbertoChiusole}}
+<!--{{InCorso|autore=AlbertoChiusole}}-->
 {{Autore|AlbertoChiusole}}
 
 {{Nota|Nota introduttiva:|Guida alla configurazione di un sistema desktop su Fedora 19. Traduzione dell'originale di Mauriat Miranda, pubblicato il 9 luglio 2013 (aggiornamento: ''9 luglio 2013'').<br />
@@ -191,7 +191,7 @@ Per chi volesse '''TUTTO''' ciò di cui sopra, eseguire questo comando:
  gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
  gstreamer-plugins-bad-nonfree amarok xine-lib-extras-freeworld
 
-{{nota|Nota|Fedora 18 ha una [http://docs.fedoraproject.org/en-US/Fedora/18/html/Musicians_Guide/ guida per musicisti] che probabilmente sarà utile anche per fedora 19}}
+{{nota|Nota|Fedora 18 ha una [http://docs.fedoraproject.org/en-US/Fedora/18/html/Musicians_Guide/ guida per musicisti] che probabilmente sarà utile anche per fedora 19.}}
 
 ==Installare i Media Players==
 
@@ -227,21 +227,21 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 Il progetto MPlayer mantiene un package completo di codecs binary, per i quali non esiste una diretta opzione open source, alcuni di questi file includono Window's DLL. Questi sono condivisi sia da Xine che da Mplayer.
 {{Nota|Nota|C'è una significativa variazione, in relazione all'architettura (i386, x86_64, ppc). Di questo passaggio beneficia realmente solo la 32bit i386, che comunque può essere utilizzato anche dagli utenti a 64bit.}}
 * Andare su : [http://www.mplayerhq.hu/MPlayer/releases/codecs/ http://www.mplayerhq.hu/MPlayer/releases/codecs]
-* Selezionare il package (.tar.bz2)  che corrisponde alla tua versione di Fedora. Molti utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20110131.tar.bz2 all-20110131.tar.bz2]<br />
+* Selezionare il pacchetto (.tar.bz2) che corrisponde alla tua versione/architettura di Fedora. Generalmente gli utenti 32-bit useranno: [http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20110131.tar.bz2 all-20110131.tar.bz2]<br />
 * Installare i codecs:
 
  [mirandam@charon Download]$ sudo mkdir -p /usr/lib/codecs
- [mirandam@charon Download]$ sudo tar -jxvf all-20071007.tar.bz2 --strip-components 1 -C /usr/lib/codecs/
+ [mirandam@charon Download]$ sudo tar -jxvf all-20110131.tar.bz2 --strip-components 1 -C /usr/lib/codecs/
 
 ===VLC===
-VLC è un semplice media player con una interfaccia molto semplice da usare. Supporta anche il DVD playback. Benchè molte esigenze sarebbero soddisfatte con Xine e Mplayer, alcuni preferiscono VLC.<br />
+VLC è un semplice media player con una interfaccia molto facile da usare. Supporta anche il DVD playback. Benchè molte esigenze sarebbero soddisfatte con Xine e Mplayer, alcuni preferiscono VLC.<br />
 Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
  [mirandam@charon ~]$ sudo yum install vlc
 
 ===DVD Playback===
-Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository di ATrpms.
-* Configurare il repo di ATrpms:
+Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository di ATrpms. Solo per questo pacchetto verà usato un repository esterno.<br/>
+* Configurare il repo di [http://atrpms.net/documentation/install/ ATrpms]:
 
  [mirandam@charon Download]$ wget http://www.mjmwired.net/resources/files/atrpms.repo
  [mirandam@charon Download]$ sudo cp ./atrpms.repo /etc/yum.repos.d/atrpms.repo
@@ -255,7 +255,7 @@ Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository d
 ==Installare i font TrueType di Microsoft==
 
 Il sito ufficiale per questo pacchetto è [http://corefonts.sourceforge.net/ http://corefonts.sourceforge.net].<br />
-E' necessario costruirsi l'RPM utilizzando il file SPEC. Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.5-1.noarch.rpm (''non linkare direttamente a questo link''):
+E' necessario costruirsi l'RPM utilizzando il file SPEC scelto. Per mia comodità ho creato il pacchetto RPM msttcorefonts-2.5-1.noarch.rpm (''non linkare direttamente a questo file''):
 
 [http://www.mjmwired.net/resources/files/msttcore-fonts-2.5-1.noarch.rpm msttcore-fonts-2.5-1.noarch.rpm]
 
@@ -298,7 +298,7 @@ Ulteriori informazioni su Chromium sono disponibili sul [http://fedoraproject.or
 
 == Adobe Flash Plugin ==
 
-Il plugin per Adobe Flash può essere installato dal sito web di Adobe. Gli utenti dovrebbero utilizzare il repository YUM di Adobe. (raccomandato)<br />
+Il plugin per Adobe Flash può essere installato dal sito web di Adobe. Gli utenti dovrebbero utilizzare il repository YUM di Adobe (raccomandato).<br />
 <ol><li>'''Installare il repository di Adobe'''</li>
 '''32-bit'''
  [mirandam@charon Download]$ sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
@@ -315,30 +315,31 @@ Ulteriori informazioni sono disponibili sul [https://fedoraproject.org/wiki/Flas
 
 ==Java Runtime Environment==
 
-Fedora dovrebbe supportare Java con ''OpenJDK'' (basato su Oracle Java) e il web plugin Icedtea. In caso contrario può essere installato con yum:
+Fedora dovrebbe includere il supporto per Java con ''OpenJDK'' (basato su Oracle Java) e il web plugin Icedtea. In caso contrario può essere installato con yum:
 
  [mirandam@charon ~]$ sudo yum install java-1.7.0-openjdk icedtea-web
 
-Con OpenJDK/Icedtea installato, le applicazioni e le applet Java dovrebbero funzionare automaticamente. Sortunatamente alcuni applet potrebbero non funzionare correttamente, proprio perchè OpenJDK ha ancora qualche limite.''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
+Con OpenJDK/Icedtea installato, le applicazioni web e le applet Java dovrebbero funzionare automaticamente. Sfortunatamente alcuni applet potrebbero non funzionare correttamente, proprio perchè OpenJDK ha ancora qualche limite.''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
 
 ===Usare invece Sun Java===
 Se si preferisce il ''Sun Java'' o se OpenJDK non funziona correttamente, è possibile scaricare Sun Java ed usarlo con Fedora.<br />
 Download del pacchetto Java da: [http://www.oracle.com/technetwork/java/javase/downloads/index.html http://www.oracle.com/technetwork/java/javase/downloads/index.html]<br />
-Sotto ''Java Platform, Standard Edition'' selezionare: '''Download JRE''' (JDK è per sviluppatori java)<br />
+Sotto ''Java Platform, Standard Edition'' selezionare: '''Download JRE''' (il JDK è per gli sviluppatori java)<br />
 Alla pagina successiva accetta l'accordo di Licenza:
 
 Per utenti 32-bit: selezionare "Linux '''x86'''"<br />
-jre-7u5-linux-i586.'''rpm'''
+ jre-7u25-linux-i586.'''rpm'''
 
 Per utenti 64-bit: selezionare "Linux '''x64'''"<br />
-jre-7u5-linux-x64.'''rpm'''
+ jre-7u25-linux-x64.'''rpm'''
 
 Installazione:
- [mirandam@charon Download]$ sudo rpm -ivh jre-7u5-linux-i586.rpm
- -O-
- [mirandam@charon Download]$ sudo rpm -ivh jre-7u5-linux-x64.rpm
-
-Quando si esegue un comando ''java'', Fedora userà di default OpenJDK, per usare il Sun Java si usi il comando ''alternatives'':
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u25-linux-i586.rpm
+ -OPPURE-
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u25-linux-x64.rpm
+<!-- SAREBBE DISPONIBILE UNA NUOVA VERSIONE DI JAVA. L'HO LASCIATA COME DA GUIDA, ANCHE SE SAREBBE IL CASO DI AGGIORNARLA.-->
+Quando si esegue un comando ''java'', Fedora userà di default OpenJDK, per usare il Sun Java si usi il comando ''alternatives''.<br/>
+Per impostare l'ambiente java, eseguire il seguente comando (valido per entrambe le architetture 32-bit e 64-bit):
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/bin/java java /usr/java/default/bin/java 20000
 
@@ -347,12 +348,12 @@ Lo stesso è da applicare al Mozilla/Firefox Plugin:
 Per '''sistemi a 32 bit'''
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib/mozilla/plugins/libjavaplugin.so \
- libjavaplugin.so /usr/java/default/lib/i386/libnpjp2.so 20000
+ libjavaplugin.so /usr/java/default/lib/i386/libnpjp2.so 200000
 
 Per '''sistemi a 64 bit'''
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/lib64/mozilla/plugins/libjavaplugin.so \
- libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 20000
+ libjavaplugin.so.x86_64 /usr/java/default/lib/amd64/libnpjp2.so 200000
 
 Potrebbe essere necessario riavviare Firefox.<br />
 '''Nota''': Se si desiderasse ritornare ad ''OpenJDK'' occorre eseguire i seguenti comandi per passare da Sun a OpenJDK.
@@ -360,12 +361,12 @@ Potrebbe essere necessario riavviare Firefox.<br />
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config java
  
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so
- (o per 64-bit)
+ (oppure per 64-bit)
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
 
-''Per fare l'update:'' se si volesse eseguire l'update del pacchetto JRE, scaricare semplicemente il pacchetto RPM e installarlo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte. Il comando seguente contiene tutto quello che servirà:
+''Per fare l'update:'' se si volesse eseguire l'update del pacchetto JRE, scaricare semplicemente il pacchetto RPM e installarlo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte. Il comando seguente contiene tutto quello che dovrebbe servire (esempio per 64 bit):
 
- [mirandam@charon Download]$ sudo rpm -ivh jre-7u16-linux-x64.rpm
+ [mirandam@charon Download]$ sudo rpm -ivh jre-7u26-linux-x64.rpm
 
 Ulteriori informazioni: [http://www.oracle.com/technetwork/java/javase/manual-plugin-install-linux-136395.html Install Documentation for Linux]
 
@@ -382,23 +383,25 @@ Installare il repository di Adobe e poi il Reader:
 
 {{Nota|Nota|La versione installata utilizza l'inglese: '''enu'''. Per vedere le lingue disponibili dare il seguente comando:
  [mirandam@charon Download]$ yum list AdobeReader\*}}
-Per altre lingue l'installazione è simile: AdobeReader_fra
+
+Per altre lingue l'installazione è simile: ''AdobeReader_fra''
 Se non si è sicuri del nome esatto cercarlo con:<br />
 ''yum info AdobeReader_fra''<br />
 Altrimenti installarlo manualmente come sotto descritto.
-('''NOTA''': utenti 64 bit dovrebbero sempre usare yum per risolvere tutte le dipendenze necessarie 32 bit).<br />
+('''NOTA''': utenti 64 bit dovrebbero sempre usare yum per risolvere tutte le dipendenze i386 necessarie al 32 bit).<br />
 La versione corrente di Adobe Acrobat è la 9.x per l'Inglese ed il file da scaricare varia in funzione della lingua. Non tutte le lingue sono supportate nella versione per Linux oppure potrebbero non essere aggiornate.
 
 == Configurare Samba - Condividere file con Windows ==
 
-Se si possiedono computer con Windows installato o una Lan e si vuole condividere file tra macchine Windows e Linux, bisogna configurare Samba. Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
+Se si possiedono altri computer con Windows sulla tua Lan e si vuole condividere file tra macchine Windows e Linux, bisogna configurare Samba.<br/>
+Per configurare samba occorre: (1) installare Samba, (2) aggiungere le 'shares' (risorse condivise), (3) aggiungere gli utenti, (4) avviare il servizio Samba e (5) impostare le opzioni di sicurezza (Firewall e SELinux).
 
 ===Installare Samba===
- [mirandam@charon ~]$ sudo yum install samba samba-client cifs-utils
+ [mirandam@charon ~]$ sudo yum install samba samba-client ''cifs-utils''
 
 ('''NOTA''': il pacchetto ''cifs-utils'' non è richiesto. Comunque è molto leggero e fornisce alcuni utilità vantaggiose).<br />
 ===Aggiungere 'Shares'===
-Bisogna editare '''/etc/samba/smb.conf''' come root: (usando ''nano'' al posto di ''gedit'' se non si utilizza una GUI)
+Bisogna editare '''/etc/samba/smb.conf''' come root: (usare ''nano'' al posto di ''gedit'' se non si utilizza una GUI)
 
  [mirandam@charon ~]$ sudo gedit /etc/samba/smb.conf
 
@@ -412,9 +415,9 @@ Aggiungere le shares alla fine del file. Ad esempio:
    path = /data/
    public = yes
    writable = yes</pre>
-Se si definisce come 'writable' (scrivibile), la risorsa '''deve essere''' scrivibile prima su Linux. I permessi addizionali devono corrispondere (esempio: ''drwxrw-rw'').<br />
+Se si definisce come 'writable' (scrivibile), la risorsa '''deve essere''' scrivibile prima su Linux. I permessi addizionali devono corrispondere (esempio: ''drwxrw-rw-'').<br />
 Se i dati della directory home (tutti i file personali sotto ''/home/nomeutente'') devono essere accessibili, bisogna indicare 'browseable = yes' sotto [homes] (~riga 279).<br />
-Il file di configurazione è ''molto descrittivo'', occorre leggerlo da cima a fondo per avere maggiori idee o informazioni.
+Il file di configurazione è ''molto descrittivo'', basta leggerlo da cima a fondo per avere maggiori idee o informazioni.
 
 ===Aggiungere gli utenti===
 Per avere accesso alle condivisioni, bisogna essere degli utenti definiti. Aggiungere ''utenti e password'' valide usando il comando ''smbpasswd''.<br />
@@ -424,6 +427,7 @@ Tali parametri SARANNO il nome utente e la password da usare per il login '''da 
  New SMB password:
  Retype new SMB password:
  Added user username.
+
 {{Nota|Nota|''nomeutente'' deve essere un account valido sulla macchina.}}
 ===Avviare il servizio Samba===
  [mirandam@charon ~]$ sudo systemctl start smb.service nmb.service
@@ -432,30 +436,31 @@ Rendere permanente l'avvio di Samba ad ogni avvio di Fedora.
 
  [mirandam@charon ~]$ sudo systemctl enable smb.service nmb.service
 
-Riavviare Samba per ogni cambiamento a utenti/password od a ''smb.conf'':
+Riavviare Samba per ogni cambiamento a utenti/password o a ''smb.conf'':
 
  [mirandam@charon ~]$ sudo systemctl restart smb.service
 
 ===Gestione sicurezza per Samba===
-'''Firewall'''
+===='''Firewall'''====
 
 Il Firewall bloccherà Samba per default, per permettergli l'accesso digitare:
 
  [mirandam@charon ~]$ firewall-config
-Per consentire a Samba di lavorare attraverso il proprio firewall, bisogna configurare 'Samba' come un 'Servizio fidato'. Per farlo bisogna cambiare la ''Visualizzazione corrente'': a ''Configurazione permamente'' ed assicurarsi di essere nella ''zona'' in cui si usa il computer (di norma pubblica). Nella scheda ''Servizi'' selezionare ''Samba''.
+Per consentire a Samba di lavorare attraverso il proprio firewall, bisogna configurare 'Samba' come un 'Servizio fidato'. Per farlo bisogna cambiare la ''Visualizzazione corrente'': a ''Configurazione permamente'' ed assicurarsi di essere nella ''zona'' in cui si usa il computer (di norma ''pubblica''). Nella scheda ''Servizi'' selezionare ''Samba''.
 
-'''SELinux'''
+===='''SELinux'''====
 
 SELinux ha un ''controllo significativo'' su Samba e ne limita differenti parti. Si avvii ''system-config-selinux''. Per favore si leggano le righe #20 - #59 in ''/etc/samba/smb.conf'' per una migliore spiegazione. In alternativa si può digitare:
 
  [mirandam@charon ~]$ system-config-selinux
 
-Selezionare ''Boolean'' e digitare ''Samba'' nel filtro.<br />
+Selezionare ''Boolean'' e digitare ''samba'' nel filtro.<br />
 Se si ottiene il seguente errore:
  bash: system-config-selinux: command not found...
 prima bisogna eseguire:
  $ sudo yum install policycoreutils-gui
-Per attivare ogni cambiamento apportato alla configurazione di SELinux o di smb.conf, è raccomandato il riavvio di Samba.
+Per attivare ogni cambiamento apportato alla configurazione di SELinux o di smb.conf, è raccomandato il riavvio di Samba.<br/>
+
 
 ==Ulteriori informazioni==
 
@@ -469,4 +474,5 @@ Potete anche scegliere di donare qualcosa con [http://www.amazon.com/gp/registry
 
 [http://www.mjmwired.net/about.php#copyright '''Copyright © 2003-2013'''] '''by Mauriat Miranda''' (mjmwired.net).
 
-[[Categoria:Scrittura in Corso]]
+[[Categoria:Traduzioni]]
+[[Categoria:Rilettura in Corso]]
