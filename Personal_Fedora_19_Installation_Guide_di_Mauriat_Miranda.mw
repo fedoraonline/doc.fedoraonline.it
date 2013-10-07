@@ -34,36 +34,35 @@ L'installer di Fedora 19 ha 3 scelte principali (alcune hanno delle sotto opzion
 * '''Gestione Dischi'''
 Per il '''SOFTWARE''' seleziona ''SOFTWARE SELECTION''.
 Sulla ''SINISTRA'' si vede ''Scegli ambiente'' in cui si potrà scegliere quale tipo di installazione si vuole fare.
-'''NOTA''': L'installer di Fedora 19 permette di selezionare soltanto un Ambiente Desktop, se ne potranno aggiungere altri successivamente. Questa guida utilizza il ''desktop GNOME'' perchè è quello di default. Raccomando ''Xfce'' oppure ''LXDE'' se il vostro computer è più datato. Se non si hanno problemi di connessione al web è consigliabile selezionare un desktop e aggiungere il software aggiuntivo successivamente.
+'''NOTA''': L'installer di Fedora 19 permette di selezionare soltanto un Ambiente Desktop, se ne potranno [[#Ambienti_Desktop_alternativi|aggiungere altri successivamente]]. Questa guida utilizza il ''desktop GNOME'' perchè è quello di default. Raccomando ''Xfce'' oppure ''LXDE'' se il vostro computer è più datato (più di quattro anni). Se non si hanno problemi di connessione al web è consigliabile selezionare un desktop e aggiungere il software aggiuntivo successivamente.
 
-Sulla ''DESTRA'' si vede ''Seleziona pacchetti'' in cui è possibile aggiungere software a completamento dell'Ambiente Desktop scelto oppure come nuovo gruppo di pacchetti, indipendenti dal Desktop stesso. Si raccomanda di aggiungere gli ''Strumenti di Sviluppo'', ma non è obbligatorio.
+Sulla ''DESTRA'' si vede ''Seleziona pacchetti'' in cui è possibile aggiungere software a completamento dell'Ambiente Desktop scelto oppure come nuovo gruppo di pacchetti, indipendenti dal Desktop stesso. Raccomando di aggiungere gli ''Strumenti di Sviluppo'', ma non è obbligatorio.
 
 Premere ''FATTO'' in cima allo schermo.
 
-Se si vuole fare la '''Configurazione della rete''', a meno di avere necessità di impostazioni particolari, i valori predefiniti sono corretti.
-Per la gestione dei '''Dischi''' invece bisogna dire che è '''molto confusionario, motivo per cui si consiglia di leggere attentamente i vari passaggi'''. Personalmente sconsiglio la scelta del ''partizionamento automatico''.
+Per la '''Configurazione della rete''', a meno di avere necessità di impostazioni particolari, i valori predefiniti dovrebbero essere corretti.<br/>
+Per la gestione dei '''Dischi''' invece bisogna dire che è '''molto confusionario, motivo per cui si consiglia di leggere attentamente i vari passaggi'''.
 
-Nella ''SCHERMATA DI DESTINAZIONE'' selezionare il disco sul quale si vuole installare Fedora e premere ''avanti'' in basso a destra.<br />
-Nelle ''OPZIONI DI INSTALLAZIONE'' scegliere 'Tipo partizione: Standard' per lo schema di partizionamento. Dopodichè selezionare ''Personalizzare il partizionamento dei dischi'' e clickare su ''avanti''.<br />
+Nella ''SCHERMATA DI DESTINAZIONE'' selezionare il disco sul quale si vuole installare Fedora e premere ''avanti'' in cima allo schermo.<br />
+Nelle ''OPZIONI DI INSTALLAZIONE'' io imposto 'Tipo partizione: Standard' per lo schema di partizionamento. Dopodichè seleziono ''Personalizzare il partizionamento dei dischi''; se non si possiede alcuna partizione si avrà l'opzione "I want to review/modify my disk parititions before continuing.".<br />
 Nella schermata ''PARTIZIONAMENTO MANUALE'' aggiungere con '''+''' in basso a sinistra un nuovo punto di mount. Io ho almeno 3 punti di mount:
 
 * / size: 16GB 
-* swap size: 4GB (guardare la nota) 
+* swap size: 4GB (guardare la [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/s2-diskpartrecommend-x86.html nota]) 
 * /home (spazio rimanente) 
 
-Una volta aggiunto un punto di mount è possibile personalizzarlo (cosa di solito non necessaria). Al termine, premere su ''Termina partizionamento'' in basso a destra.<br />
-'''NOTA''': In caso di dual-boot con Windows si consiglia di lasciare il boot di Fedora a Windows. Per fare ciò assicurarsi che il 'bootloader' non viene installato nel MBR (la prima partizione del disco). Nella schermata di ''DESTINAZIONE DELL'INSTALLAZIONE'' c'è un piccolo link di colore blu 'Riassunto partizioni e opzioni...' in cui ci si può assicurare di non aver sovrascritto il bootloader di Windows. LEGGERE la documentazione sul bootloader nella documentazione ufficiale.
+Una volta aggiunto un punto di mount è possibile personalizzarlo (cosa di solito non necessaria). Al termine, premere su ''Termina partizionamento'' in cima allo schermo.<br />
+'''NOTA''': In caso di dual-boot con Windows si consiglia di lasciare il boot di Fedora a Windows. Per fare ciò assicurarsi che il 'bootloader' non viene installato nel MBR (la prima partizione del disco). Nella schermata di ''DESTINAZIONE DELL'INSTALLAZIONE'' c'è un piccolo link di colore blu 'Riassunto partizioni e opzioni...' in cui ci si può assicurare di non aver sovrascritto il bootloader di Windows. LEGGERE la [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/s1-x86-bootloader.html documentazione sul bootloader] nella documentazione ufficiale.
 
-Per fare il boot da Windows è possibile utilizzare EasyBCD (Windows freeware).
+Per fare il boot da Windows è possibile utilizzare [http://neosmart.net/EasyBCD/ EasyBCD] (Windows freeware).
 
-Tornando alla schermata di  'Riassunto partizioni' premere ''Iniziare l'installazione'' in basso a destra.
-
-Durante l'installazione clickare su ''PASSWORD DI ROOT'' e impostare la password. Essa è necessaria per il controllo amministrativo sulla macchina e non è una password utente. 
+Tornando alla schermata di 'Riassunto partizioni' premere ''Iniziare l'installazione'' in basso a destra.<br/>
+Mentre installa clickare su ''PASSWORD DI ROOT'' e impostare la password. Essa è necessaria per il controllo amministrativo sulla macchina e non è una password utente.
 
 Per il '''primo avvio''':
 Dopo il primo avvio di Fedora seguire le istruzioni sullo schermo.
 
-Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dovrà essere anche ''ammnistratore'', selezionare ''aggiungi al gruppo degli amministratori''.
+Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dovrà essere anche ''amministratore'', selezionare ''aggiungi al gruppo degli amministratori''.
 
 == Configurare sudo ==
 
@@ -71,7 +70,7 @@ Fedora, come tutte le altre distribuzioni Linux, ha un utente root ed ha anche u
 
 Occorre usare il proprio account personale creato al primo avvio per gli usi quotidiani. Per l'account che amministra il sistema invece si dovrebbe selezionare ''Aggiungi al gruppo amministratori''. Questo permette di utilizzare l'utente normale come 'root', utilizzando il comando ''sudo''.
 
-Se si è configurato sudo al primo boot, è in ordine così. Altrimenti si può configurare ''sudo'' manualmente, digitando come root:
+Se si è configurato sudo al primo boot, è già a posto così. Altrimenti si può configurare ''sudo'' manualmente, digitando come root:
 
  echo 'loginname ALL=(ALL) ALL' >> /etc/sudoers
  
@@ -82,19 +81,19 @@ Se si è configurato sudo al primo boot, è in ordine così. Altrimenti si può 
 Esempio:
 
  ['''mirandam'''@charon ~]$ su
- Password:   <--Inserire root password
+ Password:   <--Inserire password di root
  [root@charon mirandam]# echo ''''mirandam''' ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
  [root@charon mirandam]# exit
 
 Il seguente è un esempio di come sudo lascia eseguire i comandi di root:
 
  [mirandam@charon ~]$ du -sh /root
- du: `/root': '''Permission denied'''      <-- Senza sudo!!!
+ du: `/root': '''Permission denied'''      <-- Errore senza sudo!!!
  
  [mirandam@charon ~]$ sudo du -sh /root
- 163M    /root                       <-- Con sudo!!!
+ 163M    /root                       <-- Funziona con sudo!!!
 
-{{Nota|Nota|Ogni comando dato su questa pagina funzionerà anche rimuovendo sudo dalla riga. Comunque, in tal caso, si dovrà avere avuto accesso al sistema come 'root'. Un alternativa all'usare sudo è usare su al login come root, ''prima'' di eseguire un comando.}}
+{{Nota|Nota|Ogni comando dato in questa pagina funzionerà anche rimuovendo sudo dalla riga. Comunque, in tal caso, si dovrà aver ottenuto l'accesso al sistema come 'root'. Un alternativa all'usare sudo è usare '''su''' al login come root, ''prima'' di eseguire un comando.}}
 
 == Configurare yum ==
 
@@ -104,53 +103,58 @@ Fedora usa ''yum'' per installare ed aggiornare il proprio software. Quando è c
 Fedora ha due repository abilitati come impostazione predefinita: ''fedora'' (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed ''updates'' (pacchetti di aggiornamento, più recenti di quelli nel rpository ''fedora''). 
 
 ===YUM Plugins===
-Sono disponibili molti plugin per Yum. Molti utenti trovano utile ''fastestmirror'', il plugin che accelera il download cercando collegamenti più veloci.<br />
+Sono disponibili molti plugin per Yum. Molti utenti trovano utile ''fastestmirror'', il plugin che accelera il download cercando i server più veloci.<br />
 Per installarlo:
 
  [mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror
 
 ===Repository di Terze Parti===
-Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), dovrebbe essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/ RPMFusion]. Per lo scopo di questa guida tutte le necessità possono essere soddisfatte da questo repository, altrimenti verrà indicato espressamente.
+Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), dovrebbe essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/ RPMFusion]. Per lo scopo di questa guida tutte le necessità possono essere soddisfatte da questo repository, altrimenti verrà indicato espressamente.<br/>
 Per installare RPM-Fusion digitate:
 
  [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
  
  [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 
+Se si hanno problemi ad importare le chiavi gpg dare:
+
+ [mirandam@charon ~]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-19-primary
+ [mirandam@charon ~]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-19-primary
+
 == Ambienti Desktop alternativi ==
 
-Questa guida utilizza Gnome 3.6 di default, ma se questo è difficile da usare si raccomanda di provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora. Da notare che sono tutti opzionali. Utilizzate yum se si vuole installarli:
+Questa guida installa Gnome 3.8, ma se è ritenuto difficile da usare si raccomanda di provare delle alternative. I seguenti ambienti Desktop sono supportati da Fedora. Da notare che sono tutti opzionali. Utilizzate yum se si vuole installarli:
 
-[http://www.mjmwired.net/resources/mjm-fedora-f19.html#kde KDE] è un desktop completo alla pari di Gnome. Comunque va utilizzato in modo diverso rispetto a Gnome. E' l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]).<br />
-Per installarlo:
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#gnome-classic Gnome Classic] è una configurazione semplificata di Gnome 3.8. Per installarlo:
+ [mirandam@charon ~]$ sudo yum install gnome-classic-session
 
- [mirandam@charon ~]$ sudo yum groupinstall "KDE Plasma Workspaces"
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#kde KDE] è un desktop completo alla pari di Gnome, ma va utilizzato in modo diverso. È l'ambiente Desktop più vicino a Gnome ([http://kde.org/ ulteriori informazioni]). Per installarlo:
 
-[http://www.mjmwired.net/resources/mjm-fedora-f19.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]).<br />
-Per installarlo:
+ [mirandam@charon ~]$ sudo yum groups install "KDE Plasma Workspaces"
 
- [mirandam@charon ~]$ sudo yum groupinstall LXDE
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]). Per installarlo:
 
-[http://www.mjmwired.net/resources/mjm-fedora-f19.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]).<br />
-Per installarlo:
+ [mirandam@charon ~]$ sudo yum groups install LXDE
 
- [mirandam@charon ~]$ sudo yum groupinstall XFCE
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#xfce Xfce] è un ambiente leggero simile a LXDE. Consuma molto meno risorse rispetto a Gnome e molti utenti lo paragonano alle prime versioni di Gnome ([http://www.xfce.org/ ulteriori informazioni]). Per installarlo:
+
+ [mirandam@charon ~]$ sudo yum groups install XFCE
 
 ''Note: Xfce è la mia scelta personale/raccomandata.''
 
-[http://www.mjmwired.net/resources/mjm-fedora-f19.html#mate MATE] è un ambiente Desktop aggiornato di Gnome 2, che ha preceduto l'attuale Gnome 3 in Fedora. [http://mate-desktop.org/ ulteriori informazioni]).<br />
-Per installarlo:
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#mate MATE] è un ambiente Desktop che è la versione aggiornata di Gnome 2, il DE che ha preceduto l'attuale Gnome 3 in Fedora. [http://mate-desktop.org/ ulteriori informazioni]). Per installarlo:
 
- [mirandam@charon ~]$ sudo yum groupinstall MATE
+ [mirandam@charon ~]$ sudo yum groups install MATE
 
-[http://www.mjmwired.net/resources/mjm-fedora-f19.html#cinnamon Cinnamon] è un ambiente Desktop basato su Gnome 3 ma utilizza un layout più tradizionale e simile a Gnome 2.([http://cinnamon.linuxmint.com/ ulteriori informazioni]).<br />
-Per installarlo:
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#cinnamon Cinnamon] è un ambiente Desktop basato su Gnome 3 ma utilizza un layout più tradizionale e simile a Gnome 2.([http://cinnamon.linuxmint.com/ ulteriori informazioni]). Per installarlo:
 
- [mirandam@charon ~]$ sudo yum groupinstall CINNAMON
+ [mirandam@charon ~]$ sudo yum groups install CINNAMON
+
+Per ulteriori informazioni su '''yum groups''' leggere [http://www.mjmwired.net/linux/2013/03/17/yum-groups/ qua]
 
 == Installare lettori MP3 ==
 
-Fedora viene distribuita senza alcuna forma di supporto ai file di tipo MP3. Per aggiungere il supporto all'esecuzione di MP3 si '''deve installare da "terze parti"'''. Quanto segue richiede l'uso del repository di [[RPMFusion|RPMFusion]].
+Fedora viene distribuita senza alcuna forma di supporto ai file di tipo MP3. Per aggiungere il supporto all'esecuzione di MP3 si '''deve installare da "terze parti"'''. Quanto segue richiede l'uso dei repository di [[RPMFusion|RPMFusion]].
 
 ===XMMS===
 Semplice, vecchia GUI, opzioni minimalistiche (ma ancora popolari).<br />
@@ -159,7 +163,7 @@ Installazione, con yum:
  [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-flac xmms-pulse xmms-skins
 
 ===Audacious===
-Un music player in versione base, ma molto più moderno di XMMS.<br />
+Un riproduttore di musica in versione base, ma molto più moderno di XMMS.<br />
 Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install audacious '''audacious-plugins-freeworld*'''
@@ -167,25 +171,27 @@ Installazione, con yum:
 
 ===Rythmbox/Gstreamer===
 Una semplice applicazione audio simile al layout di iTunes.<br />
-Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere stati già installati durante l'installazione di Gnome (sopra citata). I componenti mancanti sono quelli relativi ai plugin MP3 (e altri formati).<br />
+Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere stati già installati quando si è [[#Installazione|installato Gnome]] (sopra citato. I componenti mancanti sono quelli relativi ai plugin MP3 (e altri formati).<br />
 Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg gstreamer-plugins-bad-nonfree
 
 ===Amarok===
 Una moderna applicazione ricca di opzioni aggiuntive.<br />
-E' di aiuto avere già KDE installato (come prima citato) principalmente perchè ciò riduce il download.<br />
+E' di aiuto avere già [[#Installazione|KDE installato]] (come prima citato) principalmente perchè ciò riduce il download.<br />
 Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install amarok xine-lib-extras-freeworld
 
 ===Comando combinato===
-Per chi volesse '''TUTTO''' ciò di cui sopra, seguire questo comando:
+Per chi volesse '''TUTTO''' ciò di cui sopra, eseguire questo comando:
 
  [mirandam@charon ~]$ sudo yum install xmms xmms-mp3 xmms-faad2 xmms-flac xmms-pulse \
  xmms-skins audacious audacious-plugins-freeworld* rhythmbox \
  gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg \
  gstreamer-plugins-bad-nonfree amarok xine-lib-extras-freeworld
+
+{{nota|Nota|Fedora 18 ha una [http://docs.fedoraproject.org/en-US/Fedora/18/html/Musicians_Guide/ guida per musicisti] che probabilmente sarà utile anche per fedora 19}}
 
 ==Installare i Media Players==
 
