@@ -37,7 +37,30 @@ E' il momento di lanciare il server Apache:
 
 Si potrà subito verificare se il server funziona correttamente, inserendo il seguente indirizzo nella barra degli indirizzi del tuo browser:<br />
 http://localhost/test.php
-
+=== Abilitare le user directory ===
+In alcuni casi, come nei sistemi multiutente, c'è la possibilità di avere il sito web nella propria home usando la direttiva ''UserDir''. In questo caso il sito sarà accessibile da http://localhost/~username/. Di seguito sono indicati i passaggi per abitare le user directory.
+* Modificare il file /etc/httpd/conf.d/userdir.conf in modo che la parte riguardante il modulo userdir sia configurata in questo modo:
+ <IfModule mod_userdir.c>
+     #
+     # UserDir is disabled by default since it can confirm the presence
+     # of a username on the system (depending on home directory
+     # permissions).
+     #
+     #UserDir disabled
+ 
+     #
+     # To enable requests to /~user/ to serve the user's public_html
+     # directory, remove the "UserDir disabled" line above, and uncomment
+     # the following line instead:
+     # 
+     UserDir public_html
+ </IfModule>
+* Per poter garantire che il web server possa accedere correttamente alla propria user directory bisogna settare correttamente i permessi:
+ $ chmod a+x $HOME
+ $ chmod a+rx $HOME/public_html
+* SELinux
+ # setsebool -P httpd_enable_homedirs 1
+ # chcon -R -t httpd_sys_content_t ~user/public_html
 === Mysql ===
 Come per Apache è necessario avviare il server Mysql:
 
