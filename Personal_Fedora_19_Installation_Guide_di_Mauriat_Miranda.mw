@@ -4,12 +4,12 @@
 {{Nota|Nota introduttiva:|Guida alla configurazione di un sistema desktop su Fedora 19. Traduzione dell'originale di Mauriat Miranda, pubblicato il 9 luglio 2013 (aggiornamento: ''9 luglio 2013'').<br />
 Trovate il file originale in lingua inglese a [http://www.mjmwired.net/resources/mjm-fedora-f19.html questo riferimento].}}
 Questa è una guida <i>personale</i> alla configurazione di Fedora 19.<br />
-Questa pagina fornisce delle informazioni che qualcuno potrebbe trovare utili. Occorre tenere a mente che quanto segue ha funzionato per <i>me</i>, e assicurati di avere effettuato copie di backup dei tuoi file critici nel caso in cui tu dovessi provare ad eseguire quanto qui riportato. Questa guida è stata scritta principalmente per macchine x86_64 (64bit), tuttavia è stata testata anche su una versione 32bit su Virtual Machine. I sistemi descritti si avviano correttamente anche in dual-boot con Windows 7.
+Questa pagina fornisce delle informazioni che qualcuno potrebbe trovare utili. Occorre tenere a mente che quanto segue ha funzionato per <i>me</i>; assicurati di avere effettuato copie di backup dei tuoi file critici nel caso in cui dovessi provare ad eseguire quanto riportato qui. Questa guida è stata scritta principalmente per macchine x86_64 (64bit), tuttavia è stata testata anche su una versione 32bit su Virtual Machine. I sistemi descritti si avviano correttamente anche in dual-boot con Windows 7.
 ==Supporti di installazione==
 
-Fedora 19 viene distribuita in singoli CD-ROM o DVD-ROM per l'installazione. Il disco DVD-ROM è il metodo di installazione utilizzato in questa guida. Facendo il boot dal DVD si farà partire l'installer, il quale farà si che Fedora venga installata o che venga fatto l'upgrade di una versione precedente sulla propria macchina.
+Fedora 19 viene distribuita in singoli CD-ROM o DVD-ROM per l'installazione. Il DVD-ROM è il metodo di installazione utilizzato in questa guida. Facendo il boot da DVD si farà partire l'installer, il quale farà si che Fedora venga installata o che venga fatto l'upgrade di una versione precedente sulla propria macchina.
 
-Esistono anche dei "LiveCD", che possono avviare il sistema ed eseguire una installazione di base di Fedora 19 nella memoria RAM, fornendo inoltre un metodo più semplice di installazione (non completo come quello del DVD). Il LiveCD predefinito rende disponibile Gnome (es: ''Fedora-Live-Desktop-x86_64-19-1.iso''). Esiste uno specifico LiveCD che rende disponibile KDE. Entrambi forniscono un programma di installazione, ma entrambi rendono disponibile molto meno software che un DVD. Inoltre richiedono più memoria per essere usati. Il LiveCD può essere utile per dimostrazioni.
+Esistono anche dei "LiveCD", che possono avviare il sistema ed eseguire una installazione di base di Fedora 19 nella memoria RAM, fornendo inoltre un metodo più semplice di installazione (non completo come quello del DVD). Il LiveCD predefinito rende disponibile Gnome (es: ''Fedora-Live-Desktop-x86_64-19-1.iso''). Esiste uno specifico LiveCD che rende disponibile KDE. Entrambi forniscono un programma di installazione, rendendo però disponibile molto meno software che un DVD. Inoltre richiedono più memoria per essere usati. Il LiveCD può essere utile per dimostrazioni.
 {{Nota|Nota|Per fare l'upgrade di una precedente versione di Fedora, non si può usare un LiveCD.}}
 ==Installazione==
 
@@ -21,7 +21,7 @@ Scaricare il file immagine del DVD di Fedora 19 da uno dei [http://mirrors.fedor
 Avviare il sistema dal DVD. Se si sceglie di usare il [http://www.mjmwired.net/resources/mjm-fedora-f19.html#installmedia LiveCD] per favore si tenga presente che i passi successivi potrebbero essere differenti.
 {{Nota|Nota|L'installer di Fedora (anaconda) è ridotto al minimo e molte delle configurazioni si dovranno eseguire dopo l'installazione.<br />
 Con qualche eccezione l'installer di Fedora è molto semplice e la gran parte dei settaggi di default sono corretti. Le opzioni più ''critiche'' invece sono il ''partizionamento'' e il ''bootloader''.}}
-L'installer di Fedora 19 ha 3 scelte principali (alcune hanno delle sotto opzioni ulteriori):
+L'installer di Fedora 19 ha 3 scelte principali (alcune hanno delle ulteriori sotto opzioni):
 * '''Localizzazione'''
 ** Data e Ora
 ** Tastiera
@@ -38,20 +38,20 @@ Sulla ''SINISTRA'' si vede ''Scegli ambiente'' in cui si potrà scegliere quale 
 
 Sulla ''DESTRA'' si vede ''Seleziona pacchetti'' in cui è possibile aggiungere software a completamento dell'Ambiente Desktop scelto oppure come nuovo gruppo di pacchetti, indipendenti dal Desktop stesso. Raccomando di aggiungere gli ''Strumenti di Sviluppo'', ma non è obbligatorio.
 
-Premere ''FATTO'' in cima allo schermo.
+Premete ''FATTO'' in cima allo schermo.
 
 Per la '''Configurazione della rete''', a meno di avere necessità di impostazioni particolari, i valori predefiniti dovrebbero essere corretti.<br/>
 Per la gestione dei '''Dischi''' invece bisogna dire che è '''molto confusionario, motivo per cui si consiglia di leggere attentamente i vari passaggi'''.
 
-Nella ''SCHERMATA DI DESTINAZIONE'' selezionare il disco sul quale si vuole installare Fedora e premere ''avanti'' in cima allo schermo.<br />
-Nelle ''OPZIONI DI INSTALLAZIONE'' io imposto 'Tipo partizione: Standard' per lo schema di partizionamento. Dopodichè seleziono ''Personalizzare il partizionamento dei dischi''; se non si possiede alcuna partizione si avrà l'opzione "I want to review/modify my disk parititions before continuing.".<br />
+Nella ''SCHERMATA DI DESTINAZIONE'' selezionate il disco sul quale si vuole installare Fedora e premete ''avanti'' in cima allo schermo.<br />
+Nelle ''OPZIONI DI INSTALLAZIONE'' io imposto 'Tipo partizione: Standard' per lo schema di partizionamento. Dopodichè seleziono ''Personalizzare il partizionamento dei dischi''; se non si possiede alcuna partizione si avrà l'opzione "I want to review/modify my disk parititions before continuing".<br />
 Nella schermata ''PARTIZIONAMENTO MANUALE'' aggiungere con '''+''' in basso a sinistra un nuovo punto di mount. Io ho almeno 3 punti di mount:
 
 * / size: 16GB 
-* swap size: 4GB (guardare la [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/s2-diskpartrecommend-x86.html nota]) 
+* swap size: 4GB (guardate la [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/s2-diskpartrecommend-x86.html nota]) 
 * /home (spazio rimanente) 
 
-Una volta aggiunto un punto di mount è possibile personalizzarlo (cosa di solito non necessaria). Al termine, premere su ''Termina partizionamento'' in cima allo schermo.<br />
+Una volta aggiunto un punto di mount è possibile personalizzarlo (cosa di solito non necessaria). Al termine, premete su ''Termina partizionamento'' in cima allo schermo.<br />
 '''NOTA''': In caso di dual-boot con Windows si consiglia di lasciare il boot di Fedora a Windows. Per fare ciò assicurarsi che il 'bootloader' non viene installato nel MBR (la prima partizione del disco). Nella schermata di ''DESTINAZIONE DELL'INSTALLAZIONE'' c'è un piccolo link di colore blu 'Riassunto partizioni e opzioni...' in cui ci si può assicurare di non aver sovrascritto il bootloader di Windows. LEGGERE la [http://docs.fedoraproject.org/en-US/Fedora/19/html/Installation_Guide/s1-x86-bootloader.html documentazione sul bootloader] nella documentazione ufficiale.
 
 Per fare il boot da Windows è possibile utilizzare [http://neosmart.net/EasyBCD/ EasyBCD] (Windows freeware).
@@ -60,9 +60,9 @@ Tornando alla schermata di 'Riassunto partizioni' premere ''Iniziare l'installaz
 Mentre installa clickare su ''PASSWORD DI ROOT'' e impostare la password. Essa è necessaria per il controllo amministrativo sulla macchina e non è una password utente.
 
 Per il '''primo avvio''':
-Dopo il primo avvio di Fedora seguire le istruzioni sullo schermo.
+Dopo il primo avvio di Fedora seguite le istruzioni sullo schermo.
 
-Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dovrà essere anche ''amministratore'', selezionare ''aggiungi al gruppo degli amministratori''.
+Nel menu '''Crea utente''' assicurarsi di creare un utente. Se questo utente dovrà essere anche ''amministratore'', selezionate ''aggiungi al gruppo degli amministratori''.
 
 == Configurare sudo ==
 
@@ -100,7 +100,7 @@ Il seguente è un esempio di come sudo lascia eseguire i comandi di root:
 Fedora usa ''yum'' per installare ed aggiornare il proprio software. Quando è connesso ad internet, yum determina automaticamente le dipendenze delle applicazioni.
 
 ===Repository di Fedora===
-Fedora ha due repository abilitati come impostazione predefinita: ''fedora'' (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed ''updates'' (pacchetti di aggiornamento, più recenti di quelli nel rpository ''fedora''). 
+Fedora ha due repository abilitati come impostazione predefinita: ''fedora'' (gli stessi pacchetti che vengono forniti con i CD o con il DVD), ed ''updates'' (pacchetti di aggiornamento, più recenti di quelli nel repository ''fedora''). 
 
 ===YUM Plugins===
 Sono disponibili molti plugin per Yum. Molti utenti trovano utile ''fastestmirror'', il plugin che accelera il download cercando i server più veloci.<br />
@@ -109,14 +109,14 @@ Per installarlo:
  [mirandam@charon ~]$ sudo yum install yum-plugin-fastestmirror
 
 ===Repository di Terze Parti===
-Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, Driver binari, etc), dovrebbe essere usato un repository di "parte terza". Il repository consigliato per Fedora è: [http://rpmfusion.org/ RPMFusion]. Per lo scopo di questa guida tutte le necessità possono essere soddisfatte da questo repository, altrimenti verrà indicato espressamente.<br/>
+Per le applicazioni che non sono allineate con la politica di Fedora (MP3, DVD, MPEG, driver binari, etc), dovrebbe essere usato un repository di "terze parti". Il repository consigliato per Fedora è: [http://rpmfusion.org/ RPMFusion]. Per lo scopo di questa guida tutte le necessità possono essere soddisfatte da questo repository, altrimenti verrà indicato espressamente.<br/>
 Per installare RPM-Fusion digitate:
 
  [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-stable.noarch.rpm
  
  [mirandam@charon ~]$ sudo rpm -ivh http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-stable.noarch.rpm
 
-Se si hanno problemi ad importare le chiavi gpg dare:
+Se si hanno problemi ad importare le chiavi gpg date:
 
  [mirandam@charon ~]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-19-primary
  [mirandam@charon ~]$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-19-primary
@@ -132,7 +132,7 @@ Questa guida installa Gnome 3.8, ma se è ritenuto difficile da usare si raccoma
 
  [mirandam@charon ~]$ sudo yum groups install "KDE Plasma Workspaces"
 
-[http://www.mjmwired.net/resources/mjm-fedora-f19.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. E' paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]). Per installarlo:
+[http://www.mjmwired.net/resources/mjm-fedora-f19.html#lxde LXDE] è un ambiente molto leggero. E' utile per PC datati e utilizza molto meno spazio rispetto a Gnome e KDE. È paragonabile a versioni più vecchie di Windows ([http://lxde.org/ ulteriori informazioni]). Per installarlo:
 
  [mirandam@charon ~]$ sudo yum groups install LXDE
 
@@ -150,7 +150,7 @@ Questa guida installa Gnome 3.8, ma se è ritenuto difficile da usare si raccoma
 
  [mirandam@charon ~]$ sudo yum groups install CINNAMON
 
-Per ulteriori informazioni su '''yum groups''' leggere [http://www.mjmwired.net/linux/2013/03/17/yum-groups/ qua]
+Per ulteriori informazioni su '''yum groups''' leggete [http://www.mjmwired.net/linux/2013/03/17/yum-groups/ qua]
 
 == Installare lettori MP3 ==
 
@@ -171,14 +171,14 @@ Installazione, con yum:
 
 ===Rythmbox/Gstreamer===
 Una semplice applicazione audio simile al layout di iTunes.<br />
-Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere stati già installati quando si è [[#Installazione|installato Gnome]] (sopra citato. I componenti mancanti sono quelli relativi ai plugin MP3 (e altri formati).<br />
+Gran parte dei componenti di Rythmbox e di Gstreamer dovrebbero essere stati già installati quando si è [[#Installazione|installato Gnome]] (sopra citato, i componenti mancanti sono quelli relativi ai plugin MP3 (e altri formati).<br />
 Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install rhythmbox gstreamer-plugins-ugly gstreamer-plugins-bad gstreamer-ffmpeg gstreamer-plugins-bad-nonfree
 
 ===Amarok===
 Una moderna applicazione ricca di opzioni aggiuntive.<br />
-E' di aiuto avere già [[#Installazione|KDE installato]] (come prima citato) principalmente perchè ciò riduce il download.<br />
+È di aiuto avere già [[#Installazione|KDE installato]] (come prima citato) principalmente perchè ciò riduce il download.<br />
 Installazione, con yum:
 
  [mirandam@charon ~]$ sudo yum install amarok xine-lib-extras-freeworld
@@ -195,7 +195,7 @@ Per chi volesse '''TUTTO''' ciò di cui sopra, eseguire questo comando:
 
 ==Installare i Media Players==
 
-Fedora viene fornita con un numero limitato di lettori sia Audio che Video. Per l'audio occorre leggere la sezione [[#Installare lettori MP3|Installare lettori MP3]]. Per il video e altri multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [[RPMFusion|RPMFusion]]. Occorre accertarsi di avere configurato il repository RPMFusion prima di procedere. Notare che molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
+Fedora viene fornita con un numero limitato di lettori sia Audio che Video. Per l'audio occorre leggere la sezione [[#Installare lettori MP3|Installare lettori MP3]]. Per il video e altri multimedia (DVD, etc.) faremo anche qui uso di repository di terze parti: [[RPMFusion|RPMFusion]]. Occorre accertarsi di avere configurato il repository RPMFusion prima di procedere. Notate che molte dipendenze in librerie, plugins e codecs sono condivisi tra queste applicazioni oltre che con i lettori MP3.<br />
 Quella che segue è una lista dei media player più famosi. Ognuno di questi ha i propri punti di forza. Si può installare quello che si preferisce, sebbene almeno ''MPlayer'' e ''VLC'' siano raccomandati.
 
 ===Mplayer===
@@ -205,7 +205,7 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
  [mirandam@charon ~]$ sudo yum install mplayer mplayer-gui gecko-mediaplayer mencoder
 
 * Da notare che mencoder è opzionale ma fornisce molte opzioni di decodifica.
-* '''Binary Codecs:''' Per favore installare i [http://www.mjmwired.net/resources/mjm-fedora-f17.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
+* '''Binary Codecs:''' Per favore installate i [http://www.mjmwired.net/resources/mjm-fedora-f17.html#binarycodecs Binary Codecs] per un maggiore supporto di formati che MPlayer non supporta nativamente.
 * MPlayer dovrebbe funzionare con le impostazioni di default di Pulse Audio.
 
 ===Xine===
@@ -241,13 +241,13 @@ Installazione con yum, con [[RPMFusion|RPMFusion]] abilitato:
 
 ===DVD Playback===
 Per ragioni non-tecniche il pacchetto ''libdvdcss'' esiste solo sul repository di ATrpms. Solo per questo pacchetto verà usato un repository esterno.<br/>
-* Configurare il repo di [http://atrpms.net/documentation/install/ ATrpms]:
+* Configurate il repo di [http://atrpms.net/documentation/install/ ATrpms]:
 
  [mirandam@charon Download]$ wget http://www.mjmwired.net/resources/files/atrpms.repo
  [mirandam@charon Download]$ sudo cp ./atrpms.repo /etc/yum.repos.d/atrpms.repo
  [mirandam@charon Download]$ sudo rpm --import http://packages.atrpms.net/RPM-GPG-KEY.atrpms
 
-* Installare il pacchetto:
+* Installate il pacchetto:
 
  [mirandam@charon ~]$ sudo yum --enablerepo=atrpms install libdvdcss
 {{Suggerimento|Per l'incompatibilità tra ATrpms e RPMFusion è necessario tenere questo repository disabilitato.}}
@@ -319,7 +319,7 @@ Fedora dovrebbe includere il supporto per Java con ''OpenJDK'' (basato su Oracle
 
  [mirandam@charon ~]$ sudo yum install java-1.7.0-openjdk icedtea-web
 
-Con OpenJDK/Icedtea installato, le applicazioni web e le applet Java dovrebbero funzionare automaticamente. Sfortunatamente alcuni applet potrebbero non funzionare correttamente, proprio perchè OpenJDK ha ancora qualche limite.''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
+Con OpenJDK/Icedtea installato, le applicazioni web e le applet Java dovrebbero funzionare automaticamente. Sfortunatamente alcuni applet potrebbero non funzionare correttamente, proprio perchè OpenJDK ha ancora qualche limite. ''Gran parte degli utenti dovrebbero apprezzare OpenJDK nell'uso quotidiano''.
 
 ===Usare invece Sun Java===
 Se si preferisce il ''Sun Java'' o se OpenJDK non funziona correttamente, è possibile scaricare Sun Java ed usarlo con Fedora.<br />
@@ -327,10 +327,10 @@ Download del pacchetto Java da: [http://www.oracle.com/technetwork/java/javase/d
 Sotto ''Java Platform, Standard Edition'' selezionare: '''Download JRE''' (il JDK è per gli sviluppatori java)<br />
 Alla pagina successiva accetta l'accordo di Licenza:
 
-Per utenti 32-bit: selezionare "Linux '''x86'''"<br />
+Per utenti 32-bit: selezionate "Linux '''x86'''"<br />
  jre-7u25-linux-i586.'''rpm'''
 
-Per utenti 64-bit: selezionare "Linux '''x64'''"<br />
+Per utenti 64-bit: selezionate "Linux '''x64'''"<br />
  jre-7u25-linux-x64.'''rpm'''
 
 Installazione:
@@ -339,7 +339,7 @@ Installazione:
  [mirandam@charon Download]$ sudo rpm -ivh jre-7u25-linux-x64.rpm
 <!-- SAREBBE DISPONIBILE UNA NUOVA VERSIONE DI JAVA. L'HO LASCIATA COME DA GUIDA, ANCHE SE SAREBBE IL CASO DI AGGIORNARLA.-->
 Quando si esegue un comando ''java'', Fedora userà di default OpenJDK, per usare il Sun Java si usi il comando ''alternatives''.<br/>
-Per impostare l'ambiente java, eseguire il seguente comando (valido per entrambe le architetture 32-bit e 64-bit):
+Per impostare l'ambiente java, eseguite il seguente comando (valido per entrambe le architetture 32-bit e 64-bit):
 
  [mirandam@charon Download]$ sudo /usr/sbin/alternatives --install /usr/bin/java java /usr/java/default/bin/java 20000
 
@@ -364,7 +364,7 @@ Potrebbe essere necessario riavviare Firefox.<br />
  (oppure per 64-bit)
  [mirandam@charon ~]$ sudo /usr/sbin/alternatives --config libjavaplugin.so.x86_64
 
-''Per fare l'update:'' se si volesse eseguire l'update del pacchetto JRE, scaricare semplicemente il pacchetto RPM e installarlo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte. Il comando seguente contiene tutto quello che dovrebbe servire (esempio per 64 bit):
+''Per fare l'update:'' se si volesse eseguire l'update del pacchetto JRE, scaricate semplicemente il pacchetto RPM e installarlo. Non serve utilizzare il comando ''alternatives'' in quanto le impostazioni rimangono intatte. Il comando seguente contiene tutto quello che dovrebbe servire (esempio per 64 bit):
 
  [mirandam@charon Download]$ sudo rpm -ivh jre-7u26-linux-x64.rpm
 
@@ -428,7 +428,7 @@ Tali parametri SARANNO il nome utente e la password da usare per il login '''da 
  Retype new SMB password:
  Added user username.
 
-{{Nota|Nota|''nomeutente'' deve essere un account valido sulla macchina.}}
+{{Nota|Nota| Il ''nomeutente'' deve essere un account valido sulla macchina.}}
 ===Avviare il servizio Samba===
  [mirandam@charon ~]$ sudo systemctl start smb.service nmb.service
 
