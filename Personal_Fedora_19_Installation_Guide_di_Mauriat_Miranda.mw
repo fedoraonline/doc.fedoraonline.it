@@ -57,7 +57,7 @@ Una volta aggiunto un punto di mount è possibile personalizzarlo (cosa di solit
 Per fare il boot da Windows è possibile utilizzare [http://neosmart.net/EasyBCD/ EasyBCD] (Windows freeware).
 
 Tornando alla schermata di 'Riassunto partizioni' premete ''Iniziare l'installazione'' in basso a destra.<br/>
-Mentre installa clickare su ''PASSWORD DI ROOT'' e impostate la password. Essa è necessaria per il controllo amministrativo sulla macchina e non è una password utente.
+Mentre installa cliccare su ''PASSWORD DI ROOT'' e impostate la password. Essa è necessaria per il controllo amministrativo sulla macchina e non è una password utente.
 
 Per il '''primo avvio''':
 Dopo il primo avvio di Fedora seguite le istruzioni sullo schermo.
