@@ -34,7 +34,6 @@ Salvando la pagina, l'articolo verrà inserito tra quelli in stesura, evidenziat
 Ricordarsi di scrivere in fondo alla guida il markup <nowiki>[[:Categoria:Scrittura in corso]]</nowiki> (con i ":" davanti a "Categoria") come unica categoria. Non si deve inserire la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.<br />
 In questa sezione non ci saranno articoli in riscrittura, non occorre aggiornare le guide obsolete (in tutto o in parte), sono da riscrivere ex-novo; tranne in rari casi, concordati comunque in Mailing List da inserire nella categoria [[CantiereWiki#Articoli_in_corso_di_aggiornamento|articoli in corso di aggiornamento]].<br />
 Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' occorrerà inserirlo tra le [[CantiereWiki#Rilettura_in_corso|riletture in corso]].
-Installare_e_configurare_Virtualbox
 {| {{TabellaBase}}
 ! Fonte
 ! Articolo
@@ -84,9 +83,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|fonte=-|articolo=VirtualBox_repo|autore=AlbertoChiusole|rilettore=?|data=06/09/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installare e configurare Virtualbox|autore=/|rilettore=?|data=26/09/2013|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Skype_repo|autore=AlbertoChiusole|rilettore=?|data=27/09/2013|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Personal_Fedora_19_Installation_Guide_di_Mauriat_Miranda|autore=AlbertoChiusole|rilettore=SimoneDresti|data=7/10/2013|stato=Terminato}}
-{{RiletturaArticolo|fonte=-|articolo=Cinnamon_repo|autore=AlbertoChiusole|rilettore=SimoneDresti|data=11/10/2013|stato=Terminato}}
-{{RiletturaArticolo|fonte=-|articolo=FAQ_Fol|autore=AlbertoChiusole|rilettore=SimoneDresti|data=11/10/2013|stato=Terminato}}
 {{RiletturaArticolo|fonte=-|articolo=LAMP|autore=-|rilettore=?|data=9/10/2013|stato=DaFare}}
 |}
 
