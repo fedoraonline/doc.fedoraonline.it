@@ -63,7 +63,7 @@ drwx------ root/root         0 2010-03-16 16:08 lvmdump-cellopc-20100316150828/l
 -rw-r--r-- root/root      2366 2010-03-16 16:08 lvmdump-cellopc-20100316150828/lvmdump.log
 -rw-r--r-- root/root       538 2010-03-16 16:08 lvmdump-cellopc-20100316150828/versions
 </pre>
-Aggiungendo l'opzione "-m" verranno collezionati anche i metadata di tutti i PV in uso:
+Aggiungendo l'opzione "-m" verranno collezionati anche i metadata di tutti i PV (Volumi Fisici) in uso:
 <pre>
 [root@cellopc ~]# lvmdump -am
 Creating dump directory: /root/lvmdump-cellopc-20100316151008
