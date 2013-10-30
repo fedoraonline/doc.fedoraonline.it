@@ -1,4 +1,3 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 E' possibile svolgere un backup dei metadata di tutti i VG presenti sul sistema, per poter ripristinare in caso di problemi la vecchia configurazione dei VG. Si ricorda che per backup dei metadata si parla della sola parte di configurazione dei VG e non dei dati contenuti nel VG attivi sul nostro sistema.<br>
@@ -20,7 +19,7 @@ Per eseguire manualmente il backup delle configurazioni basterà utilizzare il c
   Volume group "vg_data" successfully backed up.
   Volume group "vg_root" successfully backed up.
 </pre>
-Sempre sotto il direttorio /etc/lvm/ è presente la directory archive che contiene invece le vecchie configurazioni dei metadata. Sempre dal file di configurazione /etc/lvm/lvm.conf, sarà possibile modificare il path di destinazione dove salvare gli archive, modificare il numero minimo di archive da mantenere e il numero di giorni di retenzione per gli archive. E' possibile verificare tramite il comando vgcfgrestore, con l'opzione -l tutta la lista di archive disponibili per un determinato VG.
+Sempre sotto il direttorio /etc/lvm/ è presente la directory archive che contiene invece le vecchie configurazioni dei metadata. Dal file di configurazione /etc/lvm/lvm.conf sarà possibile modificare il path di destinazione dove salvare gli archive, modificare il numero minimo di archive da mantenere e il numero di giorni di ritenzione per gli archive. E' possibile verificare tramite il comando vgcfgrestore, con l'opzione -l, tutta la lista di archive disponibili per un determinato VG.
 <pre>
 [root@pc backup]# vgcfgrestore -l vg_data
    
@@ -41,12 +40,12 @@ Sempre sotto il direttorio /etc/lvm/ è presente la directory archive che contie
   Description:	Created *after* executing 'vgcfgbackup'
   Backup Time:	Wed Mar  3 21:38:12 2010
 </pre>
-Per eseguire il restore dei metadata basterà passare il nome del backup o archive desiderata ed il nome del VG associato a quel VG.
+Per eseguire il restore dei metadata basterà passare il nome del backup o archive desiderato ed il nome del VG associato a quel VG.
 <pre>
 [root@pc backup]# vgcfgrestore -f /etc/lvm/backup/vg_data vg_data
   Restored volume group vg_data
 </pre>
-Qui sotto è riportato lo stralcio di configurazione del file /etc/lvm/lvm.conf relativo al backup dei metadata. Si ricorda che ad ogni modifica del file di configurazione /etc/lvm/lvm.conf, andrà ricreato il ram-disk manualmente mediante dracut, per rendere effettive le modifiche svolte.
+Qui sotto è riportato lo stralcio di configurazione del file /etc/lvm/lvm.conf relativo al backup dei metadata. Si ricorda che ad ogni modifica del file di configurazione /etc/lvm/lvm.conf andrà ricreato il ram-disk manualmente mediante dracut, per rendere effettive le modifiche svolte.
 <pre>
 # Configuration of metadata backups and archiving.  In LVM2 when we
 # talk about a 'backup' we mean making a copy of the metadata for the
@@ -80,6 +79,5 @@ backup {
 }
 </pre>
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|04_Ridurre_filesystem_di_root_con_LVM|04 Ridurre filesystem di root con LVM}}{{Link/succ|06_Logging_LVM|06 Logging LVM}}
