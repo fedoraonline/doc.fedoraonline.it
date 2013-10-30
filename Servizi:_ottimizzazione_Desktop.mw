@@ -1,4 +1,3 @@
-{{InCorso|autore=LuigiTrezzi}}
 {{Autore|LuigiTrezzi}}
 
 La politica di avere molti servizi attivi al lancio del sistema non è da noi condivisa, per alcune ragioni:
@@ -7,7 +6,7 @@ La politica di avere molti servizi attivi al lancio del sistema non è da noi co
 # alcuni servizi possono creare "colli di bottiglia" che rendono il sistema lento e pesante.
 
 Vediamo quale attivazione dei servizi può ritenersi '''minimale''' in un sistema '''desktop''', in maniera tale che sia possibile procedere alla abilitazione del servizio in un secondo momento, controllando la corretta configurazione dello stesso.
-La configurazione qui esposta, con '''Selinux disattivato''', impegna circa '''100 Mb''' di memoria ram allo startup completo del sistema con interfaccia grafica ( runlevel 5)
+La configurazione qui esposta, con '''Selinux disattivato''', impegna circa '''100 Mb''' di memoria ram allo startup completo del sistema con interfaccia grafica (runlevel 5)
 
 Per la descrizione dei singoli servizi vi rimando alla guida di [[:Services in Fedora 11 di Mauriat Miranda|Miranda]].
 
@@ -29,7 +28,6 @@ Diverse applicazioni hanno la necessità di avere un determinato servizio attivo
 # quello prestazionale; i file di configurazione predefiniti configurano il servizio in maniera ampia, a volte, molto oltre ciò che realmente vi occorre.
 # quello di sicurezza; i file di default potrebbero introdurre, nella vostra particolare configurazione, elementi di pericolo per la sicurezza del sistema.
 
-
 ==NetworkManager, network==                 
 è raccomandato tenerli: '''abilitato solo uno dei due'''
 
@@ -44,7 +42,7 @@ Se usate il servizio network esso può essere configurato con:
 
  $ system-config-network
 
-Fate attenzione che in questo caso "sparirà" l'icona rete sulla barra ( è l'icona di NetwokManager), in questa eventualità vi consigliamo di installare:
+Fate attenzione che in questo caso "sparirà" l'icona rete sulla barra (è l'icona di NetwokManager), in questa eventualità vi consigliamo di installare:
 
  # yum install gnome-applet-netspeed gnome-applets
 
@@ -53,7 +51,7 @@ per poter inserire l'icona di controllo rete sulla barra delle applicazioni.
 ==acpid==                 
 è raccomandato tenerlo: ''' disabilitato '''
 
-Questo servizio è particolarmente utile se la Vostra macchina è un portatile, negli altri casi è superfluo.
+Questo servizio è particolarmente utile se la vostra macchina è un portatile, negli altri casi è superfluo.
 
 ==anacron, atd, cron==			
 è raccomandato tenerlo: ''' disabilitato  '''
@@ -90,7 +88,7 @@ se avete una stampante allora questo servizio deve essere '''abilitato''', prima
 
 seguito da un:
 
- #  service cups start
+ # service cups start
 
 e/o
 
@@ -271,7 +269,7 @@ Questo servizio è critico sotto il profilo della sicurezza, controllate bene le
 è raccomandato tenerlo: ''' disabilitato '''
 
 Il servizio Samba è ottimo per la condivisione di filesystem in una rete.<br />
-Fate attenzione, in caso di attivazione, alle sue impostazioni di sicurezza ( password, utenti abilitati, etc).
+Fate attenzione, in caso di attivazione, alle sue impostazioni di sicurezza (password, utenti abilitati, etc).
 
 
 ==smolt==					
@@ -281,8 +279,8 @@ Fate attenzione, in caso di attivazione, alle sue impostazioni di sicurezza ( pa
 ==sshd==					
 è raccomandato tenerlo: ''' disabilitato '''
 	
-Il servizio ssh è ottimo e tra i più sicuri ( forse il più sicuro) dei protocolli per connessioni da remoto, tuttavia esso è un potenziale pericolo di sicurezza.<br />
-Accertatevi se lo volete abilitare che il vostro firewall (iptables) sia ben configurato, che ssh non usi porte standard ( la 22) e non permetta la connessione a root, infine che le vostre password siano "robuste".
+Il servizio ssh è ottimo e tra i più sicuri (forse il più sicuro) dei protocolli per connessioni da remoto, tuttavia esso è un potenziale pericolo di sicurezza.<br />
+Accertatevi se lo volete abilitare che il vostro firewall (iptables) sia ben configurato, che ssh non usi porte standard (la 22) e non permetta la connessione a root, infine che le vostre password siano "robuste".
 
 
 ==udev-post==				
@@ -303,4 +301,3 @@ Componente critico da tenere necessariamente abilitato.
 è raccomandato tenerlo: ''' disabilitato  '''
 
 [[Categoria:Sistema]]
-[[Categoria:Rilettura in corso]]
