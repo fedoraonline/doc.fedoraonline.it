@@ -1,15 +1,16 @@
 {{Autore|AlbertoChiusole}} 
 __TOC__
-
+{{nota|Premessa|La seguente guida tratta l'installazione di VirtualBox tramite il repo di Oracle. E' consigliato utilizzare l'installazione da RPMFusion, come descritto in [[Installare e configurare Virtualbox]].<br />
+Tuttavia anche questa installazione alternativa è corretta e funzionante.}}
 ==Introduzione==
-VirtualBox è un applicativo commerciale proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il repo è disponibile dalla versione Fedora 14 in poi.
+VirtualBox è un applicativo proprietario multipiattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Il repo è disponibile dalla versione Fedora 14 in poi.
 
 ==Installazione==
 Si scarica il repo e lo si posiziona nella cartella /etc/yum.repos.d/, da root:
  # curl http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -o /etc/yum.repos.d/virtualbox.repo
 Il repository è attivo di default ma bisogna installare alcune dipendenze necessarie per far girare VirtualBox:
  # yum install dkms binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel
-Quindi a questo punto si può installare l'ultima versione di VirtualBox (attualmente la 4.2.x):
+A questo punto si può installare l'ultima versione di VirtualBox (attualmente la 4.2.x):
  # yum install VirtualBox-4.2
 
 ==Configurazione==
