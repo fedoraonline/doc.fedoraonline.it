@@ -1,6 +1,5 @@
 {{Autore|RobertMayr}}
 
-
 * Dopo aver creato un device multipath creare un PV sulla partizione creata sul disco.
 
 <pre>
