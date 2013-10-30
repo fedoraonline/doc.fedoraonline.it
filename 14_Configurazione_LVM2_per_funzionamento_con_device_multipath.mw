@@ -1,5 +1,7 @@
 {{Autore|RobertMayr}}
 
+__TOC__
+
 In RHEL, per rendere più performanti alcune funzionalità di LVM2 con le periferiche multipath (periferiche in cui esiste più di un collegamento fisico tra la CPU e la memoria di massa), sono state apportate delle modifiche al file /etc/lvm/lvm.conf. 
 == Preferred_names ==
 È stato aggiunto nel parametro preferred_names, la lista di espressioni regolari sotto ripotarta, per rendere più visibili l'output dei comandi come pvscan, perchè al posto di restitutire il path /dev/dm-n, verrà mostrato un path più intuitivo.
