@@ -1,4 +1,3 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 E' possibile modificare il logging che viene svolto da LVM2 in modo da monitorare eventuali attività o errori dal sistema. Nel file di configurazione /etc/lvm/lvm.conf è possibile definire il livello di logging di LVM2 che di default è impostato a 0 (con un valore massimo di 7). Sempre nel file di configurazione è possibile specificare se inviare i messaggi al syslogd e definire un log di riferimento (che solitamente non è definito).
@@ -16,7 +15,7 @@ format_text/archiver.c:384   Creating volume group backup "/etc/lvm/backup/vg_ro
 vgcfgbackup.c:84   Volume group "vg_root" successfully backed up.
 cache/lvmcache.c:1284   Wiping internal VG cache
 </pre>
-Sarà possibile aumentare il verbose che verrà mostrato in stdout o stderr, che solitamente è disabilitato, ma è possibile aumentarlo fino ad un livello di 3 (molto verboso) per operazioni di debug.
+Sarà possibile aumentare il verbose che verrà mostrato in stdout o stderr, che solitamente è disabilitato. È possibile aumentarlo fino ad un livello di 3 (molto verboso) per operazioni di debug.
 <pre>
 [root@pc ~]# vgcfgbackup
     Logging initialised at Wed Mar  3 21:57:57 2010
@@ -80,6 +79,5 @@ log {
 }
 </pre>
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|05_Backup_Metadata_LVM|05 Backup Metadata LVM}}{{Link/succ|07_Creare_un_linear_Logical_Volume|07 Creare un linear Logical Volume}}
