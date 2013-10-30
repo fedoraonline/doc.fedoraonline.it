@@ -1,9 +1,8 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 === Creazione stiped LV ===
-Il test qui riportato come costruire un LV in modalità striped, in modo che la scrittura/lettura venga spalmata su tutti i PV inseriti all'interno del VG, in modo da aumentare le performance di I/O nel caso si stiano utilizzando delle device con una buona capacità di scrittura sulle singole block device.
-Per prima cosa verificare che non ci siano già dei pv disponibili sul sistema, per creare il nostro VG.
+Viene riportato il test di come costruire un LV in modalità striped, in modo che la scrittura/lettura venga spalmata su tutti i PV inseriti all'interno del VG, in modo da aumentare le performance di I/O nel caso si stiano utilizzando delle device con una buona capacità di scrittura sulle singole block device.
+Per prima cosa verificare che non ci siano già dei PV disponibili sul sistema, per creare il nostro VG.
 
 <pre>
 [root@localhost tmp]# pvs
@@ -117,7 +116,7 @@ Creare il VG con tutti i PV appena inizializzati con un nome desiderato. Nel nos
   /dev/sdc1  vg_test    lvm2 a-   976.00M 976.00M
 </pre>
 
-Ora bisognerà creare un LV in modalità striped utilizzando le opzione "-i" e "-I" del comando lvcreate. L'opzione "-i" specifica il numero di stripe che comporranno il LV, e solitamente è uguale al numero di PV presenti nel VG dove viene inizializzato il LV (nel nostro caso quindi 3). L'opzione "-I" specifica la dimensione in KB della granularità dello stripe, e questa dimensione dovrà essere una potenza di 2 (nel nostro caso sarà 4 KB).
+Ora bisognerà creare un LV in modalità striped utilizzando le opzioni "-i" e "-I" del comando lvcreate. L'opzione "-i" specifica il numero di stripe che comporranno il LV, e solitamente è uguale al numero di PV presenti nel VG dove viene inizializzato il LV (nel nostro caso quindi 3). L'opzione "-I" specifica la dimensione in KB della granularità dello stripe, e questa dimensione dovrà essere una potenza di 2 (nel nostro caso sarà 4 KB).
 
 <pre>
 [root@localhost tmp]# lvcreate -i3 -I4 -l +100%FREE vg_test -n lv_test
@@ -129,7 +128,7 @@ Ora bisognerà creare un LV in modalità striped utilizzando le opzione "-i" e "
   lv_test  vg_test    -wi-a-   2.86G     
 </pre>                                 
 
-Creare un filesystem sul nuovo LV creato se necessario. Dopo aver creato il filesystem utilizzare il comando tune2fs, per eseguire il tuning del fs e nello specifico, azzerare i valori che comportano un fsck forzato schedulato.
+Creare un filesystem sul nuovo LV se necessario. Dopo aver creato il filesystem utilizzare il comando tune2fs per eseguire il tuning del fs e, nello specifico, azzerare i valori che comportano un fsck forzato schedulato.
 
 <pre>
 [root@localhost tmp]# mkfs.ext3 /dev/vg_test/lv_test 
@@ -175,7 +174,7 @@ tmpfs                 125M     0  125M   0% /dev/shm
                       2.9G   69M  2.7G   3% /mnt/test
 </pre>
 
-Per verificare le funzionalità della scrittura in parallelo su tutti i PV si potrà utilizzare il pacchetto sysstat, per campionare i dettagli di utilizzo delle devices. Nello specifico sarà possibile eseguire un controllo tramite il comando iostat, per i KB in lettura/scrittura su ogni singola devices. Nel nostro caso è stata eseguita la creazione di un file da 1 GB sul filesystem e tramite il comando iostat invocato su tutti i PV del VG, si nota che la scrittura viene eseguita in parallelo con valori di scrittura molto simili tra loro nello stesso campionamento (colonna "kB_wrtn/s").
+Per verificare le funzionalità della scrittura in parallelo su tutti i PV si potrà utilizzare il pacchetto sysstat, per campionare i dettagli di utilizzo delle device. Nello specifico sarà possibile eseguire un controllo tramite il comando iostat, per i KB in lettura/scrittura su ogni singola device. Nel nostro caso è stata eseguita la creazione di un file da 1 GB sul filesystem e tramite il comando iostat invocato su tutti i PV del VG, si nota che la scrittura viene eseguita in parallelo con valori di scrittura molto simili tra loro nello stesso campionamento (colonna "kB_wrtn/s").
 
 <pre>
 [root@localhost ~]# iostat -kd sda1 sdb1 sdc1 1
@@ -231,7 +230,7 @@ sdc1             25.56         0.00      4368.89          0       3932
 </pre>
 
 === Sostituzione PV appartenente allo striped LV ===
-Può capitare che in alcuni casi si debba rimuovere un PV appartenente allo striped LV per guasti hardware o di altra natura. Questa parte della procedura indica come spostare i dati da un PV ad uno nuovo e rimuovere quello guasto. Per prima cosa creara una partizione ed inizializzare un PV sul disco presentato al sistema.
+Può capitare che in alcuni casi si debba rimuovere un PV appartenente allo striped LV per guasti hardware o di altra natura. Questa parte della procedura indica come spostare i dati da un PV ad uno nuovo e rimuovere quello guasto. Per prima cosa creare una partizione ed inizializzare un PV sul disco presentato al sistema.
 
 <pre>
 [root@localhost tmp]# fdisk /dev/sdd
@@ -317,6 +316,5 @@ Ora tramite il comando vgreduce sarà possibile rimuovere il vecchio PV da quell
   /dev/sdd1  vg_test    lvm2 a-   976.00M      0 
 </pre>
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|08_Creare_un_mirrored_Logical_Volume|08 Creare un mirrored Logical Volume}}{{Link/succ|10_Gestione_Logical_Volume_LVM2|10 Gestione Logical Volume LVM2}}
