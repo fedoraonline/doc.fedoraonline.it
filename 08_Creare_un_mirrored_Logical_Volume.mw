@@ -1,7 +1,6 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
-== Creazione mirrored LV ===
+== Creazione mirrored LV ==
 La creazione di un mirrorer LV comporta l'utilizzo di almeno 3 PV, perchè due PV saranno i rami del mirror, mentre il terzo PV servirà per salvare il mirror_log con le informazioni di tutte le scritture e letture svolte sul LV. Per prima cosa creare le partizioni sui dischi che ospiteranno i PV.
 
 <pre>
@@ -19,7 +18,7 @@ Inizializzare i PV sulle partizioni dei dischi in precedenza partizionati.
   Physical volume "/dev/hde1" successfully created
 </pre>
 
-Creare un nuovo VG formati dai 3 nuovi PV. Nel nostro caso il nome del VG sarà "vg_mirror".
+Creare un nuovo VG formato dai 3 nuovi PV. Nel nostro caso il nome del VG sarà "vg_mirror".
 
 <pre>
 [root@localhost tmp]# vgcreate vg_mirr /dev/hdb1 /dev/hdd1 /dev/hde1
@@ -31,14 +30,14 @@ Creare un nuovo VG formati dai 3 nuovi PV. Nel nostro caso il nome del VG sarà 
   /dev/hde1  vg_mirr    lvm2 a-   976.00M 976.00M
 </pre>
 
-Ora bisognerà creare un nuovo LV tramite il comando lvcreate. Si dovrà specificare l'opzione "-m" che indica il tipo di mirror che verrà utilizzato. Se si specifica il valore 1 si avrà un linear LV con una copia dei dati su un'altro PV, mentre specificando il valore 0 si avrà un semplice linear LV. 
+Ora bisognerà creare un nuovo LV tramite il comando lvcreate. Si dovrà specificare l'opzione "-m" che indica il tipo di mirror che verrà utilizzato. Se si specifica il valore 1 si avrà un linear LV con una copia dei dati su un altro PV, mentre specificando il valore 0 si avrà un semplice linear LV. 
 
 <pre>
 [root@localhost tmp]# lvcreate -m1 -l +1G  vg_mirr -n lv_mirr01
   Logical volume "lv_mirr01" created
 </pre>
 
-Dopo aver creato il mirror si potrà verificare la percentuale di sync del mirror tramite il comando lvs, specificando le opzione "-a" e "-o+devices". Nell'output del comando si potrà notare il LV appena creato e poi la composizione dei rami del mirror (LV_mimage_0/1) e del mirror log (LV_mlog). Quando il valore di copy sarà pari a 100.00 significa che tutti i dati sono stati allineati.
+Dopo aver creato il mirror si potrà verificare la percentuale di sync del mirror tramite il comando lvs, specificando le opzioni "-a" e "-o+devices". Nell'output del comando si potrà notare il LV appena creato e poi la composizione dei rami del mirror (LV_mimage_0/1) e del mirror log (LV_mlog). Quando il valore di copy sarà pari a 100.00 significa che tutti i dati sono stati allineati.
 
 <pre>
 [root@localhost ~]# lvs -a -o +devices
@@ -51,8 +50,7 @@ Dopo aver creato il mirror si potrà verificare la percentuale di sync del mirro
   [lv_mirr01_mlog]     vg_mirr    lwi-ao   4.00M                                                  /dev/hde1(0)        
 </pre>
 
-
-Creare un filesystem sul nuovo LV creato se necessario. Dopo aver creato il filesystem utilizzare il comando tune2fs, per eseguire il tuning del fs e nello specifico, azzerare i valori che comportano un fsck forzato schedulato.
+Se necessario, creare un filesystem sul nuovo LV creato. Successivamente, utilizzare il comando tune2fs per eseguire il tuning del fs e, nello specifico, azzerare i valori che comportano un fsck forzato schedulato.
 
 <pre>
 [root@localhost ~]# mkfs.ext3 /dev/vg_mirr/lv_mirr01
@@ -104,7 +102,7 @@ Filesystem             Size   Used  Avail Use% Mounted on
 [root@localhost mirr]# touch  /mnt/mirr/prova
 </pre>
 
-Verificare lo stato del LV e si noterà che un nodo del mirror darà molteplici errori di "Input/output error", perchè non più raggiungibile. Nel nostro caso il disco che si è guastato sarà quello che ospita il PV /dev/hdb1.
+Verificando lo stato del LV si noterà che un nodo del mirror darà molteplici errori di "Input/output error", perchè non più raggiungibile. Nel nostro caso il disco che si è guastato sarà quello che ospita il PV /dev/hdb1.
 
 <pre>
 [root@localhost ~]# lvs -a -o +devices
@@ -186,7 +184,7 @@ Verificare che il LV sia diventato LV e che montando il filesystem non si siano 
   vg_mirr      2   1   0 wz--n- 2.95G 1.95G
 </pre>
 
-Aggiungere il nuovo disco e ricreare partizionamento più PV per poterlo poi aggiungere nuovamente al VG che ospita il mirror su cui invocare il recover. In questo caso è stato sostiuisco il disco a caldo ed è stato presentato al sistema.
+Aggiungere il nuovo disco e ricreare il partizionamento e PV per poterlo poi aggiungere nuovamente al VG che ospita il mirror su cui invocare il recover. In questo caso è stato sostiuito il disco a caldo ed è stato presentato al sistema.
 
 <pre>
 [root@localhost mirr]# fdisk /dev/hdb1
@@ -211,7 +209,7 @@ Dopo di che aggiungere il PV al VG che ospita il mirror.
   vg_mirr      3   1   0 wz--n- 4.95G 3.95G
 </pre>
 
-Dopo di che si potrà riconvertire nuovamente il LV da tipo linear a mirrored, tramite il comando lvconvert.
+Dopo si potrà riconvertire nuovamente il LV da tipo linear a mirrored, tramite il comando lvconvert.
 
 <pre>
 [root@localhost mirr]# lvconvert -m1 /dev/vg_mirr/lv_mirr01 
@@ -221,7 +219,7 @@ Dopo di che si potrà riconvertire nuovamente il LV da tipo linear a mirrored, t
   Logical volume lv_mirr01 converted.
 </pre>
 
-Il mirror ora sarà ritornato ad uno stato di consistenza corretta.
+Il mirror ora è ritornato ad uno stato di consistenza corretta.
 
 <pre>
 [root@localhost mirr]# lvs -a -o +devices
@@ -235,14 +233,14 @@ Il mirror ora sarà ritornato ad uno stato di consistenza corretta.
 </pre>
 
 === Salvataggio mirror_log in memoria ===
-In alcuni casi è possibile salvare il mirror_log non su disco ma all'interno della memoria ram. Questa operazione comporta uno spiacevole incoveniente quando viene eseguito il reboot, perchè il mirror_log viene perso e viene automaticamente eseguire il resync dei dati tra i due PV che formano il LV. Il comando per switchare sul mirror_log in memoria è il seguente:
+In alcuni casi è possibile salvare il mirror_log non su disco ma all'interno della memoria ram. Questa operazione comporta uno spiacevole incoveniente quando viene eseguito il reboot, perchè il mirror_log viene perso e viene automaticamente eseguito il resync dei dati tra i due PV che formano il LV. Il comando per switchare sul mirror_log in memoria è il seguente:
 <pre>
 [root@localhost mirr]# lvconvert --mirrorlog core /dev/vg_mirr/lv_mirr01
 </pre>
 <pre>
 [root@localhost mirr]# lvconvert --corelog /dev/vg_mirr/lv_mirr01
 </pre>
-Per riportare il mirror_log su disco lanciare il comando seguente:
+Per riportare il mirror_log su disco, lanciare il comando seguente:
 <pre>
 [root@localhost mirr]# lvconvert --mirrorlog disk /dev/vg_mirr/lv_mirr01
 </pre>
@@ -251,8 +249,7 @@ E' possibile forzare la sincronizzazione dei rami del mirror tramite il comando 
 <pre>
 [root@localhost mirr]# lvchange --resync /dev/vg_mirr/lv_mirr01
 </pre>
-Si ricorda che la sincronizzazione viene già svolta automaticamente dal LVM2.
+Si ricorda che la sincronizzazione viene già svolta automaticamente da LVM2.
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|07_Creare_un_linear_Logical_Volume|07 Creare un linear Logical Volume}}{{Link/succ|09_Creare_uno_striped_Logical_Volume|09 Creare uno striped Logical Volume}}
