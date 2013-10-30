@@ -157,7 +157,7 @@ This filesystem will be automatically checked every 30 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 </pre>
 
-* Con il comando tune2fs è possibile modificare alcuni parametri del filesystem. Nel nostro esempio viene ridotto a 0 il conteggio dei mount (-c0) e l'intervallo di giorni massimo( -i0) , che fa scattare di default un fsck forzato sul filesystem. La nota viene specificata inoltre nell'output del comando mkfs.ext*. Inoltre con l'opzione -o vengono passate alcune opzioni di mount del filesystem.
+* Con il comando tune2fs è possibile modificare alcuni parametri del filesystem. Nel nostro esempio viene ridotto a 0 il conteggio dei mount (-c0) e l'intervallo di giorni massimo (-i0) , che fa scattare di default un fsck forzato sul filesystem. La nota viene specificata inoltre nell'output del comando mkfs.ext*. Inoltre con l'opzione -o vengono passate alcune opzioni di mount del filesystem.
 
 <pre>
 [root@localhost ~]# tune2fs -c0 -i0 -o acl,user_xattr /dev/vg_test/lv_test1
@@ -177,7 +177,7 @@ Setting interval between checks to 0 seconds
 [root@localhost ~]# mkdir -p /mnt/test2
 </pre>
 
-* Eseguire il mount manuale dei due filesystem
+* Eseguire il mount manuale dei due filesystem.
 
 <pre>
 [root@localhost ~]# mount /dev/vg_test/lv_test1 /mnt/test1
