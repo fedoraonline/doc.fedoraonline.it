@@ -1,5 +1,4 @@
 {{Autore|RobertMayr}}
-
 Per ampliare un filesystem che poggia su una struttura LVM si potrà svolgere tutto a caldo, senza dover forzatamente smontare i filesystem.
 * Per prima cosa controllare che il Volume Group a cui appartiene il Logical Volume da allargare, possieda lo spazio libero necessario per l'ampliamento. Lanciare un vgs e controllare che nella colonna "VFree", ci sia abbastanza spazio libero da sfruttare.
 
