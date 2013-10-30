@@ -35,7 +35,7 @@ E' il momento di lanciare il server Apache:
 
  # systemctl start httpd.service
 
-Si potrà subito verificare se il server funziona correttamente, inserendo il seguente indirizzo nella barra degli indirizzi del tuo browser:<br />
+Si potrà subito verificare se il server funziona correttamente, inserendo il seguente indirizzo nella barra degli indirizzi del proprio browser:<br />
 http://localhost/test.php
 === Abilitare le user directory ===
 In alcuni casi, come nei sistemi multiutente, c'è la possibilità di avere il sito web nella propria home usando la direttiva ''UserDir''. In questo caso il sito sarà accessibile da http://localhost/~username/. Di seguito sono indicati i passaggi per abitare le user directory.
@@ -81,9 +81,7 @@ http://localhost/phpmyadmin
 Per accedere si dovrà inserire l'utente (=root) e la password scelta un attimo fa.<br />
 Infine, se tutto funziona, si può fare in modo che i servizi ''httpd'' e ''mysqld'' vengano avviati in automatico ad ogni avvio della macchina:
 
- # chkconfig --add httpd
- # chkconfig httpd on
- # chkconfig --add mysqld
- # chkconfig mysqld on
+ # systemctl enable httpd.service
+ # systemctl enable mysqld.service
 
 [[Categoria:Rete_e_Server]]
