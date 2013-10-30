@@ -82,7 +82,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=Netinstall: installazione Fedora da rete|autore=/|responsabile=AlbertoChiusole|data=4/1/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Ekiga|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
-{{ModificaArticolo|articolo=Yum|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=<nowiki>Categoria:Yum</nowiki>|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
