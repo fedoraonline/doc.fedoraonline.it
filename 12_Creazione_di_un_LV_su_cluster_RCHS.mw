@@ -1,8 +1,7 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
-* Presentare la LUN ai nodi del cluster e gestire il multipath seguendo la procedura [[Aggiunta/Rinomina di una device multipath su RHEL 5]]
-* Ora creare un PV sulla partizione creata sul disco.
+
+* Dopo aver creato un device multipath creare un PV sulla partizione creata sul disco.
 
 <pre>
 [root@cw-spmi-mgm02 mpath]# pvcreate /dev/mpath/HSV210_07p1 
@@ -12,8 +11,7 @@
 
 * Verificare che il PV sia stato creato correttamente, e che non sia legato a nessun VG.
 
-<pre>  
-[root@cw-spmi-mgm02 mpath]# pvs                                           
+<pre>[root@cw-spmi-mgm02 mpath]# pvs                                           
   PV                     VG         Fmt  Attr PSize   PFree               
   /dev/cciss/c0d0p2      VolGroup00 lvm2 a-    68.22G     0               
   /dev/mpath/HSV210_01p1 vg_export  lvm2 a-   499.99G     0               
@@ -29,12 +27,11 @@
   Volume group "vg_activemq" successfully created         
 </pre>
 
-* Non si potrà creare alcun logical volume sul nuovo VG perchè sono state apportate delle modifiche alla configurazione di LVM. E' stato configurato LVM per non abilitare i logical volume che non siano dischi interni o che contengano il tag associato dal cluster. Infatto il cluster quando abilitare dei VG associa un tag "@..." con il nodename preso dal file di configurazione del cluster.
+* Non si potrà creare alcun logical volume sul nuovo VG perchè sono state apportate delle modifiche alla configurazione di LVM.<br>È stato configurato LVM per non abilitare i logical volume che non siano dischi interni o che contengano il tag associato dal cluster. Infatto il cluster quando abilita dei VG associa un tag "@..." con il nome del nodo preso dal file di configurazione del cluster stesso.
    
-* Per controllare eventuali tags associati ai VG si dovrà utilizzare il comando vgs con l'opzione "-o+tags". 
+* Per controllare eventuali etichette associate ai VG si dovrà utilizzare il comando vgs con l'opzione '''-o+tags'''. 
 
-<pre>
-[root@cw-spmi-mgm02 mpath]# vgs -a -o+tags
+<pre>[root@cw-spmi-mgm02 mpath]# vgs -a -o+tags
   VG          #PV #LV #SN Attr   VSize   VFree  VG Tags  
   VolGroup00    1   2   0 wz--n-  68.22G     0           
   vg_activemq   1   0   0 wz--n-  19.99G 19.99G          
@@ -43,10 +40,11 @@
   vg_postfix    1   1   0 wz--n-   1.91G     0  mgmnode02
 </pre>
 
-* Se il VG non è attivo attivo su qualche altro nodo e non ha nessuno tag associato allo si potrà attivare, forzando il tag manualmente e poi abilitandolo. Per prima cosa tramite il comando vgchange con l'opzione "--addtag" passare il tag (senza @) da associare al VG e poi il nome del VG. Fare attenzione nel lancio di questo comando perchè se viene lanciato senza passare alcun VG, verrà aggiunto il tag a tutti i VG e si potrebbero creare problemi seri sul cluster. Dopo di che abilitare il VG con il comando vgchange e l'opzione "-ay".
+* Se il VG non è attivo su qualche altro nodo e non ha nessuno tag associato allora si potrà attivarlo, forzando il tag manualmente e poi abilitandolo.<br>Per prima cosa tramite il comando vgchange con l'opzione '''--addtag''' passare il tag (senza @) da associare al VG, e quindi il nome del VG.
+{{Warning|Prestare molta prudenza nel lancio di questo comando perchè se lanciato senza passare alcun VG, verrà aggiunto il tag a tutti i VG, e si potrebbero creare problemi seri sul cluster}}
+Dopo aver fatto ciò abilitare il VG con il comando '''vgchange''' e l'opzione '''-ay'''.
 
-<pre>
-[root@cw-spmi-mgm02 mpath]# vgchange --addtag mgmnode02 vg_activemq
+<pre>[root@cw-spmi-mgm02 mpath]# vgchange --addtag mgmnode02 vg_activemq
   Volume group "vg_activemq" successfully changed                  
 [root@cw-spmi-mgm02 mpath]# vgs -a -o+tags
   VG          #PV #LV #SN Attr   VSize   VFree  VG Tags  
@@ -74,10 +72,9 @@
   lv_postfix  vg_postfix  -wi-ao   1.91G   
 </pre>                      
      
-* Creare il filesystem di tipo ext43 (o del formato desiderato).
+* Creare il filesystem di tipo ext3, ext4 o del formato desiderato.
 
-<pre>
-[root@cw-spmi-mgm02 mpath]# mkfs.ext3 /dev/vg_activemq/lv_activemq 
+<pre>[root@cw-spmi-mgm02 mpath]# mkfs.ext3 /dev/vg_activemq/lv_activemq 
 mke2fs 1.39 (29-May-2006)                                          
 Filesystem label=
 OS type: Linux
@@ -111,7 +108,8 @@ Setting maximal mount count to -1
 Setting interval between checks to 0 seconds
 </pre>
 
-* Al termine delle attività bisognerà ricordarsi di smontare il filesystem (se verrà smontato), dopo di che disabilitare il VG con il comando vgchange con l'opzione "-an" e poi rimuovere il tag. Attenzione anche rimuovendo il tag se non viene passato il nome del VG, verrà tolto il tag a tutti i VG, e si potranno creare problemi lato cluster.
+* Al termine delle attività bisognerà ricordarsi di smontare il filesystem (se verrà smontato), dopo di che disabilitare il VG con il comando vgchange con l'opzione "-an" e poi rimuovere il tag.
+{{Warning|Anche rimuovendo il tag, se non viene passato il nome del VG, verrà tolto il tag a tutti i VG, e si potranno creare problemi lato cluster}}
 
 <pre>
 [root@cw-spmi-mgm02 mpath]# vgchange -an vg_activemq
@@ -129,8 +127,8 @@ Setting interval between checks to 0 seconds
 
 * Se il nuovo fielsystem non verrà usato dal cluster, ma dovrà essere montato sui due sistemi, per non rifare sempre questa procedura si dovrà modificare il file di configurazione del LVM per poter far attivare il nuovo VG.
 
-* Se il VG verrà utilizzato dal cluster, l'attivazione dei volumi verrà permessa dal LVM se è stato inserito il tag nel "volume_list" del file di configurazione del LVM: Se manca questa modifica sarà da apportare su tutti i nodi del cluster.
+* Se il VG verrà utilizzato dal cluster, l'attivazione dei volumi verrà permessa dal LVM se è stato inserito il tag nel "volume_list" del file di configurazione del LVM.<br>Se manca ciò, la modifica sarà da apportare su tutti i nodi del cluster.
 
-[[Categoria:Scrittura in corso]]
+
 [[Categoria:LVM]]
 {{Link/prec|11_Gestione_Physical_Volume_LVM2|11 Gestione Physical Volume LVM2}}{{Link/succ|13_Configurazioe_LVM2_su_ISCSI_initiator|13 Configurazioe LVM2 su ISCSI initiator}}
