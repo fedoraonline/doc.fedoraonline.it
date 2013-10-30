@@ -59,14 +59,14 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
-{{RiletturaArticolo|fonte=-|articolo=01 Introduzione a LVM|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=02 Ampliare un filesystem con LVM|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=03 Ridurre un filesystem con LVM|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=04 Ridurre filesystem di root con LVM|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=05 Backup Metadata LVM|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=06 Logging LVM|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=07 Creare un linear Logical Volume|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=08 Creare un mirrored Logical Volume|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=01 Introduzione a LVM|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=02 Ampliare un filesystem con LVM|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=03 Ridurre un filesystem con LVM|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=04 Ridurre filesystem di root con LVM|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=05 Backup Metadata LVM|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=06 Logging LVM|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=07 Creare un linear Logical Volume|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=08 Creare un mirrored Logical Volume|autore=RobertMayr|rilettore=SimoneDresti|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=09 Creare uno striped Logical Volume|autore=RobertMayr|rilettore=GabrieleTrombini|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=10 Gestione Logical Volume LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=11 Gestione Physical Volume LVM2|autore=RobertMayr|rilettore=?|data=31/10/2012|stato=DaFare}}
