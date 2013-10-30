@@ -1,14 +1,13 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 Per creare una nuova struttura LVM bisognerà seguire alcuni passi specifici:
 * Mostrare le block device necessarie al sistema operativo.
 * Inizializzare le partizioni necessarie
 * Invocare la creazione dei PV sulle partizioni
-* Creare del VG agganciando i PV creati 
+* Creare il VG agganciando i PV creati 
 * Creare i LV in base alle esigenze del lavoro
 * Creare i filesystem ove necessario sui LV
-* Creare i mount point e montare i nuovi filesystems.
+* Creare i mount point e montare i nuovi filesystem.
 
 Di seguito vengono spiegati alcuni passi su come creare una semplice struttura LVM su un disco interno di un sistema Fedora.
 
@@ -24,7 +23,7 @@ hdb: cache flushes supported
  hdb: unknown partition table
 </pre>
 
-* Verificare che non ci siano partizioni attive sulla block device aggiunta e nel caso eliminarle. E' possibile anche creare delle partizioni all'interno del disco. Infatti un Physical Volume è possibile inizializzarlo su una block device raw, ma anche su una partizione di una block device.
+* Verificare che non ci siano partizioni attive sulla block device aggiunta e nel caso eliminarle. È possibile anche creare delle partizioni all'interno del disco. Infatti è possibile inizializzare un Physical Volume su una block device raw, ma anche su una partizione di una block device.
 
 <pre>
 [root@localhost ~]# fdisk -l /dev/hdb
@@ -36,15 +35,14 @@ Units = cylinders of 1008 * 512 = 516096 bytes
 Disk /dev/hdb doesn't contain a valid partition table
 </pre>
 
-
-* Tramite il comando pvcreate inizializzo un PV su una block device o su una partizione.
+* Tramite il comando pvcreate si inizializza un PV su una block device o su una partizione.
 
 <pre>
 [root@localhost ~]# pvcreate /dev/hdb
   Physical volume "/dev/hdb" successfully created
 </pre>
 
-* Lanciando il comando "pvs" si potrà verificare la lista dei PV presenti sul sistema. Il nostro nuovo PV sarà presente, ma nons arà ancora associato a nessun Volume Group (infatti la colonna VG è vuota).
+* Lanciando il comando "pvs" si potrà verificare la lista dei PV presenti sul sistema. Il nostro nuovo PV sarà presente, ma non sarà ancora associato a nessun Volume Group (infatti la colonna VG è vuota).
 
 <pre>
 [root@localhost ~]# pvs
@@ -54,7 +52,7 @@ Disk /dev/hdb doesn't contain a valid partition table
   /dev/hdb              lvm2 --   2.00G 2.00G
 </pre>
 
-* Tramite il comando vg_create si potrà inizializzare un nuovo VG con il nome desiderato, aggiungendo poi la lista dei PV che comporranno il nostro VG. Il nostro VG è composta da un solo PV.  Ora dal comando pvs si noterà che il PV sarà associato la nostro nuovo VG, e tramite il vgs si noterà che il nuovo VG avrà la dimensione libera grande come il PV aggiunto.
+* Tramite il comando vg_create si potrà inizializzare un nuovo VG con il nome desiderato, aggiungendo poi la lista dei PV che comporranno il nostro VG che sarà composto da un solo PV.  Ora dal comando pvs si noterà che il PV è associato al nostro nuovo VG, e tramite il vgs si noterà che il nuovo VG avrà la dimensione libera grande come il PV aggiunto.
 
 <pre>
 [root@localhost ~]# vgcreate vg_test /dev/hdb
@@ -89,7 +87,7 @@ Disk /dev/hdb doesn't contain a valid partition table
   /dev/hdb   vg_test    lvm2 a-   2.00G 1020.00M
 </pre>
 
-* Nel secondo esempio verrà creato un LV nominato lv_test2 con dimensione pari a tutto lo spazio disponibile sul VG. Viene specificate l'opzione -l, che permettere di specificare la dimensione in extend o percentuale. Come si noterà dall'output dei comandi pvs e vgs, lo spazio disponibile sarà pari a 0.
+* Nel secondo esempio verrà creato un LV nominato lv_test2 con dimensione pari a tutto lo spazio disponibile sul VG. Viene specificata l'opzione -l, che permette di indicare la dimensione in extend o percentuale. Come si noterà dall'output dei comandi pvs e vgs, lo spazio disponibile sarà pari a 0.
 
 <pre>
 [root@localhost ~]# lvcreate -l +100%FREE vg_test -n lv_test2
@@ -110,7 +108,7 @@ Disk /dev/hdb doesn't contain a valid partition table
   /dev/hdb   vg_test    lvm2 a-   2.00G    0
 </pre>
 
-* Ora verrà creato un filesystem di tipo ext3 su ogni LV in precedenza creato.
+* Ora verrà creato un filesystem di tipo ext3 su ogni LV creato in precedenza.
 
 <pre>
 [root@localhost ~]# mkfs.ext3 /dev/vg_test/lv_test1
@@ -157,6 +155,7 @@ Writing superblocks and filesystem accounting information: done
 
 This filesystem will be automatically checked every 30 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
+</pre>
 
 * Con il comando tune2fs è possibile modificare alcuni parametri del filesystem. Nel nostro esempio viene ridotto a 0 il conteggio dei mount (-c0) e l'intervallo di giorni massimo( -i0) , che fa scattare di default un fsck forzato sul filesystem. La nota viene specificata inoltre nell'output del comando mkfs.ext*. Inoltre con l'opzione -o vengono passate alcune opzioni di mount del filesystem.
 
@@ -201,6 +200,5 @@ Filesystem           1K-blocks      Used Available Use% Mounted on
 
 * Nel caso fissare i mount all'interno del /etc/fstab.
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|06_Logging_LVM|06 Logging LVM}}{{Link/succ|08_Creare_un_mirrored_Logical_Volume|08 Creare un mirrored Logical Volume}}
