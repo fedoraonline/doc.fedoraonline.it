@@ -1,8 +1,7 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 Per ampliare un filesystem che poggia su una struttura LVM si potrà svolgere tutto a caldo, senza dover forzatamente smontare i filesystem.
-* Per prima cosa controllare che sul volume group a cui appartiene il logical volume da allargare, possieda lo spazio libero necessario per l'ampliamento. Lanciare un vgs e controllare che nella colonna "VFree", ci sia abbastanza spazio libero da sfruttare.
+* Per prima cosa controllare che il Volume Group a cui appartiene il Logical Volume da allargare, possieda lo spazio libero necessario per l'ampliamento. Lanciare un vgs e controllare che nella colonna "VFree", ci sia abbastanza spazio libero da sfruttare.
 
 <pre>
 [root@pc ~]# vgs -a
@@ -10,7 +9,7 @@ Per ampliare un filesystem che poggia su una struttura LVM si potrà svolgere tu
   VolGroup00   2   3   0 wz--n- 9.84G 992.00M
 </pre>
 
-* Tramite il comando lvextend allargare il filesystem per la dimensione desiderata. E' possibile allargare il Logical Volume per tutta la dimensione libera del Volume group (con -l +100%FREE), oppure di una dimensione specifica (con -L <dimensione).
+* Tramite il comando lvextend allargare il filesystem per la dimensione desiderata. E' possibile allargare il Logical Volume per tutta la dimensione libera del Volume Group (con -l +100%FREE), oppure di una dimensione specifica (con -L <dimensione>).
 
 <pre>
 [root@pc ~]# lvs
@@ -51,9 +50,8 @@ tmpfs                 125M     0  125M   0% /dev/shm
 </pre>
 
 === NOTE IMPORTANTI ===
-In alcuni casi dove si svolgere un grow di un filesystem sotto stress (con un accesso in I/O molto alto durante l'attività), si potrebbe avere un blocco del sistema. Nello specifico il sistema dovrebbe non terminare le attività di resize, mantenendo il sistema in idle e un load average molto alto. Provando ad eseguire un kill del processo relativo al resize non cambierà nulla e si dovrà riavviare il sistema.<br>
+In alcuni casi dove si svolge un grow di un filesystem sotto stress (con un accesso in I/O molto alto durante l'attività), si potrebbe avere un blocco del sistema. Nello specifico il sistema dovrebbe non terminare le attività di resize, mantenendo il sistema in idle e un load average molto alto. Provando ad eseguire un kill del processo relativo al resize non cambierà nulla e si dovrà riavviare il sistema.<br>
 
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|01_Introduzione_a_LVM|01 Introduzione a LVM}}{{Link/succ|03_Ridurre_un_filesystem_con_LVM|03 Ridurre un filesystem con LVM}}
