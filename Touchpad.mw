@@ -21,7 +21,7 @@ Per installarla basta semplicemente navigare con Firefox o Chrome nella [https:/
 Per abilitare il tapping anche alla schermata di login di Gnome (GDM) si può usare xorg.conf.<br/>
 Si crea perciò un file:
  # nano /etc/X11/xorg.conf.d/10_tapping-gdm.conf
-e al'interno si inserisce:
+e all'interno si inserisce:
  Section "InputClass"
        Identifier "tap-by-default"
        MatchIsTouchpad "on"
