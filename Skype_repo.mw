@@ -1,4 +1,4 @@
-{{InCorso|autore=SimoneDresti}}
+{{Autore|SimoneDresti}}
 __TOC__
 
 == Introduzione ==
@@ -7,7 +7,7 @@ __TOC__
 
 == Risoluzione dipendenze ==
 
-Skype, essendo, come già detto, software proprietario, mette a disposizione un RPM per fedora, ma questo pacchetto necessita di librerie a 32bit; gli utenti che usano versioni di fedora differenti sono costretti ad installare tutte le dipendenze a 32bit.
+Skype, essendo, come già detto, software proprietario, mette a disposizione un RPM per Fedora, ma questo pacchetto necessita di librerie a 32bit; gli utenti che usano versioni di fedora differenti sono costretti ad installare tutte le dipendenze a 32bit.
 Per installare le dipendenze:
  # yum install libXScrnSaver.i?86 libX11.i?86 libXv.i?86 libv4l.i?86 alsa-plugins-pulseaudio.i?86 qt-x11.i?86
 
@@ -24,10 +24,9 @@ Da terminale raggiungere la cartella dove è stato scaricato il pacchetto (proba
 
 == Aggiornamento ==
 
-Se si posside wget (in alternativa installarlo con ''yum install wget'') si può aggiornare skype eseguendo da root il seguente comando tutto su una riga:
+Con ''wget'' (se non è presente nel sistema installarlo con ''yum install wget'') si può aggiornare skype eseguendo da root il seguente comando tutto su una riga:
  # TMP=`mktemp`; if [ ! `which wget 2>/dev/null` ]; then echo -e "Wget non trovato. Installarlo tramite yum: \n\t# yum install wget"; fi; URL="`wget -nv --spider http://www.skype.com/go/getskype-linux-beta-fc10 -o $TMP; cat $TMP |tr ' ' '\n' |grep '\-fedora.*.rpm' |tee $TMP |rev |cut -d '/' -f 1 |rev |cut -d '-' -f 2`"; if [ `rpm -q skype` ] && [ $URL != "`rpm -q skype |cut -d '-' -f 2`" ]; then yum update -y `cat $TMP`; fi; rm -rf $TMP
 Lo script aggiorna skype solo se, confrontandolo la versione online, risulta più nuova della versione installata.
 
 [[Categoria:Repository]]
 [[Categoria:Yum]]
-[[Categoria:Rilettura in corso]]
