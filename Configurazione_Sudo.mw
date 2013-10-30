@@ -34,7 +34,7 @@ Il seguente è un esempio di come sudo lascia eseguire i comandi di root:
  [mirandam@charon ~]$ sudo du -sh /root
  163M    /root                       <-- Funziona con sudo!!!
 
-{{Nota|Nota|Ogni comando dato in questa pagina funzionerà anche rimuovendo sudo all'inizio della riga. In tal caso, si dovrà aver ottenuto l'accesso al sistema come 'root'. Un alternativa all'usare sudo è usare '''su''' al login come root, ''prima'' di eseguire un comando.}}
+{{Nota|Nota|Ogni comando dato in questa pagina funzionerà anche rimuovendo sudo all'inizio della riga. In tal caso, si dovrà aver ottenuto l'accesso al sistema come 'root'. Un'alternativa all'uso di sudo è '''su''' al login come root, ''prima'' di eseguire un comando.}}
 
 [[Categoria:Rilettura in corso]]
 [[Categoria:Sistema]]
