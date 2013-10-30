@@ -1,4 +1,3 @@
-{{InCorso|autore=RobertMayr}}
 {{Autore|RobertMayr}}
 
 
@@ -23,7 +22,7 @@ Resizing the filesystem on /dev/VolGroup00/LogVol02 to 262144 (4k) blocks.
 The filesystem on /dev/VolGroup00/LogVol02 is now 262144 blocks long.
 </pre>
 
-* Ridurre la dimensione del logical volume associato al fileystem della stessa dimensione impostata in precedenza nel resize2fs. Confermare l'operazione se si sono seguiti i passi corretti.
+* Ridurre la dimensione del Logical Volume associato al fileystem della stessa dimensione impostata in precedenza nel resize2fs. Confermare l'operazione se si sono seguiti i passi corretti.
 
 <pre>
 [root@pc ~]# lvreduce -L 1G /dev/VolGroup00/LogVol02
@@ -32,7 +31,6 @@ The filesystem on /dev/VolGroup00/LogVol02 is now 262144 blocks long.
 Do you really want to reduce LogVol02? [y/n]: y
   Reducing logical volume LogVol02 to 1.00 GB
   Logical volume LogVol02 successfully resized
-
 </pre>
 
 * Rimontare nuovamente il filesystem e verificare che la dimensione sia stata corretta come desiderato.
@@ -47,6 +45,5 @@ tmpfs                 125M     0  125M   0% /dev/shm
 /dev/mapper/VolGroup00-LogVol021009M   35M  933M   4% /prova
 </pre>
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/prec|02_Ampliare_un_filesystem_con_LVM|02 Ampliare un filesystem con LVM}}{{Link/succ|04_Ridurre_filesystem_di_root_con_LVM|04 Ridurre filesystem di root con LVM}}
