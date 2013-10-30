@@ -2,10 +2,11 @@ __TOC__
 == Introduzione ==
 LibreOffice, dalla release di Fedora 15, è incluso nei [[:Categoria:Repository|repository]], come specificato nella [http://fedoraproject.org/wiki/Features/LibreOffice/it documentazione] del fedoraproject.<br/>
 Questa guida prevede l'installazione da sorgenti su rilasci di fedora precedenti alla 15 o in caso di particolari bisogni.
+{{Suggerimento|Se possibile è sempre consigliata l'installazione tramite '''Yum''', che assicura non solo un'installazione corretta ma è in grado di gestire anche l'eventuale rimozione.}}
 
 {{Scrittura|Nel corso di questa guida verranno usati i termini '''VERSIONE''' e '''ARCHITETTURA''' per indicare le caratteristiche del sistema su cui andrà installato libreoffice.<br/>Tutte le volte che si troverà scritto VERSIONE o ARCHITETTURA bisognerà sostituirle con il valore appropriato. Per VERSIONE si intende il numero di versione che si desidera installare e per ARCHITETTURA una tra x86 (per il 32bit) e x86_64 (per il 64bit), a seconda del sistema su cui si andrà a installare.<br/>Per uniformare la procedura in questa guida verrà usato ''wget'' o, in mancanza, si può usare ''curl''.}}
 
-{{nota|Nota|La guida è stata testata con la versione '''4.1.0''' di libreoffice, ma con le dovute attenzioni è possibile utilizzarla per versioni diverse.}}
+{{nota|Nota|La guida è stata testata con la versione '''4.1.0''' di LibreOffice, ma con le dovute attenzioni è possibile utilizzarla per versioni diverse.}}
 
 == Recupero dei pacchetti necessari ==
 
