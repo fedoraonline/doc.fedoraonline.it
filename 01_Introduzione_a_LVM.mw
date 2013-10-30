@@ -30,6 +30,5 @@ Il Mirrored LV è un particolare tipo di LV che scrive i dati mantenendo una cop
 
 Lo snapshot permette di catturare l'istantanea di un determinato Logical Volume e salvarlo in un altro PV. Questo potrebbe servire per verificare lo stato dei LV durante un problema o prima del lancio di un fsck, come backup per poi importarlo su una macchina virtuale o su un'altra macchina fisica.
 
-[[Categoria:Scrittura in corso]]
 [[Categoria:LVM]]
 {{Link/succ|02_Ampliare_un_filesystem_con_LVM|02 Ampliare un filesystem con LVM}}
