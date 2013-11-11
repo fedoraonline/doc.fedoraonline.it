@@ -92,7 +92,7 @@ Per leggere le informazioni dettagliate di un PV basterà lanciare il comando pv
 </pre>
 == Creare un nuovo PV ==
 Quandi si è deciso quale disco dovrà essere utilizzato per creare un nuovo PV, bisognerà per prima cosa partizionarlo.<br>Se si vuole utilizzare l'intero disco o una parte di esso, ma si vuole rimuovere la vecchia tabella delle partizioni, basterà cancellare il primo settore del disco, dove è contenuta la tabella delle partizioni.
-{{Warning|La procedura seguenet eliminerà ogni dato presente sul disco ''sda''. Procedere con cautela.}}
+{{Warning|La procedura seguente eliminerà ogni dato presente sul disco ''sda''. Procedere con cautela.}}
 <pre>
 [root@cellopc log]# dd if=/dev/zero of=/dev/sda bs=512 count=1
 </pre>
@@ -104,6 +104,7 @@ Dopo di che con il comando pvcreate passare la lista di block device a cui inser
 <pre>
 [root@cellopc log]# pvcreate /dev/sda2 /dev/sda3
 </pre>
+
 == Disabilitare/Abilitare l'allocazione di PE di un PV ==
 In caso ci siano degli errori su una partizione o disco che ospita un PV è possibile bloccare l'allocazione di PE tramite il comando pvchange.<br>Questo comporta che il PV diventi inutilizzabile.
 <pre>[root@cellopc log]# pvchange -x n /dev/sda3
