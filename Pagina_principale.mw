@@ -78,10 +78,10 @@ Puoi fare una [{{SERVER}}{{localurl:Speciale:Ricerca|search=&ns0=1&ns=0&fulltext
 <div style="margin-bottom:20px; border:2px solid #dfdfdf; padding: 1em; -moz-border-radius:15px;-webkit-border-radius:15px;box-shadow:#3C6EB4 1px 1px 13px;-moz-box-shadow:#3C6EB4 1px 1px 13px;-webkit-box-shadow:#3C6EB4 1px 1px 13px;min-height:200px;">
 [[Image:Altradoc_icon.png|left]]
 <div style="text-align:center"><big>'''Altra documentazione''' </big><br>
-[[:Categoria:Fedoraserver | Fedoraserver]] | [[:Categoria:Fedora Legacy | Fedora Legacy]]</div>
+[[:Categoria:Fedoraserver | Fedoraserver]] | [[:Categoria:Fedora Legacy | Fedora Legacy | Traduzioni]]</div>
 <br />
 <div class="principale">'''Le più gettonate...'''
-* [[Personal Fedora 18 Installation Guide di Mauriat Miranda | Personal Fedora 18 Installation Guide]]
+* [[Personal Fedora 19 Installation Guide di Mauriat Miranda | Personal Fedora 19 Installation Guide]]
 * [[Installare un Compilatore GCC alternativo su Fedora, di Mauriat Miranda | Compilatore GCC alternativo su Fedora]]
 * [[Un centralino con Asterisk e Fedora | Un centralino con Asterisk e Fedora]]
 * [[Un server di posta con Postfix (e altre cosette...) v. 0.1 | Un server di posta con Postfix]]
