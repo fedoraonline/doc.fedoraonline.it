@@ -84,4 +84,8 @@ Infine, se tutto funziona, si può fare in modo che i servizi ''httpd'' e ''mysq
  # systemctl enable httpd.service
  # systemctl enable mysqld.service
 
+{{nota|Avviso|A partire da Fedora 20 l'attivazione del servizio mysqld va fatta richiamando il vero demone, ovvero MariaDB, di default da Fedora 19. 
+
+ # systemctl enable mariadb}}
+
 [[Categoria:Rete_e_Server]]
