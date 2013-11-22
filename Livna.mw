@@ -1,7 +1,7 @@
 __TOC__
 == Introduzione ==
 
-Livna fa parte dei repository di '''''terze parti'''''. L'installazione è utile per la presenza del pacchetto ''libdvcss'', necessario per i video DVD. Il repo è disponibile attualmente per le versioni da Fedora 8 compresa in poi, sia stabile che testing.<br />
+Livna fa parte dei repository di '''''terze parti'''''. L'installazione è utile per la presenza del pacchetto ''[[Multimedia_Player_e_codecs#Librerie_per_DVD|libdvcss]]'', necessario per i video DVD. Il repo è disponibile attualmente per le versioni da Fedora 8 compresa in poi, sia stabile che testing.<br />
 Tutti gli altri contenuti di Livna nel 2008 sono migrati su [[RPMFusion|RPMFusion]].
 {{Warning|L'utilizzo di Livna potrebbe generare in alcuni pacchetti delle incompatibilità, se si attivano contemporaneamente anche [[ATrpms|ATrpms]].}}
 
