@@ -209,12 +209,12 @@ Se viene spuntata la casella ''Imposta questo utente come amministratore'' l'ute
 Il comando sudo su fedora è disabilitato di default, dato che permette a qualsiasi utente normale del sistema di operare come fosse root e questo è un grave rischio per la sicurezza. È possibile attivarlo comunque durante l'installazione selezionando la casella relativa.<br/>
 Viene inoltre richiesto di inserire la password utente che servirà per accedere durante la sessione di lavoro.
 
-Nella sezione ''Avanzato'' è possibile effettuare una Configurazione utente avanzata, potendo scegliere di creare una directory per il relativo utente nella posizione che si desidera, scegliere di specificare manualmente un ID utente e specificare manualmente un ID gruppo, è infine possibile di inserire manualmente l'utente che si è creato in un determinato gruppo.
+Nella sezione ''Avanzato'' è possibile effettuare una Configurazione utente avanzata, potendo scegliere di creare una directory per il relativo utente nella posizione che si desidera, scegliere di specificare manualmente un ID utente e specificare manualmente un ID gruppo, è infine possibile inserire manualmente l'utente che si è creato in un determinato gruppo.
 <br/>
 
 [[File:install_f20_09.png|center|800px|Creazione Utente]]<br />
 
-Alla fine dell'installazione viene richiesto di riavviare il computer. Bisognerà estrarre il supporto utilizzato durante l'installazione (dvd, cd, live-usb, ecc..) e si avrà davanti il primo avvio di Fedora 20; nel caso si abbia installato il Desktop Environment Gnome si verrà "salutati" da una schermata di benvenuto.
+Alla fine dell'installazione viene richiesto di riavviare il computer. Bisognerà estrarre il supporto utilizzato durante l'installazione (dvd, cd, live-usb, ecc...) e si avrà davanti il primo avvio di Fedora 20; nel caso si abbia installato il Desktop Environment Gnome si verrà "salutati" da una schermata di benvenuto.
 [[File:install_f20_10.png|center|800px|Primo avvio di Fedora 20 Gnome]]<br />
 
 
