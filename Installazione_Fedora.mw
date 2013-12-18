@@ -97,7 +97,7 @@ Dopo la scelta dei dischi per proseguire nel processo di installazione partizion
 
 A questo punto verrà aperta la finestra ''OPZIONI DI INSTALLAZIONE'', nella quale:
 si potrà scegliere di affidarsi al partizionamento automatico scegliendo ''Configura automaticamente l'installazione di Fedora sui dischi selezionati e torna al menu principale'';
-oppure scegliere di effettuare il partizionamento manuale dei dischi, scegliendo ''Controlla/Modifica le partizioni del disco prima di continuare''
+oppure scegliere di effettuare il partizionamento manuale dei dischi, scegliendo ''Controlla/Modifica le partizioni del disco prima di continuare''.
 In entrambe le scelte di partizionamento (automatico o manuale) è possibile scegliere lo schema delle partizioni scegliendo nel menu a tendina tra: ''Partizione Standard'', ''BTRFS'', ''LVM'' oppure ''Thin provisioning LVM''.
 
 Se si vuole criptare con password le partizioni su cui è installata Fedora selezionare l'opzione ''Cifrare i dati. La passphrase sarà scelta in seguito.''
