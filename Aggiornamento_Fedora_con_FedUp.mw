@@ -30,7 +30,7 @@ Una volta completato l'update è bene cancellare la cache di yum, per essere cer
 {{Warning|Se durante l'aggiornamento è stato aggiornato anche il kernel è necessario riavviare il sistema, perchè il lancio di FedUp deve essere eseguito utilizzando l'ultimo kernel disponibile.}}
 Una volta riavviato ci si rilogga nel terminale come root per proseguire.
 
- # yum install fedup 
+ # yum --enablerepo=updates-testing install fedup 
 
 Esistono tre opzioni per procedere con l'aggiornamento: attraverso la Rete, un'immagine ISO oppure da un altro device.
 
