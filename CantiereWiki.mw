@@ -59,7 +59,13 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
-{{RiletturaArticolo|fonte=-|articolo=-|autore=-|rilettore=-|data=-|stato=Terminato}}
+<!--{{RiletturaArticolo|fonte=-|articolo=-|autore=-|rilettore=-|data=-|stato=-}} tabella base-->
+<!--
+{{RiletturaArticolo|fonte=-|articolo=Netinstall:_installazione_Fedora_da_rete|autore=AlbertoChiusole|rilettore=?|data=10/1/2014|stato=DaFare}}
+
+esempio di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarmi come si fa ;) ~bebo
+-->
+{{RiletturaArticolo|fonte=-|articolo=Netinstall:_installazione_Fedora_da_rete|autore=AlbertoChiusole|rilettore=?|data=10/1/2014|stato=DaFare}}
 |}
 
 == Articoli in corso di aggiornamento ==
@@ -78,11 +84,10 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Responsabile della modifica
 ! Data
 ! Stato
-{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}}
-{{ModificaArticolo|articolo=Netinstall: installazione Fedora da rete|autore=/|responsabile=AlbertoChiusole|data=4/1/2013|stato=InCorso}}
+<!--{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}} esempio.. -->
 {{ModificaArticolo|articolo=Ekiga|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
 {{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
-{{ModificaArticolo|articolo=<nowiki>Categoria:Yum</nowiki>|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
