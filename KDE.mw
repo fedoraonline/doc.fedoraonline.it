@@ -19,7 +19,7 @@ Il look di KDE4 è decisamente innovativo, costituito da molti punti fondamental
 ==Installazione di KDE==
 Per installare KDE, basta yum:
 
- $ su -c 'yum groupinstall "KDE (K Desktop Environment)"'
+ $ su -c 'yum groupinstall KDE'
 
 Al successivo riavvio, alla schermata di login, sarà possibile effettuare la scelta (casella in basso) tra Gnome e, appunto, KDE.
 
