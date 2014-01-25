@@ -1,13 +1,19 @@
+{{InCorso|autore=SimoneDresti}}
+__NOTOC__
+
 == Introduzione ==
+Adobe Reader è un programma gratuito della Adobe Systems che permette di visualizzare e stampare i documenti in formato PDF. Di seguito verrà esposta la procedura d'installazione di Acrobat Reader su Fedora.
+== Installazione ==
+{{Warning|Precedentemente era possibile installare Adobe Acrobat Reader direttamente dal repository di Adobe. Recentemente il pacchetto è stato rimosso e quindi la procedura esposta resta l'unica consigliata.}}
+Innanzitutto bisogna provvedere a scaricare l'ultima versione di Adobe Reader disponibile per linux direttamente dal [https://get.adobe.com/it/reader/ sito ufficiale]. È inoltre possibile scaricarlo direttamente da [http://get.adobe.com/it/reader/download/?installer=Reader_8.1.7_Italian_for_Linux_%28.rpm%29&standalone=1 qui] per la versione in italiano o [http://get.adobe.com/it/reader/download/?installer=Reader_9.5.5_English_for_Linux_(.rpm)&standalone=1 qui] per la versione in inglese. Quest'ultima è consigliata perché è disponibile una versione più aggiornata.
 
-Per poter installare facilmente Adobe Acrobat Reader è necessario avere installato il repository di [[Adobe|Adobe]].
+Da terminale bisogna raggiungere la cartella dove è stato scaricato il pacchetto (probabilmente $HOME/Scaricati) e installarlo eseguendo da root
+===Versione inglese===
+ # yum install AdbeRdr9.5.5-1_i486linux_enu.rpm
+===Versione italiana===
+ # yum install AdobeReader_ita-8.1.7-1.i486.rpm
 
-Fatto questo si può tranquillamente procedere con l'installazione, attivando il repo digitando:
-
-===Installazione a 32bit===
- # yum --enablerepo=adobe-linux-i386 install AdobeReader_ita
-
-===Installazione a 64bit===
- # yum --enablerepo=adobe-linux-x86_64 install AdobeReader_ita
-
+Se l'installazione è andata a buon fine, Adobe Reader potrà essere lanciato da terminale
+ $ acroread 
 [[Categoria:Ufficio]]
+[[Categoria:Scrittura in corso]]
