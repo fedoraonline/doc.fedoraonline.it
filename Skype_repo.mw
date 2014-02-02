@@ -15,18 +15,18 @@ Per installare le dipendenze:
 
 Innanzitutto bisogna provvedere a scaricare l'ultima versione di skype disponibile per linux. È sufficiente andare sul sito ufficiale sotto la voce [http://www.skype.com/it/download-skype/skype-for-computer/ download] o più semplicemente reperirlo direttamente da [http://www.skype.com/go/getskype-linux-beta-fc10 qui].
 
-Da terminale raggiungere la cartella dove è stato scaricato il pacchetto (probabilmente $HOME/Scaricati) e installarlo
+Da terminale raggiungere la cartella dove è stato scaricato il pacchetto (probabilmente <tt>$HOME/Scaricati</tt>) e installarlo
 
  # cd /path/to/skype
  # yum install skype-*
 
 {{Warning|Skype ha messo a disposizione un repository come installazione alternativa. Tale procedura è sconsigliata perché installa una versione obsoleta e non funzionante di skype.}} 
 
-== Aggiornamento ==
+<!--== Aggiornamento ==
 
 Con ''wget'' (se non è presente nel sistema installarlo con ''yum install wget'') si può aggiornare skype eseguendo da root il seguente comando tutto su una riga:
  # TMP=`mktemp`; if [ ! `which wget 2>/dev/null` ]; then echo -e "Wget non trovato. Installarlo tramite yum: \n\t# yum install wget"; fi; URL="`wget -nv --spider http://www.skype.com/go/getskype-linux-beta-fc10 -o $TMP; cat $TMP |tr ' ' '\n' |grep '\-fedora.*.rpm' |tee $TMP |rev |cut -d '/' -f 1 |rev |cut -d '-' -f 2`"; if [ `rpm -q skype` ] && [ $URL != "`rpm -q skype |cut -d '-' -f 2`" ]; then yum update -y `cat $TMP`; fi; rm -rf $TMP
-Lo script aggiorna skype solo se, confrontandolo la versione online, risulta più nuova della versione installata.
+Lo script aggiorna skype solo se, confrontandolo la versione online, risulta più nuova della versione installata.-->
 
 [[Categoria:Repository]]
 [[Categoria:Yum]]
