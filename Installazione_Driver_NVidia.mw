@@ -1,3 +1,4 @@
+{{InCorso|autore=NomeAutore}}
 __TOC__
 == Introduzione ==
 Fedora utilizza per le schede video NVidia (tra cui le GeForce) di default, senza necessità di configurazioni aggiuntive, il driver libero "[http://nouveau.freedesktop.org/wiki/ nouveau]. Si possono tuttavia utilizzare, al suo posto, il driver proprietario (non libero) ufficialmente fornito da Nvidia stessa. Questa guida spiega come installare quest'ultimo.
@@ -165,3 +166,4 @@ Si dovrà fare lo stesso ad ogni nuova versione di kernel che si installerà.
 * http://rpmfusion.org/Howto/nVidia
 
 [[Categoria:Schede grafiche]]
+:[[:Categoria:Modifica in corso]]
