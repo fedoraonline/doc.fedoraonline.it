@@ -2,7 +2,7 @@ I driver ati sono proprietari, è software chiuso e non libero, sconsigliamo di 
 
 == Schede video supportate ==
 
-I driver ati supportano solo schede video di [http://en.wikipedia.org/wiki/AMD_Radeon#Processor_generations generazione R600] (serie "radeon hd 2000") e successive.
+I driver ati supportano solo schede video della [http://en.wikipedia.org/wiki/AMD_Radeon#Processor_generations serie HD5xxx] e successive (indicativamente schede prodotte dal 2010 in poi).
 
 Per sapere se la propria scheda video è supportata si può confrontare l'output del comando
  # lspci|grep -i vga
