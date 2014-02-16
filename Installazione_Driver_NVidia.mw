@@ -3,7 +3,7 @@ __TOC__
 == Introduzione ==
 Fedora utilizza per le schede video NVidia (tra cui le GeForce) di default, senza necessità di configurazioni aggiuntive, il driver libero "[http://nouveau.freedesktop.org/wiki/ nouveau]. Si possono tuttavia utilizzare, al suo posto, il driver proprietario (non libero) ufficialmente fornito da Nvidia stessa. Questa guida spiega come installare quest'ultimo.
 
-Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi: tramite pacchetto rpm o tramite installer ufficiale.
+Per installare i driver nVidia  sono possibili, sostanzialmente, due metodi: tramite pacchetto rpm fornito da RPMFusion o tramite installer ufficiale.
 {{Warning|Non usare mai i due metodi contemporaneamente, nel senso esclusivo della parola: o l'uno oppure l'altro.}}
 Di seguito verranno descritti  entrambi.
 
