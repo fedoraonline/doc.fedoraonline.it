@@ -11,7 +11,15 @@ Di seguito verranno descritti  entrambi.
 Come primo passo, bisogna sapere a quale [http://en.wikipedia.org/wiki/GeForce#Generations serie] appartiene la nostra scheda video. Per far ciò si può per esempio confrontare l'output del comando:
  # lspci|grep -i vga
 con [http://en.wikipedia.org/wiki/Comparison_of_Nvidia_graphics_processing_units questa pagina di wikipedia], che elenca le gpu suddivise per serie. 
-{{Warning|Se con pc portatile, al comando precedente vi evidenzia la presenza sia di una gpu nvidia che di una integrata intel, vuol dire che ha la tecnologia [http://en.wikipedia.org/wiki/Nvidia_Optimus Nvidia Optimus]che '''non''' è supportata dai driver NVidia per Linux.}} 
+{{Warning|Se con pc portatile, al comando precedente vi evidenzia la presenza sia di una gpu nvidia che di una integrata intel, vuol dire che ha la tecnologia [http://en.wikipedia.org/wiki/Nvidia_Optimus Nvidia Optimus]che '''non''' è supportata dai driver NVidia per Linux.}}
+
+Esistono infatti quattro driver diversi, a seconda della serie della scheda video:
+*'''Serie 8 o superiori''', cioè schede video prodotte indicativamente a partire dal 2007 (GeForce 8xxx, 9xxx, 1xx, 2xx, 3xx, 4xx, 5xx, 6xx, 7xx): '''ultima versione del driver''';
+*'''Serie 6 e 7''', cioè schede video prodotte indicativamente dal 2004 al 2006 (GeForce 6xxx, 7xxx): '''driver versione 304''';
+*'''Serie 5''', cioè schede video prodotte indicativamente nel 2003 (GeForce FX 5xxx): '''driver versione 173''';
+*'''Serie da 2 a 4''', cioè schede video prodotte indicativamente dal 2000 al 2002: '''driver versione 96'''.
+
+NOTA: per fedora 19 e 20 attualmente non esistono driver aggiornati compatibili per schede serie 5 e precedenti.
 
 ==Installazione dei drivers usando akmod-nvidia==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
