@@ -21,60 +21,28 @@ Esistono infatti quattro driver diversi, a seconda della serie della scheda vide
 
 NOTA: per fedora 19 e 20 attualmente non esistono driver aggiornati compatibili per schede serie 5 e precedenti.
 
-==Installazione dei drivers usando akmod-nvidia==
+==Installazione dei drivers usando RPMFusion==
+===Installazione del driver===
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 Per sicurezza dare un:
  # yum update rpmfusion*
-
-=== Per versioni di Fedora 16 e successive ===
-Per Fedora 16 attualmente sono disponibili driver proprietari Nvidia compatibili solo per GeForce serie 6 e superiori. La procedura di installazione è la seguente:
-
-Installare i driver akmod-nvidia:
- # yum install akmod-nvidia
-
-Accertare corretta riconfigurazione di grub2, con il proprio editor di testo (nell'esempio vim) aprire il seguente file:
- # vim /etc/default/grub
-Controllare che la riga contenente la variabile '''GRUB_CMDLINE_LINUX=''' contenga alla fine queste stringhe ''nouveau.modeset=0 rd.driver.blacklist=nouveau'' come il file di esempio qui di seguito:
- # cat /etc/default/grub
- GRUB_TIMEOUT=5
- GRUB_DISTRIBUTOR="Fedora"
- GRUB_DEFAULT=saved
- GRUB_CMDLINE_LINUX="rd.md=0 rd.lvm=0 rd.dm=0 quiet SYSFONT=latarcyrheb-sun16 rhgb rd.luks=0  KEYTABLE=it LANG=en_US.UTF-8 nouveau.modeset=0 rd.driver.blacklist=nouveau"
-
-Fare una copia di backup del file di configurazione di grub2:
- # cp /boot/grub2/grub.cfg /boot/grub2/grub.cfg.backup
-
-Ricreare la configurazione di grub2:
- # grub2-mkconfig -o /boot/grub2/grub.cfg
-
-Riavviare la macchina e controllare eventuali errori.
-
-=== Per versioni precedenti a Fedora 16 ===
-Ora occorre installare il pacchetto sviluppo del kernel:
+Occorre installare il pacchetto sviluppo del kernel:
  # yum install kernel-devel
+Si può quindi installare il driver NVidia, facendo attenzione alla giusta versione del driver a seconda della scheda video utilizzata:
+*serie 8 o superiore
+ # yum install akmod-nvidia kmod-nvidia
+*serie 6 o 7
+ # yum install akmod-nvidia-304xx kmod-nvidia-304xx
+*serie 5
+ # yum install akmod-nvidia-173xx kmod-nvidia-173xx
+*serie da 2 a 4
+ # yum install akmod-nvidia-96xx kmod-nvidia-96xx
 
-Oppure '''kernel-PAE-devel''' se si usa il kernel-PAE; inoltre verificare che le
-versioni di kernel e kernel-devel (o kernel-PAE-devel) "collìmino", cioè
-corrispondano perfettamente:
- $ rpm -qa|grep kernel
-e
- $ rpm -q kernel-devel
-
-Verificare che la versione di kernel che si utilizza
-corrisponda alla versione del kernel-devel.
-
-In base al modello di videocard posseduta si potrà scegliere i drivers corretti per il proprio sistema:
-*Se si possiede una nVidia GeForce serie 6 o superiore, fare
- # yum install akmod-nvidia
-*Per una serie 5 (non ancora disponibili per Fedora 16)
- # yum install akmod-nvidia-173xx
-*Per una serie da 2 a 4 (non ancora disponibili per Fedora 15 e 16)
- # yum install akmod-nvidia-96xx
-Prima di riavviare il sistema, per evitare possibili problemi, è neccessario un ultimo passaggio:
+Prima di riavviare il sistema, è neccessario un ultimo passaggio:
  # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
  # dracut /boot/initramfs-$(uname -r).img $(uname -r)
 
-L'installazione essenziale del driver Nvidia è terminata.
+L'installazione essenziale del driver Nvidia è terminata. Riavviare la macchina e controllare eventuali errori.
 
 === Ulteriori configurazioni ===
 In alcuni casi, può essere utile effettuare ulteriori operazioni, che vengono spiegate in questo paragrafo.
@@ -144,6 +112,27 @@ con versioni di Fedora precedenti alla 16 di controllare che in /etc/X11/xorg.co
 
 ==== Ripristinare Plymouth all'avvio del pc ====
 Il driver proprietario NVidia non ha il KernelModeSetting, quindi la sua installazione disattiva il boot grafico Plymouth. Il problema è esclusivamente estetico, e solo per quei pochi secondi di avvio di Fedora (tra la schermata di grub e quella del login utente). Tuttavia è possibile ripristinare l'avvio di Plymouth [http://doc.fedoraonline.it/Plymouth#Risoluzioni impostando manualmente la risoluzione video desiderata]
+
+===Verifica della corretta installazione del driver===
+E' possibile verificare che il driver nvidia sia stato correttamente installato e sia in funzione.
+*Primo test:
+ $ lspci -nnk | grep -i vga -A3
+deve restituire "Kernel driver in use: nvidia".
+*Secondo test:
+ $ glxinfo | grep direct
+deve restiture come prima riga "direct rendering: Yes"
+*Terzo test (valido solo per la verifica della corretta decodifica filmanti sulla gpu per geforce serie 8 o superiore). Bisogna prima installare:
+ # yum install vdpauinfo libva-utils
+e poi verificare che non generino errori i seguenti comandi, che dovrebbero elencare le capacità di decodifica:
+ $ vdpauinfo
+ $ vainfo
+
+===Disinstallazione del driver NVidia===
+Nel caso si voglia disinstallare i driver NVidia, è possibile farlo anche nel caso Fedora non possa avviarsi in modalità grafica.
+
+Bisogna avviare fedora in init 3, in modo da poter poi rimuovere i pacchetti:
+ # yum remove xorg-x11-drv-nvidia\* nvidia-settings akmod-nvidia
+ # reboot
 
 ==Installazione dei drivers usando l'installer scaricabile dal sito di nvidia==
 Questa procedura non è consigliata agli utenti meno esperti.
