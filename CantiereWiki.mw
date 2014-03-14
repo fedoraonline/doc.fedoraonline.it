@@ -91,8 +91,8 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=:Chromium|autore=NicolaPoli|responsabile=LuigiSabotti|data=23/01/2014|stato=InCorso}}
 {{ModificaArticolo|articolo=:Installazione Driver NVidia|autore=/|responsabile=? (vedi proposte in ML)|data=14/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=Flash_plugin|autore=/|responsabile=|data=22/03/2014|stato=InCorso}}
-{{ModificaArticolo|articolo=Skype_repo|autore=/|responsabile=|data=22/03/2014|stato=InCorso}}
+{{ModificaArticolo|articolo=Flash_plugin|autore=/|responsabile=/|data=22/03/2014|stato=InCorso}}
+{{ModificaArticolo|articolo=Skype_repo|autore=/|responsabile=/|data=22/03/2014|stato=InCorso}}
 {{ModificaArticolo|articolo=Installare_e_configurare_Virtualbox|autore=/|responsabile=SimoneDresti|data=22/03/2014|stato=DaFare}}
 |}
 
