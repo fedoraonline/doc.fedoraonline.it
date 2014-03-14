@@ -1,3 +1,4 @@
+{{InCorso|autore=SimoneDresti}}
 __TOC__
 == Introduzione ==
 VirtualBox è un applicativo commerciale proprietario multi-piattaforma per la virtualizzazione di sistemi operativi sviluppato da Oracle. Si possono riscontrare alcuni problemi con il supporto USB: purtroppo ancora non è stata prevista una configurazione totalmente automatica.
@@ -28,4 +29,13 @@ Per poter abilitare il controller USB 2.0 (EHCI), bisogna aggiungere il proprio 
 
  # gpasswd -a $(logname) vboxusers
 
+=== Compattare un disco virtuale VDI di Virtualbox (guest: Windows) ===
+Con un utilizzo regolare di una macchina virtuale il corrispondente file vdi cresce continuamente di volume, anche qualora si liberasse dello spazio sul sistema guest. La procedura di compattazione del file vdi purtroppo non è banale e richiede una preparazione del sistema ospite. Infatti per ridurre la dimensione del file vdi occorre che lo spazio libero sul guest sia marcazo a zero.
+<ol>
+<li><nowiki>[da guest]</nowiki>Come operazione preliminare è necessario deframmentare il sistema guest con l'apposito tool disponibile su Windows</li>
+<li><nowiki>[da guest]</nowiki>Dalla finestra DOS settare a zero lo spazio libero attraverso ''sdelete -z''
+<li><nowiki>[da host]</nowiki>Per concludere compattare lo spazio del disco virtuale con ''$ VBoxManage" modifyvdi "nomefile.vdi" compact''</li>
+</ol>
+Si segnala che la compattazione può ridurre lo spazio occupato del disco virtuale anche di decine di gigabyte.
 [[Categoria:Virtualizzazione]]
+[[Categoria:Modifica in corso]]
