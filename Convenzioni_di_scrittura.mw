@@ -1,3 +1,4 @@
+{{InCorso|autore=?}}
 {{nota|''Premessa''|La raccolta di documenti, articoli, guide, tutorial ed howto che FedoraOnLine si propone di offrire ai propri utenti (e non), redatte con il contributo di tutti '''devono avere le stesse impostazioni di base'''.<br />
 Proprio il fatto che tutti gli utenti potrebbero richiedere di diventare redattori FOL, espone il wiki all'insorgere di problemi di uniformità della documentazione in esso contenuta. Lo scopo di questo wiki è di diventare una '''enciclopedia''' vera e propria alla quale attingere le informazioni o approfondire le conoscenze.<br />
 Lo "sfogliare" una enciclopedia presuppone una certa impostazione visuale e semantica che, seppur magari redatte da persone differenti, fanno sembrare il tutto come scritto sempre dalla stessa persona, senza soluzione di continuità.<br />
@@ -458,6 +459,17 @@ In questo caso il link è rosso perchè non esiste un utente ''NomeAutore''.
 
 [[Categoria:FedoraOnline]]
 
+==Redirect==
+
+In alcune occasioni potrebbe esserci la necessità di cancellare un articolo in sostituzione di un'altra pagina. Nell'ambito di un'enciclopedia libera come la documentazione FOL questa procedura viene sconsigliata e viene preferito un ridirezionamento della vecchia pagina verso quella nuova.
+
+Per effettuare un ''redirect'' da pagina_1 a pagina_2 bisogna inserire all'inizio della pagina da ridirezionare (pagina_1) la seguente stringa
+
+ <nowiki>
+#REDIRECT [[pagina_2]]</nowiki>
+
+La pagina_1 sarà comunque sempre accessibile per eventuali modifiche aggiungendo nella barra degli indirizzi la variabile "redirect" impostata su "no" come nell'esempio seguente
+ http://doc.fedoraonline.it/Convenzioni_di_scrittura?redirect=no
 ==I template==
 
 Sul wiki di Fedora Ondine sono disponibili una serie di template per facilitare la scrittura. Consultare [[:Categoria:Template|l’elenco dei template disponibili]] per maggiori informazioni.
@@ -523,3 +535,4 @@ Per inserire il template per alcune convenzioni di scrittura all’interno dell�
 Questo template è da posizionare all’interno dell’introduzione per informare il lettore fin da subito della convenzione stessa.
 Esempio:
 {{Scrittura|Regole e convenzioni di scrittura}}
+[[Categoria:Modifica in corso]]
