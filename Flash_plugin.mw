@@ -1,15 +1,19 @@
+{{InCorso|autore=SimoneDresti}}
 == Introduzione ==
 
 Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti siti web. Flash è una soluzione proprietaria, e benché ci siano molte alternative ad esso, come gnash, rimane il più utilizzato.
 
 == Installazione ==
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[Adobe|Adobe]].}}
-
-
  # yum install flash-plugin
 
+=== Installazione alternativa tramite lpf ===
+Il plugin Flash può essere installato anche tramite [https://github.com/leamas/lpf lpf], disponibile nei repository [[RPMFusion]]. Da terminale è sufficiente eseguire
+ # yum install lpf-flash-plugin
+ # lpf update flash-plugin
+L'esecuzione di lpf creerà un pacchetto rpm locale e provvederà alla sua installazione.
 
-===Verifica Flash Plugin===
+==Verifica Flash Plugin==
 Per verificare la presenza o meno del plugin Flash, basta digitare nella barra degli indirizzi del proprio browser:
 
  about:plugins
@@ -17,3 +21,4 @@ Per verificare la presenza o meno del plugin Flash, basta digitare nella barra d
 Se presente, verrà visualizzata un riga contenente la dicitura ''Shockwave Flash''.
 
 [[Categoria:Internet]]
+[[Categoria:Modifica in corso]]
