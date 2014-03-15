@@ -11,8 +11,7 @@ Il plugin Flash è diventato essenziale per la corretta visualizzazione di molti
 Il plugin Flash può essere installato anche tramite [https://github.com/leamas/lpf lpf], che sta per LocalPackageFactory, disponibile nei repository [[RPMFusion]]. Da terminale è sufficiente eseguire
  # yum install lpf-flash-plugin
  # lpf update flash-plugin
-L'esecuzione di lpf creerà un pacchetto rpm locale e provvederà alla sua installazione.
-
+L'esecuzione di lpf creerà un pacchetto rpm locale e provvederà alla sua installazione.<br>
 
 ==Verifica Flash Plugin==
 Per verificare la presenza o meno del plugin Flash, basta digitare nella barra degli indirizzi del proprio browser:
