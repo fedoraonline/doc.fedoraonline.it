@@ -31,7 +31,7 @@ Per iniziare la costruzione e la creazione del pacchetto skype si può lanciare 
 L'esecuzione di lpf creerà un pacchetto rpm locale e provvederà alla sua installazione.
 
 
-<!-- non sempre funzionante e non utile. è qui solo per cronologia storica.
+<!-- script non sempre funzionante. è qui solo per cronologia storica.
 questo testo non è visibile.
 
 == Aggiornamento ==
