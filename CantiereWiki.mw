@@ -59,17 +59,19 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Rilettore
 ! Data
 ! Stato
+
 <!--{{RiletturaArticolo|fonte=-|articolo=-|autore=-|rilettore=-|data=-|stato=-}} tabella base-->
 <!--
 {{RiletturaArticolo|fonte=-|articolo=Netinstall:_installazione_Fedora_da_rete|autore=AlbertoChiusole|rilettore=?|data=10/1/2014|stato=DaFare}}
 
-esempio di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarmi come si fa ;) ~bebo
+questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarsi come si fa in caso sia vuota la lista ;) ~bebo
 -->
+
 {{RiletturaArticolo|fonte=-|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|rilettore=-|data=14/02/2014|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Convenzioni_di_scrittura|autore=/|rilettore=/|data=14/03/2014|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Flash_plugin|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
+<!--{{RiletturaArticolo|fonte=-|articolo=Flash_plugin|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Skype_repo|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Installare_e_configurare_Virtualbox|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
+{{RiletturaArticolo|fonte=-|articolo=Installare_e_configurare_Virtualbox|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}-->
 |}
 
 == Articoli in corso di aggiornamento ==
