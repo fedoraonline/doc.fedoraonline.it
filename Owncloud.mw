@@ -1,0 +1,86 @@
+==Introduzione==
+Owncloud è un software per la creazione di un sistema cloud personale. Di seguito, la guida per l'installazione del software lato server.
+
+==Installazione==
+
+ # yum install owncloud
+===Configurazione certificato SSL===
+affinché le comunicazioni tra host e server siano crittografate, occorre generare una chiave ed un certificato
+
+ # yum install crypto-utils
+
+ # genkey ''hostname''
+
+Rispondere no alla domanda "Would you like to send a Certificate Request (CSR) to a Certificate Authority (CA)?" 
+
+Affinché il servizio httpd possa utilizzare SSL, vanno installate le dovute dipendenze
+ # yum install mod_ssl openssl
+ed apportate le seguenti modifiche a
+ /etc/httpd/conf.d/ssl.conf
+mettendo in fondo
+
+ SSLCertificateFile /etc/pki/tls/certs/hostname.crt
+ SSLCertificateKeyFile /etc/pki/tls/private/hostname.key
+
+
+Per forzare l'utilizzo di SSL nel server Owncloud:
+ # nano /etc/owncloud/config.php
+e modificare la voce ''(facendo attenzione alla virgola finale)''
+ 'forcessl' => false,
+in
+ 'forcessl' => true,
+
+poi aprire nel browser (ignorando i warning circa il certificato di sicurezza non firmato da terze parti)
+ localhost/owncloud
+e creare l'account amministratore
+
+==Garantire l'accesso remoto al server==
+===Configurazione del firewall===
+
+ # firewall-cmd --list-all-zones | grep active
+nel nostro caso
+ public (default, active)
+quindi utilizzeremo la zona public e i seguenti comandi per abilitare l'accesso al servizio http e https
+
+ # firewall-cmd --permanent --zone=public --add-service=http
+ # firewall-cmd --permanent --zone=public --add-service=https
+ # systemctl restart firewalld
+
+===Configurazione permessi Apache===
+Occorre configurare Apache affinché consenta l'accesso a host remoti
+
+modificare
+ /etc/httpd/conf.d/owncloud.conf
+in tal maniera:
+    <IfModule mod_authz_core.c>
+    # Apache 2.4
+    #Require local
+    Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+    # Apache 2.2
+    Order Deny,Allow
+    #Deny from all
+    #Allow from 127.0.0.1
+    #Allow from ::1
+    Allow from all
+    </IfModule>
+
+===Configurazione indirizzi IP esposti===
+Infine occorre impostare nel file di configurazione
+ /etc/owncloud/config.php
+alla voce
+ array (
+    0 => 'localhost',
+  )
+gli indirizzi IP con il quale il server verrà esposto all'esterno (sia LAN che WAN). Un esempio di configurazione con indirizzi IP LAN e WAN é:
+ array (
+    0 => 'localhost',
+    1 => '192.168.1.100',
+    2 => '200.100.1.100',
+  )
+
+==Bibliografia==
+*[http://docs.fedoraproject.org/en-US/Fedora/15/html/Deployment_Guide/ch-Web_Servers.html#s2-apache-mod_ssl Fedora Deployment_Guide: Setting Up an SSL Server]
+*[http://docs.fedoraproject.org/en-US/Fedora/14/html/Deployment_Guide/s1-apache-mod_ssl.html Fedora Deployment_Guide: Setting Up an SSL Server]
+*[https://fedoraproject.org/wiki/OwnCloud#Setup_owncloud Fedora Wiki: Setup Owncloud]
