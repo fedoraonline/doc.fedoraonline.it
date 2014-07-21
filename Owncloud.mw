@@ -1,28 +1,14 @@
-{{Autore|GermanoMassullo}}
 ==Introduzione==
-Owncloud è un software per la creazione di un sistema cloud personale.<br>
-Di seguito, la guida per l'installazione del software lato server su Fedora.
+Owncloud è un software per la creazione di un sistema cloud personale. Di seguito, la guida per l'installazione del software lato server.
 
 ==Installazione==
-Per installare il software, basta semplicemente uno:
- # yum install owncloud
 
+ # yum install owncloud
 ===Configurazione certificato SSL===
 affinché le comunicazioni tra host e server siano crittografate, occorre generare una chiave ed un certificato
 
  # yum install crypto-utils
 
-<!--
-
-
-
-spiegare meglio quell'hostname sottostante. Bisogna indicare il nome di dominio del server su cui ci si interfaccerà, giusto?
-http://docs.fedoraproject.org/en-US/Fedora/15/html/Deployment_Guide/ch-Web_Servers.html#s3-apache-mod_ssl-genkey
-
-
-
-
--->
  # genkey ''hostname''
 
 Rispondere no alla domanda "Would you like to send a Certificate Request (CSR) to a Certificate Authority (CA)?" 
@@ -36,6 +22,7 @@ mettendo in fondo
  SSLCertificateFile /etc/pki/tls/certs/hostname.crt
  SSLCertificateKeyFile /etc/pki/tls/private/hostname.key
 
+
 Per forzare l'utilizzo di SSL nel server Owncloud:
  # nano /etc/owncloud/config.php
 e modificare la voce ''(facendo attenzione alla virgola finale)''
@@ -43,13 +30,10 @@ e modificare la voce ''(facendo attenzione alla virgola finale)''
 in
  'forcessl' => true,
 
-Per creare l'account amministratore di Owncloud inserire nel browser (ignorando i warning circa il certificato di sicurezza non firmato da terze parti)
+poi aprire nel browser (ignorando i warning circa il certificato di sicurezza non firmato da terze parti)
  localhost/owncloud
+e creare l'account amministratore
 
-In caso di problemi di accesso riavviare il servizio Apache e tentare nuovamente
- systemctl restart httpd
-
-Nella schermata di creazione dell'utente amministratore, c'è la possibilità di scegliere il motore database: SQLite, MySQL, PostgreSQL. In server con più di un utente Owncloud si raccomanda di non utilizzare SQLite. Per maggiori dettagli [http://doc.owncloud.org/server/6.0/admin_manual/configuration/configuration_database.html: consultare la documentazione ufficiale]
 ==Garantire l'accesso remoto al server==
 ===Configurazione del firewall===
 
@@ -82,9 +66,21 @@ in tal maniera:
     Allow from all
     </IfModule>
 
+===Configurazione indirizzi IP esposti===
+Infine occorre impostare nel file di configurazione
+ /etc/owncloud/config.php
+alla voce
+ array (
+    0 => 'localhost',
+  )
+gli indirizzi IP con il quale il server verrà esposto all'esterno (sia LAN che WAN). Un esempio di configurazione con indirizzi IP LAN e WAN é:
+ array (
+    0 => 'localhost',
+    1 => '192.168.1.100',
+    2 => '200.100.1.100',
+  )
 
 ==Bibliografia==
 *[http://docs.fedoraproject.org/en-US/Fedora/15/html/Deployment_Guide/ch-Web_Servers.html#s2-apache-mod_ssl Fedora Deployment_Guide: Setting Up an SSL Server]
+*[http://docs.fedoraproject.org/en-US/Fedora/14/html/Deployment_Guide/s1-apache-mod_ssl.html Fedora Deployment_Guide: Setting Up an SSL Server]
 *[https://fedoraproject.org/wiki/OwnCloud#Setup_owncloud Fedora Wiki: Setup Owncloud]
-
-[[Categoria:Rete e Server]]
