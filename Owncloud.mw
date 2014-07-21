@@ -13,6 +13,7 @@ affinché le comunicazioni tra host e server siano crittografate, occorre genera
 
 Rispondere no alla domanda "Would you like to send a Certificate Request (CSR) to a Certificate Authority (CA)?" 
 
+
 Affinché il servizio httpd possa utilizzare SSL, vanno installate le dovute dipendenze
  # yum install mod_ssl openssl
 ed apportate le seguenti modifiche a
@@ -30,9 +31,10 @@ e modificare la voce ''(facendo attenzione alla virgola finale)''
 in
  'forcessl' => true,
 
-poi aprire nel browser (ignorando i warning circa il certificato di sicurezza non firmato da terze parti)
+
+Per creare l'account amministratore di Owncloud inserire nel browser (ignorando i warning circa il certificato di sicurezza non firmato da terze parti)
  localhost/owncloud
-e creare l'account amministratore
+
 In caso di problemi di accesso riavviare il servizio Apache e tentare nuovamente
  systemctl restart httpd
 
