@@ -67,12 +67,14 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarsi come si fa in caso sia vuota la lista ;) ~bebo
 -->
 
-{{RiletturaArticolo|fonte=-|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|rilettore=-|data=14/02/2014|stato=DaFare}}
 <!--{{RiletturaArticolo|fonte=-|articolo=Flash_plugin|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Skype_repo|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Installare_e_configurare_Virtualbox|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}-->
+
+{{RiletturaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|rilettore=/|data=14/02/2014|stato=DaFare}}
 {{RiletturaArticolo|articolo=Owncloud|autore=GermanoMassullo|rilettore=/|data=21/07/2014|stato=DaFare}}
 {{RiletturaArticolo|articolo=ClamAV|autore=AlessandroBugliazzini|rilettore=/|data=11/08/2014|stato=DaFare}}
+{{RiletturaArticolo|articolo=Ekiga|autore=AlbertoChiusole|rilettore=/|data=21/08/2014|stato=DaFare}}
 |}
 
 == Articoli in corso di aggiornamento ==
@@ -92,14 +94,14 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 <!--{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}} esempio.. -->
-{{ModificaArticolo|articolo=Ekiga|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
-{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
-{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=InCorso}}
+{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}} <!-- ##### cambiare alcune guide con alcune più usate. -->
+{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}} <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository -->
 {{ModificaArticolo|articolo=:Chromium|autore=NicolaPoli|responsabile=LuigiSabotti|data=23/01/2014|stato=InCorso}}
 {{ModificaArticolo|articolo=:Installazione Driver NVidia|autore=/|responsabile=? (vedi proposte in ML)|data=14/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html -->
 |}
+
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
 
 ==Note finali==
