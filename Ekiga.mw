@@ -1,16 +1,26 @@
-{{InCorso|autore=NomeAutore}}
 == Introduzione ==
 
-Con questo articolo si vuole dare delle indicazioni esaurienti sull'installazione ed il setup di Ekiga 3.2.7 (stable, release note) su Fedora; dato che si è alla ricerca di software alternativo a Skype, si spera di poter essere d'aiuto a coloro che vogliono utilizzare software e servizi Voip liberi.
+Con questo articolo si vuole dare delle indicazioni esaurienti sull'installazione ed il setup di Ekiga su Fedora; dato che si è alla ricerca di software alternativo a Skype, si spera di poter essere d'aiuto a coloro che vogliono utilizzare software e servizi Voip liberi ed open-source.
 
 == Installazione ==
 
 === Via Yum ===
-L'installazione dai repository Fedora risulta essere molto semplice; nei repo è presente la versione 3.2.7-4 (maggio 2011):
+L'installazione dai repository Fedora risulta essere molto semplice; nei repo è presente la versione 4.0.1-6 (agosto 2014):
 
- $ su -c yum install ekiga alsa-lib alsa-utils sox inotify-tools zenity
+ # yum install ekiga
+<!-- erano presenti anche questi pacchetti:
+   alsa-lib alsa-utils sox inotify-tools zenity
+ma non credo servano. eventualmente basta rollbackarli
+-->
+
 === Dai sorgenti ===
-Di seguito la compilazione dei sorgenti della [http://ftp.gnome.org/pub/gnome/sources/ekiga/3.2/ versione 3.2.6] effettuata su Fedora 14 32bit (su Fedora 15 ci sono alcuni problemi per la compilazione, probabilmente legati alla versione dei pacchetti OPAL / PTLIB, tuttavia la versione 3.3.0 nei repo Fedora 15 sembra funzionare).<br>
+{{suggerimento|Si consiglia di effettuare sempre l'installazione dai repository ufficiali fedora, per avere sempre il pacchetto il più aggiornato e sicuro possibile.
+<br>La compilazione tramite sorgenti potrebbe subire variazioni; verificare la procedura corretta all'interno del file ''INSTALL'' del pacchetto scaricato.
+}}
+
+<br>
+
+Di seguito viene illustrata la compilazione dei sorgenti della [http://ftp.gnome.org/pub/gnome/sources/ekiga/3.2/ versione 3.2.6] effettuata su Fedora 14 32bit (su Fedora 15 ci sono alcuni problemi per la compilazione, probabilmente legati alla versione dei pacchetti OPAL / PTLIB, tuttavia la versione 3.3.0 nei repo Fedora 15 sembra funzionare).<br>
 Installazione tool e librerie di sviluppo:
 
  # yum groupinstall 'Librerie di sviluppo' 'Strumenti di sviluppo'
@@ -55,9 +65,10 @@ Una volta compilato, installalo:
 
 [[Image:Ekiga.png|right|thumb|150px|La schermata di Ekiga.]]
 Per poter utilizzare Ekiga bisogna registrare un proprio account: [https://www.ekiga.net/?page=register registrazione]<br>
-Una volta ottenuto, configurao il tuo account su Ekiga come nell'immagine assicurati che il tuo indirizzo venga registrato.
+Una volta ottenuto e configurato il tuo account su Ekiga come nell'immagine, assicurati che il tuo indirizzo venga registrato.
 [[Image:Ekiga_account.png|left|thumb|200px|Creazione dell'account.]]
 
+<br>
 ==Test di chiamata==
 
 Ekiga.net predispone dei numeri di chiamata per testare la propria configurazione; ecco i principali:
@@ -68,6 +79,7 @@ Ekiga.net predispone dei numeri di chiamata per testare la propria configurazion
 * ''sip:501xxxx@ekiga.net'' Room pubbliche (x = 0 a 9)
 * ''sip:5011122@ekiga.net'' Conference room francese 1122
 
+<br>
 == Troubleshooting ==
 
 ===Problemi con la connessione (NAT router)===
