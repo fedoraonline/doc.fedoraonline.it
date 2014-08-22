@@ -18,8 +18,6 @@ ma non credo servano. eventualmente basta rollbackarli
 <br>La compilazione tramite sorgenti potrebbe subire variazioni; verificare la procedura corretta all'interno del file ''INSTALL'' del pacchetto scaricato.
 }}
 
-<br>
-
 Di seguito viene illustrata la compilazione dei sorgenti della [http://ftp.gnome.org/pub/gnome/sources/ekiga/3.2/ versione 3.2.6] effettuata su Fedora 14 32bit (su Fedora 15 ci sono alcuni problemi per la compilazione, probabilmente legati alla versione dei pacchetti OPAL / PTLIB, tuttavia la versione 3.3.0 nei repo Fedora 15 sembra funzionare).<br>
 Installazione tool e librerie di sviluppo:
 
@@ -115,4 +113,3 @@ Il proprio account Ekiga.net può essere usato anche con altri client. [http://w
 * [http://ekiga.net Ekiga.net]
 
 [[Categoria:Internet]]
-[[Categoria:Modifica in corso]]
