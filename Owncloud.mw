@@ -83,7 +83,6 @@ gli indirizzi IP con il quale il server verrà esposto all'esterno (sia LAN che 
 
 ==Bibliografia==
 *[http://docs.fedoraproject.org/en-US/Fedora/15/html/Deployment_Guide/ch-Web_Servers.html#s2-apache-mod_ssl Fedora Deployment_Guide: Setting Up an SSL Server]
-*[http://docs.fedoraproject.org/en-US/Fedora/14/html/Deployment_Guide/s1-apache-mod_ssl.html Fedora Deployment_Guide: Setting Up an SSL Server]
 *[https://fedoraproject.org/wiki/OwnCloud#Setup_owncloud Fedora Wiki: Setup Owncloud]
 
 [[Categoria: Scrittura in corso]]
