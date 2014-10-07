@@ -42,6 +42,7 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
 {{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
 {{AggiungiArticolo|fonte=-|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|stato=InCorso}}
+{{AggiungiArticolo|fonte=-|articolo=Backup con rsync|autore=SimoneDresti|stato=Terminato}}
 |}
 
 == Rilettura in corso ==
