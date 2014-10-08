@@ -16,14 +16,14 @@ Il comando per effettuare il backup della propria home ''$HOME'' e salvarlo nell
 dove le opzioni ''-aAX'' permettono di preservare completamente la struttura della ''$HOME'', ''-v'' è la modalità ''verbose'' e ''-z'' comprime i file durante il trasferimento.
 
 Un aspetto interessante di ''rsync'' consiste nel fatto che le sucessive esecuzioni andranno ad aggiornare unicamente i file che sono stati modificati. I file obsoleti non più presenti nella ''$HOME'', possono essere cancellati aggiungendo l'opzione ''--delete''
- $ rsync --delete -aAXvz $HOME /destinazione/del/backup
+ $ rsync --delete -aAXvz $HOME /destinazione/
 
 Rsync può essere usato connettendosi via ssh ad un server remoto specificando la porta tramite l'opzione ''-p''
- $ rsync -aAXvz -e ssh $HOME user_remoto@host_remoto:/destinazione/remota/del/backup
- $ rsync -aAXvz -e "ssh -p 22" $HOME user_remoto@host_remoto:/destinazione/remota/del/backup
+ $ rsync -aAXvz -e ssh $HOME user_remoto@host_remoto:/destinazione/remota/
+ $ rsync -aAXvz -e "ssh -p 22" $HOME user_remoto@host_remoto:/destinazione/remota/
 
 Per ripristinare il backup sarà sufficente invertire sorgente e destinazione
- $ rsync -aAXvz /sorgente/del/backup $HOME
+ $ rsync -aAXvz /sorgente/ $HOME
 
 == Riferimenti ==
 * [http://rsync.samba.org/ Sito ufficiale]
