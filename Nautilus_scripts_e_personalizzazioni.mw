@@ -167,7 +167,7 @@ Di seguito si vogliono citare alcuni ''programmi'' che permettono di configurare
 : Il comando ''touch'' crea un file vuoto dal nome ''Bash Script'' nella cartella ''Modelli'' (o ''Templates'') della ''home'' dell'utente in uso; le virgolette servono a permettere lo spazio nel nome attribuito al file; in alternativa si potrebbe scrivere:
 
 :* Nel caso si abbiano le cartelle in italiano:
- $ cd ~/Modellida no
+ $ cd ~/Modelli
  $ touch Bash\ script
 :* Nel caso si abbiano le cartelle in inglese:
  $ cd ~/Templates
