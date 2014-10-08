@@ -69,19 +69,6 @@ in tal maniera:
     Allow from all
     </IfModule>
 
-===Configurazione indirizzi IP esposti===
-Infine occorre impostare nel file di configurazione
- /etc/owncloud/config.php
-alla voce
- array (
-    0 => 'localhost',
-  )
-gli indirizzi IP con il quale il server verrà esposto all'esterno (sia LAN che WAN). Un esempio di configurazione con indirizzi IP LAN e WAN é:
- array (
-    0 => 'localhost',
-    1 => '192.168.1.100',
-    2 => '200.100.1.100',
-  )
 
 ==Bibliografia==
 *[http://docs.fedoraproject.org/en-US/Fedora/15/html/Deployment_Guide/ch-Web_Servers.html#s2-apache-mod_ssl Fedora Deployment_Guide: Setting Up an SSL Server]
