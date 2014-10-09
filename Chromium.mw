@@ -5,7 +5,8 @@ Chromium è un progetto per lo sviluppo di un moderno browser open source basato
 Dal codice sorgente di Chromium viene prodotto anche [https://www.google.com/chrome/index.html?hl=it "google chrome"], che ne è quasi del tutto identico, ma con aggiunte di software non libero (flash player, un visualizzatore di pdf integrato, video e audio tags html5 per ACC e MP3).
 
 Per [http://ostatic.com/blog/making-projects-easier-to-package-why-chromium-isnt-in-fedora vari motivi] Chromium non può essere ancora incluso nei repository ufficiali Fedora.<br />
-Per installarlo si può quindi procedere alla compilazione [http://www.chromium.org/Home dei sorgenti], o utilizzare il repository offerto da Tom 'spot' Callaway. 
+
+Per installarlo si può quindi procedere alla compilazione [http://www.chromium.org/Home dei sorgenti], oppure utilizzare fino a '''Fedora 19''' il repository offerto da Tom 'spot' Callaway, mentre per '''Fedora 20''' e successive versioni utilizzare il repo http://copr.fedoraproject.org/coprs/churchyard/chromium-russianfedora-tested/ mantenuto da Miro Hrončok.
 
 Questa guida spiega come installare Chromium seguendo la seconda modalità.
 
