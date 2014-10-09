@@ -4,7 +4,7 @@ __TOC__
 == Introduzione ==
 
 [http://copr.fedoraproject.org/coprs/churchyard/chromium-russianfedora-tested/ churchyard-chromium-russianfedora-tested] fa parte del repository di terze parti Copr.<br/>
-L'installazione è necessaria se si sceglie di utilizzare il browser open source Chromium.<br />
+L'installazione è necessaria se si sceglie di utilizzare il browser open source Chromium su Fedora 20 e versioni successive.<br />
 
 
 == Installazione Repository ==
