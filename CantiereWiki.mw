@@ -85,6 +85,7 @@ questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i
 
 {{RiletturaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|rilettore=/|data=14/02/2014|stato=DaFare}}
 {{RiletturaArticolo|articolo=Owncloud|autore=GermanoMassullo|rilettore=SimoneDresti|data=21/07/2014|stato=Terminato}}
+{{RiletturaArticolo|fonte=-|articolo=Chromium|autore=NicolaPoli|rilettore=/|data=09/10/2014|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Churchyard-chromium-russianfedora-tested|autore=AlessandroBugliazzini|rilettore=/|data=09/10/2014|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Backup con rsync|autore=SimoneDresti|rilettore=/|data=09/10/2014|stato=DaFare}}
 |}
@@ -106,13 +107,17 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 <!--{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}} esempio.. -->
-{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}} <!-- ##### cambiare alcune guide con alcune più usate. -->
-{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}} <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository -->
-{{ModificaArticolo|articolo=:Chromium|autore=NicolaPoli|responsabile=AlessandroBugliazzini|data=09/10/2014|stato=InCorso}}
+{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}}
+<!-- ##### cambiare alcune guide con alcune più usate.
+-->
+{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}}
+<!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository
+-->
 {{ModificaArticolo|articolo=:Installazione Driver NVidia|autore=/|responsabile=? (vedi proposte in ML)|data=14/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html -->
 {{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=?|data=08/10/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|data=09/10/2014|stato=DaFare}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
