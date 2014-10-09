@@ -96,7 +96,7 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 <!--{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}} esempio.. -->
 {{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}} <!-- ##### cambiare alcune guide con alcune più usate. -->
 {{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}} <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository -->
-{{ModificaArticolo|articolo=:Chromium|autore=NicolaPoli|responsabile=LuigiSabotti|data=23/01/2014|stato=InCorso}}
+{{ModificaArticolo|articolo=:Chromium|autore=NicolaPoli|responsabile=AlessandroBugliazzini|data=09/10/2014|stato=InCorso}}
 {{ModificaArticolo|articolo=:Installazione Driver NVidia|autore=/|responsabile=? (vedi proposte in ML)|data=14/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html -->
