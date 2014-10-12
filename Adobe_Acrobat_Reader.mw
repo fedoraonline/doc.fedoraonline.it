@@ -1,8 +1,8 @@
 {{InCorso|autore=SimoneDresti}}
 __NOTOC__
 
-== Introduzione ==
 {{Warning|Adobe ha abbandonato il supporto di Acrobat Reader per i sistemi Gnu/Linux. La seguente procedura è sconsigliata perché installa una versione obsoleta risalente al 2013 disponibile solo per 32bit. Alcune alternative libere sono disponibili [http://pdfreaders.org/ qui].}}
+== Introduzione ==
 Adobe Reader è un programma gratuito della Adobe Systems che permette di visualizzare e stampare i documenti in formato PDF. Di seguito verrà esposta la procedura d'installazione di Acrobat Reader su Fedora.
 == Installazione ==
 Innanzitutto bisogna provvedere a scaricare l'ultima versione di Adobe Reader disponibile per linux direttamente dal [https://get.adobe.com/it/reader/ sito ufficiale]. È inoltre possibile scaricarlo direttamente da [http://get.adobe.com/it/reader/download/?installer=Reader_8.1.7_Italian_for_Linux_%28.rpm%29&standalone=1 qui] per la versione in italiano o [http://get.adobe.com/it/reader/download/?installer=Reader_9.5.5_English_for_Linux_(.rpm)&standalone=1 qui] per la versione in inglese. Quest'ultima è consigliata perché è disponibile una versione più aggiornata.
