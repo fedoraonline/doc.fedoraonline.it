@@ -50,9 +50,10 @@ Questo comando installerà tutti i pacchetti dell'installazione di default Fedor
 
 Se si preferisce rimanere sul generale, creando quindi una propria "versione", usare: "--product=nonproduct".<br />
 
-È altamente consiglio eseguire l'aggiornamento a Fedora 21 attraverso la Rete, esempio per workstation:
+È altamente consigliato eseguire l'aggiornamento a Fedora 21 attraverso la Rete, esempio per workstation:
 
- # fedup --network 21 --product=workstation 
+ # fedup --network 21 --product=workstation
+
 === Aggiornamento attraverso la Rete ===
 
 Questa è sicuramente l'opzione più consigliata, perchè permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
