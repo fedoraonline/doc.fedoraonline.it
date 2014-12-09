@@ -34,6 +34,25 @@ Una volta riavviato ci si rilogga nel terminale come root per proseguire.
 
 Esistono tre opzioni per procedere con l'aggiornamento: attraverso la Rete, un'immagine ISO oppure da un altro device.
 
+
+{{Warning|Importanti cambiamenti per l'aggiornamento a Fedora 21.}}
+
+=== Aggiornamento per Fedora 21 ===
+Fedora 21 è stata divisa in 3 categorie di prodotti (<'''PRODUCT'''>):<br />
+'''Workstation''': per l’utente Desktop<br />
+'''Server''': per l'utente Server<br />
+'''Cloud''': con varie immagini, sia per Cloud privati che pubblici<br />
+<br />
+
+È stata quindi aggiunta una nuova opzione a FedUp: "--product=<'''PRODUCT'''>"<br />
+Per aggiornare alla nuova Fedora Workstation, usare: "--product=workstation"
+Questo comando installerà tutti i pacchetti dell'installazione di default Fedora 21 Workstation; includendo anche GNOME 3 come Desktop Enviroment, in aggiunta a quelli già installati.
+
+Se si preferisce rimanere sul generale, creando quindi una propria "versione", usare: "--product=nonproduct".<br />
+
+È altamente consiglio eseguire l'aggiornamento a Fedora 21 attraverso la Rete, esempio per workstation:
+
+ # fedup --network 21 --product=workstation 
 === Aggiornamento attraverso la Rete ===
 
 Questa è sicuramente l'opzione più consigliata, perchè permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
