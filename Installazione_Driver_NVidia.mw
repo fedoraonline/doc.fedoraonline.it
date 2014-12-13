@@ -29,9 +29,9 @@ Per sicurezza dare un:
 Occorre installare il pacchetto sviluppo del kernel:
  # yum install kernel-devel
 Si può quindi installare il driver NVidia, facendo attenzione alla giusta versione del driver a seconda della scheda video utilizzata:
-*serie 8 o superiore
+*serie 400 o superiore
  # yum install akmod-nvidia kmod-nvidia
-*serie 6 o 7
+*serie da 6 a 300
  # yum install akmod-nvidia-304xx kmod-nvidia-304xx
 *serie 5
  # yum install akmod-nvidia-173xx kmod-nvidia-173xx
