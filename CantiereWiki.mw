@@ -113,7 +113,6 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 {{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}}
 <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository
 -->
-{{ModificaArticolo|articolo=:Installazione Driver NVidia|autore=/|responsabile=? (vedi proposte in ML)|data=14/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html -->
 {{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=?|data=08/10/2014|stato=DaFare}}
