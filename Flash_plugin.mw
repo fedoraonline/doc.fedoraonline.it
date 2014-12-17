@@ -13,7 +13,7 @@ Il plugin Flash può essere installato anche tramite [https://github.com/leamas/
 
 Per installarlo da terminale è sufficiente eseguire:
  # yum install lpf-flash-plugin
-Per iniziare la costruzione e la creazione del pacchetto skype si può lanciare il programma dal menù dell'utente, oppure da terminale con:
+Per iniziare la costruzione e la creazione del pacchetto flash si può lanciare il programma dal menù dell'utente, oppure da terminale con:
  # lpf update flash-plugin
 L'esecuzione di lpf creerà un pacchetto rpm locale e provvederà alla sua installazione.<br>
 
