@@ -32,7 +32,9 @@ Occorre installare il pacchetto sviluppo del kernel:
 Si può quindi installare il driver NVidia, facendo attenzione alla giusta versione del driver a seconda della scheda video utilizzata:
 *serie 400 o superiore
  # yum install akmod-nvidia kmod-nvidia
-*serie da 6 a 300
+*serie da 8 a 300
+ # yum install akmod-nvidia-340xx kmod-nvidia-340xx
+*serie da 6 a 7
  # yum install akmod-nvidia-304xx kmod-nvidia-304xx
 *serie 5
  # yum install akmod-nvidia-173xx kmod-nvidia-173xx
