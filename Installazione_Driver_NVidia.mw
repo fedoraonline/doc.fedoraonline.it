@@ -15,7 +15,8 @@ con [http://en.wikipedia.org/wiki/Comparison_of_Nvidia_graphics_processing_units
 
 Esistono infatti quattro driver diversi, a seconda della serie della scheda video:
 *'''Serie 400 o superiori''', cioè schede video prodotte indicativamente a partire dal 2010 (GeForce 4xx, 5xx, 6xx, 7xx, 8xx, 9xx): '''ultima versione del driver''';
-*'''Serie da 6 e 300''', cioè schede video prodotte indicativamente dal 2004 al 2009 (GeForce 6xxx, 7xxx, 8xxx, 9xxx, 1xx, 2xx, 3xx): '''driver versione 304''';
+*'''Serie da 8 e 300''', cioè schede video prodotte indicativamente dal 2006 al 2009 (GeForce 8xxx, 9xxx, 1xx, 2xx, 3xx): '''driver versione 340''';
+*'''Serie da 6 e 7''', cioè schede video prodotte indicativamente dal 2004 al 2006 (GeForce 6xxx, 7xxx): '''driver versione 304''';
 *'''Serie 5''', cioè schede video prodotte indicativamente nel 2003 (GeForce FX 5xxx): '''driver versione 173''';
 *'''Serie da 2 a 4''', cioè schede video prodotte indicativamente dal 2000 al 2002: '''driver versione 96'''.
 
