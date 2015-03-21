@@ -1,15 +1,15 @@
-{{InCorso|autore=AlessandroBugliazzini}}
+{{Autore|AlessandroBugliazzini}}
 
 __TOC__
 == Introduzione ==
 
-[http://copr.fedoraproject.org/coprs/churchyard/chromium-russianfedora-tested/ churchyard-chromium-russianfedora-tested] fa parte del repository di terze parti Copr.<br/>
-L'installazione è necessaria se si sceglie di utilizzare il browser open source Chromium su Fedora 20 e versioni successive.<br />
+[http://copr.fedoraproject.org/coprs/churchyard/chromium-russianfedora-tested/ Churchyard-chromium-russianfedora-tested] è un repository di software di terze parti reso disponibile dal fedoraproject attraverso il servizio [http://copr.fedoraproject.org/coprs/ Copr].<br/>
+L'installazione è necessaria se si intende utilizzare il browser open-source Chromium su Fedora 20 o versioni successive.<br />
 
 
-== Installazione Repository ==
+== Installazione Manuale Repository ==
 
-Creare un file ''/etc/yum.repos.d/churchyard-chromium-russianfedora-tested.repo'' digitando da root:
+Creare un file '''/etc/yum.repos.d/churchyard-chromium-russianfedora-tested.repo''' e modificarlo (ad es. con un software di editing testuale come ''nano'', oppure altri simili) digitando da root:
 
  # nano /etc/yum.repos.d/churchyard-chromium-russianfedora-tested.repo
 
@@ -24,17 +24,20 @@ inserire al suo interno le seguenti righe:
 
 Salvare e chiudere.<br />
 
-Si può evitare questo passaggio recuperando il file direttamente dal repo, così:
- # yum copr enable churchyard/chromium-russianfedora-tested
+== Installazione Automatica Repository ==
 
-ricordando di avere il pacchetto yum-plugin-cop già installato <br />
+Si può evitare il passaggio della scrittura manuale recuperando il file direttamente dal repo attraverso il plugin di yum '''yum-plugin-copr''', oppure tramite ''dnf'' (l'alternativa a yum) che dispone già del plugin adatto.<br>
+Attraverso yum basta quindi dare un:
+ # yum copr enable churchyard/chromium-russianfedora-tested
+ricordando di avere il suddetto pacchetto yum-plugin-copr già installato.<br>
+Se si preferisce utilizzare dnf basta semplicemente sostituire yum con ''dnf'' e il gioco è fatto!<br />
 
 
 ==Installazione Chromium==
-Per installare il browser di casa google attenersi alla relativa [[Chromium|documentazione]].
+Per installare il browser di casa google attenersi alla relativa [[Chromium|guida nella documentazione]].
 
 == Riferimenti ==
-* http://fedoraproject.org/wiki/Chromium
+* [http://copr.fedoraproject.org/coprs/ Homepage del servizio Copr].
+* Homepage del software open-source [http://fedoraproject.org/wiki/Chromium Chromium].
 
 [[Categoria:Repository]]
-[[Categoria:Scrittura in corso]]
