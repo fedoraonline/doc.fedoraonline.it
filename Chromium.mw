@@ -1,31 +1,29 @@
-{{InCorso|autore=NicolaPoli}}
+{{Autore|NicolaPoli}}
 
 == Introduzione ==
 Chromium è un progetto per lo sviluppo di un moderno browser open source basato su webkit.<br />
-Dal codice sorgente di Chromium viene prodotto anche [https://www.google.com/chrome/index.html?hl=it "google chrome"], che ne è quasi del tutto identico, ma con aggiunte di software non libero (flash player, un visualizzatore di pdf integrato, video e audio tags html5 per ACC e MP3).
+Dal codice sorgente di Chromium viene prodotto anche "[https://www.google.com/chrome/index.html?hl=it google chrome]", che è quasi del tutto identico, ma aggiunge qualche porzione di software non libero (flash player, un visualizzatore di pdf integrato, video e audio tags html5 per ACC e MP3).
 
 Per [http://ostatic.com/blog/making-projects-easier-to-package-why-chromium-isnt-in-fedora vari motivi] Chromium non può essere ancora incluso nei repository ufficiali Fedora.<br />
 
-Per installarlo si può quindi procedere alla compilazione [http://www.chromium.org/Home dei sorgenti], oppure utilizzare fino a '''Fedora 19''' il repository offerto da Tom 'spot' Callaway, mentre per '''Fedora 20''' e successive versioni utilizzare il repo churchyard-chromium-russianfedora-tested mantenuto da Miro Hrončok.
+Per installarlo si può quindi procedere alla compilazione dei [https://code.google.com/p/chromium/wiki/LinuxBuildInstructions sorgenti], oppure utilizzare fino a ''Fedora 19'' il repository '''Fedora-Chromium''' messo a disposizione da Tom 'spot' Callaway, mentre per ''Fedora 20'' e versioni successive basterà utilizzare il repo '''churchyard-chromium-russianfedora-tested''' mantenuto da Miro Hrončok.
 
-Questa guida spiega come installare Chromium seguendo la seconda modalità.
 
 == Installazione ==
-{{Nota|Prerequisito|Per l'installazione su '''Fedora 19''' e versioni precedenti è necessario installare e configurare preventivamente il repository di [[Fedora-Chromium|Fedora-Chromium]].
-Per Per l'installazione su '''Fedora 20''' e versioni successive è necessario installare e configurare preventivamente il repository di [[Churchyard-chromium-russianfedora-tested]].}}
+{{Nota|Prerequisito: installazione del repository adatto alla versione|Per l'installazione su '''Fedora 19''' e versioni precedenti è necessario installare e configurare preventivamente il repository [[Fedora-Chromium|Fedora-Chromium]].
+Per l'installazione su '''Fedora 20''' e versioni successive è necessario installare e configurare preventivamente il repository [[Churchyard-chromium-russianfedora-tested]].}}
 
-L'installazione è semplice:
+Una volta configurato uno dei suddetti repository, l'installazione è semplice:
 
  # yum install chromium
 
 
-Per utilizzare il plugin ''Adobe Flash Player'' con Chromium seguire [http://doc.fedoraonline.it/Flash_plugin#Installazione_su_Chromium questa guida].<br />
-Gli altri plugin non richiedono configurazioni aggiuntive.
+== Configurazione plugin ==
+Per utilizzare il plugin ''Adobe Flash Player'' con Chromium seguire la [[Flash_plugin#Installazione_su_Chromium|guida specifica]].<br />
+Gli altri plugin non richiedono configurazioni aggiuntive particolari.
 
 == Riferimenti ==
-* http://fedoraproject.org/wiki/Chromium
-* http://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome
+* Homepage del progetto [http://fedoraproject.org/wiki/Chromium Chromium]
+* Una [http://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome pagina di confronto] tra google chrome e chromium.
 
 [[Categoria:Internet]]
-[[Categoria:Scrittura in corso]]
-[[Categoria:Modifica in corso]]
