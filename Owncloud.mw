@@ -1,15 +1,28 @@
 {{Autore|GermanoMassullo}}
 ==Introduzione==
-Owncloud è un software per la creazione di un sistema cloud personale. Di seguito, la guida per l'installazione del software lato server.
+Owncloud è un software per la creazione di un sistema cloud personale.<br>
+Di seguito, la guida per l'installazione del software lato server su Fedora.
 
 ==Installazione==
-
+Per installare il software, basta semplicemente uno:
  # yum install owncloud
+
 ===Configurazione certificato SSL===
 affinché le comunicazioni tra host e server siano crittografate, occorre generare una chiave ed un certificato
 
  # yum install crypto-utils
 
+<!--
+
+
+
+spiegare meglio quell'hostname sottostante. Bisogna indicare il nome di dominio del server su cui ci si interfaccerà, giusto?
+http://docs.fedoraproject.org/en-US/Fedora/15/html/Deployment_Guide/ch-Web_Servers.html#s3-apache-mod_ssl-genkey
+
+
+
+
+-->
  # genkey ''hostname''
 
 Rispondere no alla domanda "Would you like to send a Certificate Request (CSR) to a Certificate Authority (CA)?" 
