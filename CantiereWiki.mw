@@ -67,9 +67,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 
 
 {{RiletturaArticolo|fonte=-|articolo=-|autore=-|rilettore=-|data=-|stato=-}}
-              tabella base -->
 
-<!--
 {{RiletturaArticolo|fonte=-|articolo=Netinstall:_installazione_Fedora_da_rete|autore=AlbertoChiusole|rilettore=?|data=10/1/2014|stato=DaFare}}
 
 questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarsi come si fa in caso sia vuota la lista ;) ~bebo
@@ -79,14 +77,7 @@ questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i
 
 -->
 
-<!--{{RiletturaArticolo|fonte=-|articolo=Flash_plugin|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Skype_repo|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Installare_e_configurare_Virtualbox|autore=/|rilettore=/|data=16/03/2014||stato=DaFare}}-->
-
-{{RiletturaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|rilettore=/|data=14/02/2014|stato=DaFare}}
 {{RiletturaArticolo|articolo=Owncloud|autore=GermanoMassullo|rilettore=SimoneDresti|data=21/07/2014|stato=Terminato}}
-{{RiletturaArticolo|fonte=-|articolo=Chromium|autore=NicolaPoli|rilettore=/|data=09/10/2014|stato=DaFare}}
-{{RiletturaArticolo|fonte=-|articolo=Churchyard-chromium-russianfedora-tested|autore=AlessandroBugliazzini|rilettore=/|data=09/10/2014|stato=DaFare}}
 {{RiletturaArticolo|fonte=-|articolo=Backup con rsync|autore=SimoneDresti|rilettore=AlessandroBugliazzini|data=09/10/2014|stato=Terminato}}
 |}
 
@@ -107,24 +98,26 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 ! Data
 ! Stato
 <!--{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}} esempio.. -->
-{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}}
-<!-- ##### cambiare alcune guide con alcune più usate.
+{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=AlbertoChiusole|data=25/10/2013|stato=DaFare}} <!-- ##### cambiare alcune guide con alcune più usate. 
 -->
-{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=/|data=25/10/2013|stato=DaFare}}
-<!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository
+{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=AlbertoChiusole|data=25/10/2013|stato=DaFare}} <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository
 -->
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html -->
+{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html
+-->
 {{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=?|data=08/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|data=09/10/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|responsabile=/|data=14/02/2014|stato=InCorso}}
 |}
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
 
+
+
 ==Note finali==
 
-Quando un articolo è pronto per essere pubblicato, il rilettore lo comunica in Mailing List, dopodichè verrà inserito online.
-Solo i componenti dello staff hanno la competenza per togliere l'articolo dagli elenchi di CantiereWiki dopo la sua pubblicazione.
+Quando un articolo è pronto per essere pubblicato, il rilettore lo comunica in Mailing List, dopodiché verrà inserito online.<br>
+'''Solo i componenti dello staff hanno la competenza per togliere l'articolo dagli elenchi di CantiereWiki dopo la sua pubblicazione.'''
 
 Buon lavoro a tutti e grazie per la collaborazione.
 
