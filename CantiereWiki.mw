@@ -67,7 +67,6 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 
 
 {{RiletturaArticolo|fonte=-|articolo=-|autore=-|rilettore=-|data=-|stato=-}}
-
 {{RiletturaArticolo|fonte=-|articolo=Netinstall:_installazione_Fedora_da_rete|autore=AlbertoChiusole|rilettore=?|data=10/1/2014|stato=DaFare}}
 
 questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarsi come si fa in caso sia vuota la lista ;) ~bebo
@@ -76,8 +75,9 @@ questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i
 
 
 -->
-
+<!-- XXXXXXXXXXXXXXXX inserire il prossimo articolo da rileggere al posto di quello qui sottostante (togliendolo dal commento ovviamente) 
 {{RiletturaArticolo|fonte=-|articolo=Backup con rsync|autore=SimoneDresti|rilettore=AlessandroBugliazzini|data=09/10/2014|stato=Terminato}}
+-->
 |}
 
 == Articoli in corso di aggiornamento ==
@@ -101,10 +101,10 @@ Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> se
 -->
 {{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=AlbertoChiusole|data=25/10/2013|stato=DaFare}} <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository
 -->
-{{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=?|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html
+{{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=/|data=22/02/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=/|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html
 -->
-{{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=?|data=08/10/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=/|data=08/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|data=09/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|responsabile=/|data=14/02/2014|stato=InCorso}}
 |}
