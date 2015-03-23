@@ -1,4 +1,3 @@
-{{InCorso|autore=SimoneDresti}}
 {{Autore|SimoneDresti}}
 ==Introduzione==
 La perdita dei dati del proprio computer o di qualsiasi supporto di memorizzazione è un evento che non sempre può essere preventivato. Per evitare questi spiacevoli inconvenienti è importante eseguire un backup periodico di tutti i documenti importanti.
@@ -11,7 +10,7 @@ Rsync è presente nei repository ufficiali di fedora e può essere installato co
 ==Backup==
 Rsync è un potente strumento di sincronizzazione dati che può essere usato come alternativa a ''cp'' ed offre la possibilità di creare il backup dei propri documenti con semplici comandi. Di seguito verranno esposti alcuni esempi che soddisfano le necessità più comuni.
 
-Il comando per effettuare il backup della propria home ''$HOME'' e salvarlo nella cartella ''/destinazione/'' è  
+Il comando per effettuare il backup della propria home (definita in bash dalla variabile '''$HOME''') e salvarlo nella cartella ''/destinazione/'' è  
  $ rsync -aAXvz $HOME /destinazione/
 dove le opzioni ''-aAX'' permettono di preservare completamente la struttura della ''$HOME'', ''-v'' è la modalità ''verbose'' e ''-z'' comprime i file durante il trasferimento.
 
@@ -25,10 +24,10 @@ Rsync può essere usato connettendosi via ssh ad un server remoto specificando l
 Per ripristinare il backup sarà sufficente invertire sorgente e destinazione
  $ rsync -aAXvz /sorgente/ $HOME
 
+
 == Riferimenti ==
 * [http://rsync.samba.org/ Sito ufficiale]
 * [http://linux.die.net/man/1/rsync Man page]
 * [https://wiki.archlinux.org/index.php/Full_system_backup_with_rsync Documentazione Archlinux]
 
-[[:Categoria:Sistema]]
-[[Categoria:Scrittura in corso]]
+[[Categoria:Sistema]]
