@@ -113,4 +113,7 @@ Il dettaglio di queste informazioni si riferisce a:
 * Montato su = punto di mount del file system
 
 Anche in questo caso (come per la memoria) le grandezze sono espresse in blocchi da 1 kilobyte, per renderne più semplice la lettura possiamo utilizzare il comando df con l'opzione '''-h'''.
+
+Il comando '''du''', digitato all'interno di una directory, ci fornisce un report con l'elenco dei file contenuti all'interno della directory dove ci troviamo e, soprattutto, la dimensione di ogni singolo file. Anche per il comando du, come per df, possiamo utilizzare l'opzione '''-h'''. Oltre a questa però, abbiamo un'altra opzione interessante, ovvero '''-s'''. Con quest'ultima, verrà omesso l'elenco dei file e verrà restituito solo il valore totale delle dimensioni dei file contenuti nella directory.
+
 [[:Categoria:Scrittura in corso]]
