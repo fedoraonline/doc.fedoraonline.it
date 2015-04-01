@@ -28,4 +28,29 @@ Il comando con queste opzioni ci rilascia le seguenti informazioni:
     14 ?        S      0:00 [kdevtmpfs]
     15 ?        S<     0:00 [netns]
 
+L’aggiunta dell’opzione u (ps –aux) al comando ps ci rilascia in output lo stesso elenco di processi ma con informazioni più dettagliate:
+* Tutte le informazioni rilasciate dalle opzioni –ax;
+* L’username dell’utente che ha generato il processo (USER);
+* La percentuale di cpu e memoria utilizzati da ogni singolo processo (%CPU e %MEM);
+* La memoria virtuale utilizzata espressa in kilobyte (VSZ);
+* La memoria fisica utilizzata espressa in kilobyte (RSS);
+* La data o l’ora in cui il processo si è avviato.
+
+ [draven@copernico ~]$ ps -aux
+ USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ root         1  0.0  0.5  26776  5760 ?        Ss   12:28   0:04 /usr/lib/systemd/systemd --switched-root --system --deserialize 19
+ root         2  0.0  0.0      0     0 ?        S    12:28   0:00 [kthreadd]
+ root         3  0.0  0.0      0     0 ?        S    12:28   0:01 [ksoftirqd/0]
+ root         5  0.0  0.0      0     0 ?        S<   12:28   0:00 [kworker/0:0H]
+ root         7  0.0  0.0      0     0 ?        S    12:28   0:00 [rcu_sched]
+ root         8  0.0  0.0      0     0 ?        S    12:28   0:00 [rcuos/0]
+ root         9  0.0  0.0      0     0 ?        S    12:28   0:00 [rcu_bh]
+ root        10  0.0  0.0      0     0 ?        S    12:28   0:00 [rcuob/0]
+ root        11  0.0  0.0      0     0 ?        S    12:28   0:00 [migration/0]
+ root        12  0.0  0.0      0     0 ?        S    12:28   0:00 [watchdog/0]
+ root        13  0.0  0.0      0     0 ?        S<   12:28   0:00 [khelper]
+ root        14  0.0  0.0      0     0 ?        S    12:28   0:00 [kdevtmpfs]
+ root        15  0.0  0.0      0     0 ?        S<   12:28   0:00 [netns]
+
+
 [[:Categoria:Scrittura in corso]]
