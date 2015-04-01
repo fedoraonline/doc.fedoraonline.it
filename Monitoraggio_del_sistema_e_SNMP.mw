@@ -116,4 +116,6 @@ Anche in questo caso (come per la memoria) le grandezze sono espresse in blocchi
 
 Il comando '''du''', digitato all'interno di una directory, ci fornisce un report con l'elenco dei file contenuti all'interno della directory dove ci troviamo e, soprattutto, la dimensione di ogni singolo file. Anche per il comando du, come per df, possiamo utilizzare l'opzione '''-h'''. Oltre a questa però, abbiamo un'altra opzione interessante, ovvero '''-s'''. Con quest'ultima, verrà omesso l'elenco dei file e verrà restituito solo il valore totale delle dimensioni dei file contenuti nella directory.
 
+==Informazioni sull'hardware==
+
 [[:Categoria:Scrittura in corso]]
