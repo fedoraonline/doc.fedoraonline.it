@@ -1,3 +1,6 @@
 ==Introduzione==
 In questa guida vedremo come tenere sotto controllo le risorse del nostro sistema, sia con gli strumenti di cui Fedora (e linux in generale) dispone di default, ma anche con un tool aggiuntivo "graficamente" più accattivante!
+==Controllo dei processi==
+Il comando '''ps''' ci da la possibilità di visualizzare informazioni riguardanti i processi in esecuzione. Questo comando produce in output una lista statica, ovvero un elenco dei processi in esecuzione nel momento in cui lanciamo il comando. Mentre invece se vogliamo che il nostro output sia una lista costantemente aggiornata di processi dobbiamo affidarci al comando '''top''', che vedremo tra poco.
+
 [[:Categoria:Scrittura in corso]]
