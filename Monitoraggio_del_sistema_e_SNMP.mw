@@ -118,9 +118,9 @@ Il comando '''du''', digitato all'interno di una directory, ci fornisce un repor
 
 ==Informazioni sull'hardware==
 I comandi che il sistema ci mette a disposizione per ottenere informazioni sull'hardware sono i seguenti:
-* lspci = fornisce un elenco di tutti i componenti PCI presenti nel sistema
-* lspcmcia = fornisce un elenco di tutti i componenti PCMCIA presenti nel sistema
-* lsusb = fornisce informazioni sui bus usb utilizzati e sui device che vi sono collegati
-* lscpu = fornisce informazioni riguardanti il processore presente nel sistema (architettura, modello, cache, ecc.)
+* '''lspci''' = fornisce un elenco di tutti i componenti PCI presenti nel sistema
+* '''lspcmcia''' = fornisce un elenco di tutti i componenti PCMCIA presenti nel sistema
+* '''lsusb''' = fornisce informazioni sui bus usb utilizzati e sui device che vi sono collegati
+* '''lscpu''' = fornisce informazioni riguardanti il processore presente nel sistema (architettura, modello, cache, ecc.)
 
 [[:Categoria:Scrittura in corso]]
