@@ -92,5 +92,25 @@ Per controllare lo stato della memoria utilizziamo il comando '''free''', che ci
 
 I valori numerici riportati sono kilobytes, per una visualizzazione più vicina all'utente potremmo usare il comando free con l'attributo -m che ci darà le stesse informazioni ma espresse in megabytes.
 ==Controllo dell'hard disk==
-Per controllare il nostro hard disk possiamo farci aiutare da due comandi, '''df''' e '''du'''
+Per controllare il nostro hard disk possiamo farci aiutare da due comandi, '''df''' e '''du'''.
+Il comando '''df''' visualizza le informazioni riguardanti lo spazio utilizzato sull'hard disk di sistema:
+ [draven@copernico ~]$ df
+ File system                       1K-blocchi   Usati Disponib. Uso% Montato su
+ /dev/mapper/fedora_copernico-root    6751000 4439500   1945524  70% /
+ devtmpfs                              503844       0    503844   0% /dev
+ tmpfs                                 513156     252    512904   1% /dev/shm
+ tmpfs                                 513156     692    512464   1% /run
+ tmpfs                                 513156       0    513156   0% /sys/fs/cgroup
+ tmpfs                                 513156      96    513060   1% /tmp
+ /dev/sda1                             487652   96691    361265  22% /boot
+ tmpfs                                 102632      28    102604   1% /run/user/1000
+Il dettaglio di queste informazioni si riferisce a:
+* File System
+* 1K-blocchi = grandezza della partizione
+* Usati = quanto spazio è utilizzato
+* Disponib. = quanto spazio è ancora utilizzabile
+* Uso% = spazio utilizzato in percentuale
+* Montato su = punto di mount del file system
+
+Anche in questo caso (come per la memoria) le grandezze sono espresse in blocchi da 1 kilobyte, per renderne più semplice la lettura possiamo utilizzare il comando df con l'opzione '''-h'''.
 [[:Categoria:Scrittura in corso]]
