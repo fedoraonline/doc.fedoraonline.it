@@ -52,5 +52,10 @@ L’aggiunta dell’opzione u (ps –aux) al comando ps ci rilascia in output lo
  root        14  0.0  0.0      0     0 ?        S    12:28   0:00 [kdevtmpfs]
  root        15  0.0  0.0      0     0 ?        S<   12:28   0:00 [netns]
 
+Possiamo anche utilizzare il comando ps in combinazione con grep per controllare se è in esecuzione un determinato processo:
+
+ [draven@copernico ~]$ ps -ax | grep sshd
+
+Volendo avere in output una lista che sia, diciamo così, real time, dovremmo avvalerci del comando top. Questo comando però oltre a restituire l’elenco dei processi, ci da anche informazioni riguardanti il sistema in generale: l’uptime, l’utilizzo della cpu e della memoria e il numero totale dei processi in esecuzione
 
 [[:Categoria:Scrittura in corso]]
