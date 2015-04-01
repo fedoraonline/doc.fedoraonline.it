@@ -2,7 +2,9 @@
 In questa guida vedremo come tenere sotto controllo le risorse del nostro sistema, sia con gli strumenti di cui Fedora (e linux in generale) dispone di default, ma anche con un tool aggiuntivo "graficamente" più accattivante!
 ==Controllo dei processi==
 Il comando '''ps''' ci da la possibilità di visualizzare informazioni riguardanti i processi in esecuzione. Questo comando produce in output una lista statica, ovvero un elenco dei processi in esecuzione nel momento in cui lanciamo il comando. Mentre invece se vogliamo che il nostro output sia una lista costantemente aggiornata di processi dobbiamo affidarci al comando '''top''', che vedremo tra poco. Il modo più comune di utilizzare il comando ps è con le opzioni '''ax''':
+
  [draven@copernico ~]$ ps -ax
+
 Il comando con queste opzioni ci rilascia le seguenti informazioni:
 * L’elenco dei processi in esecuzione sul sistema, inclusi quelli generati da altri utenti;
 * L’id di ogni singolo processo (PID);
@@ -80,5 +82,13 @@ Volendo avere in output una lista che sia, diciamo così, real time, dovremmo av
     14 root      20   0       0      0      0 S  0,0  0,0   0:00.00 kdevtmpfs
     15 root       0 -20       0      0      0 S  0,0  0,0   0:00.00 netns
 
+==Controllo della memoria==
+Per controllare lo stato della memoria utilizziamo il comando '''free''', che ci dà i valori di ram utilizzata e libera. Questo comando visualizza informazioni riguardanti sia la memoria fisica che la swap.
 
+ [draven@copernico ~]$ free
+               total        used        free      shared  buff/cache   available
+ Mem:        1026312      604108       35344        1944      386860      382768
+ Swap:        839676       87444      752232
+
+I valori numerici riportati sono kilobytes, per una visualizzazione più vicina all'utente potremmo usare il comando free con l'attributo -m che ci darà le stesse informazioni ma espresse in megabytes.
 [[:Categoria:Scrittura in corso]]
