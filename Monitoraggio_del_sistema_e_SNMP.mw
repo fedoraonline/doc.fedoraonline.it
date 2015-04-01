@@ -91,4 +91,6 @@ Per controllare lo stato della memoria utilizziamo il comando '''free''', che ci
  Swap:        839676       87444      752232
 
 I valori numerici riportati sono kilobytes, per una visualizzazione più vicina all'utente potremmo usare il comando free con l'attributo -m che ci darà le stesse informazioni ma espresse in megabytes.
+==Controllo dell'hard disk==
+Per controllare il nostro hard disk possiamo farci aiutare da due comandi, '''df''' e '''du'''
 [[:Categoria:Scrittura in corso]]
