@@ -128,4 +128,7 @@ L''''SNMP''', al secolo '''Simple Network Management Protocol''', è un protocol
 
 La prima cosa che faremo sarà quindi installare due tools sulla nostra Fedora, che la renderanno sia un manager che un managed object. I tool sono rispettivamente '''MRTG''' e '''NET-SNMP'''. Il primo è un software che si occuperà di effettuare richieste snmp in locale e di generare delle pagine html contenenti dei grafici di andamento; il secondo è un demone che si metterà in ascolto sulla nostra Fedora in attesa di richieste provenienti dal manager (MRTG) tramite protocollo snmp. Installiamo questi tool con il seguente comando (ricordatevi che queste installazioni e configurazioni necessitano di permessi amministratore per poter essere eseguite):
 
+ [draven@copernico ~]$ yum install mrtg net-snmp net-snmp-utils
+
+
 [[:Categoria:Scrittura in corso]]
