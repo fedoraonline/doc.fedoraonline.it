@@ -123,4 +123,5 @@ I comandi che il sistema ci mette a disposizione per ottenere informazioni sull'
 * '''lsusb''' = fornisce informazioni sui bus usb utilizzati e sui device che vi sono collegati
 * '''lscpu''' = fornisce informazioni riguardanti il processore presente nel sistema (architettura, modello, cache, ecc.)
 
+==Monitoraggio con SNMP==
 [[:Categoria:Scrittura in corso]]
