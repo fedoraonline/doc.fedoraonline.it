@@ -6,5 +6,11 @@ Il comando '''ps''' ci da la possibilità di visualizzare informazioni riguardan
  [draven@copernico ~]$ ps -ax
 
 Il comando con queste opzioni ci rilascia le seguenti informazioni:
+* L’elenco dei processi in esecuzione sul sistema, inclusi quelli generati da altri utenti;
+* L’id di ogni singolo processo (PID);
+* Il terminale associato ad ogni singolo processo (TTY);
+* Lo stato di ogni singolo processo (STAT);
+* Da quanto tempo ogni singolo processo sta usando la CPU (TIME);
+* Il nome del file eseguibile che genera ogni singolo processo (COMMAND).
 
 [[:Categoria:Scrittura in corso]]
