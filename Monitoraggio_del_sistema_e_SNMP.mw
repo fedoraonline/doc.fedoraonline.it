@@ -117,5 +117,10 @@ Anche in questo caso (come per la memoria) le grandezze sono espresse in blocchi
 Il comando '''du''', digitato all'interno di una directory, ci fornisce un report con l'elenco dei file contenuti all'interno della directory dove ci troviamo e, soprattutto, la dimensione di ogni singolo file. Anche per il comando du, come per df, possiamo utilizzare l'opzione '''-h'''. Oltre a questa però, abbiamo un'altra opzione interessante, ovvero '''-s'''. Con quest'ultima, verrà omesso l'elenco dei file e verrà restituito solo il valore totale delle dimensioni dei file contenuti nella directory.
 
 ==Informazioni sull'hardware==
+I comandi che il sistema ci mette a disposizione per ottenere informazioni sull'hardware sono i seguenti:
+* lspci = fornisce un elenco di tutti i componenti PCI presenti nel sistema
+* lspcmcia = fornisce un elenco di tutti i componenti PCMCIA presenti nel sistema
+* lsusb = fornisce informazioni sui bus usb utilizzati e sui device che vi sono collegati
+* lscpu = fornisce informazioni riguardanti il processore presente nel sistema (architettura, modello, cache, ecc.)
 
 [[:Categoria:Scrittura in corso]]
