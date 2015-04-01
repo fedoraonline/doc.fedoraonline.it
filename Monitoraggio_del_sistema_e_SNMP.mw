@@ -13,4 +13,19 @@ Il comando con queste opzioni ci rilascia le seguenti informazioni:
 * Da quanto tempo ogni singolo processo sta usando la CPU (TIME);
 * Il nome del file eseguibile che genera ogni singolo processo (COMMAND).
 
+   PID TTY      STAT   TIME COMMAND
+     1 ?        Ss     0:04 /usr/lib/systemd/systemd --switched-root --system --deserialize 19
+     2 ?        S      0:00 [kthreadd]
+     3 ?        S      0:01 [ksoftirqd/0]
+     5 ?        S<     0:00 [kworker/0:0H]
+     7 ?        S      0:00 [rcu_sched]
+     8 ?        S      0:00 [rcuos/0]
+     9 ?        S      0:00 [rcu_bh]
+    10 ?        S      0:00 [rcuob/0]
+    11 ?        S      0:00 [migration/0]
+    12 ?        S      0:00 [watchdog/0]
+    13 ?        S<     0:00 [khelper]
+    14 ?        S      0:00 [kdevtmpfs]
+    15 ?        S<     0:00 [netns]
+
 [[:Categoria:Scrittura in corso]]
