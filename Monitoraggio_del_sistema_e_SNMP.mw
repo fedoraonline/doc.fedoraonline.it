@@ -124,4 +124,6 @@ I comandi che il sistema ci mette a disposizione per ottenere informazioni sull'
 * '''lscpu''' = fornisce informazioni riguardanti il processore presente nel sistema (architettura, modello, cache, ecc.)
 
 ==Monitoraggio con SNMP==
+L''''SNMP''', al secolo '''Simple Network Management Protocol''', è un protocollo di rete comunemente utilizzato per il monitoraggio di apparati di rete e di qualsiasi dispositivo che supporta il protocollo stesso. Il più delle volte il protocollo SNMP può essere definito come una tecnologia '''client-server''', nel senso che è concepito per funzionare con due componenti: un "'''manager'''", componente che effettua richieste snmp per ottenere informazioni e un "'''managed object'''", ovvero il device che deve essere monitorato. Ponendoci però l'obiettivo di monitorare il nostro sistema, nessuno ci vieta di implementare entrambi sullo stesso host, che da ora in poi chiameremo '''localhost''' (macchina locale, pc o workstation o server che sia).
+
 [[:Categoria:Scrittura in corso]]
