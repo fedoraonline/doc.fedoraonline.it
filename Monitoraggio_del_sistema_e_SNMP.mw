@@ -130,5 +130,20 @@ La prima cosa che faremo sarà quindi installare due tools sulla nostra Fedora, 
 
  [draven@copernico ~]$ yum install mrtg net-snmp net-snmp-utils
 
+Completata l'installazione, per prima cosa avviamo il demone snmp con il seguente comando:
+
+ [draven@copernico ~]$ service snmpd start
+
+A questo punto la nostra Fedora è ufficialmente un managed object. Continuiamo la nostra configurazione concentrandoci sul manager (MRTG), per far lavorare quest'ultimo dobbiamo generare un file di configurazione, tramite il seguente comando:
+
+ [draven@copernico ~]$ cfgmaker –global 'WorkDir: /var/www/mrtg' –output /etc/mrtg/mrtg.cfg public@localhost
+
+Vediamo cosa abbiamo scritto:
+* cfgmaker = richiamiamo il tool dell'MRTG che genera i file di configurazione
+* –global 'WorkDir: /var/www/mrtg' = definiamo una variabile globale WorkDir ovvero diciamo all'MRTG che la sua directory di lavoro per il salvataggio di pagine e files da ora in poi sarà /var/www/mrtg
+* –output /etc/mrtg/mrtg.cfg = definiamo il percorso e il nome del file di configurazione che stiamo creando
+* public@localhost = public è la community snmp che utilizzeremo e con localhost diciamo all'MRTG che dovrà "autointerrogarsi" in locale
+
+
 
 [[:Categoria:Scrittura in corso]]
