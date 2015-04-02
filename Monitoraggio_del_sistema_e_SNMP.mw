@@ -150,7 +150,23 @@ Tra le utils dell'snmp che abbiamo installato, c'è un '''snmpconf''' che ci fac
  
  Read in which (default = all):
 
-A questo punto la nostra Fedora è ufficialmente un managed object. Continuiamo la nostra configurazione concentrandoci sul manager (MRTG), per far lavorare quest'ultimo dobbiamo generare un file di configurazione, tramite il seguente comando:
+Elenco di seguito la sequenza da digitare per una configurazione minimale all'interno dei menu dell'snmpconf:
+* digitare all
+* digitare 2 (selezionare il file snmpd.conf)
+* digitare 1 (selezionare Access Control Setup)
+* digitare 3 (selezionare SNMPv1/SNMPv2c read-only access community name)
+* digitare public (il nome della community snmp)
+* digitare localhost (il nome host del managed object)
+* invio per non specificare restrizioni
+* digitare finished (per uscire dal sottomenu Access Control Setup)
+* digitare finished (per uscire dal menu di configurazione)
+* digitare quit (per uscire dal tool snmpconf)
+
+A questo punto la nostra Fedora è ufficialmente un managed object, possiamo accertarci di questo grazie al seguente comando:
+
+ [draven@copernico ~]$ snmpwalk -v2c -c public localhost system
+
+Continuiamo la nostra configurazione concentrandoci sul manager (MRTG), per far lavorare quest'ultimo dobbiamo generare un file di configurazione, tramite il seguente comando:
 
  [draven@copernico ~]$ cfgmaker –global 'WorkDir: /var/www/mrtg' –output /etc/mrtg/mrtg.cfg public@localhost
 
