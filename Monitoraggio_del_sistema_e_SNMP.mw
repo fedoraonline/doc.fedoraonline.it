@@ -134,6 +134,22 @@ Completata l'installazione, per prima cosa avviamo il demone snmp con il seguent
 
  [draven@copernico ~]$ service snmpd start
 
+Tra le utils dell'snmp che abbiamo installato, c'è un '''snmpconf''' che ci facilita la configurazione del protocollo tramite una procedura guidata:
+
+ [draven@copernico ~]$ snmpconf
+ The following installed configuration files were found:
+ 
+    1:  ./snmpd.conf
+    2:  /etc/snmp/snmpd.conf
+    3:  /etc/snmp/snmptrapd.conf 
+ 
+ Would you like me to read them in?  Their content will be merged with the
+ output files created by this session.
+ 
+ Valid answer examples: "all", "none","3","1,2,5"
+ 
+ Read in which (default = all):
+
 A questo punto la nostra Fedora è ufficialmente un managed object. Continuiamo la nostra configurazione concentrandoci sul manager (MRTG), per far lavorare quest'ultimo dobbiamo generare un file di configurazione, tramite il seguente comando:
 
  [draven@copernico ~]$ cfgmaker –global 'WorkDir: /var/www/mrtg' –output /etc/mrtg/mrtg.cfg public@localhost
