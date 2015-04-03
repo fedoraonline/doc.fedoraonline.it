@@ -235,5 +235,8 @@ Ma se vogliamo automatizzare il processo per fare in modo che ogni x minuti mrtg
 
  */5 * * * * root LANG=C LC_ALL=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg --lock-file /var/lock/mrtg/mrtg_l --confcache-file /var/lib/mrtg/mrtg.ok
 
+Qui di seguito potete vedere un esempio di grafico generato da mrtg:
+[[File:Esempiomrtg.png]]
+
 
 [[:Categoria:Scrittura in corso]]
