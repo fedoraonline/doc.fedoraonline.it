@@ -227,4 +227,13 @@ Completato il file di configurazione mrtg dobbiamo generare una pagina html inde
 NOTA: ''Come avrete notato la directory dove stiamo generando le nostre pagine html con i grafici di andamento si trova sotto il percorso /var/www/, dove questo percorso è generalmente utilizzato come directory root di un server web. Ora c'è da dire che le pagine generate da mrtg sono in formato html e quindi non hanno bisogno di essere interpretate da un server web ma possono essere visualizzate localmente con un semplice browser. l'implementazione di un server web ci darebbe la possibilità di puntare ai grafici mrtg anche da altri host della stessa rete, in questo caso tramite l'indirizzo <nowiki>http://ip-fedora/mrtg/index.html</nowiki>. Chiaramente non è questa la guida adatta per dilungarci nell'installazione e la configurazione di un server web.''
 ----
 
+A questo punto non ci resta che far lavorare il nostro mrtg, il comando per avviare mrtg è il seguente:
+
+ [draven@copernico ~]$ env LANG=C /bin/mrtg /etc/mrtg/mrtg.cfg
+
+Ma se vogliamo automatizzare il processo per fare in modo che ogni x minuti mrtg richieda informazioni al demone snmp, possiamo semplicemente dare in pasto a '''cron''' la seguente stringa, il comando per editare cron e schedulare un processo è '''crontab -e'''.
+
+ */5 * * * * root LANG=C LC_ALL=C /usr/bin/mrtg /etc/mrtg/mrtg.cfg --lock-file /var/lock/mrtg/mrtg_l --confcache-file /var/lib/mrtg/mrtg.ok
+
+
 [[:Categoria:Scrittura in corso]]
