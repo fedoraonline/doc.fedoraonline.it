@@ -223,7 +223,7 @@ Il cfgmaker ci ha quindi creato un file di configurazione nel percorso specifica
  # SetEnv[localhost_1]: MRTG_INT_IP="127.0.0.1" MRTG_INT_DESCR="lo"
  # MaxBytes[localhost_1]: 1250000
  # Title[localhost_1]: Traffic Analysis for 1 -- copernico
- # PageTop[localhost_1]: <h1>Traffic Analysis for 1 -- copernico</h1>
+  # PageTop[localhost_1]: <h1>Traffic Analysis for 1 -- copernico</h1>
  #               <div id="sysdetails">
  #                       <table>
  #                               <tr>
