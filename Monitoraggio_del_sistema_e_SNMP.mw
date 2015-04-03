@@ -213,47 +213,5 @@ Il cfgmaker ci ha quindi creato un file di configurazione nel percorso specifica
  ######################################################################
 * La seconda parte è completamente commentata perchè puramente informativa e deriva dal fatto che nel momento in cui il cfgmaker crea il file fa una prima richiesta snmp al managed object per sapere: Nome Host, Descrizione, un contatto di riferimento e la location del sistema.
 
-* La terza parte (la più importante) è quella relativa a tutto ciò che di quel dato sistema vogliamo monitorare. Di default, nella suddetta prima richiesta snmp, l'mrtg prende informazioni riguardanti solo le interfacce di rete, tra poco vedremo come implementare anche il controllo di cpu e ram. Quindi in un sistema più o meno classico, con una sola scheda di rete, i pezzi di configurazione saranno due, uno per la scheda di rete e uno per l'interfaccia di loopback. Quest'ultimo pezzo lo troveremo interamente commentato, questo perchè il creatore del pacchetto mrtg ha stabilito di default che probabilmente a nessuno interessi monitorare il traffico locale! Ecco come si presenta la configurazione delle interfacce all'interno del file:
-
- ### Interface 1 >> Descr: 'lo' | Name: 'lo' | Ip: '127.0.0.1' | Eth: 'No Ethernet Id' ###
- ### The following interface is commented out because:
- ### * it is a Software Loopback interface
- #
- # Target[localhost_1]: 1:public@localhost:
- # SetEnv[localhost_1]: MRTG_INT_IP="127.0.0.1" MRTG_INT_DESCR="lo"
- # MaxBytes[localhost_1]: 1250000
- # Title[localhost_1]: Traffic Analysis for 1 -- copernico
- # PageTop[localhost_1]: <h1>Traffic Analysis for 1 -- copernico</h1>
- #               <div id="sysdetails">
- #                       <table>
- #                               <tr>
- #                                       <td>System:</td>
- #                                       <td>copernico in Unknown (edit /etc/snmp/snmpd.conf)</td>
- #                               </tr>
- #                               <tr>
- #                                       <td>Maintainer:</td>
- #                                       <td>Root &lt;root@localhost&gt; (configure /etc/snmp/snmp.local.conf)</td>
- #                               </tr>
- #                               <tr>
- #                                       <td>Description:</td>
- #                                       <td>lo  </td>
- #                               </tr>
- #                               <tr>
- #                                       <td>ifType:</td>
- #                                       <td>softwareLoopback (24)</td>
- #                               </tr>
- #                               <tr>
- #                                       <td>ifName:</td>
- #                                       <td>lo</td>
- #                               </tr>
- #                               <tr>
- #                                       <td>Max Speed:</td>
- #                                       <td>1250.0 kBytes/s</td>
- #                               </tr>
- #                               <tr>
- #                                       <td>Ip:</td>
- #                                       <td>127.0.0.1 (localhost.localdomain)</td>
- #                               </tr>
- #                       </table>
- #               </div>
+* La terza parte (la più importante) è quella relativa a tutto ciò che di quel dato sistema vogliamo monitorare. Di default, nella suddetta prima richiesta snmp, l'mrtg prende informazioni riguardanti solo le interfacce di rete, tra poco vedremo come implementare anche il controllo di cpu e ram. Quindi in un sistema più o meno classico, con una sola scheda di rete, i pezzi di configurazione saranno due, uno per la scheda di rete e uno per l'interfaccia di loopback. Quest'ultimo pezzo lo troveremo interamente commentato, questo perchè il creatore del pacchetto mrtg ha stabilito di default che probabilmente a nessuno interessi monitorare il traffico locale! Potete scaricare un esempio di configurazione delle interfacce da qui 
 [[:Categoria:Scrittura in corso]]
