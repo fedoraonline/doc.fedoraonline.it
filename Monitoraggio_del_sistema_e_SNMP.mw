@@ -215,5 +215,6 @@ Il cfgmaker ci ha quindi creato un file di configurazione nel percorso specifica
 
 * La terza parte (la più importante) è quella relativa a tutto ciò che di quel dato sistema vogliamo monitorare. Di default, nella suddetta prima richiesta snmp, l'mrtg prende informazioni riguardanti solo le interfacce di rete, tra poco vedremo come implementare anche il controllo di cpu e ram. Quindi in un sistema più o meno classico, con una sola scheda di rete, i pezzi di configurazione saranno due, uno per la scheda di rete e uno per l'interfaccia di loopback. Quest'ultimo pezzo lo troveremo interamente commentato, questo perchè il creatore del pacchetto mrtg ha stabilito di default che probabilmente a nessuno interessi monitorare il traffico locale! Ecco come si presenta la configurazione delle interfacce all'interno del file:
 [[File:Configurazionemrtg.png]]
+
 Naturalmente tutte le informazioni descrittive possono essere modificate a piacere per rendere migliore il dettaglio della pagina html generata da mrtg
 [[:Categoria:Scrittura in corso]]
