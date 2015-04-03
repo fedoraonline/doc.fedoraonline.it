@@ -223,9 +223,8 @@ Completato il file di configurazione mrtg dobbiamo generare una pagina html inde
 
  indexmaker -output=/var/www/mrtg/index.html /etc/mrtg/mrtg.cfg
 
-
 ----
-NOTA: Come avrete notato la directory dove stiamo generando le nostre pagine html con i grafici di andamento si trova sotto il percorso /var/www/, dove questo percorso è generalmente utilizzato come directory root di un server web. Ora c'è da dire che le pagine generate da mrtg sono in formato html e quindi non hanno bisogno di essere interpretate da un server web ma possono essere visualizzate localmente con un semplice browser. l'implementazione di un server web ci darebbe la possibilità di puntare ai grafici mrtg anche da altri host della stessa rete, in questo caso tramite l'indirizzo http://ip-fedora/mrtg/index.html. Chiaramente non è questa la guida adatta per dilungarci nell'installazione e la configurazione di un server web.
+NOTA: ''Come avrete notato la directory dove stiamo generando le nostre pagine html con i grafici di andamento si trova sotto il percorso /var/www/, dove questo percorso è generalmente utilizzato come directory root di un server web. Ora c'è da dire che le pagine generate da mrtg sono in formato html e quindi non hanno bisogno di essere interpretate da un server web ma possono essere visualizzate localmente con un semplice browser. l'implementazione di un server web ci darebbe la possibilità di puntare ai grafici mrtg anche da altri host della stessa rete, in questo caso tramite l'indirizzo http://ip-fedora/mrtg/index.html. Chiaramente non è questa la guida adatta per dilungarci nell'installazione e la configurazione di un server web.''
 ----
 
 [[:Categoria:Scrittura in corso]]
