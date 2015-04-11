@@ -12,108 +12,150 @@ Qui sotto riportiamo la tabella esplicativa per una immediata identificazione vi
 | '''Da fare'''
 | {{StatoDaFare}} | Da fare
 |}
-Abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente, da "Da fare" ad "In corso" ed infine a "Terminato".<br />
+Abbiamo creato un template che faciliti la modifica dello stato che deve passare, progressivamente, da ''"Da fare"'' ad ''"In corso"'' ed infine a ''"Terminato"''.<br />
 Questi tre stati, si ripetono per le altrettante tre fasi della pubblicazione dell'articolo (Stesura, Modifica, Rilettura), anche se la modifica è utile anche per altri scopi (ad esempio l'aggiornamento di un file preesistente).
 
 == Articoli in corso di stesura ==
 
 Dopo aver proposto l'articolo alla Mailing List dei redattori, come ben specificato alla pagina [[Contribuisci#Registrati_alla_Mailing_List_del_Wiki|"contribuisci"]], e dopo essere stato accettato, occorre inserirlo in questa stessa pagina utilizzando il template '''''<tt>AggiungiArticolo</tt>''''' (l'aggiunta va fatta selezionando il tasto modifica di questa sezione oppure [http://doc.fedoraonline.it/index.php?title=CantiereWiki&action=edit&section=2 cliccando qua] e inserendo il template in fondo alla lista degli articoli già inseriti) che si presenta così:
- <nowiki>{{AggiungiArticolo|fonte=[url titolo]<br />[url2 titolo2]|articolo=Titolo della Guida|autore=NomeWiki|stato=stato}}</nowiki>
+
+ <nowiki>{{AggiungiArticolo|articolo=Titolo della Guida|autore=NomeWiki|fonte=[url titolo_del_link]<br/>varie altre cose|note=testo utile|data=data|stato=stato}}</nowiki>
 dove (tutti separati dal pipe (il simbolo '''|''')):
-*'''<nowiki>{{</nowiki>''' è il markup per il template e non è da modificare;
+*'''<nowiki>{{</nowiki>''' è il markup che indica l'inizio del template e non è da modificare;
 *'''AggiungiArticolo''' è il nome del template da richiamare, anch'esso da non modificare;
-*'''fonte=[url titolo]<nowiki><br /></nowiki> [url2 titolo2]''' gli eventuali indirizzo web della fonte da cui quell'articolo è scaturito (se più di uno, il <nowiki><br /></nowiki> vi permette di inserirli su più righe); se non ce ne fossero basta non inserire nulla dopo ''fonte='' che invece deve essere sempre presente;
 *'''articolo=Titolo della Guida''' dove "Titolo della Guida" deve essere sostituito con il titolo che avete scelto per la vostra guida. Ciò creerà il link rosso che andrete a selezionare per cominciare la redazione dell'articolo.
 *'''autore=NomeWiki''' dovrete andare a sostituire NomeWiki con il vostro nome inteso come ''NomeCognome'', in relazione al vostro login.
+*'''<nowiki>fonte=[url titolo_del_link]<br/>[url2 altro_link]</nowiki>''' gli eventuali indirizzi web della fonte da cui quell'articolo è scaturito (se più di uno, il tag <nowiki><br/></nowiki> vi permette di inserirli su più righe);
+*'''note=testo utile''' spazio per inserire del testo, o dei link, utili agli altri rilettori per "orientarsi";
 *'''stato=stato''' dovrete definire l'avanzamento dei lavori inserendo (al posto di "stato") uno di questi tre paramentri obbligatori:
 **''DaFare''
 **''InCorso''
 **''Terminato''
 *'''<nowiki>}}</nowiki>''' è il markup di chiusura del template.
-Salvando la pagina, l'articolo verrà inserito tra quelli in stesura, evidenziato con il link rosso. Con un click sul link si aprirà la pagina di creazione/modifica per l'inizio dei lavori.<br />
-Ricordarsi di scrivere in fondo alla guida il markup <nowiki>[[:Categoria:Scrittura in corso]]</nowiki> (con i ":" davanti a "Categoria") come unica categoria. Non si deve inserire la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.<br />
+
+
+Salvando la pagina, l'articolo verrà inserito tra quelli in stesura, evidenziato con il link rosso se la pagina non è stata ancora creata. Con un click sul link si aprirà la pagina di creazione/modifica per l'inizio dei lavori.<br />
+Ricordarsi di scrivere in fondo alla guida il markup '''<nowiki>[[Categoria:Scrittura in corso]]</nowiki>''' <!--(con i ":" davanti a "Categoria")--> come unica categoria. Non si deve inserire la categoria definitiva di appartenenza, in quanto l'articolo non è stato ancora completato.<br />
 In questa sezione non ci saranno articoli in riscrittura, non occorre aggiornare le guide obsolete (in tutto o in parte), sono da riscrivere ex-novo; tranne in rari casi, concordati comunque in Mailing List da inserire nella categoria [[CantiereWiki#Articoli_in_corso_di_aggiornamento|articoli in corso di aggiornamento]].<br />
 Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' occorrerà inserirlo tra le [[CantiereWiki#Rilettura_in_corso|riletture in corso]].
+
 {| {{TabellaBase}}
-! Fonte
 ! Articolo
 ! Autore
+! Fonte
+! Note, riferimenti, link
+! Data
 ! Stato
-{{AggiungiArticolo|fonte=-|articolo=Installazione Fedora da live CD|autore=?|stato=DaFare}}
-{{AggiungiArticolo|fonte=-|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|stato=InCorso}}
-{{AggiungiArticolo|fonte=-|articolo=Installazione Server FTP con VSFTPD|autore=AndreaMalfatti|stato=DaFare}}
-{{AggiungiArticolo|fonte=|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|stato=Terminato}}
+
+{{AggiungiArticolo|articolo=Installazione Fedora da live CD|autore=/|data=-|stato=DaFare}}
+{{AggiungiArticolo|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|data=-|stato=InCorso}}
+{{AggiungiArticolo|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|data=-|stato=InCorso}}
+{{AggiungiArticolo|articolo=Installazione Server FTP con VSFTPD|autore=AndreaMalfatti|data=-|stato=DaFare}}
+{{AggiungiArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|data=03/04/2015|stato=Terminato}}
 |}
+
+''NOTA: il tag '''fonte''' o '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
 
 == Rilettura in corso ==
 
 Come nella precedente sezione, anche qui occorre utilizzare un template, '''''<tt>RiletturaArticolo</tt>''''':
- <nowiki>{{RiletturaArticolo|articolo=Titolo della guida|autore=NomeWiki|rilettore=NomeWiki|stato=Stato}}</nowiki>
+ <nowiki>{{RiletturaArticolo|articolo=Titolo della guida|autore=NomeWiki|rilettore=NomeWiki|note=testo utile|data=data|stato=Stato}}</nowiki>
 
-Aggiungere il markup: <nowiki>[[:Categoria:Rilettura in corso]]</nowiki> senza rimuovere la categoria di appartenenza originaria della guida.<br />
+
+Aggiungere il markup: '''<nowiki>[[Categoria:Rilettura in corso]]</nowiki>''' senza rimuovere la categoria di appartenenza originaria della guida.<br />
 Gli articoli in questa sezione sono quelli che dovranno essere approvati dai rilettori per la pubblicazione (previa comunicazione in Mailing List), oppure rigettate inviando una  mail che '''ne riporta i motivi''' all'autore, oppure passate alla sezione [[CantiereWiki#Articoli_in_aggiornamento| articoli in aggiornamento]] per una revisione anche in questo caso con una mail all'autore '''che ne riporti le motivazioni'''.<br />
-Qualsiasi redattore può prendersi in carico una o più guide modificando lo stato, sostituendo cioè il punto interrogativo con il proprio ''NomeWiki'' (di login).
+Qualsiasi redattore può prendersi in carico una o più guide modificando lo stato, sostituendo cioè la barra con il proprio ''NomeWiki'' (di login).
 
 {| {{TabellaBase}}
 ! Articolo
 ! Autore
 ! Rilettore
+! Note, riferimenti, link
 ! Data
 ! Stato
 
-<!-- -----------------------------------------------------------------
-
-
-
-{{RiletturaArticolo|fonte=-|articolo=-|autore=-|rilettore=-|data=-|stato=-}}
-{{RiletturaArticolo|fonte=-|articolo=Netinstall:_installazione_Fedora_da_rete|autore=AlbertoChiusole|rilettore=?|data=10/1/2014|stato=DaFare}}
-
-questi sono esempi di inserimento.. Lasciare entrambi, anche quello sopra, per i posteri, o meglio, per ricordarsi come si fa in caso sia vuota la lista ;) ~bebo
----------------------------------------------------------------------------
-
-
-
--->
-<!-- XXXXXXXXXXXXXXXX inserire il prossimo articolo da rileggere al posto di quello qui sottostante (togliendolo dal commento ovviamente) 
-{{RiletturaArticolo|fonte=-|articolo=Backup con rsync|autore=SimoneDresti|rilettore=AlessandroBugliazzini|data=09/10/2014|stato=Terminato}}
--->
+<!-- ############# inserire il template per la prossima guida da rileggere al posto di questo commento ############# -->
 |}
+
+''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
 
 == Articoli in corso di aggiornamento ==
 
-Qualora l'articolo fosse in stato di "Terminato" nella sezione [[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]] ma dovesse essere stato ritenuto "non pubblicabile" in fase di rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]), esso verrà inserito in questa sezione dai redattori che provvederanno ad inviare una mail all'autore per richiedere il completamento o, la correzione per quanto rilevato. La medesima comunicazione dovrà essere inviata anche per conoscenza alla Mailing List.<br />
+Qualora l'articolo fosse in stato di "Terminato" nella sezione [[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]] ma dovesse essere stato ritenuto "non pubblicabile" in fase di rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]), esso verrà inserito in questa sezione dai redattori che provvederanno ad inviare una mail all'autore per richiedere il completamento o, la correzione per quanto rilevato.
+<br>La medesima comunicazione dovrà essere inviata anche '''''per conoscenza''''' alla Mailing List.<br />
 L'autore potrà quindi trovare qui il proprio articolo pronto per essere modificato/corretto per poi venire riproposto alla pubblicazione, cioè reinserito nella sezione di rilettura.<br />
 Come detto in precedenza, in questa sezione trovano posto anche quelle guide che in Mailing List si è stabilito che possono essere aggiornate anzichè riscritte.<br />
 Occorre utilizzare il template '''''<tt>ModificaArticolo</tt>''''' (per la spiegazione del markup si rimanda a quanto precisato in [[CantiereWiki#Articoli_in_corso_di_stesura |articoli in corso di stesura]]) :
- <nowiki>{{ModificaArticolo|articolo=Titolo della guida|autore=NomeWiki|responsabile=NomeWiki|data=data|stato=stato}}</nowiki>
+ <nowiki>{{ModificaArticolo|articolo=Titolo della guida|autore=NomeWiki|responsabile=NomeWiki|note=testo utile|data=data|stato=stato}}</nowiki>
 
-Verifica di aggiungere la : <nowiki>[[:Categoria:Modifica in corso]]</nowiki> senza rimuovere la categoria di appartenenza originaria della guida.
+
+Verificare di aggiungere il markup: '''<nowiki>[[Categoria:Modifica in corso]]</nowiki>''' senza rimuovere la categoria di appartenenza originaria della guida.
 
 {| {{TabellaBase}}
 ! Articolo
-! Autore originale
+! Autore
 ! Responsabile della modifica
+! Note, riferimenti, link
 ! Data
 ! Stato
-<!--{{ModificaArticolo|articolo=Titolo|autore=NomeCognome|responsabile=NomeCognome|data=gg/mm/aaaa|stato=DaFare}} esempio.. -->
-{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=AlbertoChiusole|data=25/10/2013|stato=DaFare}} <!-- ##### cambiare alcune guide con alcune più usate. 
--->
-{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=AlbertoChiusole|data=25/10/2013|stato=DaFare}} <!-- ##### togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository
--->
+
+{{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=AlbertoChiusole|note=cambiare alcune guide con alcune più usate.|data=25/10/2013|stato=DaFare}}
+{{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=AlbertoChiusole|note=togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository.|data=25/10/2013|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=/|data=22/02/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=/|data=22/02/2014|stato=DaFare}} <!-- ##### vedere mail in ML: https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html
--->
+{{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=/|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html ML].|data=22/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=/|data=08/10/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|data=09/10/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|note=rendere più visibile la categoria, anche nella pagina principale.|data=09/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|responsabile=/|data=14/02/2014|stato=InCorso}}
 |}
+
+''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
 
 Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rilettura ([[CantiereWiki#Rilettura_in_corso |rilettura in corso]]) secondo le modalità ed il template descritti nella sezione.
 
 
+==Articoli a revisione periodica==
+È inoltre possibile gestire più comodamente e tenere d'occhio le guide che devono essere revisionate periodicamente attraverso la tabella sottostante.
 
-==Note finali==
+Utilizzare la seguente scrittura per aggiungere un nuovo articolo:
+ <nowiki>{{ArticoloPeriodico|articolo=Titolo della guida|autore=NomeWiki|note=testo utile|data=data|stato=stato}}</nowiki>
+
+Va discussa in ML l'aggiunta o la rimozione di una guida dalla tabella sottostante.
+
+{| {{TabellaBase}}
+! Articolo a controllo periodico
+! Autore originale (se presente)
+! Note, riferimenti, link
+! Data ultimo aggiornamento
+! Stato
+{{ArticoloPeriodico|articolo=Pagina principale|autore=-|note=Questa guida è di esempio. il primo che ha una guida più sensata da aggiungere elimini questa.|data=6/4/2015|stato=DaFare}}
+|}
+
+''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
+
+
+==Proposte di nuovi articoli==
+Di seguito viene riportata una tabella per tenere traccia degli articoli che vengono proposti nella Mailing List, sul forum, durante i meeting, ecc..<br>
+Questa tabella può essere aggiornata da chiunque, ma prima di ''rimuovere'' una proposta di articolo, è opportuno discuterne sulla ML insieme agli altri redattori.
+
+Per aggiungere una nuova proposta, inserire una nuova riga con queste caratteristiche:
+ <nowiki>{{ArticoloProposto|articolo=Titolo della guida|ideatore=NomeWiki|collaboratori=[[Utente:NomeWiki]] e [[Utente:AltroNomeWiki]]|fonte=[url testo_url]|note=testo utile|data=data}}</nowiki>
+NB: per inserire dei collaboratori, bisogna circondare il loro nome dell'account con '''<nowiki>[[Utente:</nowiki>'''''NomeWiki'''''<nowiki>]]</nowiki>''': ad esempio <nowiki>[[Utente:MarioRossi]]</nowiki>.
+
+{| {{TabellaBase}}
+! Articolo proposto
+! Ideatore
+! Collaboratori interessati
+! Fonte
+! Note, riferimenti, link
+! Data
+{{ArticoloProposto|articolo=BFO|ideatore=AlbertoChiusole|collaboratori=[[Utente:TizioCaio]], [[Utente:Pippo]] e [[Utente:Pluto]] (chi potrebbe essere interessato, sostituisca il suo nome a questi di esempio).|fonte=guida su [http://www.if-not-true-then-false.com/2010/fedora-netinstall-net-install-with-gpxe-and-bfo-boot-fedoraproject-org/ if-not-true-then-false]|note=sarebbe interessante avere una guida per la creazione di un supporto per '''B'''oot.'''F'''edoraproject.'''O'''rg (se esiste ancora)|data=10/4/2015}}
+|}
+
+''NOTA: i tag '''collaboratori''', '''fonte''' e '''note''' non sono necessari: se non sono presenti verranno automaticamente sostituiti da uno spazio vuoto nella tabella.''
+
+
+
+==Note conclusive==
 
 Quando un articolo è pronto per essere pubblicato, il rilettore lo comunica in Mailing List, dopodiché verrà inserito online.<br>
 '''Solo i componenti dello staff hanno la competenza per togliere l'articolo dagli elenchi di CantiereWiki dopo la sua pubblicazione.'''
