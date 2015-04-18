@@ -1,0 +1,150 @@
+{{InCorso|autore=GiulioErler}}
+{{Autore|GiulioErler}}
+
+== Introduzione ==
+
+Lo scopo della presente guida è quella di esplorare l'installazione della release 22 di Fedora, nella variante Workstation. L'immagine ISO utilizzata è quella proposta di default dal sito ufficiale del Fedora Project. Per maggiori informazioni su come creare un supporto CD/DVD avviabile, è consigliabile seguire le  [http://docs.fedoraproject.org/it-IT/Fedora/17/html/Burning_ISO_images_to_disc/index.html istruzioni] ufficiali. Se si preferisce invece utilizzare una Pendrive USB, occorre consultare [https://fedoraproject.org/wiki/How_to_create_and_use_Live_USB/it questa] pagina (anche se al momento non risulta pienamente aggiornata).
+
+Per illustrare il processo di installazione, è stata utilizzata una macchina virtuale creata con [https://virt-manager.org/ virt-manager]. La capacità del disco fisso rappresentato è puramente indicativa. Anche il partizionamento è stato illustrato a puro titolo esemplificativo e non deve essere inteso come unico metodo valido e consigliato. Le ampie dimensioni di storage delle unità odierne – e la grande varietà di sistemi operativi presenti -  consentono all'utente di intraprendere strade diverse, compatibilmente con le esigenze personali. Ulteriori informazioni a riguardo, possono essere reperite all'interno della [http://docs.fedoraproject.org/en-US/Fedora/21/html/Installation_Guide/sect-kickstart-commands-storage.html documentazione] del Fedora Project.
+
+{{Suggerimento|Nonostante la maturità raggiunta e la sicura affidabilità del programma d'installazione Anaconda, è opportuno un backup dei propri dati su un supporto esterno. Nel caso in cui si intenda affiancare Fedora ad un sistema Windows esistente, è vivamente consigliata la creazione di un disco di ripristino. Se le partizioni di quest'ultimo sistema verranno modificate, è inoltre raccomandata l'esecuzione preventiva di una procedura di deframmentazione.}}
+
+== Avvio dell'installazione ==
+
+Per l'installazione occorre inserire il supporto e modificare le opzioni del BIOS/UEFI per effettuare il boot con esso. È presente un conto alla rovescia per l'avvio della Live: è possibile interrompere tale countdown premendo un tasto qualsiasi – ad eccezione dell'invio -. Le frecce (su e giù) permettono di navigare nel menù e invio di confermare l'opzione scelta. Le selezioni sono le seguenti:
+* ''Start Fedora Live'': fa partire l'esecuzione del sistema operativo installato sul supporto
+* ''Troubleshooting'': offre strumenti per la risoluzione di problemi.
+
+Quest'ultima voce elenca le seguenti procedure:
+* ''Start Fedora Live in basic graphics mode'': esegue il sistema utilizzando i driver video generici Vesa, utili nel caso in cui la modalità standard evidenzi problemi grafici
+* ''Test this media & start Fedora Live'': testa la consistenza relativa al supporto adoperato per l'installazione
+* ''Run a memory test'': valuta l'affidabilità della RAM del computer
+* ''Boot from local drive'': richiama il boot-loader installato sull'hard disk del computer senza quindi procedere alla nuova installazione di Fedora
+* ''Return to main menu'': visualizza nuovamente il menù precedente
+
+{{Suggerimento|Per evitare problemi futuri, è fortemente consigliato un test relativo all'integrità del media d'installazione.}}
+
+Ultimato l'avvio del sistema operativo Live, un'utile schermata propone di partire subito con l'installazione vera e propria di Fedora. Se il computer non è connesso ad Internet per mezzo di un cavo Ethernet, è consigliato configurare preliminarmente le opzioni di rete e avviare il processo solo in un momento successivo (tramite l'apposita icona reperibile nell'insieme delle applicazioni).
+
+
+[[File:fedora22inst_2.png|thumb|right|200px|Troubleshooting]]
+[[File:fedora22inst_3.png|thumb|right|200px|Finestra di benvenuto.]]
+[[File:fedora22inst_1.png|thumb|center|600px|Schermata di avvio]]
+
+La primissima videata di Anaconda – il software che si preoccuperà di installare il sistema – offre l'opportunità di selezionare la lingua preferita. È opportuno ricordare che l'etichetta presente in alto a destra, riguardante il layout della tastiera, non è modificabile. Sarà successivamente possibile configurare anche questo aspetto.
+
+[[File:fedora22inst_4.png|thumb|center|600px|Scelta della lingua.]] <br />
+
+== Riepilogo Installazione ==
+
+La schermata successiva presenta il ''Riepilogo di installazione'', composta da quattro categorie fondamentali (tastiera, data e ora, destinazione d'installazione, rete). In base all'idioma scelto, l'applicazione dovrebbe esser riuscita a determinare correttamente layout e fuso orario corretti. Se così non fosse o se l'utente volesse personalizzare ulteriormente questo aspetto, è possibile accedere ai relativi menù. I triangoli arancioni evidenziano invece le voci che devono essere ancora ultimate prima di poter procedere con i passaggi successivi.
+
+[[File:fedora22inst_5.png|thumb|center|600px|Riepilogo installazione.]] <br />
+
+== Disposizione della tastiera ==
+
+Il menù relativo alla disposizione della tastiera, consente di configurare tutti i layout da includere nel sistema. Una casella di testo consente inoltre di verificare il funzionamento associato.
+
+[[File:fedora22inst_8.png|thumb|right|200px|Aggiunta disposizione della tastiera]]
+[[File:fedora22inst_7.png|thumb|right|200px|Opzioni di cambio disposizione]] <br />
+[[File:fedora22inst_6.png|thumb|center|600px|Disposizione della tastiera.]]
+
+Per aggiungere, togliere o ordinare i vari schemi, occorre agire tramite i tasti presenti appena sotto all'apposita lista. Tramite il tasto ''Opzioni'', è inoltre facile scegliere quali combinazioni utilizzare per cambiare la configurazione.
+
+== Ora & Data ==
+
+Corredata da un elegante e utile planisfero, la categoria relativa all'orologio consente di selezionare il fuso orario. 
+
+[[File:fedora22inst_10.png|thumb|right|200px|Server NTP]] <br />
+[[File:fedora22inst_9.png|thumb|center|600px|Ora & Data.]]
+
+È possibile fare in modo che Fedora sincronizzi l'ora tramite Internet. Un'opzione consente inoltre di aggiungere host personalizzati da usare come Server NTP.
+
+== Rete & Nome Host ==
+
+Il compito dell'interfaccia qui proposta è essenzialmente quello di attribuire un hostname, ossia un nome identificativo con cui gli altri computer distingueranno il nostro all'interno di una comunicazioni, nel caso di condivisioni basate su rete. Per configurare il collegamento ad Internet invece, occorre servirsi degli strumenti offerti dall'ambiente desktop della Live (Gnome 3, nel caso dell'edizione Workstation di Fedora).
+
+[[File:fedora22inst_20.png|thumb|center|600px|Rete & Nome Host.]] <br />
+
+== Destinazione d'installazione ==
+
+La sezione chiamata ''Destinazione d'installazione'', è senza dubbio la più importante di tutto il processo. Configurare partizioni, cifratura, bootloader e supporti interessati è  scopo delle funzionalità qui proposte.
+
+[[File:fedora22inst_12.png|thumb|right|200px|Dischi di rete]]
+[[File:fedora22inst_13.png|thumb|right|200px|Sommario completo disco e bootloader]]
+[[File:fedora22inst_11.png|thumb|center|600px|Destinazione d'installazione.]]
+
+Per prima cosa, conviene scegliere le unità da utilizzare come destinazione, inserendo eventuali dischi di rete, se necessario. Per quanto riguarda il layout di partizionamento, le alternative sono due: agire manualmente o demandare il compito ad Anaconda. Nel caso in cui lo spazio sia insufficiente, il software proporrà il ridimensionamento delle partizioni esistenti. All'occorrenza, è inoltre possibile cifrare i dati applicando una password da digitare all'avvio del sistema.
+
+=== Partizionamento manuale ===
+
+Il wizard dedicato al layout che si andrà a creare, permette di creare le partizioni, scegliendo per prima cosa, dall'apposito menù a tendina, il tipo di schema da utilizzare:
+* ''LVM'': consente di organizzare il sistema all'interno di volumi logici. Tale tipo di partizionamento aggiunge flessibilità in caso di modifiche alle partizioni, ma può essere considerato sovrabbondante nel caso di sistemi Workstation.
+* ''BTRFS'': destinato a diventare il file system predefinito, offre interessanti novità ma non è ancora considerato maturo come l'ecosistema ext.
+* ''Partizioni standard'': offre l'opportunità di creare partizioni di tipo standard. Se non sono presenti esigenze particolari, è consigliato l'utilizzo di questa opzione, abbinata al file system di tipo 'ext4'.
+
+[[File:fedora22inst_16.png|thumb|right|200px|Aggiunta di un punto di mount.]]
+[[File:fedora22inst_17.png|thumb|right|200px|Configurazione di un punto di mount.]]
+[[File:fedora22inst_18.png|thumb|right|200px|Riepilogo delle modifiche.]]
+[[File:fedora22inst_15.png|thumb|center|600px|Partizionamento manuale.]] <br />
+
+Lo scopo del menù qui descritto, è quello di gestire gli schemi relativi ai dischi selezionati. Una volta sceltane la tipologia, occorre creare i diversi tipi di mount in modo automatico oppure procedere all'aggiunta manuale. Per ogni elemento, è possibile personalizzare capacità desiderata, file system ed – opzionalmente - etichetta. La [http://docs.fedoraproject.org/en-US/Fedora/21/html/Installation_Guide/sect-installation-gui-manual-partitioning-recommended.html documentazione ufficiale del Fedora Project], consiglia la creazione delle seguenti partizioni:
+* ''/boot'': contiene i file necessari all'avvio del sistema. 500Mb sono sufficienti.
+* ''/'': contiene cartelle e file relativi al sistema operativo e ai programmi installati. È consigliabile una dimensione compresa tra i 10 e i 20gb
+* “swap”: è la memoria virtuale che viene sfruttata dal sistema in caso di saturazione di quella di tipo fisico. La dimensione deve essere decisa in base all'ammontare di RAM del sistema. Se la memoria è meno di 2gb, allora occorre includere una partizione di swap di dimensioni doppie rispetto ad essa. Se la RAM va dai 2 agli 8gb, la swap può eguagliarne la dimensione in termini di giga-bytes.
+* ''/home'': contiene file e directory appartenenti agli utenti. Conviene sfruttare lo spazio rimanente. Avere tale partizione separata è utile per preservare i dati personali nel caso in cui si opti per una nuova installazione di Fedora.
+
+Come specificato dall'interfaccia, la conferma applicata al riepilogo proposto da Anaconda, non implica un'immediata applicazione dei cambiamenti previsti
+
+== Avvio dell'installazione su disco ==
+
+Non appena il riepilogo non sottolinea più la presenza di impostazioni mancanti, per concludere l'installazione di Fedora, è sufficiente azionare l'apposito bottone blu 'Avvia installazione'.
+
+{{Warning|Dal momento in cui si conferma l'avvio, lo stato originario dei dischi coinvolti non sarà più ripristinabile.}}
+
+[[File:fedora22inst_19.png|thumb|center|600px|Riepilogo d'installazione completo.]] <br />
+
+Durante il processo vero e proprio, una barra d'avanzamento fornisce dettagli relativi alle azioni compiute dall'installer. A questo punto, è da considerare l'eventualità di creazione di una password di root – l'utente avente i privilegi più elevati all'interno di Fedora – e di un utente standard. Se quest'ultimo non viene previsto a questo stadio, in seguito al boot del sistema installato, sarà comunque possibile una sua aggiunta tramite la comoda interfaccia di benvenuto chiamata 'gnome-initial-setup'. Anaconda rende già disponibili alcune personalizzazioni di tipo avanzato (gruppi di appartenenza, home directory, ID).
+
+{{Warning|Per non rischiare di rendere il sistema ingovernabile, è obbligatoria l'impostazione di una chiave d'accesso per root oppure la creazione di un utente con privilegi amministrativi.}}
+
+[[File:fedora22inst_22.png|thumb|right|200px|Impostazione password di root.]]
+[[File:fedora22inst_24.png|thumb|right|200px|Creazione utente standard.]]
+[[File:fedora22inst_25.png|thumb|right|200px|Configurazione utente avanzata.]]
+[[File:fedora22inst_21.png|thumb|center|600px|Esecuzione dell'installazione.]] <br />
+
+In seguito al completamento dell'installazione dei pacchetti previsti dall'edizione Workstation, un apposito bottone invita a terminare la configurazione di Fedora.
+
+[[File:fedora22inst_27.png|thumb|center|600px|Installazione pacchetti completata.]] <br />
+
+A meccanismo compiuto, basterà procedere al riavvio del computer
+
+[[File:fedora22inst_30.png|thumb|right|200px|Riavvio del computer (1).]]
+[[File:fedora22inst_31.png|thumb|tight|200px|Riavvio del computer (2).]]
+[[File:fedora22inst_29.png|thumb|center|600px|Configurazione completata.]] <br />
+
+== Utilizzo del nuovo sistema operativo ==
+
+Durante la riaccensione della macchina, è opportuno prestare attenzione al dispositivo da utilizzare per il boot. Fedora dovrà essere infatti avviata dall'hard disk scelto per l'installazione.
+
+Se è stato creato un utente, il sistema lo evidenzierà all'interno di Gdm, il gestore degli  accessi di Gnome. Una volta correttamente effettuato il log-in, le finestre di gnome-initial-setup elencherà alcuni passaggi finali per perfezionare l'esperienza d'utilizzo.
+
+[[File:fedora22inst_32.png|thumb|right|200px|Gdm]]
+[[File:fedora22inst_34.png|thumb|right|200px|gnome-initial-setup – Digitazione]]
+[[File:fedora22inst_33.png|thumb|center|600px|gnome-initial-setup – Lingua]]
+[[File:fedora22inst_35.png|thumb|right|200px|gnome-initial-setup – Privacy]]
+[[File:fedora22inst_36.png|thumb|right|200px|gnome-initial-setup – Account online]]
+[[File:fedora22inst_37.png|thumb|center|600px|gnome-initial-setup – Fedora pronta all'uso]]
+
+
+Successivamente, sarà la volta della guida di Gnome, che è consigliato consultare sopratutto nel caso in cui non si abbia una sufficiente dimestichezza con tale ambiente desktop.
+
+[[File:fedora22inst_38.png|thumb|center|600px|Primi passi]] <br />
+
+Ed infine, eccolo qui! Il desktop predefinito della nostra nuova Fedora è finalmente pronto per essere utilizzato!
+
+[[File:fedora22inst_39.png|thumb|center|600px|Il desktop Gnome]] <br />
+
+
+[[Categoria:Installazione]]
+[[Categoria:Scrittura in corso]]
