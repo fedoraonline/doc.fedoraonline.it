@@ -114,7 +114,17 @@ Terminata la fase di aggiornamento dovrà essere reinserita tra le guide in rile
 
 
 ==Articoli a revisione periodica==
-La documentazione di Fedora Online contiene delle guide che hanno la necessità di essere revisionate periodicamente. Questa sezione ha lo scopo di elencare quelle che la comunità ritiene di dover aggiornare più frequentemente. La prassi vuole che prima di ogni rilascio tutte le guide sottoelencate debbano essere riallineate e rese compatibili con la futura versione di fedora. Dopo ogni rilascio di fedora le ultime due caselle di ogni riga vanno azzerate (i.e. responsabile=- e stato=DaFare).
+La documentazione di Fedora Online contiene delle guide che hanno la necessità di essere revisionate periodicamente. Questa sezione ha lo scopo di elencare quelle che la comunità ritiene di dover aggiornare più frequentemente.
+La prassi vuole che prima di ogni rilascio tutte le guide sottoelencate debbano essere riallineate e rese compatibili con la futura versione di fedora.Dopo ogni rilascio di fedora le ultime due caselle di ogni riga vanno azzerate (i.e. responsabile=- e stato=DaFare).
+
+
+L'aggiunta degli articoli a revisione periodica viene fatta utilizzando il template ''GuidePeriodiche'' come segue:
+
+ <nowiki>{{GuidePeriodiche|articolo=Titolo articolo|autore=NomeCognome|note=Osservazioni|data=Data|release=Release|responsabile=Responsabile|stato=Stato}}</nowiki>
+La tabella usa il template '''GuidePeriodiche''', ed è necessario utilizzare i parametri secondo queste direttive:
+*'''data=Data''' è la data dell'ultimo aggiornamento.
+*'''release=Release''' indica la release di fedora in cui la guida è stata controllata durante l'ultimo aggiornamento (es: F22).
+*'''responsabile=Responsabile''' indica la persone che ha scelto di prendersi a carico l'aggiornamento della guida.
 
 
 {| {{TabellaBase}}
@@ -126,18 +136,10 @@ La documentazione di Fedora Online contiene delle guide che hanno la necessità 
 ! Responsabile
 ! Stato
 
-{{GuidePeriodiche|articolo=Installazione Fedora 22|autore=GiulioErler|note=-|data=18/04/15|release=F22|responsabile=GiulioErler|stato=InCorso}}
-{{GuidePeriodiche|articolo=Aggiornamento Fedora con FedUp|autore=RobertMayr|note=-|data=-|release=F21|responsabile=-|stato=DaFare}}
-{{GuidePeriodiche|articolo=RPMFusion|autore=-|note=Va controllata la compatibilità|data=-|release=F21|responsabile=-|stato=DaFare}}
+{{GuidePeriodiche|articolo=Installazione Fedora 22|autore=GiulioErler|data=18/04/15|release=F22|responsabile=GiulioErler|stato=InCorso}}
+{{GuidePeriodiche|articolo=Aggiornamento Fedora con FedUp|autore=RobertMayr|note=guida ufficiale [https://fedoraproject.org/wiki/FedUp fpo].|data=-|release=F21|responsabile=AlbertoChiusole|stato=DaFare}}
+{{GuidePeriodiche|articolo=RPMFusion|autore=-|note=Va controllata la compatibilità.<br>sito [http://www.rpmfusion.org/ official]|data=-|release=F21|responsabile=-|stato=DaFare}}
 |}
-
-L'aggiunta degli articoli a revisione periodica viene fatta tramite la seguente stringa
-
- <nowiki>{{GuidePeriodiche|articolo=Titolo articolo|autore=NomeCognome|note=Osservazioni|data=Data|release=Release|responsabile=Responsabile|stato=Stato}}</nowiki>
-La tabella usa il template '''GuidePeriodiche''' dove sono stati aggiunti i seguenti parametri
-*'''data=Data''' è la data dell'ultimo aggiornamento.
-*'''release=Release''' indica la release dell'ultimo aggiornamento (es: F22).
-*'''responsabile=Responsabile''' indica la persone che ha scelto di prendersi a carico l'aggiornamento della guida.
 
 ==Proposte di nuovi articoli==
 Di seguito viene riportata una tabella per tenere traccia degli articoli che vengono proposti nella Mailing List, sul forum, durante i meeting, ecc..<br>
