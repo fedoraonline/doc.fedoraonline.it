@@ -74,7 +74,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Data
 ! Stato
 
-{{RiletturaArticolo|articolo=TestDays|autore=GiulioErler|rilettore=/|data=data|stato=Terminato}}
+{{RiletturaArticolo|articolo=TestDays|autore=GiulioErler|rilettore=/|data=19/04/2015|stato=Terminato}}
 |}
 
 ''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
