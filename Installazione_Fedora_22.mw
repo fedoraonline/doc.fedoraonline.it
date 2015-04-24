@@ -39,7 +39,7 @@ La primissima videata di '''Anaconda''' – il software che si preoccuperà di i
 
 == Riepilogo Installazione ==
 
-La schermata successiva presenta il '''Riepilogo di installazione''', composta da quattro categorie fondamentali (tastiera, data e ora, destinazione d'installazione, rete). In base all'idioma scelto, l'applicazione dovrebbe esser riuscita a determinare layout e fuso orario corretti. Se così non fosse o se l'utente volesse personalizzare ulteriormente questo aspetto, è possibile accedere ai relativi menù. I triangoli arancioni evidenziano invece le voci che devono essere ancora ultimate prima di poter procedere con i passaggi finali.
+La schermata successiva presenta il '''"riepilogo di installazione"''', composto da quattro categorie fondamentali (tastiera, data e ora, destinazione d'installazione, rete). In base all'idioma scelto, l'applicazione dovrebbe esser riuscita a determinare layout e fuso orario corretti. Se così non fosse o se l'utente volesse personalizzare ulteriormente questo aspetto, è possibile accedere ai relativi menù. I triangoli arancioni evidenziano invece le voci che devono essere ancora ultimate prima di poter procedere con i passaggi finali.
 
 [[File:fedora22inst_5.png|thumb|center|600px|Riepilogo installazione.]] <br />
 
@@ -70,7 +70,7 @@ Il compito dell'interfaccia qui proposta è essenzialmente quello di attribuire 
 
 == Destinazione d'installazione ==
 
-La sezione chiamata '''Destinazione d'installazione''', è senza dubbio la più importante di tutto il processo. Configurare partizioni, cifratura, bootloader e supporti interessati è  scopo delle funzionalità qui proposte.
+La sezione chiamata '''"Destinazione d'installazione"''', è senza dubbio la più importante di tutto il processo. Configurare partizioni, cifratura, bootloader e supporti interessati è  scopo delle funzionalità qui proposte.
 
 [[File:fedora22inst_12.png|thumb|right|200px|Dischi di rete]]
 [[File:fedora22inst_13.png|thumb|right|200px|Sommario completo disco e bootloader]]
@@ -100,7 +100,7 @@ Come specificato dall'interfaccia, la conferma applicata al riepilogo proposto d
 
 == Avvio dell'installazione su disco ==
 
-Non appena il riepilogo non sottolinea più la presenza di impostazioni mancanti, per concludere l'installazione di Fedora, è sufficiente azionare l'apposito bottone blu''' 'Avvia installazione'.'''
+Non appena il riepilogo non sottolinea più la presenza di impostazioni mancanti, per concludere l'installazione di Fedora, è sufficiente azionare l'apposito bottone blu '''"Avvia installazione"'''.
 
 {{Warning|Dal momento in cui si conferma l'avvio, lo stato originario dei dischi coinvolti non sarà più ripristinabile.}}
 
