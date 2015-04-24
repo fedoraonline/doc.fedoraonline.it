@@ -76,7 +76,9 @@ La sezione chiamata '''"Destinazione d'installazione"''', è senza dubbio la pi�
 [[File:fedora22inst_13.png|thumb|right|200px|Sommario completo disco e bootloader]]
 [[File:fedora22inst_11.png|thumb|center|600px|Destinazione d'installazione.]]
 
-Per prima cosa, conviene scegliere le unità da utilizzare come destinazione, inserendo eventuali dischi di rete, se necessario. Per quanto riguarda il layout di partizionamento, le alternative sono due: agire manualmente o demandare il compito ad Anaconda, il quale opterebbe per la soluzione LVM. Nel caso in cui lo spazio sia insufficiente, il software proporrà il ridimensionamento delle partizioni esistenti. All'occorrenza, è inoltre possibile cifrare i dati applicando una password da digitare all'avvio del sistema e scegliere la destinazione del boot loader Grub.
+Per prima cosa, conviene scegliere le unità da utilizzare come destinazione, inserendo eventuali dischi di rete, se necessario. Per quanto riguarda il layout di partizionamento, le alternative sono due: agire manualmente o demandare il compito ad Anaconda, il quale opterebbe per la soluzione LVM.  Nel caso in cui lo spazio sia insufficiente, il software proporrà il ridimensionamento delle partizioni esistenti. All'occorrenza, è inoltre possibile cifrare i dati applicando una password da digitare all'avvio del sistema e scegliere la destinazione del boot loader Grub.
+
+{{Suggerimento|Essendo le esigenze dell'utenza assai variabili e variegate, è impossibile pretendere dal programma d'installazione una soluzione universalmente accettabile. È quindi decisamente consigliata la costruzione di un partizionamento manuale.}}
 
 === Partizionamento manuale ===
 
@@ -139,7 +141,10 @@ Se è stato creato un utente, il sistema lo evidenzierà all'interno di '''Gdm''
 [[File:fedora22inst_37.png|thumb|center|600px|gnome-initial-setup – Fedora pronta all'uso]]
 
 
-Successivamente, sarà la volta della '''guida di Gnome''', che è consigliato consultare sopratutto nel caso in cui non si abbia una sufficiente dimestichezza con tale ambiente desktop.
+Successivamente, sarà la volta della '''guida di Gnome''', che è consigliato consultare sopratutto nel caso in cui non si abbia una sufficiente dimestichezza con tale ambiente desktop. All'interno della documentazione di Fedora Online sono presenti altre pagine utili, come ad esempio:
+
+* [[Gnome-Shell]]: dettagli riguardanti l'interfaccia utente di Gnome.
+* [[Nautilus_scripts_e_personalizzazioni]]: personalizzazioni relative al gestore di file e cartelle predefinito <br /> <br />
 
 [[File:fedora22inst_38.png|thumb|center|600px|Primi passi]] <br />
 
