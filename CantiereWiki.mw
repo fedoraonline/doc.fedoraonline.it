@@ -47,7 +47,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 ! Data
 ! Stato
 
-{{AggiungiArticolo|articolo=Installazione Fedora da live CD|autore=/|data=-|stato=DaFare}}
 {{AggiungiArticolo|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|data=-|stato=InCorso}}
 {{AggiungiArticolo|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|data=-|stato=InCorso}}
 {{AggiungiArticolo|articolo=Installazione Server FTP con VSFTPD|autore=AndreaMalfatti|data=-|stato=DaFare}}
