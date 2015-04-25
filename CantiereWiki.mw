@@ -51,7 +51,6 @@ Al termine della redazione dell'articolo, modificando lo stato in ''Terminato'' 
 {{AggiungiArticolo|articolo=Galateo Fedora: comportamento corretto utente Desktop|autore=GiuseppeDelvecchio|data=-|stato=InCorso}}
 {{AggiungiArticolo|articolo=Configurazione di gedit su Filezilla|autore=LucioMilone|data=-|stato=InCorso}}
 {{AggiungiArticolo|articolo=Installazione Server FTP con VSFTPD|autore=AndreaMalfatti|data=-|stato=DaFare}}
-{{AggiungiArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|data=03/04/2015|stato=Terminato}}
 |}
 
 ''NOTA: il tag '''fonte''' o '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
@@ -74,8 +73,9 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Data
 ! Stato
 
-{{RiletturaArticolo|articolo=TestDays|autore=GiulioErler|rilettore=/|data=19/04/2015|stato=Terminato}}
-{{RiletturaArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|rilettore=/|data=23/04/2015|stato=Terminato}}
+{{RiletturaArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|rilettore=-|data=23/04/2015|stato=DaFare}}
+{{RiletturaArticolo|articolo=Gnome-Shell|autore=-|rilettore=-|data=25/04/2015|stato=DaFare|note=bisogna vedere come si comporta con F22}}
+{{RiletturaArticolo|articolo=Nautilus scripts e personalizzazioni|autore=Riccardo Volpe|rilettore=-|data=25/04/2015|stato=DaFare|note=è ancora utile il metodo attraverso python? perché sulla 21 a me funziona mettendo un modello vuoto nella cartella Modelli.<br>vedere anche [http://forum.fedoraonline.it/viewtopic.php?id=23532 qua] ... ~bebo}}
 |}
 
 ''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
