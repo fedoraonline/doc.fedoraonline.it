@@ -98,7 +98,57 @@ Lo scopo del menù qui descritto, è quello di gestire gli schemi relativi ai di
 * '''swap''': è la memoria virtuale che viene sfruttata dal sistema in caso di saturazione di quella di tipo fisico. La dimensione deve essere decisa in base all'ammontare di RAM del sistema. Se la memoria è meno di 2gb, allora occorre includere una partizione di swap di dimensioni doppie rispetto ad essa. Se la RAM va dai 2 agli 8gb, la swap può eguagliarne la capacità in termini di giga-bytes.
 * '''/home''': contiene file e directory appartenenti agli utenti. Conviene sfruttare lo spazio rimanente. Avere tale partizione separata è utile per preservare i dati personali nel caso in cui si opti per una nuova installazione di Fedora.
 
-Come specificato dall'interfaccia, la conferma applicata al riepilogo proposto da Anaconda, non implica un'immediata applicazione dei cambiamenti previsti
+Come specificato dall'interfaccia, la conferma applicata al riepilogo proposto da Anaconda, non implica un'immediata applicazione dei cambiamenti previsti.
+
+====='''Esempio di Partizionamento Manuale'''=====
+{{suggerimento|Nel caso si voglia utilizzare il partizionamento manuale è consigliato effettuare una preparazione della tabella delle partizioni con GParted da una Live, avendo cura di prendere nota in quale partizioni effettuare l'installazione.}}
+
+Segue un esempio pratico di partizionamento manuale.<br/>
+
+Si parte dalla situazione, molto comune, di avere già installato un Dual Boot con un '''sistema operativo MS Windows''' in una partizione primaria, un altro '''sistema GNU/Linux''' situato in un'altra partizione primaria e una o più partizioni logiche vuote e disponibili ad ospitare una nuova installazione di Fedora.
+
+La tabella delle partizioni potrebbe quindi presentarsi in questo modo:
+:- sda1 installazione preesistente di MS Windows;
+:- sda2 partizione di recovery di MS Windows;
+:- sda3 partizione estesa
+:-  sda4 partizione di swap
+:-  sda5 partizione / di una distro Linux già installata
+:-  sda6 partizione vuota
+:-  sda7 partizione vuota
+:- sda8 partizione /home (contenente la /home della distro già installata)
+
+Nell'esempio si vede come installare la directory '''/''' di Fedora in '''sda6''' e la '''/home''' condivisa in '''sda8'''.
+
+Facendo riferimento all'immagine '''Destinazione d'installazione''', selezionare l'opzione '''Configurerò le partizioni''' e cliccare sul pulsante '''Fatto''' presente nella parte superiore sinistra dell'interfaccia. La schermata successiva sarà quella relativa al '''Partizionamento Manuale''', che elenca, all'interno della colonna sinistra, tutte le partizioni presenti sul disco.
+
+Si può cominciare con la partizione /. Dalla lista delle partizioni cliccare sulla partizione sda6. Verrà aperta sulla destra una nuova lista di opzioni come da immagine '''Configurazione di un punto di mount'''.
+
+*Nella casella '''Punto di Mount''' inserire: '''/''' che rappresenta la directory radice del futuro sistema Fedora;
+*Nella casella '''Etichetta''' è possibile inserire a piacere un identificativo per la partizione oppure mantenere vuoto il campo;
+*'''Capacità desiderata''' va lasciato vuoto, in modo che venga utilizzato tutto lo spazio disponibile nella partizione;
+
+*Nel menu a tendina '''Tipo Dispositivo''' selezionare '''Partizione standard''';
+*Nel menu a tendina '''File system''' scegliere '''ext4''', per avere un filesystem moderno e adatto ad un sistema desktop tradizionale;
+*È opportuno cosiderare la spunta sulla scelta '''Riformatta''' nel caso in cui la partizione non sia completamente vuota;
+
+Infine, cliccare sul pulsante '''Aggiorna impostazioni''' per memorizzare le modifiche applicate e procedere con l'impostazione del punto di mount successivo.
+
+
+Ora si può preparare la partizione /home. Dalla lista delle partizioni cliccare sulla partizione sda8:
+*Nella casella '''Punto di Mount''' inserire: '''/home'''
+*Nella casella '''Etichetta''' lasciare il campo vuoto;
+*Lasciare invariato il campo '''Capacità desiderata''' che utilizzerà di default tutto lo spazio disponibile nella partizione.
+
+*Nel menu a tendina '''Tipo Dispositivo''' selezionare '''Partizione standard''';
+*Nel menu a tendina '''File system''' selezionare '''ext4''';
+*'''Non bisogna apporre''' la spunta sulla casella '''Riformatta''', poiché questo è il caso di una /home condivisa con un altro sistema operativo; in caso di formattazione tutti i dati presenti verrebbero infatti irrimediabilmente distrutti;
+
+Cliccare sul pulsante '''Aggiorna impostazioni''' per salvare i nuovi cambiamenti e procedere.
+
+
+Infine, nel caso in cui si necessiti di una partizione di [http://it.wikipedia.org/wiki/Swap_%28informatica%29 swap], è opportuno crearla. Dalla lista cliccare sulla partizione denominata "swap" (in questo caso sda4). Essa sarà aggiunta in automatico ai punti di montaggio della nuova installazione.
+
+Il nuovo layout è completo e terminato; si può tornare al '''Riepilogo Installazione''' cliccando sul pulsante '''Fatto''', situato in alto a sinistra.
 
 == Avvio dell'installazione su disco ==
 
