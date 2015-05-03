@@ -136,7 +136,7 @@ La tabella usa il template '''GuidePeriodiche''', ed è necessario utilizzare i 
 ! Responsabile
 ! Stato
 
-{{GuidePeriodiche|articolo=Installazione Fedora 22|autore=GiulioErler|data=18/04/15|release=F22|responsabile=GiulioErler|stato=InCorso}}
+{{GuidePeriodiche|articolo=Installazione Fedora 22|autore=GiulioErler|data=03/05/15|release=F22|responsabile=GiulioErler|stato=InCorso}}
 {{GuidePeriodiche|articolo=Aggiornamento Fedora con FedUp|autore=RobertMayr|note=guida ufficiale [https://fedoraproject.org/wiki/FedUp fpo].|data=-|release=F21|responsabile=AlbertoChiusole|stato=DaFare}}
 {{GuidePeriodiche|articolo=RPMFusion|autore=-|note=Va controllata la compatibilità.<br>sito [http://www.rpmfusion.org/ official]|data=-|release=F21|responsabile=-|stato=DaFare}}
 |}
