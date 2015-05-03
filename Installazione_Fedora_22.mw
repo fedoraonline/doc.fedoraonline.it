@@ -10,6 +10,9 @@ Lo scopo della presente guida è quella di esplorare l'installazione della relea
 
 Per illustrare il processo di installazione, è stata utilizzata una macchina virtuale creata con [https://virt-manager.org/ virt-manager]. La capacità del disco fisso rappresentato è puramente indicativa. Anche il partizionamento è stato illustrato a titolo esemplificativo e non deve essere inteso come unico metodo valido e consigliato. Le ampie dimensioni di storage delle unità odierne – e la grande varietà di sistemi operativi presenti -  consentono all'utente di intraprendere strade diverse, compatibilmente con le esigenze personali. Ulteriori informazioni a riguardo, possono essere reperite all'interno della [http://docs.fedoraproject.org/en-US/Fedora/21/html/Installation_Guide/sect-kickstart-commands-storage.html documentazione] del Fedora Project.
 
+
+{{Suggerimento|Si consiglia fortemente la lettura preliminare della guida [[Dischi_e_partizioni:_le_basi]].}}
+
 {{Suggerimento|Nonostante la maturità raggiunta e la sicura affidabilità del programma d'installazione Anaconda, è opportuno un backup dei propri dati su un supporto esterno. Nel caso in cui si intenda affiancare Fedora ad un sistema Windows esistente, è vivamente consigliata la creazione di un disco di ripristino. Se le partizioni di quest'ultimo sistema verranno modificate, è inoltre raccomandata l'esecuzione preventiva di una procedura di deframmentazione.}}
 
 == Avvio dell'installazione ==
