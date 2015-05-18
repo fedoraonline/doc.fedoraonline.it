@@ -17,9 +17,9 @@ Per queste ragioni '''si consiglia di utilizzare''', ove possibile, '''i driver 
 
 == Schede video supportate ==
 
-I driver Catalyst supportano solo schede video della [http://en.wikipedia.org/wiki/AMD_Radeon#Processor_generations serie HD5xxx] e successive (indicativamente schede prodotte dal 2010 in poi).
+I driver Catalyst supportano solo schede video della famiglia ''Evergreen'' o superiori (ovvero dalla HD5430 in su). In altre parole, dato che la vostra scheda per essere compatibile deve montare un chip R8xx o superiore, il requisito minimo è che il vostro hardware supporti almeno DirectX 11 e OpenGL 4.x.
 
-Per sapere se la propria scheda video è supportata si può confrontare l'output del seguente comando con [http://en.wikipedia.org/wiki/Comparison_of_AMD_graphics_processing_units questa pagina di Wikipedia], che elenca le GPU suddivise per serie:
+Per sapere se la propria scheda video è supportata si può confrontare l'output del seguente comando con [http://www.x.org/wiki/RadeonFeature/#index5h2], che elenca le GPU suddivise per serie:
  # lspci|grep -i vga
 
 == Installazione del driver ==
