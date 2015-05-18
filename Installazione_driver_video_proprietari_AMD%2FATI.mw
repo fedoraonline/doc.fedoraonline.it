@@ -1,36 +1,47 @@
-{{InCorso|autore=NomeAutore}}
-I driver ati sono proprietari, è software chiuso e non libero, sconsigliamo di installare questo software comunque.
+{{InCorso|autore=FrancescoFrassinelli}}
+
+== Driver liberi e driver proprietari ==
+
+=== Nota storica ===
+
+'''Molte persone si riferiscono ai driver proprietari [https://en.wikipedia.org/wiki/AMD_Catalyst Catalyst] per le schede video AMD come "driver ATI"''': questo accade perché ''[https://it.wikipedia.org/wiki/ATI_Technologies ATI Technologies Inc.]'' era una nota azienda produttrice di schede video, acquisita da AMD nel 2006 e chiusa formalmente nel 2010. A differenza di AMD, ATI sviluppava un solo driver, proprietario, chiamato Catalyst (talvolta noto come ''fglrx''). Dopo la acquisizione, AMD iniziò a rendere pubblici i dettagli tecnici delle sue schede video al fine di favorire lo sviluppo di driver liberi, alla quale lei stessa partecipa. Negli ultimi anni i driver liberi sono migliorati notevolmente, sia in termini di caratteristiche sia in termini di performance e si sta lavorando per giungere ad un driver kernel libero unificato condiviso tra i liberi e i proprietari [http://www.phoronix.com/scan.php?page=news_item&px=AMD-AMDGPU-Released].
+
+Oggi '''è quindi possibile scegliere che driver utilizzare: libero''' (radeon o radeonsi per le schede più recenti) '''o proprietario''' (Catalyst/fglrx).
+
+=== Differenze ===
+
+Ad oggi, i driver liberi mancano di alcune funzionalità ([https://it.wikipedia.org/wiki/CrossFire CrossFire] ed [https://it.wikipedia.org/wiki/OpenCL OpenCL]) ed il supporto alle ultime versioni di OpenGL non è completo [http://cgit.freedesktop.org/mesa/mesa/tree/docs/GL3.txt], ma l'accelerazione 2D/3D, l'accelerazione per la codifica e decodifica dei video, la gestione energetica e tutte le funzioni di base sono supportate [http://www.x.org/wiki/RadeonFeature/]. Le performance di questi driver, installati di default su Fedora, possono essere inferiori mediamente del 25 % rispetto ai Catalyst [http://www.phoronix.com/scan.php?page=article&item=ubuntu-1504-hawaii&num=2], ma questo dato varia sensibilmente in base alla scheda e al programma utilizzati.
+E' importante inoltre ricordare che i driver proprietari, a differenza dei liberi, sono presenti solo per sistemi x86 ed x86_64, e che eventuali bug vanno non vanno segnalati a Fedora o ad RPMFusion, in quanto, non essendo disponibile il codice sorgente, è impossibile per la comunità correggere eventuali difetti riscontrati.
+
+Per queste ragioni '''si consiglia di utilizzare'', ove possibile, ''i driver liberi preinstallati.''
 
 == Schede video supportate ==
 
-I driver ati supportano solo schede video della [http://en.wikipedia.org/wiki/AMD_Radeon#Processor_generations serie HD5xxx] e successive (indicativamente schede prodotte dal 2010 in poi).
+I driver Catalyst supportano solo schede video della [http://en.wikipedia.org/wiki/AMD_Radeon#Processor_generations serie HD5xxx] e successive (indicativamente schede prodotte dal 2010 in poi).
 
-Per sapere se la propria scheda video è supportata si può confrontare l'output del comando
+Per sapere se la propria scheda video è supportata si può confrontare l'output del seguente comando con [http://en.wikipedia.org/wiki/Comparison_of_AMD_graphics_processing_units questa pagina di Wikipedia], che elenca le GPU suddivise per serie:
  # lspci|grep -i vga
-con [http://en.wikipedia.org/wiki/Comparison_of_AMD_graphics_processing_units questa pagina di wikipedia], che elenca le gpu suddivise per serie.
 
 == Installazione del driver ==
+
 {{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 
-Tutte le operazioni vanno fatte da root.
+Tutte le operazioni vanno fatte da superutente (chiamato comunemente ''root'').
 
-Se si hanno installati i driver ati proprietari non rpm,  dare prima di tutto:
+Se si è installato il driver Catalyst dal sito web di AMD (e non tramite pacchetto RPM), ripulire il proprio sistema:
  # yum reinstall mesa-libGL
-Cominciare con un:
- # yum update kernel
-per aggiornare il kernel.<br />
 
-Ora controllare che tipo di kernel si possiede:
- # uname -a
-Se si possiede un kernel '''non PAE''' procedere così:
- # yum install kmod-catalyst xorg-x11-drv-catalyst xorg-x11-drv-catalyst-libs.i686
-Se, invece, si possiede un kernel PAE:
- # yum install kmod-catalyst-PAE xorg-x11-drv-catalyst-libs.i686 xorg-x11-drv-catalyst 
-infine un:
- # reboot 
-finito.
+E' preferibile aggiornare il proprio kernel prima di procedere:
+ # yum update kernel
+
+Installare il driver:
+ # yum install akmod-catalyst$(grep -x CONFIG_X86_PAE=y /boot/config-$(uname -r)&&echo -PAE) xorg-x11-drv-catalyst{,-libs.i686}
+
+Infine riavviare il proprio sistema:
+ # reboot
 
 == Riferimenti ==
+
 Procedura ripresa da: [http://forums.fedoraforum.org/showthread.php?t=155503 fedoraforum]
 
 [[Categoria:Schede_grafiche]]
