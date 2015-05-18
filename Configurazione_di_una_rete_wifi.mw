@@ -8,7 +8,11 @@ Nei portatili sono sempre "onboard" ormai, ma anche al lavoro o a casa se ne tro
 
 Prima di cominciare è necessario capire che chip monta la propria scheda, mentre il nome e modello probabilmente sarà conosciuto. Quindi, per una scheda PCI:
 
- # lspci     (lsusb per una scheda USB)
+ # lspci
+
+Oppure, nel caso si tratti di una scheda USB:
+
+ # lsusb
 
 Si avrà un output simile a questo:
 <pre>00:00.0 Host bridge: VIA Technologies, Inc. VT8377 [KT400/KT600 AGP] Host Bridge (rev 80)
