@@ -94,11 +94,13 @@ Come ci si può difendere da essi, se spesso operazioni del genere sono silenti,
 # Non usate '''mai''' il login grafico da root, in una situazione del genere mettete l'aggressore nelle condizioni di poter eseguire un exploit con risultati positivi in pochi minuti.
 # un vettore molto utilizzato per questo tipo di attacco è il software peer to peer, evitatelo se possibile.
 
-=== Man in middle ===
-La tecnica del "man in middle" non è una vera e propria tecnica di attacco, bensi una tecnica di osservazione del sistema oggetto dell'attacco.<br />
-L'idea su cui si basa questa tecnica, consiste in una redirezione del traffico in modo da far passare il flusso attraverso la macchina dell'attaccante, e poter osservare i pacchetti ("sniffare") al loro passaggio.<br />
-Esistono tool specifici per realizzare il man in middle.<br />
-Difendersi da una tecnica del genere non è difficile, basta far passare le informazioni sensibili, attraverso protocolli criptati. Naturalmente occorre prestare attenzione sulla genuinità dei pacchetti che riceviamo ( vedi par.installazione di software).
+=== Man in the middle ===
+La tecnica del "''Man In The Middle''" (abbreviata frequentemente con ''MITM'') non è una vera e propria tecnica di attacco, bensì una tecnica di osservazione del sistema oggetto dell'attacco.
+
+L'idea su cui si basa questa tecnica, consiste in una redirezione del traffico in modo da far passare il flusso attraverso la macchina dell'attaccante, e poter osservare i pacchetti ("sniffare") al loro passaggio.
+Esistono tool specifici per realizzare il man in the middle.
+
+Difendersi da una tecnica del genere non è difficile, basta far passare le informazioni sensibili, attraverso protocolli criptati. Naturalmente occorre prestare attenzione sulla genuinità dei pacchetti che riceviamo (vedi par.installazione di software).
 
 === I virus ===
 I virus, propriamente detti, non hanno alcun effetto su sistemi Linux.<br />
