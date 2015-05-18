@@ -71,8 +71,6 @@ Per installare la lingua italiana estrarre dall'archivio scaricato all'inizio il
 Fatto questo sarà attiva anche la lingua italiana nei vari programmi.
 
 ==Risoluzione di problemi vari==
-* A causa di [https://bugs.freedesktop.org/show_bug.cgi?id=44203 questo] bug, per le versioni di fedora precedenti la 18 può essere necessario installare il pacchetto ''libpng-compat'', così:
- # yum install libpng-compat
 
 * In caso il bordo delle finestre abbia un gusto "retrò" da Windows95, come riportato da qualche utente sul [http://forums.fedoraforum.org/showpost.php?p=1634609&postcount=5 forum del fedoraproject.org] può essere necessario installare:
  # yum install pangox-compat
