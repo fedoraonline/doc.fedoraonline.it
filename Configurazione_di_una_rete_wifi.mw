@@ -17,7 +17,7 @@ Oppure, nel caso si tratti di una scheda USB:
 Si avrà un output simile a questo:
 <pre>00:00.0 Host bridge: VIA Technologies, Inc. VT8377 [KT400/KT600 AGP] Host Bridge (rev 80)
 00:01.0 PCI bridge: VIA Technologies, Inc. VT8237 PCI Bridge
-'''00:0a.0 Ethernet controller: Atheros Communications, Inc. AR5212 802.11abg NIC (rev 01)'''
+00:0a.0 Ethernet controller: Atheros Communications, Inc. AR5212 802.11abg NIC (rev 01)
 00:0f.0 IDE interface: VIA Technologies, Inc. VT82C586A/B/VT82C686/A/B/VT823x/A/C PIPC Bus Master IDE (rev 06)
 00:10.0 USB Controller: VIA Technologies, Inc. VT82xxxxx UHCI USB 1.1 Controller (rev 81)
 00:10.1 USB Controller: VIA Technologies, Inc. VT82xxxxx UHCI USB 1.1 Controller (rev 81)
@@ -27,11 +27,11 @@ Si avrà un output simile a questo:
 00:11.5 Multimedia audio controller: VIA Technologies, Inc. VT8233/A/8235/8237 AC97 Audio Controller (rev 60)
 00:13.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL-8139/8139C/8139C+ (rev 10)
 01:00.0 VGA compatible controller: ATI Technologies Inc RV280 [Radeon 9200 SE] (rev 01)</pre>
-In grassetto è evidenziata la riga che interessa, nel caso specifico ora si sa che il chip è Atheros, ma è utile memorizzare la prima colonna, perchè da questa si ricaverà l'ID PCI oppure USB.
+Ora si sa che il chip è Atheros, ma è utile memorizzare la prima colonna, perché da questa si ricaverà l'ID PCI oppure USB.
 <pre># lspci -n
 00:00.0 0600: 1106:3189 (rev 80)
 00:01.0 0604: 1106:b198
-'''00:0a.0 0200: 168c:0013 (rev 01)'''
+00:0a.0 0200: 168c:0013 (rev 01)
 00:0f.0 0101: 1106:0571 (rev 06)
 00:10.0 0c03: 1106:3038 (rev 81)
 00:10.1 0c03: 1106:3038 (rev 81)
