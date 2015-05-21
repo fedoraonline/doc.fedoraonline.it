@@ -6,14 +6,14 @@
 
 '''Molte persone si riferiscono ai driver proprietari [https://en.wikipedia.org/wiki/AMD_Catalyst Catalyst] per le schede video AMD come "driver ATI"''': questo accade perché ''[https://it.wikipedia.org/wiki/ATI_Technologies ATI Technologies Inc.]'' era una nota azienda produttrice di schede video, acquisita da AMD nel 2006 e chiusa formalmente nel 2010. A differenza di AMD, ATI sviluppava un solo driver, proprietario, chiamato Catalyst (talvolta noto come ''fglrx''). Dopo la acquisizione, AMD iniziò a rendere pubblici i dettagli tecnici delle sue schede video al fine di favorire lo sviluppo di driver liberi, alla quale lei stessa partecipa. Negli ultimi anni i driver liberi sono migliorati notevolmente, sia in termini di caratteristiche sia in termini di performance e si sta lavorando per giungere ad un driver kernel libero unificato condiviso tra i liberi e i proprietari [http://www.phoronix.com/scan.php?page=news_item&px=AMD-AMDGPU-Released].
 
-Oggi '''è quindi possibile scegliere che driver utilizzare: libero''' (radeon o radeonsi per le schede più recenti) '''o proprietario''' (Catalyst/fglrx).
+Oggi ''è quindi possibile '''scegliere''' che driver utilizzare'': '''libero''' (''radeon'' o ''radeonsi'' per le schede più recenti) o '''proprietario''' (''Catalyst/fglrx'').
 
 === Differenze ===
 
 Ad oggi, i driver liberi mancano di alcune funzionalità ([https://it.wikipedia.org/wiki/CrossFire CrossFire] ed [https://it.wikipedia.org/wiki/OpenCL OpenCL]) ed il supporto alle ultime versioni di OpenGL non è completo [http://cgit.freedesktop.org/mesa/mesa/tree/docs/GL3.txt], ma l'accelerazione 2D/3D, l'accelerazione per la codifica e decodifica dei video, la gestione energetica e tutte le funzioni di base sono supportate [http://www.x.org/wiki/RadeonFeature/]. Le performance di questi driver, installati di default su Fedora, possono essere inferiori mediamente del 25 % rispetto ai Catalyst [http://www.phoronix.com/scan.php?page=article&item=ubuntu-1504-hawaii&num=2], ma questo dato varia sensibilmente in base alla scheda e al programma utilizzati.
 E' importante inoltre ricordare che i driver proprietari, a differenza dei liberi, sono presenti solo per sistemi x86 ed x86_64, e che eventuali bug vanno non vanno segnalati a Fedora o ad RPMFusion, in quanto, non essendo disponibile il codice sorgente, è impossibile per la comunità correggere eventuali difetti riscontrati.
 
-Per queste ragioni '''si consiglia di utilizzare''', ove possibile, '''i driver liberi preinstallati.'''
+Per queste ragioni '''si consiglia di utilizzare''', ove possibile, i '''driver liberi già preinstallati.'''
 
 == Schede video supportate ==
 
@@ -42,6 +42,8 @@ Infine riavviare il proprio sistema:
 
 == Riferimenti ==
 
-Procedura ripresa da: [http://forums.fedoraforum.org/showthread.php?t=155503 fedoraforum]
+* Procedura ripresa da: [http://forums.fedoraforum.org/showthread.php?t=155503 fedoraforum]
+* Sito [http://www.amd.com/en-us/products/graphics ufficiale] del "reparto" schede grafiche di AMD (ex Ati).
+
 
 [[Categoria:Schede_grafiche]]
