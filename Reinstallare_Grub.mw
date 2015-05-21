@@ -43,7 +43,7 @@ Ora da root si eseguono questi passaggi, digitando nel terminale:
  # chroot /mnt/sysimage
  # grub2-install /dev/sdX
 Inserire al posto della '''X''' il disco su cui installare il boot-loader (generalmente è ''sda''). <br />
-Si passa ora all'aggiornamento dell'elenco dei sistemi operativi e dei kernel presenti, riscrivendo il file di configurazione di Grub2 con il comando seguente, che controlla la presenza o meno di una installazione tramite [http://it.wikipedia.org/wiki/Extensible_Firmware_Interface EFI] e provvede ad installare grub2 nel percorso specifico):
+Si passa ora all'aggiornamento dell'elenco dei sistemi operativi e dei kernel presenti che effettivamente verranno presentati all'avvio del computer, riscrivendo il file di configurazione di ''Grub2'' con il comando seguente, che controlla la presenza o meno di una installazione tramite [http://it.wikipedia.org/wiki/Extensible_Firmware_Interface EFI] e provvede ad installare grub2 nel percorso specifico:
  # (for f in /boot/{grub2,efi/EFI/fedora}/grub.cfg;do [ -f $f ]&&grub2-mkconfig -o $f;done)
 
 Fatto anche questo si esce da chroot con un semplice
