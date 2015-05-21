@@ -35,7 +35,7 @@ e riavviare il sistema, togliendo ovviamente il DVD dal drive.
 ===Grub2===
 [[File:Fedora16_Troubleshootings.png|thumb|right|200px|All'avvio scegliere "Troubleshootings"]]
 [[File:Fedora16_Rescue.png|thumb|right|200px|Scegliere poi "Rescue a fedora system"]]
-Questa parte della guida invece è riservata ai possessori di '''Fedora 15''' o superiori, in quanto Grub è aggiornato alla versione 1.99.
+Questa parte della guida invece è riservata ai possessori di '''Fedora 15''' o superiori, in quanto Grub è aggiornato alla versione 1.99, che ha apportato cambiamenti radicali.
 
 Una volta trovata la partizione esatta su cui andare a reinstallare Grub2, inserire il DVD di fedora nel drive, selezionarne l'avvio dal bios e recarsi nella sezione ''Troubleshootings'' dal menù di avvio, e poi ''Rescue a Fedora system'', come mostrato dalle due immagini a lato.<br />
 Dopo aver scelto la lingua di sistema e della tastiera il menù contestuale cercherà eventuali sistemi fedora già presenti e chiederà se montarli direttamente in automatico: acconsentite.<br />
@@ -43,8 +43,9 @@ Ora da root si eseguono questi passaggi, digitando nel terminale:
  # chroot /mnt/sysimage
  # grub2-install /dev/sdX
 Inserire al posto della '''X''' il disco su cui installare il boot-loader (generalmente è ''sda''). <br />
-Si passa ora all'aggiornamento dell'elenco dei sistemi operativi e dei kernel presenti, riscrivnedo il file di configurazione di Grub2 con:
+Si passa ora all'aggiornamento dell'elenco dei sistemi operativi e dei kernel presenti, riscrivendo il file di configurazione di Grub2 con il comando seguente, che controlla la presenza o meno di una installazione tramite [http://it.wikipedia.org/wiki/Extensible_Firmware_Interface EFI] e provvede ad installare grub2 nel percorso specifico):
  # (for f in /boot/{grub2,efi/EFI/fedora}/grub.cfg;do [ -f $f ]&&grub2-mkconfig -o $f;done)
+
 Fatto anche questo si esce da chroot con un semplice
  # exit
 e si riavvia la macchina, togliendo ovviamente il DVD dal drive.
