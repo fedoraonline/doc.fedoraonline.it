@@ -101,7 +101,7 @@ Verificare di aggiungere il markup: '''<nowiki>[[Categoria:Modifica in corso]]</
 
 {{ModificaArticolo|articolo=Pagina_principale|autore=/|responsabile=AlbertoChiusole|note=cambiare alcune guide con alcune più usate.|data=25/10/2013|stato=DaFare}}
 {{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=AlbertoChiusole|note=togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository.|data=25/10/2013|stato=DaFare}}
-{{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=FrancescoFrassinelli|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2015-May/001797.html ML].|data=18/05/2015|stato=InCorso}}
+{{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=FrancescoFrassinelli|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2015-May/001797.html ML].|data=23/05/2015|stato=Terminato}}
 {{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=/|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html ML].|data=22/02/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=/|data=08/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|note=rendere più visibile la categoria, anche nella pagina principale.|data=09/10/2014|stato=DaFare}}
