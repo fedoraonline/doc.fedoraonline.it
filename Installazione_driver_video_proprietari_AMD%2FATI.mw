@@ -35,7 +35,7 @@ E' preferibile aggiornare il proprio kernel prima di procedere:
  # yum update kernel
 
 Installare il driver:
- # yum install akmod-catalyst$(grep -x CONFIG_X86_PAE=y /boot/config-$(uname -r)&&echo -PAE) xorg-x11-drv-catalyst{,-libs.i686}
+ # yum install kmod-catalyst$(grep -x CONFIG_X86_PAE=y /boot/config-$(uname -r)&&echo -PAE) xorg-x11-drv-catalyst{,-libs.i686}
 
 Infine riavviare il proprio sistema:
  # reboot
