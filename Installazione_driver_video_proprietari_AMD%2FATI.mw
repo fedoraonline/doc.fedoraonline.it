@@ -6,7 +6,7 @@
 
 '''Molte persone si riferiscono ai driver proprietari [https://en.wikipedia.org/wiki/AMD_Catalyst Catalyst] per le schede video AMD come "driver ATI"''': questo accade perché ''[https://it.wikipedia.org/wiki/ATI_Technologies ATI Technologies Inc.]'' era una nota azienda produttrice di schede video, acquisita da AMD nel 2006 e chiusa formalmente nel 2010. A differenza di AMD, ATI sviluppava un solo driver, proprietario, chiamato Catalyst (talvolta noto come ''fglrx''). Dopo la acquisizione, AMD iniziò a rendere pubblici i dettagli tecnici delle sue schede video al fine di favorire lo sviluppo di driver liberi, alla quale lei stessa partecipa. Negli ultimi anni i driver liberi sono migliorati notevolmente, sia in termini di caratteristiche sia in termini di performance e si sta lavorando per giungere ad un driver kernel libero unificato condiviso tra i liberi e i proprietari [http://www.phoronix.com/scan.php?page=news_item&px=AMD-AMDGPU-Released].
 
-Oggi ''è quindi possibile '''scegliere''' che driver utilizzare'': '''libero''' (''radeon'' o ''radeonsi'' per le schede più recenti) o '''proprietario''' (''Catalyst/fglrx'').
+Oggi ''è quindi possibile '''scegliere''' che driver utilizzare'': '''libero''' (''radeon'', ''radeonsi'', o ''amdgpu'' per le schede più recenti) o '''proprietario''' (''Catalyst/fglrx'').
 
 === Differenze ===
 
