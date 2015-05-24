@@ -12,32 +12,42 @@ Il processo FedUp si divide in due parti. La prima, attraverso il client install
 Una volta scaricato tutti i pacchetti FedUp riavvia il sistema e passa alla seconda fase. Durante il riavvio, infatti vengono installati tutti i pacchetti scaricati precedentemente e verrà visualizzata una barra per segnalare l'avanzamento del processo di aggiornamento.
 
 == Preparazione del sistema ==
-{{Suggerimento|Benchè l'aggiornamento dovrebbe funzionare senza particolari problemi è consigliato sempre il backup dei propri dati.}}
+
+{{Suggerimento|Benché l'aggiornamento dovrebbe funzionare senza particolari problemi è consigliato sempre il backup dei propri dati.}}
 Le operazioni che seguono vanno tutte date con i privilegi di root:
 
  $ su -
  password
  #
 
+=== Operazioni preliminari ===
+
 Per poter passare da una versione di Fedora all'altra è necessario portare la vecchia release allo stato più aggiornato possibile. Di conseguenza la prima cosa da fare è un aggiornamento del sistema:
 
  # yum update
 
 L'aggiornamento può durare anche parecchio tempo, dipende dallo stato in cui si trovava la propria Fedora.<br />
+
+{{Warning|Se durante l'aggiornamento è stato aggiornato anche il kernel è necessario riavviare il sistema, perché FedUp deve essere eseguito utilizzando l'ultimo kernel disponibile.}}
+
+Si prosegue aggiornando FedUp alla versione presente nel repository di testing, per essere sicuri di utilizzare l'ultima versione disponibile.
+
+ # yum --enablerepo=updates-testing install fedup
+
 Una volta completato l'update è bene cancellare la cache di yum, per essere certi che non influisca nell'operazione di upgrade.
 
  # yum clean all
-{{Warning|Se durante l'aggiornamento è stato aggiornato anche il kernel è necessario riavviare il sistema, perchè il lancio di FedUp deve essere eseguito utilizzando l'ultimo kernel disponibile.}}
-Una volta riavviato ci si rilogga nel terminale come root per proseguire.
 
- # yum --enablerepo=updates-testing install fedup 
+E' inoltre consigliabile cancellare le tracce di precedenti aggiornamenti con:
 
-Esistono tre opzioni per procedere con l'aggiornamento: attraverso la Rete, un'immagine ISO oppure da un altro device.
+ # fedup --clean
 
+Esistono tre opzioni per procedere con l'aggiornamento: attraverso la rete, un'immagine ISO oppure da un altro device.
+
+=== Aggiornamento per Fedora 21 ===
 
 {{Warning|Importanti cambiamenti per l'aggiornamento a Fedora 21.}}
 
-=== Aggiornamento per Fedora 21 ===
 Fedora 21 è stata divisa in 3 categorie di prodotti (<'''PRODUCT'''>):<br />
 '''Workstation''': per l’utente Desktop<br />
 '''Server''': per l'utente Server<br />
@@ -56,7 +66,7 @@ Se si preferisce rimanere sul generale, creando quindi una propria "versione", u
 
 === Aggiornamento attraverso la Rete ===
 
-Questa è sicuramente l'opzione più consigliata, perchè permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
+Questa è sicuramente l'opzione più consigliata, perché permette di scaricare gli ultimi pacchetti disponibili per la propria Fedora.
 
  # fedup-cli --network 19 --debuglog fedupdebug.log
 
