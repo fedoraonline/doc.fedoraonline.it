@@ -8,7 +8,7 @@ Lo scopo della presente guida è quella di esplorare l'installazione della relea
 
 {{Suggerimento|L'utilizzo di metodi differenti da quelli ufficialmente consigliati dal Fedora Project potrebbe portare alla creazione di un dispositivo non avviabile o non correttamente funzionante.}}
 
-Per illustrare il processo di installazione, è stata utilizzata una macchina virtuale creata con [https://virt-manager.org/ virt-manager]. La capacità del disco fisso rappresentato è puramente indicativa. Anche il partizionamento è stato illustrato a titolo esemplificativo e non deve essere inteso come unico metodo valido e consigliato. Le ampie dimensioni di storage delle unità odierne – e la grande varietà di sistemi operativi presenti -  consentono all'utente di intraprendere strade diverse, compatibilmente con le esigenze personali. Ulteriori informazioni a riguardo, possono essere reperite all'interno della [http://docs.fedoraproject.org/en-US/Fedora/21/html/Installation_Guide/index.html documentazione] del Fedora Project.
+Per illustrare il processo di installazione, è stata utilizzata una macchina virtuale creata con [https://virt-manager.org/ virt-manager]. La capacità del disco fisso rappresentato è puramente indicativa. Anche il partizionamento è stato illustrato a titolo esemplificativo e non deve essere inteso come unico metodo valido e consigliato. Le ampie dimensioni di storage delle unità odierne – e la grande varietà di sistemi operativi presenti -  consentono all'utente di intraprendere strade diverse, compatibilmente con le esigenze personali. Ulteriori informazioni a riguardo, possono essere reperite all'interno della [http://docs.fedoraproject.org/en-US/Fedora/22/html/Installation_Guide/index.html documentazione] del Fedora Project.
 
 
 {{Suggerimento|Si consiglia fortemente la lettura preliminare della guida [[Dischi_e_partizioni:_le_basi]].}}
@@ -96,11 +96,11 @@ Il wizard dedicato al layout che si andrà a creare, permette di creare le parti
 [[File:fedora22inst_18.png|thumb|right|200px|Riepilogo delle modifiche.]]
 [[File:fedora22inst_15.png|thumb|center|600px|Partizionamento manuale.]] <br />
 
-Lo scopo del menù qui descritto, è quello di gestire gli schemi relativi ai dischi selezionati. Una volta sceltane la tipologia, occorre creare i diversi tipi di mount in modo automatico oppure procedere all'aggiunta manuale. Per ogni elemento, è possibile personalizzare capacità desiderata, file system ed – opzionalmente - etichetta. La [http://docs.fedoraproject.org/en-US/Fedora/21/html/Installation_Guide/sect-installation-gui-manual-partitioning-recommended.html documentazione ufficiale del Fedora Project], consiglia la creazione delle seguenti partizioni:
+Lo scopo del menù qui descritto, è quello di gestire gli schemi relativi ai dischi selezionati. Una volta sceltane la tipologia, occorre creare i diversi tipi di mount in modo automatico oppure procedere all'aggiunta manuale. Per ogni elemento, è possibile personalizzare capacità desiderata, file system ed – opzionalmente - etichetta. La [http://docs.fedoraproject.org/en-US/Fedora/22/html/Installation_Guide/sect-installation-gui-manual-partitioning-recommended.html documentazione ufficiale del Fedora Project], consiglia la creazione delle seguenti partizioni:
 * '''/boot''': contiene i file necessari all'avvio del sistema. 500Mb sono sufficienti.
 * '''/''': contiene cartelle e file relativi al sistema operativo e ai programmi installati. È consigliabile una dimensione compresa tra i 10 e i 20gb
 * '''swap''': è la memoria virtuale che viene sfruttata dal sistema in caso di saturazione di quella di tipo fisico. La dimensione deve essere decisa in base all'ammontare di RAM del sistema. Se la memoria è meno di 2gb, allora occorre includere una partizione di swap di dimensioni doppie rispetto ad essa. Se la RAM va dai 2 agli 8gb, la swap può eguagliarne la capacità in termini di giga-bytes.
-* '''/home''': contiene file e directory appartenenti agli utenti. Conviene sfruttare lo spazio rimanente. Avere tale partizione separata è utile per preservare i dati personali nel caso in cui si opti per una nuova installazione di Fedora.
+* '''/home''': contiene file e directory appartenenti agli utenti. Conviene sfruttare lo spazio rimanente (allocando almeno 10gb). Avere tale partizione separata è utile per preservare i dati personali nel caso in cui si opti per una successiva nuova installazione di Fedora.
 
 Come specificato dall'interfaccia, la conferma applicata al riepilogo proposto da Anaconda, non implica un'immediata applicazione dei cambiamenti previsti.
 
@@ -171,15 +171,11 @@ Durante il processo vero e proprio, una barra d'avanzamento fornisce dettagli re
 [[File:fedora22inst_25.png|thumb|right|200px|Configurazione utente avanzata.]]
 [[File:fedora22inst_21.png|thumb|center|600px|Esecuzione dell'installazione.]] <br />
 
-In seguito al completamento dell'installazione dei pacchetti previsti dall'edizione Workstation, un apposito bottone invita a terminare la configurazione di Fedora.
-
-[[File:fedora22inst_27.png|thumb|center|600px|Installazione pacchetti completata.]] <br />
-
-A meccanismo compiuto, basterà procedere al '''riavvio del computer'''.
+In seguito al completamento dell'installazione  - e della configurazione - dei pacchetti previsti dall'edizione Workstation, basterà terminare Anaconda e procedere al '''riavvio del computer'''.
 
 [[File:fedora22inst_30.png|thumb|right|200px|Riavvio del computer (1).]]
 [[File:fedora22inst_31.png|thumb|tight|200px|Riavvio del computer (2).]]
-[[File:fedora22inst_29.png|thumb|center|600px|Configurazione completata.]] <br />
+[[File:fedora22inst_29.png|thumb|center|600px|Installazione completata.]] <br />
 
 == Utilizzo del nuovo sistema operativo ==
 
