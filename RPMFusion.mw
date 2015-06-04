@@ -11,12 +11,12 @@ La guida espone due metodi differenti per l'installazione di tali repository.
 Per i free di Fedora 20 per esempio, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-20.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-20.noarch.rpm questo]. Si possono poi installare tramite installatore grafico semplicemente tramite doppio clic su tali files.
 Per altre versioni di Fedora fare riferimento alla [http://rpmfusion.org/Configuration pagina ufficiale].
 
-In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale entrambi i repo, è possibile farlo attingendo ai link sfruttando le potenzialità di yum:
+In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale entrambi i repo, è possibile farlo attingendo ai link sfruttando le potenzialità di dnf:
 
- # yum install <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</nowiki>
+ # dnf install <nowiki>http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm</nowiki>
 <!-- {{Warning|Il comando va digitato su una unica riga}} -->
 {{suggerimento|Può capitare che durante l'installazione non si aggiorni in automatico la chiave GPG.<br/>In questo caso basta aggiornare i repo da terminale; questa operazione si porterà dietro anche la chiave più aggiornata:
- # yum --nogpgcheck update \*release\*}}
+ # dnf --nogpgcheck update \*release\*}}
 
 == Installazione manuale ==
 È, ovviamente, possibile inserire a mano i repo creando dei files di testo da inserire all'interno della directory ''/etc/yum.repos.d/'', che è esattamente cioè che fa il pacchetto rpm in automatico.
@@ -139,10 +139,10 @@ con le seguenti istruzioni:
 ==Conclusione==
 Seguite queste istruzioni si potranno installare molti più software non presenti nei normali repo di fedora, ad esempio i [[Multimedia_Player_e_codecs|codec]] per la riproduzione di flussi dati, alcune [[Estensioni_di_Gnome-Shell|estensioni per gnome-shell]] e molti altri programmi.<br/>
 Per una lista completa di tutti i programmi disponibili da tutti i repo rpmfusion (che devono però già essere installati sul computer) si può fare così:
- $ yum list available --disablerepo=* --enablerepo=rpmfusion-{free,free-updates,nonfree,nonfree-updates} |more
+ $ dnf list available --disablerepo=* --enablerepo=rpmfusion-{free,free-updates,nonfree,nonfree-updates} |more
 
 == Riferimenti ==
 * http://www.rpmfusion.org/
  
 [[Categoria:Repository]]
-[[Categoria:Yum]]
+[[Categoria:Dnf]]
