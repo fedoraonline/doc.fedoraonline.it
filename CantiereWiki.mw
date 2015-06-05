@@ -75,6 +75,8 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|rilettore=-|data=23/04/2015|stato=DaFare}}
 {{RiletturaArticolo|articolo=Gnome-Shell|autore=-|rilettore=-|data=25/04/2015|stato=DaFare|note=bisogna vedere come si comporta con F22}}
 {{RiletturaArticolo|articolo=Nautilus scripts e personalizzazioni|autore=Riccardo Volpe|rilettore=-|data=25/04/2015|stato=DaFare|note=è ancora utile il metodo attraverso python? perché sulla 21 a me funziona mettendo un modello vuoto nella cartella Modelli.<br>vedere anche [http://forum.fedoraonline.it/viewtopic.php?id=23532 qua] ... ~bebo}}
+{{RiletturaArticolo|articolo=Installazione Fedora 22|autore=GiulioErler|data=28/05/15|rilettore=-|stato=DaFare}}
+{{RiletturaArticolo|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|note=La guida aggiornata da verificare [[Utente:AlbertoChiusole/sandboxes/sabbiera1|SI TROVA QUI]]|data=5/6/2015|release=F22|rilettore=-|stato=DaFare}}
 |}
 
 ''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
@@ -136,7 +138,7 @@ La tabella usa il template '''GuidePeriodiche''', ed è necessario utilizzare i 
 ! Stato
 
 {{GuidePeriodiche|articolo=Installazione Fedora 22|autore=GiulioErler|data=28/05/15|release=F22|responsabile=-|stato=DaFare}}
-{{GuidePeriodiche|articolo=Aggiornamento Fedora con FedUp|autore=RobertMayr|note=guida ufficiale [https://fedoraproject.org/wiki/FedUp fpo].|data=-|release=F21|responsabile=AlbertoChiusole|stato=DaFare}}
+{{GuidePeriodiche|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|note=guida ufficiale [https://fedoraproject.org/wiki/FedUp fpo].|data=5/6/2015|release=F22|responsabile=-|stato=Terminato}}
 {{GuidePeriodiche|articolo=RPMFusion|autore=-|note=Va controllata la compatibilità.<br>sito [http://www.rpmfusion.org/ official]|data=04/06/15|release=F22|responsabile=-|stato=DaFare}}
 |}
 
