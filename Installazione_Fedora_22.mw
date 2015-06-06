@@ -1,4 +1,3 @@
-{{InCorso|autore=GiulioErler}}
 {{Autore|GiulioErler}}
 {{Collaboratori|AlessandroBugliazzini}}
 
@@ -33,9 +32,9 @@ Quest'ultima voce elenca le seguenti procedure:
 Ultimato l'avvio del sistema operativo Live, un'utile schermata propone di partire subito con l'installazione vera e propria di Fedora. Se il computer non è connesso ad Internet per mezzo di un cavo Ethernet, è consigliato configurare preliminarmente le '''opzioni di rete''' e avviare il processo solo in un momento successivo (tramite l'apposita icona reperibile nell'insieme delle applicazioni).
 
 
-[[File:fedora22inst_2.png|thumb|right|200px|Troubleshooting]]
+[[File:fedora22inst_2.png|thumb|right|200px|Troubleshooting.]]
 [[File:fedora22inst_3.png|thumb|right|200px|Finestra di benvenuto.]]
-[[File:fedora22inst_1.png|thumb|center|600px|Schermata di avvio]]
+[[File:fedora22inst_1.png|thumb|center|600px|Schermata di avvio.]]
 
 La primissima videata di '''Anaconda''' – il software che si preoccuperà di installare il sistema – offre l'opportunità di selezionare la '''lingua preferita'''. È opportuno ricordare che l'etichetta presente in alto a destra, riguardante il layout della tastiera, non è modificabile. Sarà successivamente possibile configurare anche questo aspetto.
 
@@ -51,8 +50,8 @@ La schermata successiva presenta il '''"riepilogo di installazione"''', composto
 
 Il menù relativo alla '''disposizione della tastiera''', consente di scegliere quali layout includere nel sistema. Una casella di testo consente inoltre di verificarne il funzionamento associato.
 
-[[File:fedora22inst_8.png|thumb|right|200px|Aggiunta disposizione della tastiera]]
-[[File:fedora22inst_7.png|thumb|right|200px|Opzioni di cambio disposizione]] <br />
+[[File:fedora22inst_8.png|thumb|right|200px|Aggiunta disposizione della tastiera.]]
+[[File:fedora22inst_7.png|thumb|right|200px|Opzioni di cambio disposizione.]] <br />
 [[File:fedora22inst_6.png|thumb|center|600px|Disposizione della tastiera.]]
 
 Per aggiungere, togliere o ordinare i vari schemi, occorre agire tramite i tasti presenti appena sotto l'apposita lista. Tramite il tasto '''Opzioni''', è inoltre facile scegliere quali combinazioni utilizzare per cambiare la configurazione.
@@ -61,7 +60,7 @@ Per aggiungere, togliere o ordinare i vari schemi, occorre agire tramite i tasti
 
 Corredata da un elegante e utile planisfero, la categoria relativa all'orologio consente di selezionare il '''fuso orario'''. 
 
-[[File:fedora22inst_10.png|thumb|right|200px|Server NTP]] <br />
+[[File:fedora22inst_10.png|thumb|right|200px|Server NTP.]] <br />
 [[File:fedora22inst_9.png|thumb|center|600px|Ora & Data.]]
 
 È possibile fare in modo che Fedora sincronizzi l'ora tramite Internet. Un'opzione consente inoltre di aggiungere host personalizzati da usare come Server NTP.
@@ -76,8 +75,8 @@ Il compito dell'interfaccia qui proposta è essenzialmente quello di attribuire 
 
 La sezione chiamata '''"Destinazione d'installazione"''', è senza dubbio la più importante di tutto il processo. Configurare partizioni, cifratura, bootloader e supporti interessati è  scopo delle funzionalità qui proposte.
 
-[[File:fedora22inst_12.png|thumb|right|200px|Dischi di rete]]
-[[File:fedora22inst_13.png|thumb|right|200px|Sommario completo disco e bootloader]]
+[[File:fedora22inst_12.png|thumb|right|200px|Dischi di rete.]]
+[[File:fedora22inst_13.png|thumb|right|200px|Sommario completo disco e bootloader.]]
 [[File:fedora22inst_11.png|thumb|center|600px|Destinazione d'installazione.]]
 
 Per prima cosa, conviene scegliere le unità da utilizzare come destinazione, inserendo eventuali dischi di rete, se necessario. Per quanto riguarda il layout di partizionamento, le alternative sono due: agire manualmente o demandare il compito ad Anaconda, il quale opterebbe per la soluzione LVM.  Nel caso in cui lo spazio sia insufficiente, il software proporrà il ridimensionamento delle partizioni esistenti. All'occorrenza, è inoltre possibile cifrare i dati applicando una password da digitare all'avvio del sistema e scegliere la destinazione del boot loader Grub.
@@ -183,12 +182,12 @@ Prima della riaccensione della macchina, è opportuno '''rimuovere correttamente
 
 Se è stato creato un utente, il sistema lo evidenzierà all'interno di '''Gdm''', il gestore degli  accessi di Gnome. Una volta correttamente effettuato il log-in, le finestre di '''gnome-initial-setup''' elencheranno alcuni passaggi finali per perfezionare l'esperienza d'utilizzo.
 
-[[File:fedora22inst_32.png|thumb|right|200px|Gdm]]
-[[File:fedora22inst_34.png|thumb|right|200px|gnome-initial-setup – Digitazione]]
-[[File:fedora22inst_33.png|thumb|center|600px|gnome-initial-setup – Lingua]]
-[[File:fedora22inst_35.png|thumb|right|200px|gnome-initial-setup – Privacy]]
-[[File:fedora22inst_36.png|thumb|right|200px|gnome-initial-setup – Account online]]
-[[File:fedora22inst_37.png|thumb|center|600px|gnome-initial-setup – Fedora pronta all'uso]]
+[[File:fedora22inst_32.png|thumb|right|200px|Gdm.]]
+[[File:fedora22inst_34.png|thumb|right|200px|gnome-initial-setup – Digitazione.]]
+[[File:fedora22inst_33.png|thumb|center|600px|gnome-initial-setup – Lingua.]]
+[[File:fedora22inst_35.png|thumb|right|200px|gnome-initial-setup – Privacy.]]
+[[File:fedora22inst_36.png|thumb|right|200px|gnome-initial-setup – Account online.]]
+[[File:fedora22inst_37.png|thumb|center|600px|gnome-initial-setup – Fedora pronta all'uso.]]
 
 
 Successivamente, sarà la volta della '''guida di Gnome''', che è consigliato consultare sopratutto nel caso in cui non si abbia una sufficiente dimestichezza con tale ambiente desktop. All'interno della documentazione di Fedora Online sono presenti altre pagine utili, come ad esempio:
@@ -196,12 +195,11 @@ Successivamente, sarà la volta della '''guida di Gnome''', che è consigliato c
 * [[Gnome-Shell]]: dettagli riguardanti l'interfaccia utente di Gnome.
 * [[Nautilus_scripts_e_personalizzazioni]]: personalizzazioni relative al gestore di file e cartelle predefinito. <br /> <br />
 
-[[File:fedora22inst_38.png|thumb|center|600px|Primi passi]] <br />
+[[File:fedora22inst_38.png|thumb|center|600px|Primi passi.]] <br />
 
 Ed infine, eccolo qui! Il desktop predefinito della nostra nuova Fedora è finalmente '''pronto per essere utilizzato'''!
 
-[[File:fedora22inst_39.png|thumb|center|600px|Il desktop Gnome]] <br />
+[[File:fedora22inst_39.png|thumb|center|600px|Il desktop Gnome.]] <br />
 
 
 [[Categoria:Installazione]]
-[[Categoria:Scrittura in corso]]
