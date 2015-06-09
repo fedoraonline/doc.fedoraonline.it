@@ -75,7 +75,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|rilettore=-|data=23/04/2015|stato=DaFare}}
 {{RiletturaArticolo|articolo=Gnome-Shell|autore=-|rilettore=-|data=25/04/2015|stato=DaFare|note=bisogna vedere come si comporta con F22}}
 {{RiletturaArticolo|articolo=Nautilus scripts e personalizzazioni|autore=Riccardo Volpe|rilettore=-|data=25/04/2015|stato=DaFare|note=è ancora utile il metodo attraverso python? perché sulla 21 a me funziona mettendo un modello vuoto nella cartella Modelli.<br>vedere anche [http://forum.fedoraonline.it/viewtopic.php?id=23532 qua] ... ~bebo}}
-{{RiletturaArticolo|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|data=5/6/2015|release=F22|rilettore=-|stato=DaFare}}
+{{RiletturaArticolo|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|data=5/6/2015|release=F22|rilettore=AndreaMasala|stato=InCorso}}
 |}
 
 ''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
