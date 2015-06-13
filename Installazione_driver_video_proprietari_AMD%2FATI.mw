@@ -22,18 +22,18 @@ Per sapere se la propria scheda video è supportata si può confrontare l'output
 
 == Installazione del driver ==
 
-{{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
+{{Nota|Prerequisito|Per l'installazione via dnf è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 
 Tutte le operazioni vanno fatte da superutente (chiamato comunemente ''root'').
 
 Se si è installato il driver Catalyst dal sito web di AMD (e non tramite pacchetto RPM), ripulire il proprio sistema:
- # yum reinstall mesa-libGL
+ # dnf reinstall mesa-libGL
 
 E' preferibile aggiornare il proprio kernel prima di procedere:
- # yum update kernel
+ # dnf update kernel
 
 Installare il driver:
- # yum install kmod-catalyst$(grep -x CONFIG_X86_PAE=y /boot/config-$(uname -r)&&echo -PAE) xorg-x11-drv-catalyst{,-libs.i686}
+ # dnf install kmod-catalyst$(grep -x CONFIG_X86_PAE=y /boot/config-$(uname -r)&&echo -PAE) xorg-x11-drv-catalyst{,-libs.i686}
 
 Infine riavviare il proprio sistema:
  # reboot
