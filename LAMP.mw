@@ -9,15 +9,15 @@ LAMP e' un acronimo che indica la piu' famosa piattaforma per lo sviluppo di app
  #}}
 
 === Installazione del server Mysql ===
- # yum install mysql mysql-server
+ # dnf install mysql mysql-server
 
 === Installazione del server Apache e di Php ===
- # yum install httpd php php-common
+ # dnf install httpd php php-common
 
 === Supporti ===
 Per far sì che il server Apache funzioni anche per i supporti più comuni, installare i seguenti pacchetti:
 
- # yum install php-pear php-pdo php-mysql php-pgsql php-pecl-memcache php-gd php-mbstring php-mcrypt php-xml
+ # dnf install php-pear php-pdo php-mysql php-pgsql php-pecl-memcache php-gd php-mbstring php-mcrypt php-xml
 
 === Il web server Apache ===
 A questo punto l'ambiente LAMP e' pronto per l'uso. La cartella ''/var/www/html'' e' la location di default, detta anche "root document path", per i propri file web.<br />
@@ -68,7 +68,7 @@ Come per Apache è necessario avviare il server Mysql:
 
 Per una facile gestione dei database MySQL si può utilizzare una semplice interfaccia web, phpmyadmin:
 
- # yum install phpmyadmin
+ # dnf install phpmyadmin
 
 Per poter utilizzare questo tool è necessario impostare una password per l'amministratore dei database Mysql (root).
 
