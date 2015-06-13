@@ -24,22 +24,22 @@ NOTA: per fedora  20 attualmente non esistono driver aggiornati compatibili per 
 
 ==Installazione dei drivers usando RPMFusion==
 ===Installazione del driver===
-{{Nota|Prerequisito|Per l'installazione via Yum è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
+{{Nota|Prerequisito|Per l'installazione via dnf è necessario installare e configurare preventivamente il repository di [[RPMFusion|RPMFusion]].}}
 Per sicurezza dare un:
- # yum update rpmfusion*
+ # dnf update rpmfusion*
 Occorre installare il pacchetto sviluppo del kernel:
- # yum install kernel-devel
+ # dnf install kernel-devel
 Si può quindi installare il driver NVidia, facendo attenzione alla giusta versione del driver a seconda della scheda video utilizzata:
 *serie 400 o superiore
- # yum install akmod-nvidia kmod-nvidia
+ # dnf install akmod-nvidia kmod-nvidia
 *serie da 8 a 300
- # yum install akmod-nvidia-340xx kmod-nvidia-340xx
+ # dnf install akmod-nvidia-340xx kmod-nvidia-340xx
 *serie da 6 a 7
- # yum install akmod-nvidia-304xx kmod-nvidia-304xx
+ # dnf install akmod-nvidia-304xx kmod-nvidia-304xx
 *serie 5
- # yum install akmod-nvidia-173xx kmod-nvidia-173xx
+ # dnf install akmod-nvidia-173xx kmod-nvidia-173xx
 *serie da 2 a 4
- # yum install akmod-nvidia-96xx kmod-nvidia-96xx
+ # dnf install akmod-nvidia-96xx kmod-nvidia-96xx
 
 Prima di riavviare il sistema, è neccessario un ultimo passaggio:
  # mv /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r)-nouveau.img
@@ -53,19 +53,19 @@ In alcuni casi, può essere utile effettuare ulteriori operazioni, che vengono s
 ==== Accelarazione video per applicazioni a 32 bit in Fedora 64 bit ====
 Se si sta utilizzando una fedora a 64 bit, e si vuole che l'accelerazione video sia disponibile anche per le applicazioni a 32 bit, bisogna inoltre installare un ulteriore pacchetto: 
 *Per una serie 400 o superiore 
- # yum install xorg-x11-drv-nvidia-libs.i686
+ # dnf install xorg-x11-drv-nvidia-libs.i686
 *Per una serie da 8 a 300 
- # yum install xorg-x11-drv-nvidia-340xx-libs.i686
+ # dnf install xorg-x11-drv-nvidia-340xx-libs.i686
 *Per una serie 6 o 7 
- # yum install xorg-x11-drv-nvidia-304xx-libs.i686
+ # dnf install xorg-x11-drv-nvidia-304xx-libs.i686
 *Per una serie 5
- # yum install xorg-x11-drv-nvidia-173xx-libs.i686
+ # dnf install xorg-x11-drv-nvidia-173xx-libs.i686
 *Per una serie da 2 a 4
- # yum install xorg-x11-drv-nvidia-96xx-libs.i686
+ # dnf install xorg-x11-drv-nvidia-96xx-libs.i686
 
 ==== Decodifica filmati su gpu ====
 Se si possiede una serie 8 o superiore, per poter usufruire della decodifica video offerta da VDPAU, bisogna aggiungere il pacchetto:
- # yum install libva-vdpau-driver
+ # dnf install libva-vdpau-driver
 
 ==== Risoluzione problemi monitor ====
 Qualora il monitor non venga riconosciuto e la frequenza non sia quella indicata dal produttore, per una regolazione  più "fine" del display e si vuole impostare i valori corretti, ci si deve servire di questo tool di nvidia per farlo. 
@@ -127,7 +127,7 @@ deve restituire "Kernel driver in use: nvidia".
  $ glxinfo | grep direct
 deve restiture come prima riga "direct rendering: Yes"
 *Terzo test (valido solo per la verifica della corretta decodifica filmanti sulla gpu per geforce serie 8 o superiore). Bisogna prima installare:
- # yum install vdpauinfo libva-utils
+ # dnf install vdpauinfo libva-utils
 e poi verificare che non generino errori i seguenti comandi, che dovrebbero elencare le capacità di decodifica:
  $ vdpauinfo
  $ vainfo
@@ -136,7 +136,7 @@ e poi verificare che non generino errori i seguenti comandi, che dovrebbero elen
 Nel caso si voglia disinstallare i driver NVidia, è possibile farlo anche nel caso Fedora non possa avviarsi in modalità grafica.
 
 Bisogna avviare fedora in init 3, in modo da poter poi rimuovere i pacchetti:
- # yum remove xorg-x11-drv-nvidia\* nvidia-settings akmod-nvidia
+ # dnf remove xorg-x11-drv-nvidia\* nvidia-settings akmod-nvidia
  # reboot
 
 ==Installazione dei drivers usando l'installer scaricabile dal sito di nvidia==
@@ -149,12 +149,12 @@ Quindi far partire l'installer con
 Usando questo metodo, saranno necessarie alcune librerie; l'installer man mano dirà cosa è necessario.
 Personalmente nel sistema ho installato i gruppi "Strumenti di sviluppo" e "Librerie di sviluppo".
 Per installarli:
- # yum groupinstall "Strumenti di sviluppo" "Librerie di sviluppo"
+ # dnf groupinstall "Strumenti di sviluppo" "Librerie di sviluppo"
 (Se avete voglia di battere meno tasti potete dare:
- # yum install @development-tools @development-libs
+ # dnf install @development-tools @development-libs
 Se si possiede un sistema a 64 bit, e si vuole che funzionino le "OpenGL 32 bit
 compatibility mode", si può installare:
- # yum install glibc*686
+ # dnf install glibc*686
 Non credo che si avrà bisogno di altro.
 Se si ha necessità di disinstallare i drivers nvidia usando questo II metodo occorrerà dare un:
  # nvidia-uninstall
