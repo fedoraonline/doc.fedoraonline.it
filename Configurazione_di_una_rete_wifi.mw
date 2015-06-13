@@ -51,7 +51,7 @@ Si proseguirà direttamente con l'installazione di madwifi, per chi ha una sched
 
 Per installare madwifi si può scaricare il file sorgente dal sito ufficiale e compilarlo oppure installare il pacchetto madwifi e il pacchetto per il kernel da livna. Per fare la seconda (e la più semplice) si deve configurare i [[:Categoria:Repository|repository]] e poi digitare nel terminale:
 
- # yum --enablerepo=livna install kmod-madwifi madwifi 
+ # dnf --enablerepo=livna install kmod-madwifi madwifi 
 
 L'ultima versione di madwifi verrà installata insieme al modulo del kernel e probabilmente alla propria scheda verrà dato il nome del dispositivo ''wifi0''. Per l'uso serve però una piccola modifica, perchè ''wifi0'' la si dovrà configurare come la scheda ''eth0'', invece per il wireless si ha bisogno di un dispositivo ''ath0''.<br />
 Per verificarlo si può andare nella sezione "rete" del menu di amministrazione per poi vedere se si riesce a caricare il modulo per ''ath0''.
@@ -83,7 +83,7 @@ Andare avanti fino a trovare la configurazione e gli strumenti necessari per and
 Per installare ndiswrapper è necessario, a differenza del driver madwifi, soddisfare alcuni prerequisiti:
 <ol>
 <li> Aver compilato il proprio kernel o almeno installato gli header del kernel, per farlo basterà digitare, dopo aver configurato i repository:
-<pre># yum install kernel-devel</pre>
+<pre># dnf install kernel-devel</pre>
 e poi, per avere il link ai propri header nella posizione giusta, creare un link simbolico:
 <pre># ln -s  /usr/src/kernels/<versione-del-kernel> /lib/modules/<versione-del-kernel>/build</pre>
 </li>
@@ -123,7 +123,7 @@ E per vedere la propria scheda attiva con il suo dispositivo si può digitare:
 Dopo aver visto le installazioni con i due driver per le schede wireless ora si vuole descrivere come configurare correttamente la connessione al router o access point. Per primo la soluzione più semplice ma anche meno sicura, ovvero quella in un sistema aperto.<br />
 Esiste uno strumento in modalità grafica che potrà dare una mano nella configurazione, senza dover specificare tutto su linea di comando. Si installa con:
 
- # yum install wlassistant
+ # dnf install wlassistant
 
 Il programma è molto piccolo e lo si troverà nel menu di amministrazione del sistema, la configurazione è semplice ed intuitiva:
 [[Image:Wlass1.jpg|center]]
@@ -146,7 +146,7 @@ Per avviare la scheda all'avvio scegliere sempre la scheda di configurazione in 
 La configurazione con cifratura WPA-PSK è un pochino più difficile ma anche la più sicura. Ci sono vari strumenti, come d'altronde per le altre cifrature, che si possono utilizzare, ma nessuno in modalità grafica da un supporto al 100% per il WPA-PSK.<br />
 Si userà quindi il metodo testuale, installando prima di tutto ''wpa_supplicant'':
 
- # yum install wpa_supplicant
+ # dnf install wpa_supplicant
 
 Si può procedere subito con il file di configurazione aprendo con il proprio editor di testo preferito il file ''/etc/wpa_supplicant/wpa_supplicant.conf''.<br />
 {{Suggerimento|E' buona norma salvarsi una copia dell'originale rinominandola ''wpa_supplicant-old.conf'', poi modificare il file in base alle proprie impostazioni.}}
