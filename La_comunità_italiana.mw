@@ -25,7 +25,7 @@ Per parlare ai partecipanti del Fedora Project, loggati sulla freenode IRC netwo
 # [http://www.fedoraonline.it/irc Webchat direttamente su FOL]
 # Chat client xchat
 
- $ su -c 'yum install xchat'
+ $ su -c 'dnf install xchat'
 
 * Avviare xchat da Applicazioni --> Internet --> IRC
 * Digitare Nickname, Username e nome reale
