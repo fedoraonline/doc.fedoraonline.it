@@ -24,11 +24,11 @@ Il software che utilizzeremo per il VoIP è il client IAX2 idefisk, liberamente 
 Il primo passo è ovviamente l'installazione del sistema operativo sul server. Scelgo la distro Fedora Core 4 (la 5 mi ha dato qualche problema...): l'installazione avviene da DVD con configurazione tipica per "Server". Aggiungo solo X Window e Gnome per l'interfaccia grafica.<br />
 Al termine dell'installazione provvedo ad effettuare tutti gli aggiornamenti ufficiali rilasciati finora con (N.B.: ''Tutti i comandi che lancerò da questo momento vengono effettuati da root!''):
 
- # yum update yum
+ # dnf update dnf
 
 e poi
 
- # yum update
+ # dnf update
  # reboot
 
 Dopo il riavvio mi ritrovo con il kernel 2.6.15-1.1831_FC4 (il più recente, al momento in cui scrivo). Verifico che tra i servizi configurati all'avvio ci sia il minimo indispensabile per ciò che devo fare:
@@ -55,7 +55,7 @@ Dopo il riavvio mi ritrovo con il kernel 2.6.15-1.1831_FC4 (il più recente, al 
 
 Sul sito ufficiale della [http://www.eicon.com/ ''Eicon''] ci sono le versioni rpm dei driver già pacchettizzati per Fedora, ma solo per la Core 1 con un determinato kernel, quindi, dopo aver riempito [http://www.eicon.com/worldwide/products/MediaGateways/DivaServerforLinux.htm?dl=1&en_prod=&regID=6261 un apposito modulo], scarico gli rpm a livello di sorgente versione 7.7 per la mia scheda da [http://downloads.eicon.com/download/p/linux/source/105-23/download.htm questo link]. Stando alle informazioni che leggo, riportate anche sul sito [http://www.voip-info.org/ Voip-info], la scheda è supportata da Asterisk... bene! E visto che ci sono, scarico anche la ''Quick Installation Guide'', la ''Reference Guide'' e le ''Source Package installation notes''... mi saranno utili per l'installazione.<br />
 Per la corretta installazione dei driver è necessario scaricare il pacchetto kernel-devel:
- # yum install kernel-devel
+ # dnf install kernel-devel
  
  =============================================================================
   Package                 Arch       Version          Repository        Size
@@ -194,7 +194,7 @@ Ora, sempre da root:
 Per utilizzare la mia scheda ''Eicon Diva Server V-4Bri'' devo installare anche il driver ''chan_capi (Asterisk/OpenPBX ISDN CAPI chan driver)'' scaricabile da [http://sourceforge.net/projects/chan-capi/ Sourceforge]. Il file che prelevo è ''chan_capi-cm-0.6.4.tar.gz'', e lo copio in ''/usr/src/'':<br />
 Per risolvere le dipendenze installo anche ''isdn4k-utils-devel'':
 
- # yum install isdn4k-utils-devel
+ # dnf install isdn4k-utils-devel
 
 Per installare chan_capi:
  # cd /usr/src
