@@ -120,7 +120,7 @@ Una volta aperto, il terminale si presenta così:
 Il terminale indica il nome utente (fol), il nome della macchina (localhost), la posizione in cui ci si trova ('''~''' equivale alla propria home directory) e infine dice come si è loggati ('''$''' indica che si è loggati come utente normale).<br />
 Qualche esempio:
 
- # yum install firefox
+ # dnf install firefox
 
 oppure
 
