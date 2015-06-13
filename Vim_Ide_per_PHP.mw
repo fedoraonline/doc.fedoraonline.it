@@ -11,7 +11,7 @@ La guida è perfettamente funzionante sulla serie 7 di Vim installato su fedora 
 
 Per incominciare bisogna installare Vim, aprendo un terminale basta digitare in Fedora:
 
- $ su -c "yum install vim-minimal vim-common vim-enhanced" 
+ $ su -c "dnf install vim-minimal vim-common vim-enhanced" 
 
 L'installazione e la configurazione di un server LAMP (Linux Apache MySql Php) può essere seguita nell'apposita [[:LAMP|guida]].
 
@@ -47,7 +47,7 @@ L'installazione è davvero semplice, basta scaricare il pacchetto dalla pagina d
 
 Per utilizzare questo pacchetto è importante avere installato sul proprio sistema elinks. Per installarlo in fedora basta digitare in un terminale:
 
- $ su -c "yum install elinks" 
+ $ su -c "dnf install elinks" 
 
 L'uso di ManPageView è davvero molto semplice. Se c'è una connessione attiva a internet all'interno della propria sessione di Vim in modalità normale (non inserimento) basta digitare:
 
@@ -100,7 +100,7 @@ Esiste un [http://cscope.sourceforge.net/cscope_vim_tutorial.html bellissimo tut
 I passi fondamentali da seguire per poter subito usufruire di cscope sono:<br />
 installare cscope e con fedora basta:
 
- $ su -c "yum install cscope" 
+ $ su -c "dnf install cscope" 
 
 poi scaricare all'interno della cartella <code>.vim/plugin</code> il plugin per Vim [http://cscope.sourceforge.net/cscope_maps.vim cscope_maps.vim], lo si dovrebbe fare agilmente con questo comando da bash:
 
@@ -138,7 +138,7 @@ Questo per un uso basilare, per un uso più approfondito rimando al tutorial che
 Cscope è davvero utile per ritrovare facilmente pezzi di codice all'interno del proprio progetto. [http://ctags.sourceforge.net/ Ctags] (anche noto come [http://ctags.sourceforge.net/ Exuberant Ctags]) è un altro strumento molto utile per poter saltare e navigare all'interno del proprio codice.<br />
 Per prima cosa è necessario avere installato il programma ctags, se non è installato basta:
 
- $ su -c "yum install ctags" 
+ $ su -c "dnf install ctags" 
 
 Ora bisogna creare la lista dei tag del proprio progetto Php con ctags, da bash dopo essere entrati nella directory di lavoro:
 
@@ -163,7 +163,7 @@ Se invece di <code>Invio</code> si preme la barra spaziatrice si può vedere in 
 Nello sviluppo di un programma non può mancare la fase di debug. Xdebug è un'estensione per il Php molto utile per fare il debug di quest'ultimo.<br />
 Per installarlo in Fedora è molto semplice:
 
- $ su -c "yum install php-pecl-xdebug" 
+ $ su -c "dnf install php-pecl-xdebug" 
 
 Per fare il debug di una applicazione Php ci sono vari sistemi, quello che propongo e che trovo più semplice e utile è il debug remoto. La documentazione ufficiale e molto ben fatta, si trova a [http://www.xdebug.org/docs/remote questo indirizzo].<br />
 In questo articolo mi concentro su Vim, non sulle possibili differenti configurazioni di Xdebug e su come farlo funzionare correttamente, dunque rimando tutto alla documentazione ufficiale che è più che esauriente.<br />
