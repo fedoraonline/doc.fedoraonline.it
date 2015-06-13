@@ -9,8 +9,8 @@ sono mal gestite dal modulo uvcvideo che è "costretto" all'errore:
 Se ci si trova in una situazione del genere, consigliamo di eseguire la seguente procedura testata sul kernel 2.6.30 F11.
 
 == Prima di tutto installare: ==
- # yum groupinstall "Strumenti di sviluppo"
- # yum install kernel-devel kernel-headers
+ # dnf groupinstall "Strumenti di sviluppo"
+ # dnf install kernel-devel kernel-headers
 
 gli strumenti necessari, controllare che i devel siano della stessa versione del kernel in uso.<br />
 Indi dare il comando:
