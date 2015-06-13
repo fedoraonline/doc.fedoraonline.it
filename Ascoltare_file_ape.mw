@@ -6,7 +6,7 @@ La presente non vuole essere una guida, solo una raccolta di link che chiunque p
 
 Una possibilità è usare VLC, un programma sempre più diffuso, e molto versatile. Se non lo abbiamo già apriamo una shell, diventiamo root e lo installiamo con 
 
- # yum install vlc*
+ # dnf install vlc*
 
 Questo comando installerà un po' di roba: il programma vero e proprio, e tutte le librerie che servono per ascoltare i vari formati musicali, ma non gli ape.<br />
 Si risolve facilmente: andare qui:<br />
@@ -21,7 +21,7 @@ Il gioco è fatto, adesso VLC può riprodurre gli ape.<br />
 Alcuni sono probabilmente abituati a usare xmms per la loro musica, e vorrebbero continuare a farlo anche per gli ape. Fortunatamente è possibile!<br />
 Se non lo si possiede già, installare xmms e dipendenze varie con:
 
- # yum install xmms*
+ # dnf install xmms*
 
 e in seguito andare qui:<br />
 http://orion.lcg.ufrj.br/RPMS/myrpms-f8/repoview/repoview/xmms-mac-0-0.3.1-1.fc8.html<br />
