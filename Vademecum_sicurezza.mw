@@ -111,7 +111,7 @@ Nel caso abbiate timore che questi pericoli teorici possano essere usati contro 
 == Installazione di software ==
 Terminiamo la nostra analisi con quello che riteniamo il pericolo più grande per gli utenti di un sistema desktop.<br />
 La pericolosità di installare software non sicuro è enorme rispetto alla pericolosità dei punti 1,2,3 analizzati in questo articolo (facendo sempre riferimento all'utenza verso la quale l'articolo stesso è rivolto).<br />
-Fate sempre uso dei repository ufficiali e non usate '''mai''' l'opzione --nogpgcheck in yum o rpm, questa opzione rinuncia al controllo della firma del pacchetto in fase di installazione, unica cosa che ne garantisce la genuinità cioè il controllo della firma garantisce che il pacchetto è identico a quello depositato nel repository ufficiale.<br />
+Fate sempre uso dei repository ufficiali e non usate '''mai''' l'opzione --nogpgcheck in dnf o rpm, questa opzione rinuncia al controllo della firma del pacchetto in fase di installazione, unica cosa che ne garantisce la genuinità cioè il controllo della firma garantisce che il pacchetto è identico a quello depositato nel repository ufficiale.<br />
 Vi ricordo che a seguito di un attacco ai server Fedora (agosto 2008), la comunità internazionale decise di cambiare le firme dei pacchetti in Fedora otto e nove a scopo precauzionale.<br />
 Supponiamo, per esempio, che qualcuno voglia fare uno scherzo e realizzi un pacchetto rpm contenente una simpatica applicazione.<br />
 L'applicazione vi piace e decidete di installarla.<br />
