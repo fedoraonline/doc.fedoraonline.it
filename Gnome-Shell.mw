@@ -19,10 +19,10 @@ Una volta installato il driver corretto, se ne avete realmente bisogno, al pross
 == Alternative alla Modalità Fallback di Gnome3 ==
 Probabilmente però, la soluzione di installare i driver per la scheda video potrebbe non essere la soluzione, se, come scritto sul [https://live.gnome.org/GnomeShell/FAQ#What_led_to_the_decision_to_make_3D_acceleration_a_requirement_for_GNOME_Shell.3F sito ufficiale del progetto GNOME], la macchina su cui si sta tentando di utilizzare il sistema, ha più di 4-5 anni.<br/>
 In parole povere gli sviluppatori invitano a cambiare desktop; se vi eravate affezionati al caro vecchio gnome 2.x potrebbe essere l'occasione di provare Mate, un fork migliorato di gnome2, già presente nei repo ed installabile così
- # yum install @mate-desktop
+ # dnf install @mate-desktop
 quindi un semplice logout e login nel nuovo DE.<br/>
 Altrimenti, se volete provare Cinnamon, un fork che prende le tecnologie introdotte da gnome3, digitate questo da root:
- # yum install cinnamon
+ # dnf install cinnamon
 e al prossimo login potrete provare cinnamon come desktop.<br />
 Se ancora questi ambienti desktop non vi soddisfano potete provare i sempreverdi lxde, xfce, fluxbox, e molti altri...<br/>
 
@@ -64,7 +64,7 @@ Quando Gnome sarà completato ci sarà anche la GUI per systemd:
 Un'altra novità che si noterà durante la navigazione è la mancanza dei pulsanti "massimizza/minimizza" e "chiudi a icona" nella barra superiore delle finestre; è presente solamente una grande "X" per chiudere la finestra.<br />
 È un concetto che risulta difficile da digerire, ma che orienta l'utente al pensiero che gli sviluppatori di Gnome si pongono come obiettivo: utilizzare le aree di lavoro e le funzionalità che si possono dare a mouse e tastiera per personalizzare il comportamento delle finestre. Questo obiettivo lo si può raggiungere facilmente dalle impostazioni di sistema, in cui si possono impostare delle combinazioni di tasti per la personalizzazione dei movimenti delle finestre, ma ancor di più è utile l'utilizzo di Gnome Tweak Tool, uno comodo strumento che si installa così:
 
- # yum install gnome-tweak-tool 
+ # dnf install gnome-tweak-tool 
 [[Image:Gnome-tweak-02.png|right|thumb|400px|Gnome Tweak Tool è davvero potente e non dovrebbe mancare sul proprio Desktop.]]
 Una volta installato l'applicativo si trova in ''Applicazioni > Accessori > Strumento di Personalizzazione'';
 è uno strumento che non solo permette di impostare il comportamento delle finestre, ma anche di cambiare caratteri, impostare le icone sul desktop e di variare il tema utilizzato. Molto altro verrà ancora aggiunto a questo tool con il progresso di GNOME3.
@@ -85,25 +85,25 @@ Tra gli aspetti più innovativi di Gnome rientra sicuramente la facilità di per
 Inoltre esistono alcune estensioni, e nel tempo ce ne saranno sempre di più, che rendono il Desktop ancora più immediato nel suo utilizzo. Esse sono gestibili, oltre che da Gnome-Tweak-Tool visto in precedenza, anche da terminale.
 
 Le estensioni attualmente disponibili possono essere viste e installate tramite il sito https://extensions.gnome.org/ e molte di esse sono già presenti nel repo fedora, basta dare da terminale
- $ yum search gnome-shell-extension
-per visualizzare tutte quelle installabili tramite yum.
+ $ dnf search gnome-shell-extension
+per visualizzare tutte quelle installabili tramite dnf.
 
 Rimandando l'analisi dettagliata delle estensioni nella guida [Estensioni_di_Gnome-Shell Estensioni di Gnome-Shell], di seguito vediamo alcuni approfondimenti su qualche estensione, che possono essere installate sia dal sito gnome, sia da repo Fedora:
 
 ===Alternative-status-menu===
 Con questa estensione si rende permanente la visualizzazione della voce "Spegni" nel menu utente, senza dover premere il tasto <ALT> come indicato precedentemente.
 
- # yum install gnome-shell-extensions-alternative-status-menu
+ # dnf install gnome-shell-extensions-alternative-status-menu
 
 ===Places-menu===
 Per avere un accesso più veloce a Nautilus e alle cartelle nei segnalibri potrebbe essere utile avere un'icona sul pannello superiore che faccia da scorciatoia.
 
- # yum install gnome-shell-extensions-places-menu
+ # dnf install gnome-shell-extensions-places-menu
 
 ===Application-menu===
 Con questa estensione è possibile avere un menu delle applicazioni installate direttamente nel pannello superiore, divise per categoria, in uno stile simile a gnome 2.x:
 
- # yum install gnome-shell-extensions-apps-menu
+ # dnf install gnome-shell-extensions-apps-menu
 
 
 ==Rendere Gnome-Shell simile a Gnome 2.x==
@@ -113,19 +113,19 @@ Per i più malinconici è disponibile anche un pacchetto che non fa del tutto di
 Si può installare semplicemente da terminale.<br/>
 Per Fedora 15:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.8-1.noarch.rpm
+ # dnf install --nogpgcheck ftp://ftp.tigress.co.uk/fedora/15/tigress-utils/i386/gnome-shell-frippery-0.2.8-1.noarch.rpm
 
 per Fedora 16:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.9-1.noarch.rpm
+ # dnf install --nogpgcheck ftp://ftp.tigress.co.uk/fedora/16/tigress-utils/i386/gnome-shell-frippery-0.3.9-1.noarch.rpm
 
 per Fedora 17:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/17/tigress-utils/i386/gnome-shell-frippery-0.4.1-1.noarch.rpm
+ # dnf install --nogpgcheck ftp://ftp.tigress.co.uk/fedora/17/tigress-utils/i386/gnome-shell-frippery-0.4.1-1.noarch.rpm
 
 per Fedora 18:
 
- # yum localinstall --nogpgcheck ftp://ftp.tigress.co.uk/fedora/18/tigress-utils/i386/gnome-shell-frippery-0.5.2-1.noarch.rpm
+ # dnf install --nogpgcheck ftp://ftp.tigress.co.uk/fedora/18/tigress-utils/i386/gnome-shell-frippery-0.5.2-1.noarch.rpm
 
 Questo pacchetto installa sei estensioni, eventualmente attivabili anche singolarmente:
 *''Bottom Panel'': aggiunge un pannello inferiore, con funzionalità simili a quello di gnome 2.x;
