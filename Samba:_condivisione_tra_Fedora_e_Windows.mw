@@ -1,7 +1,7 @@
 {{Warning|La guida è stata testata e creata basandosi su Fedora 8}}
 Per condividere le risorse all'interno di una rete, nella quale ci sono anche macchine con Windows, si utilizza [http://samba.xsec.it/ Samba], un tool potentissimo che si installa digitando da root:
 
- # yum install samba samba-common samba-client system-config-samba
+ # dnf install samba samba-common samba-client system-config-samba
 
 Il primo fornisce il "SMB/CIFS Server", per fornire la condivisione ai client, il secondo una serie di files utili sia al server che al client, il terzo invece fornirà un insieme di files utili al "SMB/CIFS File System" di Linux per avere l'accesso alle risorse condivise. Si precisa solamente che dopo l'avvento del ''CIFS'', tutte le funzionalità di cui si ha bisogno, sono gestite dal kernel, non si avrà quindi bisogno di nulla altro.<br />
 L'ultimo pacchetto installato è la GUI che permette di configurare Samba in modo intuitivo. Questo è possibile anche direttamente tramite il file ''/etc/Samba/smb.conf'', che verrà trattato nella seconda parte della presente guida.
