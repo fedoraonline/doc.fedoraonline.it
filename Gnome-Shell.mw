@@ -51,14 +51,24 @@ Di contro, siccome si può impostare lo schermo e il monitor da qui, il famoso s
 Chi a questo punto vorrà fare una pausa e, nel menu utente, cliccando sul proprio nome, cerca il tasto "Spegni" avrà un'altra sorpresa: il tasto sembra mancare!<br />
 Invece c'è, premendo il tasto '''<ALT>''' la voce ''Sospendi'' cambia in ''Spegni''. Cliccando sopra con il mouse appare la finestra di spegnimento/riavvio del PC. Si vedrà più avanti che esiste un'estensione che rende definitiva questa opzione.
 
+
 ===Servizi===
 Benchè non dipenda direttamente da Gnome, un'altra novità inserita su Fedora fin dalla versione 15 è il nuovo gestore di servizi ''systemd'', che di fatto ha sostituito ''system-config-services'', benchè quest'ultimo attualmente è ancora disponibile, per un adeguamento "soft" degli utenti al nuovo sistema. Di conseguenza cambia anche il modo di gestione dei servizi stessi. La sintassi è:
 
  # systemctl start/stop/status/enable/disable nome_servizio.service 
 
+Si utilizza:
+* '''start''': per attivare il servizio nella sessione corrente;
+* '''stop''': per disattivare il servizio nella sessione corrente;
+* '''enable''': per far sì di attivare il servizio ad ogni esecuzione del kernel;
+* '''disable''': per disattivare l'avvio automatico del servizio;
+* '''status''': per avere informazioni sul servizio richiesto.
+
+<!--
 Quando Gnome sarà completato ci sarà anche la GUI per systemd:
 
  # systemadm
+-->
 
 == Gnome Tweak Tool ==
 Un'altra novità che si noterà durante la navigazione è la mancanza dei pulsanti "massimizza/minimizza" e "chiudi a icona" nella barra superiore delle finestre; è presente solamente una grande "X" per chiudere la finestra.<br />
