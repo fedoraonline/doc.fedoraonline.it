@@ -72,10 +72,10 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 ! Data
 ! Stato
 
-{{RiletturaArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|rilettore=AndreaMasala|data=09/06/2015|stato=Terminato}}
+{{RiletturaArticolo|articolo=Monitoraggio del sistema e SNMP|autore=AntonioDeSantis|rilettore=AndreaMasala|note=in quali categorie rientra? da inserire|data=09/06/2015|stato=Terminato}}
 {{RiletturaArticolo|articolo=Gnome-Shell|autore=-|rilettore=-|data=25/04/2015|stato=DaFare|note=bisogna vedere come si comporta con F22}}
 {{RiletturaArticolo|articolo=Nautilus scripts e personalizzazioni|autore=Riccardo Volpe|rilettore=-|data=25/04/2015|stato=DaFare|note=è ancora utile il metodo attraverso python? perché sulla 21 a me funziona mettendo un modello vuoto nella cartella Modelli.<br>vedere anche [http://forum.fedoraonline.it/viewtopic.php?id=23532 qua] ... ~bebo}}
-{{RiletturaArticolo|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|data=09/06/2015|release=F22|rilettore=AndreaMasala|stato=Terminato}}
+{{RiletturaArticolo|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|data=09/06/2015|release=F22|rilettore=AndreaMasala|stato=InCorso}}
 |}
 
 ''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
@@ -104,7 +104,7 @@ Verificare di aggiungere il markup: '''<nowiki>[[Categoria:Modifica in corso]]</
 {{ModificaArticolo|articolo=:Categoria:Yum|autore=/|responsabile=AlbertoChiusole|note=togliere tutte le guide che riguardano repo, in quanto esiste l'apposita categoria repository.|data=25/10/2013|stato=DaFare}}
 {{ModificaArticolo|articolo=Installazione_Driver_ATI|autore=/|responsabile=FrancescoFrassinelli|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2015-May/001797.html ML].|data=23/05/2015|stato=Terminato}}
 {{ModificaArticolo|articolo=Configurare_un_SSD|autore=/|responsabile=/|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2014-June/001403.html ML].|data=22/02/2014|stato=DaFare}}
-{{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=/|data=08/10/2014|stato=DaFare}}
+{{ModificaArticolo|articolo=Boot_sequence_Fedora|autore=/|responsabile=/|note=vedere mail in [https://admin.fedoraproject.org/mailman/private/doc-fol/2014-October/001482.html ML]|data=08/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=:Categoria:Repository|autore=/|responsabile=AlbertoChiusole|note=rendere più visibile la categoria, anche nella pagina principale.|data=09/10/2014|stato=DaFare}}
 {{ModificaArticolo|articolo=Adobe_Acrobat_Reader|autore=SimoneDresti|responsabile=/|data=14/02/2014|stato=InCorso}}
 |}
@@ -139,6 +139,7 @@ La tabella usa il template '''GuidePeriodiche''', ed è necessario utilizzare i 
 {{GuidePeriodiche|articolo=Installazione Fedora 22|autore=GiulioErler|data=28/05/15|release=F22|responsabile=-|stato=DaFare}}
 {{GuidePeriodiche|articolo=Aggiornamento Fedora con FedUp|autore=RobertMayr|note=guida ufficiale [https://fedoraproject.org/wiki/FedUp fpo].|data=5/6/2015|release=F21|responsabile=AlbertoChiusole|stato=InCorso}}
 {{GuidePeriodiche|articolo=RPMFusion|autore=-|note=Va controllata la compatibilità.<br>sito [http://www.rpmfusion.org/ official]|data=04/06/15|release=F22|responsabile=-|stato=DaFare}}
+{{GuidePeriodiche|articolo=Gnome-Shell|autore=RobertMayr|data=14/03/2015|release=21|responsabile=-|stato=DaFare}}
 |}
 
 ==Proposte di nuovi articoli==
@@ -157,6 +158,7 @@ NB: per inserire dei collaboratori, bisogna circondare il loro nome dell'account
 ! Note, riferimenti, link
 ! Data
 {{ArticoloProposto|articolo=BFO|ideatore=AlbertoChiusole|collaboratori=[[Utente:TizioCaio]], [[Utente:Pippo]] e [[Utente:Pluto]] (chi potrebbe essere interessato, sostituisca il suo nome a questi di esempio).|fonte=guida su [http://www.if-not-true-then-false.com/2010/fedora-netinstall-net-install-with-gpxe-and-bfo-boot-fedoraproject-org/ if-not-true-then-false]|note=sarebbe interessante avere una guida per la creazione di un supporto per '''B'''oot.'''F'''edoraproject.'''O'''rg (se esiste ancora)|data=10/4/2015}}
+{{ArticoloProposto|articolo=Accelerazione SNA su schede Intel|ideatore=AlessandroBugliazzini|note=prima bozza fatta da Yatta [http://doc.fedoraonline.it/Utente:AlessandroBugliazzini/Yattabox/box1&oldid=3323#Introduzione qui].<br>si pensava di fare una pagina singola per ogni "brand" (intel, nvidia, ..) dedicata alle caratteristiche che centrano con fedora delle varie schede, vedi [https://admin.fedoraproject.org/mailman/private/doc-fol/2014-January/001269.html qui].|data=19/06/2015}}
 |}
 
 ''NOTA: i tag '''collaboratori''', '''fonte''' e '''note''' non sono necessari: se non sono presenti verranno automaticamente sostituiti da uno spazio vuoto nella tabella.''
