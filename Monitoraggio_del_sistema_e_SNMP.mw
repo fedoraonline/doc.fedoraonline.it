@@ -1,6 +1,7 @@
 ==Introduzione==
 In questa guida vedremo come tenere sotto controllo le risorse del nostro sistema, sia con gli strumenti di cui Fedora (e linux in generale) dispone di default, ma anche con un tool aggiuntivo "graficamente" più accattivante!
 ==Controllo dei processi==
+===Utilizzo di ps===
 Il comando '''ps''' ci da la possibilità di visualizzare informazioni riguardanti i processi in esecuzione. Questo comando produce in output una lista statica, ovvero un elenco dei processi in esecuzione nel momento in cui lanciamo il comando. Mentre invece se vogliamo che il nostro output sia una lista costantemente aggiornata di processi dobbiamo affidarci al comando '''top''', che vedremo tra poco. Il modo più comune di utilizzare il comando ps è con le opzioni '''ax''':
 
  [draven@copernico ~]$ ps -ax
@@ -56,6 +57,8 @@ Possiamo anche utilizzare il comando ps in combinazione con grep per controllare
 
  [draven@copernico ~]$ ps -ax | grep sshd
 
+
+===Utilizzo di top===
 Volendo avere in output una lista che sia, diciamo così, real time, dovremmo avvalerci del comando top. Questo comando però oltre a restituire l’elenco dei processi, ci da anche informazioni riguardanti il sistema in generale: l’uptime, l’utilizzo della cpu e della memoria, il numero totale dei processi in esecuzione, ecc.
 
  [draven@copernico ~]$ top
@@ -90,7 +93,7 @@ Per controllare lo stato della memoria utilizziamo il comando '''free''', che ci
  Mem:        1026312      604108       35344        1944      386860      382768
  Swap:        839676       87444      752232
 
-I valori numerici riportati sono kilobytes, per una visualizzazione più vicina all'utente potremmo usare il comando free con l'attributo -m che ci darà le stesse informazioni ma espresse in megabytes.
+I valori numerici riportati sono kilobytes, per una visualizzazione più vicina all'utente potremmo usare il comando free con l'attributo '''-m''' che ci darà le stesse informazioni ma espresse in megabytes.
 ==Controllo dell'hard disk==
 Per controllare il nostro hard disk possiamo farci aiutare da due comandi, '''df''' e '''du'''.
 Il comando '''df''' visualizza le informazioni riguardanti lo spazio utilizzato sull'hard disk di sistema:
@@ -114,7 +117,8 @@ Il dettaglio di queste informazioni si riferisce a:
 
 Anche in questo caso (come per la memoria) le grandezze sono espresse in blocchi da 1 kilobyte, per renderne più semplice la lettura possiamo utilizzare il comando df con l'opzione '''-h'''.
 
-Il comando '''du''', digitato all'interno di una directory, ci fornisce un report con l'elenco dei file contenuti all'interno della directory dove ci troviamo e, soprattutto, la dimensione di ogni singolo file. Anche per il comando du, come per df, possiamo utilizzare l'opzione '''-h'''. Oltre a questa però, abbiamo un'altra opzione interessante, ovvero '''-s'''. Con quest'ultima, verrà omesso l'elenco dei file e verrà restituito solo il valore totale delle dimensioni dei file contenuti nella directory.
+Il comando '''du''', digitato all'interno di una directory, ci fornisce un report con l'elenco dei file contenuti all'interno della directory dove ci troviamo e, soprattutto, la dimensione di ogni singolo file. Anche per il comando du, come per df, possiamo utilizzare l'opzione '''-h'''.<br>
+Oltre a questa però, abbiamo un'altra opzione interessante, ovvero '''-s'''. Con quest'ultima, verrà omesso l'elenco dei file e verrà restituito solo il valore totale delle dimensioni dei file contenuti nella directory.
 
 ==Informazioni sull'hardware==
 I comandi che il sistema ci mette a disposizione per ottenere informazioni sull'hardware sono i seguenti:
@@ -128,13 +132,14 @@ L''''SNMP''', al secolo '''Simple Network Management Protocol''', è un protocol
 
 La prima cosa che faremo sarà quindi installare due tools sulla nostra Fedora, che la renderanno sia un manager che un managed object. I tool sono rispettivamente '''MRTG''' e '''NET-SNMP'''. Il primo è un software che si occuperà di effettuare richieste snmp in locale e di generare delle pagine html contenenti dei grafici di andamento; il secondo è un demone che si metterà in ascolto sulla nostra Fedora in attesa di richieste provenienti dal manager (MRTG) tramite protocollo snmp. Installiamo questi tool con il seguente comando (ricordatevi che queste installazioni e configurazioni necessitano di permessi amministratore per poter essere eseguite):
 
- [draven@copernico ~]$ yum install mrtg net-snmp net-snmp-utils
+ [draven@copernico ~]# dnf install mrtg net-snmp net-snmp-utils
 
 Completata l'installazione, per prima cosa avviamo il demone snmp con il seguente comando:
 
- [draven@copernico ~]$ service snmpd start
+ [draven@copernico ~]# systemctl start snmpd
+(se si vuole avere il servizio attivo ad ogni riavvio della macchina, ''ripetere'' il comando precedente sostituendo start con '''enable'''. Per maggiori informazioni si veda [[Gnome-Shell#Servizi|questa]] sezione).
 
-Tra le utils dell'snmp che abbiamo installato, c'è un '''snmpconf''' che ci facilita la configurazione del protocollo tramite una procedura guidata:
+Tra le utils dell'snmp che abbiamo installato c'è '''snmpconf''', che ci facilita la configurazione del protocollo tramite una procedura guidata:
 
  [draven@copernico ~]$ snmpconf
  The following installed configuration files were found:
@@ -152,15 +157,15 @@ Tra le utils dell'snmp che abbiamo installato, c'è un '''snmpconf''' che ci fac
 
 Elenco di seguito la sequenza da digitare per una configurazione minimale all'interno dei menu dell'snmpconf:
 * digitare all
-* digitare 2 (selezionare il file snmpd.conf)
-* digitare 1 (selezionare Access Control Setup)
-* digitare 3 (selezionare SNMPv1/SNMPv2c read-only access community name)
-* digitare public (il nome della community snmp)
-* digitare localhost (il nome host del managed object)
-* invio per non specificare restrizioni
-* digitare finished (per uscire dal sottomenu Access Control Setup)
-* digitare finished (per uscire dal menu di configurazione)
-* digitare quit (per uscire dal tool snmpconf)
+* digitare 2 (selezionare il file '''snmpd.conf''')
+* digitare 1 (selezionare '''Access Control Setup''')
+* digitare 3 (selezionare '''SNMPv1/SNMPv2c read-only access community name''')
+* digitare '''public''' (il nome della community snmp)
+* digitare '''localhost''' (il nome host del managed object)
+* premere invio per non specificare restrizioni
+* digitare '''finished''' (per uscire dal sottomenu Access Control Setup)
+* digitare '''finished''' (per uscire dal menu di configurazione)
+* digitare '''quit''' (per uscire dal tool snmpconf)
 
 A questo punto la nostra Fedora è ufficialmente un managed object, possiamo accertarci di questo grazie al seguente comando:
 
@@ -240,5 +245,9 @@ Qui di seguito potete vedere un esempio di grafico generato da mrtg:
 
 [[File:Esempiomrtg.png]]
 
-[[:Categoria:Rete e Server]]
-[[:Categoria:Rilettura in corso]]
+==Riferimenti==
+* Pagina ufficiale del progetto [http://www.net-snmp.org/ SNMP];
+* Pagina su [https://it.wikipedia.org/wiki/Simple_Network_Management_Protocol wikipedia] relativa a SNMP.
+
+
+[[Categoria:Rete e Server]]
