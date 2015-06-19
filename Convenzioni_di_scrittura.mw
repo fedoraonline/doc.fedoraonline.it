@@ -477,63 +477,84 @@ Sul wiki di Fedora Ondine sono disponibili una serie di template per facilitare 
 <br>
 Di seguito qualche esempio sull’utilizzo dei template:
 
+
 ===Autore/i della guida===
 Per identificare l’autore della guida è opportuno inserire il suo nome:
 
-<nowiki>{{Autore|NomeAutore}}</nowiki>
+ <nowiki>{{Autore|NomeAutore}}</nowiki>
 
 Questo creerà in automatico un link alla pagina personale dell’autore stesso.<br>
 E' bene assicurarsi che all’inizio della pagina sia presente questo template.
 Esempio:
 {{Autore|NomeAutore}}
 
+
 ===Collaboratori===
 Oltre all’autore si possono inserire anche i collaboratori. La sintassi è simile a quella degli autori:
 
-<nowiki>{{Collaboratori|NomeCollaboratore}}</nowiki>
+ <nowiki>{{Collaboratori|NomeCollaboratore}}</nowiki>
 
 Esempio:
 {{Collaboratori|NomeCollaboratore}}
+
+
+===Obsoleto===
+Per far notare a tutti i lettori che una pagina potrebbe non funzionare più a causa di problemi di obsolescenza, è disponibile il template:
+
+ <nowiki>{{Obsoleto}}</nowiki>
+
+che produce questo risultato:
+{{Obsoleto}}
+
 
 ===Scrittura in corso===
 Ogni nuova guida in corso di stesura o in corso di modifica deve essere distinta con il template “InCorso”.
 
 Oltre al messaggio per l’utente che legge, verrà creato un link alla pagina personale dell’autore della stesura o modifica.
 
-<nowiki>{{InCorso|autore=NomeAutore}}</nowiki>
+ <nowiki>{{InCorso|autore=NomeAutore}}</nowiki>
 
 Esempio:
 {{InCorso|autore=NomeAutore}}
 
+
 ===Nota===
 Per inserire una nota all’interno di un articolo occorre utilizzare questo template:
-<nowiki>{{nota|Titolo della nota|Testo della nota}}</nowiki>
+
+ <nowiki>{{nota|Titolo della nota|Testo della nota}}</nowiki>
 
 Esempio:
 {{nota|Titolo della nota|Testo della nota}}
 
+
 ===Suggerimento===
 Per inserire un suggerimento all’interno di un articolo occorre utilizzare questo template:
-<nowiki>{{suggerimento|Testo del suggerimento}}</nowiki>
+
+ <nowiki>{{suggerimento|Testo del suggerimento}}</nowiki>
 
 Esempio:
 {{suggerimento|Testo del suggerimento}}
 
+
 ===Avviso importante===
 Se si vuole inserire un appunto importante o si vuole attirare l’attenzione del lettore a una specifica particolare, è necessario utilizzare il template "Warning":
 
-<nowiki>{{Warning|Testo dell'avviso}}</nowiki>
+ <nowiki>{{Warning|Testo dell'avviso}}</nowiki>
 
 La sintassi è molto semplice e non necessita di ulteriori commenti.
 Esempio:
 {{Warning|Testo dell'avviso}}
 
+
 ===Convenzioni di scrittura===
 Per inserire il template per alcune convenzioni di scrittura all’interno dell’articolo, utilizzate:
 
-<nowiki>{{Scrittura|Regole e convenzioni di scrittura}}</nowiki>
+ <nowiki>{{Scrittura|Regole e convenzioni di scrittura}}</nowiki>
 
 Questo template è da posizionare all’interno dell’introduzione per informare il lettore fin da subito della convenzione stessa.
 Esempio:
 {{Scrittura|Regole e convenzioni di scrittura}}
-[[Categoria:Modifica in corso]]
+
+
+
+<!-- [[Categoria:Modifica in corso]] -->
