@@ -64,11 +64,11 @@ Si utilizza:
 * '''disable''': per disattivare l'avvio automatico del servizio;
 * '''status''': per avere informazioni sul servizio richiesto.
 
-<!--
-Quando Gnome sarà completato ci sarà anche la GUI per systemd:
 
+È presente anche una GUI per systemd, installabile tramite:
+ # dnf install systemd-ui
+ed eseguibile quindi con:
  # systemadm
--->
 
 == Gnome Tweak Tool ==
 Un'altra novità che si noterà durante la navigazione è la mancanza dei pulsanti "massimizza/minimizza" e "chiudi a icona" nella barra superiore delle finestre; è presente solamente una grande "X" per chiudere la finestra.<br />
