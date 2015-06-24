@@ -173,7 +173,7 @@ A questo punto la nostra Fedora è ufficialmente un managed object, possiamo acc
 
 Continuiamo la nostra configurazione concentrandoci sul manager (MRTG), per far lavorare quest'ultimo dobbiamo generare un file di configurazione, tramite il seguente comando:
 
- [draven@copernico ~]$ cfgmaker –global 'WorkDir: /var/www/mrtg' –output /etc/mrtg/mrtg.cfg public@localhost
+ [draven@copernico ~]$ cfgmaker –-global 'WorkDir: /var/www/mrtg' –-output /etc/mrtg/mrtg.cfg public@localhost
 
 Vediamo cosa abbiamo scritto:
 * cfgmaker = richiamiamo il tool dell'MRTG che genera i file di configurazione
