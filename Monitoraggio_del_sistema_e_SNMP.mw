@@ -189,7 +189,7 @@ NOTA: ''Nelle varie configurazioni abbiamo incontrato due termini che meritano u
 
 Il cfgmaker ci ha quindi creato un file di configurazione nel percorso specificato, analizziamo il contenuto di questo file che, sostanzialmente è composto da tre tipi di informazioni:
  # Created by
- # /bin/cfgmaker -global "WorkDir: /var/www/mrtg" -output /etc/mrtg/mrtg.cfg public@localhost
+ # /bin/cfgmaker --global "WorkDir: /var/www/mrtg" --output /etc/mrtg/mrtg.cfg public@localhost
  
  
  ### Global Config Options
