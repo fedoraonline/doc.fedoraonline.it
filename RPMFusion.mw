@@ -8,7 +8,7 @@ Il repo RPMFusion-free non dipende da nessun altro repository (se non quelli pre
 La guida espone due metodi differenti per l'installazione di tali repository.
 
 == Installazione tramite pacchetto rpm ==
-Per i free di Fedora 20 per esempio, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-20.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-20.noarch.rpm questo]. Si possono poi installare tramite installatore grafico semplicemente tramite doppio clic su tali files.
+Per i free di Fedora 22 per esempio, il pacchetto da scaricare è [http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-22.noarch.rpm questo], mentre per i nonfree è [http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-22.noarch.rpm questo]. Si possono poi installare tramite installatore grafico semplicemente tramite doppio clic su tali files.
 Per altre versioni di Fedora fare riferimento alla [http://rpmfusion.org/Configuration pagina ufficiale].
 
 In caso di problemi in quest'ultimo passaggio, se non si volesse installare in locale entrambi i repo, è possibile farlo attingendo ai link sfruttando le potenzialità di dnf:
