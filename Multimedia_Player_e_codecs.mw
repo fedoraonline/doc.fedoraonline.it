@@ -14,46 +14,14 @@ In linea di massima è utile procedere secondo la seguente logica:
 # Installazione players video, plugins, codecs;
 # Installazione software utile per audio e/o video.
 
-== Player Audio ==
+== Codecs ==
 
-Di seguito vengono elencati i player audio più utilizzati e i rispettivi codec.
+=== GStreamer 0.x e GStreamer 1.x ===
 
-===XMMS===
+I plugin GStreamer di solito includono la maggior parte dei codec audio-video del quale si ha bisogno. Per installarli eseguire il comando
 
- # dnf install xmms xmms*
+# dnf install gstreamer-{ffmpeg,plugins-{good,ugly,bad{,-free,-nonfree}}} gstreamer1-{vaapi,plugins-{base,bad-free{,world,-extras},good{,-extras},ugly}}
 
-===Audacius===
-
- # dnf install audacious audacious-plugins audacius-plugins*
-
-===Rythmbox===
-
- # dnf install gstreamer rhythmbox gstreamer-plugins-good gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-ffmpeg
-
-===Amarok===
-
- # dnf install amarok phonon-backend-gstreamer xine-lib-extras-freeworld
-
-== Multiplayer ==
-
-I player che sono in grado di riprodurre sia file audio che video sono chiamati Multiplayer.
-
-===MPlayer===
-
- # dnf install mplayer smplayer mplayer-gui gecko-mediaplayer mencoder
-
-Per poter sfruttare mplayer con tutta la sua potenzialità esistono altri codec utili, proprio perché supporta anche formati che non sono compresi di default. Per poterli installare bisogna prima scaricare [http://www.mplayerhq.hu/MPlayer/releases/codecs/ qui] il pacchetto e poi installare l'ultimo "binary codec", attualmente 'all-20110131.tar.bz2':
-
- # mkdir -p /usr/lib/codecs
- # tar -jxvf all-20110131.tar.bz2 --strip-components 1 -C /usr/lib/codecs/
-
-===Xine===
-
- # dnf install xine-ui xine-lib xine-lib-extras xine-lib-pulseaudio
-
-===VLC===
-
- # dnf install vlc
 
 == Librerie per DVD ==
 
