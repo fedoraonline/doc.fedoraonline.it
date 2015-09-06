@@ -1,3 +1,4 @@
+{{InCorso|autore=GiulioErler}}
 {{Autore|GiulioErler}}
 
 ==Introduzione==
@@ -74,10 +75,10 @@ Il modo più semplice e rapido per aprire un report e segnalare un problema, è 
 
 [[File:bugzilla_login.png|thumb|center|600px|Login a Bugzilla.]]
 
-Per prima cosa, occorre effettuare il ''login'' assicurandosi di possedere un profilo attivato mediante la procedura descritta nell'apposita sezione della presente guida. Cominciare quindi la creazione della segnalazione tramite il click sul pulsante '''New''', situato nell'header della pagina, in alto a sinistra. Va scelta la classificazione giusta, nel nostro caso '''Fedora'''.
+Per prima cosa, occorre effettuare il ''login'' assicurandosi di possedere un profilo attivato mediante la procedura descritta nella [[#Creazione_account_Bugzilla|sezione precedente]] della presente guida. Cominciare quindi la creazione della segnalazione tramite il click sul pulsante '''New''', situato nell'header della pagina, in alto a sinistra. Va scelta la classificazione giusta, nel nostro caso '''Fedora'''.
 
 
-[[File:bugzilla_bugreport2.png|thumb|center|600px|Prodotto a cui il bug si riferisce.]]
+[[File:bugzilla_bugreport2.png|thumb|center|600px|Tipologia di prodotto a cui il bug si riferisce.]]
 
 Ora, occorre selezionare il prodotto adatto. Se si sta per segnalare un problema tecnico derivante dall'utilizzo del sistema operativo, si deve optare per il prodotto '''Fedora'''. Diverso può essere, per esempio, il caso di un errore rilevato nelle note di rilascio, per il quale conviene scegliere '''Fedora Documentation'''.
 
@@ -86,29 +87,29 @@ Ora, occorre selezionare il prodotto adatto. Se si sta per segnalare un problema
 
 Il momento cruciale dell'intero processo è quello della stesura vera e propria del report. Bugzilla presenta un form con alcuni dati da compilare.
 
-# '''Component''':  prodotto oggetto della segnalazione, il quale evidenzia il comportamento scorretto che è stato rilevato. Cominciando a scrivere, un menù a tendina compare per facilitare l'inserimento. Se l'utente non è pienamente sicuro a riguardo della natura dell'inconveniente, può comunque selezionare un elemento a parer suo coerente con il problema. Il componente può essere successivamente variato da membri di alcuni team del Fedora Project.
-# '''Version''':  versione di Fedora sulla quale si riscontra la presenza del bug.
-# '''Severity''':  grado di criticità del problema. Non è un valore obbligatorio, ma può esser utile per evidenziare le questioni più prioritarie. Attua'lmente, è possibile scegliere tra:
-## '''Urgent''': il bug rende l'intero sistema inusabile, oppure mina la sua sicurezza. È importante notare che una problematica riferibile soltanto a dell'hardware specifico non è sufficientemente critica per essere etichettata come urgente.
-## '''High''': il bug rende il programma inusabile, o riguarda problemi di licenza.
-## '''Medium''': un vero e proprio bug che rende il programma – o parte di esso – più difficile da usare.
-## '''Low''': problematiche meno urgenti, quali sottigliezze grafiche oppure bug riscontrati tramite l'utilizzo di configurazioni inusuali.
-# '''Hardware''':  architettura del proprio processore, desumibile invocando '''uname -m da un prompt del terminale.
-# '''OS''': la compilazione di questo campo, per report riguardanti Fedora, risulta di poca utilità effettiva. Può essere tranquillamente ignorato (alternativamente, è sufficiente selezionare 'Linux').
-# '''Summary''':  titolo applicabile al report. Deve essere il più possibile preciso e conciso per facilitare le ricerche da parte di altri utenti di Bugzilla.
+# '''Component''':  prodotto oggetto della segnalazione, il quale evidenzia il comportamento scorretto che è stato rilevato. Cominciando a scrivere, un menù a tendina compare per facilitare l'inserimento. Se l'utente non è pienamente sicuro a riguardo della natura dell'inconveniente, può comunque selezionare un elemento a parer suo coerente con il problema. Il componente può essere successivamente variato da membri di alcuni team del Fedora Project;
+# '''Version''':  versione di Fedora sulla quale si riscontra la presenza del bug;
+# '''Severity''':  grado di criticità del problema. Non è un valore obbligatorio, ma può esser utile per evidenziare le questioni più prioritarie. Attualmente, è possibile scegliere tra:
+## '''Urgent''': il bug rende l'intero sistema inusabile, oppure mina la sua sicurezza. È importante notare che una problematica riferibile soltanto a dell'hardware specifico non è sufficientemente critica per essere etichettata come urgente;
+## '''High''': il bug rende il programma inusabile, o riguarda problemi di licenza;
+## '''Medium''': un vero e proprio bug che rende il programma – o parte di esso – più difficile da usare;
+## '''Low''': problematiche meno urgenti, quali sottigliezze grafiche oppure bug riscontrati tramite l'utilizzo di configurazioni inusuali;
+# '''Hardware''':  architettura del proprio processore, desumibile invocando ''<code>$ uname -m</code>'' da un prompt del terminale;
+# '''OS''': la compilazione di questo campo, per report riguardanti Fedora, risulta di poca utilità effettiva. Può essere tranquillamente ignorato (alternativamente, è sufficiente selezionare 'Linux');
+# '''Summary''':  titolo applicabile al report. Deve essere il più possibile preciso e conciso per facilitare le ricerche da parte di altri utenti di Bugzilla;
 # '''Description''':  contenuto del messaggio allegato alla segnalazione. Bugzilla indica una traccia che, pur non essendo strettamente necessaria, conviene seguire per poter fornire importanti dettagli ai manutentori:
-## '''Description of the problem''': descrizione che deve fornire quante più informazioni possibili a riguardo del problema. In un certo senso, è l'estensione più prolissa e dettagliata del campo '''Summary'''.
-## '''Version-release number of selected component''': versione specifica dei pacchetti che causano l'inconveniente. Il comando '''rpm -qa | grep nomeprogramma può aiutare ad identificare i dati richiesti da tale paragrafo.
+## '''Description of the problem''': descrizione che deve fornire quante più informazioni possibili a riguardo del problema. In un certo senso, è l'estensione più prolissa e dettagliata del campo '''Summary''';
+## '''Version-release number of selected component''': versione specifica dei pacchetti che causano l'inconveniente. Il comando ''<code>$ rpm -qa | grep nomeprogramma</code>'' può aiutare ad identificare i dati richiesti da tale paragrafo;
 ## '''How reproducible''': frequenza con la quale si verifica il problema. Alcuni esempi:
-### '''Happens every time''': la problematica si manifesta sempre quando si crea la situazione indicata dal paragrafo 'Steps to reproduce'.
-### '''Happens sometimes, but not always''': non è chiaro quale evento faccia scattare la problematica, che quindi appare manifestarsi occasionalmente.
-### '''Haven't tried to reproduce it''': l'utente non ha provato a ricreare la situazione problematica.
-### '''Tried, but couldn't reproduce it''': il bug si è manifestato una singola volta e non è facile da riprodurre.
-# '''Steps to reproduce''': sequenza di passi con la quale è possibile azionare gli eventi che innescano il comportamento scorretto del componente.
-# '''Actual results''': dettagli relativi all'effettiva manifestazione del problema (per esempio, crash, output errati, ecc.)
-# '''Expected results''': al contrario del precedente punto, in tale paragrafo occorre specificare i risultati attesi, in un certo senso immaginando che l'applicazione interessata non sia affetta dal bug che si sta segnalando.
-# '''Additional information''': eventuali informazioni non fondamentali, ma che possono comunque essere utili per il processo di risoluzione.
-# '''Attachment''': opzionalmente, sono facilmente allegabili file dal proprio computer per chiarificare la situazione.
+### '''Happens every time''': la problematica si manifesta sempre quando si crea la situazione indicata dal paragrafo 'Steps to reproduce';
+### '''Happens sometimes, but not always''': non è chiaro quale evento faccia scattare la problematica, che quindi appare manifestarsi occasionalmente;
+### '''Haven't tried to reproduce it''': l'utente non ha provato a ricreare la situazione problematica;
+### '''Tried, but couldn't reproduce it''': il bug si è manifestato una singola volta e non è facile da riprodurre;
+# '''Steps to reproduce''': sequenza di passi con la quale è possibile azionare gli eventi che innescano il comportamento scorretto del componente;
+# '''Actual results''': dettagli relativi all'effettiva manifestazione del problema (per esempio, crash, output errati, ecc.);
+# '''Expected results''': al contrario del precedente punto, in tale paragrafo occorre specificare i risultati attesi, in un certo senso immaginando che l'applicazione interessata non sia affetta dal bug che si sta segnalando;
+# '''Additional information''': eventuali informazioni non fondamentali, ma che possono comunque essere utili per il processo di risoluzione;
+# '''Attachment''': opzionalmente, sono facilmente allegabili file dal proprio computer per chiarificare la situazione;
 # '''Add External Bug''': se si è a conoscenza del fatto che il bug è stato segnalato su altre piattaforme all'infuori di Red Hat Bugzilla, si possono agganciare tali link esterni al nuovo report.
 
 ==Segnalazione di bug (tramite gnome-abrt)==
@@ -163,25 +164,25 @@ In seguito alla conferma, ABRT provvederà all'apertura vera e propria del repor
 All'interno del sommario, è possibile reperire o modificare importanti dettagli, quali lo stato, l'assignee – ovvero la persona o il gruppo incaricati di risolvere la questione -, la versione di Fedora ecc. Nei giorni successivi alla segnalazione, converrà tenere monitorato il proprio indirizzo e-mail per poter rispondere prontamente alle eventuali richieste effettuate dai componenti del Fedora Project che interverranno.
 
 ==Flags relativi ad un bug-report==
-In seguito all'intervento del manutentore del pacchetto interessato dal report dell'utente - oppure di un membro qualificato del Fedora Project – è possibile che venga variato lo stato – flag - dell'intera segnalazione. Per una lista comprensiva, e per comprendere l'intero ciclo di vita di un bug, si consiglia la lettura della pagina [https://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow BugStatusWorkflow]. Di seguito, si riportano e descrivono le principali etichette che possono essere applicate:
+In seguito all'intervento del manutentore del pacchetto interessato dal report dell'utente, oppure di un membro qualificato del Fedora Project, è possibile che venga variato lo stato – flag – dell'intera segnalazione. Per una lista comprensiva, e per comprendere l'intero ciclo di vita di un bug, si consiglia la lettura della pagina [https://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow BugStatusWorkflow]. Di seguito, si riportano e descrivono le principali etichette che possono essere applicate:
 
-# '''NEW''': stato primitivo di un report, assegnato automaticamente dal sistema appena esso viene riportato da un utente.
-# '''NEEDINFO''': flag assegnato per sottolineare la richiesta di un operatore, indirizzata ad uno o più utenti che partecipano alla segnalazione.
-# '''ASSIGNED''': utile per i manutentori, può essere utilizzato per assegnare il bug ad uno specifico membro di un gruppo. Una segnalazione, per esempio, che involve un componente del desktop Plasma, può inizialmente essere assegnata al KDE SIG. Successivamente, tale team ha poi la facoltà di incaricare una sola figura per la risoluzione.
-# '''MODIFIED''': tale etichetta viene usata quando una patch è pronta ed è stata inserita nei sistemi utilizzati dai manutentori, ma non è ancora presente nel pacchetto interessato.
-# '''VERIFIED''': il bug ha un fix confermato, reso finalmente disponibile in una successiva versione del pacchetto di riferimento. Tale nuova edizione, sta per entrare a far parte di un repository di test di Fedora. Workaround non ufficiali o patch manuali non applicate al componente non sono degne di nota per considerare una segnalazione come "''verified''".
-# '''ON_QA''': il pacchetto aggiornato per sistemare la problematica riscontrata è stato inserito nel repository updates-testing. L'utente che ha segnalato il problema è invitato a provare l'aggiornamento e partecipare al processo di rilascio lasciando il proprio karma (commento, feedback) nel sistema [https://bodhi.fedoraproject.org/ Bodhi]. Se la nuova versione riceverà un adeguato riscontro, oppure supererà un certo lasso di tempo senza evidenziare nuovi bug, allora essa verrà certificata come stabile.
-# '''CLOSED''': condizione applicabile ad un report chiuso perchè scartato oppure perchè risolto.
-## '''CLOSED ERRATA''': il bug è stato risolto e incluso in un nuovo pacchetto del repository updates. “Errata” va utilizzato per una Fedora “Branched” (versione 'numerata' come Fedora 22, ossia non Rawhide)
-## '''CLOSED RAWHIDE''': identica alla condizione precedente, ma in questo caso il nuovo pacchetto raggiungerà solamente i repository Rawhide.
-## '''CLOSED NEXTRELEASE''': utilizzata quando il bug è stato risolto, ma il nuovo pacchetto verrà incluso in una versione Fedora successiva a quella della segnalazione
-## '''CLOSED INSUFFICIENT_DATA''': il report viene chiuso a causa della mancanza di dati fondamentali o dell'insufficiente partecipazione dell'utente che l'ha aperto.
-## '''CLOSED NOTABUG''': il problema viene chiuso perché non rappresenta un vero proprio difetto dal punto di vista software.
-## '''CLOSED CANTFIX''': utilizzata sopratutto quando il software che possiede il bug proviene da sorgenti esterne non fa parte dei repository di Fedora.
-## '''CLOSED WONTFIX''': tale etichetta viene applicata quando la versione di Fedora indicata nella segnalazione raggiunge l'End Of Life e non viene più mantenuta.
-## '''CLOSED WORKSFORME''': utilizzata dal manutentore del pacchetto interessato, viene scelta quando una risoluzione viene confermata unilateralmente.
-## '''CLOSED CURRENTRELEASE''': tale opzione viene indicata quando un bug viene scoperto all'interno della fase Alpha o Beta e risolto nel rilascio finale di Fedora.
-## '''CLOSED UPSTREAM''': usata dal manutentore del pacchetto quando ritiene che la problematica verrà risolta dall'upstream (ossia dal programmatore o dal gruppo che sviluppa il prodotto all'infuori di Fedora.).
+# '''NEW''': stato primitivo di un report, assegnato automaticamente dal sistema appena esso viene riportato da un utente;
+# '''NEEDINFO''': flag assegnato per sottolineare la richiesta di un operatore, indirizzata ad uno o più utenti che partecipano alla segnalazione;
+# '''ASSIGNED''': utile per i manutentori, può essere utilizzato per assegnare il bug ad uno specifico membro di un gruppo. Una segnalazione, per esempio, che involve un componente del desktop Plasma, può inizialmente essere assegnata al KDE SIG. Successivamente, tale team ha poi la facoltà di incaricare una sola figura per la risoluzione;
+# '''MODIFIED''': tale etichetta viene usata quando una patch è pronta ed è stata inserita nei sistemi utilizzati dai manutentori, ma non è ancora presente nel pacchetto interessato;
+# '''VERIFIED''': il bug ha un fix confermato, reso finalmente disponibile in una successiva versione del pacchetto di riferimento. Tale nuova edizione, sta per entrare a far parte di un repository di test di Fedora. Workaround non ufficiali o patch manuali non applicate al componente non sono degne di nota per considerare una segnalazione come "''verified''";
+# '''ON_QA''': il pacchetto aggiornato per sistemare la problematica riscontrata è stato inserito nel repository updates-testing. L'utente che ha segnalato il problema è invitato a provare l'aggiornamento e partecipare al processo di rilascio lasciando il proprio karma (commento, feedback) nel sistema [https://bodhi.fedoraproject.org/ Bodhi]. Se la nuova versione riceverà un adeguato riscontro, oppure supererà un certo lasso di tempo senza evidenziare nuovi bug, allora essa verrà certificata come stabile;
+# '''CLOSED''': condizione applicabile ad un report chiuso perchè scartato oppure perchè risolto:
+## '''CLOSED ERRATA''': il bug è stato risolto e incluso in un nuovo pacchetto del repository updates. “Errata” va utilizzato per una Fedora “Branched” (una versione 'numerata', come Fedora 22, ossia non una Rawhide);
+## '''CLOSED RAWHIDE''': identica alla condizione precedente, ma in questo caso il nuovo pacchetto raggiungerà solamente i repository Rawhide;
+## '''CLOSED NEXTRELEASE''': utilizzata quando il bug è stato risolto, ma il nuovo pacchetto verrà incluso in una versione Fedora successiva a quella della segnalazione;
+## '''CLOSED INSUFFICIENT_DATA''': il report viene chiuso a causa della mancanza di dati fondamentali o dell'insufficiente partecipazione dell'utente che l'ha aperto;
+## '''CLOSED NOTABUG''': il problema viene chiuso perché non rappresenta un vero proprio difetto dal punto di vista software;
+## '''CLOSED CANTFIX''': utilizzata sopratutto quando il software che possiede il bug proviene da sorgenti esterne non fa parte dei repository di Fedora;
+## '''CLOSED WONTFIX''': tale etichetta viene applicata quando la versione di Fedora indicata nella segnalazione raggiunge l'End Of Life e non viene più mantenuta;
+## '''CLOSED WORKSFORME''': utilizzata dal manutentore del pacchetto interessato, viene scelta quando una risoluzione viene confermata unilateralmente;
+## '''CLOSED CURRENTRELEASE''': tale opzione viene indicata quando un bug viene scoperto all'interno della fase Alpha o Beta e risolto nel rilascio finale di Fedora;
+## '''CLOSED UPSTREAM''': usata dal manutentore del pacchetto quando ritiene che la problematica verrà risolta dall'upstream (ossia dal programmatore o dal gruppo che sviluppa il prodotto all'infuori di Fedora).
 
 [[Categoria:Progetto Fedora]]
 [[Categoria:Rilettura in corso]]
