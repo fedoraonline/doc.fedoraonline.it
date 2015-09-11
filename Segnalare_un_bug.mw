@@ -40,9 +40,7 @@ Se tuttavia non si ha la certezza assoluta ed inopinabile della presenza di un e
 Occorre assicurarsi però di non aprire una segnalazione a riguardo di una questione già nota. Per non occupare inutilmente dello spazio, rischiare di perdere tempo e frammentare l'attività, risulta fondamentale evitare la creazione di ulteriori duplicati. Se, da un lato, le [https://fedoraproject.org/wiki/Common_bugs pagine dei bug comuni] possono aiutare, molto più importante, quasi obbligatoria, è una ricerca mirata e preliminare all'interno di Bugzilla. Sono sufficienti i passaggi qui di seguito illustrati.
 
 
-[[File:bugzilla_mainpage.png|thumb|center|600px|Home Page di Bugzilla.]]
-
-Raggiungere la [https://bugzilla.redhat.com home page di Bugzilla] e selezionare il collegamento '''Search''' presente nell'header.
+Raggiungere la [https://bugzilla.redhat.com home page di Bugzilla] e selezionare il collegamento [https://bugzilla.redhat.com/query.cgi '''Search'''] presente nell'header.
 
 
 [[File:bugzilla_search1.png|thumb|center|600px|Bugzilla – Ricerca semplice.]]
