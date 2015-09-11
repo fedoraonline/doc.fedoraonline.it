@@ -37,7 +37,7 @@ Spesso, quello che potrebbe all'apparenza sembrare un bug, è invece in realtà 
 
 Se tuttavia non si ha la certezza assoluta ed inopinabile della presenza di un errore di programmazione, può comunque essere utile aprire un report per dialogare con i manutentori del pacchetto interessato. In un mondo aperto come quello Open Source, difficilmente essi ignorano richieste d'aiuto e si rendono spesso disponibili a indirizzare gli utenti verso la possibile soluzione.
 
-Occorre assicurarsi però di non aprire una segnalazione a riguardo di una questione già nota. Per non occupare inutilmente dello spazio, rischiare di perdere tempo e frammentare l'attività, risulta fondamentale evitare la creazione di ulteriori duplicati. Se, da un lato, la pagina dei bug comuni può aiutare – vediamo qui per esempio la lista relativa a Fedora 22 – molto più importante, quasi obbligatoria, è una ricerca mirata e preliminare all'interno di Bugzilla. Sono sufficienti i passaggi qui di seguito illustrati.
+Occorre assicurarsi però di non aprire una segnalazione a riguardo di una questione già nota. Per non occupare inutilmente dello spazio, rischiare di perdere tempo e frammentare l'attività, risulta fondamentale evitare la creazione di ulteriori duplicati. Se, da un lato, le [https://fedoraproject.org/wiki/Common_bugs pagine dei bug comuni] possono aiutare, molto più importante, quasi obbligatoria, è una ricerca mirata e preliminare all'interno di Bugzilla. Sono sufficienti i passaggi qui di seguito illustrati.
 
 
 [[File:bugzilla_mainpage.png|thumb|center|600px|Home Page di Bugzilla.]]
