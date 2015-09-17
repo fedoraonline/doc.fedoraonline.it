@@ -89,7 +89,7 @@ Il momento cruciale dell'intero processo è quello della stesura vera e propria 
 # '''Component''':  prodotto oggetto della segnalazione, il quale evidenzia il comportamento scorretto che è stato rilevato. Cominciando a scrivere, un menù a tendina compare per facilitare l'inserimento. Se l'utente non è pienamente sicuro a riguardo della natura dell'inconveniente, può comunque selezionare un elemento a parer suo coerente con il problema. Il componente può essere successivamente variato da membri di alcuni team del Fedora Project;
 # '''Version''':  versione di Fedora sulla quale si riscontra la presenza del bug;
 # '''Severity''':  grado di criticità del problema. Non è un valore obbligatorio, ma può esser utile per evidenziare le questioni più prioritarie. Attualmente, è possibile scegliere tra:
-## '''Urgent''': il bug rende l'intero sistema inusabile, oppure mina la sua sicurezza. È importante notare che una problematica riferibile soltanto a dell'hardware specifico non è sufficientemente critica per essere etichettata come urgente;
+## '''Urgent''': il bug rende l'intero sistema inusabile, oppure mina la sua sicurezza. È importante notare che una problematica riferibile soltanto a dell'hardware specifico - come ad esempio configurazioni particolari di schede video, ecc. - non è sufficientemente critica per essere etichettata come urgente;
 ## '''High''': il bug rende il programma inusabile, o riguarda problemi di licenza;
 ## '''Medium''': un vero e proprio bug che rende il programma – o parte di esso – più difficile da usare;
 ## '''Low''': problematiche meno urgenti, quali sottigliezze grafiche oppure bug riscontrati tramite l'utilizzo di configurazioni inusuali;
