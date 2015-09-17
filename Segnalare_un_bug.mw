@@ -109,7 +109,7 @@ Il momento cruciale dell'intero processo è quello della stesura vera e propria 
 # '''Expected results''': al contrario del precedente punto, in tale paragrafo occorre specificare i risultati attesi, in un certo senso immaginando che l'applicazione interessata non sia affetta dal bug che si sta segnalando;
 # '''Additional information''': eventuali informazioni non fondamentali, ma che possono comunque essere utili per il processo di risoluzione;
 # '''Attachment''': opzionalmente, sono facilmente allegabili file dal proprio computer per chiarificare la situazione;
-# '''Add External Bug''': se si è a conoscenza del fatto che il bug è stato segnalato su altre piattaforme all'infuori di Red Hat Bugzilla, si possono agganciare tali link esterni al nuovo report.
+# '''Add External Bug''': se si è a conoscenza del fatto che il bug è stato segnalato su altre piattaforme all'infuori di Red Hat Bugzilla (quali potrebbero per esempio essere le pagine Github, il sito dell'upstream oppure report relativi ad altre distribuzioni), si possono agganciare tali link esterni al nuovo report.
 
 ==Segnalazione di bug (tramite gnome-abrt)==
 '''ABRT''' – ovvero [https://github.com/abrt/abrt/wiki/ABRT-Project Automatic Bug Report Tool] – è un software di interesse fondamentale per il miglioramento della qualità del sistema operativo Fedora. Esso intercetta gran parte dei crash che possono verificarsi durante l'utilizzo, facilitando la predisposizione di informazioni tecniche per la compilazione di un bug report.
