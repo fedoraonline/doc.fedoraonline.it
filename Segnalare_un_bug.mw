@@ -182,10 +182,11 @@ All'interno del sommario, è possibile reperire o modificare importanti dettagli
 
 
 ==Flags relativi ad un bug-report==
+
 In seguito all'intervento del manutentore del pacchetto interessato dal report dell'utente, oppure di un membro qualificato del Fedora Project, è possibile che venga variato lo stato – flag – dell'intera segnalazione. Per una lista comprensiva, e per comprendere l'intero ciclo di vita di un bug, si consiglia la lettura della pagina [https://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow BugStatusWorkflow]. Di seguito, si riportano e descrivono le principali etichette che possono essere applicate:
 
 # '''NEW''': stato primitivo di un report, assegnato automaticamente dal sistema appena esso viene riportato da un utente;
-# '''NEEDINFO''': flag assegnato per sottolineare la richiesta di un operatore, indirizzata ad uno o più utenti che partecipano alla segnalazione;
+# '''NEEDINFO''': flag assegnato per sottolineare la richiesta di un addetto, indirizzata ad uno o più partecipanti alla segnalazione. Esso sta ad evidenziare il fatto che, per proseguire nello studio del caso, l'assignee - persona che lavora alla risoluzione - ha bisogno di informazioni specifiche da un utente o da un altro operatore;
 # '''ASSIGNED''': utile per i manutentori, può essere utilizzato per assegnare il bug ad uno specifico membro di un gruppo. Una segnalazione, per esempio, che involve un componente del desktop Plasma, può inizialmente essere assegnata al KDE SIG. Successivamente, tale team ha poi la facoltà di incaricare una sola figura per la risoluzione;
 # '''MODIFIED''': tale etichetta viene usata quando una patch è pronta ed è stata inserita nei sistemi utilizzati dai manutentori, ma non è ancora presente nel pacchetto interessato;
 # '''VERIFIED''': il bug ha un fix confermato, reso finalmente disponibile in una successiva versione del pacchetto di riferimento. Tale nuova edizione, sta per entrare a far parte di un repository di test di Fedora. Workaround non ufficiali o patch manuali non applicate al componente non sono degne di nota per considerare una segnalazione come "''verified''";
