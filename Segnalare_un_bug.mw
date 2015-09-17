@@ -11,19 +11,22 @@ Il modo migliore per rendere consapevoli sviluppatori e manutentori quindi, è q
 
 ==Creazione account Bugzilla==
 
-[[File:bugzilla_newaccount.png|thumb|center|600px|Registrazione a Bugzilla.]]
-
 Il primo passo, è ovviamente quello rappresentato dalla creazione di un account gratuito tramite [https://bugzilla.redhat.com/createaccount.cgi l'apposita pagina per la registrazione]. L'unico dettaglio richiesto è l'indirizzo e-mail, a cui verrà inviato un collegamento ipertestuale per l'attivazione: è consigliabile creare una casella di posta elettronica “ad-hoc” o comunque utilizzarne una differente rispetto a quella personale. I motivi sono sostanzialmente due:
 
 * Il contatto inserito non sarà celato, in modo da agevolare eventuali comunicazioni private – rare ma possibili – tra i diversi contributori.
 * In seguito ad ogni intervento che interesserà il report aperto, il sistema notificherà all'utente l'evoluzione della situazione tramite mail.
 
 
-[[File:bugzilla_accountconfirmation.png|thumb|center|600px|Registrazione a Bugzilla.]]
+[[File:bugzilla_newaccount.png|thumb|center|600px|Registrazione a Bugzilla.]]
 
 
 Tramite il link inviato automaticamente dal sistema, è opportuno inserire gli ultimi dettagli - nome reale, password, relativa convalida – e confermare per rendere l'account operativo.
 Va ricordato comunque che, essendo Fedora un progetto esteso a livello mondiale, è necessaria una certa dimestichezza con la lingua inglese, per poter interpretare correttamente richieste e commenti.
+
+
+[[File:bugzilla_accountconfirmation.png|thumb|center|600px|Registrazione a Bugzilla.]]
+
+
 
 ==Quando segnalare un bug==
 Spesso, quello che potrebbe all'apparenza sembrare un bug, è invece in realtà una caratteristica controversa del software o, più comunemente, un errore di configurazione dell'utente. Una lettura interessante sull'argomento è rappresentata dall'apposita [http://fedoraproject.org/wiki/Bugs_and_feature_requests/it guida ufficiale]. Prima di aprire una segnalazione, può essere utile consultare altre risorse, tra le quali:
@@ -42,47 +45,53 @@ Occorre assicurarsi però di non aprire una segnalazione a riguardo di una quest
 
 Raggiungere la [https://bugzilla.redhat.com home page di Bugzilla] e selezionare il collegamento [https://bugzilla.redhat.com/query.cgi '''Search'''] presente nell'header.
 
+Per usare la ricerca semplice, occorre inserire del testo e opzionalmente filtrare per '''stato''' e '''prodotto'''. Anche se tale funzione può risultare fruttifera, spesso conviene tuttavia optare per un'esplorazione più fine tramite il motore offerto da '''“Advanced Search”'''.
 
 [[File:bugzilla_search1.png|thumb|center|600px|Bugzilla – Ricerca semplice.]]
 
-Per usare la ricerca semplice, occorre inserire del testo e opzionalmente filtrare per '''stato''' e '''prodotto'''. Anche se tale funzione può risultare fruttifera, spesso conviene tuttavia optare per un'esplorazione più fine tramite il motore offerto da '''“Advanced Search”'''.
+
+Ora è infatti possibile sfruttare impostazioni sicuramente più mirate come, per esempio, la scelta del componente. Va ricordato che l'utente può selezionare più elementi dalle liste, per personalizzare ulteriormente la richiesta. In seguito alla pressione del bottone '''“Search”''' e, dopo un breve lasso di tempo di attesa, il browser aggiornerà la pagina e mostrerà le '''segnalazioni''' più coerenti con i parametri impostati.
 
 
 [[File:bugzilla_search3.png|thumb|right|200px|Ricerca per più componenti]]
 [[File:bugzilla_search4.png|thumb|right|200px|In attesa...]]
 [[File:bugzilla_search2.png|thumb|center|600px|Bugzilla – Ricerca avanzata.]]
 
-Ora è infatti possibile sfruttare impostazioni sicuramente più mirate come, per esempio, la scelta del componente. Va ricordato che l'utente può selezionare più elementi dalle liste, per personalizzare ulteriormente la richiesta. In seguito alla pressione del bottone '''“Search”''' e, dopo un breve lasso di tempo di attesa, il browser aggiornerà la pagina e mostrerà le '''segnalazioni''' più coerenti con i parametri impostati.
-
-
-[[File:bugzilla_search5.png|thumb|center|600px|Bugzilla – Risultato ricerca.]]
 
 Per consultare un '''report''', è sufficiente cliccare sull'ID del bug, oppure sul valore della colonna '''“Summary”'''.
 
 
-[[File:gnomeabrt_16reportedbug1.png|thumb|center|600px|Bugzilla – Consultazione di un report.]]
+[[File:bugzilla_search5.png|thumb|center|600px|Bugzilla – Risultato ricerca.]]
+
 
 A questo punto, l'utente – se autenticato nel sistema e se lo ritiene opportuno – può partecipare all'evoluzione della situazione con semplici interventi:
 * Può commentare o aggiungere allegati, se potenzialmente funzionali alla risoluzione della problematica.
 * Può aggiungere il proprio contatto alla cosidetta '''CC list''' (semplicemente spuntando l'apposita casella e invocando il bottone '''Save changes'''), in modo da ricevere notifiche via mail a riguardo del report interessato.
 
+
+[[File:gnomeabrt_16reportedbug1.png|thumb|center|600px|Bugzilla – Consultazione di un report.]]
+
+
 ==Segnalazione di bug (tramite browser)==
-Il modo più semplice e rapido per aprire un report e segnalare un problema, è quello di affidarsi all'interfaccia web di Bugzilla. I passaggi sono sostanzialmente questi:
+Il modo più semplice e rapido per aprire un report e segnalare un problema, è quello di affidarsi all'interfaccia web di Bugzilla. I passaggi sono sostanzialmente i seguenti.
+
+Per prima cosa, occorre effettuare il ''login'' assicurandosi di possedere un profilo attivato mediante la procedura descritta nella [[#Creazione_account_Bugzilla|sezione precedente]] della presente guida.
+
+
+[[File:bugzilla_login.png|thumb|center|600px|Login a Bugzilla.]]
+
+
+Cominciare quindi la creazione della segnalazione tramite il click sul pulsante '''New''', situato nell'header della pagina, in alto a sinistra. Va scelta la classificazione giusta, nel nostro caso '''Fedora'''.
 
 
 [[File:bugzilla_bugreport1.png|thumb|center|600px|Classificazione per il bug.]]
 
-[[File:bugzilla_login.png|thumb|center|600px|Login a Bugzilla.]]
-
-Per prima cosa, occorre effettuare il ''login'' assicurandosi di possedere un profilo attivato mediante la procedura descritta nella [[#Creazione_account_Bugzilla|sezione precedente]] della presente guida. Cominciare quindi la creazione della segnalazione tramite il click sul pulsante '''New''', situato nell'header della pagina, in alto a sinistra. Va scelta la classificazione giusta, nel nostro caso '''Fedora'''.
-
-
-[[File:bugzilla_bugreport2.png|thumb|center|600px|Tipologia di prodotto a cui il bug si riferisce.]]
 
 Ora, occorre selezionare il prodotto adatto. Se si sta per segnalare un problema tecnico derivante dall'utilizzo del sistema operativo, si deve optare per il prodotto '''Fedora'''. Diverso può essere, per esempio, il caso di un errore rilevato nelle note di rilascio, per il quale conviene scegliere '''Fedora Documentation'''.
 
 
-[[File:bugzilla_bugreport3.png|thumb|center|600px|Stesura del bug-report.]]
+[[File:bugzilla_bugreport2.png|thumb|center|600px|Tipologia di prodotto a cui il bug si riferisce.]]
+
 
 Il momento cruciale dell'intero processo è quello della stesura vera e propria del report. Bugzilla presenta un form con alcuni dati da compilare.
 
@@ -111,56 +120,66 @@ Il momento cruciale dell'intero processo è quello della stesura vera e propria 
 # '''Attachment''': opzionalmente, sono facilmente allegabili file dal proprio computer per chiarificare la situazione;
 # '''Add External Bug''': se si è a conoscenza del fatto che il bug è stato segnalato su altre piattaforme all'infuori di Red Hat Bugzilla (quali potrebbero per esempio essere le pagine Github, il sito dell'upstream oppure report relativi ad altre distribuzioni), si possono agganciare tali link esterni al nuovo report.
 
+
+[[File:bugzilla_bugreport3.png|thumb|center|600px|Stesura del bug-report.]]
+
+
 ==Segnalazione di bug (tramite gnome-abrt)==
 '''ABRT''' – ovvero [https://github.com/abrt/abrt/wiki/ABRT-Project Automatic Bug Report Tool] – è un software di interesse fondamentale per il miglioramento della qualità del sistema operativo Fedora. Esso intercetta gran parte dei crash che possono verificarsi durante l'utilizzo, facilitando la predisposizione di informazioni tecniche per la compilazione di un bug report.
 
 Preinstallato all'interno dell'edizione Workstation, '''gnome-abrt''' è un comodo frontend grafico perfettamente integrato con Gnome e con i diversi ambienti desktop della distribuzione. In questa sezione esamineremo i passaggi significativi per una corretta segnalazione, assumendo che l'utente abbia già un profilo Red Hat Bugzilla attivo.
 
+Può capitare che, durante l'esecuzione, un programma incorra in un errore e che quest'ultimo sia catturato dallo strumento descritto in questo capitolo, generando una notifica. In Gnome 3.16, tali avvisi appaiono per qualche secondo centralmente - in corrispondenza del lato superiore dello spazio di lavoro – e vengono poi raggruppati all'interno del calendario.
 
 [[File:gnomeabrt_1notify.png|thumb|right|200px|Notifica di ABRT all'interno di Gnome]]
 [[File:gnomeabrt_2notify.png|thumb|right|200px|Testo notifica completo]]
-[[File:gnomeabrt_3notify.png|thumb|center|600px|Calendario e notifiche di Gnome]]
+[[File:gnomeabrt_3notify.png|thumb|center|600px|Rilevazione crash da parte di ABRT elencata assieme alle altre notifiche di Gnome]]
 
-Può capitare che, durante l'esecuzione, un programma incorra in un errore e che quest'ultimo sia catturato dallo strumento descritto in questo capitolo, generando una notifica. In Gnome 3.16, tali avvisi appaiono per qualche secondo centralmente - in corrispondenza del lato superiore dello spazio di lavoro – e vengono poi raggruppati all'interno del calendario.
 
+Un semplice click sul tasto '''segnala''' – oppure sull'icona dell'apposita applicazione, contrassegnata da un'allarme – consente all'utente di raggiungere la '''schermata principale di ABRT'''.
 
 [[File:gnomeabrt_4icon.png|thumb|right|200px|Icona di gnome-abrt da Gnome Shell.]]
 [[File:gnomeabrt_10problemdetails.png|thumb|right|200px|Dettagli di un problema rilevato da ABRT]]
 [[File:gnomeabrt_5problemlist.png|thumb|center|600px|Schermata principale di gnome-abrt]]
 
-Un semplice click sul tasto '''segnala''' – oppure sull'icona dell'apposita applicazione, contrassegnata da un'allarme – consente all'utente di raggiungere la '''schermata principale di ABRT'''.
+
+In seguito al primo avvio, conviene salvare le proprie credenziali per il '''login automatico su Bugzilla''', per evitare di doverle scrivere ripetutamente. Per fare ciò, occorre navigare all'interno del menu di ABRT – su Gnome, accessibile selezionando l'icona presente nel pannello superiore – e scegliere l'elemento '''Preferenze'''. Nella scheda '''Eventi''', è quindi possibile individuare la voce relativa alla piattaforma di Red Hat. È sufficiente completare la configurazione di base, inserendo '''Nome utente''' e '''Password'''.
 
 
 [[File:gnomeabrt_8bzaccount3.png|thumb|right|200px|Configurazione evento Bugzilla]]
 [[File:gnomeabrt_9bzaccount4.png|thumb|right|200px|Inserimento credenziali Bugzilla]]
 [[File:gnomeabrt_6bzaccount1.png|thumb|center|600px|Menù di ABRT]]
 
-In seguito al primo avvio, conviene salvare le proprie credenziali per il '''login automatico su Bugzilla''', per evitare di doverle scrivere ripetutamente. Per fare ciò, occorre navigare all'interno del menu di ABRT – su Gnome, accessibile selezionando l'icona presente nel pannello superiore – e scegliere l'elemento '''Preferenze'''. Nella scheda '''Eventi''', è quindi possibile individuare la voce relativa alla piattaforma di Red Hat. È sufficiente completare la configurazione di base, inserendo '''Nome utente''' e '''Password'''.
+
+All'interno della schermata principale, il tasto blu '''Riporta''', permette di costruire il report vero e proprio. In seguito all'azionamento di tale bottone, verranno raccolte tutte le informazioni, grazie anche ad un'eventuale installazione di pacchetti aggiuntivi per il debugging. Lo stack trace può essere inviato ai server di Fedora per permettere ai manutentori di disporre di più dati utili. Anche se una ricerca via browser all'interno di Bugzilla è sempre raccomandata, in questa fase, ABRT è potenzialmente in grado di riconoscere se un bug simile è già stato segnalato. In quest'ultimo caso, l'utente sarà aggiunto alla rispettiva '''CC list''' e riceverà novità via mail in caso di sviluppi futuri.
 
 
 [[File:gnomeabrt_11problemalreadyreported.png|thumb|right|200px|Problema già noto]]
 [[File:gnomeabrt_13analyze2.png|thumb|right|200px|ABRT analizza il problema]]
 [[File:gnomeabrt_12analyze1.png|thumb|center|600px|Invio dello stack trace]]
 
-All'interno della schermata principale, il tasto blu '''Riporta''', permette di costruire il report vero e proprio. In seguito all'azionamento di tale bottone, verranno raccolte tutte le informazioni, grazie anche ad un'eventuale installazione di pacchetti aggiuntivi per il debugging. Lo stack trace può essere inviato ai server di Fedora per permettere ai manutentori di disporre di più dati utili. Anche se una ricerca via browser all'interno di Bugzilla è sempre raccomandata, in questa fase, ABRT è potenzialmente in grado di riconoscere se un bug simile è già stato segnalato. In quest'ultimo caso, l'utente sarà aggiunto alla rispettiva '''CC list''' e riceverà novità via mail in caso di sviluppi futuri.
+
+La descrizione dell'evento problematico è il fulcro dell'intero processo. Per una corretta stesura, si consiglia la lettura del capitolo precedente, relativo alle segnalazioni via web.
 
 
 [[File:gnomeabrt_14analyze3.png|thumb|center|600px|Testo della segnalazione]]
 
-La descrizione dell'evento problematico è il fulcro dell'intero processo. Per una corretta stesura, si consiglia la lettura del capitolo precedente, relativo alle segnalazioni via web.
-
-[[File:gnomeabrt_15analyze4.png|thumb|center|600px|Scelta degli allegati]]
 
 L'ultimo passaggio riguarda gli allegati. La scelta dipende sostanzialmente dalla caratteristica del componente; per esempio, in presenza di software di sistema, possono risultare utili variabili relativi all'ambiente. È sempre consigliabile optare ''almeno'' per '''core_backtrace''', '''backtrace''', '''comment''' e '''reason'''. È bene ricordare che, con un semplice click, si ha l'opportunità di rivedere il contenuto di tali file. In caso di dubbio, si consiglia di selezionare più elementi possibili, per evitare di tralasciare dettagli importanti.
 
+
+[[File:gnomeabrt_15analyze4.png|thumb|center|600px|Scelta degli allegati]]
+
+
 In seguito alla conferma, ABRT provvederà all'apertura vera e propria del report all'interno di Red Hat Bugzilla ed evidenzierà all'utente il relativo codice identificativo, per una successiva consultazione tramite browser.
+
+All'interno del sommario, è possibile reperire o modificare importanti dettagli, quali lo stato, l'assignee – ovvero la persona o il gruppo incaricati di risolvere la questione -, la versione di Fedora ecc. Nei giorni successivi alla segnalazione, converrà tenere monitorato il proprio indirizzo e-mail per poter rispondere prontamente alle eventuali richieste effettuate dai componenti del Fedora Project che interverranno.
 
 
 [[File:bugzilla_mainpage.png|thumb|right|200px|Home Page di Bugzilla]]
 [[File:gnomeabrt_16reportedbug1.png|thumb|right|200px|Dettagli relativi al report]]
 [[File:gnomeabrt_17reportedbug2.png|thumb|center|600px|Descrizione del report]]
 
-All'interno del sommario, è possibile reperire o modificare importanti dettagli, quali lo stato, l'assignee – ovvero la persona o il gruppo incaricati di risolvere la questione -, la versione di Fedora ecc. Nei giorni successivi alla segnalazione, converrà tenere monitorato il proprio indirizzo e-mail per poter rispondere prontamente alle eventuali richieste effettuate dai componenti del Fedora Project che interverranno.
 
 ==Flags relativi ad un bug-report==
 In seguito all'intervento del manutentore del pacchetto interessato dal report dell'utente, oppure di un membro qualificato del Fedora Project, è possibile che venga variato lo stato – flag – dell'intera segnalazione. Per una lista comprensiva, e per comprendere l'intero ciclo di vita di un bug, si consiglia la lettura della pagina [https://fedoraproject.org/wiki/BugZappers/BugStatusWorkFlow BugStatusWorkflow]. Di seguito, si riportano e descrivono le principali etichette che possono essere applicate:
