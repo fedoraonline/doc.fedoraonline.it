@@ -18,8 +18,6 @@ Le segnalazioni di alcuni bug non facilmente risolvibili hanno stimolato la nasc
 
 {{Warning|È consigliabile inoltre, procedere alla rimozione di eventuali driver proprietari (soprattutto quelli grafici) che potrebbero non essere ancora disponibili nel nuovo rilascio di Fedora e quindi generare comportamenti indesiderati, quali schermate nere all'avvio del sistema aggiornato.}}
 
-{{Suggerimento|Conviene disabilitare, tramite il comando <code>''dnf config-manager --set-disabled nomerepository''</code>, tutti i repository diversi da '''fedora''', '''fedora-updates''', '''rpmfusion-free''', '''rpmfusion-nonfree'''.}}
-
 Prima di partire, può essere utile consultare la [https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&component=dnf-plugin-system-upgrade&order=Importance&query_format=advanced lista di bug], riguardanti '''system-upgrade''', attualmente aperti.
 
 Le immagini illustrative dell'intera guida sono state reperite da una '''macchina virtuale''' contenente '''Fedora 22 KDE'''. Sono riportate qui a puro titolo esemplificativo: dato il prevalente utilizzo di interfacce di tipo testuale, l'utilizzo di un diverso ambiente Desktop (come Gnome) non si discosta in maniera rilevante.
@@ -33,6 +31,8 @@ Al sistema vanno applicati gli ultimi aggiornamenti disponibili.
  # dnf upgrade
 
 [[File:dnf-plugin-system-upgrade_1.png|thumb|center|600px|Aggiornamento del sistema.]]
+
+{{Suggerimento|A questo punto, conviene disabilitare tramite il comando <code>''dnf config-manager --set-disabled nomerepository''</code>, tutti i repository diversi da '''fedora''', '''fedora-updates''', '''rpmfusion-free''', '''rpmfusion-nonfree'''. Sorgenti non ufficiali (o meglio, non opportunamente strutturate) infatti, potrebbero creare intralcio durante il processo.}}
 
 Se non risulta essere già installato, il plugin per l'upgrade può ora essere reperito tramite '''Dnf''' (analogamente a qualsiasi altro programma).
 
