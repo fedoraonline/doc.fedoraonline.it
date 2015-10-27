@@ -1,10 +1,10 @@
 == Riunioni degli utenti Fedora ==
 
-Gli incontri degli utenti italiani Fedora si svolgono regolarmente, con l'obiettivo di rendere partecipe tutti alle azioni della comunità. I meeting sono aperti a tutti, ma vista la breve durata delle riunioni, è necessario attenersi alle tematiche in agenda e non divagare troppo. In presenza di molti utenti verrà attuato il protocollo standard per chiedere la parola o fare domande.
+Gli incontri degli utenti italiani Fedora si svolgono regolarmente, con l'obiettivo di rendere partecipi tutti alle azioni della comunità. I meeting sono aperti, ma vista la breve durata delle riunioni, è necessario attenersi alle tematiche in agenda e non divagare troppo. In presenza di molti utenti verrà attuato il protocollo standard per chiedere la parola o fare domande.
 
 == Luogo ==
 
-I meeting della comunità italiana si svolgono ogni secondo martedì alle 22:00 ora locale italiana nel canale '''#fedora-it''' sul server [http://freenode.net/ freenode]. In particolari occasioni è possibile che un meeting sia dedicato esclusivamente agli ambassador. In ogni caso i meeting sono sempre pubblici e possono essere frequentati da tutti, la distinzione viene fatta più per avere un ordine del giorno differenziato.<br />
+I meeting della comunità italiana si svolgono a martedì alterni alle 22:00 ora locale italiana nel canale '''#fedora-it''' sul server [http://freenode.net/ freenode]. In particolari occasioni è possibile che un meeting sia dedicato esclusivamente agli ambassador. In ogni caso i meeting sono sempre pubblici e tutti possono parteciparvi, la distinzione viene fatta più per avere un ordine del giorno differenziato.<br />
 Per maggiori informazioni su come collegarsi [[La_comunità_italiana#Canale_IRC|leggere qui]] oppure usare il [https://kiwiirc.com/client/irc.freenode.net/?nick=fedoriano?#fedora-it servizio di webchat]
 
 == Regole ==
@@ -15,7 +15,8 @@ Le regole da seguire sono poche ma servono a mantenere i meeting ordinati in mod
 * Se hai bisogno di parlare, digita "!"
 * Quando hai finito di parlare, digita "eof"
 * Se sei d'accordo su un argomento o per votare sì, digita "+1"
-* Se non sei d'accordo su un argomento o per votare no, digita "+0"
+* Se vuoi esprimere un giudizio neutro, digita "+0"
+* Se non sei d'accordo su un argomento o per votare no, digita "-1"
 
 == Comandi base ==
 
@@ -28,9 +29,13 @@ La chat sui canali IRC è regolata da comandi testuali inseriti direttamente nel
 * /quit ''QuitMessage'' - Mostra un messaggio uscendo dal canale IRC
 Per maggiori informazioni sui comandi IRC consultare [http://www.irchelp.org/irchelp/irctutorial.html#cmds questa pagina]
 
-== Prossime riunioni ==
+== Ordine del giorno della prossima riunione ==
 
-1. '''martedì 18 agosto 2015 alle ore 22:00''' riunione regolare.<br />
+Il prossimo incontro si terrà '''martedì 10 novembre 2015 alle ore 22:00''' e questo è l'OdG (provvisorio):
+1. Roll Call
+2. Presentazione di Fedora 23
+3. Fedora Release Party
+4. Open floor
 
 == Richieste di inserimento argomenti in agenda ==
 
