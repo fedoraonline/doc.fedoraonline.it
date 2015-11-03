@@ -18,7 +18,7 @@ Modifichiamo le righe del file:
    anonymous_enable=NO					# Disabilitiamo l’accesso anonimo al nostro FTP
    local_enable=YES					# Abilitiamo l’accesso ai nostri utenti locali di macchina all’accesso FTP
    write_enable=YES					# Abilitiamo gli utenti locali a porter scrivere dentro le loro home directory
-   chroot_local_user=YES				# Forziamo gli utenti locali (chroot jailed) a non potersi spostare al di fuori della propria home direcotry
+   chroot_local_user=YES				        # Forziamo gli utenti locali (chroot jailed) a non potersi spostare al di fuori della propria home direcotry
    xferlog_file=/var/log/vsftpd.log		        # Path dove vengono salvati i log di attività dell’FTP
    ftpd_banner=Welcome to TEST FTP service	        # Banner al login FTP
    allow_writeable_chroot=YES				# Permette agli utenti di poter scrivere nella loro home
