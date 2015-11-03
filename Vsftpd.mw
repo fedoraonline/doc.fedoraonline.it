@@ -1,6 +1,7 @@
 {{Autore|MauroMassimino}}
 == Prefazione ==
 Lo scopo di questo paragrafo è quello di installare e configurare un server FTP (File Transfer Protocol).
+
 Prove e test sono stati eseguiti con una '''Fedora Server 22'''.
 
 == FTP ==
