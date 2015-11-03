@@ -1,0 +1,98 @@
+{{Autore|MauroMassimino}}
+== FTP ==
+Lo scopo di questo paragrafo è quello di installare e configurare un server FTP (File Transfer Protocol).
+L'FTP è un protocollo basato su TCP in architettura client/server. Uno dei punti di forza dell'FTP è la sua semplicità di configurazione (come vedremo qui sotto), mentre sul piano della sicurezza lascia a desiderare in quanto il traffico e le credenziali vengono trasmesse in chiaro.
+Esistono ovviamente protocolli per far transitare in maniera sicura e cifrata credenziali e traffico, esempio SFTP o WebDav.
+Lascio al lettore trarre le conclusioni circa l'implementazione di un server FTP o di sistemi alternativi.
+
+Da consolle digitare il comando:
+   # dnf install vsftpd
+
+Una volta terminata l’installazione andiamo a farci un backup del file originale:
+   # cp /etc/vsftpd/vsftpd.conf /etc/vsftpd/vsftpd.conf.orig
+
+Successivamente andiamo ad editare il file di configurazione del nostro FTP
+   # vi /etc/vsftpd/vsftpd.conf
+
+Modifichiamo le righe del file: 
+   anonymous_enable=NO					# Disabilitiamo l’accesso anonimo al nostro FTP
+   local_enable=YES					# Abilitiamo l’accesso ai nostri utenti locali di macchina all’accesso FTP
+   write_enable=YES					# Abilitiamo gli utenti locali a porter scrivere dentro le loro home directory
+   chroot_local_user=YES				# Forziamo gli utenti locali (chroot jailed) a non potersi spostare al di fuori della propria home direcotry
+   xferlog_file=/var/log/vsftpd.log		        # Path dove vengono salvati i log di attività dell’FTP
+   ftpd_banner=Welcome to TEST FTP service	        # Banner al login FTP
+   allow_writeable_chroot=YES				# Permette agli utenti di poter scrivere nella loro home
+
+A questo punto dobbiamo andare ad abilitare il demone che parta all’avvio del nostro server
+   # systemct enable vsftpd
+
+E successivamente a farlo eseguire:
+   # systemct start vsftpd
+
+Andiamo ad aggiungere la regola al firewall la quale permetterà il traffico verso la porta 21/tcp
+   # firewall-cmd --permanent --add-service=ftp
+
+E in un ultima battuta andiamo a ricaricare il piano delle regole di firewalling:
+   # firewall-cmd --reload
+
+=== Sicurezza informatica ===
+Arrivati a questo punto qualsiasi utente di macchina può collegarsi all’FTP. 
+Questo si traduce nel fatto che, se il server espone la porta SSH sulla LAN, allora qualsiasi utente di macchina può accedere alla sua shell sul server remoto.
+
+Lascio al lettore giudicare se questo comportamento può essere tollerato ma, se volessimo fare in modo che l’utente “user_ftp” possa accedere solo alla propria home mediante protocollo FTP e non alla sua home shell dei comandi allora:
+
+Creiamo l’utente user_ftp
+   # useradd user_ftp
+
+Cambiamo password di accesso				
+   # passwd user_ftp
+
+L’opzione -s indica la shell di login dell’utente. Con /sbin/nologin ovviamente l’utente non si collega
+   # usermod -s /sbin/nologin user_ftp
+
+'''TEST'''
+   $ ftp 172.20.103.20						        # Connessione!
+   Connected to 172.20.103.20 (172.20.103.20).
+   220 Welcome to TEST FTP service.
+   Name (172.20.103.20:L6Echo): user_ftp			        # Inseriamo l’utente
+   331 Please specify the password.
+   Password:								# Inseriamo la password
+   230 Login successful.
+   Remote system type is UNIX.
+   Using binary mode to transfer files.
+   ftp> ls								# [1] facciamo un list della directory
+   227 Entering Passive Mode (172,20,103,20,66,76).
+   150 Here comes the directory listing.
+   226 Directory send OK.						# al momento la directory è vuota
+   ftp> cd ..								# [2] proviamo a scendere da /home/user_ftp a /home/
+   250 Directory successfully changed.
+   ftp> ls								# facciamo un altro list della directory
+   227 Entering Passive Mode (172,20,103,20,181,109).
+   150 Here comes the directory listing.
+   226 Directory send OK.						# [3] Opla! Non possiamo! Siamo segregati dentro ls nostra home
+   ftp> put CPU_Apache.png						# Carichiamo un file'''
+   local: CPU_Apache.png remote: CPU_Apache.png
+   227 Entering Passive Mode (172,20,103,20,124,124).
+   150 Ok to send data.
+   226 Transfer complete.
+   55116 bytes sent in 0,00017 secs (324211,78 Kbytes/sec)
+   ftp> ls								# Ennesimo list della directory
+   227 Entering Passive Mode (172,20,103,20,235,6).
+   150 Here comes the directory listing.
+   -rw-r--r--    1 1002     50          55116 Oct 30 09:14 CPU_Apache.png   # Ecco il nostro file caricato!
+   226 Directory send OK.
+   ftp> exit
+
+# A questo punto siamo posizionati su file system su /home/user_ftp ma, per il servizio FTP così configurato, siamo a livello root /
+# Qua tentiamo logicamente di scendere da /home/user_ftp a /home. Il messaggio che ci ritorna è fuorviante (250 Directory successfully changed): effettivamente sembra che siamo riusciti a scendere di directory '''ma non è così'''! 
+# Infatti, se tentiamo nuovamente un list della directory vediamo che è ancora vuota. Se così non fosse dovremmo vedere la directory user_ftp
+
+Ora proviamo a collegarci via SSH al nostro server:
+   $ ssh user_ftp@172.20.103.20
+   user_ftp@192.168.122.117's password: 
+   This account is currently not available.
+   Connection to 172.20.103.20 closed.
+
+Nessun accesso!
+
+[[Categoria:Fedoraserver]]
