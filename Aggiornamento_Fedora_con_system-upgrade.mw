@@ -1,4 +1,3 @@
-{{InCorso|autore=GiulioErler}}
 {{Autore|GiulioErler}}
 ==Introduzione==
 Fin dagli albori, il '''Fedora Project''' ha cercato di fornire alla propria utenza un metodo ufficialmente supportato per poter avanzare di versione senza ricorrere ad una nuova installazione pulita. Dato l'impatto e la delicatezza dell'operazione però, storicamente si è reso necessario lo sviluppo e il rinnovo nel tempo di diversi sistemi.
@@ -115,7 +114,7 @@ Per sincronizzare ed allineare in automatico la distribuzione, si può utilizzar
 
  # dnf system-upgrade download --releasever=23 --distro-sync
 
-L'utilizzo di '''--distro-sync'' è utile nel caso in cui la versione precedente – nell'esempio, Fedora 22 – abbia del software troppo aggiornato rispetto a quanto presente nei repository del rilascio successivo. Solitamente, questo è dovuto alla presenza nel sistema di pacchetti provenienti dai repository di test ''updates-testing'' o ''Rawhide''.
+L'utilizzo di ''--distro-sync'' è utile nel caso in cui la versione precedente – nell'esempio, Fedora 22 – abbia del software troppo aggiornato rispetto a quanto presente nei repository del rilascio successivo. Solitamente, questo è dovuto alla presenza nel sistema di pacchetti provenienti dai repository di test ''updates-testing'' o ''Rawhide''.
 
 
 
@@ -153,7 +152,7 @@ In linea di massima, tutti i pacchetti elencati possono essere rimossi senza pro
 
 # Dnf ovviamente riporta i vecchi '''kernel''', in quanto essi non risultano essere più reperibili. In realtà però, mantenere – e quindi non disinstallare – diverse versioni degli stessi, rappresenta una buona pratica, per avere diverse alternative in caso di problemi al supporto hardware.
 # Un'altra circostanza assai frequente, è rappresentata da programmi di '''terze parti''' o comunque provenienti da '''sorgenti esterne''' ora disabilitate. Tra gli esempi, si trovano Skype, i codec del repository Livna, driver grafici proprietari.
-# Se alcuni programmi sono stati reperiti da '''"updates-testing"''', verranno qui riportati in quanto “troppo aggiornati”rispetto a quanto previsto dai repository stabili.
+# Se alcuni programmi sono stati reperiti da '''"updates-testing"''', verranno qui riportati in quanto “troppo aggiornati” rispetto a quanto previsto dai repository stabili.
 
 I seguenti comandi consentono inoltre di effettuare ricerche mirate per poter valutare le diverse circostanze.
 
@@ -211,4 +210,3 @@ La nascita di Fedora 18 (Spherical Cow), porta invece alla ribalta '''FedUp''', 
 [https://fedoraproject.org/wiki/Changes/DNF_System_Upgrades Changes for Fedora: DNF_System_Upgrades]
 
 [[:Categoria:Installazione]]
-[[Categoria:Scrittura in corso]]
