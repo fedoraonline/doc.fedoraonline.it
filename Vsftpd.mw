@@ -1,6 +1,9 @@
 {{Autore|MauroMassimino}}
-== FTP ==
+== Prefazione ==
 Lo scopo di questo paragrafo è quello di installare e configurare un server FTP (File Transfer Protocol).
+Prove e test sono stati eseguiti con una '''Fedora Server 22'''.
+
+== FTP ==
 L'FTP è un protocollo basato su TCP in architettura client/server. Uno dei punti di forza dell'FTP è la sua semplicità di configurazione (come vedremo qui sotto), mentre sul piano della sicurezza lascia a desiderare in quanto il traffico e le credenziali vengono trasmesse in chiaro.
 Esistono ovviamente protocolli per far transitare in maniera sicura e cifrata credenziali e traffico, esempio SFTP o WebDav.
 Lascio al lettore trarre le conclusioni circa l'implementazione di un server FTP o di sistemi alternativi.
