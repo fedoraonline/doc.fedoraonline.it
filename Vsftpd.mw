@@ -135,25 +135,27 @@ Una volta dato l'INVIO il comando ci chiederà talune informazioni le quali verr
    Common Name (eg, your name or your server's hostname) []:'''F22SRV'''                   # nome dell'host o altro nome identificativo
    Email Address []:'''email@dominio.it'''                                                 # email di riferimento per contatti   
 
+
 === Modificare il file di configurazione ===
 Arrivati a questo punto andiamo ad editare il file /etc/vsftpd/vsftpd.conf con il vostro editor preferito, nel mio caso userò vi
    # vi /etc/vsftpd/vsftpd.conf
 
 Ci posizioniamo in fondo al file e andiamo ad aggiungere le seguenti righe
-   rsa_cert_file=/etc/ssl/private/vsftpd.pem
-   rsa_private_key_file=/etc/ssl/private/vsftpd.pem
+   rsa_cert_file=/etc/ssl/private/vsftpd.pem                         # Andiamo a indicare la posizione del file certificato e la chiave privata che
+   rsa_private_key_file=/etc/ssl/private/vsftpd.pem                  # nel nostro caso coincidono
    
-   ssl_enable=YES
-   allow_anon_ssl=NO
-   force_local_data_ssl=YES
-   force_local_logins_ssl=YES
+   ssl_enable=YES                                                    # In prima battuta diciamo che la crittografia è obbligatoria e
+   allow_anon_ssl=NO                                                 # che gli utenti anonimi non sono accettati.
+   force_local_data_ssl=YES                                          # Forziamo tutto il traffico dati ad essere cifrato
+   force_local_logins_ssl=YES                                        # Forziamo il passaggio delle credenziali ad essere cifrato
    
-   ssl_tlsv1=YES
-   ssl_sslv2=NO
-   ssl_sslv3=NO
+   ssl_tlsv1=YES                                                     # Aumentiamo la sicurezza di un altro gradino accettando solo connessioni TLS
+   ssl_sslv2=NO                                                      # e andiamo ad escludere il più vecchio ed insicuro SSL
+   ssl_sslv3=NO                                                      # (entrambe le versioni)
 
-   require_ssl_reuse=NO
-   ssl_ciphers=HIGH
+   require_ssl_reuse=NO                                              # Disabilita il riutilizzo della sessione SSL (questa direttiva è obbligatoria con WinSCP)
+   ssl_ciphers=HIGH                                                  # Elenco di protocolli di cifratura vsftpd mette a disposizione al client (questa direttiva è obbligatoria con FileZilla)
+                                                                     # Di default (se la direttiva non è presente) sono DES-CBC3-SHA. 
 
 Salviamo il file e riavviamo il servizio vsftpd con
    #systemctl restart vsftpd
@@ -173,7 +175,8 @@ Dare, l'OK alla finestra per procedere.
 
 [[File:Certificato.png]]
 
-Ed ecco i log FileZilla: la connessione è andata a buon fine! 
+Ed ecco i log FileZilla: la connessione è andata a buon fine!
+ 
 Possiamo dormire su due guanciali, la nostra connessione è criptata.
    Stato:	Connessione a 172.20.103.20:21...
    Stato:	Connessione stabilita, in attesa del messaggio di benvenuto...
