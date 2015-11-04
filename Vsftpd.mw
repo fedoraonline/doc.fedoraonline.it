@@ -107,6 +107,7 @@ Per realizzare un server SFTP, i prerequisiti sono:
 # Generare un certificato 
 # Modificare il file /etc/vsftpd/vsftpd.conf con le direttive necessarie
 
+
 === Generazione certificato ===
 Apriamo una shell sul nostro server e creiamo la directory "private" dentro /etc/ssl
    # mkdir /etc/ssl/private
