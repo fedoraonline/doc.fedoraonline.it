@@ -147,23 +147,22 @@ Ci posizioniamo in fondo al file e andiamo ad aggiungere le seguenti righe
    ssl_enable=YES                                                    # In prima battuta diciamo che la crittografia è obbligatoria e
    allow_anon_ssl=NO                                                 # che gli utenti anonimi non sono accettati.
    force_local_data_ssl=YES                                          # Forziamo tutto il traffico dati ad essere cifrato
-   force_local_logins_ssl=YES                                        # Forziamo il passaggio delle credenziali ad essere cifrato
-   
+   force_local_logins_ssl=YES                                        # Forziamo il passaggio delle credenziali ad essere cifrato   
    ssl_tlsv1=YES                                                     # Aumentiamo la sicurezza di un altro gradino accettando solo connessioni TLS
    ssl_sslv2=NO                                                      # e andiamo ad escludere il più vecchio ed insicuro SSL
    ssl_sslv3=NO                                                      # (entrambe le versioni)
-
    require_ssl_reuse=NO                                              # Disabilita il riutilizzo della sessione SSL (questa direttiva è obbligatoria con WinSCP)
    ssl_ciphers=HIGH                                                  # Elenco di protocolli di cifratura vsftpd mette a disposizione al client (questa direttiva è obbligatoria con FileZilla)
                                                                      # Di default (se la direttiva non è presente) sono DES-CBC3-SHA. 
 
 Salviamo il file e riavviamo il servizio vsftpd con
-   #systemctl restart vsftpd
+   # systemctl restart vsftpd
 
 '''TEST'''
 Per questo test ho usato FileZilla, ovviamente sentitevi liberi di usere il client FTP che preferite quindi scegliamo "Gestore siti" dal menu "File". Si aprirà una finestra come questa, andiamo a compilare i campi quali Host, Criptazione e Utente e clicchiamo su "Connetti".
 
 [[File:Loginftp.png]]
+
 
 Alla richiesta di prompt digitare la password
 
@@ -176,12 +175,11 @@ Dare, l'OK alla finestra per procedere.
 [[File:Certificato.png]]
 
 Ed ecco i log FileZilla: la connessione è andata a buon fine!
- 
-Possiamo dormire su due guanciali, la nostra connessione è criptata.
    Stato:	Connessione a 172.20.103.20:21...
    Stato:	Connessione stabilita, in attesa del messaggio di benvenuto...
-   Stato:	Inizializzazione TLS in corso...
-   Stato:	Verifica del certificato in corso...
-   Stato:	Connessione TLS stabilita.
+   '''Stato:	Inizializzazione TLS in corso...'''
+   '''Stato:	Verifica del certificato in corso...'''
+   '''Stato:	Connessione TLS stabilita.'''
    Stato:	Connesso
+
 [[Categoria:Fedoraserver]]
