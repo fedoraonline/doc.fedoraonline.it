@@ -103,7 +103,7 @@ Nessun accesso!
 
 == SFTP ==
 Per realizzare un server SFTP, i prerequisiti sono:
-# Aver già installato e configurato il server FTP (vedi paragrafo FTP)
+# Aver già installato e configurato il server FTP (vedi paragrafo [[#FTP]])
 # Generare un certificato 
 # Modificare il file /etc/vsftpd/vsftpd.conf con le direttive necessarie
 
