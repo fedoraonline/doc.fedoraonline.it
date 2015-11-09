@@ -77,6 +77,7 @@ Qualsiasi redattore può prendersi in carico una o più guide modificando lo sta
 {{RiletturaArticolo|articolo=Nautilus scripts e personalizzazioni|autore=Riccardo Volpe|rilettore=-|data=25/04/2015|stato=DaFare|note=è ancora utile il metodo attraverso python? perché sulla 21 a me funziona mettendo un modello vuoto nella cartella Modelli.<br>vedere anche [http://forum.fedoraonline.it/viewtopic.php?id=23532 qua] ... ~bebo}}
 {{RiletturaArticolo|articolo=Aggiornamento Fedora con FedUp|autore=AlbertoChiusole|data=09/06/2015|release=F22|rilettore=AndreaMasala|stato=InCorso}}
 {{RiletturaArticolo|articolo=Segnalare un bug|autore=GiulioErler|rilettore=AlbertoChiusole|note=Aggiornata, riscritta guida precedente.<br>[bebo]se qualcuno passa di qua prima di me e ha tempo di rileggerla (dovrebbe essere tutto ok), lo dica in ML e poi la si può "rilasciare".|data=20/09/2015|stato=DaFare}}
+{{RiletturaArticolo|articolo=Creare LiveUSB|autore=GiulioErler|rilettore=-|data=09/11/2015|release=F23|stato=DaFare}}
 |}
 
 ''NOTA: il tag '''note''' non è necessario: se non è presente verrà automaticamente sostituito da uno spazio vuoto nella tabella.''
