@@ -105,7 +105,7 @@ Nel nostro ambiente di test andremo quindi a creare queste condivisioni dipartim
 |}
 
 
-=== Suddivisione spazio disco ==
+=== Suddivisione spazio disco ===
 Per prima cosa mostro nella mia situazione a livello di storage
 
    # lsblk
