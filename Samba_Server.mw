@@ -54,9 +54,12 @@ In questo scenario andremo a simulare un file server di un'azienda standard, di 
 |}
 
 === Condivisioni ===
-Ogni utente avrà una sua home direcotry dove avrà accesso solo lui. Queste directory vengono memorizzate sotto il mount point /home
+Ogni utente avrà una sua home direcotry dove avrà accesso solo lui. 
 
-Sotto il mount point /opt invece, andremo a creare le condivisioni dipartimentali le quali autorizzazioni saranno a livello di gruppo di appartenenza: avremo quindi uno share amministrazione al quale potranno solo accedere gli utenti dell'amministrazione, lo share sales solo agli utenti delle vendite, uno share comune a tutta l'organizzazione e così via. Andremo anche ad inserire l'utente "mauro" in ogni condivisione in qualità di amministratore del sistema. Nel nostro ambiente di test andremo quindi a creare queste condivisioni dipartimentali:
+Inoltre andremo a creare le condivisioni dipartimentali le quali autorizzazioni saranno a livello di gruppo di appartenenza: avremo quindi uno share amministrazione al quale potranno solo accedere gli utenti dell'amministrazione, lo share sales solo agli utenti delle vendite, uno share comune a tutta l'organizzazione e così via. Andremo anche ad inserire l'utente "mauro" in ogni condivisione in qualità di amministratore del sistema. 
+In ultima battuta andremo a creare degli share ai quali i singoli utenti di diversi gruppi potranno accedere.
+
+Nel nostro ambiente di test andremo quindi a creare queste condivisioni dipartimentali:
 
 {|border="1"
 |-
@@ -67,22 +70,22 @@ Sotto il mount point /opt invece, andremo a creare le condivisioni dipartimental
 |-
 | amministrazione
 | amministrazione 
-| carlo giulia roberta mauro
+| carlo giulia roberta '''mauro'''
 | lettura e scrittura
 |-
 | marketing
 | marketing
-| simone mauro
+| simone '''mauro'''
 | lettura e scrittura
 |-
 | marketing
 | marketing
-| simone mauro
+| simone '''mauro'''
 | lettura e scrittura
 |-
 | sales
 | sales
-| sandro katia mauro
+| sandro katia '''mauro'''
 | lettura e scrittura
 |-
 | comune
@@ -94,8 +97,15 @@ Sotto il mount point /opt invece, andremo a creare le condivisioni dipartimental
 | Tutti gli utenti
 | tutti gli utenti
 | sola lettura
+|-
+| progetto_alpha
+| 
+| simone katia '''mauro'''
+| lettura e scrittura
 |}
 
+
+=== Suddivisione spazio disco ==
 Per prima cosa mostro nella mia situazione a livello di storage
 
    # lsblk
