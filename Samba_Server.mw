@@ -2,17 +2,16 @@
 {{Autore|MauroMassimino}}
 
 == Prefazione == 
-Questa guida ha come scopo principale quello di installare e configurare un file server con Fedora: la versione di riferimento con la quale sono stati eseguiti i test è '''Fedora 22 Server''', ma sono confidente che possa essere facilmente riprodotta anche su altre release e veriticalizzazioni.
+Questa guida ha come scopo quello di installare e configurare un file server con Fedora: la versione di riferimento con la quale sono stati eseguiti i test è '''Fedora 22 Server''', ma sono confidente che possa essere facilmente riprodotta anche su altre release e veriticalizzazioni.
 
-Per prima cosa bisogna andare a spiegare cos'è un file server e le sue modalità di funzionamento: quando parliamo di file server ci riferiamo ad una macchina - sia essa fisica o virtuale - la quale metta a  disposizione su di una rete spazio disco dove l'utenza possa leggere o scrivere file e cartelle secondo appunto regole e autorizzazioni.
-Le regole e le autorizzazioni vengono descritte dentro al nostro file di configurazione (/etc/samba.smb.conf), le autorizzazioni a livello di utente (o gruppo) possono essere o locali (utenti locali di macchina) o ereditate da altri sistemi (quali ad esempio active directory). 
+Per prima cosa bisogna andare a spiegare cos'è un file server e le sue modalità di funzionamento: quando parliamo di file server ci riferiamo ad una macchina - sia essa fisica o virtuale - la quale metta a  disposizione su di una rete spazio disco dove l'utenza possa leggere o scrivere file e cartelle secondo regole e autorizzazioni.
+Le regole e le autorizzazioni vengono descritte dentro al nostro file di configurazione (/etc/samba.smb.conf), le autorizzazioni a livello di utente o gruppo possono essere o locali (utenti di macchina) o ereditate da altri sistemi (quali ad esempio active directory). 
 
 Questa guida verrà quindi divisa in due macro categorie:
 * '''Samba server con autenticazione locale'''
 * '''Samba server con autenticazione Microsoft Active Directory'''
 
 Si lascia ovviamente al lettore la scelta su cosa sia meglio implementare nella propria rete.
-
 
 == Samba server con autenticazione locale ==
 === Scenario ===
